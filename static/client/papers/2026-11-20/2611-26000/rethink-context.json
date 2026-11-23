@@ -6,17 +6,27 @@
   "arxivVersion": 1,
   "arxivVersionedId": "2611.26000v1",
   "assessment": {
-    "documentType": "模型报告",
-    "primaryMethod": "数据标注",
+    "documentType": "系统技术报告",
+    "primaryMethod": "数据集构建",
     "primaryTask": "语音识别",
-    "rankBucket": "前50%",
-    "score": 7.1,
+    "rankBucket": "前25%",
+    "score": 7.9,
     "tagMetadata": {
       "concepts": [
         {
           "facet": "task",
           "id": "task.asr",
           "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.event-detection",
+          "label": "音频事件检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
         },
         {
           "facet": "method",
@@ -27,16 +37,11 @@
           "facet": "artifact",
           "id": "artifact.benchmark",
           "label": "基准测试"
-        },
-        {
-          "facet": "artifact",
-          "id": "artifact.dataset",
-          "label": "数据集"
         }
       ],
       "contract": "paper-tag-flat-tags",
-      "primaryMethod": "数据标注",
-      "primaryMethodId": "method.data-annotation",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
       "primaryTask": "语音识别",
       "primaryTaskId": "task.asr",
       "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
@@ -96,9 +101,9 @@
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "针对自然语音中呼吸等非言语发声漏标严重的问题，该工作用交叉审核加全库呼吸筛查迭代修标注并挖掘新数据，最终用约八十万条语料训练单个 1.7B 模型，在四个人工基准上取得平均综合分数 64.46 分，但呼吸召回仍然偏低且结论依赖其敏感的标注口径。",
+  "oneSentenceThesis": "针对自然语音中非言语发声覆盖不足与标注漏标问题，本文以渐进挖掘加交叉核查与全库呼吸筛查迭代提炼约 80 万条语料训练单个 17 亿参数识别器，在四个人工标注基准上平均综合分数达到 64.46 分，并以呼吸召回提升换取精确率下降的代价。",
   "originalTitle": "Xing-Audio-NVVASR: Scaling and Refining Supervision for Joint Recognition of Speech and Non-Verbal Vocalizations",
   "pdfUrl": "https://arxiv.org/pdf/2611.26000v1.pdf",
-  "readerTitle": "同时听懂话语和呼吸笑哭：八十万条标注如何炼成联合识别器",
+  "readerTitle": "语音与非言语发声联合转写：数据挖掘与监督提炼如何协同",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }

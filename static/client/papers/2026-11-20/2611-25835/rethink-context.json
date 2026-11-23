@@ -10,7 +10,7 @@
     "primaryMethod": "状态空间模型",
     "primaryTask": "多模态情感极性分析",
     "rankBucket": "前50%",
-    "score": 5.7,
+    "score": 5.8,
     "tagMetadata": {
       "concepts": [
         {
@@ -27,16 +27,6 @@
           "facet": "method",
           "id": "method.state-space",
           "label": "状态空间模型"
-        },
-        {
-          "facet": "method",
-          "id": "method.vae",
-          "label": "变分自编码器"
-        },
-        {
-          "facet": "method",
-          "id": "method.uncertainty-estimation",
-          "label": "不确定性估计与校准"
         }
       ],
       "contract": "paper-tag-flat-tags",
@@ -107,9 +97,9 @@
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "论文针对当前语义相同但未来走向不同的社交交互，以预测充分性约束潜状态保留的未来相关信息，并用概率信念推断与事件条件随机转移实现长程滚出，在三个社交基准与自我中心视频基准上得到更小的预测闭合差距与残余历史增益，但结论只在原文划分与探测条件下才成立。",
+  "oneSentenceThesis": "论文针对当前语义相同但未来分叉时隐状态应保留什么信息的问题，提出用冻结未来目标逼近预测充分并结合事件条件混合转移的 PSM-WM 框架，在 Hi-EF、IEMOCAP 与 MELD 上以最高加权 F1 分数验证，同时付出概率推断与多步展开的额外训练代价。",
   "originalTitle": "PSM-WSM: Predictively Sufficient Multimodal World Social Modeling",
   "pdfUrl": "https://arxiv.org/pdf/2611.25835v1.pdf",
-  "readerTitle": "面向未来演化的多模态社交状态如何构造与推进",
+  "readerTitle": "预测充分的多模态社会世界建模：为未来演化保留历史信息",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }

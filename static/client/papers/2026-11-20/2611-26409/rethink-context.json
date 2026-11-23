@@ -9,8 +9,8 @@
     "documentType": "模型报告",
     "primaryMethod": "多模态学习",
     "primaryTask": "音视频理解",
-    "rankBucket": "前50%",
-    "score": 6.4,
+    "rankBucket": "前25%",
+    "score": 8.0,
     "tagMetadata": {
       "concepts": [
         {
@@ -20,8 +20,8 @@
         },
         {
           "facet": "task",
-          "id": "task.audio-understanding",
-          "label": "音频理解"
+          "id": "task.asr",
+          "label": "语音识别"
         },
         {
           "facet": "method",
@@ -30,8 +30,8 @@
         },
         {
           "facet": "method",
-          "id": "method.distillation",
-          "label": "知识蒸馏"
+          "id": "method.reinforcement",
+          "label": "强化学习"
         }
       ],
       "contract": "paper-tag-flat-tags",
@@ -120,9 +120,9 @@
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "WeMM-Video 针对有声视频中画面与声音对不齐、跨模态幻觉多的问题，用统一编码加时间戳对齐与混合思考推理的架构，配合约 1.2 万亿词元的渐进预训练和三阶段后训练，在 120 余项评测中让 35B-A3B 达到开源领先并接近头部闭源模型，小尺寸版本也保持跨尺度效率。",
+  "oneSentenceThesis": "针对真实视频需要联合视听时序推理而开源模型易漏细节与幻觉的问题，WeMM-Video 用统一记号交错加时间戳与三段预训练三段后训练实现直接作答与思考推理双模式，在 33 项联合视听基准上以 35B-A3B 刷新开源最优并以 9B 越级超过 30B 级开源对照，代价是思考模式更长且音乐转写等细粒度仍逊于专有模型",
   "originalTitle": "WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding",
   "pdfUrl": "https://arxiv.org/pdf/2611.26409v1.pdf",
-  "readerTitle": "WeMM-Video：能听又能看的全模态视频理解模型是怎样练成的",
+  "readerTitle": "视听合一的视频理解：WeMM-Video 如何兼顾听觉视觉与推理",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }

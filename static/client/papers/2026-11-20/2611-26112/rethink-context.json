@@ -7,10 +7,10 @@
   "arxivVersionedId": "2611.26112v1",
   "assessment": {
     "documentType": "系统技术报告",
-    "primaryMethod": "硬件系统设计与验证",
+    "primaryMethod": "CNN",
     "primaryTask": "音频分类",
     "rankBucket": "后50%",
-    "score": 5.4,
+    "score": 5.3,
     "tagMetadata": {
       "concepts": [
         {
@@ -19,24 +19,24 @@
           "label": "音频分类"
         },
         {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
           "facet": "application",
           "id": "application.bioacoustics",
           "label": "生物声学监测"
-        },
-        {
-          "facet": "method",
-          "id": "method.hardware-system-design",
-          "label": "硬件系统设计与验证"
-        },
-        {
-          "facet": "method",
-          "id": "method.quantization",
-          "label": "模型量化"
         }
       ],
       "contract": "paper-tag-flat-tags",
-      "primaryMethod": "硬件系统设计与验证",
-      "primaryMethodId": "method.hardware-system-design",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
       "primaryTask": "音频分类",
       "primaryTaskId": "task.audio-classification",
       "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
@@ -90,9 +90,9 @@
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "针对南印度林村交界缺电缺网守不住的兽害预警问题，ZoionNET 用 8 千赫采样转梅尔频谱图加两级八位量化分类实现常开监听与按需细判，并经蜂窝链路直达看板与短信，但省电效果与实地精度尚未实测，单节点零件成本为 133.57 美元。",
+  "oneSentenceThesis": "针对南印度林村交界大象与大型猫科动物闯入预警难 sustained 供电的问题，论文把 8 kHz 声音变为梅尔频谱图并在微型加速器上用两档分类加滑动平均门限决定何时唤醒重模型，经蜂窝链路直达看板与短信，保留音频上报告 0.97436 与 0.94551 的准确率而整机 133.57 美元，但省电等关键现场指标尚未实测。",
   "originalTitle": "ZoionNET: Low-Power Animal Intrusion Detection Using an Acoustic Deep-Learning Classifier for a Cellular Remote-Sensing System",
   "pdfUrl": "https://arxiv.org/pdf/2611.26112v1.pdf",
-  "readerTitle": "听声辨兽的低功耗节点：ZoionNET 如何用两级声学分类守住林村边界",
+  "readerTitle": "靠听声辨兽的低功耗边界哨兵",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }

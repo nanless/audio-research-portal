@@ -6,11 +6,11 @@
   "arxivVersion": 1,
   "arxivVersionedId": "2611.26540v1",
   "assessment": {
-    "documentType": "模型报告",
+    "documentType": "方法研究",
     "primaryMethod": "知识蒸馏",
     "primaryTask": "语音驱动人像视频生成",
-    "rankBucket": "前50%",
-    "score": 6.7,
+    "rankBucket": "前25%",
+    "score": 7.6,
     "tagMetadata": {
       "concepts": [
         {
@@ -27,6 +27,11 @@
           "facet": "setting",
           "id": "setting.streaming",
           "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
         },
         {
           "facet": "artifact",
@@ -78,9 +83,9 @@
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "针对语音驱动头像需要随音频到达逐块生成而双向多步扩散太慢的问题，AURA 用分块因果注意力加滚动缓存把教师改为逐块生成，再经轨迹对齐和带反向仿真的分布匹配蒸馏把五十步压缩到四步，在保持质量的同时把吞吐提高一个数量级并实现单卡实时。",
+  "oneSentenceThesis": "针对双向多步语音驱动视频模型无法低延迟在线生成的问题，AURA 用分块因果注意力加逐块混合时间步与两阶段蒸馏把 50 步教师压缩为 4 步因果学生，在单张 H100 GPU 上以 9.7 fps 生成 720p 视频并在身份保持上超过教师，代价是长序列仍有轻微身份漂移且小模型分辨率更低。",
   "originalTitle": "AURA: AUdio-dRiven streaming Avatar",
   "pdfUrl": "https://arxiv.org/pdf/2611.26540v1.pdf",
-  "readerTitle": "AURA：把双向说话人视频扩散模型蒸馏成可流式生成的因果少步学生",
+  "readerTitle": "流式语音化身如何用四步因果学生追上五十步双向教师",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }

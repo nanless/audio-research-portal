@@ -10,7 +10,7 @@
     "primaryMethod": "自回归模型",
     "primaryTask": "文本到语音",
     "rankBucket": "前25%",
-    "score": 7.6,
+    "score": 7.5,
     "tagMetadata": {
       "concepts": [
         {
@@ -78,9 +78,9 @@
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "针对说话声与环境声混在一起难学好、分开学又丢失真实关联的问题，论文用来源感知的编解码器拆出两条对齐的离散符号流，再用预训练大语言模型交错生成这两条流，在模拟数据预训练后用真实录音微调，在可懂度和场景相关性上超过单混合表征基线，但场景引导增强会小幅牺牲可懂度。",
+  "oneSentenceThesis": "针对语音与环境性质不同又在真实录音里相互关联的问题，论文用来源区分编解码器拆出两路时间对齐的 token 并以交错自回归联合建模，在同一评测下可懂度与场景相关性超过混合目标基线，而场景引导增强会带来可懂度的可控回落。",
   "originalTitle": "Joint Language Modeling for In-the-Wild Speech-Scene Generation with Distinct Token Representations",
   "pdfUrl": "https://arxiv.org/pdf/2611.25503v1.pdf",
-  "readerTitle": "把说话声和环境声分开建模：面向真实场景的语音场景联合生成解读",
+  "readerTitle": "两路 token 分开表征又联合生成：野外语音场景生成的解读",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }

@@ -9,8 +9,8 @@
     "documentType": "方法研究",
     "primaryMethod": "自回归模型",
     "primaryTask": "音频驱动视频生成",
-    "rankBucket": "后50%",
-    "score": 5.1,
+    "rankBucket": "前50%",
+    "score": 6.0,
     "tagMetadata": {
       "concepts": [
         {
@@ -66,9 +66,9 @@
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "本文把音乐到配色的映射从单张静态调色板扩展为随时间变化的帧级五色序列，用音乐条件自回归变换器建模色彩演化，并在 265 支官方音乐视频上以更小的预测误差和更自然的主观过渡显示出优势，但结论只在官方视频帧颜色作为真实值时成立。",
+  "oneSentenceThesis": "针对静态配色无法刻画随音乐演化的局部色彩差异，论文用音乐条件自回归变换器预测逐帧 5 色主题并以保持结构的重着色呈现，在 265 个官方音乐视频上取得更低的颜色与时间差异和更高的主观评分，代价是依赖历史预测的逐步推理与官方视频数据的适用边界。",
   "originalTitle": "Sonic Palette: Predicting Dynamic Color Themes from Music",
   "pdfUrl": "https://arxiv.org/pdf/2611.25781v1.pdf",
-  "readerTitle": "音乐如何逐帧决定画面配色：动态色彩主题预测解读",
+  "readerTitle": "随音乐起伏的色彩主题：序列预测如何让配色跟上音乐",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }

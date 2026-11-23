@@ -10,7 +10,7 @@
     "primaryMethod": "提示学习",
     "primaryTask": "语音分离",
     "rankBucket": "前50%",
-    "score": 6.4,
+    "score": 6.9,
     "tagMetadata": {
       "concepts": [
         {
@@ -72,9 +72,9 @@
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "针对从英德混合语音中按目标语言还原波形的问题，论文用语言提示控制的大语音模型先从混合信号预测目标语言的语义令牌，再以交叉注意力注入共用分离骨干，在相同划分上取得最高 1.16 分贝的尺度不变信失真比提升，但选择仍主要依赖语言身份向量且结论目前只在该数据集与骨干上成立。",
+  "oneSentenceThesis": "针对多语混合中仅靠语种身份标签难以提供结构化线索的问题，该工作用提示词条件与低秩适配改造预训练语音语义模型以生成目标语种语义序列并经交叉注意力注入共享的 Sepformer 抽取管线，在英德混合测试集上取得 1.16 dB 的信号重建提升，代价是引入约 11 亿参数的语义分支与自回归生成开销。",
   "originalTitle": "Language-Oriented Semantic Modeling for Target Language Extraction",
   "pdfUrl": "https://arxiv.org/pdf/2611.26317v1.pdf",
-  "readerTitle": "按语言抽取混合语音：声学分离之外再加一路线索",
+  "readerTitle": "按语种抽取混合语音：声学分离如何借助面向语种的语义引导",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }

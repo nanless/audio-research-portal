@@ -7,16 +7,21 @@
   "arxivVersionedId": "2611.25789v1",
   "assessment": {
     "documentType": "方法研究",
-    "primaryMethod": "检索增强",
+    "primaryMethod": "表示探测",
     "primaryTask": "音频字幕生成",
     "rankBucket": "前50%",
-    "score": 7.4,
+    "score": 7.3,
     "tagMetadata": {
       "concepts": [
         {
           "facet": "task",
           "id": "task.audio-captioning",
           "label": "音频字幕生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
         },
         {
           "facet": "method",
@@ -27,16 +32,11 @@
           "facet": "research_focus",
           "id": "research_focus.hallucination-faithfulness",
           "label": "幻觉与忠实度"
-        },
-        {
-          "facet": "model_family",
-          "id": "model_family.audio-language",
-          "label": "音频大模型"
         }
       ],
       "contract": "paper-tag-flat-tags",
-      "primaryMethod": "检索增强",
-      "primaryMethodId": "method.retrieval-augmented",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
       "primaryTask": "音频字幕生成",
       "primaryTaskId": "task.audio-captioning",
       "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
@@ -78,9 +78,9 @@
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "论文发现真实与幻觉事件可获得相当的音频注意力但关注位置与语义支撑不同，据此提出无需训练的先检测后差分掩蔽框架，在三个模型与两个数据集上提升事件级检测与再生时的幻觉压制，同时尽量保住已支撑内容。",
+  "oneSentenceThesis": "针对大音频语言模型编造输入中不存在的声音事件的问题，本文用高度关注音频位置的潜在文本语义检索估计每个事件的支持度并做差异化静音遮蔽，在三个模型与两个数据集上改善了幻觉检测与抑制效果，同时付出两次生成与白盒注意力读取等代价。",
   "originalTitle": "From Attention to Semantics: Detecting and Mitigating Sound Event Hallucinations in Large Audio-Language Models",
   "pdfUrl": "https://arxiv.org/pdf/2611.25789v1.pdf",
-  "readerTitle": "注意力相当却语义不符：大音频语言模型的事件幻觉检测与差分掩蔽",
+  "readerTitle": "从注意力到语义：检测并抑制大音频语言模型的声音事件幻觉",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }

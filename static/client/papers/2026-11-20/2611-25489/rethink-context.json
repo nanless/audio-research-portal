@@ -10,7 +10,7 @@
     "primaryMethod": "SFT",
     "primaryTask": "轮次切换",
     "rankBucket": "前50%",
-    "score": 6.5,
+    "score": 6.4,
     "tagMetadata": {
       "concepts": [
         {
@@ -19,19 +19,19 @@
           "label": "轮次切换"
         },
         {
-          "facet": "task",
-          "id": "task.speech-dialogue",
-          "label": "语音对话系统"
-        },
-        {
           "facet": "method",
           "id": "method.sft",
           "label": "SFT"
         },
         {
           "facet": "method",
-          "id": "method.model-combination",
-          "label": "模型融合"
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
         }
       ],
       "contract": "paper-tag-flat-tags",
@@ -72,9 +72,9 @@
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "论文把语音助手的回答时机归结为静音起始点上区分轮次结束与轮次内部停顿，用微调的土耳其语 TurnGPT 结合说话人语音活动计时做判断，在保留录音集上以平均精度 0.625 领先两种文本基线并在相同打断率下把平均等待缩短约 0.09 秒，代价是结论只在六段双人视频通话和小样本自助法比较下成立且面部特征需要额外视频处理。",
+  "oneSentenceThesis": "针对固定静音等待在句内停顿与轮次结束之间难以兼顾的问题，论文把判断放在静音起点并比较微调文本分数与发声时序和面部线索的后期融合，微调模型在留出录音上排序与校准占优并在相同打断率下把平均延迟缩短约 0.09 s，但增益在未见说话人与自动转写条件下收窄且只在小规模土耳其语双人视频通话上得到验证。",
   "originalTitle": "When Should a Voice Agent Speak? End-of-Turn Detection in Turkish",
   "pdfUrl": "https://arxiv.org/pdf/2611.25489v1.pdf",
-  "readerTitle": "语音助手何时该开口：土耳其语轮次结束检测",
+  "readerTitle": "语音助手何时该开口：土耳其语静音起点轮次结束判断解读",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }

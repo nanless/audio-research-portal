@@ -9,8 +9,8 @@
     "documentType": "方法研究",
     "primaryMethod": "工具增强与约束解码",
     "primaryTask": "音频时间定位",
-    "rankBucket": "前50%",
-    "score": 7.0,
+    "rankBucket": "前25%",
+    "score": 7.9,
     "tagMetadata": {
       "concepts": [
         {
@@ -25,13 +25,13 @@
         },
         {
           "facet": "method",
-          "id": "method.activation-intervention",
-          "label": "激活因果干预"
+          "id": "method.attention",
+          "label": "注意力机制"
         },
         {
-          "facet": "method",
-          "id": "method.representation-probing",
-          "label": "表示探测"
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
         }
       ],
       "contract": "paper-tag-flat-tags",
@@ -60,16 +60,15 @@
     },
     {
       "affiliations": [
-        "KAIST",
-        "Equal contribution."
+        "KAIST"
       ],
       "name": "Joon Son Chung"
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "论文发现少数跟随查询的注意力头已定位声音却未进入回答，于是用无训练的头部时间图给完整候选区间重新打分，在新住家录音上把区间准确率从低位拉回可用范围，但代价是保留原模型的存在判断且需要注意力与开发集调参。",
+  "oneSentenceThesis": "针对音频大模型时间戳偏置且漏报的问题，论文用查询跟随挑出 8 个注意力头构造头分布图并重排完整候选区间，在训练后发布的新录音上把录音平均交并比从 0.07–0.36 提升到 0.48–0.56，代价是每次存在判断通过的查询需要额外静音前向与候选似然计算。",
   "originalTitle": "When Sounds Turn Heads: Recovering Event Timing That Audio LLMs Fail to Say",
   "pdfUrl": "https://arxiv.org/pdf/2611.25960v1.pdf",
-  "readerTitle": "听见却说不出：从注意力头里找回音频大模型漏掉的事件时间",
+  "readerTitle": "听到却说不出：从注意力头找回音频大模型漏掉的事件时刻",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }

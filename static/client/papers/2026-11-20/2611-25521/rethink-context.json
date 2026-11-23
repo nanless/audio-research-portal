@@ -7,16 +7,16 @@
   "arxivVersionedId": "2611.25521v1",
   "assessment": {
     "documentType": "系统技术报告",
-    "primaryMethod": "工具增强与约束解码",
-    "primaryTask": "语音对话系统",
-    "rankBucket": "后50%",
-    "score": 5.4,
+    "primaryMethod": "多模态学习",
+    "primaryTask": "通用多模态问答",
+    "rankBucket": "前50%",
+    "score": 7.1,
     "tagMetadata": {
       "concepts": [
         {
           "facet": "task",
-          "id": "task.speech-dialogue",
-          "label": "语音对话系统"
+          "id": "task.generic-multimodal-qa",
+          "label": "通用多模态问答"
         },
         {
           "facet": "task",
@@ -24,21 +24,21 @@
           "label": "文本到语音"
         },
         {
-          "facet": "task",
-          "id": "task.generic-multimodal-qa",
-          "label": "通用多模态问答"
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
         },
         {
-          "facet": "method",
-          "id": "method.tool-augmentation",
-          "label": "工具增强与约束解码"
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
         }
       ],
       "contract": "paper-tag-flat-tags",
-      "primaryMethod": "工具增强与约束解码",
-      "primaryMethodId": "method.tool-augmentation",
-      "primaryTask": "语音对话系统",
-      "primaryTaskId": "task.speech-dialogue",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "通用多模态问答",
+      "primaryTaskId": "task.generic-multimodal-qa",
       "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
       "registryVersion": "paper-tag-catalog",
       "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
@@ -55,9 +55,9 @@
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "该文把继承来的视觉语言与语音部件用显式接口组装起来，用公开验证集检验问答与排序能力，并用单机实测说明语音首包与长回答吞吐在何种载荷下才成立。",
+  "oneSentenceThesis": "面向助行外骨骼的受限动作对话需要把感知生成与备选排序分开检验，DRVEXO-4B-Unified 用冻结主干加时间残差适配与任务打分头组装多模态通路，在公开验证与限定协议下得到图像理解与指令遵循得分，同时以更大存量与单平台单次测量为代价且多项复核尚未完成。",
   "originalTitle": "DRVEXO-4B-Unified: Design and Evaluation of a Modular Speech-Vision System",
   "pdfUrl": "https://arxiv.org/pdf/2611.25521v1.pdf",
-  "readerTitle": "把说话、看图和选动作装进一个检查点：DRVEXO-4B-统一系统解读",
+  "readerTitle": "模块化语音视觉助手如何把对话与受限动作分开实现与评价",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }

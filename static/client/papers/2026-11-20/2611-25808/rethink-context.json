@@ -10,7 +10,7 @@
     "primaryMethod": "表示探测",
     "primaryTask": "语音属性识别",
     "rankBucket": "前50%",
-    "score": 6.5,
+    "score": 7.0,
     "tagMetadata": {
       "concepts": [
         {
@@ -24,14 +24,14 @@
           "label": "表示探测"
         },
         {
-          "facet": "signal",
-          "id": "signal.speech",
-          "label": "语音"
-        },
-        {
           "facet": "scientific_topic",
           "id": "scientific_topic.prosody",
           "label": "韵律"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.llm",
+          "label": "大语言模型"
         }
       ],
       "contract": "paper-tag-flat-tags",
@@ -60,9 +60,9 @@
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "在同一套朗读英语词级突显标注上，从伯特到三百亿参数大模型的文本方法都停在三分类约百分之六十八点八附近，直接提问大模型连词频基线都不如，而听到录音的语音模型达到三分类百分之八十四点七并跟随具体读者的读法。",
+  "oneSentenceThesis": "用同一批朗读英文词比较文字与语音路线，文字模型无论大小都停在相近上限，直接提问还不如查词典常见读法，而听录音的模型明显更高并跟随所听的朗读者。",
   "originalTitle": "Language models represent more about emphasis than they can tell you",
   "pdfUrl": "https://arxiv.org/pdf/2611.25808v1.pdf",
-  "readerTitle": "文字只能定出一种读法，录音才决定这一次怎么读",
+  "readerTitle": "文字能猜到多少重读，说不出的部分要靠耳朵",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }

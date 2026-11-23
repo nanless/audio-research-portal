@@ -9,8 +9,8 @@
     "documentType": "方法研究",
     "primaryMethod": "神经编解码与离散单元",
     "primaryTask": "语音编码",
-    "rankBucket": "前50%",
-    "score": 6.6,
+    "rankBucket": "前25%",
+    "score": 7.8,
     "tagMetadata": {
       "concepts": [
         {
@@ -22,11 +22,6 @@
           "facet": "method",
           "id": "method.neural-codec",
           "label": "神经编解码与离散单元"
-        },
-        {
-          "facet": "method",
-          "id": "method.gan",
-          "label": "生成对抗网络"
         },
         {
           "facet": "setting",
@@ -66,9 +61,9 @@
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "UMelCodec 把语音先压成极低帧率的梅尔频谱离散符号再用轻量声码器恢复波形，在 LibriTTS 上以 19.67M 参数实现客观重建领先并保持可比的主观自然度。",
+  "oneSentenceThesis": "针对几百比特每秒下同时保住声学细节与轻量推理的难题，UMelCodec 用两阶段梅尔压缩加轻量变换声码器在 325 bps 上取得客观重建领先，同时以 19.67 M 参数与两端实时推理控制了代价。",
   "originalTitle": "UMelCodec: An Ultra-Low-Bitrate and Lightweight Mel-Domain Neural Speech Codec",
   "pdfUrl": "https://arxiv.org/pdf/2611.25569v1.pdf",
-  "readerTitle": "只用声学特征如何做到 325 比特的轻量语音编码",
+  "readerTitle": "超低码率轻量梅尔域语音编码如何保住细节",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }

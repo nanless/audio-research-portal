@@ -6,11 +6,11 @@
   "arxivVersion": 1,
   "arxivVersionedId": "2611.26491v1",
   "assessment": {
-    "documentType": "数据集与基准",
+    "documentType": "方法研究",
     "primaryMethod": "基准设计",
     "primaryTask": "音视频交互",
-    "rankBucket": "前50%",
-    "score": 6.5,
+    "rankBucket": "前25%",
+    "score": 8.2,
     "tagMetadata": {
       "concepts": [
         {
@@ -19,24 +19,19 @@
           "label": "音视频交互"
         },
         {
-          "facet": "task",
-          "id": "task.speech-dialogue",
-          "label": "语音对话系统"
-        },
-        {
-          "facet": "artifact",
-          "id": "artifact.benchmark",
-          "label": "基准测试"
-        },
-        {
           "facet": "method",
           "id": "method.benchmark-design",
           "label": "基准设计"
         },
         {
           "facet": "method",
-          "id": "method.human-evaluation",
-          "label": "人类参与评测"
+          "id": "method.data-annotation",
+          "label": "数据标注"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
         }
       ],
       "contract": "paper-tag-flat-tags",
@@ -89,9 +84,9 @@
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "针对固定参考答案无法容纳沉默与时机差异的问题，FLUID 用四层证据标注刻画干预的依据与必要性和时间窗，并以此评测与构建实时智能体，在两套人人指导数据上取得相对最好的内容与时机平衡，但语音重叠与主动指导仍远不及人类。",
+  "oneSentenceThesis": "针对把人类示范当作固定答案会误判沉默与时机的问题，论文用四层证据标注与证据推导的时间窗重建评估，并用异步智能体实现有据干预，人类验证显示证据窗更符合可接受性，而系统仍在前瞻及时性与打断控制上付出代价。",
   "originalTitle": "FLUID: Flexible, Evidence-Grounded Situated Task Guidance",
   "pdfUrl": "https://arxiv.org/pdf/2611.26491v1.pdf",
-  "readerTitle": "实时任务指导的灵活性难题：FLUID 如何用证据约束该说什么与何时说",
+  "readerTitle": "有据而灵活的实时任务指导",
   "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
 }
