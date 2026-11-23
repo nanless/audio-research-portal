@@ -103,6 +103,10 @@
 <script defer src="{{ $indexCache.RelPermalink }}" integrity="{{ $indexCache.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- $indexWorker := resources.Get "js/search-index-worker.js" | minify | fingerprint }}
 <script defer src="{{ $indexLoader.RelPermalink }}" data-index-worker="{{ $indexWorker.RelPermalink }}" integrity="{{ $indexLoader.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- $citationScript := resources.Get "js/citation-source.js" | minify | fingerprint }}
+<script defer src="{{ $citationScript.RelPermalink }}" integrity="{{ $citationScript.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- $exportScript := resources.Get "js/reading-export.js" | minify | fingerprint }}
+<script defer src="{{ $exportScript.RelPermalink }}" integrity="{{ $exportScript.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- $libraryScript := resources.Get "js/paper-library.js" | minify | fingerprint }}
 <script defer src="{{ $libraryScript.RelPermalink }}" integrity="{{ $libraryScript.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end }}

@@ -366,6 +366,61 @@
       {{- end -}}
       {{- $content = $rebuilt -}}
     {{- end -}}
+  {{- else if eq $pageType "index" -}}
+    {{- /* Compact all-unbound author lists on daily/conference index pages in O(N) time (no O(N^2) whole-page replace). */ -}}
+    {{- $unboundSuffix := "：机构信息未能在本次解析中与作者逐人可靠绑定" -}}
+    {{- if in $content $unboundSuffix -}}
+      {{- $chunks := split $content "</ul>" -}}
+      {{- $lastIdx := sub (len $chunks) 1 -}}
+      {{- $outParts := slice -}}
+      {{- range $idx, $chunk := $chunks -}}
+        {{- if eq $idx $lastIdx -}}
+          {{- $outParts = $outParts | append $chunk -}}
+        {{- else if not (in $chunk $unboundSuffix) -}}
+          {{- $outParts = $outParts | append $chunk "</ul>" -}}
+        {{- else -}}
+          {{- $ulSplits := split $chunk "<ul" -}}
+          {{- $replaced := false -}}
+          {{- if eq (len $ulSplits) 2 -}}
+            {{- $beforeUl := index $ulSplits 0 -}}
+            {{- $ul := printf "<ul%s</ul>" (index $ulSplits 1) -}}
+            {{- if and (in $ul $unboundSuffix) (findRE `^<ul(?:\s|>)` $ul 1) (eq (len (findRE `<ol\b` $ul)) 0) (not (in $ul "$")) (not (in $ul $prefix)) -}}
+              {{- $lis := findRE `(?s)<li\b[^>]*>.*?</li>` $ul -}}
+              {{- $ulLeftover := strings.TrimSpace (replaceRE `(?s)<li\b[^>]*>.*?</li>` "" (replaceRE `(?s)^<ul\b[^>]*>|</ul>$` "" $ul)) -}}
+              {{- if and (ge (len $lis) 2) (eq $ulLeftover "") -}}
+                {{- $authorNames := slice -}}
+                {{- $allUnbound := true -}}
+                {{- range $li := $lis -}}
+                  {{- $liInner := strings.TrimSpace (replaceRE `(?s)^<li\b[^>]*>|</li>$` "" $li) -}}
+                  {{- if findRE `(?s)^<p>.*</p>$` $liInner 1 -}}
+                    {{- $liInner = strings.TrimSpace (strings.TrimSuffix "</p>" (strings.TrimPrefix "<p>" $liInner)) -}}
+                  {{- end -}}
+                  {{- if and (hasSuffix $liInner $unboundSuffix) (not (findRE `<[^>]+>` $liInner 1)) -}}
+                    {{- $authorName := strings.TrimSpace (strings.TrimSuffix $unboundSuffix $liInner) -}}
+                    {{- if and (ne $authorName "") (not (in $authorName "：")) (not (in $authorName "；")) -}}
+                      {{- $authorNames = $authorNames | append $authorName -}}
+                    {{- else -}}
+                      {{- $allUnbound = false -}}
+                    {{- end -}}
+                  {{- else -}}
+                    {{- $allUnbound = false -}}
+                  {{- end -}}
+                {{- end -}}
+                {{- if and $allUnbound (eq (len $authorNames) (len $lis)) -}}
+                  {{- $compactAuthors := printf "<p class=\"compact-authors-line\"><strong>论文作者：</strong>%s</p>\n<p class=\"compact-authors-note\">注：原论文 HTML 未提供可逐人可靠绑定的机构上标。</p>" (delimit $authorNames " · ") -}}
+                  {{- $outParts = $outParts | append $beforeUl $compactAuthors -}}
+                  {{- $replaced = true -}}
+                {{- end -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+          {{- if not $replaced -}}
+            {{- $outParts = $outParts | append $chunk "</ul>" -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $content = delimit $outParts "" -}}
+    {{- end -}}
   {{- end -}}
   {{- range $marker, $block := $protected -}}{{- $content = replace $content $marker $block -}}{{- end -}}
 {{- end -}}
