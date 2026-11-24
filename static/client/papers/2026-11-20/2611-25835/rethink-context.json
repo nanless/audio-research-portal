@@ -34,7 +34,7 @@
       "primaryMethodId": "method.state-space",
       "primaryTask": "多模态情感极性分析",
       "primaryTaskId": "task.multimodal-sentiment",
-      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
       "registryVersion": "paper-tag-catalog",
       "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
       "selectionContract": "paper-tag-selection"
@@ -43,61 +43,61 @@
   "authors": [
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Fudan University"
       ],
       "name": "Chunlei Meng"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Fudan University"
       ],
       "name": "Zhenyu Yu"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "University of Southern California"
       ],
       "name": "Pengbin Feng"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Cornell University"
       ],
       "name": "Jacqueline J. Pang"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Peking University"
       ],
       "name": "Jiabin Luo"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "University of New South Wales"
       ],
       "name": "Chih-Ting Liao"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Peking University"
       ],
       "name": "Zhaolu Kang"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Fudan University"
       ],
       "name": "Chun Ouyang"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Fudan University"
       ],
       "name": "Zhongxue Gan"
     }
   ],
   "contract": "paper-research-context",
-  "oneSentenceThesis": "论文针对当前语义相同但未来分叉时隐状态应保留什么信息的问题，提出用冻结未来目标逼近预测充分并结合事件条件混合转移的 PSM-WM 框架，在 Hi-EF、IEMOCAP 与 MELD 上以最高加权 F1 分数验证，同时付出概率推断与多步展开的额外训练代价。",
+  "oneSentenceThesis": "论文针对当前语义相同但未来分叉时隐状态应保留什么信息的问题，提出用冻结未来目标逼近预测充分并结合事件条件混合转移的 PSM-WM（arXiv 元数据标题作 PSM-WSM）框架，在 Hi-EF、IEMOCAP 与 MELD 上以最高加权 F1 分数验证，同时付出概率推断与多步展开的额外训练代价。",
   "originalTitle": "PSM-WSM: Predictively Sufficient Multimodal World Social Modeling",
   "pdfUrl": "https://arxiv.org/pdf/2611.25835v1.pdf",
   "readerTitle": "预测充分的多模态社会世界建模：为未来演化保留历史信息",

@@ -39,7 +39,7 @@
       "primaryMethodId": "method.benchmark-design",
       "primaryTask": "音视频交互",
       "primaryTaskId": "task.av-interaction",
-      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
       "registryVersion": "paper-tag-catalog",
       "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
       "selectionContract": "paper-tag-selection"
@@ -48,31 +48,31 @@
   "authors": [
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "University of Michigan"
       ],
       "name": "Yunqi Zhao"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "University of Michigan"
       ],
       "name": "Run Peng"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "University of Michigan"
       ],
       "name": "Ze Dong"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "University of Michigan"
       ],
       "name": "Ryan Lu"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "University of Michigan"
       ],
       "name": "Yinpei Dai"
     },

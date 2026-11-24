@@ -22,7 +22,7 @@ paper_digest_tags_contract: "paper-tag-flat-tags"
 paper_digest_tags_schema_fingerprint: "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338"
 paper_digest_tags_selection_contract: "paper-tag-selection"
 paper_digest_tags_registry_version: "paper-tag-catalog"
-paper_digest_tags_registry_sha256: "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c"
+paper_digest_tags_registry_sha256: "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.temporal-grounding","label":"音频时间定位"},{"facet":"method","id":"method.tool-augmentation","label":"工具增强与约束解码"},{"facet":"method","id":"method.attention","label":"注意力机制"},{"facet":"model_family","id":"model_family.audio-language","label":"音频大模型"}]
 paper_digest_primary_method: "工具增强与约束解码"
 paper_digest_score: 7.9
@@ -30,9 +30,9 @@ paper_digest_rank_bucket: "前25%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对音频大模型时间戳偏置且漏报的问题，论文用查询跟随挑出 8 个注意力头构造头分布图并重排完整候选区间，在训练后发布的新录音上把录音平均交并比从 0.07–0.36 提升到 0.48–0.56，代价是每次存在判断通过的查询需要额外静音前向与候选似然计算。"
 paper_digest_reader_sections: [{"heading":"问题本质：音频大模型能听出事件时刻却说不准时间戳","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"方法全景：固定模型下从头分布图到候选重排的无训练解码","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"核心机制：跟随查询的注意力头如何被挑出并验证在跟踪声音","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"主实验验证：跨新录音与自由文本查询的时间戳提升在何种条件下成立","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"消融诊断：增益来自选定的头、静音相减还是完整候选重排","index":5,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"边界与复现：何时值得尝试、第一步做什么与还缺哪些验证","index":6,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Jongbhin Woo"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Jaewook Jeong"},{"affiliations":["KAIST"],"name":"Joon Son Chung"}]
+paper_digest_authors: [{"affiliations":["KAIST"],"name":"Jongbhin Woo"},{"affiliations":["KAIST"],"name":"Jaewook Jeong"},{"affiliations":["KAIST"],"name":"Joon Son Chung"}]
 paper_digest_abstract_sha256: "b2f927ab2c7681a1f638cc684935df7f00f4996854e81e5e91459dad726c74c2"
-paper_digest_sidecars: {"citation.bib":{"sha256":"c5f451c705d805f9710c39d3d36352e038c5317bab39ca802f0947ac95ec50d0","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25960/citation.bib"},"citation.json":{"sha256":"1cb24214014610d764aadd30a4a7d0433f16bda3652a26e20618f7f6732a5212","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25960/citation.json"},"citation.ris":{"sha256":"01e77b26ef0d30f4302fbb95a586f3c16acaa796861992b570b9be6f68996452","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25960/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"e03fbb7135831b7d0e9d9a1a77068b0e91b3c63ffe0ed210db2db0e99f3bfd19","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25960/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"c5f451c705d805f9710c39d3d36352e038c5317bab39ca802f0947ac95ec50d0","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25960/citation.bib"},"citation.json":{"sha256":"889359b8ea9e9d021b2784c026e7be4e6701cced749c1670ea27fb3018a39489","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25960/citation.json"},"citation.ris":{"sha256":"01e77b26ef0d30f4302fbb95a586f3c16acaa796861992b570b9be6f68996452","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25960/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"502cefd0d121d571056ebfebbc1cfc4bca3ff3304e0372948a27fec269e1715a","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25960/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher"
 paper_digest_api_reader_schema_fingerprint: "7c0300b9342334b864b6a304dcf02a96fb8dbbe8f4061b6dbc0ddfdd249ceceb"
 paper_digest_api_reader_article_sha256: "a8ccc391e4ab79bc8819e3ba651f055d24617defde28c6c01fe44e6889731e14"
@@ -45,7 +45,7 @@ paper_digest_api_reader_source_formula_count: 4
 paper_digest_api_reader_structured_artifacts_sha256: "71592cf70840fc47462914d55a3f11a916dd01c914d544c7619e05e5acf6471e"
 paper_digest_api_reader_author_identity_contract: "api-reader-author-identity"
 paper_digest_api_reader_author_identity_schema_fingerprint: "1e3fd3a9a56c9a5bf52df8df5022690b9a3fa92e83e934f295af87c0e258ed2f"
-paper_digest_api_reader_author_identity_sha256: "5ff88415e6daccd6eab41d34ac25357726a1ad53e472ac980b8a0c7cb75def30"
+paper_digest_api_reader_author_identity_sha256: "b154501fd23ff44789bf2d5a423e8a430f2f1edf08bf789770b355c033621210"
 paper_digest_api_reader_author_count: 3
 paper_digest_api_reader_resource_identity_contract: "api-reader-resource-identity"
 paper_digest_api_reader_resource_identity_schema_fingerprint: "33b0be17118be61f39b85ce690c8da17e91f2864bb65e85284f60c40067328e0"
@@ -75,8 +75,8 @@ paper_digest_api_reader_decision_projection_schema_fingerprint: "e56feb5ab75c871
 
 ## 👥 作者与机构
 
-- Jongbhin Woo：机构信息未能在本次解析中与作者逐人可靠绑定
-- Jaewook Jeong：机构信息未能在本次解析中与作者逐人可靠绑定
+- Jongbhin Woo：KAIST
+- Jaewook Jeong：KAIST
 - Joon Son Chung：KAIST
 
 ## 📌 核心摘要

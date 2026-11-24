@@ -22,7 +22,7 @@ paper_digest_tags_contract: "paper-tag-flat-tags"
 paper_digest_tags_schema_fingerprint: "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338"
 paper_digest_tags_selection_contract: "paper-tag-selection"
 paper_digest_tags_registry_version: "paper-tag-catalog"
-paper_digest_tags_registry_sha256: "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c"
+paper_digest_tags_registry_sha256: "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-driven-video","label":"音频驱动视频生成"},{"facet":"method","id":"method.autoregressive","label":"自回归模型"},{"facet":"method","id":"method.transformer","label":"Transformer"},{"facet":"method","id":"method.dataset-curation","label":"数据集构建"}]
 paper_digest_primary_method: "自回归模型"
 paper_digest_score: 6.0
@@ -30,9 +30,9 @@ paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对静态配色无法刻画随音乐演化的局部色彩差异，论文用音乐条件自回归变换器预测逐帧 5 色主题并以保持结构的重着色呈现，在 265 个官方音乐视频上取得更低的颜色与时间差异和更高的主观评分，代价是依赖历史预测的逐步推理与官方视频数据的适用边界。"
 paper_digest_reader_sections: [{"heading":"问题本质：静态配色为何接不住随音乐变化的视觉氛围","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"方法全景：音频片段如何经编码与自回归预测变为逐帧主题序列","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"核心机制：五色离散表示与距离分配重着色如何分工","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"主实验验证：自回归建模在精度与主观感受上带来什么","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"适用判断：何时值得尝试与复现第一步要核对什么","index":5,"kind":"synthesis","roleLabel":"实践与复现"}]
-paper_digest_authors: [{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Wen-Li Wei"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Kenneth Yang"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Jen-Chun Lin"}]
+paper_digest_authors: [{"affiliations":["Institute of Information Science, Academia Sinica"],"name":"Wen-Li Wei"},{"affiliations":["Institute of Information Science, Academia Sinica","Graduate Institute of Communication Engineering, National Taiwan University"],"name":"Kenneth Yang"},{"affiliations":["Institute of Information Science, Academia Sinica"],"name":"Jen-Chun Lin"}]
 paper_digest_abstract_sha256: "663db46ad5d130bb589c6661e4068a63e6a8df69d4c9f07d4f84cd9f93af44b3"
-paper_digest_sidecars: {"citation.bib":{"sha256":"105dc2f5cd2138a9e9bd3ba5a96bd7286b133275b8c2c6570584117e384ee55d","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25781/citation.bib"},"citation.json":{"sha256":"9ce26db2c357f8d3664dcea850198e039f37f6428161785ff954222e3a187bab","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25781/citation.json"},"citation.ris":{"sha256":"e045fbfdbfc4faeed1f89fb2c1a0dd765d3774693f6f6977624bfb81b797ddb1","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25781/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"fa05fd5561b44514c7e0db9ed5136e405aee6aad22230e48eb2d5fe2b2da5b87","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25781/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"105dc2f5cd2138a9e9bd3ba5a96bd7286b133275b8c2c6570584117e384ee55d","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25781/citation.bib"},"citation.json":{"sha256":"d5aa267957065555ad16480819f12e46910047b4b3768e6c4590f86dd453b7f5","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25781/citation.json"},"citation.ris":{"sha256":"e045fbfdbfc4faeed1f89fb2c1a0dd765d3774693f6f6977624bfb81b797ddb1","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25781/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"49d79de23c35cc0f67ac28e9711bbd6fe02b7933f64fcb855878bf324c610dd9","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25781/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher"
 paper_digest_api_reader_schema_fingerprint: "7c0300b9342334b864b6a304dcf02a96fb8dbbe8f4061b6dbc0ddfdd249ceceb"
 paper_digest_api_reader_article_sha256: "c485663e41132c182657847527ddb8d57231045182d12c105248a483dadd4d06"
@@ -45,7 +45,7 @@ paper_digest_api_reader_source_formula_count: 5
 paper_digest_api_reader_structured_artifacts_sha256: "eb38568d4d26e36995f55f5514074299cc3945e66c031e2ced5d16519766add1"
 paper_digest_api_reader_author_identity_contract: "api-reader-author-identity"
 paper_digest_api_reader_author_identity_schema_fingerprint: "1e3fd3a9a56c9a5bf52df8df5022690b9a3fa92e83e934f295af87c0e258ed2f"
-paper_digest_api_reader_author_identity_sha256: "691d2f497033bc5542d67414fd11f5d633df21aa5f9e43c706ecaec3184d24d4"
+paper_digest_api_reader_author_identity_sha256: "b7abf10e2536d407b6fa4a5629a123ff5a70db3892c7296eed9637a33ff9412c"
 paper_digest_api_reader_author_count: 3
 paper_digest_api_reader_resource_identity_contract: "api-reader-resource-identity"
 paper_digest_api_reader_resource_identity_schema_fingerprint: "33b0be17118be61f39b85ce690c8da17e91f2864bb65e85284f60c40067328e0"
@@ -74,9 +74,9 @@ paper_digest_api_reader_decision_projection_schema_fingerprint: "e56feb5ab75c871
 
 ## 👥 作者与机构
 
-- Wen-Li Wei：机构信息未能在本次解析中与作者逐人可靠绑定
-- Kenneth Yang：机构信息未能在本次解析中与作者逐人可靠绑定
-- Jen-Chun Lin：机构信息未能在本次解析中与作者逐人可靠绑定
+- Wen-Li Wei：Institute of Information Science, Academia Sinica
+- Kenneth Yang：Institute of Information Science, Academia Sinica；Graduate Institute of Communication Engineering, National Taiwan University
+- Jen-Chun Lin：Institute of Information Science, Academia Sinica
 
 ## 📌 核心摘要
 

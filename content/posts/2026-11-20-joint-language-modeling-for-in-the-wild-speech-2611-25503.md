@@ -22,7 +22,7 @@ paper_digest_tags_contract: "paper-tag-flat-tags"
 paper_digest_tags_schema_fingerprint: "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338"
 paper_digest_tags_selection_contract: "paper-tag-selection"
 paper_digest_tags_registry_version: "paper-tag-catalog"
-paper_digest_tags_registry_sha256: "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c"
+paper_digest_tags_registry_sha256: "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.tts","label":"文本到语音"},{"facet":"task","id":"task.audio-generation","label":"音频生成"},{"facet":"method","id":"method.autoregressive","label":"自回归模型"},{"facet":"method","id":"method.neural-codec","label":"神经编解码与离散单元"}]
 paper_digest_primary_method: "自回归模型"
 paper_digest_score: 7.5
@@ -30,9 +30,9 @@ paper_digest_rank_bucket: "前25%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对语音与环境性质不同又在真实录音里相互关联的问题，论文用来源区分编解码器拆出两路时间对齐的 token 并以交错自回归联合建模，在同一评测下可懂度与场景相关性超过混合目标基线，而场景引导增强会带来可懂度的可控回落。"
 paper_digest_reader_sections: [{"heading":"问题本质：为何一路混合表征难以同时学好语音与环境","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"方法全景：一段文字与场景描述如何变成一路混合波形","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"核心机制一：来源区分编解码器如何从混合波形拆出两路 token","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"核心机制二：交错自回归如何让两路 token 在同一上下文里互相提供条件","index":4,"kind":"component","roleLabel":"核心机制"},{"heading":"主实验验证：可懂度与场景相关性提升在何种评测口径下成立","index":5,"kind":"result","roleLabel":"主实验验证"},{"heading":"消融与机理分析：区分表征与交错顺序各自带来什么收益与代价","index":6,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"综合判断：何时值得尝试以及复现与验证还缺什么","index":7,"kind":"synthesis","roleLabel":"实践与复现"}]
-paper_digest_authors: [{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Semin Kim"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Ju Yeon Kang"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Sunghwan Ahn"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Seonuk Kim"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Nam Soo Kim"}]
+paper_digest_authors: [{"affiliations":["Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea"],"name":"Semin Kim"},{"affiliations":["Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea"],"name":"Ju Yeon Kang"},{"affiliations":["Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea"],"name":"Sunghwan Ahn"},{"affiliations":["Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea"],"name":"Seonuk Kim"},{"affiliations":["Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea"],"name":"Nam Soo Kim"}]
 paper_digest_abstract_sha256: "8d5dddf18cdd615466174b52337a1233ddff64af1f273879290c29a5acf5bef0"
-paper_digest_sidecars: {"citation.bib":{"sha256":"20005ef7d3283bb5edf07202465b5c0d17ef78ddcaad3a9e3e3bb4d3e609230b","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25503/citation.bib"},"citation.json":{"sha256":"a3fe8a833b4fcacab4195993ad84c44a3a594c3554e59e9e3f85220aed76c371","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25503/citation.json"},"citation.ris":{"sha256":"dade07a63949a3e9b322f9d86ecb1ddd03ccae563cf3ecf099fe211b9b3ee891","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25503/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"7f69198992554fcba7ab7b58713272c027b474b17900d8beb0465b7a65dce6ae","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25503/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"20005ef7d3283bb5edf07202465b5c0d17ef78ddcaad3a9e3e3bb4d3e609230b","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25503/citation.bib"},"citation.json":{"sha256":"771a9614d4c94ad16fe0ab2b9b1d5090658e75468cc079454e29e34009f1f225","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25503/citation.json"},"citation.ris":{"sha256":"dade07a63949a3e9b322f9d86ecb1ddd03ccae563cf3ecf099fe211b9b3ee891","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25503/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"4bc1325bc24c1f53b055142adc1f1b3e5523178c00120d0289caabec23933444","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25503/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher"
 paper_digest_api_reader_schema_fingerprint: "7c0300b9342334b864b6a304dcf02a96fb8dbbe8f4061b6dbc0ddfdd249ceceb"
 paper_digest_api_reader_article_sha256: "73d2ad11ac5dfc1e63d414e4221500ec10c0b8ff40339d26e9cdad8f6872d0d7"
@@ -45,7 +45,7 @@ paper_digest_api_reader_source_formula_count: 5
 paper_digest_api_reader_structured_artifacts_sha256: "5615b1792a82d103a29978fc460ac8b8cdfd2026dcf093b8d18efb82ee9e7bf2"
 paper_digest_api_reader_author_identity_contract: "api-reader-author-identity"
 paper_digest_api_reader_author_identity_schema_fingerprint: "1e3fd3a9a56c9a5bf52df8df5022690b9a3fa92e83e934f295af87c0e258ed2f"
-paper_digest_api_reader_author_identity_sha256: "5af413abd32e16034ec11a2f8259946b92a6f04d4f3ac49629896c2c847325ce"
+paper_digest_api_reader_author_identity_sha256: "81b1692935b2baad00a81daecdf6b8486bc9ac1c9f5359c1bc06ecb65026f087"
 paper_digest_api_reader_author_count: 5
 paper_digest_api_reader_resource_identity_contract: "api-reader-resource-identity"
 paper_digest_api_reader_resource_identity_schema_fingerprint: "33b0be17118be61f39b85ce690c8da17e91f2864bb65e85284f60c40067328e0"
@@ -74,11 +74,11 @@ paper_digest_api_reader_decision_projection_schema_fingerprint: "e56feb5ab75c871
 
 ## 👥 作者与机构
 
-- Semin Kim：机构信息未能在本次解析中与作者逐人可靠绑定
-- Ju Yeon Kang：机构信息未能在本次解析中与作者逐人可靠绑定
-- Sunghwan Ahn：机构信息未能在本次解析中与作者逐人可靠绑定
-- Seonuk Kim：机构信息未能在本次解析中与作者逐人可靠绑定
-- Nam Soo Kim：机构信息未能在本次解析中与作者逐人可靠绑定
+- Semin Kim：Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea
+- Ju Yeon Kang：Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea
+- Sunghwan Ahn：Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea
+- Seonuk Kim：Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea
+- Nam Soo Kim：Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea
 
 ## 📌 核心摘要
 
@@ -92,9 +92,9 @@ paper_digest_api_reader_decision_projection_schema_fingerprint: "e56feb5ab75c871
 
 ## 🔗 开源与复现资源
 
-- 第三方资源：<https://github.com/ASLP-lab/OmniCodec> — 链接可访问（HTTP 200）
+- 论文所列链接：<https://github.com/ASLP-lab/OmniCodec> — 链接可访问（HTTP 200）
 
-- 第三方资源：<https://huggingface.co/AXERA-TECH/SileroVAD> — 链接可访问（HTTP 200）
+- 论文所列链接：<https://huggingface.co/AXERA-TECH/SileroVAD> — 链接可访问（HTTP 200）
 
 可达状态仅表示本次链接检查结果，不代表许可证、本文权重或运行复现已验证。
 

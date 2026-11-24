@@ -22,7 +22,7 @@ paper_digest_tags_contract: "paper-tag-flat-tags"
 paper_digest_tags_schema_fingerprint: "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338"
 paper_digest_tags_selection_contract: "paper-tag-selection"
 paper_digest_tags_registry_version: "paper-tag-catalog"
-paper_digest_tags_registry_sha256: "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c"
+paper_digest_tags_registry_sha256: "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-separation","label":"语音分离"},{"facet":"method","id":"method.prompt-learning","label":"提示学习"},{"facet":"method","id":"method.lora","label":"LoRA"},{"facet":"setting","id":"setting.multilingual","label":"多语言"}]
 paper_digest_primary_method: "提示学习"
 paper_digest_score: 6.9
@@ -30,9 +30,9 @@ paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对多语混合中仅靠语种身份标签难以提供结构化线索的问题，该工作用提示词条件与低秩适配改造预训练语音语义模型以生成目标语种语义序列并经交叉注意力注入共享的 Sepformer 抽取管线，在英德混合测试集上取得 1.16 dB 的信号重建提升，代价是引入约 11 亿参数的语义分支与自回归生成开销。"
 paper_digest_reader_sections: [{"heading":"问题本质：仅靠语种身份标签为何难以指导高质量抽取","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"方法全景：混合波形如何经声学与语义两条支路还原为目标语音","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"核心机制：提示词条件与低秩适配如何生成目标语种语义序列","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"主实验验证：语义引导在英德混合上带来多大的重建收益","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"消融诊断：身份标签与语义序列各自承担何种分工","index":5,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"综合判断：何时值得尝试语义引导与复现起点","index":6,"kind":"synthesis","roleLabel":"实践与复现"}]
-paper_digest_authors: [{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Mehmet Sinan Yıldırım"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Ke Zhang"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Shuai Wang"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Haizhou Li"}]
+paper_digest_authors: [{"affiliations":["National University of Singapore, Singapore"],"name":"Mehmet Sinan Yıldırım"},{"affiliations":["The Chinese University of Hong Kong, Shenzhen, China"],"name":"Ke Zhang"},{"affiliations":["Nanjing University, Suzhou, China"],"name":"Shuai Wang"},{"affiliations":["National University of Singapore, Singapore","The Chinese University of Hong Kong, Shenzhen, China"],"name":"Haizhou Li"}]
 paper_digest_abstract_sha256: "686ea10b7758dcc4149a5da949338abc974ed82ffe6fb7ac1abd6973b07ad1f9"
-paper_digest_sidecars: {"citation.bib":{"sha256":"1c0182e2ca05de2f38814046fbcd6aeb1ae0d0a751e4ddbaaa086a028c03ea13","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26317/citation.bib"},"citation.json":{"sha256":"0adb813510cb63722eedf617face4c89c204ef564e8e9a70d7076e27e4bd2724","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26317/citation.json"},"citation.ris":{"sha256":"28ef79390c8ced036dad2e6caf06c86b2b0bbda4887f1da814f498de3335d183","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26317/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"595c44b1e321c865503f980983bbbcc71b7dddc992b9511dc1005cae7ef062b4","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26317/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"1c0182e2ca05de2f38814046fbcd6aeb1ae0d0a751e4ddbaaa086a028c03ea13","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26317/citation.bib"},"citation.json":{"sha256":"c7dd30469991565b0d1eef1ceb832d15e268b863c29595e728a2030c26a6f22d","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26317/citation.json"},"citation.ris":{"sha256":"28ef79390c8ced036dad2e6caf06c86b2b0bbda4887f1da814f498de3335d183","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26317/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"b35ca3a88f72053abb8fbfecfe6106d58fabc0a3b8574e16259df53a3fcd68a3","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26317/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher"
 paper_digest_api_reader_schema_fingerprint: "7c0300b9342334b864b6a304dcf02a96fb8dbbe8f4061b6dbc0ddfdd249ceceb"
 paper_digest_api_reader_article_sha256: "70573305c7c1229f2324365ed30cf6fe7dfc37ea86300adabef96aeabb43e60f"
@@ -45,7 +45,7 @@ paper_digest_api_reader_source_formula_count: 1
 paper_digest_api_reader_structured_artifacts_sha256: "d6c4e431027de6948940621fa76dd07812a404c3ea8946954602a8746d82b1b1"
 paper_digest_api_reader_author_identity_contract: "api-reader-author-identity"
 paper_digest_api_reader_author_identity_schema_fingerprint: "1e3fd3a9a56c9a5bf52df8df5022690b9a3fa92e83e934f295af87c0e258ed2f"
-paper_digest_api_reader_author_identity_sha256: "d11a3126df2796514b6debd163cdf439b020d13eff15c2dbc864f32337a4f2e7"
+paper_digest_api_reader_author_identity_sha256: "f26c3e8a406b4cbcc1ebda110e6145490430e016410b28465d809cc059a5585a"
 paper_digest_api_reader_author_count: 4
 paper_digest_api_reader_resource_identity_contract: "api-reader-resource-identity"
 paper_digest_api_reader_resource_identity_schema_fingerprint: "33b0be17118be61f39b85ce690c8da17e91f2864bb65e85284f60c40067328e0"
@@ -75,10 +75,10 @@ paper_digest_api_reader_decision_projection_schema_fingerprint: "e56feb5ab75c871
 
 ## 👥 作者与机构
 
-- Mehmet Sinan Yıldırım：机构信息未能在本次解析中与作者逐人可靠绑定
-- Ke Zhang：机构信息未能在本次解析中与作者逐人可靠绑定
-- Shuai Wang：机构信息未能在本次解析中与作者逐人可靠绑定
-- Haizhou Li：机构信息未能在本次解析中与作者逐人可靠绑定
+- Mehmet Sinan Yıldırım：National University of Singapore, Singapore
+- Ke Zhang：The Chinese University of Hong Kong, Shenzhen, China
+- Shuai Wang：Nanjing University, Suzhou, China
+- Haizhou Li：National University of Singapore, Singapore；The Chinese University of Hong Kong, Shenzhen, China
 
 ## 📌 核心摘要
 
@@ -92,7 +92,7 @@ paper_digest_api_reader_decision_projection_schema_fingerprint: "e56feb5ab75c871
 
 ## 🔗 开源与复现资源
 
-- 第三方资源：<https://huggingface.co/ASLP-lab/SenSE> — 链接可访问（HTTP 200）
+- 论文所列链接：<https://huggingface.co/ASLP-lab/SenSE> — 链接可访问（HTTP 200）
 
 可达状态仅表示本次链接检查结果，不代表许可证、本文权重或运行复现已验证。
 

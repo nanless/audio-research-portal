@@ -44,7 +44,7 @@
       "primaryMethodId": "method.dataset-curation",
       "primaryTask": "语音识别",
       "primaryTaskId": "task.asr",
-      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
       "registryVersion": "paper-tag-catalog",
       "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
       "selectionContract": "paper-tag-selection"
@@ -53,49 +53,49 @@
   "authors": [
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
       ],
       "name": "Pengyu Xu"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
       ],
       "name": "Gang Liu"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
       ],
       "name": "Genliang Zhao"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
       ],
       "name": "Hongjie Chen"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
       ],
       "name": "Jian Kang"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
       ],
       "name": "Jie Lian"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
       ],
       "name": "Jie Li"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"
       ],
       "name": "Yongxiang Li"
     }

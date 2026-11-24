@@ -22,7 +22,7 @@ paper_digest_tags_contract: "paper-tag-flat-tags"
 paper_digest_tags_schema_fingerprint: "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338"
 paper_digest_tags_selection_contract: "paper-tag-selection"
 paper_digest_tags_registry_version: "paper-tag-catalog"
-paper_digest_tags_registry_sha256: "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c"
+paper_digest_tags_registry_sha256: "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-interaction","label":"音视频交互"},{"facet":"method","id":"method.benchmark-design","label":"基准设计"},{"facet":"method","id":"method.data-annotation","label":"数据标注"},{"facet":"signal","id":"signal.audiovisual","label":"音视频"}]
 paper_digest_primary_method: "基准设计"
 paper_digest_score: 8.2
@@ -30,9 +30,9 @@ paper_digest_rank_bucket: "前25%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对把人类示范当作固定答案会误判沉默与时机的问题，论文用四层证据标注与证据推导的时间窗重建评估，并用异步智能体实现有据干预，人类验证显示证据窗更符合可接受性，而系统仍在前瞻及时性与打断控制上付出代价。"
 paper_digest_reader_sections: [{"heading":"问题本质：把人类示范当作固定答案为何会误判沉默与时机","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"方法全景：四层标注如何把一次开口锚定到证据与时间窗","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"评估机制：内容匹配与时间得分如何区分必要提醒与多余打断","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"系统实现：异步多模块如何决定何时开口与何时保持沉默","index":4,"kind":"component","roleLabel":"核心机制"},{"heading":"主实验验证：在证据口径下正确性与及时性的收益与代价","index":5,"kind":"result","roleLabel":"主实验验证"},{"heading":"诊断分析：干预时机与具体证据各自带来了多少提升","index":6,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"适用边界：何时值得尝试与复现第一步该核对什么","index":7,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Yunqi Zhao"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Run Peng"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Ze Dong"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Ryan Lu"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Yinpei Dai"},{"affiliations":["University of Michigan"],"name":"Joyce Chai"}]
+paper_digest_authors: [{"affiliations":["University of Michigan"],"name":"Yunqi Zhao"},{"affiliations":["University of Michigan"],"name":"Run Peng"},{"affiliations":["University of Michigan"],"name":"Ze Dong"},{"affiliations":["University of Michigan"],"name":"Ryan Lu"},{"affiliations":["University of Michigan"],"name":"Yinpei Dai"},{"affiliations":["University of Michigan"],"name":"Joyce Chai"}]
 paper_digest_abstract_sha256: "32d0b6c5403fcb9d8de1782ad29802167235625d605c25878a1c9c574cf9ccad"
-paper_digest_sidecars: {"citation.bib":{"sha256":"9c43e6a2871312966b29fad988e82a5abd8a0b66a9408febbd409fe77723aa69","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26491/citation.bib"},"citation.json":{"sha256":"342a43cb90895ab81d6ada4e77db6706ee36c097e7123b0b4a2cd6e96e1b1d67","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26491/citation.json"},"citation.ris":{"sha256":"281b4b64e373ea607acf726f3a3489b7b15b8503b7ec501d09b5d84312d2863f","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26491/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"ec821ba0478e5835e0a3ef44d8f850368fb4a89a97a500178c9da57131109ad0","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26491/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"9c43e6a2871312966b29fad988e82a5abd8a0b66a9408febbd409fe77723aa69","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26491/citation.bib"},"citation.json":{"sha256":"f75e5f1432a813fdc9b2bc4dce42191cbdb63602b64396e0caf4b4e61d326426","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26491/citation.json"},"citation.ris":{"sha256":"281b4b64e373ea607acf726f3a3489b7b15b8503b7ec501d09b5d84312d2863f","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26491/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"67bf5c7a76b144d530ee96e894d1c89ec8fb19397c7ce3479aae32b5d196233f","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26491/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher"
 paper_digest_api_reader_schema_fingerprint: "7c0300b9342334b864b6a304dcf02a96fb8dbbe8f4061b6dbc0ddfdd249ceceb"
 paper_digest_api_reader_article_sha256: "861f3553362a6609ddd9a601ff4abfbed4241047611fad02347cda9a807dda0c"
@@ -45,7 +45,7 @@ paper_digest_api_reader_source_formula_count: 3
 paper_digest_api_reader_structured_artifacts_sha256: "1ceb0a4dc779810b27c9ddf0b94c290646f5d0c22b7b7c7f393271741a0f9737"
 paper_digest_api_reader_author_identity_contract: "api-reader-author-identity"
 paper_digest_api_reader_author_identity_schema_fingerprint: "1e3fd3a9a56c9a5bf52df8df5022690b9a3fa92e83e934f295af87c0e258ed2f"
-paper_digest_api_reader_author_identity_sha256: "27e35c1c94ffbebcabaa87a2bf9f9bcbae3d9415dedb07b09be920edf7e8bf8b"
+paper_digest_api_reader_author_identity_sha256: "14736bc8ee45c13ef8f3e141ac8891eed8a8fef23bd254d0cc1c65b3a796b217"
 paper_digest_api_reader_author_count: 6
 paper_digest_api_reader_resource_identity_contract: "api-reader-resource-identity"
 paper_digest_api_reader_resource_identity_schema_fingerprint: "33b0be17118be61f39b85ce690c8da17e91f2864bb65e85284f60c40067328e0"
@@ -75,11 +75,11 @@ paper_digest_api_reader_decision_projection_schema_fingerprint: "e56feb5ab75c871
 
 ## 👥 作者与机构
 
-- Yunqi Zhao：机构信息未能在本次解析中与作者逐人可靠绑定
-- Run Peng：机构信息未能在本次解析中与作者逐人可靠绑定
-- Ze Dong：机构信息未能在本次解析中与作者逐人可靠绑定
-- Ryan Lu：机构信息未能在本次解析中与作者逐人可靠绑定
-- Yinpei Dai：机构信息未能在本次解析中与作者逐人可靠绑定
+- Yunqi Zhao：University of Michigan
+- Run Peng：University of Michigan
+- Ze Dong：University of Michigan
+- Ryan Lu：University of Michigan
+- Yinpei Dai：University of Michigan
 - Joyce Chai：University of Michigan
 
 ## 📌 核心摘要

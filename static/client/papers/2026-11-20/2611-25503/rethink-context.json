@@ -39,7 +39,7 @@
       "primaryMethodId": "method.autoregressive",
       "primaryTask": "文本到语音",
       "primaryTaskId": "task.tts",
-      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
       "registryVersion": "paper-tag-catalog",
       "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
       "selectionContract": "paper-tag-selection"
@@ -48,31 +48,31 @@
   "authors": [
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea"
       ],
       "name": "Semin Kim"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea"
       ],
       "name": "Ju Yeon Kang"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea"
       ],
       "name": "Sunghwan Ahn"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea"
       ],
       "name": "Seonuk Kim"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Institute of New Media and Communications, Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea"
       ],
       "name": "Nam Soo Kim"
     }

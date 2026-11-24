@@ -22,7 +22,7 @@ paper_digest_tags_contract: "paper-tag-flat-tags"
 paper_digest_tags_schema_fingerprint: "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338"
 paper_digest_tags_selection_contract: "paper-tag-selection"
 paper_digest_tags_registry_version: "paper-tag-catalog"
-paper_digest_tags_registry_sha256: "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c"
+paper_digest_tags_registry_sha256: "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.av-understanding","label":"音视频理解"},{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"method","id":"method.reinforcement","label":"强化学习"}]
 paper_digest_primary_method: "多模态学习"
 paper_digest_score: 8.0
@@ -30,9 +30,9 @@ paper_digest_rank_bucket: "前25%"
 paper_digest_document_type: "模型报告"
 paper_digest_one_sentence: "针对真实视频需要联合视听时序推理而开源模型易漏细节与幻觉的问题，WeMM-Video 用统一记号交错加时间戳与三段预训练三段后训练实现直接作答与思考推理双模式，在 33 项联合视听基准上以 35B-A3B 刷新开源最优并以 9B 越级超过 30B 级开源对照，代价是思考模式更长且音乐转写等细粒度仍逊于专有模型"
 paper_digest_reader_sections: [{"heading":"问题本质：只看画面或只听声音为何读不懂真实视频","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"方法全景：多模态信号如何变成同一串语言记号","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"训练组织：约 1.2 万亿记号如何分阶段补齐听觉与长程对齐","index":3,"kind":"training","roleLabel":"训练与优化"},{"heading":"主实验验证：联合视听领先在哪些口径下成立","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"适用边界：何时值得尝试与复现第一步做什么","index":5,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Changli Tang"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Jie Yang"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Tianyi Wang"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Lei Li"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Daoze Zhang"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Zijie Xin"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Zhan Liu"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Li Li"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Jinchang Xu"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Fengyun Rao"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Chao Zhang"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Jing Lyu"}]
+paper_digest_authors: [{"affiliations":["WeChat Vision, Tencent Inc.","Tsinghua University"],"name":"Changli Tang"},{"affiliations":["WeChat Vision, Tencent Inc."],"name":"Jie Yang"},{"affiliations":["WeChat Vision, Tencent Inc."],"name":"Tianyi Wang"},{"affiliations":["WeChat Vision, Tencent Inc."],"name":"Lei Li"},{"affiliations":["WeChat Vision, Tencent Inc."],"name":"Daoze Zhang"},{"affiliations":["WeChat Vision, Tencent Inc."],"name":"Zijie Xin"},{"affiliations":["WeChat Vision, Tencent Inc.","Tsinghua University"],"name":"Zhan Liu"},{"affiliations":["WeChat Vision, Tencent Inc."],"name":"Li Li"},{"affiliations":["WeChat Vision, Tencent Inc."],"name":"Jinchang Xu"},{"affiliations":["WeChat Vision, Tencent Inc."],"name":"Fengyun Rao"},{"affiliations":["Tsinghua University"],"name":"Chao Zhang"},{"affiliations":["WeChat Vision, Tencent Inc."],"name":"Jing Lyu"}]
 paper_digest_abstract_sha256: "3793a354181826e97994cea5b9ac92cf0c4abea74ba17b024b307369542a26d9"
-paper_digest_sidecars: {"citation.bib":{"sha256":"c304116aa0486a1161947eaee49356b44864eeacca1fed4a9580ac58af8b83d0","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26409/citation.bib"},"citation.json":{"sha256":"5cc221dbaee277ccebae824235c3addb3f80ca5e138a8403b3eace7ef6df8ee5","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26409/citation.json"},"citation.ris":{"sha256":"1e9e7c51673929b305d8d496440bf4c9a1be6f028a20fdec5d2b3153b3381f72","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26409/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"05ea75a45274048feec38f8cb436c4410e5fc22f52eac79b18fca102ae2f9a0c","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26409/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"c304116aa0486a1161947eaee49356b44864eeacca1fed4a9580ac58af8b83d0","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26409/citation.bib"},"citation.json":{"sha256":"34a624fbdaead20e084e02b5b2618a8844da4e70bcbd7597a2a4102f977c519e","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26409/citation.json"},"citation.ris":{"sha256":"1e9e7c51673929b305d8d496440bf4c9a1be6f028a20fdec5d2b3153b3381f72","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26409/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"25e698e397faf1c784801c7095f8fc2fc0a92ae50f468da9393cc16ca0633e35","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26409/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher"
 paper_digest_api_reader_schema_fingerprint: "7c0300b9342334b864b6a304dcf02a96fb8dbbe8f4061b6dbc0ddfdd249ceceb"
 paper_digest_api_reader_article_sha256: "9069ab7f5bf60e0f74af5956e2c7e6d558b41e476b1caace8aa0b5134eaf2de5"
@@ -45,7 +45,7 @@ paper_digest_api_reader_source_formula_count: 0
 paper_digest_api_reader_structured_artifacts_sha256: "05441581fcdd3722ada12d829527cdadfb103c0fdc198df108216aa84c143ee1"
 paper_digest_api_reader_author_identity_contract: "api-reader-author-identity"
 paper_digest_api_reader_author_identity_schema_fingerprint: "1e3fd3a9a56c9a5bf52df8df5022690b9a3fa92e83e934f295af87c0e258ed2f"
-paper_digest_api_reader_author_identity_sha256: "7e47ab7bd20938daf9950bb8506f58de526372b2e8ce997e5fab17de3a031fca"
+paper_digest_api_reader_author_identity_sha256: "db93d850115f8036cf857c1a18250d5504e9dd9ed31e1705019f3840bebd56a6"
 paper_digest_api_reader_author_count: 12
 paper_digest_api_reader_resource_identity_contract: "api-reader-resource-identity"
 paper_digest_api_reader_resource_identity_schema_fingerprint: "33b0be17118be61f39b85ce690c8da17e91f2864bb65e85284f60c40067328e0"
@@ -74,18 +74,18 @@ paper_digest_api_reader_decision_projection_schema_fingerprint: "e56feb5ab75c871
 
 ## 👥 作者与机构
 
-- Changli Tang：机构信息未能在本次解析中与作者逐人可靠绑定
-- Jie Yang：机构信息未能在本次解析中与作者逐人可靠绑定
-- Tianyi Wang：机构信息未能在本次解析中与作者逐人可靠绑定
-- Lei Li：机构信息未能在本次解析中与作者逐人可靠绑定
-- Daoze Zhang：机构信息未能在本次解析中与作者逐人可靠绑定
-- Zijie Xin：机构信息未能在本次解析中与作者逐人可靠绑定
-- Zhan Liu：机构信息未能在本次解析中与作者逐人可靠绑定
-- Li Li：机构信息未能在本次解析中与作者逐人可靠绑定
-- Jinchang Xu：机构信息未能在本次解析中与作者逐人可靠绑定
-- Fengyun Rao：机构信息未能在本次解析中与作者逐人可靠绑定
-- Chao Zhang：机构信息未能在本次解析中与作者逐人可靠绑定
-- Jing Lyu：机构信息未能在本次解析中与作者逐人可靠绑定
+- Changli Tang：WeChat Vision, Tencent Inc.；Tsinghua University
+- Jie Yang：WeChat Vision, Tencent Inc.
+- Tianyi Wang：WeChat Vision, Tencent Inc.
+- Lei Li：WeChat Vision, Tencent Inc.
+- Daoze Zhang：WeChat Vision, Tencent Inc.
+- Zijie Xin：WeChat Vision, Tencent Inc.
+- Zhan Liu：WeChat Vision, Tencent Inc.；Tsinghua University
+- Li Li：WeChat Vision, Tencent Inc.
+- Jinchang Xu：WeChat Vision, Tencent Inc.
+- Fengyun Rao：WeChat Vision, Tencent Inc.
+- Chao Zhang：Tsinghua University
+- Jing Lyu：WeChat Vision, Tencent Inc.
 
 ## 📌 核心摘要
 

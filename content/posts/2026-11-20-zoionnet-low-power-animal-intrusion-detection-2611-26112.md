@@ -22,7 +22,7 @@ paper_digest_tags_contract: "paper-tag-flat-tags"
 paper_digest_tags_schema_fingerprint: "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338"
 paper_digest_tags_selection_contract: "paper-tag-selection"
 paper_digest_tags_registry_version: "paper-tag-catalog"
-paper_digest_tags_registry_sha256: "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c"
+paper_digest_tags_registry_sha256: "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.audio-classification","label":"音频分类"},{"facet":"method","id":"method.cnn","label":"CNN"},{"facet":"setting","id":"setting.on-device","label":"端侧运行"},{"facet":"application","id":"application.bioacoustics","label":"生物声学监测"}]
 paper_digest_primary_method: "CNN"
 paper_digest_score: 5.3
@@ -30,9 +30,9 @@ paper_digest_rank_bucket: "后50%"
 paper_digest_document_type: "系统技术报告"
 paper_digest_one_sentence: "针对南印度林村交界大象与大型猫科动物闯入预警难 sustained 供电的问题，论文把 8 kHz 声音变为梅尔频谱图并在微型加速器上用两档分类加滑动平均门限决定何时唤醒重模型，经蜂窝链路直达看板与短信，保留音频上报告 0.97436 与 0.94551 的准确率而整机 133.57 美元，但省电等关键现场指标尚未实测。"
 paper_digest_reader_sections: [{"heading":"问题本质：林村交错带为何需要能长期值守的声音预警","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"方法全景：一段 0.2 秒声音如何变成护林员手机里的物种名","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"核心机制：轻模型常开加滑动平均如何让重模型只在可疑时工作","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"训练过程：公开音频如何被调成两只 8 位分类器","index":4,"kind":"training","roleLabel":"训练与优化"},{"heading":"主实验验证：保留音频准确率与整机链路在什么条件下成立","index":5,"kind":"result","roleLabel":"主实验验证"},{"heading":"适用边界：省电主张缺了哪项测量与复用前要补什么验证","index":6,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Prasanna Vijay"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Adarsh Gupta"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Vansh Panwar"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Vatsalya Singh"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Shubham Singhal"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Anubhav Saha"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Teena Sharma"}]
+paper_digest_authors: [{"affiliations":["Sri Sairam Engineering College (Anna University), Chennai, India"],"name":"Prasanna Vijay"},{"affiliations":["Indian Institute of Technology Guwahati, Assam, India"],"name":"Adarsh Gupta"},{"affiliations":["Indian Institute of Technology Guwahati, Assam, India"],"name":"Vansh Panwar"},{"affiliations":["Indian Institute of Technology Guwahati, Assam, India"],"name":"Vatsalya Singh"},{"affiliations":["Indian Institute of Technology Guwahati, Assam, India"],"name":"Shubham Singhal"},{"affiliations":["Indian Institute of Technology Guwahati, Assam, India"],"name":"Anubhav Saha"},{"affiliations":["Mehta Family School of Data Science and Artificial Intelligence, Indian Institute of Technology Guwahati, Assam, India"],"name":"Teena Sharma"}]
 paper_digest_abstract_sha256: "74b7d5904df1cecf932d02cf1aa3e96c1f1c43bde459a09aaa90c580910e74c7"
-paper_digest_sidecars: {"citation.bib":{"sha256":"05352ef4837be8643c2975ce4bdedc20e9cda0dcd4f0288120d6634cc740d5cf","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26112/citation.bib"},"citation.json":{"sha256":"4e2ca575c25686c7261c8ac4f6b1b54a78744c757271ac88b2c7d3f3f26c977b","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26112/citation.json"},"citation.ris":{"sha256":"fd968a6469c483105b0083c2ae1981aa074ca94e0842c852ed7becb3ee250145","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26112/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"7891a17582ce82ac9147325ee849309527deae2c30461121d68a6c88a4ff08dc","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26112/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"05352ef4837be8643c2975ce4bdedc20e9cda0dcd4f0288120d6634cc740d5cf","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26112/citation.bib"},"citation.json":{"sha256":"36e94612e751a8f2af1f1dfe66911086fecce82dda12388cd9b4a08ab01fb69e","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26112/citation.json"},"citation.ris":{"sha256":"fd968a6469c483105b0083c2ae1981aa074ca94e0842c852ed7becb3ee250145","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26112/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"c9844fac81aefa748fcd368310d2712089d8b821f70070e3eb43d676d1314acb","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26112/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher"
 paper_digest_api_reader_schema_fingerprint: "7c0300b9342334b864b6a304dcf02a96fb8dbbe8f4061b6dbc0ddfdd249ceceb"
 paper_digest_api_reader_article_sha256: "f726e0b975617c38b0da02a571278125cbc687b20c7a5edb626586f3389b3333"
@@ -45,7 +45,7 @@ paper_digest_api_reader_source_formula_count: 3
 paper_digest_api_reader_structured_artifacts_sha256: "d3b6274bc800297bbe68a6bdb4b814567aa107106832a541beaed060c7266a7f"
 paper_digest_api_reader_author_identity_contract: "api-reader-author-identity"
 paper_digest_api_reader_author_identity_schema_fingerprint: "1e3fd3a9a56c9a5bf52df8df5022690b9a3fa92e83e934f295af87c0e258ed2f"
-paper_digest_api_reader_author_identity_sha256: "2b506333cf57ddd9f9607b3c1a0aac024f8e707baef62eb85519631d290ada3e"
+paper_digest_api_reader_author_identity_sha256: "eefb4871120f9dad3152bd7e73138fa0ce980cb2b35362602d888cfe33e9a89e"
 paper_digest_api_reader_author_count: 7
 paper_digest_api_reader_resource_identity_contract: "api-reader-resource-identity"
 paper_digest_api_reader_resource_identity_schema_fingerprint: "33b0be17118be61f39b85ce690c8da17e91f2864bb65e85284f60c40067328e0"
@@ -76,13 +76,13 @@ paper_digest_api_reader_decision_projection_schema_fingerprint: "e56feb5ab75c871
 
 ## 👥 作者与机构
 
-- Prasanna Vijay：机构信息未能在本次解析中与作者逐人可靠绑定
-- Adarsh Gupta：机构信息未能在本次解析中与作者逐人可靠绑定
-- Vansh Panwar：机构信息未能在本次解析中与作者逐人可靠绑定
-- Vatsalya Singh：机构信息未能在本次解析中与作者逐人可靠绑定
-- Shubham Singhal：机构信息未能在本次解析中与作者逐人可靠绑定
-- Anubhav Saha：机构信息未能在本次解析中与作者逐人可靠绑定
-- Teena Sharma：机构信息未能在本次解析中与作者逐人可靠绑定
+- Prasanna Vijay：Sri Sairam Engineering College (Anna University), Chennai, India
+- Adarsh Gupta：Indian Institute of Technology Guwahati, Assam, India
+- Vansh Panwar：Indian Institute of Technology Guwahati, Assam, India
+- Vatsalya Singh：Indian Institute of Technology Guwahati, Assam, India
+- Shubham Singhal：Indian Institute of Technology Guwahati, Assam, India
+- Anubhav Saha：Indian Institute of Technology Guwahati, Assam, India
+- Teena Sharma：Mehta Family School of Data Science and Artificial Intelligence, Indian Institute of Technology Guwahati, Assam, India
 
 ## 📌 核心摘要
 

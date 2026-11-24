@@ -44,7 +44,7 @@
       "primaryMethodId": "method.distillation",
       "primaryTask": "语音驱动人像视频生成",
       "primaryTaskId": "task.talking-portrait",
-      "registrySha256": "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
       "registryVersion": "paper-tag-catalog",
       "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
       "selectionContract": "paper-tag-selection"
@@ -53,31 +53,32 @@
   "authors": [
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Kyutai, Paris, France",
+        "ISIR, Sorbonne Université"
       ],
       "name": "Nathaniel Cohen"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Kyutai, Paris, France"
       ],
       "name": "Nicolas Dufour"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Kyutai, Paris, France"
       ],
       "name": "Amélie Royer"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "ISIR, Sorbonne Université"
       ],
       "name": "Alasdair Newson"
     },
     {
       "affiliations": [
-        "机构信息未能在本次解析中与作者逐人可靠绑定"
+        "Google DeepMind"
       ],
       "name": "Patrick Pérez"
     }

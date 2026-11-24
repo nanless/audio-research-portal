@@ -22,7 +22,7 @@ paper_digest_tags_contract: "paper-tag-flat-tags"
 paper_digest_tags_schema_fingerprint: "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338"
 paper_digest_tags_selection_contract: "paper-tag-selection"
 paper_digest_tags_registry_version: "paper-tag-catalog"
-paper_digest_tags_registry_sha256: "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c"
+paper_digest_tags_registry_sha256: "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.speech-coding","label":"语音编码"},{"facet":"method","id":"method.neural-codec","label":"神经编解码与离散单元"},{"facet":"setting","id":"setting.real-time","label":"实时处理"}]
 paper_digest_primary_method: "神经编解码与离散单元"
 paper_digest_score: 7.8
@@ -30,9 +30,9 @@ paper_digest_rank_bucket: "前25%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对几百比特每秒下同时保住声学细节与轻量推理的难题，UMelCodec 用两阶段梅尔压缩加轻量变换声码器在 325 bps 上取得客观重建领先，同时以 19.67 M 参数与两端实时推理控制了代价。"
 paper_digest_reader_sections: [{"heading":"问题本质：几百比特率下如何兼顾声学细节与轻量推理","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"方法全景：输入波形如何经两阶段变成码流再还原","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"核心机制：谐波建模与单码本量化及多尺度判别如何分工","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"主实验验证：客观重建领先在何处付出主观与效率代价","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"消融与码本分析：各组件贡献与码本容量如何取舍","index":5,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"综合判断：何时值得尝试与复现需要核对的前提","index":6,"kind":"synthesis","roleLabel":"实践与复现"}]
-paper_digest_authors: [{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Hui-Peng Du"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Yang Ai"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Zhen-Hua Ling"}]
+paper_digest_authors: [{"affiliations":["National Engineering Research Center of Speech and Language Information Processing, University of Science and Technology of China, Hefei, 230027, China"],"name":"Hui-Peng Du"},{"affiliations":["National Engineering Research Center of Speech and Language Information Processing, University of Science and Technology of China, Hefei, 230027, China"],"name":"Yang Ai"},{"affiliations":["National Engineering Research Center of Speech and Language Information Processing, University of Science and Technology of China, Hefei, 230027, China"],"name":"Zhen-Hua Ling"}]
 paper_digest_abstract_sha256: "dff82fcfce874f8fba557addd81baf74738e984db119a75c11962dd718ff68d9"
-paper_digest_sidecars: {"citation.bib":{"sha256":"57051d9628f19386ee2dac7e3a65448e1b4ee05ec5f521468553bca1e5ce826a","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25569/citation.bib"},"citation.json":{"sha256":"4ab55efd4648f5b9aeb93d8f92f3cb53325a326d33473f1d78509bd186e0a858","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25569/citation.json"},"citation.ris":{"sha256":"215be1631b23c10a3d2c3b7ae2f84b6d6ed069464e82e98ed72c9885c03ee437","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25569/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"de075b895971668722d9e6ed3cdcc538041405bf63f2814317ae8c8c473ce229","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25569/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"57051d9628f19386ee2dac7e3a65448e1b4ee05ec5f521468553bca1e5ce826a","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25569/citation.bib"},"citation.json":{"sha256":"b6244a9dff638a8d3f1cfba5096c081731c16896a5c0924719c0ad164e663792","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25569/citation.json"},"citation.ris":{"sha256":"215be1631b23c10a3d2c3b7ae2f84b6d6ed069464e82e98ed72c9885c03ee437","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25569/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"0d9ae59d0b714bf64ac67352227e590a52a9868492fe934878aabed3179a74e5","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25569/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher"
 paper_digest_api_reader_schema_fingerprint: "7c0300b9342334b864b6a304dcf02a96fb8dbbe8f4061b6dbc0ddfdd249ceceb"
 paper_digest_api_reader_article_sha256: "51e742af00af59e74b2f67e2aac5586ea016ab0136b9b3bb6be3f2bc3973aa38"
@@ -45,7 +45,7 @@ paper_digest_api_reader_source_formula_count: 1
 paper_digest_api_reader_structured_artifacts_sha256: "8942e61e3530ca456cad0161520052cbf7a8dbd7af7fa6078b0af69ffefdd554"
 paper_digest_api_reader_author_identity_contract: "api-reader-author-identity"
 paper_digest_api_reader_author_identity_schema_fingerprint: "1e3fd3a9a56c9a5bf52df8df5022690b9a3fa92e83e934f295af87c0e258ed2f"
-paper_digest_api_reader_author_identity_sha256: "50a9cbd153b8f5d0974126f80e97f6be3a7088a0accfc94469d75cf1960dd66e"
+paper_digest_api_reader_author_identity_sha256: "f57d1e1facdb83180de08734db1b47d9a5df2255727cca57515ba03d5a5937c0"
 paper_digest_api_reader_author_count: 3
 paper_digest_api_reader_resource_identity_contract: "api-reader-resource-identity"
 paper_digest_api_reader_resource_identity_schema_fingerprint: "33b0be17118be61f39b85ce690c8da17e91f2864bb65e85284f60c40067328e0"
@@ -75,9 +75,9 @@ paper_digest_api_reader_decision_projection_schema_fingerprint: "e56feb5ab75c871
 
 ## 👥 作者与机构
 
-- Hui-Peng Du：机构信息未能在本次解析中与作者逐人可靠绑定
-- Yang Ai：机构信息未能在本次解析中与作者逐人可靠绑定
-- Zhen-Hua Ling：机构信息未能在本次解析中与作者逐人可靠绑定
+- Hui-Peng Du：National Engineering Research Center of Speech and Language Information Processing, University of Science and Technology of China, Hefei, 230027, China
+- Yang Ai：National Engineering Research Center of Speech and Language Information Processing, University of Science and Technology of China, Hefei, 230027, China
+- Zhen-Hua Ling：National Engineering Research Center of Speech and Language Information Processing, University of Science and Technology of China, Hefei, 230027, China
 
 ## 📌 核心摘要
 

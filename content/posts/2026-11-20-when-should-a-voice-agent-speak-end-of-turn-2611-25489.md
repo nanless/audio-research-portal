@@ -22,7 +22,7 @@ paper_digest_tags_contract: "paper-tag-flat-tags"
 paper_digest_tags_schema_fingerprint: "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338"
 paper_digest_tags_selection_contract: "paper-tag-selection"
 paper_digest_tags_registry_version: "paper-tag-catalog"
-paper_digest_tags_registry_sha256: "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c"
+paper_digest_tags_registry_sha256: "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.turn-taking","label":"轮次切换"},{"facet":"method","id":"method.sft","label":"SFT"},{"facet":"method","id":"method.multimodal-learning","label":"多模态学习"},{"facet":"signal","id":"signal.speech","label":"语音"}]
 paper_digest_primary_method: "SFT"
 paper_digest_score: 6.4
@@ -30,9 +30,9 @@ paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对固定静音等待在句内停顿与轮次结束之间难以兼顾的问题，论文把判断放在静音起点并比较微调文本分数与发声时序和面部线索的后期融合，微调模型在留出录音上排序与校准占优并在相同打断率下把平均延迟缩短约 0.09 s，但增益在未见说话人与自动转写条件下收窄且只在小规模土耳其语双人视频通话上得到验证。"
 paper_digest_reader_sections: [{"heading":"问题本质：固定静音等待为何在停顿与结束之间两难","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"方法全景：从双人通话到静音起点判断的完整链路","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"核心机制：文本打分与发声时序面部线索如何分工融合","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"主实验验证：微调文本分数在排序校准与延迟上的实际收益","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"消融与稳健性：时序面部增量与识别误差下的保持情况","index":5,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"综合判断：何时值得尝试与复现前必须核对的条件","index":6,"kind":"synthesis","roleLabel":"实践与复现"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Ahmet Tuğrul Bayrak"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Fatma Nur Korkmaz"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Mustafa Sertaç Türkel"},{"affiliations":["机构信息未能从 arXiv PDF 文本可靠映射"],"name":"Nur Yağmur Tuncer"}]
+paper_digest_authors: [{"affiliations":["Data Science and Innovation, Ata Technology Platforms, Istanbul, Turkey"],"name":"Ahmet Tuğrul Bayrak"},{"affiliations":["Data Science and Innovation, Ata Technology Platforms, Istanbul, Turkey"],"name":"Fatma Nur Korkmaz"},{"affiliations":["Data Science and Innovation, Ata Technology Platforms, Istanbul, Turkey"],"name":"Mustafa Sertaç Türkel"},{"affiliations":["Data Science and Innovation, Ata Technology Platforms, Istanbul, Turkey"],"name":"Nur Yağmur Tuncer"}]
 paper_digest_abstract_sha256: "cd8d6c92c518f2003abfbc612a887ee4a71ff1f1fd6afe7ec5956fc771c8f94e"
-paper_digest_sidecars: {"citation.bib":{"sha256":"f625437f83a1391a67b3099809f02de62a4706ef8e092fa9afdf5e62467c7d4a","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25489/citation.bib"},"citation.json":{"sha256":"d4795e0ab825836948d2b3c08b9a266f2ff1e798096a7149f55c7ca4cfc7bc18","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25489/citation.json"},"citation.ris":{"sha256":"b4f53a55a7bf3d8aabcc0adf2b393722b5c7cb0d06afc3fc3b67362716079b39","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25489/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"7b5ae4676e2b85564e29ca11ea56ad9f3afdd28e040a494490b66e94a164e501","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25489/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"f625437f83a1391a67b3099809f02de62a4706ef8e092fa9afdf5e62467c7d4a","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25489/citation.bib"},"citation.json":{"sha256":"1c5d6dc9a0661871e7fa4bd04565376cc0342d282c495c71ef862d5eae0d1d9e","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25489/citation.json"},"citation.ris":{"sha256":"b4f53a55a7bf3d8aabcc0adf2b393722b5c7cb0d06afc3fc3b67362716079b39","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25489/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"fab8561a3d7d72b02cd48365f4bd82ea4ac9b5c9cb6fca93e8ef1e8bc9e2abe4","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-25489/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher"
 paper_digest_api_reader_schema_fingerprint: "7c0300b9342334b864b6a304dcf02a96fb8dbbe8f4061b6dbc0ddfdd249ceceb"
 paper_digest_api_reader_article_sha256: "b8fa0122f1d3f743aeb30dfb7a21b4b96b38f02051dc6958e1ce346fcfd9c8d1"
@@ -45,7 +45,7 @@ paper_digest_api_reader_source_formula_count: 0
 paper_digest_api_reader_structured_artifacts_sha256: "c97ac25ee131a40fd8e404d3fe6d646e82781f34791b5bd1c9c7e49161fb0223"
 paper_digest_api_reader_author_identity_contract: "api-reader-author-identity"
 paper_digest_api_reader_author_identity_schema_fingerprint: "1e3fd3a9a56c9a5bf52df8df5022690b9a3fa92e83e934f295af87c0e258ed2f"
-paper_digest_api_reader_author_identity_sha256: "7392992edd002a482558375affcb8a5d7329d6a897fdcec1470ff0c1c512f6ec"
+paper_digest_api_reader_author_identity_sha256: "94ea2ecd5446e2a3af2790dee5b73d7120d757441d136f05e1b9bf15f7f4ba80"
 paper_digest_api_reader_author_count: 4
 paper_digest_api_reader_resource_identity_contract: "api-reader-resource-identity"
 paper_digest_api_reader_resource_identity_schema_fingerprint: "33b0be17118be61f39b85ce690c8da17e91f2864bb65e85284f60c40067328e0"
@@ -75,10 +75,10 @@ paper_digest_api_reader_decision_projection_schema_fingerprint: "e56feb5ab75c871
 
 ## 👥 作者与机构
 
-- Ahmet Tuğrul Bayrak：机构信息未能从 arXiv PDF 文本可靠映射
-- Fatma Nur Korkmaz：机构信息未能从 arXiv PDF 文本可靠映射
-- Mustafa Sertaç Türkel：机构信息未能从 arXiv PDF 文本可靠映射
-- Nur Yağmur Tuncer：机构信息未能从 arXiv PDF 文本可靠映射
+- Ahmet Tuğrul Bayrak：Data Science and Innovation, Ata Technology Platforms, Istanbul, Turkey
+- Fatma Nur Korkmaz：Data Science and Innovation, Ata Technology Platforms, Istanbul, Turkey
+- Mustafa Sertaç Türkel：Data Science and Innovation, Ata Technology Platforms, Istanbul, Turkey
+- Nur Yağmur Tuncer：Data Science and Innovation, Ata Technology Platforms, Istanbul, Turkey
 
 ## 📌 核心摘要
 
@@ -92,15 +92,15 @@ paper_digest_api_reader_decision_projection_schema_fingerprint: "e56feb5ab75c871
 
 ## 🔗 开源与复现资源
 
-- 第三方资源：<https://huggingface.co/tugrulbayrak/TurnTurk-Gpt> — 链接可访问（HTTP 200）
+- 论文所列链接：<https://huggingface.co/tugrulbayrak/TurnTurk-Gpt> — 链接可访问（HTTP 200）
 
-- 第三方资源：<https://huggingface.co/datasets/tugrulbayrak/Real-TurnTurk> — 链接可访问（HTTP 200）
+- 论文所列链接：<https://huggingface.co/datasets/tugrulbayrak/Real-TurnTurk> — 链接可访问（HTTP 200）
 
-- 第三方资源：<https://huggingface.co/datasets/tugrulbayrak/Syn-TurnTurk> — 链接可访问（HTTP 200）
+- 论文所列链接：<https://huggingface.co/datasets/tugrulbayrak/Syn-TurnTurk> — 链接可访问（HTTP 200）
 
-- 第三方资源：<https://huggingface.co/livekit/turn-detector> — 链接可访问（HTTP 200）
+- 论文所列链接：<https://huggingface.co/livekit/turn-detector> — 链接可访问（HTTP 200）
 
-- 第三方资源：<https://github.com/snakers4/silero-vad> — 链接可访问（HTTP 200）
+- 论文所列链接：<https://github.com/snakers4/silero-vad> — 链接可访问（HTTP 200）
 
 可达状态仅表示本次链接检查结果，不代表许可证、本文权重或运行复现已验证。
 

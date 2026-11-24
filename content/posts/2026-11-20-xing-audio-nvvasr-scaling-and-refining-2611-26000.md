@@ -22,7 +22,7 @@ paper_digest_tags_contract: "paper-tag-flat-tags"
 paper_digest_tags_schema_fingerprint: "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338"
 paper_digest_tags_selection_contract: "paper-tag-selection"
 paper_digest_tags_registry_version: "paper-tag-catalog"
-paper_digest_tags_registry_sha256: "9673bc0122e1905a5dcfd8b223675400cc2fa4c36095bc0e5f817edf99a0ec5c"
+paper_digest_tags_registry_sha256: "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf"
 paper_digest_tags_concepts: [{"facet":"task","id":"task.asr","label":"语音识别"},{"facet":"task","id":"task.event-detection","label":"音频事件检测"},{"facet":"method","id":"method.dataset-curation","label":"数据集构建"},{"facet":"method","id":"method.data-annotation","label":"数据标注"},{"facet":"artifact","id":"artifact.benchmark","label":"基准测试"}]
 paper_digest_primary_method: "数据集构建"
 paper_digest_score: 7.9
@@ -30,9 +30,9 @@ paper_digest_rank_bucket: "前25%"
 paper_digest_document_type: "系统技术报告"
 paper_digest_one_sentence: "针对自然语音中非言语发声覆盖不足与标注漏标问题，本文以渐进挖掘加交叉核查与全库呼吸筛查迭代提炼约 80 万条语料训练单个 17 亿参数识别器，在四个人工标注基准上平均综合分数达到 64.46 分，并以呼吸召回提升换取精确率下降的代价。"
 paper_digest_reader_sections: [{"heading":"问题本质：自然语音中文字与非言语发声为何难以一同准确转写","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"方法全景：五十万小时原始音频如何收敛为八十万条训练与单个识别器","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"核心机制：交叉核查与全库呼吸筛查如何分工找回漏标","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"主实验验证：综合分数领先背后的呼吸召回代价与类别差异","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"诊断分析：增加人工标注为何一度让旧测试集分数下滑","index":5,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"适用边界：何时值得尝试与复现验证如何起步","index":6,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Pengyu Xu"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Gang Liu"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Genliang Zhao"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Hongjie Chen"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Jian Kang"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Jie Lian"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Jie Li"},{"affiliations":["机构信息未能在本次解析中与作者逐人可靠绑定"],"name":"Yongxiang Li"}]
+paper_digest_authors: [{"affiliations":["Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"],"name":"Pengyu Xu"},{"affiliations":["Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"],"name":"Gang Liu"},{"affiliations":["Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"],"name":"Genliang Zhao"},{"affiliations":["Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"],"name":"Hongjie Chen"},{"affiliations":["Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"],"name":"Jian Kang"},{"affiliations":["Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"],"name":"Jie Lian"},{"affiliations":["Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"],"name":"Jie Li"},{"affiliations":["Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd"],"name":"Yongxiang Li"}]
 paper_digest_abstract_sha256: "8a26f6721dad6d1579f01de1a4207236f36ae656110cb34ae1afdbee2edecd12"
-paper_digest_sidecars: {"citation.bib":{"sha256":"2d97e5a625b0c1007532759d3e238d9b9fc4d851b2e943bcb43fe3c778acdfa3","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26000/citation.bib"},"citation.json":{"sha256":"7c7962ed48e575e93536a3fbe73ba568e821e1d4b2644476ca82cfb1298883c2","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26000/citation.json"},"citation.ris":{"sha256":"5f203ffb35d1a23952a573a420a59f2fcd202b053dd12f657059ebc927104183","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26000/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"33986e53d1b437d2bc61e3a8a5fba6cfec2ba1d093fb44a5f894b6d6d9fb30e7","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26000/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"2d97e5a625b0c1007532759d3e238d9b9fc4d851b2e943bcb43fe3c778acdfa3","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26000/citation.bib"},"citation.json":{"sha256":"dca89e0f2b75897b5c97a787699b60c04414690d33cfb1d730387ac2757ca0a2","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26000/citation.json"},"citation.ris":{"sha256":"5f203ffb35d1a23952a573a420a59f2fcd202b053dd12f657059ebc927104183","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26000/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"6d3bca9b282955fc3e52c26d384b1d32895fcf158429415ae09c8420d71fc8ee","url":"/audio-paper-digest-blog/client/papers/2026-11-20/2611-26000/rethink-context.json"}}
 paper_digest_api_reader_contract: "beginner-researcher"
 paper_digest_api_reader_schema_fingerprint: "7c0300b9342334b864b6a304dcf02a96fb8dbbe8f4061b6dbc0ddfdd249ceceb"
 paper_digest_api_reader_article_sha256: "d7cba305227ec93b7611dc2ffe03d16eea736728cc101b08867fcf000a502cef"
@@ -45,7 +45,7 @@ paper_digest_api_reader_source_formula_count: 4
 paper_digest_api_reader_structured_artifacts_sha256: "3984095b2fe4a90092de5f915b7f682093140caa88c77ef783d138f5adc38711"
 paper_digest_api_reader_author_identity_contract: "api-reader-author-identity"
 paper_digest_api_reader_author_identity_schema_fingerprint: "1e3fd3a9a56c9a5bf52df8df5022690b9a3fa92e83e934f295af87c0e258ed2f"
-paper_digest_api_reader_author_identity_sha256: "35b3a4b9df36ee37d5d837dfd1e2e114bb663f1ea44fa3869930b025d6827808"
+paper_digest_api_reader_author_identity_sha256: "e2def99bd5469863204d66ccb3386bbfec117441f8b1bc778c05e01aa72fdcab"
 paper_digest_api_reader_author_count: 8
 paper_digest_api_reader_resource_identity_contract: "api-reader-resource-identity"
 paper_digest_api_reader_resource_identity_schema_fingerprint: "33b0be17118be61f39b85ce690c8da17e91f2864bb65e85284f60c40067328e0"
@@ -75,14 +75,14 @@ paper_digest_api_reader_decision_projection_schema_fingerprint: "e56feb5ab75c871
 
 ## 👥 作者与机构
 
-- Pengyu Xu：机构信息未能在本次解析中与作者逐人可靠绑定
-- Gang Liu：机构信息未能在本次解析中与作者逐人可靠绑定
-- Genliang Zhao：机构信息未能在本次解析中与作者逐人可靠绑定
-- Hongjie Chen：机构信息未能在本次解析中与作者逐人可靠绑定
-- Jian Kang：机构信息未能在本次解析中与作者逐人可靠绑定
-- Jie Lian：机构信息未能在本次解析中与作者逐人可靠绑定
-- Jie Li：机构信息未能在本次解析中与作者逐人可靠绑定
-- Yongxiang Li：机构信息未能在本次解析中与作者逐人可靠绑定
+- Pengyu Xu：Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd
+- Gang Liu：Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd
+- Genliang Zhao：Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd
+- Hongjie Chen：Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd
+- Jian Kang：Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd
+- Jie Lian：Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd
+- Jie Li：Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd
+- Yongxiang Li：Xingchen AGI Lab, China Telecom Artificial Intelligence Technology Co. Ltd
 
 ## 📌 核心摘要
 
@@ -96,9 +96,9 @@ paper_digest_api_reader_decision_projection_schema_fingerprint: "e56feb5ab75c871
 
 ## 🔗 开源与复现资源
 
-- 第三方资源：<https://www.ximalaya.com/> — 链接可访问（HTTP 200）
+- 论文所列链接：<https://www.ximalaya.com/> — 链接可访问（HTTP 200）
 
-- 第三方资源：<https://www.xiaoyuzhoufm.com/> — 链接可访问（HTTP 200）
+- 论文所列链接：<https://www.xiaoyuzhoufm.com/> — 链接可访问（HTTP 200）
 
 可达状态仅表示本次链接检查结果，不代表许可证、本文权重或运行复现已验证。
 
