@@ -1,0 +1,72 @@
+{{- /* O(N) balanced protection for KaTeX SSR spans and standalone MathML blocks. */ -}}
+{{- $content := printf "%s" (.content | default "") -}}
+{{- $prefix := printf "%s" (.prefix | default "KATEX-PROTECTED-") -}}
+{{- $protected := .protected | default dict -}}
+{{- if or (in $content `class="katex`) (in $content `<math`) -}}
+  {{- if in $content `class="katex` -}}
+    {{- $segs := split $content "</span>" -}}
+    {{- $lastSeg := sub (len $segs) 1 -}}
+    {{- $inKatex := false -}}
+    {{- $depth := 0 -}}
+    {{- $kBuf := slice -}}
+    {{- $outParts := slice -}}
+    {{- $kIdx := 0 -}}
+    {{- range $idx, $seg := $segs -}}
+      {{- if eq $idx $lastSeg -}}
+        {{- if $inKatex -}}
+          {{- $outParts = $outParts | append (delimit $kBuf "") $seg -}}
+          {{- $inKatex = false -}}
+          {{- $kBuf = slice -}}
+        {{- else -}}
+          {{- $outParts = $outParts | append $seg -}}
+        {{- end -}}
+      {{- else if not $inKatex -}}
+        {{- $m := findRE `<span\b[^>]*class="katex(?:-display)?"[^>]*>` $seg 1 -}}
+        {{- if gt (len $m) 0 -}}
+          {{- $openTag := index $m 0 -}}
+          {{- $parts := split $seg $openTag -}}
+          {{- $before := index $parts 0 -}}
+          {{- $after := strings.TrimPrefix (printf "%s%s" $before $openTag) $seg -}}
+          {{- $outParts = $outParts | append $before -}}
+          {{- $chunk := printf "%s%s" $openTag $after -}}
+          {{- $opens := len (findRE `(?i)<span(?:\s|>)` $chunk) -}}
+          {{- $depth = sub $opens 1 -}}
+          {{- if le $depth 0 -}}
+            {{- $block := printf "%s</span>" $chunk -}}
+            {{- $marker := printf "%sK%d-END" $prefix $kIdx -}}
+            {{- $kIdx = add $kIdx 1 -}}
+            {{- $protected = merge $protected (dict $marker $block) -}}
+            {{- $outParts = $outParts | append $marker -}}
+          {{- else -}}
+            {{- $inKatex = true -}}
+            {{- $kBuf = slice (printf "%s</span>" $chunk) -}}
+          {{- end -}}
+        {{- else -}}
+          {{- $outParts = $outParts | append $seg "</span>" -}}
+        {{- end -}}
+      {{- else -}}
+        {{- $opens := len (findRE `(?i)<span(?:\s|>)` $seg) -}}
+        {{- $depth = sub (add $depth $opens) 1 -}}
+        {{- $kBuf = $kBuf | append (printf "%s</span>" $seg) -}}
+        {{- if le $depth 0 -}}
+          {{- $block := delimit $kBuf "" -}}
+          {{- $marker := printf "%sK%d-END" $prefix $kIdx -}}
+          {{- $kIdx = add $kIdx 1 -}}
+          {{- $protected = merge $protected (dict $marker $block) -}}
+          {{- $outParts = $outParts | append $marker -}}
+          {{- $inKatex = false -}}
+          {{- $kBuf = slice -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $content = delimit $outParts "" -}}
+  {{- end -}}
+  {{- if in $content `<math` -}}
+    {{- range $mIdx, $mathBlock := findRE `(?is)<math\b[^>]*>.*?</math>` $content -}}
+      {{- $marker := printf "%sM%d-END" $prefix $mIdx -}}
+      {{- $protected = merge $protected (dict $marker $mathBlock) -}}
+      {{- $content = replace $content $mathBlock $marker -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (dict "content" $content "protected" $protected) -}}

@@ -14,8 +14,9 @@ const { verifyDesktopDetails } = require('../scripts/verify-build');
 
 const BLOG_ROOT = path.resolve(__dirname, '..');
 
-// Exact v1.4.6 macOS (LibraryArticleExtractor.swift:316) & Android (CatalogRepository.kt:32) 54-tag allowlist
-const CLIENT_V146_ALLOWED_TAGS = new Set([
+// Exact v1.4.6 macOS (LibraryArticleExtractor.swift) & Android (CatalogRepository.kt) split allowlists:
+// outer HTML tags vs real v1.4.6 MathML tags/attributes strictly inside <math> (forbidding <merror>).
+const CLIENT_V146_OUTER_HTML_TAGS = new Set([
   'div', 'p', 'span', 'a',
   'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
   'ul', 'ol', 'li',
@@ -25,23 +26,34 @@ const CLIENT_V146_ALLOWED_TAGS = new Set([
   'strong', 'b', 'em', 'i', 'u', 's', 'sup', 'sub',
   'br', 'hr',
   'details', 'summary',
-  'dl', 'dt', 'dd',
-  // 19 shared MathML tags (54 total with the 35 HTML tags above, or 43 HTML + MathML)
-  'math', 'mrow', 'mi', 'mo', 'mn', 'msup', 'msub', 'msubsup', 'mfrac',
-  'msqrt', 'mroot', 'mtext', 'mtable', 'mtr', 'mtd', 'mover', 'munder',
-  'munderover', 'semantics', 'annotation'
+  'dl', 'dt', 'dd'
+]);
+
+const CLIENT_V146_MATHML_TAGS = new Set([
+  'math', 'semantics', 'annotation', 'mrow', 'mi', 'mn', 'mo', 'mtext', 'ms', 'mspace',
+  'mfrac', 'msqrt', 'mroot', 'msup', 'msub', 'msubsup', 'mover', 'munder', 'munderover',
+  'mtable', 'mtr', 'mtd', 'mstyle', 'mpadded', 'mphantom', 'menclose',
+  'mmultiscripts', 'mprescripts', 'none'
 ]);
 
 const CLIENT_FORBIDDEN_OR_DETACHED_TAGS = new Set([
   'aside', 'nav', 'header', 'footer', 'mark', 'small', 'abbr', 'kbd', 'time', 'colgroup', 'col',
-  'svg', 'button', 'input', 'style', 'script', 'audio', 'video', 'picture', 'section', 'article'
+  'svg', 'button', 'input', 'style', 'script', 'audio', 'video', 'picture', 'section', 'article', 'merror', 'mlabeledtr'
 ]);
 
-const CLIENT_ALLOWED_ARTICLE_ATTRS = new Set([
+const CLIENT_ALLOWED_OUTER_ATTRS = new Set([
   'id', 'class', 'title', 'alt', 'width', 'height', 'colspan', 'rowspan', 'scope',
-  'display', 'mathvariant', 'xmlns', 'encoding',
   'href', 'src', 'loading', 'decoding', 'target', 'rel',
   'hidden', 'aria-hidden', 'tabindex', 'style'
+]);
+
+const CLIENT_ALLOWED_MATHML_ATTRS = new Set([
+  'display', 'xmlns', 'encoding', 'mathvariant', 'displaystyle', 'scriptlevel',
+  'stretchy', 'fence', 'separator', 'accent', 'accentunder', 'lspace', 'rspace',
+  'width', 'height', 'depth', 'voffset', 'columnalign', 'rowalign', 'columnspacing',
+  'rowspacing', 'columnlines', 'rowlines', 'frame', 'framespacing', 'equalrows',
+  'equalcolumns', 'linethickness', 'notation', 'maxsize', 'minsize', 'movablelimits',
+  'symmetric', 'dir', 'id', 'class', 'title'
 ]);
 
 function parseOpeningAndClosingTags(html) {
@@ -397,6 +409,9 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
   for (const fn of ['tag-catalog-snapshot.json', 'tag-catalog-versions.json']) {
     fs.copyFileSync(path.join(BLOG_ROOT, 'static/data', fn), path.join(repo, 'static/data', fn));
   }
+  if (fs.existsSync(path.join(BLOG_ROOT, 'static/vendor'))) {
+    fs.cpSync(path.join(BLOG_ROOT, 'static/vendor'), path.join(repo, 'static/vendor'), { recursive: true });
+  }
   // Copy top-level standalone pages (/papers/, /search/, /archives/, /conferences/, /about/, /links/) referenced by header menu
   for (const entry of fs.readdirSync(path.join(BLOG_ROOT, 'content'))) {
     const full = path.join(BLOG_ROOT, 'content', entry);
@@ -553,28 +568,46 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
   for (const file of articleFiles) {
     const html = fs.readFileSync(path.join(articlesDir, file), 'utf8');
     assert.ok(!html.includes('<!--'), `${file}: must not contain HTML comments`);
+    assert.doesNotMatch(html, /katex-html|<svg\b/i, `${file}: KaTeX HTML/SVG must collapse to pure MathML`);
     const tags = parseOpeningAndClosingTags(html);
     assert.ok(tags.length > 0, `${file}: must have parsed HTML tags`);
     const ids = new Set();
     const fragmentHrefs = [];
+    let mathDepth = 0;
     for (const tag of tags) {
       assert.ok(!CLIENT_FORBIDDEN_OR_DETACHED_TAGS.has(tag.name), `${file}: forbidden/detached client tag <${tag.name}>`);
-      assert.ok(CLIENT_V146_ALLOWED_TAGS.has(tag.name), `${file}: tag <${tag.name}> outside v1.4.6 54-tag allowlist`);
-      for (const attr of tag.attrs) {
-        assert.ok(
-          CLIENT_ALLOWED_ARTICLE_ATTRS.has(attr.name),
-          `${file}: unexpected attribute ${attr.name} on <${tag.name}>`
-        );
-        if (attr.name === 'id' && attr.value) {
-          const decodedId = decodeHtml(attr.value);
-          assert.ok(!ids.has(decodedId), `${file}: duplicate id "${decodedId}"`);
-          ids.add(decodedId);
+      if (tag.name === 'math') {
+        if (!tag.isClosing) mathDepth += 1;
+        else mathDepth = Math.max(0, mathDepth - 1);
+      }
+      const insideMath = mathDepth > 0 || tag.name === 'math';
+      if (insideMath) {
+        assert.ok(CLIENT_V146_MATHML_TAGS.has(tag.name), `${file}: tag <${tag.name}> outside v1.4.6 MathML allowlist inside <math>`);
+        for (const attr of tag.attrs) {
+          assert.ok(
+            CLIENT_ALLOWED_MATHML_ATTRS.has(attr.name),
+            `${file}: unexpected MathML attribute ${attr.name} on <${tag.name}>`
+          );
         }
-        if (tag.name === 'a' && attr.name === 'href' && attr.value && attr.value.startsWith('#')) {
-          fragmentHrefs.push(decodeURIComponent(decodeHtml(attr.value).slice(1)));
+      } else {
+        assert.ok(CLIENT_V146_OUTER_HTML_TAGS.has(tag.name), `${file}: tag <${tag.name}> outside v1.4.6 outer HTML allowlist`);
+        for (const attr of tag.attrs) {
+          assert.ok(
+            CLIENT_ALLOWED_OUTER_ATTRS.has(attr.name),
+            `${file}: unexpected attribute ${attr.name} on <${tag.name}>`
+          );
+          if (attr.name === 'id' && attr.value) {
+            const decodedId = decodeHtml(attr.value);
+            assert.ok(!ids.has(decodedId), `${file}: duplicate id "${decodedId}"`);
+            ids.add(decodedId);
+          }
+          if (tag.name === 'a' && attr.name === 'href' && attr.value && attr.value.startsWith('#')) {
+            fragmentHrefs.push(decodeURIComponent(decodeHtml(attr.value).slice(1)));
+          }
         }
       }
     }
+    assert.equal(mathDepth, 0, `${file}: balanced <math> tags`);
     for (const frag of fragmentHrefs) {
       assert.ok(ids.has(frag), `${file}: broken in-article #fragment "#${frag}"`);
     }

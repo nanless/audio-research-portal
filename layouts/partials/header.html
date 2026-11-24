@@ -35,6 +35,10 @@
             {{- $lsenabled := (or (not site.Params.disableThemeToggle) (and (not site.Params.disableLangToggle) (hugo.IsMultilingual))) }}
             {{- if $lsenabled }}
             <div class="logo-switches">
+                <button id="cmdk-trigger" class="cmdk-trigger" type="button" title="全站快捷搜索 (⌘K 或 /)" aria-label="搜索 (⌘K)" aria-haspopup="dialog" aria-controls="cmdk-dialog">
+                    <span class="cmdk-trigger__label">搜索</span>
+                    <kbd class="cmdk-trigger__kbd" aria-hidden="true">⌘K</kbd>
+                </button>
                 {{- if (not site.Params.disableThemeToggle) }}
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="切换深浅主题 (Alt + T)" aria-label="切换深浅主题">
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"

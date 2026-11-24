@@ -1,6 +1,21 @@
-{{- /* One shared identity catalog and inverted concept index, never a per-page full-site scan. */ -}}
+{{- /* One shared 9-facet IDF identity catalog and inverted concept index, never a per-page full-site scan. */ -}}
+{{- $facetWeights := dict
+  "task" 5
+  "scientific_topic" 4
+  "method" 4
+  "model_family" 4
+  "research_focus" 3
+  "artifact" 3
+  "application" 3
+  "setting" 2
+  "signal" 1
+  "legacy" 1
+-}}
+{{- $allFacets := slice "task" "scientific_topic" "method" "model_family" "research_focus" "artifact" "application" "setting" "signal" -}}
 {{- $groups := newScratch -}}
 {{- $groups.Set "records" dict -}}
+{{- $conceptFacets := newScratch -}}
+{{- $conceptFacets.Set "f" dict -}}
 {{- range site.RegularPages -}}
   {{- $metadata := partial "research_metadata.html" . -}}
   {{- if eq $metadata.pageType "paper" -}}
@@ -9,16 +24,18 @@
     {{- $nodes := newScratch -}}
     {{- $nodes.Set "labels" dict -}}
     {{- range (partial "tag_valid_records.html" .) -}}
-      {{- if in (slice "task" "method" "setting") .facet -}}
+      {{- if in $allFacets .facet -}}
         {{- $ids = union $ids (slice .id) -}}
         {{- $nodes.SetInMap "labels" .id (dict "facet" .facet "zh" .zh) -}}
+        {{- $conceptFacets.SetInMap "f" .id .facet -}}
       {{- end -}}
     {{- end -}}
-    {{- if not $ids -}}
+    {{- if and (not $ids) (ne ($metadata.tagPublicationStatus | default "") "withheld") -}}
       {{- range (.Params.tags | default slice) -}}
         {{- $id := printf "legacy:%s" . -}}
         {{- $ids = union $ids (slice $id) -}}
         {{- $nodes.SetInMap "labels" $id (dict "facet" "legacy" "zh" .) -}}
+        {{- $conceptFacets.SetInMap "f" $id "legacy" -}}
       {{- end -}}
     {{- end -}}
     {{- $page := . -}}
@@ -30,18 +47,12 @@
     {{- $groups.SetInMap "records" $identity (dict "identity" $identity "page" $page "ids" $ids "nodes" ($nodes.Get "labels")) -}}
   {{- end -}}
 {{- end -}}
-{{- $final := newScratch -}}{{- $final.Set "records" dict -}}
+{{- $rawRecords := $groups.Get "records" -}}
+{{- $totalN := len $rawRecords -}}
 {{- $index := newScratch -}}
 {{- $index.Set "concepts" dict -}}
 {{- $index.Set "names" slice -}}
-{{- range $identity, $record := ($groups.Get "records") -}}
-  {{- $p := $record.page -}}
-  {{- $meta := partial "research_metadata.html" $p -}}
-  {{- $hasDesc := false -}}{{- $descHtml := "" -}}
-  {{- with $p.Description }}{{ $hasDesc = true }}{{ $descHtml = . | markdownify | plainify | truncate 120 }}{{ end -}}
-  {{- $sortedIds := sort $record.ids -}}
-  {{- $rankingKey := printf "research-related-rankings:%s" (crypto.SHA256 (dict "ids" $sortedIds "nodes" $record.nodes | jsonify)) -}}
-  {{- $final.SetInMap "records" $identity (dict "identity" $identity "ids" $sortedIds "nodes" $record.nodes "rankingKey" $rankingKey "relPermalink" $p.RelPermalink "headline" $meta.headline "hasDescription" $hasDesc "descriptionHtml" $descHtml) -}}
+{{- range $identity, $record := $rawRecords -}}
   {{- range $record.ids -}}
     {{- $bucketKey := printf "bucket:%s" . -}}
     {{- if not ($index.Get $bucketKey) -}}
@@ -51,7 +62,43 @@
     {{- $index.SetInMap $bucketKey $identity true -}}
   {{- end -}}
 {{- end -}}
-{{- range ($index.Get "names") -}}
-  {{- $index.SetInMap "concepts" . ($index.Get (printf "bucket:%s" .)) -}}
+{{- $weights := newScratch -}}
+{{- $weights.Set "w" dict -}}
+{{- $facetMap := $conceptFacets.Get "f" -}}
+{{- range $cid := ($index.Get "names") -}}
+  {{- $bucket := $index.Get (printf "bucket:%s" $cid) -}}
+  {{- $index.SetInMap "concepts" $cid $bucket -}}
+  {{- $df := len $bucket -}}
+  {{- $facet := index $facetMap $cid | default "legacy" -}}
+  {{- $baseWeight := index $facetWeights $facet | default 1 -}}
+  {{- $idfRaw := int (math.Round (mul (math.Log (div (float (add $totalN 1)) (float (add $df 1)))) 10.0)) -}}
+  {{- $idf := cond (gt $idfRaw 1) $idfRaw 1 -}}
+  {{- $weights.SetInMap "w" $cid (mul $baseWeight $idf) -}}
 {{- end -}}
-{{- return (dict "records" ($final.Get "records") "concepts" ($index.Get "concepts")) -}}
+{{- $weightMap := $weights.Get "w" -}}
+{{- $final := newScratch -}}{{- $final.Set "records" dict -}}
+{{- range $identity, $record := $rawRecords -}}
+  {{- $p := $record.page -}}
+  {{- $meta := partial "research_metadata.html" $p -}}
+  {{- $hasDesc := false -}}{{- $descHtml := "" -}}
+  {{- with $p.Description }}{{ $hasDesc = true }}{{ $descHtml = partial "plain_summary.html" (. | markdownify) | truncate 120 }}{{ end -}}
+  {{- $sortedIds := sort $record.ids -}}
+  {{- $normSq := 0.0 -}}
+  {{- range $cid := $sortedIds -}}
+    {{- $cw := float (index $weightMap $cid | default 1) -}}
+    {{- $normSq = add $normSq (mul $cw $cw) -}}
+  {{- end -}}
+  {{- $norm := math.Sqrt $normSq -}}
+  {{- $dateInt := int ($p.Date.Format "20060102") -}}
+  {{- if lt $dateInt 0 }}{{ $dateInt = 0 }}{{ end -}}
+  {{- if gt $dateInt 99999999 }}{{ $dateInt = 99999999 }}{{ end -}}
+  {{- $scoreInt := 0 -}}
+  {{- if and $meta.score (findRE `^[0-9]+(\.[0-9]+)?$` $meta.score 1) -}}
+    {{- $scoreInt = int (math.Round (mul (float $meta.score) 10.0)) -}}
+    {{- if lt $scoreInt 0 }}{{ $scoreInt = 0 }}{{ end -}}
+    {{- if gt $scoreInt 100 }}{{ $scoreInt = 100 }}{{ end -}}
+  {{- end -}}
+  {{- $rankingKey := printf "research-related-rankings:v2:%s" (crypto.SHA256 (dict "ids" $sortedIds "nodes" $record.nodes | jsonify)) -}}
+  {{- $final.SetInMap "records" $identity (dict "identity" $identity "ids" $sortedIds "nodes" $record.nodes "norm" $norm "dateInt" $dateInt "scoreInt" $scoreInt "rankingKey" $rankingKey "relPermalink" $p.RelPermalink "headline" $meta.headline "hasDescription" $hasDesc "descriptionHtml" $descHtml) -}}
+{{- end -}}
+{{- return (dict "records" ($final.Get "records") "concepts" ($index.Get "concepts") "weights" $weightMap "totalN" $totalN) -}}

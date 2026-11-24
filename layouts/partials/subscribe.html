@@ -2,10 +2,33 @@
 <section class="research-subscribe" aria-labelledby="research-subscribe-title">
   <div>
     <strong id="research-subscribe-title">持续跟踪音频研究进展</strong>
-    <p>通过 RSS 获取每日速递；也可以进入论文库按任务、年份与关键词筛选。</p>
+    <p>通过 RSS 获取每日速递与精选专题；也可以进入论文库按任务、年份、评分与开源状态筛选。</p>
+    {{- $curatedDefs := slice
+      (dict "fmt" "RSSHighScore" "label" "高分精选 (≥8.0)")
+      (dict "fmt" "RSSTopicASR" "label" "语音识别 ASR")
+      (dict "fmt" "RSSTopicTTS" "label" "语音合成 TTS")
+      (dict "fmt" "RSSTopicEnhancement" "label" "语音增强")
+      (dict "fmt" "RSSTopicMusic" "label" "音乐生成/理解")
+      (dict "fmt" "RSSTopicAudioLLM" "label" "音频大模型")
+    -}}
+    {{- $curatedLinks := slice -}}
+    {{- range $curatedDefs -}}
+      {{- $lbl := .label -}}
+      {{- with site.Home.OutputFormats.Get .fmt -}}
+        {{- $curatedLinks = $curatedLinks | append (dict "url" .Permalink "label" $lbl) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if gt (len $curatedLinks) 0 }}
+    <div class="research-subscribe__feeds" aria-label="专题 RSS 订阅源">
+      <span class="research-subscribe__feeds-label">专题 RSS：</span>
+      {{- range $curatedLinks -}}
+      <a class="research-subscribe__feed-chip" href="{{ .url }}">{{ .label }}</a>
+      {{- end -}}
+    </div>
+    {{- end }}
   </div>
   <div class="research-home-hero__actions">
-    <a class="rw-action rw-action--primary" href="{{ "index.xml" | absURL }}">RSS 订阅</a>
+    <a class="rw-action rw-action--primary" href="{{ "index.xml" | absURL }}">每日速递 RSS</a>
     <a class="rw-action" href="{{ "papers/" | absURL }}">论文库</a>
   </div>
 </section>

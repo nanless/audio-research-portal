@@ -1,0 +1,9 @@
+{{- partial "curated_rss_feed.xml" (dict
+  "feedKey" "topic-enhancement"
+  "formatName" "RSSTopicEnhancement"
+  "title" "语音增强与分离专题"
+  "description" "语音增强、降噪、去混响、声源分离与音频修复方向最新论文深度解读。"
+  "conceptIds" (slice "task.speech-enhancement" "task.audio-restoration" "task.audio-separation" "task.speech-separation" "task.target-speaker" "task.av-source-separation" "task.av-speech-separation" "task.dereverberation" "task.active-noise-control" "task.bandwidth-extension" "task.packet-loss" "task.periodic-waveform-denoising")
+  "ancestorRoots" (slice "task.speech-enhancement" "task.audio-restoration" "task.speech-separation")
+  "legacyTags" (slice "语音增强" "语音降噪" "去混响" "语音分离" "音频修复" "声源分离")
+) -}}

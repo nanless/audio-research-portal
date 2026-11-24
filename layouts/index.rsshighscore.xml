@@ -1,0 +1,7 @@
+{{- partial "curated_rss_feed.xml" (dict
+  "feedKey" "high-score"
+  "formatName" "RSSHighScore"
+  "title" "高分精选论文（≥8.0分）"
+  "description" "本站编辑评分 8.0/10 及以上的音频/语音/音乐论文深度解读精选。"
+  "minScore" 8.0
+) -}}

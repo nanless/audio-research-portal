@@ -1,0 +1,20 @@
+{{- /* Plain-text projection that strips KaTeX duplicate HTML and TeX annotations cleanly. */ -}}
+{{- $raw := printf "%s" (. | default "") -}}
+{{- if or (in $raw `class="katex`) (in $raw `<math`) -}}
+  {{- $prefix := printf "SUMMARY-MATH-%s-" (crypto.SHA256 $raw) -}}
+  {{- $res := partial "protect_katex_blocks.html" (dict "content" $raw "prefix" $prefix "protected" dict) -}}
+  {{- $text := $res.content -}}
+  {{- range $marker, $block := $res.protected -}}
+    {{- $mathMatch := findRE `(?is)<math\b[^>]*>.*?</math>` $block 1 -}}
+    {{- $mathText := "" -}}
+    {{- if gt (len $mathMatch) 0 -}}
+      {{- $noAnn := replaceRE `(?is)<annotation\b[^>]*>.*?</annotation>` "" (index $mathMatch 0) -}}
+      {{- $mathText = strings.TrimSpace ($noAnn | plainify | htmlUnescape) -}}
+    {{- else -}}
+      {{- $mathText = strings.TrimSpace ($block | plainify | htmlUnescape) -}}
+    {{- end -}}
+    {{- $text = replace $text $marker $mathText -}}
+  {{- end -}}
+  {{- $raw = $text -}}
+{{- end -}}
+{{- return (strings.TrimSpace (replaceRE `\s+` " " ($raw | plainify | htmlUnescape))) -}}

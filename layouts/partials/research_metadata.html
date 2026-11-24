@@ -31,6 +31,8 @@
 {{- $method := "" -}}
 {{- $arxivId := "" -}}
 {{- $oneSentence := "" -}}
+{{- $hasCode := false -}}
+{{- $hasDemo := false -}}
 {{- $paperId := "" -}}
 {{- $identityStatus := "unknown" -}}
 {{- $sourceKind := "" -}}
@@ -135,8 +137,33 @@
     {{- $v2Roles = dict "tagPublicationStatus" "withheld" -}}
   {{- end -}}
   {{- $oneSentence = .Params.paper_digest_one_sentence | default "" -}}
+  {{- $rawRes := .RawContent | default "" -}}
+  {{- if or (in $rawRes "开源与复现资源") (in $rawRes "论文资源") (in $rawRes "开源资源") -}}
+    {{- $resHeads := findRE `(?m)^##[ \t]+(?:🔗[ \t]*)?(?:开源与复现资源|论文资源|开源资源)[ \t]*$` $rawRes 1 -}}
+    {{- if gt (len $resHeads) 0 -}}
+      {{- $resHead := index $resHeads 0 -}}
+      {{- $resParts := split $rawRes $resHead -}}
+      {{- $afterHead := strings.TrimPrefix (printf "%s%s" (index $resParts 0) $resHead) $rawRes -}}
+      {{- $resSec := $afterHead -}}
+      {{- $nextH2s := findRE `(?m)^##[ \t]+` $afterHead 1 -}}
+      {{- if gt (len $nextH2s) 0 -}}
+        {{- $resSec = index (split $afterHead (index $nextH2s 0)) 0 -}}
+      {{- end -}}
+      {{- range $line := findRE `(?m)^-[ \t]+[^\n]+` $resSec -}}
+        {{- $clean := strings.TrimSpace (replace (replaceRE `^-[ \t]+` "" $line) "**" "") -}}
+        {{- if and (not (hasPrefix $clean "第三方资源：")) (not (hasPrefix $clean "第三方资源:")) (not (hasPrefix $clean "论文所列链接：")) (not (hasPrefix $clean "论文所列链接:")) -}}
+          {{- if and (not $hasCode) (findRE `^(?:代码|开源代码|项目代码)[^：:]{0,12}[：:]` $clean 1) (in $clean "https://") (not (in $clean "链接不可用")) (not (in $clean "暂时无法访问")) (not (findRE `(?:未提及代码链接|暂未开源|代码未公开|仓库仅见文档框架|未检出代码)` $clean 1)) -}}
+            {{- $hasCode = true -}}
+          {{- end -}}
+          {{- if and (not $hasDemo) (or (hasPrefix $clean "演示资源：") (hasPrefix $clean "演示资源:")) (in $clean "https://") (in $clean "链接可访问") (not (in $clean "链接不可用")) (not (in $clean "暂时无法访问")) -}}
+            {{- $hasDemo = true -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
-{{- $memoValue = (dict "pageType" $pageType "isConferenceTask" $isConferenceTask "headline" $headline "originalTitle" $originalTitle "score" $score "task" $task "method" $method "arxivId" $arxivId "oneSentence" $oneSentence "paperId" $paperId "identityStatus" $identityStatus "sourceKind" $sourceKind "primaryTaskId" $primaryTaskId "primaryMethodId" $primaryMethodId) -}}
+{{- $memoValue = (dict "pageType" $pageType "isConferenceTask" $isConferenceTask "headline" $headline "originalTitle" $originalTitle "score" $score "task" $task "method" $method "arxivId" $arxivId "oneSentence" $oneSentence "hasCode" $hasCode "hasDemo" $hasDemo "paperId" $paperId "identityStatus" $identityStatus "sourceKind" $sourceKind "primaryTaskId" $primaryTaskId "primaryMethodId" $primaryMethodId) -}}
 {{- $memoValue = merge $memoValue $v2Roles -}}
 {{- if $identityProof.contract }}{{ $memoValue = merge $memoValue (dict "identityEvidenceContract" $identityProof.contract "identityEvidenceType" $identityProof.evidenceType "identityProofSha256" $identityProof.proofSha256 "identityPageSha256" $identityProof.pageSha256 "sealedSource" $identityProof.source) }}{{ end -}}
 {{- if $classificationSource }}{{ $memoValue = merge $memoValue (dict "classificationSource" $classificationSource) }}{{ end -}}

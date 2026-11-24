@@ -122,6 +122,7 @@
     var normalized = {
       title: title, originalTitle: originalTitle, permalink: permalink, summary: summary,
       type: type, pageType: type, date: date, year: date.slice(0, 4), score: score, task: task, method: method, arxivId: arxivId,
+      hasCode: item.hasCode === true, hasDemo: item.hasDemo === true,
       paperId: plainText(item.paperId), identityStatus: plainText(item.identityStatus), sourceKind: plainText(item.sourceKind),
       identityEvidenceContract: plainText(item.identityEvidenceContract), identityEvidenceType: plainText(item.identityEvidenceType),
       identityProofSha256: plainText(item.identityProofSha256), identityPageSha256: plainText(item.identityPageSha256),
@@ -145,10 +146,20 @@
 
   function filterEntries(entries, state) {
     var tokens = searchText(state.query).split(/\s+/).filter(Boolean);
+    var minScoreVal = state.minScore && state.minScore !== 'all' ? Number(state.minScore) : NaN;
+    var hasMinScore = Number.isFinite(minScoreVal);
+    var sourceFilter = state.source || 'all';
+    var ossFilter = state.oss || 'all';
     return entries.filter(function (entry) {
-      return (state.type === 'all' || entry.type === state.type)
-        && (state.year === 'all' || entry.year === state.year)
-        && tokens.every(function (token) { return entry.searchText.includes(token); });
+      if (state.type !== 'all' && entry.type !== state.type) return false;
+      if (state.year !== 'all' && entry.year !== state.year) return false;
+      if (hasMinScore && !(entry.score >= minScoreVal)) return false;
+      if (sourceFilter === 'arxiv' && !(entry.sourceKind === 'arxiv' || Boolean(entry.arxivId))) return false;
+      if (sourceFilter === 'conference' && entry.sourceKind !== 'conference') return false;
+      if (ossFilter === 'code' && !entry.hasCode) return false;
+      if (ossFilter === 'demo' && !entry.hasDemo) return false;
+      if (ossFilter === 'any' && !(entry.hasCode || entry.hasDemo)) return false;
+      return tokens.every(function (token) { return entry.searchText.includes(token); });
     }).sort(function (a, b) {
       var tie = a.title.localeCompare(b.title, 'zh-CN') || a.permalink.localeCompare(b.permalink);
       if (state.sort === 'title') return tie;
@@ -290,6 +301,9 @@
   var typeSelect = document.getElementById('library-type');
   var yearSelect = document.getElementById('library-year');
   var sortSelect = document.getElementById('library-sort');
+  var scoreSelect = document.getElementById('library-score');
+  var sourceSelect = document.getElementById('library-source');
+  var ossSelect = document.getElementById('library-oss');
   var exportStatus = document.getElementById('library-export-status');
   var selectedPapers = new Map();
   var countNode = document.getElementById('library-count');
@@ -340,6 +354,9 @@
     yearSelect.value = params.get('year') || 'all';
     if (!yearSelect.value) yearSelect.value = 'all';
     sortSelect.value = ['newest', 'score', 'title', 'relevance'].includes(params.get('sort')) ? params.get('sort') : 'newest';
+    if (scoreSelect) scoreSelect.value = ['all', '8.5', '8.0', '7.0'].includes(params.get('minScore')) ? params.get('minScore') : 'all';
+    if (sourceSelect) sourceSelect.value = ['all', 'arxiv', 'conference'].includes(params.get('source')) ? params.get('source') : 'all';
+    if (ossSelect) ossSelect.value = ['all', 'code', 'demo', 'any'].includes(params.get('oss')) ? params.get('oss') : 'all';
     var page = Number(params.get('page'));
     visibleCount = Number.isInteger(page) && page > 0 ? Math.min(page * PAGE_SIZE, Math.max(PAGE_SIZE, allEntries.length)) : PAGE_SIZE;
     directions = directionState(params, graph);
@@ -357,6 +374,9 @@
     if (typeSelect.value !== 'paper') params.set('type', typeSelect.value);
     if (yearSelect.value !== 'all') params.set('year', yearSelect.value);
     if (sortSelect.value !== 'newest') params.set('sort', sortSelect.value);
+    if (scoreSelect && scoreSelect.value && scoreSelect.value !== 'all') params.set('minScore', scoreSelect.value);
+    if (sourceSelect && sourceSelect.value && sourceSelect.value !== 'all') params.set('source', sourceSelect.value);
+    if (ossSelect && ossSelect.value && ossSelect.value !== 'all') params.set('oss', ossSelect.value);
     if (visibleCount > PAGE_SIZE) params.set('page', Math.ceil(visibleCount / PAGE_SIZE));
     (directions.error ? directions.requestedIds : selectedIds(directions)).forEach(function (id) { params.append('concept', id); });
     if (directions.scope === 'direct') params.set('scope', 'direct');
@@ -399,6 +419,23 @@
     meta.textContent = [typeLabel(entry.type), entry.date, entry.task, entry.method,
       entry.arxivId ? 'arXiv ' + entry.arxivId : ''].filter(Boolean).join(' · ');
     body.appendChild(meta);
+    if (entry.hasCode || entry.hasDemo) {
+      var badges = document.createElement('div');
+      badges.className = 'library-result__badges';
+      if (entry.hasCode) {
+        var codeBadge = document.createElement('span');
+        codeBadge.className = 'library-result__badge library-result__badge--code';
+        codeBadge.textContent = '💻 开源';
+        badges.appendChild(codeBadge);
+      }
+      if (entry.hasDemo) {
+        var demoBadge = document.createElement('span');
+        demoBadge.className = 'library-result__badge library-result__badge--demo';
+        demoBadge.textContent = '🔊 Demo';
+        badges.appendChild(demoBadge);
+      }
+      body.appendChild(badges);
+    }
     if (api && [api.v2Contract, api.v3Contract, api.qualified1028Contract].includes(entry.tagClassificationContract) && entry.primaryResearchRole) {
       var roles = document.createElement('p'); roles.className = 'tag-note';
       roles.textContent = [api.researchTypeLabels[entry.researchType], api.domainLabels[entry.domainScope],
@@ -461,6 +498,9 @@
       var hints = [];
       if (queryInput.value.trim()) hints.push('关键词「' + queryInput.value.trim() + '」');
       if (yearSelect.value !== 'all') hints.push(yearSelect.value + ' 年');
+      if (scoreSelect && scoreSelect.value && scoreSelect.value !== 'all') hints.push('评分 ≥ ' + scoreSelect.value);
+      if (sourceSelect && sourceSelect.value && sourceSelect.value !== 'all') hints.push(sourceSelect.value === 'arxiv' ? 'arXiv 预印本' : '会议论文');
+      if (ossSelect && ossSelect.value && ossSelect.value !== 'all') hints.push(ossSelect.value === 'code' ? '含开源代码' : ossSelect.value === 'demo' ? '含在线试听 Demo' : '含代码或试听');
       if (selectedIds(directions).length) hints.push('受控研究方向（历史未核分类不会参与匹配）');
       if (hints.length) empty.textContent += ' 当前限制：' + hints.join('、') + '。';
       if (selectedIds(directions).length) {
@@ -481,6 +521,9 @@
         typeSelect.value = 'paper';
         yearSelect.value = 'all';
         sortSelect.value = 'newest';
+        if (scoreSelect) scoreSelect.value = 'all';
+        if (sourceSelect) sourceSelect.value = 'all';
+        if (ossSelect) ossSelect.value = 'all';
         directions = { facets: {}, scope: 'subtree', role: 'any', error: '', requestedIds: [] };
         draft = cloneDirections(directions);
         applyFilters(false, true);
@@ -512,7 +555,8 @@
     if (filterSummary) {
       var appliedLabels = [];
       [[typeSelect, 'paper', '类型：'], [yearSelect, 'all', '年份：'],
-        [sortSelect, 'newest', ''], [researchTypeSelect, 'all', '研究类型：'], [domainSelect, 'all', '研究范围：']].forEach(function (entry) {
+        [sortSelect, 'newest', ''], [researchTypeSelect, 'all', '研究类型：'], [domainSelect, 'all', '研究范围：'],
+        [scoreSelect, 'all', '评分：'], [sourceSelect, 'all', '来源：'], [ossSelect, 'all', '资源：']].forEach(function (entry) {
         var control = entry[0];
         if (control && control.value !== entry[1] && control.options && control.options[control.selectedIndex]) {
           appliedLabels.push(entry[2] + control.options[control.selectedIndex].textContent);
@@ -520,9 +564,7 @@
       });
       filterSummary.textContent = '筛选与排序' + (appliedLabels.length ? ' · ' + appliedLabels.join(' · ') : '');
     }
-    filteredEntries = libraryResults(allEntries, groups, {
-      query: queryInput.value, type: typeSelect.value, year: yearSelect.value, sort: sortSelect.value
-    }, directions, graph, api);
+    filteredEntries = libraryResults(allEntries, groups, resultState(), directions, graph, api);
     if (preservePage !== true) visibleCount = PAGE_SIZE;
     quickButtons.forEach(function (button) {
       button.setAttribute('aria-pressed', String(button.dataset.query === queryInput.value.trim()));
@@ -548,7 +590,15 @@
   }
 
   function resultState() {
-    return { query: queryInput.value, type: typeSelect.value, year: yearSelect.value, sort: sortSelect.value };
+    return {
+      query: queryInput.value,
+      type: typeSelect.value,
+      year: yearSelect.value,
+      sort: sortSelect.value,
+      minScore: scoreSelect && scoreSelect.value ? scoreSelect.value : 'all',
+      source: sourceSelect && sourceSelect.value ? sourceSelect.value : 'all',
+      oss: ossSelect && ossSelect.value ? ossSelect.value : 'all'
+    };
   }
 
   function updateDraft() {
@@ -787,7 +837,9 @@
     window.clearTimeout(debounceTimer);
     debounceTimer = window.setTimeout(applyFilters, 120);
   });
-  [typeSelect, yearSelect, sortSelect].forEach(function (control) { control.addEventListener('change', function () { applyFilters(false, true); }); });
+  [typeSelect, yearSelect, sortSelect, scoreSelect, sourceSelect, ossSelect].filter(Boolean).forEach(function (control) {
+    control.addEventListener('change', function () { applyFilters(false, true); });
+  });
   quickButtons.forEach(function (button) {
     button.addEventListener('click', function () {
       queryInput.value = button.dataset.query;

@@ -1,0 +1,9 @@
+{{- partial "curated_rss_feed.xml" (dict
+  "feedKey" "topic-music"
+  "formatName" "RSSTopicMusic"
+  "title" "音乐生成与理解专题"
+  "description" "音乐生成、符号音乐、歌声合成、音乐转录与音乐信息检索方向最新论文深度解读。"
+  "conceptIds" (slice "signal.music" "scientific_topic.music-information" "task.music-generation" "task.symbolic-music" "task.singing" "task.music-understanding" "task.transcription" "task.pitch-melody" "task.beat-tracking" "task.chord-recognition" "task.music-retrieval" "task.music-text-retrieval" "task.music-separation" "task.music-super-resolution" "task.score-alignment")
+  "ancestorRoots" (slice "task.music-generation" "task.music-understanding" "task.music-retrieval")
+  "legacyTags" (slice "音乐生成" "音乐理解" "音乐分析" "音乐信息检索" "歌声合成" "音乐源分离" "符号音乐生成" "音乐转录")
+) -}}

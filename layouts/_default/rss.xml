@@ -22,7 +22,7 @@
     <lastBuildDate>{{ (index $pages 0).Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
     {{- end }}
     {{- range $pages }}
-    {{- $summary := .Summary | plainify | htmlUnescape | strings.TrimSpace | truncate 480 }}
+    {{- $summary := partial "plain_summary.html" .Summary | truncate 480 }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>

@@ -1,0 +1,9 @@
+{{- partial "curated_rss_feed.xml" (dict
+  "feedKey" "topic-audio-llm"
+  "formatName" "RSSTopicAudioLLM"
+  "title" "音频与语音大模型专题"
+  "description" "音频大模型、端到端语音对话大模型、全模态模型与口语理解方向最新论文深度解读。"
+  "conceptIds" (slice "model_family.audio-language" "model_family.speech" "model_family.speech-to-speech-llm" "model_family.unified-audio" "model_family.omni-multimodal" "model_family.llm" "task.speech-dialogue")
+  "ancestorRoots" (slice "model_family.audio-language" "model_family.speech" "model_family.llm" "model_family.multimodal")
+  "legacyTags" (slice "音频大模型" "语音大模型" "端到端语音对话大模型" "大语言模型" "Audio LLM" "Speech LLM" "语音对话系统")
+) -}}

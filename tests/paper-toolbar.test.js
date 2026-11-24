@@ -112,7 +112,8 @@ test('legacy verified record offers brief citation files without fabricated auth
 test('unknown identity exports the guide without inheriting cited arXiv', () => {
   const html = renderFixture('title: "Old paper"\ndate: 2020-01-01\nhiddenInHomeList: true', '[cited](https://arxiv.org/abs/2609.99999)');
   assert.match(html, /身份尚待核实/); assert.match(html, /下载导读/); assert.doesNotMatch(html, /data-reading-bookmark/);
-  assert.doesNotMatch(html, /paper-tool--reference-copy|data-citation-format|name=citation_arxiv_id|name=citation_pdf_url|Zotero|复制 AI/);
+  assert.doesNotMatch(html, /paper-tool--reference-copy|paper-tool--bibtex-copy|data-citation-format|name=citation_arxiv_id|name=citation_pdf_url|Zotero|复制 AI/);
+  assert.match(html, /paper-tool--obsidian-copy/);
 });
 
 test('invalid sidecar download URLs never replace safe citation generators', () => {
@@ -194,4 +195,62 @@ test('invalid explicit citation dates are omitted instead of borrowing the blog 
   assert.match(text, /## 本站导读内容[\s\S]*导读正文/);
   assert.match(text, /https:\/\/arxiv\.org\/abs\/2609\.01234v2/);
   assert.doesNotMatch(text, /个人阅读笔记|个人选段/);
+});
+
+test('verified paper exposes BibTeX copy and Obsidian YAML copy without data-citation-format leakage', async () => {
+  const html = renderFixture(workbench);
+  assert.match(html, /paper-tool--bibtex-copy/);
+  assert.match(html, /paper-tool--obsidian-copy/);
+  assert.match(html, /data-paper-meta=/);
+  assert.doesNotMatch(html, /data-citation-format/);
+
+  const note = citationApi.formatObsidianNote(
+    { ...record, title: 'Paper "Quoted" \\ Path', pageUrl: 'https://nanless.github.io/audio-paper-digest-blog/posts/demo/' },
+    { headline: '中文：导读标题', score: '8.6', task: '语音识别', method: '流式编码', oneSentence: '一句话总结。', tags: ['语音识别', '流式'], blogDate: '2026-11-24' }
+  );
+  assert.match(note, /^---\n[\s\S]*title: "Paper \\"Quoted\\" \\\\ Path"/);
+  assert.match(note, /arxiv_id: "2609\.01234v2"/);
+  assert.match(note, /published: "2026-01-15"/);
+  assert.match(note, /digest_date: "2026-11-24"/);
+  assert.match(note, /score: 8\.6/);
+  assert.match(note, /```bibtex/);
+
+  const unverifiedNote = citationApi.formatObsidianNote(
+    { identityStatus: 'unknown', title: 'Old Note', authors: ['Should Omit'], date: '2020-01-01', arxivId: '2609.99999' },
+    { headline: '旧笔记', blogDate: '2020-01-02' }
+  );
+  assert.match(unverifiedNote, /identity_status: "unknown"/);
+  assert.doesNotMatch(unverifiedNote, /arxiv_id:|published:|authors:|```bibtex/);
+
+  const bibHandlers = {}, obsHandlers = {}, writes = [];
+  const bibBtn = { hidden: true, addEventListener: (t, fn) => { bibHandlers[t] = fn; } };
+  const obsBtn = { hidden: true, addEventListener: (t, fn) => { obsHandlers[t] = fn; } };
+  const status = { textContent: '' }, fallback = { hidden: true, focus() {}, select() {} };
+  const toolbar = {
+    dataset: {
+      citationRecord: JSON.stringify(record),
+      paperMeta: JSON.stringify({ headline: '中文标题', score: '8.5', blogDate: '2026-11-24' })
+    },
+    closest: () => null,
+    querySelector: (sel) => ({
+      '.paper-tools__status': status,
+      '.paper-tools__copy-fallback': fallback,
+      '.paper-tool--bibtex-copy': bibBtn,
+      '.paper-tool--obsidian-copy': obsBtn
+    }[sel] || null),
+    querySelectorAll: () => []
+  };
+  const doc = { readyState: 'complete', querySelectorAll: () => [toolbar], body: { appendChild() {} }, createElement: () => ({ value: '', setAttribute() {}, style: {}, select() {}, remove() {} }), execCommand: () => false };
+  vm.runInNewContext(readFileSync(join(repo, 'assets/js/paper-toolbar.js'), 'utf8'), {
+    document: doc, URL, Blob,
+    window: { ResearchCitation: citationApi, isSecureContext: true },
+    navigator: { clipboard: { writeText: async text => { writes.push(text); } } }
+  });
+  assert.equal(bibBtn.hidden, false);
+  assert.equal(obsBtn.hidden, false);
+  await bibHandlers.click();
+  assert.match(writes[0], /@misc\{arxiv_2609_01234v2/);
+  await obsHandlers.click();
+  assert.match(writes[1], /^---\ntitle: "Original paper"/);
+  assert.match(writes[1], /score: 8\.5/);
 });

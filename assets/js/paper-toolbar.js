@@ -50,6 +50,8 @@
     const citationApi = window.ResearchCitation;
     let citationRecord = null;
     try { if (toolbar.dataset.citationRecord) citationRecord = JSON.parse(toolbar.dataset.citationRecord); } catch (_error) { /* Refuse malformed source data below. */ }
+    let paperMeta = {};
+    try { if (toolbar.dataset.paperMeta) paperMeta = JSON.parse(toolbar.dataset.paperMeta) || {}; } catch (_error) { paperMeta = {}; }
     const status = toolbar.querySelector('.paper-tools__status');
     const announce = (message) => { if (status) status.textContent = message; };
     const showFallback = (value) => {
@@ -118,6 +120,36 @@
         try { text = citationApi.formatReference(citationRecord); await writeClipboard(text);
           announce('已复制引用；仅包含已核来源字段，缺失作者或日期时不会补造。'); }
         catch (error) { if (text) { showFallback(text); announce('请手动复制下方引用。'); } else announce(error.message); }
+      });
+    }
+    const bibtexButton = toolbar.querySelector('.paper-tool--bibtex-copy');
+    if (bibtexButton && citationRecord && citationRecord.identityStatus === 'verified' && citationApi) {
+      bibtexButton.hidden = false;
+      bibtexButton.addEventListener('click', async () => {
+        let text;
+        try {
+          text = citationApi.formatCitation(citationRecord, 'bib');
+          await writeClipboard(text);
+          announce('已复制 BibTeX 引用；仅包含当前已核来源字段。');
+        } catch (error) {
+          if (text) { showFallback(text); announce('浏览器不允许自动复制，请手动复制下方 BibTeX。'); }
+          else announce(error instanceof Error ? error.message : '无法生成 BibTeX 引用。');
+        }
+      });
+    }
+    const obsidianButton = toolbar.querySelector('.paper-tool--obsidian-copy');
+    if (obsidianButton && citationRecord && citationApi && typeof citationApi.formatObsidianNote === 'function') {
+      obsidianButton.hidden = false;
+      obsidianButton.addEventListener('click', async () => {
+        let text;
+        try {
+          text = citationApi.formatObsidianNote(citationRecord, paperMeta);
+          await writeClipboard(text);
+          announce('已复制 Obsidian YAML 笔记模板；缺失字段已如实留空省略。');
+        } catch (error) {
+          if (text) { showFallback(text); announce('浏览器不允许自动复制，请手动复制下方 Obsidian 笔记模板。'); }
+          else announce(error instanceof Error ? error.message : '无法生成 Obsidian 笔记模板。');
+        }
       });
     }
     const downloadText = (text, suffix) => {

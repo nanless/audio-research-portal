@@ -11,8 +11,8 @@ const { exportDesktopDetails } = require('../scripts/export-desktop-details');
 
 const BLOG_ROOT = path.resolve(__dirname, '..');
 
-// Exact v1.4.6 macOS & Android 54-tag allowlist (must match p2-blog-ui-client-contract.test.js)
-const CLIENT_V146_ALLOWED_TAGS = new Set([
+// Exact v1.4.6 macOS (LibraryArticleExtractor.swift) & Android (CatalogRepository.kt) split allowlists
+const CLIENT_V146_OUTER_HTML_TAGS = new Set([
   'div', 'p', 'span', 'a',
   'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
   'ul', 'ol', 'li',
@@ -22,22 +22,35 @@ const CLIENT_V146_ALLOWED_TAGS = new Set([
   'strong', 'b', 'em', 'i', 'u', 's', 'sup', 'sub',
   'br', 'hr',
   'details', 'summary',
-  'dl', 'dt', 'dd',
-  'math', 'mrow', 'mi', 'mo', 'mn', 'msup', 'msub', 'msubsup', 'mfrac',
-  'msqrt', 'mroot', 'mtext', 'mtable', 'mtr', 'mtd', 'mover', 'munder',
-  'munderover', 'semantics', 'annotation'
+  'dl', 'dt', 'dd'
+]);
+
+// 29 valid v1.4.6 MathML tags (exact intersection of LibraryDesktopDetails.swift, LibraryArticleExtractor.swift, CatalogRepository.kt)
+const CLIENT_V146_MATHML_TAGS = new Set([
+  'math', 'semantics', 'annotation', 'mrow', 'mi', 'mn', 'mo', 'mtext', 'ms', 'mspace',
+  'mfrac', 'msqrt', 'mroot', 'msup', 'msub', 'msubsup', 'mover', 'munder', 'munderover',
+  'mtable', 'mtr', 'mtd', 'mstyle', 'mpadded', 'mphantom', 'menclose',
+  'mmultiscripts', 'mprescripts', 'none'
 ]);
 
 const CLIENT_FORBIDDEN_OR_DETACHED_TAGS = new Set([
   'aside', 'nav', 'header', 'footer', 'mark', 'small', 'abbr', 'kbd', 'time', 'colgroup', 'col',
-  'svg', 'button', 'input', 'style', 'script', 'audio', 'video', 'picture', 'section', 'article'
+  'svg', 'button', 'input', 'style', 'script', 'audio', 'video', 'picture', 'section', 'article', 'merror', 'mlabeledtr'
 ]);
 
-const CLIENT_ALLOWED_ARTICLE_ATTRS = new Set([
+const CLIENT_ALLOWED_OUTER_ATTRS = new Set([
   'id', 'class', 'title', 'alt', 'width', 'height', 'colspan', 'rowspan', 'scope',
-  'display', 'mathvariant', 'xmlns', 'encoding',
   'href', 'src', 'loading', 'decoding', 'target', 'rel',
   'hidden', 'aria-hidden', 'tabindex', 'style'
+]);
+
+const CLIENT_ALLOWED_MATHML_ATTRS = new Set([
+  'display', 'xmlns', 'encoding', 'mathvariant', 'displaystyle', 'scriptlevel',
+  'stretchy', 'fence', 'separator', 'accent', 'accentunder', 'lspace', 'rspace',
+  'width', 'height', 'depth', 'voffset', 'columnalign', 'rowalign', 'columnspacing',
+  'rowspacing', 'columnlines', 'rowlines', 'frame', 'framespacing', 'equalrows',
+  'equalcolumns', 'linethickness', 'notation', 'maxsize', 'minsize', 'movablelimits',
+  'symmetric', 'dir', 'id', 'class', 'title'
 ]);
 
 function parseTags(html) {
@@ -303,7 +316,7 @@ test('Track 12.4: Audio quick-spec card, Demo CTA, collapsible 8+ authors, Daily
     assert.match(fullHtml, /<dt>音频信号与流式规格<\/dt>/);
     assert.match(fullHtml, /<code>24kHz<\/code>/);
     assert.match(fullHtml, /＄100/);
-    assert.match(fullHtml, /\\\(d_\{\\text\{model\}\} = 512\\\)/, 'balanced inline LaTeX in implementationSpecs must survive intact');
+    assert.match(fullHtml, /<span class=["']?katex["']?><span class=["']?katex-mathml["']?><math\b[^>]*>[\s\S]*?<annotation encoding="application\/x-tex">d_\{\\text\{model\}\} = 512<\/annotation>/, 'inline LaTeX in implementationSpecs must render via KaTeX SSR without plainify corruption');
     assert.doesNotMatch(fullHtml, /href=["']https:\/\/short\.example\/s1["'][^>]*class=["']?audio-demo-cta-btn/, 'CTA must lift final redirected URL, not pre-redirect URL');
     assert.match(fullHtml, /class=["']?implementation-specs-card["']?/);
     assert.match(fullHtml, /<details class=["']?compact-authors-details["']?><summary>论文作者（共 9 位，点击展开全部）<\/summary>/);
@@ -345,19 +358,34 @@ test('Track 12.4: Audio quick-spec card, Demo CTA, collapsible 8+ authors, Daily
     for (const f of files) {
       const html = fs.readFileSync(path.join(articlesDir, f), 'utf8');
       assert.ok(!html.includes('<!--'), `${f}: no HTML comments`);
+      assert.doesNotMatch(html, /katex-html|<svg\b/i, `${f}: KaTeX HTML/SVG must collapse to pure MathML`);
       const tags = parseTags(html);
       const ids = new Set();
+      let mathDepth = 0;
       for (const tag of tags) {
         assert.ok(!CLIENT_FORBIDDEN_OR_DETACHED_TAGS.has(tag.name), `${f}: forbidden tag <${tag.name}>`);
-        assert.ok(CLIENT_V146_ALLOWED_TAGS.has(tag.name), `${f}: unallowlisted tag <${tag.name}>`);
-        for (const attr of tag.attrs) {
-          assert.ok(CLIENT_ALLOWED_ARTICLE_ATTRS.has(attr.name), `${f}: unallowlisted attr ${attr.name} on <${tag.name}>`);
-          if (attr.name === 'id' && attr.value) {
-            assert.ok(!ids.has(attr.value), `${f}: duplicate id ${attr.value}`);
-            ids.add(attr.value);
+        if (tag.name === 'math') {
+          if (!tag.isClosing) mathDepth += 1;
+          else mathDepth = Math.max(0, mathDepth - 1);
+        }
+        const insideMath = mathDepth > 0 || tag.name === 'math';
+        if (insideMath) {
+          assert.ok(CLIENT_V146_MATHML_TAGS.has(tag.name), `${f}: non-MathML tag <${tag.name}> inside <math>`);
+          for (const attr of tag.attrs) {
+            assert.ok(CLIENT_ALLOWED_MATHML_ATTRS.has(attr.name), `${f}: unallowlisted MathML attr ${attr.name} on <${tag.name}>`);
+          }
+        } else {
+          assert.ok(CLIENT_V146_OUTER_HTML_TAGS.has(tag.name), `${f}: unallowlisted outer HTML tag <${tag.name}>`);
+          for (const attr of tag.attrs) {
+            assert.ok(CLIENT_ALLOWED_OUTER_ATTRS.has(attr.name), `${f}: unallowlisted outer attr ${attr.name} on <${tag.name}>`);
+            if (attr.name === 'id' && attr.value) {
+              assert.ok(!ids.has(attr.value), `${f}: duplicate id ${attr.value}`);
+              ids.add(attr.value);
+            }
           }
         }
       }
+      assert.equal(mathDepth, 0, `${f}: balanced <math> tags`);
     }
 
     // 5. Run sibling markdown_hugo_gate.py and assert the current API Reader paper is ACTUALLY inspected (not skipped!)

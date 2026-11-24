@@ -32,7 +32,18 @@
 {{- end -}}
 {{- $citationFiles := dict -}}
 {{- $hasGuide := ne (strings.TrimSpace (printf "%s" .Content)) "" -}}
-<section class="paper-tools{{ if not $source.url }} paper-tools--selection-only{{ end }}" aria-labelledby="paper-tools-title" data-paper-title="{{ $source.title }}" data-paper-url="{{ .Permalink }}" data-paper-key="{{ $source.paperKey }}" data-paper-identity-status="{{ $source.identityStatus }}" data-paper-has-guide="{{ $hasGuide }}" data-citation-record="{{ $source | jsonify }}"{{ if $hasID }} data-paper-arxiv-id="{{ $resolvedID }}"{{ end }}>
+{{- $toolbarMeta := partial "research_metadata.html" . -}}
+{{- $toolbarTags := cond (ne ($toolbarMeta.tagPublicationStatus | default "") "withheld") (.Params.tags | default slice) slice -}}
+{{- $paperMeta := dict
+  "headline" ($toolbarMeta.headline | plainify | htmlUnescape)
+  "score" $toolbarMeta.score
+  "task" $toolbarMeta.task
+  "method" $toolbarMeta.method
+  "oneSentence" $toolbarMeta.oneSentence
+  "tags" $toolbarTags
+  "blogDate" (.Date.Format "2006-01-02")
+-}}
+<section class="paper-tools{{ if not $source.url }} paper-tools--selection-only{{ end }}" aria-labelledby="paper-tools-title" data-pagefind-ignore="all" data-paper-title="{{ $source.title }}" data-paper-url="{{ .Permalink }}" data-paper-key="{{ $source.paperKey }}" data-paper-identity-status="{{ $source.identityStatus }}" data-paper-has-guide="{{ $hasGuide }}" data-citation-record="{{ $source | jsonify }}" data-paper-meta="{{ $paperMeta | jsonify }}"{{ if $hasID }} data-paper-arxiv-id="{{ $resolvedID }}"{{ end }}>
   {{- if eq (len $clientSidecars) 4 }}<script type="application/json" class="paper-tools__client-sidecars">{{ $clientSidecars | jsonify | safeJS }}</script>{{ end }}
   <script type="application/json" class="paper-tools__citation-record">{{ $source | jsonify | safeJS }}</script>
   <div class="paper-tools__heading"><h2 id="paper-tools-title">原文与引用</h2><p>论文页面 · PDF · 引用文件</p></div>
@@ -40,6 +51,8 @@
     {{- with $source.url }}<a class="paper-tool paper-tool--primary" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ if $hasID }}打开 arXiv{{ else }}官方论文页面{{ end }} ↗</a>{{ end }}
     {{- with $source.pdfUrl }}<a class="paper-tool paper-tool--download" href="{{ . }}" target="_blank" rel="noopener noreferrer">阅读 / 保存 PDF</a>{{ end }}
     {{- if $canCite }}<button class="paper-tool paper-tool--reference-copy" type="button" hidden>复制引用</button>{{ end }}
+    {{- if $canCite }}<button class="paper-tool paper-tool--bibtex-copy" type="button" hidden>复制 BibTeX</button>{{ end }}
+    {{- if $hasGuide }}<button class="paper-tool paper-tool--obsidian-copy" type="button" hidden>复制 Obsidian 笔记</button>{{ end }}
   </div>
   {{- if not $canCite }}<p class="paper-tools__note">{{ if eq $source.identityStatus "verified" }}本页引用来源信息尚不完整。{{ else }}本页论文身份尚待核实。{{ end }}暂不生成本篇引用；{{ if $hasGuide }}仍可下载本站导读。{{ else }}本页暂无导读正文。{{ end }}</p>{{ end }}
   {{- if $canCite }}

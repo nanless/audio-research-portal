@@ -1,28 +1,19 @@
 {{- /* Head-only resources. Interactive DOM is emitted by extend_footer. */ -}}
 {{- partial "paper_citation_meta.html" . -}}
-{{- $rawContent := "" -}}
-{{- with .RawContent }}{{ $rawContent = . }}{{ end -}}
-{{- $needsMath := or (in $rawContent `\(`) (in $rawContent `\[`) (in $rawContent `$$`) (in $rawContent `$`) -}}
-{{- $needsZoom := or (in $rawContent `![`) (in $rawContent `<img`) -}}
+{{- $mathProbe := printf "%s\n%s\n%s\n%s\n%s"
+  (.RawContent | default "")
+  (.Params.paper_digest_one_sentence | default "")
+  (.Params.paper_digest_reader_title | default "")
+  (.Title | default "")
+  (.Description | default "")
+-}}
+{{- $needsMath := or (in $mathProbe `\(`) (in $mathProbe `\[`) -}}
+{{- if and (not $needsMath) .IsPage -}}
+  {{- $summaryStr := printf "%s" (.Summary | default "") -}}
+  {{- $needsMath = or (in $summaryStr `class="katex`) (in $summaryStr `\(`) (in $summaryStr `\[`) -}}
+{{- end -}}
 {{- if $needsMath }}
-<script>
-window.MathJax = {
-  loader: {
-    load: ['[tex]/boldsymbol']
-  },
-  tex: {
-    packages: {'[+]': ['boldsymbol']},
-    inlineMath: [['\\(', '\\)'], ['$', '$']],
-    displayMath: [['\\[', '\\]'], ['$$', '$$']],
-    processEscapes: true
-  }
-};
-</script>
-<script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-{{- end }}
-
-{{- if $needsZoom }}
-<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
+<link rel="stylesheet" href="{{ "vendor/katex/katex.min.css" | relURL }}">
 {{- end }}
 
 <style>

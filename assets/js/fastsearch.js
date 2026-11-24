@@ -77,7 +77,7 @@ function render(matches) {
     addText(listItem, 'p', 'entry-content', String(item.summary || '').slice(0, 220));
     const score = String(item.score ?? '');
     const validScore = /^(?:\d+(?:\.\d+)?)$/.test(score) && Number(score) <= 10;
-    const metaParts = [item.date, item.task, validScore && item.pageType === 'paper' ? `${score}/10` : '', item.arxivId ? `arXiv ${item.arxivId}` : ''].filter(Boolean);
+    const metaParts = [item.date, item.task, validScore && item.pageType === 'paper' ? `${score}/10` : '', item.hasCode ? '💻 开源' : '', item.hasDemo ? '🔊 Demo' : '', item.arxivId ? `arXiv ${item.arxivId}` : ''].filter(Boolean);
     addText(listItem, 'div', 'entry-footer', metaParts.join(' · '));
     const link = document.createElement('a');
     link.className = 'entry-link';

@@ -1,57 +1,123 @@
 {{- $catalog := partialCached "related_catalog.html" "global" -}}
 {{- $current := . -}}
 {{- $sortedIds := sort $current.ids -}}
-{{- $scores := newScratch -}}{{- $scores.Set "s" dict -}}
-{{- $maxScore := 0 -}}
+{{- $currentNorm := float ($current.norm | default 0.0) -}}
+{{- $out := slice -}}
+{{- if gt $currentNorm 0.0 -}}
+{{- $facetRoles := dict
+  "task" "共同研究任务"
+  "scientific_topic" "共同科学主题"
+  "method" "共同研究方法"
+  "model_family" "相同模型家族"
+  "research_focus" "共同研究重点"
+  "artifact" "共同研究产物"
+  "application" "相同应用场景"
+  "setting" "相同研究条件"
+  "signal" "相同信号类型"
+  "legacy" "相同关键词"
+-}}
+{{- $dots := newScratch -}}{{- $dots.Set "d" dict -}}
+{{- $dotMap := $dots.Get "d" -}}
+{{- $primaryIds := slice -}}
+{{- $deferredSignalIds := slice -}}
 {{- range $id := $sortedIds -}}
-  {{- $concept := index $current.nodes $id -}}
-  {{- $weight := 1 -}}
-  {{- if eq $concept.facet "task" }}{{ $weight = 4 }}
-  {{- else if eq $concept.facet "method" }}{{ $weight = 3 }}{{ end -}}
-  {{- range $otherIdentity, $_ := (index $catalog.concepts $id) -}}
-    {{- $next := add (index ($scores.Get "s") $otherIdentity | default 0) $weight -}}
-    {{- if gt $next $maxScore }}{{ $maxScore = $next }}{{ end -}}
-    {{- $scores.SetInMap "s" $otherIdentity $next -}}
+  {{- $node := index $current.nodes $id -}}
+  {{- $bucket := index $catalog.concepts $id -}}
+  {{- if and $node (eq $node.facet "signal") (gt (len $bucket) 64) -}}
+    {{- $deferredSignalIds = $deferredSignalIds | append $id -}}
+  {{- else -}}
+    {{- $primaryIds = $primaryIds | append $id -}}
   {{- end -}}
 {{- end -}}
-{{- $scoreMap := $scores.Get "s" -}}
+{{- range $id := $primaryIds -}}
+  {{- $w := index $catalog.weights $id | default 1 -}}
+  {{- $w2 := mul $w $w -}}
+  {{- range $otherIdentity, $_ := (index $catalog.concepts $id) -}}
+    {{- $next := add (index $dotMap $otherIdentity | default 0) $w2 -}}
+    {{- $dots.SetInMap "d" $otherIdentity $next -}}
+  {{- end -}}
+{{- end -}}
+{{- if gt (len $deferredSignalIds) 0 -}}
+  {{- if ge (len $dotMap) 4 -}}
+    {{- /* Score exact shared ubiquitous signal concepts in O(1) for candidates discovered via higher-weight facets. */ -}}
+    {{- range $id := $deferredSignalIds -}}
+      {{- $w := index $catalog.weights $id | default 1 -}}
+      {{- $w2 := mul $w $w -}}
+      {{- $sigBucket := index $catalog.concepts $id -}}
+      {{- range $otherIdentity, $curDot := $dotMap -}}
+        {{- if isset $sigBucket $otherIdentity -}}
+          {{- $dots.SetInMap "d" $otherIdentity (add $curDot $w2) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else -}}
+    {{- range $id := $deferredSignalIds -}}
+      {{- $w := index $catalog.weights $id | default 1 -}}
+      {{- $w2 := mul $w $w -}}
+      {{- range $otherIdentity, $_ := (index $catalog.concepts $id) -}}
+        {{- $next := add (index $dotMap $otherIdentity | default 0) $w2 -}}
+        {{- $dots.SetInMap "d" $otherIdentity $next -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $sims := newScratch -}}{{- $sims.Set "s" dict -}}
+{{- $hist := newScratch -}}
+{{- $maxSim := 0 -}}
+{{- range $otherIdentity, $dot := $dotMap -}}
+  {{- $rec := index $catalog.records $otherIdentity -}}
+  {{- $otherNorm := float ($rec.norm | default 0.0) -}}
+  {{- if and (gt $dot 0) (gt $otherNorm 0.0) -}}
+    {{- $simFloat := div (float $dot) (mul $currentNorm $otherNorm) -}}
+    {{- $simInt := int (math.Round (mul $simFloat 1000.0)) -}}
+    {{- if lt $simInt 1 }}{{ $simInt = 1 }}{{ end -}}
+    {{- if gt $simInt 1000 }}{{ $simInt = 1000 }}{{ end -}}
+    {{- if gt $simInt $maxSim }}{{ $maxSim = $simInt }}{{ end -}}
+    {{- $sims.SetInMap "s" $otherIdentity $simInt -}}
+    {{- $hist.Add (printf "%d" $simInt) 1 -}}
+  {{- end -}}
+{{- end -}}
+{{- $simMap := $sims.Get "s" -}}
 {{- $cutoff := 1 -}}
-{{- if and (gt $maxScore 1) (le $maxScore 1000) (gt (len $scoreMap) 4) -}}
-  {{- $hist := newScratch -}}
-  {{- range $_, $sc := $scoreMap }}{{ $hist.Add (printf "%d" $sc) 1 }}{{ end -}}
+{{- if and (gt $maxSim 1) (gt (len $simMap) 4) -}}
   {{- $acc := 0 -}}
-  {{- range $i := seq 1 $maxScore -}}
-    {{- $sc := add (sub $maxScore $i) 1 -}}
-    {{- if lt $acc 4 -}}
-      {{- $acc = add $acc ($hist.Get (printf "%d" $sc) | default 0) -}}
-      {{- if ge $acc 4 }}{{ $cutoff = $sc }}{{ end -}}
+  {{- range $i := seq 1 $maxSim -}}
+    {{- $sc := add (sub $maxSim $i) 1 -}}
+    {{- $acc = add $acc ($hist.Get (printf "%d" $sc) | default 0) -}}
+    {{- if ge $acc 4 -}}
+      {{- $cutoff = $sc -}}
+      {{- break -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
 {{- $candidates := slice -}}
-{{- range $otherIdentity, $sc := $scoreMap -}}
-  {{- if ge $sc $cutoff -}}
-    {{- $candidates = $candidates | append (dict "identity" $otherIdentity "score" $sc "sortKey" (printf "%08d:%s" (sub 100000 $sc) $otherIdentity)) -}}
+{{- range $otherIdentity, $simInt := $simMap -}}
+  {{- if ge $simInt $cutoff -}}
+    {{- $rec := index $catalog.records $otherIdentity -}}
+    {{- $sortKey := printf "%05d:%03d:%08d:%s" (sub 10000 $simInt) (sub 100 ($rec.scoreInt | default 0)) (sub 99999999 ($rec.dateInt | default 0)) $otherIdentity -}}
+    {{- $candidates = $candidates | append (dict "identity" $otherIdentity "score" $simInt "sortKey" $sortKey) -}}
   {{- end -}}
 {{- end -}}
 {{- /* One extra result keeps the exact top three after excluding the current identity. */ -}}
 {{- $top := first 4 (sort $candidates "sortKey") -}}
-{{- $out := slice -}}
 {{- range $winner := $top -}}
   {{- $otherIdentity := $winner.identity -}}
-  {{- $reasons := slice -}}
+  {{- $weightedReasons := slice -}}
   {{- range $id := $sortedIds -}}
     {{- if isset (index $catalog.concepts $id) $otherIdentity -}}
       {{- $concept := index $current.nodes $id -}}
-      {{- $role := "相同研究条件" -}}
-      {{- if eq $concept.facet "task" }}{{ $role = "共同研究任务" }}
-      {{- else if eq $concept.facet "method" }}{{ $role = "共同研究方法" }}
-      {{- else if eq $concept.facet "legacy" }}{{ $role = "相同关键词" }}{{ end -}}
-      {{- $r := slice (printf "%s：%s" $role $concept.zh) -}}
-      {{- if $reasons }}{{ $reasons = union $reasons $r }}{{ else }}{{ $reasons = $r }}{{ end -}}
+      {{- $w := index $catalog.weights $id | default 1 -}}
+      {{- $role := index $facetRoles $concept.facet | default "相同研究条件" -}}
+      {{- $weightedReasons = $weightedReasons | append (dict "sortKey" (printf "%08d:%s" (sub 1000000 $w) $id) "label" (printf "%s：%s" $role $concept.zh)) -}}
     {{- end -}}
+  {{- end -}}
+  {{- $reasons := slice -}}
+  {{- range (sort $weightedReasons "sortKey") -}}
+    {{- $r := slice .label -}}
+    {{- if $reasons }}{{ $reasons = union $reasons $r }}{{ else }}{{ $reasons = $r }}{{ end -}}
   {{- end -}}
   {{- $rec := index $catalog.records $otherIdentity -}}
   {{- $out = $out | append (dict "identity" $otherIdentity "score" $winner.score "sortKey" $winner.sortKey "reasons" $reasons "relPermalink" $rec.relPermalink "headline" $rec.headline "hasDescription" $rec.hasDescription "descriptionHtml" $rec.descriptionHtml) -}}
+{{- end -}}
 {{- end -}}
 {{- return $out -}}

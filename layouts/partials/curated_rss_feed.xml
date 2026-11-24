@@ -1,0 +1,81 @@
+{{- $feedKey := .feedKey -}}
+{{- $formatName := .formatName -}}
+{{- $feedTitle := .title -}}
+{{- $feedDesc := .description -}}
+{{- $minScore := .minScore | default 0.0 -}}
+{{- $conceptIds := .conceptIds | default slice -}}
+{{- $ancestorRoots := .ancestorRoots | default slice -}}
+{{- $legacyTags := .legacyTags | default slice -}}
+{{- $matched := slice -}}
+{{- range where site.RegularPages "Section" "posts" -}}
+  {{- $metadata := partial "research_metadata.html" . -}}
+  {{- if eq $metadata.pageType "paper" -}}
+    {{- $include := false -}}
+    {{- if gt $minScore 0.0 -}}
+      {{- if and $metadata.score (findRE `^[0-9]+(\.[0-9]+)?$` $metadata.score 1) -}}
+        {{- if ge (float $metadata.score) $minScore -}}
+          {{- $include = true -}}
+        {{- end -}}
+      {{- end -}}
+    {{- else -}}
+      {{- $validRecords := partial "tag_valid_records.html" . -}}
+      {{- if gt (len $validRecords) 0 -}}
+        {{- range $rec := $validRecords -}}
+          {{- if not $include -}}
+            {{- if in $conceptIds $rec.id -}}
+              {{- $include = true -}}
+            {{- else if eq $feedKey "topic-music" -}}
+              {{- if in $rec.id "music" }}{{ $include = true }}{{ end -}}
+            {{- end -}}
+            {{- if and (not $include) (gt (len $ancestorRoots) 0) -}}
+              {{- range $anc := ($rec.ancestorIds | default slice) -}}
+                {{- if in $ancestorRoots $anc }}{{ $include = true }}{{ end -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if and (not $include) (eq (len $validRecords) 0) (gt (len $legacyTags) 0) (ne ($metadata.tagPublicationStatus | default "") "withheld") -}}
+        {{- range $tag := (.Params.tags | default slice) -}}
+          {{- if in $legacyTags $tag }}{{ $include = true }}{{ end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if $include -}}
+      {{- $matched = $matched | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $pages := first 50 (sort $matched "Date" "desc") -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?\u003e" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ $feedTitle }} · {{ site.Title }}</title>
+    <link>{{ site.Home.Permalink }}</link>
+    <description>{{ $feedDesc }}</description>
+    <language>{{ site.Language.LanguageCode }}</language>
+    {{- with site.Home.OutputFormats.Get $formatName }}
+    <atom:link href="{{ .Permalink }}" rel="self" type="{{ .MediaType.Type }}" />
+    {{- end }}
+    {{- if gt (len $pages) 0 }}
+    <lastBuildDate>{{ (index $pages 0).Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    {{- end }}
+    {{- range $pages }}
+    {{- $meta := partial "research_metadata.html" . }}
+    {{- $rawSummary := $meta.oneSentence | default .Description | default .Summary }}
+    {{- $summary := partial "plain_summary.html" $rawSummary | truncate 480 }}
+    <item>
+      <title>{{ $meta.headline | plainify | htmlUnescape }}</title>
+      <link>{{ .Permalink }}</link>
+      <guid isPermaLink="true">{{ .Permalink }}</guid>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <description>{{ $summary }}</description>
+      {{- if ne ($meta.tagPublicationStatus | default "") "withheld" }}
+      {{- range .GetTerms "tags" }}
+      <category>{{ .LinkTitle }}</category>
+      {{- end }}
+      {{- end }}
+    </item>
+    {{- end }}
+  </channel>
+</rss>

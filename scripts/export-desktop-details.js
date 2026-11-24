@@ -67,7 +67,8 @@ const HTML_VOID_TAGS = new Set([
 const MATHML_ALLOWED_TAGS = new Set([
   'math', 'mrow', 'mi', 'mn', 'mo', 'ms', 'mtext', 'mspace', 'msqrt', 'mroot', 'mfrac',
   'msub', 'msup', 'msubsup', 'munder', 'mover', 'munderover', 'mmultiscripts', 'mprescripts',
-  'none', 'mtable', 'mtr', 'mtd', 'mpadded', 'mphantom', 'mstyle', 'menclose', 'semantics', 'annotation'
+  'none', 'mtable', 'mtr', 'mtd', 'mpadded', 'mphantom', 'mstyle', 'menclose',
+  'semantics', 'annotation'
 ]);
 const ALLOWED_HTML_TAGS = new Set([
   'div', 'section', 'article', 'aside', 'header', 'footer', 'nav',
@@ -112,13 +113,19 @@ const TAG_SPECIFIC_ALLOWED_ATTRS = Object.freeze({
   ins: new Set(['cite', 'datetime']),
   time: new Set(['datetime'])
 });
+// Exact intersection of released v1.4.6 macOS (LibraryDesktopDetails.swift + LibraryArticleExtractor.swift)
+// and Android (CatalogRepository.kt) MathML attribute allowlists (37 attributes; excludes linebreak and
+// the 10 LibraryDesktopDetails-rejected attributes: largeop, mathsize, mathcolor, mathbackground,
+// columnspan, rowspan, numalign, denomalign, bevelled, form).
 const MATHML_ALLOWED_ATTRS = new Set([
   'display', 'xmlns', 'encoding', 'mathvariant', 'displaystyle', 'scriptlevel',
   'stretchy', 'fence', 'separator', 'accent', 'accentunder', 'lspace', 'rspace',
   'width', 'height', 'depth', 'voffset', 'columnalign', 'rowalign', 'columnspacing',
   'rowspacing', 'columnlines', 'rowlines', 'frame', 'framespacing', 'equalrows',
-  'equalcolumns', 'linethickness', 'notation', 'maxsize', 'minsize', 'movablelimits', 'symmetric'
+  'equalcolumns', 'linethickness', 'notation', 'maxsize', 'minsize', 'movablelimits',
+  'symmetric', 'dir', 'id', 'class', 'title'
 ]);
+const MATHML_ANNOTATION_ENCODINGS = new Set(['application/x-tex', 'application/x-latex', 'text/plain']);
 const SAFE_TABLE_CELL_STYLE_PATTERN = /^\s*text-align\s*:\s*(?:left|center|right|justify)\s*;?\s*$/i;
 
 const ALLOWED_SVG_TAGS = new Set([
@@ -605,13 +612,28 @@ function isAllowedAttribute(tagName, attr) {
   if (!/^[a-z][a-z0-9:-]*$/.test(name)) return false;
   if (name.startsWith('on') || name === 'srcdoc' || name === 'ping') return false;
 
+  if (MATHML_ALLOWED_TAGS.has(tagName)) {
+    // v1.4.6 macOS/Android MathML sanitizers enforce strict MathML-only attrs (no aria-*/data-*/style).
+    if (!MATHML_ALLOWED_ATTRS.has(name) || name.includes(':')) return false;
+    if (attr.value === null) return false;
+    const decodedMathVal = decodeHtmlEntities(attr.value);
+    if (decodedMathVal.includes('\uFFFD') || decodedMathVal.includes('\u0000') || decodedMathVal.length > 4096) return false;
+    if (/url\s*\(|javascript:/i.test(decodedMathVal)) return false;
+    if (name === 'xmlns') {
+      return tagName === 'math' && decodedMathVal.trim() === 'http://www.w3.org/1998/Math/MathML';
+    }
+    if (name === 'encoding') {
+      return tagName === 'annotation' && MATHML_ANNOTATION_ENCODINGS.has(decodedMathVal.trim());
+    }
+    return true;
+  }
+
   const isGlobal = GLOBAL_ALLOWED_ATTRS.has(name)
     || /^aria-[a-z0-9-]+$/.test(name)
     || /^data-[a-z0-9-]+$/.test(name);
   const tagSpecific = TAG_SPECIFIC_ALLOWED_ATTRS[tagName]?.has(name) || false;
-  const mathSpecific = MATHML_ALLOWED_TAGS.has(tagName) && MATHML_ALLOWED_ATTRS.has(name);
 
-  if (!isGlobal && !tagSpecific && !mathSpecific) return false;
+  if (!isGlobal && !tagSpecific) return false;
 
   if (attr.value === null) {
     return BOOLEAN_ATTRS.has(name);
@@ -735,10 +757,128 @@ function findMatchingForbiddenEnd(fragment, tagName, searchStart) {
   return fragment.length;
 }
 
-function sanitizeArticleHtml(rawFragment, label) {
-  const fragment = escapeLtInsideTexDelimiters(rawFragment);
+function collapseKatexToMathML(rawFragment) {
+  if (typeof rawFragment !== 'string' || !rawFragment.includes('katex')) {
+    return rawFragment;
+  }
   const chunks = [];
   let cursor = 0;
+  while (cursor < rawFragment.length) {
+    const lt = rawFragment.indexOf('<', cursor);
+    if (lt < 0) {
+      chunks.push(rawFragment.slice(cursor));
+      break;
+    }
+    if (lt > cursor) chunks.push(rawFragment.slice(cursor, lt));
+    if (rawFragment.startsWith('<!--', lt)) {
+      const endComment = scanHtmlCommentEnd(rawFragment, lt);
+      chunks.push(rawFragment.slice(lt, endComment));
+      cursor = endComment;
+      continue;
+    }
+    const parsed = scanHtmlTag(rawFragment, lt);
+    if (!parsed) {
+      chunks.push('<');
+      cursor = lt + 1;
+      continue;
+    }
+    if (!parsed.isClosing && !parsed.selfClosing && parsed.tagName === 'span') {
+      const clsAttr = parsed.attrs.find(a => a.name === 'class');
+      const classes = clsAttr && clsAttr.value !== null
+        ? decodeHtmlEntities(clsAttr.value).trim().split(/\s+/).filter(Boolean)
+        : [];
+      if (classes.includes('katex-display') || classes.includes('katex')) {
+        // Scan balanced closing </span>
+        let spanDepth = 1;
+        let scanPos = parsed.tagEnd + 1;
+        let closeEnd = -1;
+        while (scanPos < rawFragment.length) {
+          const nextLt = rawFragment.indexOf('<', scanPos);
+          if (nextLt < 0) break;
+          if (rawFragment.startsWith('<!--', nextLt)) {
+            scanPos = scanHtmlCommentEnd(rawFragment, nextLt);
+            continue;
+          }
+          const innerTag = scanHtmlTag(rawFragment, nextLt);
+          if (!innerTag) {
+            scanPos = nextLt + 1;
+            continue;
+          }
+          if (innerTag.tagName === 'span') {
+            if (innerTag.isClosing) {
+              spanDepth -= 1;
+              if (spanDepth === 0) {
+                closeEnd = innerTag.tagEnd + 1;
+                break;
+              }
+            } else if (!innerTag.selfClosing) {
+              spanDepth += 1;
+            }
+          }
+          scanPos = innerTag.tagEnd + 1;
+        }
+        if (closeEnd > parsed.tagEnd) {
+          const katexSlice = rawFragment.slice(lt, closeEnd);
+          // Extract the exact inner <math ...>...</math> block and discard .katex-html (<svg>/style/aria-hidden)
+          let mathStart = -1;
+          let mathEnd = -1;
+          let mathDepth = 0;
+          let hasMerror = false;
+          let mPos = 0;
+          while (mPos < katexSlice.length) {
+            const mLt = katexSlice.indexOf('<', mPos);
+            if (mLt < 0) break;
+            if (katexSlice.startsWith('<!--', mLt)) {
+              mPos = scanHtmlCommentEnd(katexSlice, mLt);
+              continue;
+            }
+            const mTag = scanHtmlTag(katexSlice, mLt);
+            if (!mTag) {
+              mPos = mLt + 1;
+              continue;
+            }
+            if (mTag.tagName === 'math') {
+              if (!mTag.isClosing) {
+                if (mathStart < 0) mathStart = mLt;
+                if (mTag.selfClosing) {
+                  if (mathDepth === 0) {
+                    mathEnd = mTag.tagEnd + 1;
+                    break;
+                  }
+                } else {
+                  mathDepth += 1;
+                }
+              } else if (mathDepth > 0) {
+                mathDepth -= 1;
+                if (mathDepth === 0) {
+                  mathEnd = mTag.tagEnd + 1;
+                  break;
+                }
+              }
+            } else if (mathDepth > 0 && mTag.tagName === 'merror') {
+              hasMerror = true;
+            }
+            mPos = mTag.tagEnd + 1;
+          }
+          if (mathStart >= 0 && mathEnd > mathStart && !hasMerror) {
+            chunks.push(katexSlice.slice(mathStart, mathEnd));
+            cursor = closeEnd;
+            continue;
+          }
+        }
+      }
+    }
+    chunks.push(rawFragment.slice(lt, parsed.tagEnd + 1));
+    cursor = parsed.tagEnd + 1;
+  }
+  return chunks.join('');
+}
+
+function sanitizeArticleHtml(rawFragment, label) {
+  const fragment = escapeLtInsideTexDelimiters(collapseKatexToMathML(rawFragment));
+  const chunks = [];
+  let cursor = 0;
+  let mathDepth = 0;
   while (cursor < fragment.length) {
     const lt = fragment.indexOf('<', cursor);
     if (lt < 0) {
@@ -791,6 +931,41 @@ function sanitizeArticleHtml(rawFragment, label) {
       continue;
     }
 
+    const isMathTag = MATHML_ALLOWED_TAGS.has(tagName);
+    const isMathChildTag = isMathTag && tagName !== 'math';
+
+    // Released v1.4.6 clients forbid MathML child tags and unmatched </math> outside <math>.
+    if (isMathChildTag && mathDepth === 0) {
+      chunks.push(escapeHtmlText(fragment.slice(lt, tagEnd + 1)));
+      cursor = tagEnd + 1;
+      continue;
+    }
+    if (tagName === 'math' && isClosing && mathDepth === 0) {
+      chunks.push(escapeHtmlText(fragment.slice(lt, tagEnd + 1)));
+      cursor = tagEnd + 1;
+      continue;
+    }
+
+    // Inside <math>, drop <annotation> blocks whose encoding is missing or invalid rather than emitting bare <annotation>.
+    if (mathDepth > 0 && tagName === 'annotation' && !isClosing) {
+      const hasValidEncoding = attrs.some(a => a.name === 'encoding' && isAllowedAttribute('annotation', a));
+      if (!hasValidEncoding) {
+        if (selfClosing) {
+          cursor = tagEnd + 1;
+        } else {
+          const annEnd = findMatchingForbiddenEnd(fragment, 'annotation', tagEnd + 1);
+          const remainingAfterOpen = fragment.slice(tagEnd + 1);
+          const mathCloseRel = remainingAfterOpen.search(/<\/math(?=[\t\n\f\r />])/i);
+          if (annEnd <= fragment.length && (mathCloseRel < 0 || annEnd <= tagEnd + 1 + mathCloseRel)) {
+            cursor = annEnd;
+          } else {
+            cursor = tagEnd + 1;
+          }
+        }
+        continue;
+      }
+    }
+
     // Bare <audio> / <video> / <source> without attributes (e.g. LLM placeholder token "(<audio>)×T") -> escape as text
     if (!isClosing && (tagName === 'audio' || tagName === 'video' || tagName === 'source') && attrs.length === 0) {
       chunks.push(escapeHtmlText(fragment.slice(lt, tagEnd + 1)));
@@ -813,6 +988,7 @@ function sanitizeArticleHtml(rawFragment, label) {
 
     if (isClosing) {
       if (!HTML_VOID_TAGS.has(tagName)) {
+        if (tagName === 'math') mathDepth -= 1;
         chunks.push(`</${tagName}>`);
       }
       cursor = tagEnd + 1;
@@ -828,9 +1004,16 @@ function sanitizeArticleHtml(rawFragment, label) {
       safeAttrs.push(formatAttribute(attr));
     }
     const attrText = safeAttrs.length ? ' ' + safeAttrs.join(' ') : '';
-    const emitSelfClosing = selfClosing && HTML_VOID_TAGS.has(tagName);
+    const emitSelfClosing = selfClosing && (HTML_VOID_TAGS.has(tagName) || tagName === 'math' || (mathDepth > 0 && isMathChildTag));
+    if (tagName === 'math' && !emitSelfClosing) {
+      mathDepth += 1;
+    }
     chunks.push(`<${tagName}${attrText}${emitSelfClosing ? ' />' : '>'}`);
     cursor = tagEnd + 1;
+  }
+  while (mathDepth > 0) {
+    chunks.push('</math>');
+    mathDepth -= 1;
   }
   const sanitized = chunks.join('');
   assertSafeArticleHtml(sanitized, label);
@@ -844,6 +1027,7 @@ function assertSafeArticleHtml(html, label) {
     `${label} 正文片段含禁止的 NUL、HTML 注释或 DTD/实体声明`
   );
   let cursor = 0;
+  let mathDepth = 0;
   const mediaElements = [];
   const anchorHrefs = [];
   while (cursor < html.length) {
@@ -856,10 +1040,27 @@ function assertSafeArticleHtml(html, label) {
       ALLOWED_HTML_TAGS.has(tagName) && !FORBIDDEN_CONTAINER_TAGS.has(tagName) && !STRIP_VOID_TAGS.has(tagName),
       `${label} 正文片段含非白名单或禁止标签 <${tagName}>`
     );
+    const isMathTag = MATHML_ALLOWED_TAGS.has(tagName);
+    const isMathChildTag = isMathTag && tagName !== 'math';
+    if (isMathChildTag) {
+      invariant(mathDepth > 0, `${label} 不允许在 <math> 外部使用 MathML 子标签 <${tagName}>`);
+    }
     if (isClosing) {
       invariant(attrs.length === 0 && !selfClosing && !HTML_VOID_TAGS.has(tagName),
         `${label} 闭合标签 </${tagName}> 格式非法`);
+      if (tagName === 'math') {
+        invariant(mathDepth > 0, `${label} 包含没有对应起点的 </math> 闭合标签`);
+        mathDepth -= 1;
+      }
     } else {
+      if (selfClosing) {
+        const allowMathSelfClose = tagName === 'math' || (mathDepth > 0 && isMathChildTag);
+        invariant(HTML_VOID_TAGS.has(tagName) || allowMathSelfClose,
+          `${label} 非空元素 <${tagName}/> 不允许使用自闭合语法`);
+      }
+      if (tagName === 'math' && !selfClosing) {
+        mathDepth += 1;
+      }
       const seenAttrs = new Set();
       for (const attr of attrs) {
         invariant(!seenAttrs.has(attr.name), `${label} 标签 <${tagName}> 存在重复属性 ${attr.name}`);
@@ -867,6 +1068,13 @@ function assertSafeArticleHtml(html, label) {
         invariant(!attr.unquotedUnsafe, `${label} 属性 ${attr.name} 含未加引号的特殊字符`);
         invariant(isAllowedAttribute(tagName, attr),
           `${label} 标签 <${tagName}> 残留非白名单或危险属性 ${attr.name}`);
+      }
+      if (tagName === 'annotation') {
+        const encAttr = attrs.find(a => a.name === 'encoding');
+        invariant(
+          encAttr && encAttr.value !== null && MATHML_ANNOTATION_ENCODINGS.has(decodeHtmlEntities(encAttr.value).trim()),
+          `${label} <annotation> 必须携带合法 encoding 属性`
+        );
       }
       if (tagName === 'img' || tagName === 'audio' || tagName === 'video' || tagName === 'source') {
         const srcAttr = attrs.find(a => a.name === 'src');
@@ -896,6 +1104,7 @@ function assertSafeArticleHtml(html, label) {
     }
     cursor = tagEnd + 1;
   }
+  invariant(mathDepth === 0, `${label} 包含未闭合的 <math> 标签`);
   return { mediaElements, anchorHrefs };
 }
 
@@ -2202,6 +2411,7 @@ module.exports = {
   COMMIT_OID_PATTERN,
   SHA256_PATTERN,
   extractArticleContainer,
+  collapseKatexToMathML,
   sanitizeArticleHtml,
   assertSafeArticleHtml,
   exportDesktopDetails

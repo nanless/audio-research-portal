@@ -9,7 +9,7 @@
 
 {{- if $isResearchPage }}
 {{- $headline := $metadata.headline }}
-{{- $headlineComparison := partial "research_normalized_title.html" ($headline | markdownify | plainify | htmlUnescape) }}
+{{- $headlineComparison := partial "research_normalized_title.html" (partial "plain_summary.html" ($headline | markdownify)) }}
 {{- $originalComparison := partial "research_normalized_title.html" $metadata.originalTitle }}
 {{- $showOriginal := and $isPaper (ne $originalComparison "") (ne $headlineComparison $originalComparison) }}
 {{- $score := "" }}
@@ -20,9 +20,26 @@
 {{- $isSourceV2 := and $hasVerifiedTags (in (slice "historical-source-taxonomy-classification-v2" "historical-source-taxonomy-classification-v3") $tagProof.classificationContract) (in (slice "historical-source-taxonomy-supplement-v2" "historical-current-page-source-taxonomy-supplement-v2" "historical-source-taxonomy-supplement-v3") $tagProof.evidenceContract) }}
 {{- $researchRole := $tagProof.primaryResearchRole | default dict }}
 
-<article class="post-single research-workbench{{ if $isPaper }} research-workbench--paper{{ else if $isDaily }} research-workbench--digest{{ end }}" data-reading-base-path="{{ (urls.Parse site.BaseURL).Path }}">
-  <a class="skip-to-article" href="#article-body">跳到正文</a>
+<article class="post-single research-workbench{{ if $isPaper }} research-workbench--paper{{ else if $isDaily }} research-workbench--digest{{ end }}" data-pagefind-body data-reading-base-path="{{ (urls.Parse site.BaseURL).Path }}">
+  <a class="skip-to-article" href="#article-body" data-pagefind-ignore="all">跳到正文</a>
   <header class="research-paper-header">
+    <span class="sr-only" data-pagefind-filter="类型">{{ if $isPaper }}论文解读{{ else if $isDaily }}每日速递{{ else }}会议专题{{ end }}</span>
+    <span class="sr-only" data-pagefind-filter="年份">{{ .Date.Format "2006" }}</span>
+    {{- if $isPaper }}
+    <span class="sr-only" data-pagefind-filter="来源">{{ if eq $metadata.sourceKind "conference" }}会议论文{{ else if eq $metadata.sourceKind "arxiv" }}arXiv{{ else }}其他{{ end }}</span>
+    {{- if and $metadata.score (findRE `^[0-9]+(\.[0-9]+)?$` $metadata.score 1) -}}
+      {{- $scoreNum := float $metadata.score -}}
+      {{- if ge $scoreNum 8.5 }}<span class="sr-only" data-pagefind-filter="评分">8.5+</span>{{ else if ge $scoreNum 8.0 }}<span class="sr-only" data-pagefind-filter="评分">8.0+</span>{{ else if ge $scoreNum 7.0 }}<span class="sr-only" data-pagefind-filter="评分">7.0+</span>{{ end -}}
+    {{- end }}
+    {{- if $metadata.hasCode }}<span class="sr-only" data-pagefind-filter="开源">含开源代码</span>{{ end }}
+    {{- if $metadata.hasDemo }}<span class="sr-only" data-pagefind-filter="开源">含在线试听</span>{{ end }}
+    {{- $pfValidTags := partial "tag_valid_records.html" . -}}
+    {{- if gt (len $pfValidTags) 0 -}}
+      {{- range $pfValidTags }}<span class="sr-only" data-pagefind-filter="方向">{{ .zh }}</span>{{ end -}}
+    {{- else if ne ($metadata.tagPublicationStatus | default "") "withheld" -}}
+      {{- range (.Params.tags | default slice) }}<span class="sr-only" data-pagefind-filter="方向">{{ . }}</span>{{ end -}}
+    {{- end }}
+    {{- end }}
     {{ partial "breadcrumbs.html" . }}
     <div class="rw-eyebrow">
       {{- if $isDaily }}每日研究速递
@@ -56,7 +73,7 @@
     </div>
     {{- $intro := $metadata.oneSentence }}
     {{- if and (not $intro) (not $score) }}{{ $intro = .Description }}{{ end }}
-    {{- $introComparison := partial "research_normalized_title.html" ($intro | markdownify | plainify | htmlUnescape) }}
+    {{- $introComparison := partial "research_normalized_title.html" (partial "plain_summary.html" ($intro | markdownify)) }}
     {{- if and $intro (ne $introComparison $headlineComparison) (not (and $showOriginal (eq $introComparison $originalComparison))) }}
     <section class="research-tldr research-tldr--header" aria-labelledby="research-tldr-title">
       <strong id="research-tldr-title">研究速览</strong>
@@ -80,7 +97,7 @@
   {{- if not $isPaper }}{{ $layoutClass = "research-layout research-layout--digest" }}{{ end }}
   <div class="{{ $layoutClass }}">
     {{- if and (.Param "ShowToc") .Content }}
-    <aside class="workbench-toc" aria-label="文章目录">
+    <aside class="workbench-toc" aria-label="文章目录" data-pagefind-ignore="all">
       <details class="toc" open>
         <summary><span class="title">目录</span></summary>
         <div class="inner">{{ partial "reader_table_of_contents.html" (dict "toc" .TableOfContents "page" .) }}</div>
@@ -107,7 +124,7 @@
     </div>
 
     {{- if $isPaper }}
-    <aside class="research-signal-rail" aria-label="论文研究信号">
+    <aside class="research-signal-rail" aria-label="论文研究信号" data-pagefind-ignore="all">
       {{- if $score }}
       <section class="research-signal-card">
         <span class="research-signal-card__label">本站评分</span>
@@ -129,7 +146,7 @@
     {{- end }}
   </div>
 
-  <footer class="post-footer research-page-footer">
+  <footer class="post-footer research-page-footer" data-pagefind-ignore="all">
     {{- if not $hasVerifiedTags }}
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     {{- $primaryTask := .Params.paper_digest_primary_task | default "" }}
@@ -152,8 +169,8 @@
   </footer>
   {{- if (.Param "comments") }}{{ partial "comments.html" . }}{{ end }}
   {{- if and (.Param "ShowToc") .Content }}
-  <button class="reading-chapters-trigger" id="reading-chapters-trigger" type="button" aria-controls="reading-chapters-panel" aria-expanded="false" hidden>打开章节目录</button>
-  <section class="reading-chapters-panel" id="reading-chapters-panel" role="dialog" aria-modal="true" aria-labelledby="reading-chapters-title" hidden>
+  <button class="reading-chapters-trigger" id="reading-chapters-trigger" type="button" aria-controls="reading-chapters-panel" aria-expanded="false" data-pagefind-ignore="all" hidden>打开章节目录</button>
+  <section class="reading-chapters-panel" id="reading-chapters-panel" role="dialog" aria-modal="true" aria-labelledby="reading-chapters-title" data-pagefind-ignore="all" hidden>
     <div class="reading-chapters-panel__content">
       <div class="reading-chapters-panel__header"><strong id="reading-chapters-title">文章章节</strong><button class="rw-action" id="reading-chapters-close" type="button">关闭目录</button></div>
       <div id="reading-chapters-search-group" hidden><label for="reading-chapters-search">查找章节</label><input id="reading-chapters-search" type="search" placeholder="输入章节标题" autocomplete="off" aria-controls="reading-chapters-links"><button class="rw-action" id="reading-chapters-clear" type="button" hidden>清空</button><p id="reading-chapters-empty" role="status" hidden>没有匹配的章节，请换个关键词。</p></div>
@@ -164,6 +181,10 @@
 </article>
 {{- $readingScript := resources.Get "js/reading-workflow.js" | minify | fingerprint }}
 <script defer src="{{ $readingScript.RelPermalink }}" integrity="{{ $readingScript.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- $figureScript := resources.Get "js/figure-viewer.js" | minify | fingerprint }}
+<script defer src="{{ $figureScript.RelPermalink }}" integrity="{{ $figureScript.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- $tableScript := resources.Get "js/table-workbench.js" | minify | fingerprint }}
+<script defer src="{{ $tableScript.RelPermalink }}" integrity="{{ $tableScript.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- if $isDaily }}
 {{- $dailyScript := resources.Get "js/daily-edition.js" | minify | fingerprint }}
 <script defer src="{{ $dailyScript.RelPermalink }}" integrity="{{ $dailyScript.Data.Integrity }}" crossorigin="anonymous"></script>

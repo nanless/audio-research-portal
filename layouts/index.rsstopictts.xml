@@ -1,0 +1,9 @@
+{{- partial "curated_rss_feed.xml" (dict
+  "feedKey" "topic-tts"
+  "formatName" "RSSTopicTTS"
+  "title" "语音合成（TTS）专题"
+  "description" "文本到语音合成、韵律与风格控制、对话与播客生成等方向最新论文深度解读。"
+  "conceptIds" (slice "task.speech-synthesis" "task.tts" "task.av-synthesis" "task.prosody-style-control" "task.podcast-dialogue-generation" "task.tts-friendly-text-generation")
+  "ancestorRoots" (slice "task.speech-synthesis" "task.tts")
+  "legacyTags" (slice "语音合成" "文本到语音" "TTS" "语音克隆" "情感语音合成")
+) -}}

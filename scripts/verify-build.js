@@ -70,7 +70,7 @@ function verifyHead(html, buildDir) {
   invariant(!/rel=["']manifest["']/i.test(head), '不得继续引用无效 manifest');
   invariant(!/serviceWorker|sw\.js/i.test(head), '不得继续注册无效 service worker');
   invariant(!/gc\.zgo\.at/i.test(head), '未配置 GoatCounter 时不得加载统计脚本');
-  invariant(!/MathJax|medium-zoom/i.test(head), '无公式/图片的首页不得加载 MathJax 或 medium-zoom');
+  invariant(!/MathJax|medium-zoom|cdn\.jsdelivr\.net/i.test(head), '构建产物不得加载外部 MathJax、medium-zoom 或 cdn.jsdelivr.net');
   invariant(/\/js\/site\.min\.[a-f0-9]+\.js/i.test(html), '缺少带指纹的 site.js');
 
   const iconLinks = (head.match(/<link\b[^>]*>/gi) || []).filter((tag) => attributeValue(tag, 'rel').includes('icon'));
@@ -118,6 +118,55 @@ function verifyRss(xml, byteLength) {
     invariant(dates[index - 1] >= dates[index], 'RSS 未按日期倒序排列');
   }
   return { itemCount: items.length, bytes: byteLength };
+}
+
+const CURATED_FEED_FILES = Object.freeze([
+  'high-score.xml',
+  'topic-asr.xml',
+  'topic-tts.xml',
+  'topic-enhancement.xml',
+  'topic-music.xml',
+  'topic-audio-llm.xml'
+]);
+
+function verifyCuratedFeeds(buildDir, options = {}) {
+  const root = path.resolve(buildDir);
+  const feedsDir = path.join(root, 'feeds');
+  invariant(fs.existsSync(feedsDir) && fs.statSync(feedsDir).isDirectory(), `缺少专题 RSS 目录：${feedsDir}`);
+  const allowEmpty = options.allowEmpty === true;
+  const stats = {};
+  for (const name of CURATED_FEED_FILES) {
+    const file = path.join(feedsDir, name);
+    const xml = readRequired(file);
+    const byteLength = fs.statSync(file).size;
+    invariant(byteLength <= MAX_RSS_BYTES, `专题 RSS ${name} 超过 ${MAX_RSS_BYTES} 字节：${byteLength}`);
+    invariant(/<rss\b[^>]*version="2\.0"/i.test(xml) && /<channel>/i.test(xml), `专题 RSS ${name} 缺少有效 RSS 2.0 结构`);
+    invariant(!/<content:encoded>/i.test(xml), `专题 RSS ${name} 不得嵌入全文 content:encoded`);
+    const items = Array.from(xml.matchAll(/<item>([\s\S]*?)<\/item>/gi), (match) => match[1]);
+    invariant(items.length <= 50, `专题 RSS ${name} item 数量超过 50：${items.length}`);
+    if (!allowEmpty) {
+      invariant(items.length > 0, `专题 RSS ${name} 不能为空`);
+    }
+    const dates = [];
+    for (const item of items) {
+      const link = itemValue(item, 'link');
+      invariant(/\/posts\/[^/]+\/$/.test(link) && !/\/posts\/\d{4}-\d{2}-\d{2}\/$/.test(link),
+        `专题 RSS ${name} 仅允许单篇论文页链接：${link}`);
+      const pubDate = itemValue(item, 'pubDate');
+      invariant(/[+-]0800$/.test(pubDate), `专题 RSS ${name} 日期必须使用 Asia/Shanghai：${pubDate}`);
+      const parsed = Date.parse(pubDate);
+      invariant(Number.isFinite(parsed), `专题 RSS ${name} pubDate 无法解析：${pubDate}`);
+      dates.push(parsed);
+      const desc = itemValue(item, 'description');
+      invariant(desc.length <= 520, `专题 RSS ${name} 摘要超过长度预算`);
+      invariant(!/<(?:p|h[1-6]|script|img|a|math|span)\b/i.test(desc), `专题 RSS ${name} 摘要不得含 HTML`);
+    }
+    for (let index = 1; index < dates.length; index += 1) {
+      invariant(dates[index - 1] >= dates[index], `专题 RSS ${name} 未按日期倒序排列`);
+    }
+    stats[name] = { itemCount: items.length, bytes: byteLength };
+  }
+  return stats;
 }
 
 function verifySearchIndex(jsonText, byteLength) {
@@ -817,8 +866,13 @@ function verifyBuild(buildDir) {
   const allFiles = walkFiles(root);
   const home = readRequired(path.join(root, 'index.html'));
   for (const file of allFiles.filter(file => /\.(?:html|js)$/.test(file))) {
-    invariant(!/(?:127\.0\.0\.1|localhost|\[::1\]):43128\b|data-companion-url|companionUrl|COMPANION_|pageExcerpt|npm run paper:rethink/.test(fs.readFileSync(file, 'utf8')),
+    const text = fs.readFileSync(file, 'utf8');
+    invariant(!/(?:127\.0\.0\.1|localhost|\[::1\]):43128\b|data-companion-url|companionUrl|COMPANION_|pageExcerpt|npm run paper:rethink/.test(text),
       `构建产物残留已取消的本机助手依赖：${file}`);
+    if (file.endsWith('.html')) {
+      invariant(!/cdn\.jsdelivr\.net|window\.MathJax|id=["']?MathJax-script["']?|medium-zoom\.min\.js/i.test(text),
+        `构建 HTML 残留外部 MathJax/medium-zoom/jsdelivr CDN：${file}`);
+    }
   }
   const headStats = verifyHead(home, root);
   const editionFeature = verifyEditionFeature(root, JSON.parse(readRequired(path.join(__dirname, '..', 'data', 'edition-features-auto.json'))));
@@ -827,6 +881,7 @@ function verifyBuild(buildDir) {
   const rssStats = verifyRss(readRequired(rssFile), fs.statSync(rssFile).size);
   const nestedFeeds = allFiles.filter((file) => path.basename(file) === 'index.xml' && file !== rssFile);
   invariant(nestedFeeds.length === 0, `禁止 section/taxonomy feed：${nestedFeeds.slice(0, 5).join(', ')}`);
+  const curatedFeeds = verifyCuratedFeeds(root);
 
   const indexFile = path.join(root, 'index.json');
   const indexText = readRequired(indexFile);
@@ -841,21 +896,29 @@ function verifyBuild(buildDir) {
   const clientIndexStats = verifySearchManifest(clientIndex, root);
   invariant(clientIndexStats.itemCount === indexStats.itemCount && clientIndexStats.recordOrderSha256 === indexStats.recordOrderSha256,
     '新旧索引的页面集合或顺序不一致');
+  const FORBIDDEN_SCRIPT_SINK = /\.(?:innerHTML|outerHTML)\s*=|\.insertAdjacentHTML\s*\(|document\.write\s*\(|\beval\s*\(|\bnew\s+Function\b/;
   const searchScripts = walkFiles(path.join(root, 'assets', 'js')).filter((file) => /search.*\.js$/i.test(path.basename(file)));
   invariant(searchScripts.length > 0, '缺少构建后的搜索脚本');
   for (const file of searchScripts) {
     const source = fs.readFileSync(file, 'utf8');
-    invariant(!/\.innerHTML\s*=/.test(source), `搜索脚本禁止 innerHTML 注入：${file}`);
+    invariant(!FORBIDDEN_SCRIPT_SINK.test(source), `搜索脚本禁止危险 DOM/动态执行调用：${file}`);
     invariant(/textContent/.test(source), `搜索脚本必须使用 textContent：${file}`);
   }
   const libraryScripts = allFiles.filter((file) => /paper-library.*\.js$/i.test(path.basename(file)));
   invariant(libraryScripts.length > 0, '缺少构建后的论文库脚本');
   for (const file of libraryScripts) {
     const source = fs.readFileSync(file, 'utf8');
-    invariant(!/\.innerHTML\s*=/.test(source), `论文库脚本禁止 innerHTML 注入：${file}`);
+    invariant(!FORBIDDEN_SCRIPT_SINK.test(source), `论文库脚本禁止危险 DOM/动态执行调用：${file}`);
     invariant(/textContent/.test(source), `论文库脚本必须使用 textContent：${file}`);
     invariant(/\.origin/.test(source) && /\.pathname\.startsWith/.test(source), `论文库脚本缺少同源/base-path URL 门禁：${file}`);
     invariant(/\.username/.test(source) && /\.password/.test(source), `论文库脚本缺少 URL 凭据拒绝：${file}`);
+  }
+  const uxScripts = allFiles.filter((file) => /(?:command-palette|figure-viewer|table-workbench).*\.js$/i.test(path.basename(file)));
+  invariant(uxScripts.length >= 3, `缺少构建后的交互脚本（期望至少 3 个，实际 ${uxScripts.length} 个）`);
+  for (const file of uxScripts) {
+    const source = fs.readFileSync(file, 'utf8');
+    invariant(!FORBIDDEN_SCRIPT_SINK.test(source), `交互脚本禁止危险 DOM/动态执行调用：${file}`);
+    invariant(/textContent/.test(source), `交互脚本必须使用 textContent：${file}`);
   }
   const paperTools = verifyPaperToolCoverage(
     allFiles.filter((file) => file.startsWith(`${path.join(root, 'posts')}${path.sep}`)), root
@@ -883,6 +946,7 @@ function verifyBuild(buildDir) {
     icons: headStats.iconCount,
     editionFeature,
     rss: rssStats,
+    curatedFeeds,
     searchIndex: indexStats,
     clientSearchIndex: clientIndexStats,
     desktopDetails,
@@ -905,6 +969,7 @@ if (require.main === module) {
 }
 
 module.exports = {
-  extractHead, verifyHead, verifyRss, verifySearchIndex,
+  CURATED_FEED_FILES,
+  extractHead, verifyHead, verifyRss, verifyCuratedFeeds, verifySearchIndex,
   verifyPaperToolCoverage, verifyBuild, verifySearchManifest, verifyDesktopDetails
 };

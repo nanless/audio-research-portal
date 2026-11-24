@@ -1,0 +1,9 @@
+{{- partial "curated_rss_feed.xml" (dict
+  "feedKey" "topic-asr"
+  "formatName" "RSSTopicASR"
+  "title" "语音识别（ASR）专题"
+  "description" "自动语音识别、音视频识别、多说话人识别等方向最新论文深度解读。"
+  "conceptIds" (slice "task.asr" "task.av-asr" "task.multi-talker-asr" "task.overlapped-speech-recognition" "task.asr-error-estimation" "task.lip-reading" "task.inverse-text-normalization" "task.punctuation-restoration")
+  "ancestorRoots" (slice "task.asr")
+  "legacyTags" (slice "语音识别" "ASR" "自动语音识别" "多说话人语音识别" "音视频语音识别")
+) -}}

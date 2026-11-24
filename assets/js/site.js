@@ -80,14 +80,6 @@
       image.decoding = 'async';
     });
 
-    if (typeof window.mediumZoom === 'function') {
-      window.mediumZoom('.post-content img', {
-        margin: 24,
-        background: 'rgba(0,0,0,0.85)',
-        scrollOffset: 0
-      });
-    }
-
     document.querySelectorAll('.highlight').forEach(function (block) {
       var code = block.querySelector('pre code[class*="language-"]');
       var match = code && code.className.match(/(?:^|\s)language-([\w-]+)/);

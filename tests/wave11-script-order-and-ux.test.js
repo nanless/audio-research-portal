@@ -94,7 +94,7 @@ test('Track 11B: Hugo templates enforce strict citation-source -> reading-export
         assert.ok(libCitPos > 0 && libCitPos < libExpPos && libExpPos < libAppPos,
             `Expected citation-source < reading-export < paper-library on /papers/, got ${libCitPos}, ${libExpPos}, ${libAppPos}`);
 
-        // 2. Paper page: citation-source strictly BEFORE paper-toolbar, zero reading-export, MathJax boldsymbol enabled
+        // 2. Paper page: citation-source strictly BEFORE paper-toolbar, zero reading-export, self-hosted KaTeX SSR with \bm macro (zero external MathJax/medium-zoom CDN)
         const paperHtml = fs.readFileSync(path.join(dest, 'posts/2026-11-24-sample-paper/index.html'), 'utf8');
         assert.equal(count(paperHtml, /citation-source\.min\.[a-f0-9]+\.js/g), 1);
         assert.equal(count(paperHtml, /paper-toolbar\.min\.[a-f0-9]+\.js/g), 1);
@@ -103,7 +103,11 @@ test('Track 11B: Hugo templates enforce strict citation-source -> reading-export
         const pBarPos = paperHtml.search(/paper-toolbar\.min\.[a-f0-9]+\.js/);
         assert.ok(pCitPos > 0 && pCitPos < pBarPos,
             `Expected citation-source < paper-toolbar on paper page, got ${pCitPos}, ${pBarPos}`);
-        assert.ok(paperHtml.includes("'[tex]/boldsymbol'"), 'Paper page with math must load MathJax boldsymbol');
+        assert.ok(paperHtml.includes('vendor/katex/katex.min.css'), 'Paper page with math must load self-hosted KaTeX CSS');
+        assert.match(paperHtml, /class="katex"/, 'Paper page math must be SSR-rendered by KaTeX');
+        assert.match(paperHtml, /<math\b[^>]*xmlns="http:\/\/www\.w3\.org\/1998\/Math\/MathML"/, 'KaTeX SSR must emit MathML');
+        assert.match(paperHtml, /mathvariant="bold-italic"/, 'KaTeX SSR \\bm macro must render bold-italic symbols');
+        assert.doesNotMatch(paperHtml, /MathJax|medium-zoom|cdn\.jsdelivr\.net/i, 'Zero external CDN scripts');
 
         // 3. Daily index page: zero citation-source & zero reading-export; unbound author list compacted
         const indexHtml = fs.readFileSync(path.join(dest, 'posts/2026-11-24/index.html'), 'utf8');

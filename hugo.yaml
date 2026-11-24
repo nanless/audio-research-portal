@@ -118,11 +118,55 @@ params:
     dateFormat: "2006-01-02"
     groupByDate: true
 
+outputFormats:
+  RSSHighScore:
+    mediaType: "application/rss+xml"
+    path: "feeds"
+    baseName: "high-score"
+    isPlainText: false
+    notAlternative: false
+  RSSTopicASR:
+    mediaType: "application/rss+xml"
+    path: "feeds"
+    baseName: "topic-asr"
+    isPlainText: false
+    notAlternative: false
+  RSSTopicTTS:
+    mediaType: "application/rss+xml"
+    path: "feeds"
+    baseName: "topic-tts"
+    isPlainText: false
+    notAlternative: false
+  RSSTopicEnhancement:
+    mediaType: "application/rss+xml"
+    path: "feeds"
+    baseName: "topic-enhancement"
+    isPlainText: false
+    notAlternative: false
+  RSSTopicMusic:
+    mediaType: "application/rss+xml"
+    path: "feeds"
+    baseName: "topic-music"
+    isPlainText: false
+    notAlternative: false
+  RSSTopicAudioLLM:
+    mediaType: "application/rss+xml"
+    path: "feeds"
+    baseName: "topic-audio-llm"
+    isPlainText: false
+    notAlternative: false
+
 outputs:
   home:
     - HTML
     - RSS
     - JSON
+    - RSSHighScore
+    - RSSTopicASR
+    - RSSTopicTTS
+    - RSSTopicEnhancement
+    - RSSTopicMusic
+    - RSSTopicAudioLLM
   section:
     - HTML
   taxonomy:

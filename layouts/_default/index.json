@@ -9,9 +9,9 @@
     {{- $score := $metadata.score }}
     {{- $summary := $description }}
     {{- if or (not $summary) (and $score (lt (len $summary) 48)) }}
-      {{- $summary = .Summary | plainify | htmlUnescape | strings.TrimSpace }}
+      {{- $summary = partial "plain_summary.html" .Summary }}
     {{- end }}
-    {{- $summary = ($metadata.oneSentence | default $summary) | plainify | htmlUnescape | truncate 320 }}
+    {{- $summary = (partial "plain_summary.html" ($metadata.oneSentence | default $summary)) | truncate 320 }}
 
     {{- $tags := .Params.tags | default slice }}
     {{- $categories := .Params.categories | default slice }}
@@ -53,6 +53,8 @@
       {{- with index $metadata $key }}{{ $entry = merge $entry (dict $key .) }}{{ end }}
     {{- end }}
     {{- if eq $metadata.pageType "paper" }}{{ $entry = merge $entry (dict "identityStatus" $metadata.identityStatus) }}{{ end }}
+    {{- if $metadata.hasCode }}{{ $entry = merge $entry (dict "hasCode" true) }}{{ end }}
+    {{- if $metadata.hasDemo }}{{ $entry = merge $entry (dict "hasDemo" true) }}{{ end }}
     {{- $.Scratch.Add "searchIndex" (slice $entry) }}
   {{- end }}
 {{- end }}

@@ -5,7 +5,7 @@
   else root.ResearchCitation = api;
 }(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
-  var line = function (value) { return String(value || '').replace(/[\u0000-\u001f\u007f-\u009f]+/g, ' ').trim(); };
+  var line = function (value) { return String(value || '').replace(/[\u0000-\u001f\u007f-\u009f\u2028\u2029]+/g, ' ').trim(); };
   function url(value) {
     try { var parsed = new URL(value); return parsed.protocol === 'https:' && !parsed.username && !parsed.password ? parsed.href : ''; }
     catch (_error) { return ''; }
@@ -133,6 +133,83 @@
     var notes = [record.sourceVersionWarning, record.provenanceDisclosure].filter(Boolean);
     return parts.join('. ') + '.' + (notes.length ? '\n来源说明：' + notes.join('；') : '');
   }
+  function yamlScalar(value) {
+    return '"' + line(value).replace(/\\/g, '\\\\').replace(/"/g, '\\"') + '"';
+  }
+  function formatObsidianNote(raw, meta) {
+    var record = normalize(raw);
+    var info = meta && typeof meta === 'object' ? meta : {};
+    var headline = line(info.headline);
+    var primaryTitle = record.title || headline || '未命名论文';
+    var fm = ['---', 'title: ' + yamlScalar(primaryTitle)];
+    if (headline && headline !== primaryTitle) fm.push('title_zh: ' + yamlScalar(headline));
+    fm.push('type: "paper"');
+    fm.push('identity_status: ' + yamlScalar(record.identityStatus));
+    if (record.identityStatus === 'verified') {
+      if (record.sourceKind) fm.push('source_kind: ' + yamlScalar(record.sourceKind));
+      if (record.arxivId) fm.push('arxiv_id: ' + yamlScalar(record.arxivId));
+      if (record.doi) fm.push('doi: ' + yamlScalar(record.doi));
+      if (record.venue) fm.push('venue: ' + yamlScalar(record.venue));
+      if (record.date) fm.push('published: ' + yamlScalar(record.date));
+      if (record.authors.length) {
+        fm.push('authors:');
+        record.authors.forEach(function (author) { fm.push('  - ' + yamlScalar(author)); });
+      }
+      if (record.url) fm.push('source_url: ' + yamlScalar(record.url));
+      if (record.pdfUrl) fm.push('pdf_url: ' + yamlScalar(record.pdfUrl));
+    }
+    var digestDate = validDate(info.blogDate);
+    if (digestDate) fm.push('digest_date: ' + yamlScalar(digestDate));
+    if (record.pageUrl) fm.push('digest_url: ' + yamlScalar(record.pageUrl));
+    var scoreRaw = line(info.score);
+    if (scoreRaw && /^(?:\d+(?:\.\d+)?)$/.test(scoreRaw)) {
+      var scoreNum = Number(scoreRaw);
+      if (Number.isFinite(scoreNum) && scoreNum >= 0 && scoreNum <= 10) {
+        fm.push('score: ' + scoreNum);
+      }
+    }
+    var task = line(info.task);
+    if (task) fm.push('primary_task: ' + yamlScalar(task));
+    var method = line(info.method);
+    if (method) fm.push('primary_method: ' + yamlScalar(method));
+    var cleanTags = Array.isArray(info.tags)
+      ? Array.from(new Set(info.tags.map(line).filter(Boolean)))
+      : [];
+    if (cleanTags.length) {
+      fm.push('tags:');
+      cleanTags.forEach(function (tag) { fm.push('  - ' + yamlScalar(tag)); });
+    }
+    fm.push('---');
+
+    var body = ['# ' + (headline || primaryTitle)];
+    var oneSentence = line(info.oneSentence);
+    if (oneSentence) body.push('', '> **一句话速览：** ' + oneSentence);
+    body.push('', '## 来源与链接');
+    if (record.identityStatus === 'verified' && record.url) {
+      body.push('- 原文页面：' + record.url);
+    }
+    if (record.identityStatus === 'verified' && record.pdfUrl) {
+      body.push('- 原文 PDF：' + record.pdfUrl);
+    }
+    if (record.pageUrl) {
+      body.push('- 本站导读：' + record.pageUrl);
+    }
+    if (record.identityStatus !== 'verified') {
+      body.push('- 来源状态：论文身份尚待核实，已省略未验证的文献元数据。');
+    }
+    if (record.sourceVersionWarning) body.push('- 来源版本提示：' + record.sourceVersionWarning);
+    if (record.provenanceDisclosure) body.push('- 来源记录说明：' + record.provenanceDisclosure);
+
+    if (record.identityStatus === 'verified') {
+      try {
+        var bib = formatCitation(record, 'bib').trim();
+        body.push('', '## 引用（BibTeX）', '```bibtex', bib, '```');
+      } catch (_error) { /* Omit BibTeX section when verified citation fields are incomplete. */ }
+    }
+    body.push('', '## 阅读笔记', '', '- ');
+    return fm.join('\n') + '\n\n' + body.join('\n') + '\n';
+  }
   return { normalize: normalize, validDate: validDate, formatCitation: formatCitation, citation: formatCitation,
-    buildPrompt: buildPrompt, buildResearchPack: buildResearchPack, formatReference: formatReference };
+    buildPrompt: buildPrompt, buildResearchPack: buildResearchPack, formatReference: formatReference,
+    formatObsidianNote: formatObsidianNote };
 }));

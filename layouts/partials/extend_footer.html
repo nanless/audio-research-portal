@@ -3,6 +3,25 @@
 {{- $siteScript := resources.Get "js/site.js" | minify | fingerprint }}
 <script defer src="{{ $siteScript.RelPermalink }}" integrity="{{ $siteScript.Data.Integrity }}" crossorigin="anonymous"></script>
 
+{{- $cmdkBasePath := (urls.Parse site.BaseURL).Path -}}
+{{- if not (hasSuffix $cmdkBasePath "/") }}{{ $cmdkBasePath = printf "%s/" $cmdkBasePath }}{{ end -}}
+{{- $cmdkProtocols := resources.Get "js/protocol-registry.js" | minify | fingerprint }}
+{{- $cmdkCache := resources.Get "js/index-shard-cache.js" | minify | fingerprint }}
+{{- $cmdkLoader := resources.Get "js/search-index-loader.js" | minify | fingerprint }}
+{{- $cmdkWorker := resources.Get "js/search-index-worker.js" | minify | fingerprint }}
+{{- $cmdkScript := resources.Get "js/command-palette.js" | minify | fingerprint }}
+<script defer src="{{ $cmdkScript.RelPermalink }}"
+  integrity="{{ $cmdkScript.Data.Integrity }}"
+  crossorigin="anonymous"
+  data-cmdk-base-path="{{ $cmdkBasePath }}"
+  data-cmdk-index-url="{{ "client/index.json" | relURL }}"
+  data-cmdk-legacy-index-url="{{ "index.json" | relURL }}"
+  data-cmdk-pagefind-url="{{ "pagefind/pagefind.js" | relURL }}"
+  data-cmdk-protocols-url="{{ $cmdkProtocols.RelPermalink }}"
+  data-cmdk-cache-url="{{ $cmdkCache.RelPermalink }}"
+  data-cmdk-loader-url="{{ $cmdkLoader.RelPermalink }}"
+  data-cmdk-worker-url="{{ $cmdkWorker.RelPermalink }}"></script>
+
 {{- with site.Params.goatcounter }}
 <script data-goatcounter="https://{{ . }}.goatcounter.com/count" defer src="https://gc.zgo.at/count.js"></script>
 {{- end }}
