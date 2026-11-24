@@ -100,6 +100,109 @@
     {{- $h2List := findRE `(?s)<h2\b[^>]*>.*?</h2>` $content -}}
     {{- $h2Count := len $h2List -}}
     {{- if gt $h2Count 0 -}}
+      {{- /* Pre-scan verified Demo link and implementation specs for top quick-spec card (O(N), allowlisted HTML only). */ -}}
+      {{- $verifiedDemoUrl := "" -}}
+      {{- $verifiedDemoMeta := "" -}}
+      {{- $quickSpecItems := slice -}}
+      {{- if or (in $content "演示资源：") (in $content "关键实现与复现规格") -}}
+        {{- $scanRem := $content -}}
+        {{- range $scanIdx, $scanH2 := $h2List -}}
+          {{- if eq $scanIdx 0 -}}
+            {{- $sp0 := split $scanRem $scanH2 -}}
+            {{- $scanRem = strings.TrimPrefix (printf "%s%s" (index $sp0 0) $scanH2) $scanRem -}}
+          {{- end -}}
+          {{- $scanBody := "" -}}
+          {{- $scanHasNext := lt (add $scanIdx 1) $h2Count -}}
+          {{- if $scanHasNext -}}
+            {{- $scanNext := index $h2List (add $scanIdx 1) -}}
+            {{- $snp := split $scanRem $scanNext -}}
+            {{- $scanBody = index $snp 0 -}}
+            {{- $scanRem = strings.TrimPrefix (printf "%s%s" $scanBody $scanNext) $scanRem -}}
+          {{- else -}}
+            {{- $scanBody = $scanRem -}}
+            {{- $scanRem = "" -}}
+          {{- end -}}
+          {{- $scanPlain := $scanH2 -}}
+          {{- if in $scanPlain $prefix -}}
+            {{- range $m, $b := $protected -}}{{- $scanPlain = replace $scanPlain $m $b -}}{{- end -}}
+          {{- end -}}
+          {{- $scanPlain = strings.TrimSpace ($scanPlain | plainify | htmlUnescape) -}}
+          {{- if and (eq $scanPlain "🔗 开源与复现资源") (eq $verifiedDemoUrl "") -}}
+            {{- range $li := findRE `(?s)<li\b[^>]*>.*?</li>` $scanBody -}}
+              {{- if eq $verifiedDemoUrl "" -}}
+                {{- $liCopy := $li -}}
+                {{- if in $liCopy $prefix -}}
+                  {{- range $m, $b := $protected -}}{{- $liCopy = replace $liCopy $m $b -}}{{- end -}}
+                {{- end -}}
+                {{- $liText := strings.TrimSpace ($liCopy | plainify | htmlUnescape) -}}
+                {{- if and (hasPrefix $liText "演示资源：") (in $liText "链接可访问") (not (in $liText "链接不可用")) (not (in $liText "暂时无法访问")) -}}
+                  {{- $hrefMatches := findRE `href="https://[^"\s<>]+"` $li -}}
+                  {{- if gt (len $hrefMatches) 0 -}}
+                    {{- $lastHrefAttr := index $hrefMatches (sub (len $hrefMatches) 1) -}}
+                    {{- $rawHref := strings.TrimSuffix `"` (strings.TrimPrefix `href="` $lastHrefAttr) | htmlUnescape -}}
+                    {{- if and (hasPrefix $rawHref "https://") (not (findRE `[\s<>'"\\$]` $rawHref 1)) (not (in $rawHref "**")) -}}
+                      {{- $verifiedDemoUrl = $rawHref | transform.HTMLEscape -}}
+                      {{- with findRE `含 [0-9]+ 条试听样本（已验证可访问）|检测到 [0-9]+ 条试听样本` $liText 1 -}}
+                        {{- $verifiedDemoMeta = (index . 0) | transform.HTMLEscape -}}
+                      {{- end -}}
+                    {{- end -}}
+                  {{- end -}}
+                {{- end -}}
+              {{- end -}}
+            {{- end -}}
+          {{- else if and (eq $scanPlain "⚙️ 关键实现与复现规格") (eq (len $quickSpecItems) 0) -}}
+            {{- $specUls := findRE `(?s)<ul\b[^>]*>.*?</ul>` $scanBody -}}
+            {{- if eq (len $specUls) 1 -}}
+              {{- $specUl := index $specUls 0 -}}
+              {{- if and (eq (len (findRE `<ul\b` $specUl)) 1) (eq (len (findRE `<ol\b` $specUl)) 0) -}}
+                {{- range $li := findRE `(?s)<li\b[^>]*>.*?</li>` $specUl -}}
+                  {{- if lt (len $quickSpecItems) 7 -}}
+                    {{- $liInner := strings.TrimSpace (replaceRE `(?s)^<li\b[^>]*>|</li>$` "" $li) -}}
+                    {{- if findRE `(?s)^<p>.*</p>$` $liInner 1 -}}
+                      {{- $liInner = strings.TrimSpace (strings.TrimSuffix "</p>" (strings.TrimPrefix "<p>" $liInner)) -}}
+                    {{- end -}}
+                    {{- with findRE `(?s)^<strong>[^<]+</strong>[：:]\s*.+$` $liInner 1 -}}
+                      {{- $strongTag := index (findRE `^<strong>[^<]+</strong>` $liInner 1) 0 -}}
+                      {{- $rawLabel := strings.TrimSpace ($strongTag | plainify | htmlUnescape) -}}
+                      {{- $afterStrong := strings.TrimSpace (replaceRE `^[：:]\s*` "" (strings.TrimPrefix $strongTag $liInner)) -}}
+                      {{- if and (ne $rawLabel "") (ne $afterStrong "") (not (findRE `(?i)<(?:a|pre|table|ul|ol|div|script|style|iframe|details)\b` $afterStrong 1)) -}}
+                        {{- $safeLabel := replace (replace (replace (replace ($rawLabel | transform.HTMLEscape) "\\" "＼") "$" "＄") "**" "<span>*</span>*") "**" "<span>*</span>*" -}}
+                        {{- $safeVal := strings.TrimSpace ($afterStrong | plainify | htmlUnescape) | transform.HTMLEscape -}}
+                        {{- $safeVal = replace (replace (replace $safeVal "$" "＄") "**" "<span>*</span>*") "**" "<span>*</span>*" -}}
+                        {{- $inlOpen := len (findRE `\\\(` $safeVal) -}}
+                        {{- $inlClose := len (findRE `\\\)` $safeVal) -}}
+                        {{- $blkOpen := len (findRE `\\\[` $safeVal) -}}
+                        {{- $blkClose := len (findRE `\\\]` $safeVal) -}}
+                        {{- if or (ne $inlOpen $inlClose) (ne $blkOpen $blkClose) -}}
+                          {{- $safeVal = replace $safeVal "\\" "＼" -}}
+                        {{- end -}}
+                        {{- if in $safeVal $prefix -}}
+                          {{- range $m, $b := $protected -}}
+                            {{- if in $safeVal $m -}}
+                              {{- if findRE `(?i)^<code\b` $b 1 -}}
+                                {{- $codeInner := replaceRE `(?is)^<code\b[^>]*>|</code>$` "" $b | htmlUnescape | transform.HTMLEscape -}}
+                                {{- $codeInner = replace (replace (replace $codeInner "\\" "&#92;") "$" "&#36;") "*" "&#42;" -}}
+                                {{- $safeVal = replace $safeVal $m (printf "<code>%s</code>" $codeInner) -}}
+                              {{- else -}}
+                                {{- $plainProt := ($b | plainify | htmlUnescape | transform.HTMLEscape) -}}
+                                {{- $plainProt = replace (replace (replace (replace $plainProt "\\" "＼") "$" "＄") "**" "<span>*</span>*") "**" "<span>*</span>*" -}}
+                                {{- $safeVal = replace $safeVal $m $plainProt -}}
+                              {{- end -}}
+                            {{- end -}}
+                          {{- end -}}
+                        {{- end -}}
+                        {{- if ne (strings.TrimSpace $safeVal) "" -}}
+                          {{- $quickSpecItems = $quickSpecItems | append (dict "label" $safeLabel "value" $safeVal) -}}
+                        {{- end -}}
+                      {{- end -}}
+                    {{- end -}}
+                  {{- end -}}
+                {{- end -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
       {{- $kindRoleLabels := dict "background" "背景基础" "related_work" "相关路线" "problem" "核心问题" "method_overview" "方法总览" "component" "核心机制" "training" "训练设计" "experiment_setup" "实验设置" "result" "实验结果" "ablation" "消融分析" "limitation" "适用边界" "reproduction" "复现指南" "synthesis" "实践总结" -}}
       {{- $stageLabels := slice "背景基础" "相关路线" "核心问题" "方法总览" "核心机制" "训练设计" "实验设置" "实验结果" "消融分析" "适用边界" "复现指南" "实践总结" -}}
       {{- $rem := $content -}}
@@ -124,12 +227,43 @@
           {{- $rem = "" -}}
         {{- end -}}
         {{- $h2Plain := $curH2 -}}
-        {{- range $m, $b := $protected -}}{{- $h2Plain = replace $h2Plain $m $b -}}{{- end -}}
+        {{- if in $h2Plain $prefix -}}
+          {{- range $m, $b := $protected -}}{{- $h2Plain = replace $h2Plain $m $b -}}{{- end -}}
+        {{- end -}}
         {{- $h2Plain = strings.TrimSpace ($h2Plain | plainify | htmlUnescape) -}}
         {{- if eq $h2Plain "📌 核心摘要" -}}
           {{- $trimmedAbstract := strings.TrimSpace $secBody -}}
           {{- if and (ne $trimmedAbstract "") (not (in $secBody "executive-abstract-card")) -}}
             {{- $secBody = printf "\n<div class=\"executive-abstract-card\">\n%s\n</div>\n" $trimmedAbstract -}}
+          {{- end -}}
+          {{- if and (or (ne $verifiedDemoUrl "") (gt (len $quickSpecItems) 0)) (not (in $secBody "audio-spec-quick-card")) -}}
+            {{- $cardTitle := cond (gt (len $quickSpecItems) 0) "音频与复现规格速览" "在线试听演示" -}}
+            {{- $cardParts := slice (printf "<div class=\"audio-spec-quick-card\">\n<div class=\"audio-spec-quick-header\">\n<p class=\"audio-spec-quick-title\"><strong>%s</strong></p>" $cardTitle) -}}
+            {{- if ne $verifiedDemoUrl "" -}}
+              {{- $demoMetaHtml := "" -}}
+              {{- if ne $verifiedDemoMeta "" -}}
+                {{- $demoMetaHtml = printf " <span class=\"audio-demo-cta-meta\">%s</span>" $verifiedDemoMeta -}}
+              {{- end -}}
+              {{- $cardParts = $cardParts | append (printf "<p class=\"audio-demo-cta-wrap\"><a class=\"audio-demo-cta-btn\" href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">🔊 在线试听 Demo</a>%s</p>" $verifiedDemoUrl $demoMetaHtml) -}}
+            {{- end -}}
+            {{- $cardParts = $cardParts | append "</div>" -}}
+            {{- if gt (len $quickSpecItems) 0 -}}
+              {{- $dlRows := slice -}}
+              {{- range $item := $quickSpecItems -}}
+                {{- $dlRows = $dlRows | append (printf "<div class=\"audio-spec-item\"><dt>%s</dt><dd>%s</dd></div>" $item.label $item.value) -}}
+              {{- end -}}
+              {{- $cardParts = $cardParts | append (printf "<dl class=\"audio-spec-grid\">\n%s\n</dl>" (delimit $dlRows "\n")) -}}
+            {{- end -}}
+            {{- $cardParts = $cardParts | append "</div>" -}}
+            {{- $secBody = printf "%s\n%s\n" $secBody (delimit $cardParts "\n") -}}
+          {{- end -}}
+        {{- else if eq $h2Plain "⚙️ 关键实现与复现规格" -}}
+          {{- $specUls := findRE `(?s)<ul\b[^>]*>.*?</ul>` $secBody -}}
+          {{- if and (eq (len $specUls) 1) (not (in $secBody "implementation-specs-card")) -}}
+            {{- $specUl := index $specUls 0 -}}
+            {{- if and (eq (len (findRE `<ul\b` $specUl)) 1) (eq (len (findRE `<ol\b` $specUl)) 0) -}}
+              {{- $secBody = replace $secBody $specUl (printf "<div class=\"implementation-specs-card\">\n%s\n</div>" $specUl) 1 -}}
+            {{- end -}}
           {{- end -}}
         {{- else if eq $h2Plain "👥 作者与机构" -}}
           {{- $uls := findRE `(?s)<ul\b[^>]*>.*?</ul>` $secBody -}}
@@ -160,6 +294,9 @@
                 {{- end -}}
                 {{- if and $allUnbound (eq (len $authorNames) (len $lis)) -}}
                   {{- $compactAuthors := printf "<p class=\"compact-authors-line\"><strong>论文作者：</strong>%s</p>\n<p class=\"compact-authors-note\">注：原论文 HTML 未提供可逐人可靠绑定的机构上标。</p>" (delimit $authorNames " · ") -}}
+                  {{- if ge (len $authorNames) 8 -}}
+                    {{- $compactAuthors = printf "<details class=\"compact-authors-details\"><summary>论文作者（共 %d 位，点击展开全部）</summary>\n%s\n</details>" (len $authorNames) $compactAuthors -}}
+                  {{- end -}}
                   {{- $secBody = replace $secBody $ul $compactAuthors 1 -}}
                 {{- end -}}
               {{- end -}}
@@ -408,6 +545,9 @@
                 {{- end -}}
                 {{- if and $allUnbound (eq (len $authorNames) (len $lis)) -}}
                   {{- $compactAuthors := printf "<p class=\"compact-authors-line\"><strong>论文作者：</strong>%s</p>\n<p class=\"compact-authors-note\">注：原论文 HTML 未提供可逐人可靠绑定的机构上标。</p>" (delimit $authorNames " · ") -}}
+                  {{- if ge (len $authorNames) 8 -}}
+                    {{- $compactAuthors = printf "<details class=\"compact-authors-details\"><summary>论文作者（共 %d 位，点击展开全部）</summary>\n%s\n</details>" (len $authorNames) $compactAuthors -}}
+                  {{- end -}}
                   {{- $outParts = $outParts | append $beforeUl $compactAuthors -}}
                   {{- $replaced = true -}}
                 {{- end -}}
@@ -420,6 +560,105 @@
         {{- end -}}
       {{- end -}}
       {{- $content = delimit $outParts "" -}}
+    {{- end -}}
+    {{- /* Wrap Daily Roundup 2.0 overview sections in visual cards (allowlisted HTML only, O(N)). */ -}}
+    {{- if or (in $content "今日研究脉络") (in $content "三档阅读分级") (in $content "今日精选焦点") -}}
+      {{- $overviewPart := $content -}}
+      {{- $listPart := "" -}}
+      {{- with findRE `(?s)<h2\b[^>]*>[^<]*论文列表[^<]*</h2>` $content 1 -}}
+        {{- $listHeading := index . 0 -}}
+        {{- $ovSplits := split $content $listHeading -}}
+        {{- if ge (len $ovSplits) 2 -}}
+          {{- $overviewPart = index $ovSplits 0 -}}
+          {{- $listPart = strings.TrimPrefix $overviewPart $content -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $ovH3List := findRE `(?s)<h3\b[^>]*>.*?</h3>` $overviewPart -}}
+      {{- $ovH3Count := len $ovH3List -}}
+      {{- if gt $ovH3Count 0 -}}
+        {{- $ovCardMap := dict "🧭 今日研究脉络" "digest-brief-card" "🎯 三档阅读分级" "digest-reading-tiers" "🌟 今日精选焦点" "digest-spotlight-card" -}}
+        {{- $ovRem := $overviewPart -}}
+        {{- $ovOut := slice -}}
+        {{- range $ovIdx, $ovH3 := $ovH3List -}}
+          {{- if eq $ovIdx 0 -}}
+            {{- $p0 := split $ovRem $ovH3 -}}
+            {{- $before0 := index $p0 0 -}}
+            {{- $ovOut = $ovOut | append $before0 $ovH3 -}}
+            {{- $ovRem = strings.TrimPrefix (printf "%s%s" $before0 $ovH3) $ovRem -}}
+          {{- end -}}
+          {{- $ovBody := "" -}}
+          {{- $ovHasNext := lt (add $ovIdx 1) $ovH3Count -}}
+          {{- $ovNextH3 := "" -}}
+          {{- if $ovHasNext -}}
+            {{- $ovNextH3 = index $ovH3List (add $ovIdx 1) -}}
+            {{- $np := split $ovRem $ovNextH3 -}}
+            {{- $ovBody = index $np 0 -}}
+            {{- $ovRem = strings.TrimPrefix (printf "%s%s" $ovBody $ovNextH3) $ovRem -}}
+          {{- else -}}
+            {{- $ovBody = $ovRem -}}
+            {{- $ovRem = "" -}}
+          {{- end -}}
+          {{- $ovPlain := $ovH3 -}}
+          {{- if in $ovPlain $prefix -}}
+            {{- range $m, $b := $protected -}}{{- $ovPlain = replace $ovPlain $m $b -}}{{- end -}}
+          {{- end -}}
+          {{- $ovPlain = strings.TrimSpace ($ovPlain | plainify | htmlUnescape) -}}
+          {{- $ovClass := index $ovCardMap $ovPlain | default "" -}}
+          {{- if and (ne $ovClass "") (not (in $ovBody $ovClass)) -}}
+            {{- $bodyMain := $ovBody -}}
+            {{- $bodyTail := "" -}}
+            {{- if in $bodyMain "<hr" -}}
+              {{- $hrParts := split $bodyMain "<hr" -}}
+              {{- $candMain := index $hrParts 0 -}}
+              {{- $candTail := strings.TrimPrefix $candMain $ovBody -}}
+              {{- if and (not (in $candTail "</blockquote>")) (not (in $candTail "</ul>")) (not (in $candTail "</ol>")) -}}
+                {{- $bodyMain = $candMain -}}
+                {{- $bodyTail = $candTail -}}
+              {{- end -}}
+            {{- end -}}
+            {{- $trimmedMain := strings.TrimSpace $bodyMain -}}
+            {{- if ne $trimmedMain "" -}}
+              {{- $ovBody = printf "\n<div class=\"%s\">\n%s\n</div>\n%s" $ovClass $trimmedMain $bodyTail -}}
+            {{- end -}}
+          {{- end -}}
+          {{- if $ovHasNext -}}
+            {{- $ovOut = $ovOut | append $ovBody $ovNextH3 -}}
+          {{- else -}}
+            {{- $ovOut = $ovOut | append $ovBody -}}
+          {{- end -}}
+        {{- end -}}
+        {{- $content = printf "%s%s" (delimit $ovOut "") $listPart -}}
+      {{- end -}}
+    {{- end -}}
+    {{- /* Fold multi-paragraph paper abstracts in daily/conference index lists while keeping paragraph 1 visible (O(N)). */ -}}
+    {{- $absMarker := "<p>📌 <strong>核心摘要</strong></p>" -}}
+    {{- if in $content $absMarker -}}
+      {{- $absChunks := split $content $absMarker -}}
+      {{- $absOut := slice (index $absChunks 0) -}}
+      {{- range $cIdx, $chunk := after 1 $absChunks -}}
+        {{- $absHead := $chunk -}}
+        {{- $absTail := "" -}}
+        {{- range $delim := slice "<p>🔗 <strong>开源资源</strong></p>" "<p>💡 <strong>" "<hr" "<h3" "<h2" -}}
+          {{- if in $absHead $delim -}}
+            {{- $parts := split $absHead $delim -}}
+            {{- $newHead := index $parts 0 -}}
+            {{- $afterDelim := strings.TrimPrefix $newHead $absHead -}}
+            {{- $absHead = $newHead -}}
+            {{- $absTail = printf "%s%s" $afterDelim $absTail -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if and (not (findRE `(?i)<(?:table|ul|ol|div|details|blockquote|img|figure|pre|h[1-6])\b` $absHead 1)) (not (in $absHead "index-abstract-more")) -}}
+          {{- $ps := findRE `(?s)<p\b[^>]*>.*?</p>` $absHead -}}
+          {{- $leftover := strings.TrimSpace (replaceRE `(?s)<p\b[^>]*>.*?</p>` "" $absHead) -}}
+          {{- if and (ge (len $ps) 2) (eq $leftover "") -}}
+            {{- $firstP := index $ps 0 -}}
+            {{- $restPs := after 1 $ps -}}
+            {{- $absHead = printf "\n%s\n<details class=\"index-abstract-more\"><summary>展开其余 %d 段核心摘要</summary>\n%s\n</details>\n" $firstP (len $restPs) (delimit $restPs "\n") -}}
+          {{- end -}}
+        {{- end -}}
+        {{- $absOut = $absOut | append $absMarker $absHead $absTail -}}
+      {{- end -}}
+      {{- $content = delimit $absOut "" -}}
     {{- end -}}
   {{- end -}}
   {{- range $marker, $block := $protected -}}{{- $content = replace $content $marker $block -}}{{- end -}}
