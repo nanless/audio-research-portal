@@ -54,7 +54,13 @@ test('reader presentation preserves heading anchors and code, and repairs only t
   assert.equal((real.displayed.match(/<div class="executive-abstract-card">/g) || []).length, 1);
   assert.equal((real.displayed.match(/<div class="reader-section-roadmap">/g) || []).length, 1);
   assert.equal((real.displayed.match(/<p class="reader-section-kicker">/g) || []).length, 14);
+  assert.equal((real.displayed.match(/<p class="compact-authors-line">/g) || []).length, 1);
+  assert.equal((real.displayed.match(/<p class="compact-authors-note">/g) || []).length, 1);
   const unwrappedReal = real.displayed
+    .replace(
+      /<p class="compact-authors-line"><strong>论文作者：<\/strong>Hongchen Wu · Yixin Gu<\/p>\n<p class="compact-authors-note">注：原论文会议 PDF 未提供可逐人可靠绑定的机构上标。<\/p>/,
+      '<ul>\n<li>Hongchen Wu：机构信息未能从会议 PDF 纯文本可靠映射</li>\n<li>Yixin Gu：机构信息未能从会议 PDF 纯文本可靠映射</li>\n</ul>'
+    )
     .replace(/<div class="executive-abstract-card">\n([\s\S]*?)\n<\/div>/, '$1')
     .replace(/\n<div class="reader-section-roadmap">\n[\s\S]*?\n<\/div>/, '')
     .replace(/<p class="reader-section-kicker"><span class="reader-role-pill">[^<]+<\/span><\/p>\n/g, '');

@@ -127,7 +127,7 @@
             {{- range $m, $b := $protected -}}{{- $scanPlain = replace $scanPlain $m $b -}}{{- end -}}
           {{- end -}}
           {{- $scanPlain = strings.TrimSpace ($scanPlain | plainify | htmlUnescape) -}}
-          {{- if and (eq $scanPlain "🔗 开源与复现资源") (eq $verifiedDemoUrl "") -}}
+          {{- if and (or (eq $scanPlain "🔗 开源与复现资源") (eq $scanPlain "🔗 论文资源")) (eq $verifiedDemoUrl "") -}}
             {{- range $li := findRE `(?s)<li\b[^>]*>.*?</li>` $scanBody -}}
               {{- if eq $verifiedDemoUrl "" -}}
                 {{- $liCopy := $li -}}
@@ -275,14 +275,35 @@
               {{- if and (ge (len $lis) 2) (eq $ulLeftover "") -}}
                 {{- $authorNames := slice -}}
                 {{- $allUnbound := true -}}
-                {{- $unboundSuffix := "：机构信息未能在本次解析中与作者逐人可靠绑定" -}}
+                {{- $unboundNotes := dict
+                  "：机构信息未能在本次解析中与作者逐人可靠绑定" "注：原论文 HTML 未提供可逐人可靠绑定的机构上标。"
+                  "：机构信息未在 arXiv HTML 中可靠披露" "注：原论文 HTML 未提供可逐人可靠绑定的机构上标。"
+                  "：机构信息未能从会议 PDF 纯文本可靠映射" "注：原论文会议 PDF 未提供可逐人可靠绑定的机构上标。"
+                  "：机构信息未在会议 PDF 中可靠披露" "注：原论文会议 PDF 未提供可逐人可靠绑定的机构上标。"
+                  "：机构信息未能从 arXiv PDF 文本可靠映射" "注：原论文 PDF 未提供可逐人可靠绑定的机构上标。"
+                  "：机构信息未可靠披露" "注：原论文未提供可逐人可靠绑定的机构信息。"
+                -}}
+                {{- $resolvedNote := "" -}}
                 {{- range $li := $lis -}}
                   {{- $liInner := strings.TrimSpace (replaceRE `(?s)^<li\b[^>]*>|</li>$` "" $li) -}}
                   {{- if findRE `(?s)^<p>.*</p>$` $liInner 1 -}}
                     {{- $liInner = strings.TrimSpace (strings.TrimSuffix "</p>" (strings.TrimPrefix "<p>" $liInner)) -}}
                   {{- end -}}
-                  {{- if and (hasSuffix $liInner $unboundSuffix) (not (findRE `<[^>]+>` $liInner 1)) -}}
-                    {{- $authorName := strings.TrimSpace (strings.TrimSuffix $unboundSuffix $liInner) -}}
+                  {{- $matchedSuffix := "" -}}
+                  {{- if not (findRE `<[^>]+>` $liInner 1) -}}
+                    {{- range $sfx, $note := $unboundNotes -}}
+                      {{- if and (eq $matchedSuffix "") (hasSuffix $liInner $sfx) -}}
+                        {{- $matchedSuffix = $sfx -}}
+                        {{- if eq $resolvedNote "" -}}
+                          {{- $resolvedNote = $note -}}
+                        {{- else if ne $resolvedNote $note -}}
+                          {{- $resolvedNote = "注：原论文未提供可逐人可靠绑定的机构信息。" -}}
+                        {{- end -}}
+                      {{- end -}}
+                    {{- end -}}
+                  {{- end -}}
+                  {{- if ne $matchedSuffix "" -}}
+                    {{- $authorName := strings.TrimSpace (strings.TrimSuffix $matchedSuffix $liInner) -}}
                     {{- if and (ne $authorName "") (not (in $authorName "：")) (not (in $authorName "；")) -}}
                       {{- $authorNames = $authorNames | append $authorName -}}
                     {{- else -}}
@@ -292,8 +313,8 @@
                     {{- $allUnbound = false -}}
                   {{- end -}}
                 {{- end -}}
-                {{- if and $allUnbound (eq (len $authorNames) (len $lis)) -}}
-                  {{- $compactAuthors := printf "<p class=\"compact-authors-line\"><strong>论文作者：</strong>%s</p>\n<p class=\"compact-authors-note\">注：原论文 HTML 未提供可逐人可靠绑定的机构上标。</p>" (delimit $authorNames " · ") -}}
+                {{- if and $allUnbound (eq (len $authorNames) (len $lis)) (ne $resolvedNote "") -}}
+                  {{- $compactAuthors := printf "<p class=\"compact-authors-line\"><strong>论文作者：</strong>%s</p>\n<p class=\"compact-authors-note\">%s</p>" (delimit $authorNames " · ") $resolvedNote -}}
                   {{- if ge (len $authorNames) 8 -}}
                     {{- $compactAuthors = printf "<details class=\"compact-authors-details\"><summary>论文作者（共 %d 位，点击展开全部）</summary>\n%s\n</details>" (len $authorNames) $compactAuthors -}}
                   {{- end -}}
@@ -302,7 +323,7 @@
               {{- end -}}
             {{- end -}}
           {{- end -}}
-        {{- else if eq $h2Plain "🔗 开源与复现资源" -}}
+        {{- else if or (eq $h2Plain "🔗 开源与复现资源") (eq $h2Plain "🔗 论文资源") -}}
           {{- $uls := findRE `(?s)<ul\b[^>]*>.*?</ul>` $secBody -}}
           {{- if eq (len $uls) 1 -}}
             {{- $ul := index $uls 0 -}}
@@ -505,15 +526,23 @@
     {{- end -}}
   {{- else if eq $pageType "index" -}}
     {{- /* Compact all-unbound author lists on daily/conference index pages in O(N) time (no O(N^2) whole-page replace). */ -}}
-    {{- $unboundSuffix := "：机构信息未能在本次解析中与作者逐人可靠绑定" -}}
-    {{- if in $content $unboundSuffix -}}
+    {{- $unboundPrefix := "：机构信息未" -}}
+    {{- if in $content $unboundPrefix -}}
+      {{- $unboundNotes := dict
+        "：机构信息未能在本次解析中与作者逐人可靠绑定" "注：原论文 HTML 未提供可逐人可靠绑定的机构上标。"
+        "：机构信息未在 arXiv HTML 中可靠披露" "注：原论文 HTML 未提供可逐人可靠绑定的机构上标。"
+        "：机构信息未能从会议 PDF 纯文本可靠映射" "注：原论文会议 PDF 未提供可逐人可靠绑定的机构上标。"
+        "：机构信息未在会议 PDF 中可靠披露" "注：原论文会议 PDF 未提供可逐人可靠绑定的机构上标。"
+        "：机构信息未能从 arXiv PDF 文本可靠映射" "注：原论文 PDF 未提供可逐人可靠绑定的机构上标。"
+        "：机构信息未可靠披露" "注：原论文未提供可逐人可靠绑定的机构信息。"
+      -}}
       {{- $chunks := split $content "</ul>" -}}
       {{- $lastIdx := sub (len $chunks) 1 -}}
       {{- $outParts := slice -}}
       {{- range $idx, $chunk := $chunks -}}
         {{- if eq $idx $lastIdx -}}
           {{- $outParts = $outParts | append $chunk -}}
-        {{- else if not (in $chunk $unboundSuffix) -}}
+        {{- else if not (in $chunk $unboundPrefix) -}}
           {{- $outParts = $outParts | append $chunk "</ul>" -}}
         {{- else -}}
           {{- $ulSplits := split $chunk "<ul" -}}
@@ -521,19 +550,33 @@
           {{- if eq (len $ulSplits) 2 -}}
             {{- $beforeUl := index $ulSplits 0 -}}
             {{- $ul := printf "<ul%s</ul>" (index $ulSplits 1) -}}
-            {{- if and (in $ul $unboundSuffix) (findRE `^<ul(?:\s|>)` $ul 1) (eq (len (findRE `<ol\b` $ul)) 0) (not (in $ul "$")) (not (in $ul $prefix)) -}}
+            {{- if and (in $ul $unboundPrefix) (findRE `^<ul(?:\s|>)` $ul 1) (eq (len (findRE `<ol\b` $ul)) 0) (not (in $ul "$")) (not (in $ul $prefix)) -}}
               {{- $lis := findRE `(?s)<li\b[^>]*>.*?</li>` $ul -}}
               {{- $ulLeftover := strings.TrimSpace (replaceRE `(?s)<li\b[^>]*>.*?</li>` "" (replaceRE `(?s)^<ul\b[^>]*>|</ul>$` "" $ul)) -}}
               {{- if and (ge (len $lis) 2) (eq $ulLeftover "") -}}
                 {{- $authorNames := slice -}}
                 {{- $allUnbound := true -}}
+                {{- $resolvedNote := "" -}}
                 {{- range $li := $lis -}}
                   {{- $liInner := strings.TrimSpace (replaceRE `(?s)^<li\b[^>]*>|</li>$` "" $li) -}}
                   {{- if findRE `(?s)^<p>.*</p>$` $liInner 1 -}}
                     {{- $liInner = strings.TrimSpace (strings.TrimSuffix "</p>" (strings.TrimPrefix "<p>" $liInner)) -}}
                   {{- end -}}
-                  {{- if and (hasSuffix $liInner $unboundSuffix) (not (findRE `<[^>]+>` $liInner 1)) -}}
-                    {{- $authorName := strings.TrimSpace (strings.TrimSuffix $unboundSuffix $liInner) -}}
+                  {{- $matchedSuffix := "" -}}
+                  {{- if not (findRE `<[^>]+>` $liInner 1) -}}
+                    {{- range $sfx, $note := $unboundNotes -}}
+                      {{- if and (eq $matchedSuffix "") (hasSuffix $liInner $sfx) -}}
+                        {{- $matchedSuffix = $sfx -}}
+                        {{- if eq $resolvedNote "" -}}
+                          {{- $resolvedNote = $note -}}
+                        {{- else if ne $resolvedNote $note -}}
+                          {{- $resolvedNote = "注：原论文未提供可逐人可靠绑定的机构信息。" -}}
+                        {{- end -}}
+                      {{- end -}}
+                    {{- end -}}
+                  {{- end -}}
+                  {{- if ne $matchedSuffix "" -}}
+                    {{- $authorName := strings.TrimSpace (strings.TrimSuffix $matchedSuffix $liInner) -}}
                     {{- if and (ne $authorName "") (not (in $authorName "：")) (not (in $authorName "；")) -}}
                       {{- $authorNames = $authorNames | append $authorName -}}
                     {{- else -}}
@@ -543,8 +586,8 @@
                     {{- $allUnbound = false -}}
                   {{- end -}}
                 {{- end -}}
-                {{- if and $allUnbound (eq (len $authorNames) (len $lis)) -}}
-                  {{- $compactAuthors := printf "<p class=\"compact-authors-line\"><strong>论文作者：</strong>%s</p>\n<p class=\"compact-authors-note\">注：原论文 HTML 未提供可逐人可靠绑定的机构上标。</p>" (delimit $authorNames " · ") -}}
+                {{- if and $allUnbound (eq (len $authorNames) (len $lis)) (ne $resolvedNote "") -}}
+                  {{- $compactAuthors := printf "<p class=\"compact-authors-line\"><strong>论文作者：</strong>%s</p>\n<p class=\"compact-authors-note\">%s</p>" (delimit $authorNames " · ") $resolvedNote -}}
                   {{- if ge (len $authorNames) 8 -}}
                     {{- $compactAuthors = printf "<details class=\"compact-authors-details\"><summary>论文作者（共 %d 位，点击展开全部）</summary>\n%s\n</details>" (len $authorNames) $compactAuthors -}}
                   {{- end -}}
