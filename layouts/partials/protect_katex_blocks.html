@@ -3,6 +3,11 @@
 {{- $prefix := printf "%s" (.prefix | default "KATEX-PROTECTED-") -}}
 {{- $protected := .protected | default dict -}}
 {{- if or (in $content `class="katex`) (in $content `<math`) -}}
+  {{- $protScratch := newScratch -}}
+  {{- $protScratch.Set "m" dict -}}
+  {{- range $k, $v := $protected -}}
+    {{- $protScratch.SetInMap "m" $k $v -}}
+  {{- end -}}
   {{- if in $content `class="katex` -}}
     {{- $segs := split $content "</span>" -}}
     {{- $lastSeg := sub (len $segs) 1 -}}
@@ -35,7 +40,7 @@
             {{- $block := printf "%s</span>" $chunk -}}
             {{- $marker := printf "%sK%d-END" $prefix $kIdx -}}
             {{- $kIdx = add $kIdx 1 -}}
-            {{- $protected = merge $protected (dict $marker $block) -}}
+            {{- $protScratch.SetInMap "m" $marker $block -}}
             {{- $outParts = $outParts | append $marker -}}
           {{- else -}}
             {{- $inKatex = true -}}
@@ -52,7 +57,7 @@
           {{- $block := delimit $kBuf "" -}}
           {{- $marker := printf "%sK%d-END" $prefix $kIdx -}}
           {{- $kIdx = add $kIdx 1 -}}
-          {{- $protected = merge $protected (dict $marker $block) -}}
+          {{- $protScratch.SetInMap "m" $marker $block -}}
           {{- $outParts = $outParts | append $marker -}}
           {{- $inKatex = false -}}
           {{- $kBuf = slice -}}
@@ -64,9 +69,10 @@
   {{- if in $content `<math` -}}
     {{- range $mIdx, $mathBlock := findRE `(?is)<math\b[^>]*>.*?</math>` $content -}}
       {{- $marker := printf "%sM%d-END" $prefix $mIdx -}}
-      {{- $protected = merge $protected (dict $marker $mathBlock) -}}
+      {{- $protScratch.SetInMap "m" $marker $mathBlock -}}
       {{- $content = replace $content $mathBlock $marker -}}
     {{- end -}}
   {{- end -}}
+  {{- $protected = $protScratch.Get "m" | default dict -}}
 {{- end -}}
 {{- return (dict "content" $content "protected" $protected) -}}

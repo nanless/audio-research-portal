@@ -1,0 +1,141 @@
+{{- $metadata := partial "research_metadata.html" . -}}
+{{- if eq $metadata.pageType "daily" -}}
+  {{- $rawFeed := index hugo.Data "podcast-episodes" -}}
+  {{- if $rawFeed -}}
+    {{- $dateKey := .Date.Format "2006-01-02" -}}
+    {{- $episode := dict -}}
+    {{- if reflect.IsMap $rawFeed -}}
+      {{- with index $rawFeed "episodes" -}}
+        {{- if reflect.IsMap . -}}
+          {{- with index . $dateKey -}}
+            {{- if reflect.IsMap . }}{{ $episode = . }}{{ end -}}
+          {{- end -}}
+        {{- else if reflect.IsSlice . -}}
+          {{- range . -}}
+            {{- if and (not $episode) (reflect.IsMap .) (eq (printf "%s" (.date | default "")) $dateKey) -}}
+              {{- $episode = . -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if not $episode -}}
+        {{- with index $rawFeed $dateKey -}}
+          {{- if reflect.IsMap . }}{{ $episode = . }}{{ end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $audioUrl := printf "%s" (or $episode.audioUrl $episode.audio_url "") -}}
+    {{- $validAudio := and (ne $audioUrl "") (gt (len (findRE `^https://github\.com/nanless/audio-paper-digest(?:-blog)?/releases/download/[A-Za-z0-9._-]{1,128}/[A-Za-z0-9._-]{1,128}\.mp3$` $audioUrl 1)) 0) (not (in $audioUrl "..")) (not (in $audioUrl "/releases/download/./")) (not (hasSuffix $audioUrl "/.mp3")) -}}
+    {{- if $validAudio -}}
+      {{- $siteBasePath := (urls.Parse site.BaseURL).Path -}}
+      {{- if not (hasSuffix $siteBasePath "/") }}{{ $siteBasePath = printf "%s/" $siteBasePath }}{{ end -}}
+      {{- $epTitle := printf "%s" ($episode.title | default (printf "每日论文播客 · %s" $dateKey)) -}}
+      {{- $epSummary := printf "%s" (or $episode.summary $episode.description "") -}}
+      {{- $durationLabel := printf "%s" ($episode.duration | default "") -}}
+      {{- if eq $durationLabel "" -}}
+        {{- $rawDurVal := "" -}}
+        {{- if isset $episode "durationSeconds" }}{{ $rawDurVal = printf "%v" (index $episode "durationSeconds") }}
+        {{- else if isset $episode "durationSec" }}{{ $rawDurVal = printf "%v" (index $episode "durationSec") }}
+        {{- else if isset $episode "duration_sec" }}{{ $rawDurVal = printf "%v" (index $episode "duration_sec") }}
+        {{- end -}}
+        {{- $rawDurStr := strings.TrimSpace $rawDurVal -}}
+        {{- if gt (len (findRE `^[0-9]+(?:\.[0-9]+)?$` $rawDurStr 1)) 0 -}}
+          {{- $durSec := int (math.Floor (float $rawDurStr)) -}}
+          {{- if gt $durSec 0 -}}
+            {{- if ge $durSec 3600 -}}
+              {{- $durationLabel = printf "%d:%02d:%02d" (div $durSec 3600) (mod (div $durSec 60) 60) (mod $durSec 60) -}}
+            {{- else -}}
+              {{- $durationLabel = printf "%02d:%02d" (div $durSec 60) (mod $durSec 60) -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $chapters := slice -}}
+      {{- range $ch := ($episode.chapters | default slice) -}}
+        {{- if reflect.IsMap $ch -}}
+          {{- $chTitle := strings.TrimSpace (printf "%s" ($ch.title | default "")) -}}
+          {{- $hasStart := false -}}
+          {{- $rawStartVal := "" -}}
+          {{- if isset $ch "startSeconds" }}{{ $rawStartVal = printf "%v" (index $ch "startSeconds") }}{{ $hasStart = true }}
+          {{- else if isset $ch "startSec" }}{{ $rawStartVal = printf "%v" (index $ch "startSec") }}{{ $hasStart = true }}
+          {{- else if isset $ch "start_sec" }}{{ $rawStartVal = printf "%v" (index $ch "start_sec") }}{{ $hasStart = true }}
+          {{- end -}}
+          {{- $rawStartStr := strings.TrimSpace $rawStartVal -}}
+          {{- $validStart := and $hasStart (gt (len (findRE `^[0-9]+(?:\.[0-9]+)?$` $rawStartStr 1)) 0) -}}
+          {{- if and (ne $chTitle "") $validStart -}}
+            {{- $startSec := int (math.Floor (float $rawStartStr)) -}}
+            {{- $timeLabel := "" -}}
+            {{- if ge $startSec 3600 -}}
+              {{- $timeLabel = printf "%d:%02d:%02d" (div $startSec 3600) (mod (div $startSec 60) 60) (mod $startSec 60) -}}
+            {{- else -}}
+              {{- $timeLabel = printf "%02d:%02d" (div $startSec 60) (mod $startSec 60) -}}
+            {{- end -}}
+            {{- $anchor := printf "%s" (or $ch.paperAnchor $ch.paper_anchor "") -}}
+            {{- if not (findRE `^#[A-Za-z0-9_.:-]+$` $anchor 1) }}{{ $anchor = "" }}{{ end -}}
+            {{- $paperUrl := printf "%s" (or $ch.paperUrl $ch.paper_url "") -}}
+            {{- if and (ne $paperUrl "") (not (in $paperUrl "..")) (not (findRE `[%\\?#\s"<>'\x00-\x1f\x7f]` $paperUrl 1)) -}}
+              {{- if hasPrefix $paperUrl "/posts/" -}}
+                {{- $paperUrl = printf "%s%s" $siteBasePath (strings.TrimPrefix "/" $paperUrl) -}}
+              {{- else if not (hasPrefix $paperUrl (printf "%sposts/" $siteBasePath)) -}}
+                {{- $paperUrl = "" -}}
+              {{- end -}}
+              {{- if and (ne $paperUrl "") (eq (len (findRE `^/(?:[A-Za-z0-9._-]+/)?posts/[A-Za-z0-9_-][A-Za-z0-9._-]*/?$` $paperUrl 1)) 0) -}}
+                {{- $paperUrl = "" -}}
+              {{- end -}}
+            {{- else -}}
+              {{- $paperUrl = "" -}}
+            {{- end -}}
+            {{- $chapters = $chapters | append (dict "title" $chTitle "startSec" $startSec "timeLabel" $timeLabel "anchor" $anchor "paperUrl" $paperUrl) -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+<section class="daily-podcast-card" id="daily-podcast-player" data-podcast-player data-podcast-date="{{ $dateKey }}" data-pagefind-ignore="all" aria-labelledby="daily-podcast-title">
+  <div class="daily-podcast-card__header">
+    <div>
+      <p class="daily-podcast-card__eyebrow">🎙️ 每日论文音频播客</p>
+      <h2 id="daily-podcast-title" class="daily-podcast-card__title">{{ $epTitle }}</h2>
+    </div>
+    <div class="daily-podcast-card__meta">
+      <time datetime="{{ $dateKey }}">{{ $dateKey }}</time>
+      {{- if $durationLabel }}<span class="daily-podcast-card__duration">时长 {{ $durationLabel }}</span>{{ end }}
+    </div>
+  </div>
+  {{- if $epSummary }}
+  <p class="daily-podcast-card__summary">{{ $epSummary }}</p>
+  {{- end }}
+  <div class="daily-podcast-card__controls">
+    <audio class="daily-podcast-card__audio" preload="none" controls src="{{ $audioUrl | safeURL }}">
+      您的浏览器不支持音频播放，请直接下载 MP3 收听。
+    </audio>
+    <div class="daily-podcast-card__toolbar">
+      <div class="daily-podcast-card__rates" role="group" aria-label="播放倍速">
+        <span class="daily-podcast-card__rates-label">倍速</span>
+        {{- range $rate := slice "0.75" "1.0" "1.25" "1.5" "2.0" }}
+        <button type="button" class="daily-podcast-card__rate{{ if eq $rate "1.0" }} is-active{{ end }}" data-podcast-rate="{{ $rate }}" aria-pressed="{{ if eq $rate "1.0" }}true{{ else }}false{{ end }}">{{ $rate }}x</button>
+        {{- end }}
+      </div>
+      <a class="rw-action daily-podcast-card__download" href="{{ $audioUrl | safeURL }}" download rel="noopener noreferrer">下载 MP3</a>
+    </div>
+  </div>
+  <p class="daily-podcast-card__status sr-only" data-podcast-status role="status" aria-live="polite" aria-atomic="true"></p>
+  {{- if gt (len $chapters) 0 }}
+  <div class="daily-podcast-card__chapters" aria-label="播客章节">
+    <p class="daily-podcast-card__chapters-title">章节跳转（共 {{ len $chapters }} 节）</p>
+    <ol class="daily-podcast-card__chapter-list">
+      {{- range $ch := $chapters }}
+      <li class="daily-podcast-card__chapter-item">
+        <button type="button" class="daily-podcast-card__chapter-btn" data-start-sec="{{ $ch.startSec }}">
+          <span class="daily-podcast-card__chapter-time">{{ $ch.timeLabel }}</span>
+          <span class="daily-podcast-card__chapter-name">{{ $ch.title }}</span>
+        </button>
+        {{- if $ch.anchor }}<a class="daily-podcast-card__chapter-link" href="{{ $ch.anchor }}">定位正文 ↓</a>{{ end }}
+        {{- if $ch.paperUrl }}<a class="daily-podcast-card__chapter-link" href="{{ $ch.paperUrl }}">独立长文 →</a>{{ end }}
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+  {{- end }}
+</section>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

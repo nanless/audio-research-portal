@@ -1,0 +1,39 @@
+{{- /* Keep home-scoped index.rss.xml so Hugo 0.146+/0.160.1 does not let layouts/index.rsshighscore.xml shadow layouts/_default/rss.xml for /index.xml. */ -}}
+{{- $dailyPages := slice }}
+{{- range where site.RegularPages "Section" "posts" }}
+  {{- $baseName := "" }}
+  {{- with .File }}{{ $baseName = .BaseFileName }}{{ end }}
+  {{- $metadata := partial "research_metadata.html" . }}
+  {{- if eq $metadata.pageType "daily" }}
+    {{- $dailyPages = $dailyPages | append . }}
+  {{- end }}
+{{- end }}
+{{- $pages := first 50 (sort $dailyPages "Date" "desc") }}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?\u003e" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.Title }}</title>
+    <link>{{ site.Home.Permalink }}</link>
+    <description>{{ site.Params.description | default site.Title }}</description>
+    <language>{{ site.Language.LanguageCode }}</language>
+    {{- with site.Home.OutputFormats.Get "RSS" }}
+    <atom:link href="{{ .Permalink }}" rel="self" type="{{ .MediaType.Type }}" />
+    {{- end }}
+    {{- if gt (len $pages) 0 }}
+    <lastBuildDate>{{ (index $pages 0).Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    {{- end }}
+    {{- range $pages }}
+    {{- $summary := partial "plain_summary.html" .Summary | truncate 480 }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <guid isPermaLink="true">{{ .Permalink }}</guid>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <description>{{ $summary }}</description>
+      {{- range .GetTerms "tags" }}
+      <category>{{ .LinkTitle }}</category>
+      {{- end }}
+    </item>
+    {{- end }}
+  </channel>
+</rss>

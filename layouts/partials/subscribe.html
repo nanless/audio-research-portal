@@ -29,6 +29,9 @@
   </div>
   <div class="research-home-hero__actions">
     <a class="rw-action rw-action--primary" href="{{ "index.xml" | absURL }}">每日速递 RSS</a>
+    {{- if fileExists "static/feeds/podcast.xml" }}
+    <a class="rw-action" href="{{ "feeds/podcast.xml" | absURL }}">🎙️ 每日播客 RSS</a>
+    {{- end }}
     <a class="rw-action" href="{{ "papers/" | absURL }}">论文库</a>
   </div>
 </section>

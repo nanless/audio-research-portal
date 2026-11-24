@@ -91,6 +91,8 @@
         {{- $currentPage := . }}
         <ul id="menu" class="menu">
             {{- range site.Menus.main }}
+            {{- $isHubsMenu := or (eq .URL "/hubs/") (hasSuffix .URL "/hubs/") (eq .Name "专题导航") }}
+            {{- if or (not $isHubsMenu) (site.GetPage "/hubs") }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
             {{- $page_url:= $currentPage.Permalink | absLangURL }}
             {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
@@ -112,6 +114,7 @@
                     {{- end }}
                 </a>
             </li>
+            {{- end }}
             {{- end }}
         </ul>
     </nav>

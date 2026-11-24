@@ -3,9 +3,51 @@
 {{- $current := index $catalog.records $identity -}}
 {{- $out := slice -}}
 {{- with $current -}}
-  {{- /* Ranking helper keys its partialCached singleflight by direct IDs and original signed labels. */ -}}
-  {{- range (partialCached "related_rankings.html" . .rankingKey) -}}
-    {{- if ne .identity $identity }}{{ $out = $out | append . }}{{ end -}}
+  {{- if gt (float (.norm | default 0.0)) 0.0 -}}
+    {{- $usedGraph := false -}}
+    {{- $graph := index hugo.Data "related-graph-auto" | default dict -}}
+    {{- $siteBasePath := (urls.Parse site.BaseURL).Path -}}
+    {{- if not (hasSuffix $siteBasePath "/") }}{{ $siteBasePath = printf "%s/" $siteBasePath }}{{ end -}}
+    {{- if and (eq ($graph.contract | default "") "related-graph-auto-v1") (eq (int ($graph.totalN | default 0)) $catalog.totalN) (eq ($graph.basePath | default "") $siteBasePath) (reflect.IsMap $graph.papers) (isset $graph.papers $identity) -}}
+      {{- $entries := index $graph.papers $identity -}}
+      {{- if reflect.IsSlice $entries -}}
+        {{- $resolved := slice -}}
+        {{- $allValid := true -}}
+        {{- range $item := $entries -}}
+          {{- if reflect.IsMap $item -}}
+            {{- $targetId := $item.identity | default "" -}}
+            {{- $targetPerm := $item.relPermalink | default "" -}}
+            {{- $rec := index $catalog.records $targetId -}}
+            {{- $reasons := $item.reasons | default slice -}}
+            {{- if and $rec (ne $targetId $identity) (eq $rec.relPermalink $targetPerm) (gt (float ($rec.norm | default 0.0)) 0.0) (reflect.IsSlice $reasons) -}}
+              {{- $resolved = $resolved | append (dict
+                "identity" $targetId
+                "score" ($item.score | default 0)
+                "reasons" $reasons
+                "relPermalink" $rec.relPermalink
+                "headline" $rec.headline
+                "hasDescription" $rec.hasDescription
+                "descriptionHtml" $rec.descriptionHtml
+              ) -}}
+            {{- else -}}
+              {{- $allValid = false -}}
+            {{- end -}}
+          {{- else -}}
+            {{- $allValid = false -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if $allValid -}}
+          {{- $out = $resolved -}}
+          {{- $usedGraph = true -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if not $usedGraph -}}
+      {{- /* Ranking helper keys its partialCached singleflight by direct IDs and original signed labels. */ -}}
+      {{- range (partialCached "related_rankings.html" . .rankingKey) -}}
+        {{- if ne .identity $identity }}{{ $out = $out | append . }}{{ end -}}
+      {{- end -}}
+    {{- end -}}
   {{- end -}}
 {{- end -}}
 {{- return (first 3 $out) -}}

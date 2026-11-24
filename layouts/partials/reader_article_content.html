@@ -8,9 +8,11 @@
 {{- $tagEndCount := sub (len (split $content $tagEnd)) 1 -}}
 {{- $prefix := printf "READER-PROTECTED-%s-" (crypto.SHA256 $content) -}}
 {{- if not (in $content $prefix) -}}
+  {{- $protScratch := newScratch -}}
+  {{- $protScratch.Set "m" dict -}}
   {{- range $index, $block := findRE `(?is)<pre\b[^>]*>.*?</pre>|<code\b[^>]*>.*?</code>|<script\b[^>]*>.*?</script>|<style\b[^>]*>.*?</style>|<textarea\b[^>]*>.*?</textarea>` $content -}}
     {{- $marker := printf "%s%d-END" $prefix $index -}}
-    {{- $protected = merge $protected (dict $marker $block) -}}
+    {{- $protScratch.SetInMap "m" $marker $block -}}
     {{- $content = replace $content $block $marker -}}
   {{- end -}}
   {{- /* Protect KaTeX SSR spans (<span class="katex[-display]">...</span>) and standalone <math>
@@ -48,7 +50,7 @@
               {{- $kBlock := printf "%s</span>" $kChunk -}}
               {{- $kMarker := printf "%sK%d-END" $prefix $kIdx -}}
               {{- $kIdx = add $kIdx 1 -}}
-              {{- $protected = merge $protected (dict $kMarker $kBlock) -}}
+              {{- $protScratch.SetInMap "m" $kMarker $kBlock -}}
               {{- $kOut = $kOut | append $kMarker -}}
             {{- else -}}
               {{- $kIn = true -}}
@@ -65,7 +67,7 @@
             {{- $kBlock := delimit $kBuf "" -}}
             {{- $kMarker := printf "%sK%d-END" $prefix $kIdx -}}
             {{- $kIdx = add $kIdx 1 -}}
-            {{- $protected = merge $protected (dict $kMarker $kBlock) -}}
+            {{- $protScratch.SetInMap "m" $kMarker $kBlock -}}
             {{- $kOut = $kOut | append $kMarker -}}
             {{- $kIn = false -}}
             {{- $kBuf = slice -}}
@@ -77,11 +79,12 @@
     {{- if in $content `<math` -}}
       {{- range $mIdx, $mathBlock := findRE `(?is)<math\b[^>]*>.*?</math>` $content -}}
         {{- $mMarker := printf "%sM%d-END" $prefix $mIdx -}}
-        {{- $protected = merge $protected (dict $mMarker $mathBlock) -}}
+        {{- $protScratch.SetInMap "m" $mMarker $mathBlock -}}
         {{- $content = replace $content $mathBlock $mMarker -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
+  {{- $protected = $protScratch.Get "m" | default dict -}}
   {{- /* The generated Markdown keeps a standalone classification fallback.
         Hide only its unique complete block when the paper header has verified
         navigation records. Count original markers; code examples remain protected. */ -}}
@@ -406,7 +409,9 @@
                 {{- $thirdPartyLis := slice -}}
                 {{- range $li := $lis -}}
                   {{- $liCopy := $li -}}
-                  {{- range $m, $b := $protected -}}{{- $liCopy = replace $liCopy $m $b -}}{{- end -}}
+                  {{- if in $liCopy $prefix -}}
+                    {{- range $m, $b := $protected -}}{{- $liCopy = replace $liCopy $m $b -}}{{- end -}}
+                  {{- end -}}
                   {{- $liText := strings.TrimSpace ($liCopy | plainify | htmlUnescape) -}}
                   {{- if or (hasPrefix $liText "第三方资源：") (hasPrefix $liText "论文所列链接：") -}}
                     {{- $thirdPartyLis = $thirdPartyLis | append $li -}}
@@ -445,36 +450,40 @@
                   {{- $seenH3Ids = merge $seenH3Ids (dict $h3Id true) -}}
                   {{- $h3RawInner := replaceRE `(?s)^<h3\b[^>]*>|</h3>$` "" $h3 -}}
                   {{- $h3FullInner := $h3RawInner -}}
-                  {{- range $m, $b := $protected -}}
-                    {{- if in $h3FullInner $m -}}
-                      {{- if or (findRE `(?i)^<span\b[^>]*class="katex` $b 1) (findRE `(?i)^<math\b` $b 1) -}}
-                        {{- $mMath := findRE `(?is)<math\b[^>]*>.*?</math>` $b 1 -}}
-                        {{- if gt (len $mMath) 0 -}}
-                          {{- $mNoAnn := replaceRE `(?is)<annotation\b[^>]*>.*?</annotation>` "" (index $mMath 0) -}}
-                          {{- $h3FullInner = replace $h3FullInner $m ($mNoAnn | plainify | htmlUnescape) -}}
+                  {{- if in $h3FullInner $prefix -}}
+                    {{- range $m, $b := $protected -}}
+                      {{- if in $h3FullInner $m -}}
+                        {{- if or (findRE `(?i)^<span\b[^>]*class="katex` $b 1) (findRE `(?i)^<math\b` $b 1) -}}
+                          {{- $mMath := findRE `(?is)<math\b[^>]*>.*?</math>` $b 1 -}}
+                          {{- if gt (len $mMath) 0 -}}
+                            {{- $mNoAnn := replaceRE `(?is)<annotation\b[^>]*>.*?</annotation>` "" (index $mMath 0) -}}
+                            {{- $h3FullInner = replace $h3FullInner $m ($mNoAnn | plainify | htmlUnescape) -}}
+                          {{- else -}}
+                            {{- $h3FullInner = replace $h3FullInner $m $b -}}
+                          {{- end -}}
                         {{- else -}}
                           {{- $h3FullInner = replace $h3FullInner $m $b -}}
                         {{- end -}}
-                      {{- else -}}
-                        {{- $h3FullInner = replace $h3FullInner $m $b -}}
                       {{- end -}}
                     {{- end -}}
                   {{- end -}}
                   {{- $h3Title := strings.TrimSpace ($h3FullInner | plainify | htmlUnescape) -}}
                   {{- $safeTitle := strings.TrimSpace ($h3RawInner | plainify | htmlUnescape) | transform.HTMLEscape -}}
                   {{- $safeTitle = replace (replace (replace $safeTitle "$" "＄") "**" "<span>*</span>*") "**" "<span>*</span>*" -}}
-                  {{- range $m, $b := $protected -}}
-                    {{- if in $safeTitle $m -}}
-                      {{- if findRE `(?i)^<code\b` $b 1 -}}
-                        {{- $codeInner := replaceRE `(?is)^<code\b[^>]*>|</code>$` "" $b | htmlUnescape | transform.HTMLEscape -}}
-                        {{- $codeInner = replace (replace (replace $codeInner "\\" "&#92;") "$" "&#36;") "*" "&#42;" -}}
-                        {{- $safeTitle = replace $safeTitle $m (printf "<code>%s</code>" $codeInner) -}}
-                      {{- else if or (findRE `(?i)^<span\b[^>]*class="katex` $b 1) (findRE `(?i)^<math\b` $b 1) -}}
-                        {{- $safeTitle = replace $safeTitle $m $b -}}
-                      {{- else -}}
-                        {{- $plainProtected := ($b | plainify | htmlUnescape | transform.HTMLEscape) -}}
-                        {{- $plainProtected = replace (replace (replace (replace $plainProtected "\\" "＼") "$" "＄") "**" "<span>*</span>*") "**" "<span>*</span>*" -}}
-                        {{- $safeTitle = replace $safeTitle $m $plainProtected -}}
+                  {{- if in $safeTitle $prefix -}}
+                    {{- range $m, $b := $protected -}}
+                      {{- if in $safeTitle $m -}}
+                        {{- if findRE `(?i)^<code\b` $b 1 -}}
+                          {{- $codeInner := replaceRE `(?is)^<code\b[^>]*>|</code>$` "" $b | htmlUnescape | transform.HTMLEscape -}}
+                          {{- $codeInner = replace (replace (replace $codeInner "\\" "&#92;") "$" "&#36;") "*" "&#42;" -}}
+                          {{- $safeTitle = replace $safeTitle $m (printf "<code>%s</code>" $codeInner) -}}
+                        {{- else if or (findRE `(?i)^<span\b[^>]*class="katex` $b 1) (findRE `(?i)^<math\b` $b 1) -}}
+                          {{- $safeTitle = replace $safeTitle $m $b -}}
+                        {{- else -}}
+                          {{- $plainProtected := ($b | plainify | htmlUnescape | transform.HTMLEscape) -}}
+                          {{- $plainProtected = replace (replace (replace (replace $plainProtected "\\" "＼") "$" "＄") "**" "<span>*</span>*") "**" "<span>*</span>*" -}}
+                          {{- $safeTitle = replace $safeTitle $m $plainProtected -}}
+                        {{- end -}}
                       {{- end -}}
                     {{- end -}}
                   {{- end -}}

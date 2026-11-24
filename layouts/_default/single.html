@@ -106,6 +106,7 @@
     {{- end }}
 
     <div class="research-main">
+      {{- if $isDaily }}{{ partial "daily_podcast_player.html" . }}{{ end }}
       {{- if $isDaily }}{{ partial "daily_edition_tools.html" . }}{{ end }}
       {{- if $isPaper }}{{ partial "paper_toolbar.html" . }}{{ end }}
       {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
@@ -188,6 +189,8 @@
 {{- if $isDaily }}
 {{- $dailyScript := resources.Get "js/daily-edition.js" | minify | fingerprint }}
 <script defer src="{{ $dailyScript.RelPermalink }}" integrity="{{ $dailyScript.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- $podcastScript := resources.Get "js/podcast-player.js" | minify | fingerprint }}
+<script defer src="{{ $podcastScript.RelPermalink }}" integrity="{{ $podcastScript.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end }}
 
 {{- else }}

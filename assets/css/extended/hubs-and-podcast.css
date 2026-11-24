@@ -1,0 +1,556 @@
+/* Wave 14.2B (SOTA Hubs) & Wave 14.3 (Daily Podcast Player) */
+.sota-hubs-directory,
+.sota-hub-page {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 8px 0 32px;
+}
+
+.sota-hubs-directory__header,
+.sota-hub-header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--rw-border, var(--border));
+  margin-bottom: 24px;
+}
+
+.sota-hubs-directory__header h1,
+.sota-hub-header h1 {
+  font-family: var(--portal-serif, Georgia, serif);
+  font-size: clamp(28px, 3.6vw, 38px);
+  line-height: 1.25;
+  margin: 8px 0 10px;
+}
+
+.sota-hubs-directory__lead,
+.sota-hub-header__desc {
+  color: var(--secondary);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 72ch;
+}
+
+.sota-hub-header__subtitle,
+.sota-hub-card__subtitle {
+  color: var(--secondary);
+  font-size: 13.5px;
+  letter-spacing: 0.01em;
+  margin: 0 0 8px;
+}
+
+.sota-hubs-directory__summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--secondary);
+}
+
+.sota-hubs-directory__notice,
+.sota-hub-fallback {
+  margin-top: 14px;
+  padding: 12px 16px;
+  border: 1px solid var(--rw-border, var(--border));
+  border-radius: 10px;
+  background: var(--entry);
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+.sota-hubs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.sota-hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 22px;
+  border: 1px solid var(--rw-border, var(--border));
+  border-radius: 12px;
+  background: var(--entry);
+}
+
+.sota-hub-card__title {
+  font-family: var(--portal-serif, Georgia, serif);
+  font-size: 20px;
+  line-height: 1.35;
+  margin: 0 0 4px;
+}
+
+.sota-hub-card__title a {
+  text-decoration: none;
+}
+
+.sota-hub-card__title a:hover {
+  text-decoration: underline;
+}
+
+.sota-hub-card__desc {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.sota-hub-card__kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 10px 0;
+  border-top: 1px solid var(--rw-border, var(--border));
+  border-bottom: 1px solid var(--rw-border, var(--border));
+}
+
+.sota-hub-card__kpis dt {
+  font-size: 11.5px;
+  color: var(--secondary);
+  margin-bottom: 2px;
+}
+
+.sota-hub-card__kpis dd {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.sota-hub-card__methods,
+.sota-hub-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sota-hub-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--rw-border, var(--border));
+  background: var(--theme);
+  font-size: 12.5px;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.sota-hub-chip em {
+  font-style: normal;
+  font-variant-numeric: tabular-nums;
+  color: var(--secondary);
+  font-size: 11.5px;
+}
+
+.sota-hub-chip--link:hover {
+  border-color: var(--primary);
+}
+
+.sota-hub-card__actions,
+.sota-hub-header__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.sota-hub-card__rss {
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+.sota-hubs-directory__note {
+  margin: 24px 0 18px;
+  font-size: 13px;
+  color: var(--secondary);
+  line-height: 1.65;
+}
+
+.sota-hub-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.sota-hub-kpi {
+  padding: 16px 18px;
+  border: 1px solid var(--rw-border, var(--border));
+  border-radius: 12px;
+  background: var(--entry);
+}
+
+.sota-hub-kpi__label {
+  display: block;
+  font-size: 12.5px;
+  color: var(--secondary);
+  margin-bottom: 4px;
+}
+
+.sota-hub-kpi__value {
+  font-size: 28px;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+
+.sota-hub-analytics,
+.sota-hub-cooccurrence {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.sota-hub-panel {
+  padding: 18px 20px;
+  border: 1px solid var(--rw-border, var(--border));
+  border-radius: 12px;
+  background: var(--entry);
+}
+
+.sota-hub-panel h2 {
+  font-size: 16px;
+  margin: 0 0 12px;
+}
+
+.sota-hub-venue-list,
+.sota-hub-trend-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.sota-hub-venue-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--rw-border, var(--border));
+}
+
+.sota-hub-venue-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.sota-hub-trend-item {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr) 40px;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.sota-hub-trend-bar-track {
+  display: block;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--theme);
+  border: 1px solid var(--rw-border, var(--border));
+  overflow: hidden;
+}
+
+.sota-hub-trend-bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 999px;
+}
+
+.sota-hub-trend-count {
+  text-align: right;
+}
+
+.sota-hub-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 22px;
+}
+
+.sota-hub-jump a {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--rw-border, var(--border));
+  background: var(--entry);
+  font-size: 13.5px;
+  text-decoration: none;
+}
+
+.sota-hub-section,
+.sota-hub-concepts {
+  margin-bottom: 28px;
+}
+
+.sota-hub-section h2,
+.sota-hub-concepts h2 {
+  font-family: var(--portal-serif, Georgia, serif);
+  font-size: 22px;
+  margin: 0 0 14px;
+}
+
+.sota-hub-paper-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.sota-hub-paper-item {
+  padding: 14px 16px;
+  border: 1px solid var(--rw-border, var(--border));
+  border-radius: 10px;
+  background: var(--entry);
+}
+
+.sota-hub-paper-item__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 12px;
+}
+
+.sota-hub-paper-item__title {
+  font-weight: 650;
+  font-size: 16px;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.sota-hub-paper-item__title:hover {
+  text-decoration: underline;
+}
+
+.sota-hub-paper-item__badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sota-hub-badge {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid var(--rw-border, var(--border));
+  background: var(--theme);
+  color: var(--secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.sota-hub-badge--score {
+  color: var(--primary);
+  font-weight: 650;
+}
+
+.sota-hub-badge--oss,
+.sota-hub-badge--demo {
+  color: var(--primary);
+}
+
+.sota-hub-paper-item__summary {
+  margin: 6px 0 4px;
+  font-size: 14px;
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+.sota-hub-paper-item__meta {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--secondary);
+}
+
+.sota-hub-empty {
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+/* Wave 14.3 Daily Podcast Player (strictly outside #article-body) */
+.daily-podcast-card {
+  margin: 0 0 22px;
+  padding: 20px 22px;
+  border: 1px solid var(--rw-border, var(--border));
+  border-radius: 14px;
+  background: var(--entry);
+}
+
+.daily-podcast-card__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px 16px;
+  margin-bottom: 10px;
+}
+
+.daily-podcast-card__eyebrow {
+  margin: 0 0 4px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.daily-podcast-card__title {
+  margin: 0;
+  font-family: var(--portal-serif, Georgia, serif);
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.daily-podcast-card__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.daily-podcast-card__summary {
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--secondary);
+}
+
+.daily-podcast-card__controls {
+  display: grid;
+  gap: 12px;
+}
+
+.daily-podcast-card__audio {
+  width: 100%;
+  min-height: 42px;
+}
+
+.daily-podcast-card__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px 14px;
+}
+
+.daily-podcast-card__rates {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.daily-podcast-card__rates-label {
+  font-size: 13px;
+  color: var(--secondary);
+  margin-right: 4px;
+}
+
+.daily-podcast-card__rate {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--rw-border, var(--border));
+  background: var(--theme);
+  color: var(--primary);
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+
+.daily-podcast-card__rate.is-active {
+  background: var(--primary);
+  color: var(--theme);
+  border-color: var(--primary);
+  font-weight: 600;
+}
+
+.daily-podcast-card__chapters {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rw-border, var(--border));
+}
+
+.daily-podcast-card__chapters-title {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.daily-podcast-card__chapter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.daily-podcast-card__chapter-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.daily-podcast-card__chapter-btn {
+  flex: 1 1 240px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  text-align: left;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--rw-border, var(--border));
+  background: var(--theme);
+  color: var(--primary);
+  font-size: 13.5px;
+  cursor: pointer;
+}
+
+.daily-podcast-card__chapter-btn.is-active {
+  border-color: var(--primary);
+  font-weight: 600;
+}
+
+.daily-podcast-card__chapter-time {
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  color: var(--secondary);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.daily-podcast-card__chapter-link {
+  font-size: 12.5px;
+  color: var(--secondary);
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+@media (max-width: 820px) {
+  .sota-hubs-grid,
+  .sota-hub-analytics,
+  .sota-hub-cooccurrence {
+    grid-template-columns: 1fr;
+  }
+  .sota-hub-kpis,
+  .sota-hub-card__kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media print {
+  .daily-podcast-card {
+    display: none !important;
+  }
+}

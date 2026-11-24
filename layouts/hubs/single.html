@@ -1,0 +1,244 @@
+{{- define "main" -}}
+{{- $slug := .Params.hub_slug | default .File.BaseFileName -}}
+{{- $catalog := partialCached "related_catalog.html" "global" -}}
+{{- $siteBasePath := (urls.Parse site.BaseURL).Path -}}
+{{- if not (hasSuffix $siteBasePath "/") }}{{ $siteBasePath = printf "%s/" $siteBasePath }}{{ end -}}
+{{- $rawHubs := index hugo.Data "sota-hubs-auto" | default dict -}}
+{{- $hasLive := and (eq ($rawHubs.contract | default "") "sota-hubs-auto-v1") (eq ($rawHubs.basePath | default "") $siteBasePath) (eq (int ($rawHubs.totalN | default 0)) $catalog.totalN) (reflect.IsMap $rawHubs.hubs) -}}
+{{- $hub := cond $hasLive (index ($rawHubs.hubs | default dict) $slug | default dict) dict -}}
+{{- $feedFormats := dict
+  "feeds/topic-asr.xml" "RSSTopicASR"
+  "feeds/topic-tts.xml" "RSSTopicTTS"
+  "feeds/topic-enhancement.xml" "RSSTopicEnhancement"
+  "feeds/topic-audio-llm.xml" "RSSTopicAudioLLM"
+  "feeds/topic-music.xml" "RSSTopicMusic"
+  "feeds/high-score.xml" "RSSHighScore"
+-}}
+{{- $papersPage := site.GetPage "/papers" -}}
+{{- $hubsHome := site.GetPage "/hubs" -}}
+{{- $rssUrl := "" -}}
+{{- $rssLabel := $hub.feedLabel | default "订阅专题 RSS" -}}
+{{- with $hub.feedPath -}}
+  {{- $fmtName := index $feedFormats . | default "" -}}
+  {{- with site.Home.OutputFormats.Get $fmtName -}}
+    {{- $rssUrl = .RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+
+<article class="sota-hub-page" id="sota-hub-{{ $slug }}" data-hub-slug="{{ $slug }}">
+  <header class="sota-hub-header">
+    {{ partial "breadcrumbs.html" . }}
+    <div class="rw-eyebrow">Audio Task &amp; Benchmark Hub</div>
+    <h1>{{ .Title }}</h1>
+    {{- with $hub.subtitle }}<p class="sota-hub-header__subtitle" lang="en">{{ . }}</p>{{ end }}
+    <p class="sota-hub-header__desc">{{ $hub.description | default .Description }}</p>
+    <div class="sota-hub-header__actions">
+      {{- if and $papersPage $hub.primaryConceptId }}
+      <a class="rw-action rw-action--primary" href="{{ printf "%s?concept=%s" $papersPage.RelPermalink ($hub.primaryConceptId | urlquery) }}">在论文库按方向筛选 →</a>
+      {{- else if $papersPage }}
+      <a class="rw-action rw-action--primary" href="{{ $papersPage.RelPermalink }}">进入论文库浏览 →</a>
+      {{- end }}
+      {{- if $rssUrl }}
+      <a class="rw-action" href="{{ $rssUrl }}">{{ $rssLabel }}</a>
+      {{- end }}
+      {{- if $hubsHome }}
+      <a class="rw-action" href="{{ $hubsHome.RelPermalink }}">← 全部专题导航</a>
+      {{- end }}
+    </div>
+  </header>
+
+  {{- if $hub }}
+  <section class="sota-hub-kpis" aria-label="专题核心指标">
+    <div class="sota-hub-kpi">
+      <span class="sota-hub-kpi__label">收录论文总数</span>
+      <strong class="sota-hub-kpi__value">{{ $hub.totalPapers }}</strong>
+    </div>
+    <div class="sota-hub-kpi">
+      <span class="sota-hub-kpi__label">高分精选（≥ 8.0）</span>
+      <strong class="sota-hub-kpi__value">{{ $hub.highScoreCount }}</strong>
+    </div>
+    <div class="sota-hub-kpi">
+      <span class="sota-hub-kpi__label">含开源代码仓库</span>
+      <strong class="sota-hub-kpi__value">{{ $hub.openSourceCount }}</strong>
+    </div>
+    <div class="sota-hub-kpi">
+      <span class="sota-hub-kpi__label">含在线试听 Demo</span>
+      <strong class="sota-hub-kpi__value">{{ $hub.demoCount }}</strong>
+    </div>
+  </section>
+
+  {{- if or (gt (len ($hub.venueBreakdown | default slice)) 0) (gt (len ($hub.monthlyTrend | default slice)) 0) }}
+  <section class="sota-hub-analytics" aria-label="来源分布与近 6 个月趋势">
+    {{- with $hub.venueBreakdown }}
+    <div class="sota-hub-panel">
+      <h2>来源与会议分布</h2>
+      <ul class="sota-hub-venue-list">
+        {{- range . }}
+        <li><span class="sota-hub-venue-name">{{ .venue }}</span><strong class="sota-hub-venue-count">{{ .count }} 篇</strong></li>
+        {{- end }}
+      </ul>
+    </div>
+    {{- end }}
+    {{- with $hub.monthlyTrend }}
+    <div class="sota-hub-panel">
+      <h2>近 6 个月收录趋势</h2>
+      <ol class="sota-hub-trend-list">
+        {{- range . }}
+        <li class="sota-hub-trend-item">
+          <span class="sota-hub-trend-month">{{ .month }}</span>
+          <span class="sota-hub-trend-bar-track" aria-hidden="true"><span class="sota-hub-trend-bar-fill" style="width:{{ .ratioPct }}%"></span></span>
+          <strong class="sota-hub-trend-count">{{ .count }}</strong>
+        </li>
+        {{- end }}
+      </ol>
+    </div>
+    {{- end }}
+  </section>
+  {{- end }}
+
+  {{- if or (gt (len ($hub.topMethods | default slice)) 0) (gt (len ($hub.topBenchmarksAndSettings | default slice)) 0) }}
+  <section class="sota-hub-cooccurrence" aria-label="高频方法与评测场景">
+    {{- with $hub.topMethods }}
+    <div class="sota-hub-panel">
+      <h2>高频方法与模型家族</h2>
+      <div class="sota-hub-chip-list">
+        {{- range . }}
+          {{- if $papersPage }}
+          <a class="sota-hub-chip sota-hub-chip--link" href="{{ printf "%s?concept=%s" $papersPage.RelPermalink (.id | urlquery) }}">{{ .zh }} <em>{{ .count }}</em></a>
+          {{- else }}
+          <span class="sota-hub-chip">{{ .zh }} <em>{{ .count }}</em></span>
+          {{- end }}
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
+    {{- with $hub.topBenchmarksAndSettings }}
+    <div class="sota-hub-panel">
+      <h2>高频评测设定与研究产物</h2>
+      <div class="sota-hub-chip-list">
+        {{- range . }}
+          {{- if $papersPage }}
+          <a class="sota-hub-chip sota-hub-chip--link" href="{{ printf "%s?concept=%s" $papersPage.RelPermalink (.id | urlquery) }}">{{ .zh }} <em>{{ .count }}</em></a>
+          {{- else }}
+          <span class="sota-hub-chip">{{ .zh }} <em>{{ .count }}</em></span>
+          {{- end }}
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
+  </section>
+  {{- end }}
+
+  <nav class="sota-hub-jump" aria-label="榜单分区导航">
+    <a href="#hub-top-papers">高分精选 Top 20</a>
+    <a href="#hub-latest-papers">最新收录</a>
+    <a href="#hub-oss-demo-papers">开源与 Demo 精选</a>
+  </nav>
+
+  <section class="sota-hub-section" id="hub-top-papers" aria-labelledby="hub-top-papers-title">
+    <h2 id="hub-top-papers-title">🏆 高分精选 Top 20</h2>
+    {{- with $hub.topPapers }}
+    <ol class="sota-hub-paper-list">
+      {{- range . }}
+      <li class="sota-hub-paper-item">
+        <div class="sota-hub-paper-item__top">
+          <a class="sota-hub-paper-item__title" href="{{ .relPermalink }}">{{ .headline }}</a>
+          <div class="sota-hub-paper-item__badges">
+            {{- with .scoreText }}<span class="sota-hub-badge sota-hub-badge--score">{{ . }}/10</span>{{ end }}
+            {{- with .venue }}<span class="sota-hub-badge">{{ . }}</span>{{ end }}
+            {{- if .hasCode }}<span class="sota-hub-badge sota-hub-badge--oss">开源代码</span>{{ end }}
+            {{- if .hasDemo }}<span class="sota-hub-badge sota-hub-badge--demo">试听 Demo</span>{{ end }}
+          </div>
+        </div>
+        {{- with .oneSentence }}<p class="sota-hub-paper-item__summary">{{ . }}</p>{{ end }}
+        <p class="sota-hub-paper-item__meta">
+          {{- with .date }}<time datetime="{{ . }}">{{ . }}</time>{{ end }}
+          {{- with .primaryTask }} · {{ . }}{{ end }}
+        </p>
+      </li>
+      {{- end }}
+    </ol>
+    {{- else }}
+    <p class="sota-hub-empty">当前筛选条件下暂无已评分论文。</p>
+    {{- end }}
+  </section>
+
+  <section class="sota-hub-section" id="hub-latest-papers" aria-labelledby="hub-latest-papers-title">
+    <h2 id="hub-latest-papers-title">🆕 最新收录（近 15 篇）</h2>
+    {{- with $hub.latestPapers }}
+    <ol class="sota-hub-paper-list">
+      {{- range . }}
+      <li class="sota-hub-paper-item">
+        <div class="sota-hub-paper-item__top">
+          <a class="sota-hub-paper-item__title" href="{{ .relPermalink }}">{{ .headline }}</a>
+          <div class="sota-hub-paper-item__badges">
+            {{- with .scoreText }}<span class="sota-hub-badge sota-hub-badge--score">{{ . }}/10</span>{{ end }}
+            {{- with .venue }}<span class="sota-hub-badge">{{ . }}</span>{{ end }}
+            {{- if .hasCode }}<span class="sota-hub-badge sota-hub-badge--oss">开源代码</span>{{ end }}
+            {{- if .hasDemo }}<span class="sota-hub-badge sota-hub-badge--demo">试听 Demo</span>{{ end }}
+          </div>
+        </div>
+        {{- with .oneSentence }}<p class="sota-hub-paper-item__summary">{{ . }}</p>{{ end }}
+        <p class="sota-hub-paper-item__meta">
+          {{- with .date }}<time datetime="{{ . }}">{{ . }}</time>{{ end }}
+          {{- with .primaryTask }} · {{ . }}{{ end }}
+        </p>
+      </li>
+      {{- end }}
+    </ol>
+    {{- else }}
+    <p class="sota-hub-empty">当前方向暂无收录论文。</p>
+    {{- end }}
+  </section>
+
+  <section class="sota-hub-section" id="hub-oss-demo-papers" aria-labelledby="hub-oss-demo-papers-title">
+    <h2 id="hub-oss-demo-papers-title">🛠️ 开源代码与在线试听精选</h2>
+    {{- with $hub.openSourceDemoPapers }}
+    <ol class="sota-hub-paper-list">
+      {{- range . }}
+      <li class="sota-hub-paper-item">
+        <div class="sota-hub-paper-item__top">
+          <a class="sota-hub-paper-item__title" href="{{ .relPermalink }}">{{ .headline }}</a>
+          <div class="sota-hub-paper-item__badges">
+            {{- with .scoreText }}<span class="sota-hub-badge sota-hub-badge--score">{{ . }}/10</span>{{ end }}
+            {{- with .venue }}<span class="sota-hub-badge">{{ . }}</span>{{ end }}
+            {{- if .hasCode }}<span class="sota-hub-badge sota-hub-badge--oss">开源代码</span>{{ end }}
+            {{- if .hasDemo }}<span class="sota-hub-badge sota-hub-badge--demo">试听 Demo</span>{{ end }}
+          </div>
+        </div>
+        {{- with .oneSentence }}<p class="sota-hub-paper-item__summary">{{ . }}</p>{{ end }}
+        <p class="sota-hub-paper-item__meta">
+          {{- with .date }}<time datetime="{{ . }}">{{ . }}</time>{{ end }}
+          {{- with .primaryTask }} · {{ . }}{{ end }}
+        </p>
+      </li>
+      {{- end }}
+    </ol>
+    {{- else }}
+    <p class="sota-hub-empty">当前方向暂未检出含可访问代码或试听 Demo 链接的论文。</p>
+    {{- end }}
+  </section>
+
+  {{- with $hub.conceptChips }}
+  <section class="sota-hub-concepts" aria-label="本专题覆盖的已核验标签概念">
+    <h2>覆盖的已核验标签概念</h2>
+    <div class="sota-hub-chip-list">
+      {{- range . }}
+        {{- if $papersPage }}
+        <a class="sota-hub-chip sota-hub-chip--link" href="{{ printf "%s?concept=%s" $papersPage.RelPermalink (.id | urlquery) }}">{{ .zh }}</a>
+        {{- else }}
+        <span class="sota-hub-chip">{{ .zh }}</span>
+        {{- end }}
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+  {{- else }}
+  <section class="sota-hub-fallback">
+    <p>当前处于独立构建环境，尚未生成专题聚合数据。请通过论文库浏览该方向的全部收录论文。</p>
+  </section>
+  {{- end }}
+
+  {{- partial "subscribe.html" . -}}
+</article>
+{{- end -}}

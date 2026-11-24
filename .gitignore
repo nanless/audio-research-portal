@@ -17,3 +17,9 @@ Thumbs.db
 # Deterministic homepage pick, regenerated before each real site build
 /data/edition-features-auto.json
 /data/edition-features-auto.json.*.tmp
+
+# Precomputed related-paper knowledge graph and SOTA hub aggregates, regenerated before each real site build
+/data/related-graph-auto.json
+/data/related-graph-auto.json.*.tmp
+/data/sota-hubs-auto.json
+/data/sota-hubs-auto.json.*.tmp

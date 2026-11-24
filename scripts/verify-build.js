@@ -34,6 +34,16 @@ const indexProtocols = require('../assets/js/protocol-registry');
 const tagCore = require('../assets/js/tag-core');
 const { verifyPageNavigation } = require('./verify-page-navigation');
 const { verifyEditionFeature } = require('./verify-edition-feature');
+const { PUBLIC_CONTRACT: RELATED_GRAPH_CONTRACT } = require('./build-related-graph');
+const { HUB_SLUGS } = require('./build-sota-hubs');
+const { isStrictClientHttpsUrl } = require('./lib/research-corpus');
+const {
+  CONTRACT: RESOURCE_BADGES_CONTRACT,
+  SCHEMA_FINGERPRINT: RESOURCE_BADGES_FINGERPRINT,
+  MAX_INDEX_BYTES: MAX_RESOURCE_BADGES_BYTES,
+  ALLOWED_ROOT_KEYS: RESOURCE_BADGES_ROOT_KEYS,
+  ALLOWED_ENTRY_KEYS: RESOURCE_BADGES_ENTRY_KEYS
+} = require('./export-resource-badges');
 
 const SITE_ORIGIN = 'https://nanless.github.io';
 const SITE_PREFIX = '/audio-paper-digest-blog/';
@@ -861,6 +871,126 @@ function verifyDesktopDetails(buildDir) {
   };
 }
 
+const DANGEROUS_OBJECT_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
+
+function verifyRelatedGraph(buildDir) {
+  const root = path.resolve(buildDir);
+  const file = path.join(root, 'data', 'related-graph.json');
+  invariant(fs.existsSync(file), `缺少构建产物：${file}`);
+  const st = fs.lstatSync(file);
+  invariant(st.isFile() && !st.isSymbolicLink(), 'data/related-graph.json 必须为普通文件');
+  const raw = fs.readFileSync(file, 'utf8');
+  let obj;
+  try { obj = JSON.parse(raw); } catch (_) { throw new Error('data/related-graph.json 不是合法 JSON'); }
+  invariant(obj && typeof obj === 'object' && !Array.isArray(obj), 'data/related-graph.json 必须为 JSON 对象');
+  invariant(obj.contract === RELATED_GRAPH_CONTRACT, `related-graph.json 契约错误：${obj.contract}`);
+  invariant(typeof obj.generatedAt === 'string' && obj.generatedAt.trim().length > 0 && Number.isFinite(Date.parse(obj.generatedAt)),
+    `related-graph.json generatedAt 非法：${obj.generatedAt}`);
+  invariant(obj.papers && typeof obj.papers === 'object' && !Array.isArray(obj.papers), 'related-graph.json 缺少 papers 映射');
+  const keys = Object.keys(obj.papers);
+  invariant(keys.length > 0, 'related-graph.json papers 映射不能为空');
+  invariant(Number.isSafeInteger(obj.paperCount) && obj.paperCount === keys.length,
+    `related-graph.json paperCount (${obj.paperCount}) 与实际条数 (${keys.length}) 不一致`);
+  let edges = 0;
+  for (const key of keys) {
+    invariant(key && !DANGEROUS_OBJECT_KEYS.has(key), `related-graph.json 含非法键：${key}`);
+    const list = obj.papers[key];
+    invariant(Array.isArray(list) && list.length <= 3, `related-graph.json 条目数组非法：${key}`);
+    for (const item of list) {
+      invariant(item && typeof item === 'object' && !Array.isArray(item), `related-graph.json 边对象非法：${key}`);
+      invariant(typeof item.identity === 'string' && item.identity && !DANGEROUS_OBJECT_KEYS.has(item.identity),
+        `related-graph.json 缺少或含非法推荐 identity：${key}`);
+      invariant(item.identity !== key, `related-graph.json 禁止自环推荐：${key}`);
+      invariant(typeof item.relPermalink === 'string' && item.relPermalink.startsWith(SITE_PREFIX) && !item.relPermalink.includes('..'),
+        `related-graph.json relPermalink 越界或非法：${key} -> ${item.relPermalink}`);
+      invariant(Number.isSafeInteger(item.score) && item.score >= 1 && item.score <= 1000, `related-graph.json score 非法：${key}`);
+      invariant(Array.isArray(item.reasons) && item.reasons.every((r) => typeof r === 'string'),
+        `related-graph.json reasons 必须为字符串数组：${key}`);
+      edges += 1;
+    }
+  }
+  invariant(Number.isSafeInteger(obj.edgeCount) && obj.edgeCount === edges,
+    `related-graph.json edgeCount (${obj.edgeCount}) 与实际边数 (${edges}) 不一致`);
+  return { paperCount: keys.length, edgeCount: edges, bytes: st.size };
+}
+
+function verifySotaHubs(buildDir, options = {}) {
+  const requireLive = options && options.requireLive === true;
+  const root = path.resolve(buildDir);
+  const hubsDir = path.join(root, 'hubs');
+  invariant(fs.existsSync(hubsDir) && fs.statSync(hubsDir).isDirectory(), `缺少专题导航目录：${hubsDir}`);
+  const indexHtml = readRequired(path.join(hubsDir, 'index.html'));
+  invariant(indexHtml.includes('sota-hubs-directory'), 'hubs/index.html 缺少专题导航容器');
+  if (requireLive) {
+    invariant(!indexHtml.includes('sota-hubs-directory__notice'), 'hubs/index.html 处于静态降级视图而非实时聚合数据');
+  }
+  const hubXmls = walkFiles(hubsDir).filter((f) => path.basename(f) === 'index.xml');
+  invariant(hubXmls.length === 0, `专题导航目录禁止嵌套 index.xml：${hubXmls.join(', ')}`);
+  for (const slug of HUB_SLUGS) {
+    const html = readRequired(path.join(hubsDir, slug, 'index.html'));
+    invariant(html.includes(`sota-hub-${slug}`), `专题页 hubs/${slug}/index.html 缺少主容器`);
+    if (requireLive) {
+      invariant(!html.includes('sota-hub-fallback') && html.includes('sota-hub-kpis'),
+        `专题页 hubs/${slug}/index.html 缺少实时统计 KPI 或回退到了静态骨架`);
+    }
+  }
+  const homePath = path.join(root, 'index.html');
+  if (fs.existsSync(homePath)) {
+    const homeHtml = fs.readFileSync(homePath, 'utf8');
+    invariant(/\/hubs\/["']?[^>]*>[\s\S]*?专题导航/.test(homeHtml), '首页导航缺少“专题导航 (/hubs/)”入口');
+  }
+  return { hubCount: HUB_SLUGS.length, slugs: [...HUB_SLUGS], requireLive };
+}
+
+function verifyResourceBadges(buildDir) {
+  const root = path.resolve(buildDir);
+  const file = path.join(root, 'client', 'signals', 'resource-badges.json');
+  invariant(fs.existsSync(file), `缺少构建产物：${file}`);
+  const st = fs.lstatSync(file);
+  invariant(st.isFile() && !st.isSymbolicLink() && st.size > 0 && st.size <= MAX_RESOURCE_BADGES_BYTES,
+    `client/signals/resource-badges.json 非普通文件或大小越界：${st.size}`);
+  const raw = fs.readFileSync(file, 'utf8');
+  let obj;
+  try { obj = JSON.parse(raw); } catch (_) { throw new Error('resource-badges.json 不是合法 JSON'); }
+  invariant(indexProtocols.isCurrentHeader(obj, RESOURCE_BADGES_CONTRACT),
+    'resource-badges.json 合同头或 schemaFingerprint 未通过当前协议校验');
+  invariant(obj.contract === 'paper-resource-badges-index' && obj.schemaFingerprint === RESOURCE_BADGES_FINGERPRINT,
+    `resource-badges.json 契约或指纹不匹配：${obj.contract}/${obj.schemaFingerprint}`);
+  hasExactKeys(obj, RESOURCE_BADGES_ROOT_KEYS, 'client/signals/resource-badges.json');
+  invariant(typeof obj.generatedAt === 'string' && obj.generatedAt.trim().length > 0 && Number.isFinite(Date.parse(obj.generatedAt)),
+    `resource-badges.json generatedAt 非法：${obj.generatedAt}`);
+  invariant(obj.papers && typeof obj.papers === 'object' && !Array.isArray(obj.papers),
+    'resource-badges.json 缺少 papers 对象');
+  const allowedEntrySet = new Set(RESOURCE_BADGES_ENTRY_KEYS);
+  const boolFields = ['hasCode', 'hasModel', 'hasDataset', 'hasDemo', 'hasProjectPage'];
+  const urlFields = ['codeUrls', 'demoUrls', 'projectUrls'];
+  const keys = Object.keys(obj.papers);
+  invariant(keys.length > 0, 'resource-badges.json papers 对象不能为空');
+  for (const paperId of keys) {
+    invariant(paperId && !DANGEROUS_OBJECT_KEYS.has(paperId), `resource-badges.json 含危险或空键：${paperId}`);
+    const entry = obj.papers[paperId];
+    invariant(entry && typeof entry === 'object' && !Array.isArray(entry), `resource-badges.json 条目不是对象：${paperId}`);
+    for (const k of Object.keys(entry)) {
+      invariant(allowedEntrySet.has(k), `resource-badges.json 条目含未声明字段：${paperId}.${k}`);
+    }
+    for (const bf of boolFields) {
+      if (Object.prototype.hasOwnProperty.call(entry, bf)) {
+        invariant(typeof entry[bf] === 'boolean', `resource-badges.json 布尔字段非法：${paperId}.${bf}`);
+      }
+    }
+    for (const uf of urlFields) {
+      if (Object.prototype.hasOwnProperty.call(entry, uf)) {
+        invariant(Array.isArray(entry[uf]) && entry[uf].length <= 8, `resource-badges.json URL 列表非法或超长：${paperId}.${uf}`);
+        for (const rawUrl of entry[uf]) {
+          invariant(isStrictClientHttpsUrl(rawUrl),
+            `resource-badges.json URL 必须为符合 RFC 2396 / Java URI 的无凭据 HTTPS：${paperId}.${uf}`);
+        }
+      }
+    }
+  }
+  return { paperCount: keys.length, bytes: st.size, contract: obj.contract, schemaFingerprint: obj.schemaFingerprint };
+}
+
 function verifyBuild(buildDir) {
   const root = path.resolve(buildDir);
   const allFiles = walkFiles(root);
@@ -920,6 +1050,14 @@ function verifyBuild(buildDir) {
     invariant(!FORBIDDEN_SCRIPT_SINK.test(source), `交互脚本禁止危险 DOM/动态执行调用：${file}`);
     invariant(/textContent/.test(source), `交互脚本必须使用 textContent：${file}`);
   }
+  const podcastScripts = allFiles.filter((file) => /podcast-player.*\.js$/i.test(path.basename(file)));
+  invariant(podcastScripts.length > 0, '缺少构建后的播客播放器脚本');
+  for (const file of podcastScripts) {
+    const source = fs.readFileSync(file, 'utf8');
+    invariant(!FORBIDDEN_SCRIPT_SINK.test(source), `播客脚本禁止危险 DOM/动态执行调用：${file}`);
+    invariant(/textContent/.test(source), `播客脚本必须使用 textContent：${file}`);
+    invariant(!/cdn\.jsdelivr\.net|unpkg\.com|cdnjs\.cloudflare\.com/i.test(source), `播客脚本不得引用外部 CDN：${file}`);
+  }
   const paperTools = verifyPaperToolCoverage(
     allFiles.filter((file) => file.startsWith(`${path.join(root, 'posts')}${path.sep}`)), root
   );
@@ -930,6 +1068,9 @@ function verifyBuild(buildDir) {
     `客户端声明数量与源页面不一致：产物 ${paperTools.sidecarPages}，源页面 ${declaredSidecarPages}`);
 
   const desktopDetails = verifyDesktopDetails(root);
+  const resourceBadges = verifyResourceBadges(root);
+  const relatedGraph = verifyRelatedGraph(root);
+  const sotaHubs = verifySotaHubs(root, { requireLive: true });
   // Ensure desktop catalog covers every non-chrome research page in client/index.json
   let expectedResearchRecords = 0;
   for (const shard of clientIndex.shards) {
@@ -950,8 +1091,12 @@ function verifyBuild(buildDir) {
     searchIndex: indexStats,
     clientSearchIndex: clientIndexStats,
     desktopDetails,
+    resourceBadges,
+    relatedGraph,
+    sotaHubs,
     searchScripts: searchScripts.length,
     libraryScripts: libraryScripts.length,
+    podcastScripts: podcastScripts.length,
     paperTools,
     navigation: verifyPageNavigation(root)
   };
@@ -971,5 +1116,6 @@ if (require.main === module) {
 module.exports = {
   CURATED_FEED_FILES,
   extractHead, verifyHead, verifyRss, verifyCuratedFeeds, verifySearchIndex,
-  verifyPaperToolCoverage, verifyBuild, verifySearchManifest, verifyDesktopDetails
+  verifyPaperToolCoverage, verifyBuild, verifySearchManifest, verifyDesktopDetails,
+  verifyRelatedGraph, verifySotaHubs, verifyResourceBadges
 };

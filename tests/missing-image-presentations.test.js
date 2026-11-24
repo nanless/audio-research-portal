@@ -7,7 +7,7 @@ function render(data=policy,{mutate=null,incoming=null,relative=sample}={}){
  const temp=fs.mkdtempSync(path.join(os.tmpdir(),'missing-image-hugo-'));
  try{
   fs.cpSync(path.join(root,'data'),path.join(temp,'data'),{recursive:true,filter:p=>!path.basename(p).startsWith('fullsite-r6-')&&path.basename(p)!=='exact1028-qualified-classification.json'&&!path.basename(p).startsWith('fullsite-taxonomy-')&&path.basename(p)!=='taxonomy-old-v2-publication-holds.json'});fs.writeFileSync(path.join(temp,'data/missing_image_presentations.json'),JSON.stringify(data));
-  fs.cpSync(path.join(root,'layouts/partials'),path.join(temp,'layouts/partials'),{recursive:true});fs.mkdirSync(path.join(temp,'layouts/_default/_markup'),{recursive:true});fs.copyFileSync(path.join(root,'layouts/_default/_markup/render-image.html'),path.join(temp,'layouts/_default/_markup/render-image.html'));
+  fs.cpSync(path.join(root,'layouts/partials'),path.join(temp,'layouts/partials'),{recursive:true});fs.cpSync(path.join(root,'layouts/_default/_markup'),path.join(temp,'layouts/_default/_markup'),{recursive:true});
   const files=new Set(Object.keys(policy.pages));for(const p of Object.values(policy.pages))for(const r of p.occurrences)if(r.source)files.add(r.source.pagePath);
   // Replay only the formally issued records for this exact source/image cohort.
   const ordinary=JSON.parse(fs.readFileSync(path.join(root,'data/taxonomy-history-v2.json')));

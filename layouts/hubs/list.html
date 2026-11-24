@@ -1,0 +1,85 @@
+{{- define "main" -}}
+{{- $catalog := partialCached "related_catalog.html" "global" -}}
+{{- $siteBasePath := (urls.Parse site.BaseURL).Path -}}
+{{- if not (hasSuffix $siteBasePath "/") }}{{ $siteBasePath = printf "%s/" $siteBasePath }}{{ end -}}
+{{- $rawHubs := index hugo.Data "sota-hubs-auto" | default dict -}}
+{{- $hasLive := and (eq ($rawHubs.contract | default "") "sota-hubs-auto-v1") (eq ($rawHubs.basePath | default "") $siteBasePath) (eq (int ($rawHubs.totalN | default 0)) $catalog.totalN) (reflect.IsMap $rawHubs.hubs) -}}
+{{- $hubMap := cond $hasLive ($rawHubs.hubs | default dict) dict -}}
+{{- $feedFormats := dict
+  "feeds/topic-asr.xml" "RSSTopicASR"
+  "feeds/topic-tts.xml" "RSSTopicTTS"
+  "feeds/topic-enhancement.xml" "RSSTopicEnhancement"
+  "feeds/topic-audio-llm.xml" "RSSTopicAudioLLM"
+  "feeds/topic-music.xml" "RSSTopicMusic"
+  "feeds/high-score.xml" "RSSHighScore"
+-}}
+{{- $papersPage := site.GetPage "/papers" -}}
+
+<section class="sota-hubs-directory" id="sota-hubs-directory">
+  <header class="sota-hubs-directory__header">
+    {{ partial "breadcrumbs.html" . }}
+    <div class="rw-eyebrow">Audio Task &amp; Benchmark Hubs</div>
+    <h1>{{ .Title }}</h1>
+    <p class="sota-hubs-directory__lead">{{ .Description }}</p>
+    {{- if $hasLive }}
+    <div class="sota-hubs-directory__summary" aria-label="全站专题覆盖概览">
+      <span>覆盖 <strong>{{ len .RegularPages }}</strong> 个核心音频研究方向</span>
+      <span>·</span>
+      <span>全站去重论文 <strong>{{ $rawHubs.totalN }}</strong> 篇</span>
+      {{- with $rawHubs.latestDate }}
+      <span>·</span>
+      <span>最新收录至 <time datetime="{{ . }}">{{ . }}</time></span>
+      {{- end }}
+    </div>
+    {{- else }}
+    <p class="sota-hubs-directory__notice">当前为专题导航静态视图；完整论文计数与趋势在全站构建时自动汇总。</p>
+    {{- end }}
+  </header>
+
+  <div class="sota-hubs-grid">
+    {{- range .RegularPages.ByWeight -}}
+    {{- $slug := .Params.hub_slug | default .File.BaseFileName -}}
+    {{- $hub := index $hubMap $slug | default dict -}}
+    <article class="sota-hub-card" id="hub-card-{{ $slug }}" data-hub-slug="{{ $slug }}">
+      <div class="sota-hub-card__head">
+        <h2 class="sota-hub-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{- with $hub.subtitle }}<p class="sota-hub-card__subtitle" lang="en">{{ . }}</p>{{ end }}
+      </div>
+      <p class="sota-hub-card__desc">{{ $hub.description | default .Description }}</p>
+      {{- if $hub }}
+      <dl class="sota-hub-card__kpis">
+        <div><dt>收录论文</dt><dd>{{ $hub.totalPapers }}</dd></div>
+        <div><dt>高分 ≥8.0</dt><dd>{{ $hub.highScoreCount }}</dd></div>
+        <div><dt>含开源代码</dt><dd>{{ $hub.openSourceCount }}</dd></div>
+        <div><dt>含在线试听</dt><dd>{{ $hub.demoCount }}</dd></div>
+      </dl>
+      {{- with $hub.topMethods }}
+      <div class="sota-hub-card__methods" aria-label="高频研究方法">
+        {{- range first 4 . }}
+        <span class="sota-hub-chip">{{ .zh }} <em>{{ .count }}</em></span>
+        {{- end }}
+      </div>
+      {{- end }}
+      {{- end }}
+      <div class="sota-hub-card__actions">
+        <a class="rw-action rw-action--primary" href="{{ .RelPermalink }}">进入专题榜单 →</a>
+        {{- if and $papersPage $hub.primaryConceptId }}
+        <a class="rw-action" href="{{ printf "%s?concept=%s" $papersPage.RelPermalink ($hub.primaryConceptId | urlquery) }}">论文库筛选</a>
+        {{- end }}
+        {{- with $hub.feedPath }}
+          {{- $fmtName := index $feedFormats . | default "" -}}
+          {{- with site.Home.OutputFormats.Get $fmtName }}
+          <a class="sota-hub-card__rss" href="{{ .RelPermalink }}">RSS</a>
+          {{- end }}
+        {{- end }}
+      </div>
+    </article>
+    {{- end -}}
+  </div>
+
+  <footer class="sota-hubs-directory__note">
+    <p>统计口径：全部计数、会议分布、月度趋势与高频方法均严格聚合自本站已发布且通过分类核验的论文记录（暂缓展示分类的论文自动排除），不生成或虚构任何未在原文中出现的评测指标数值。</p>
+  </footer>
+  {{- partial "subscribe.html" . -}}
+</section>
+{{- end -}}

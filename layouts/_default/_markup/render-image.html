@@ -21,11 +21,20 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
-{{- $attributes := merge .Attributes (dict "alt" .Text "src" $src "title" (.Title | transform.HTMLEscape) "loading" "lazy") -}}
+{{- $alt := .Text -}}
+{{- if or (in $alt `class="katex`) (in $alt `<math`) (in $alt `<code`) (in $alt `<`) -}}
+  {{- $alt = partial "plain_summary.html" $alt -}}
+{{- end -}}
+{{- $attributes := merge .Attributes (dict "alt" $alt "src" $src "title" .Title "loading" "lazy") -}}
 <img
   {{- range $k, $v := $attributes -}}
     {{- if or $v (eq $k "alt") -}}
-      {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+      {{- if eq $k "src" -}}
+        {{- $safeSrc := replace (replace (replace (printf "%s" $v) `"` "&quot;") "<" "&lt;") ">" "&gt;" -}}
+        {{- printf ` %s="%s"` $k $safeSrc | safeHTMLAttr -}}
+      {{- else -}}
+        {{- printf ` %s="%s"` $k ($v | transform.HTMLEscape) | safeHTMLAttr -}}
+      {{- end -}}
     {{- end -}}
   {{- end -}}>
 {{- /**/ -}}
