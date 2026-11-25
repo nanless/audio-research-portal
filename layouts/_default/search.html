@@ -10,7 +10,7 @@
     <input id="searchInput" placeholder="例如：speech enhancement、语音增强、2609.03620" aria-label="搜索论文" type="search" autocomplete="off" maxlength="200">
     <ul id="searchResults" class="searchResults" aria-label="搜索结果"></ul>
   </div>
-  <noscript><p>搜索需要 JavaScript。你仍可通过<a href="{{ "archives/" | relURL }}">速递归档</a>或<a href="{{ "tags/" | relURL }}">研究主题</a>阅读论文。</p></noscript>
+  <noscript><p>搜索需要 JavaScript。你仍可通过<a href="{{ "archives/" | relURL }}">每日归档</a>或<a href="{{ "tags/" | relURL }}">研究主题</a>阅读论文。</p></noscript>
 </section>
 {{- $loader := resources.Get "js/search-index-loader.js" | minify | fingerprint }}
 {{- $cache := resources.Get "js/index-shard-cache.js" | minify | fingerprint }}

@@ -21,7 +21,7 @@
     { id: 'high-score', label: '高分 ≥8.0' },
     { id: 'code', label: '含开源' },
     { id: 'demo', label: '含试听' },
-    { id: 'daily', label: '每日速递' },
+    { id: 'daily', label: '每日研究' },
     { id: 'conference', label: '会议专题' }
   ];
 
@@ -30,7 +30,7 @@
     { id: 'search', label: '打开高级搜索页', path: 'search/', badge: '导航' },
     { id: 'conferences', label: '浏览会议论文集目录', path: 'conferences/', badge: '导航' },
     { id: 'tags', label: '查看九维研究方向树', path: 'tags/', badge: '导航' },
-    { id: 'archives', label: '按日期查看速递归档', path: 'archives/', badge: '导航' },
+    { id: 'archives', label: '按日期查看每日归档', path: 'archives/', badge: '导航' },
     { id: 'theme', label: '切换明暗主题', action: 'theme', badge: '快捷操作' }
   ];
 
@@ -223,7 +223,7 @@
 
   function pagefindFiltersForFacet(facetId) {
     if (facetId === 'paper') return { '类型': '论文解读' };
-    if (facetId === 'daily') return { '类型': '每日速递' };
+    if (facetId === 'daily') return { '类型': '每日研究' };
     if (facetId === 'conference') return { '类型': '会议专题' };
     if (facetId === 'high-score') return { '评分': { any: ['8.5+', '8.0+'] } };
     if (facetId === 'code') return { '开源': '含开源代码' };
@@ -550,7 +550,7 @@
           var ranked = rankClientEntries(state.clientEntries, query, state.facet);
           var mappedClient = ranked.map(function (entry) {
             var metaParts = [
-              entry.pageType === 'daily' ? '每日速递' : entry.pageType === 'conference' ? '会议专题' : '论文解读',
+              entry.pageType === 'daily' ? '每日研究' : entry.pageType === 'conference' ? '会议专题' : '论文解读',
               entry.date,
               entry.score >= 0 ? entry.score.toFixed(1).replace('.0', '') + '/10' : '',
               entry.hasCode ? '💻 开源' : '',

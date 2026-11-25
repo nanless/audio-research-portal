@@ -35,8 +35,8 @@ test('real Hugo gives separate generation destinations, accessible navigation, r
     for (const page of [2, 3]) {
       const html = fs.readFileSync(path.join(temp, 'public/page', String(page), 'index.html'), 'utf8');
       assert.equal((html.match(/<h1[ >]/g) || []).length, 1);
-      assert.match(html, new RegExp('每日速递 · 第 ' + page + ' 页'));
-      assert.match(html, /href=\/blog\/>返回最新速递/);
+      assert.match(html, new RegExp('每日研究 · 第 ' + page + ' 页'));
+      assert.match(html, /href=\/blog\/>返回最新日报/);
       assert.match(html, /aria-current=page/);
     }
     const missing = fs.readFileSync(path.join(temp, 'public/404.html'), 'utf8');

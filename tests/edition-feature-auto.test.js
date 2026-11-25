@@ -15,7 +15,7 @@ function fixture(t, mutate = () => {}) {
   for (const relative of ['layouts/partials', 'layouts/_default', 'content/posts', 'data']) fs.mkdirSync(path.join(dir, relative), { recursive: true });
   for (const name of ['edition_feature_auto_data.html', 'edition_feature_data.html', 'edition_feature.html']) fs.copyFileSync(path.join(root, 'layouts/partials', name), path.join(dir, 'layouts/partials', name));
   fs.writeFileSync(path.join(dir, 'hugo.toml'), 'baseURL = "https://example.test/audio-paper-digest-blog/"\ntimeZone = "Asia/Shanghai"\nbuildFuture = true\ndisableKinds = ["taxonomy", "term", "RSS", "sitemap"]\n[markup.goldmark.renderer]\nunsafe = true\n');
-  fs.writeFileSync(path.join(dir, 'layouts/index.html'), '{{ $daily := site.GetPage "/posts/2026-10-20/" }}<main><time datetime="2026-10-20">今日</time><a id="full-edition" href="{{ $daily.RelPermalink }}">阅读本期完整速递</a>{{ partial "edition_feature.html" (partial "edition_feature_data.html" $daily) }}</main>');
+  fs.writeFileSync(path.join(dir, 'layouts/index.html'), '{{ $daily := site.GetPage "/posts/2026-10-20/" }}<main><time datetime="2026-10-20">今日</time><a id="full-edition" href="{{ $daily.RelPermalink }}">阅读本期完整日报</a>{{ partial "edition_feature.html" (partial "edition_feature_data.html" $daily) }}</main>');
   fs.writeFileSync(path.join(dir, 'layouts/_default/single.html'), '{{ .Content }}');
   fs.writeFileSync(path.join(dir, 'layouts/_default/list.html'), '<main>{{ .Title }}</main>');
   fs.writeFileSync(path.join(dir, 'content/posts/2026-10-20.md'), tracked('content/posts/2026-10-20.md'));

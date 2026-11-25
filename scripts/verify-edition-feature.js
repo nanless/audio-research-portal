@@ -85,7 +85,7 @@ function verifyEditionFeature(buildDir, manifest) {
   const feature = features[0], descendants = within(feature, home.nodes);
   check(feature.attrs['data-automatic'] === 'true', '封面缺少自动选图标记');
   check(feature.attrs['data-edition-date'] === record.date && feature.attrs['data-paper-path'] === record.paperPath, '封面日期或论文身份不一致');
-  const ctas = home.nodes.filter(node => node.tag === 'a' && textOf(home, node).replace(/\s*↗$/, '') === '阅读本期完整速递');
+  const ctas = home.nodes.filter(node => node.tag === 'a' && textOf(home, node).replace(/\s*↗$/, '') === '阅读本期完整日报');
   check(ctas.length === 1 && ctas[0].attrs.href === prefixed(`/posts/${record.date}/`) && ctas[0].start < feature.start,
     '完整日报主入口缺失、指向错误或被放到选读之后');
 

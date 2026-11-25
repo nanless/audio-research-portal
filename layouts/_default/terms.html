@@ -9,7 +9,7 @@
   <header class="page-header">
     <div class="rw-eyebrow">{{ if $categories }}按来源浏览{{ else }}按方向浏览{{ end }}</div>
     <h1>{{ if $categories }}内容分类{{ else }}研究方向与多级分类{{ end }}</h1>
-    <p class="research-terms__intro">{{ if $categories }}从每日速递或会议论文集进入。{{ else }}任务、方法、条件是并列的分类视角。点击方向名称进入论文库，点击箭头展开下一级；父方向可包含全部子方向。{{ end }}也可以在<a href="{{ "papers/" | relURL }}">论文库</a>组合筛选。</p>
+    <p class="research-terms__intro">{{ if $categories }}从每日研究或会议论文集进入。{{ else }}任务、方法、条件是并列的分类视角。点击方向名称进入论文库，点击箭头展开下一级；父方向可包含全部子方向。{{ end }}也可以在<a href="{{ "papers/" | relURL }}">论文库</a>组合筛选。</p>
   </header>
   {{ if not $categories }}
   <section id="tag-browser" class="tag-browser" data-library-url="{{ "papers/" | relURL }}" aria-label="多级研究分类">

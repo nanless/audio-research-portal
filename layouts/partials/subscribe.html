@@ -2,7 +2,7 @@
 <section class="research-subscribe" aria-labelledby="research-subscribe-title">
   <div>
     <strong id="research-subscribe-title">持续跟踪音频研究进展</strong>
-    <p>通过 RSS 获取每日速递与精选专题；也可以进入论文库按任务、年份、评分与开源状态筛选。</p>
+    <p>通过 RSS 获取每日音频研究与精选专题；也可以进入论文库按任务、年份、评分与开源状态筛选。</p>
     {{- $curatedDefs := slice
       (dict "fmt" "RSSHighScore" "label" "高分精选 (≥8.0)")
       (dict "fmt" "RSSTopicASR" "label" "语音识别 ASR")
@@ -28,7 +28,7 @@
     {{- end }}
   </div>
   <div class="research-home-hero__actions">
-    <a class="rw-action rw-action--primary" href="{{ "index.xml" | absURL }}">每日速递 RSS</a>
+    <a class="rw-action rw-action--primary" href="{{ "index.xml" | absURL }}">每日研究 RSS</a>
     {{- if fileExists "static/feeds/podcast.xml" }}
     <a class="rw-action" href="{{ "feeds/podcast.xml" | absURL }}">🎙️ 每日播客 RSS</a>
     {{- end }}

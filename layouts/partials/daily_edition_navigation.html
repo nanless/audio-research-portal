@@ -5,7 +5,7 @@
   {{- else if not $found -}}{{- $previous = . -}}
   {{- else if not $next -}}{{- $next = . -}}{{- end -}}
 {{- end -}}
-<nav class="edition-navigation" aria-label="按期阅读每日速递">
+<nav class="edition-navigation" aria-label="按期阅读每日研究">
   {{- with $previous }}<a href="{{ .RelPermalink }}">← 上一期 · {{ .Date.Format "01-02" }}</a>{{ else }}<span>已到最早一期</span>{{ end -}}
   <a href="{{ "archives/" | relURL }}">全部日更与日期归档</a>
   {{- with $next }}<a href="{{ .RelPermalink }}">下一期 · {{ .Date.Format "01-02" }} →</a>{{ else }}<span>已是最新一期</span>{{ end -}}

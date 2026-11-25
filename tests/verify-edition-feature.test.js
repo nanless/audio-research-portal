@@ -24,7 +24,7 @@ function fixture(t, { local = false, escaped = false } = {}) {
     <figure><a href="${paperUrl}"><img src="${imageUrl}" alt="原图"></a><figcaption>原论文 Fig. 2</figcaption></figure>
     <div class=edition-feature__actions><a class=edition-feature__read href="${paperUrl}">读这篇完整解读</a><a class=edition-feature__original href="${imageUrl}">查看完整原图</a></div></div>`;
   const files = {
-    'index.html': `<section class=edition-focus><div><time datetime=2026-10-20>2026.10.20</time></div><div><a href="${PREFIX}/posts/2026-10-20/">阅读本期完整速递 <span>↗</span></a></div>${feature}</section>`,
+    'index.html': `<section class=edition-focus><div><time datetime=2026-10-20>2026.10.20</time></div><div><a href="${PREFIX}/posts/2026-10-20/">阅读本期完整日报 <span>↗</span></a></div>${feature}</section>`,
     'posts/2026-10-20/index.html': `<article><h2>综合排行</h2><table><tr><td><a href="${paperUrl}">第一</a></td></tr></table><h2 id=论文列表>📄 论文列表</h2><h3><a href="${paperUrl.slice(0, -1)}">1. DF-PALM</a></h3><h2>说明</h2></article>`,
     [record.paperPath.slice(1) + 'index.html']: `<article><figure><a href="${imageUrl}"><img src="${escaped ? imageUrl.replaceAll('/', '&#x2f;').replaceAll(':', '&#58;') : imageUrl}"></a></figure></article>`
   };
@@ -50,7 +50,7 @@ test('real Hugo minified unquoted trailing-slash CTA, paper H3 and read links ke
   for (const relative of Object.keys(f.files)) {
     f.change(relative, html => html.replace(/href="([^"\s]+)"/g, 'href=$1').replace(/>\s+</g, '><'));
   }
-  assert.match(f.files['index.html'], /href=\/audio-research-portal\/posts\/2026-10-20\/>阅读本期完整速递/);
+  assert.match(f.files['index.html'], /href=\/audio-research-portal\/posts\/2026-10-20\/>阅读本期完整日报/);
   assert.match(f.files['index.html'], /class=edition-feature__read href=[^>]+\/>读这篇完整解读/);
   assert.match(f.files['posts/2026-10-20/index.html'], /<h3><a href=[^>]+\/>1\. DF-PALM/);
   assert.equal(verifyEditionFeature(f.root, f.manifest).memberCount, 1);

@@ -97,7 +97,7 @@
 <div class="research-list-heading" id="daily-editions">
   <div>
     <div class="rw-eyebrow">按日期阅读</div>
-    <h2>每日速递 · 完整往期</h2><p class="research-list-heading__note">每期保留全量目录与逐篇解读 · 共 {{ len $pages }} 期</p>
+    <h2>每日研究 · 完整往期</h2><p class="research-list-heading__note">每期保留全量目录与逐篇解读 · 共 {{ len $pages }} 期</p>
   </div>
   <a class="rw-action" href="{{ "archives/" | absURL }}">查看全部归档</a>
 </div>
@@ -105,8 +105,8 @@
 
 {{- if and .IsHome (gt $paginator.PageNumber 1) }}
 <header class="research-list-heading research-list-heading--archive">
-  <div><div class="rw-eyebrow">按日期阅读</div><h1>每日速递 · 第 {{ $paginator.PageNumber }} 页</h1></div>
-  <a class="rw-action" href="{{ site.Home.RelPermalink }}">返回最新速递</a>
+  <div><div class="rw-eyebrow">按日期阅读</div><h1>每日研究 · 第 {{ $paginator.PageNumber }} 页</h1></div>
+  <a class="rw-action" href="{{ site.Home.RelPermalink }}">返回最新日报</a>
 </header>
 {{- end }}
 
@@ -131,10 +131,10 @@
   <div class="edition-row">
     <time class="edition-row__date" datetime="{{ .Date.Format "2006-01-02" }}"><span class="edition-row__month">{{ .Date.Format "01" }} 月</span><span class="edition-row__day">{{ .Date.Format "02" }}</span><span class="edition-row__year">{{ .Date.Format "2006" }}</span></time>
     <div class="edition-row__body">
-      <div class="research-entry__kicker">每日研究速递{{ if and (eq $paginator.PageNumber 1) (eq $index 0) }} <span class="edition-row__latest">最新一期</span>{{ end }}</div>
-      <header class="entry-header"><h2>{{ .Date.Format "2006年1月2日" }} · 论文速递</h2></header>
+      <div class="research-entry__kicker">每日音频研究{{ if and (eq $paginator.PageNumber 1) (eq $index 0) }} <span class="edition-row__latest">最新一期</span>{{ end }}</div>
+      <header class="entry-header"><h2>{{ .Date.Format "2006年1月2日" }} · 音频研究日报</h2></header>
       {{- if ne (.Param "hideSummary") true }}<div class="entry-content"><p>{{ .Description | default "本期论文概览、完整目录与逐篇解读。" | plainify | htmlUnescape }}</p></div>{{ end }}
-      <footer class="entry-footer research-entry__footer"><span class="edition-row__count">{{ if $count }}{{ $count }} 篇论文{{ else }}完整目录{{ end }}</span><span class="research-entry__cta">阅读完整速递 <span aria-hidden="true">↗</span></span></footer>
+      <footer class="entry-footer research-entry__footer"><span class="edition-row__count">{{ if $count }}{{ $count }} 篇论文{{ else }}完整目录{{ end }}</span><span class="research-entry__cta">阅读完整日报 <span aria-hidden="true">↗</span></span></footer>
     </div>
   </div>
   <a class="entry-link" aria-label="阅读：{{ $metadata.headline | plainify }}" href="{{ .Permalink }}"></a>
@@ -142,7 +142,7 @@
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
   <div class="research-entry__kicker">
-    {{- if eq $metadata.pageType "daily" }}每日研究速递{{ else if $metadata.isConferenceTask }}会议任务专题{{ else if eq $metadata.pageType "conference" }}会议总览{{ else if eq $metadata.pageType "paper" }}论文解读{{ else }}研究栏目{{ end }}
+    {{- if eq $metadata.pageType "daily" }}每日音频研究{{ else if $metadata.isConferenceTask }}会议任务专题{{ else if eq $metadata.pageType "conference" }}会议总览{{ else if eq $metadata.pageType "paper" }}论文解读{{ else }}研究栏目{{ end }}
   </div>
   <header class="entry-header">
     <h2 class="entry-hint-parent">

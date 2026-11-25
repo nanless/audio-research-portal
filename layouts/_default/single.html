@@ -23,7 +23,7 @@
 <article class="post-single research-workbench{{ if $isPaper }} research-workbench--paper{{ else if $isDaily }} research-workbench--digest{{ end }}" data-pagefind-body data-reading-base-path="{{ (urls.Parse site.BaseURL).Path }}">
   <a class="skip-to-article" href="#article-body" data-pagefind-ignore="all">跳到正文</a>
   <header class="research-paper-header">
-    <span class="sr-only" data-pagefind-filter="类型">{{ if $isPaper }}论文解读{{ else if $isDaily }}每日速递{{ else }}会议专题{{ end }}</span>
+    <span class="sr-only" data-pagefind-filter="类型">{{ if $isPaper }}论文解读{{ else if $isDaily }}每日研究{{ else }}会议专题{{ end }}</span>
     <span class="sr-only" data-pagefind-filter="年份">{{ .Date.Format "2006" }}</span>
     {{- if $isPaper }}
     <span class="sr-only" data-pagefind-filter="来源">{{ if eq $metadata.sourceKind "conference" }}会议论文{{ else if eq $metadata.sourceKind "arxiv" }}arXiv{{ else }}其他{{ end }}</span>
@@ -42,7 +42,7 @@
     {{- end }}
     {{ partial "breadcrumbs.html" . }}
     <div class="rw-eyebrow">
-      {{- if $isDaily }}每日研究速递
+      {{- if $isDaily }}每日音频研究
       {{- else if $isConferenceSummary }}会议研究总览
       {{- else if $isTask }}会议任务专题
       {{- else }}论文深度解读

@@ -161,10 +161,10 @@ test('Hugo search index preserves source titles, spaced scores and conference da
   assert.match(readPage('icml2027-task-001'), /会议任务专题/);
   assert.match(readPage('special-edition'), /research-workbench--digest/);
   const home = fs.readFileSync(path.join(root, 'public', 'index.html'), 'utf8');
-  assert.match(home, /最新速递 · 09-05/);
+  assert.match(home, /最新日报 · 09-05/);
   assert.equal((home.match(/<article class="post-entry research-entry">/g) || []).length, 1);
   assert.doesNotMatch(home, /会议任务专题/);
   const archive = fs.readFileSync(path.join(root, 'public', 'archives', 'index.html'), 'utf8');
-  assert.match(archive, /1 期每日速递/);
+  assert.match(archive, /1 期每日研究/);
   assert.match(archive, /posts\/special-edition\//);
 });

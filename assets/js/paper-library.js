@@ -65,7 +65,7 @@
     var match = new URL(permalink).pathname.match(/\/posts\/([^/]+)\/?$/);
     if (!match) return 'other';
     var slug = match[1];
-    if (/^\d{4}-\d{2}-\d{2}$/.test(slug) || /论文速递\s+\d{4}-\d{2}-\d{2}/.test(title)) return 'daily';
+    if (/^\d{4}-\d{2}-\d{2}$/.test(slug) || /(?:论文速递|音频研究门户|音频研究日报|每日音频研究)\s+\d{4}-\d{2}-\d{2}/.test(title)) return 'daily';
     if (/^(icassp|iclr|icml)\d{4}-(summary|task-.+)$/.test(slug)) return 'conference';
     return 'paper';
   }
@@ -344,7 +344,7 @@
   var visibleCount = PAGE_SIZE;
 
   function typeLabel(type) {
-    return type === 'daily' ? '每日速递' : type === 'conference' ? '会议专题' : '论文解读';
+    return type === 'daily' ? '每日研究' : type === 'conference' ? '会议专题' : '论文解读';
   }
 
   function readState() {
@@ -883,7 +883,7 @@
     resultsNode.appendChild(empty);
     var retry = document.createElement('button'); retry.type = 'button'; retry.className = 'rw-action'; retry.textContent = '重新加载索引';
     retry.addEventListener('click', function () { startLoad(); }); empty.appendChild(retry);
-    var fallback = document.createElement('a'); fallback.href = new URL('archives/', new URL(siteBasePath || '/', window.location.origin)).href; fallback.className = 'rw-action'; fallback.textContent = '浏览速递归档'; empty.appendChild(fallback);
+    var fallback = document.createElement('a'); fallback.href = new URL('archives/', new URL(siteBasePath || '/', window.location.origin)).href; fallback.className = 'rw-action'; fallback.textContent = '浏览每日归档'; empty.appendChild(fallback);
     countNode.textContent = '论文索引载入失败';
     moreButton.hidden = true;
   }
