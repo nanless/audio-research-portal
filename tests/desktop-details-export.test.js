@@ -114,7 +114,7 @@ function createSyntheticRepoFixture(t, customize = null) {
     fs.writeFileSync(pubFile, buf);
     fs.writeFileSync(staticFile, buf);
     clientSidecars[name] = {
-      url: `/audio-paper-digest-blog/${sidecarPrefix}${name}`,
+      url: `/audio-research-portal/${sidecarPrefix}${name}`,
       sha256: sha256(buf),
       ...(name === 'rethink-context.json'
         ? { contract: contextJson.contract, schemaFingerprint: contextJson.schemaFingerprint }
@@ -162,7 +162,7 @@ function createSyntheticRepoFixture(t, customize = null) {
       '正文'
     ].join('\n'),
     htmlBody: `<h2>导读</h2><p>公式 \\(0 < w_i < 1\\) 且二值化阈值 <code>onset=0.5</code>。</p>`
-      + `<img src=/audio-paper-digest-blog/${localImgRel} alt="Figure 1">`
+      + `<img src=/audio-research-portal/${localImgRel} alt="Figure 1">`
   });
 
   // 2. Duplicate appearance of the SAME arXiv paper on another day (tests paperCount deduplication!)
@@ -251,7 +251,7 @@ function createSyntheticRepoFixture(t, customize = null) {
       '---',
       '日报汇总'
     ].join('\n'),
-    htmlBody: `<p>今日共收录论文：</p><ul><li><a href=/audio-paper-digest-blog/posts/${arxivSlug}/>第一篇</a></li></ul>`
+    htmlBody: `<p>今日共收录论文：</p><ul><li><a href=/audio-research-portal/posts/${arxivSlug}/>第一篇</a></li></ul>`
   });
 
   const confSummarySlug = 'interspeech2026-summary';
@@ -266,7 +266,7 @@ function createSyntheticRepoFixture(t, customize = null) {
       '---',
       '会议汇总'
     ].join('\n'),
-    htmlBody: `<p>本届会议论文：</p><ul><li><a href="https://nanless.github.io/audio-paper-digest-blog/posts/${confSlug}/">会议论文 A26</a></li></ul>`
+    htmlBody: `<p>本届会议论文：</p><ul><li><a href="https://nanless.github.io/audio-research-portal/posts/${confSlug}/">会议论文 A26</a></li></ul>`
   });
 
   fs.mkdirSync(path.join(buildDir, 'about'), { recursive: true });
@@ -277,7 +277,7 @@ function createSyntheticRepoFixture(t, customize = null) {
       title: citationJson.originalTitle,
       titleZh: contextJson.readerTitle,
       originalTitle: citationJson.originalTitle,
-      permalink: `/audio-paper-digest-blog/posts/${arxivSlug}/`,
+      permalink: `/audio-research-portal/posts/${arxivSlug}/`,
       summary: 'AI 生成的网站短摘要（绝不能冒充原摘要）',
       date: '2026-11-02',
       pageType: 'paper',
@@ -317,7 +317,7 @@ function createSyntheticRepoFixture(t, customize = null) {
         url: citationJson.absUrl,
         sourceUrl: citationJson.absUrl,
         pdfUrl: citationJson.pdfUrl,
-        pageUrl: `https://nanless.github.io/audio-paper-digest-blog/posts/${arxivSlug}/`,
+        pageUrl: `https://nanless.github.io/audio-research-portal/posts/${arxivSlug}/`,
         pageType: 'paper'
       })
     },
@@ -325,7 +325,7 @@ function createSyntheticRepoFixture(t, customize = null) {
       title: citationJson.originalTitle,
       titleZh: '第二次专题复盘标题',
       originalTitle: citationJson.originalTitle,
-      permalink: `/audio-paper-digest-blog/posts/${duplicateArxivSlug}/`,
+      permalink: `/audio-research-portal/posts/${duplicateArxivSlug}/`,
       summary: '第二次导读短摘要',
       date: '2026-11-03',
       pageType: 'paper',
@@ -356,7 +356,7 @@ function createSyntheticRepoFixture(t, customize = null) {
         url: `https://arxiv.org/abs/${citationJson.arxivId}v2`,
         sourceUrl: `https://arxiv.org/abs/${citationJson.arxivId}v2`,
         pdfUrl: `https://arxiv.org/pdf/${citationJson.arxivId}v2.pdf`,
-        pageUrl: `https://nanless.github.io/audio-paper-digest-blog/posts/${duplicateArxivSlug}/`,
+        pageUrl: `https://nanless.github.io/audio-research-portal/posts/${duplicateArxivSlug}/`,
         pageType: 'paper'
       })
     },
@@ -364,7 +364,7 @@ function createSyntheticRepoFixture(t, customize = null) {
       title: 'Neural Codec Language Models for Speech',
       titleZh: '用于语音的神经编解码语言模型',
       originalTitle: 'Neural Codec Language Models for Speech',
-      permalink: `/audio-paper-digest-blog/posts/${confSlug}/`,
+      permalink: `/audio-research-portal/posts/${confSlug}/`,
       summary: '会议论文一句话网站总结',
       date: '2026-09-15',
       pageType: 'paper',
@@ -395,14 +395,14 @@ function createSyntheticRepoFixture(t, customize = null) {
         url: 'https://www.isca-archive.org/interspeech_2026/a26.html',
         sourceUrl: 'https://www.isca-archive.org/interspeech_2026/a26.html',
         pdfUrl: 'https://www.isca-archive.org/interspeech_2026/a26.pdf',
-        pageUrl: `https://nanless.github.io/audio-paper-digest-blog/posts/${confSlug}/`,
+        pageUrl: `https://nanless.github.io/audio-research-portal/posts/${confSlug}/`,
         pageType: 'paper'
       })
     },
     {
       title: '早期中文历史笔记标题',
       titleZh: '早期中文历史笔记标题',
-      permalink: `/audio-paper-digest-blog/posts/${unverifiedSlug}/`,
+      permalink: `/audio-research-portal/posts/${unverifiedSlug}/`,
       summary: '早期历史导读摘要',
       date: '2025-12-01',
       pageType: 'paper',
@@ -416,7 +416,7 @@ function createSyntheticRepoFixture(t, customize = null) {
       tagContract: '',
       tagConcepts: [],
       citation: protocols.record('paper-citation-source', {
-        paperKey: `page:/audio-paper-digest-blog/posts/${unverifiedSlug}/`,
+        paperKey: `page:/audio-research-portal/posts/${unverifiedSlug}/`,
         paperId: '',
         identityStatus: 'unknown',
         verified: false,
@@ -431,7 +431,7 @@ function createSyntheticRepoFixture(t, customize = null) {
         url: '',
         sourceUrl: '',
         pdfUrl: '',
-        pageUrl: `https://nanless.github.io/audio-paper-digest-blog/posts/${unverifiedSlug}/`,
+        pageUrl: `https://nanless.github.io/audio-research-portal/posts/${unverifiedSlug}/`,
         pageType: 'paper'
       })
     },
@@ -439,7 +439,7 @@ function createSyntheticRepoFixture(t, customize = null) {
       title: 'Version Warning Paper',
       titleZh: '版本披露样本论文',
       originalTitle: 'Version Warning Paper',
-      permalink: `/audio-paper-digest-blog/posts/${warningSlug}/`,
+      permalink: `/audio-research-portal/posts/${warningSlug}/`,
       summary: '带版本警告的样本',
       date: '2026-08-03',
       pageType: 'paper',
@@ -470,7 +470,7 @@ function createSyntheticRepoFixture(t, customize = null) {
         url: 'https://arxiv.org/abs/2607.28687v1',
         sourceUrl: 'https://arxiv.org/abs/2607.28687v1',
         pdfUrl: 'https://arxiv.org/pdf/2607.28687',
-        pageUrl: `https://nanless.github.io/audio-paper-digest-blog/posts/${warningSlug}/`,
+        pageUrl: `https://nanless.github.io/audio-research-portal/posts/${warningSlug}/`,
         pageType: 'paper',
         sourceVersionWarning: warningText,
         provenanceDisclosure: '历史补充封存来源披露',
@@ -490,7 +490,7 @@ function createSyntheticRepoFixture(t, customize = null) {
     {
       title: '语音/音乐/音频论文速递 2026-11-02',
       titleZh: '语音/音乐/音频论文速递 2026-11-02',
-      permalink: `/audio-paper-digest-blog/posts/${dailySummarySlug}/`,
+      permalink: `/audio-research-portal/posts/${dailySummarySlug}/`,
       summary: '共分析 1 篇论文',
       date: '2026-11-02',
       pageType: 'daily',
@@ -503,7 +503,7 @@ function createSyntheticRepoFixture(t, customize = null) {
       tagContract: '',
       tagConcepts: [],
       citation: protocols.record('paper-citation-source', {
-        paperKey: `page:/audio-paper-digest-blog/posts/${dailySummarySlug}/`,
+        paperKey: `page:/audio-research-portal/posts/${dailySummarySlug}/`,
         paperId: '',
         identityStatus: 'unknown',
         verified: false,
@@ -518,14 +518,14 @@ function createSyntheticRepoFixture(t, customize = null) {
         url: '',
         sourceUrl: '',
         pdfUrl: '',
-        pageUrl: `https://nanless.github.io/audio-paper-digest-blog/posts/${dailySummarySlug}/`,
+        pageUrl: `https://nanless.github.io/audio-research-portal/posts/${dailySummarySlug}/`,
         pageType: 'daily'
       })
     },
     {
       title: 'Interspeech 2026 论文总览',
       titleZh: 'Interspeech 2026 论文总览',
-      permalink: `/audio-paper-digest-blog/posts/${confSummarySlug}/`,
+      permalink: `/audio-research-portal/posts/${confSummarySlug}/`,
       summary: '共分析 1 篇会议论文',
       date: '2026-09-15',
       pageType: 'conference',
@@ -538,7 +538,7 @@ function createSyntheticRepoFixture(t, customize = null) {
       tagContract: '',
       tagConcepts: [],
       citation: protocols.record('paper-citation-source', {
-        paperKey: `page:/audio-paper-digest-blog/posts/${confSummarySlug}/`,
+        paperKey: `page:/audio-research-portal/posts/${confSummarySlug}/`,
         paperId: '',
         identityStatus: 'unknown',
         verified: false,
@@ -553,14 +553,14 @@ function createSyntheticRepoFixture(t, customize = null) {
         url: '',
         sourceUrl: '',
         pdfUrl: '',
-        pageUrl: `https://nanless.github.io/audio-paper-digest-blog/posts/${confSummarySlug}/`,
+        pageUrl: `https://nanless.github.io/audio-research-portal/posts/${confSummarySlug}/`,
         pageType: 'conference'
       })
     },
     {
       title: '关于与使用方法',
       titleZh: '关于与使用方法',
-      permalink: '/audio-paper-digest-blog/about/',
+      permalink: '/audio-research-portal/about/',
       summary: '站点说明页',
       date: '2026-05-01',
       pageType: 'page',
@@ -573,7 +573,7 @@ function createSyntheticRepoFixture(t, customize = null) {
       tagContract: '',
       tagConcepts: [],
       citation: protocols.record('paper-citation-source', {
-        paperKey: 'page:/audio-paper-digest-blog/about/',
+        paperKey: 'page:/audio-research-portal/about/',
         paperId: '',
         identityStatus: 'unknown',
         verified: false,
@@ -588,7 +588,7 @@ function createSyntheticRepoFixture(t, customize = null) {
         url: '',
         sourceUrl: '',
         pdfUrl: '',
-        pageUrl: 'https://nanless.github.io/audio-paper-digest-blog/about/',
+        pageUrl: 'https://nanless.github.io/audio-research-portal/about/',
         pageType: 'page'
       })
     }

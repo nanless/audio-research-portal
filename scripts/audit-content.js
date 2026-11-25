@@ -3,7 +3,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 
-const SITE_POST_PREFIX = '/audio-paper-digest-blog/posts/';
+const SITE_POST_PREFIX = '/audio-research-portal/posts/';
+const LEGACY_SITE_POST_PREFIX = '/audio-paper-digest-blog/posts/';
 const TAG_EDGE_POLLUTION = /^[\s、，。、；：！？`]|[\s、，。、；：！？`]$/u;
 const ARXIV_ID_PATTERN = /^[0-9]{4}\.[0-9]{4,5}$/;
 
@@ -122,6 +123,7 @@ function normalizePostRoute(value) {
     return '';
   }
   if (pathname.startsWith(SITE_POST_PREFIX)) pathname = `/posts/${pathname.slice(SITE_POST_PREFIX.length)}`;
+  else if (pathname.startsWith(LEGACY_SITE_POST_PREFIX)) pathname = `/posts/${pathname.slice(LEGACY_SITE_POST_PREFIX.length)}`;
   if (!pathname.startsWith('/posts/')) return '';
   pathname = pathname.replace(/\/+$/, '');
   return `${pathname}/`;
@@ -211,7 +213,7 @@ function auditContent(repoRoot, options = {}) {
     }
   }
 
-  const linkPattern = /\]\(\s*<?(\/audio-paper-digest-blog\/posts\/[^\s)>?#]+\/?)(?:[?#][^\s)>]*)?>?\s*\)/g;
+  const linkPattern = /\]\(\s*<?(\/(?:audio-research-portal|audio-paper-digest-blog)\/posts\/[^\s)>?#]+\/?)(?:[?#][^\s)>]*)?>?\s*\)/g;
   let linkCount = 0;
   for (const record of records) {
     const starts = lineStarts(record.source);

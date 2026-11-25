@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { createHash } = require('node:crypto');
 const { CONTRACT, officialImage } = require('./select-edition-feature');
-const PREFIX = '/audio-paper-digest-blog';
+const PREFIX = '/audio-research-portal';
 
 function check(value, message) { if (!value) throw new Error(`首页论文封面检查：${message}`); }
 function decode(value) {
@@ -100,7 +100,7 @@ function verifyEditionFeature(buildDir, manifest) {
     check(image && image[1] === record.arxivId, '本地图不属于选中论文');
     expectedImage = prefixed(record.imagePath);
     if (Object.hasOwn(record, 'renderedImageUrl')) {
-      check(typeof record.renderedImageUrl === 'string' && record.renderedImageUrl.replace(/^\/audio-paper-digest-blog(?=\/)/, '') === record.imagePath, '本地图映射的渲染地址与清单不一致');
+      check(typeof record.renderedImageUrl === 'string' && record.renderedImageUrl.replace(/^\/(?:audio-research-portal|audio-paper-digest-blog)(?=\/)/, '') === record.imagePath, '本地图映射的渲染地址与清单不一致');
       check(officialSource(record), '映射原图不属于论文的同一 arXiv 版本');
     } else check(record.sourceImageUrl === record.imagePath || record.sourceImageUrl === expectedImage, '本地图的正文来源地址不一致');
     const imageFile = path.join(root, record.imagePath.slice(1));

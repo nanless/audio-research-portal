@@ -71,4 +71,4 @@ guide_actions:
 
 用[每日归档](../archives/)回看速递，或通过[RSS](../index.xml)跟踪更新。
 
-如果发现题目、身份、数字、公式、链接或结论边界有误，请[提交勘误](https://github.com/nanless/audio-paper-digest-blog/issues/new)，附上导读页面、官方论文链接与版本、原文位置，以及需要修正的内容。可核查的证据能帮助我们准确定位问题。
+如果发现题目、身份、数字、公式、链接或结论边界有误，请[提交勘误](https://github.com/nanless/audio-research-portal/issues/new)，附上导读页面、官方论文链接与版本、原文位置，以及需要修正的内容。可核查的证据能帮助我们准确定位问题。

@@ -8,6 +8,11 @@
 */ -}}
 {{- with index hugo.Data.arxiv_image_map .Destination -}}
   {{- $src = . -}}
+  {{- $siteBasePath := (urls.Parse site.BaseURL).Path -}}
+  {{- if not (hasSuffix $siteBasePath "/") }}{{ $siteBasePath = printf "%s/" $siteBasePath }}{{ end -}}
+  {{- if and (ne $siteBasePath "/audio-paper-digest-blog/") (hasPrefix $src "/audio-paper-digest-blog/") -}}
+    {{- $src = printf "%s%s" $siteBasePath (strings.TrimPrefix "/audio-paper-digest-blog/" $src) -}}
+  {{- end -}}
 {{- end -}}
 {{- if not $u.IsAbs -}}
   {{- $path := strings.TrimPrefix "./" $u.Path }}

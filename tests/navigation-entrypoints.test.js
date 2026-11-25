@@ -14,7 +14,7 @@ test('real Hugo gives separate generation destinations, accessible navigation, r
     fs.mkdirSync(path.join(temp, 'content/posts'), { recursive: true });
     fs.mkdirSync(path.join(temp, 'data'));
     // Empty signed collections keep this a layout fixture, never a synthetic classification.
-    let config = fs.readFileSync(path.join(root, 'hugo.yaml'), 'utf8').replace('https://nanless.github.io/audio-paper-digest-blog/', 'https://example.test/blog/').replace('pagerSize: 20', 'pagerSize: 2').replace('enableGitInfo: true', 'enableGitInfo: false');
+    let config = fs.readFileSync(path.join(root, 'hugo.yaml'), 'utf8').replace('https://nanless.github.io/audio-research-portal/', 'https://example.test/blog/').replace('pagerSize: 20', 'pagerSize: 2').replace('enableGitInfo: true', 'enableGitInfo: false');
     config += '\nstaticDir: []\ndisableKinds: [taxonomy, term, sitemap, robotsTXT]\n';
     fs.writeFileSync(path.join(temp, 'hugo.yaml'), config);
     for (let day = 1; day <= 6; day++) {

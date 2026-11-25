@@ -29,7 +29,7 @@ function filesUnder(root) {
 
 // This checks rendered navigation, not the scientific accuracy of article text.
 // Read one document at a time; retain only IDs and local fragment references.
-function verifyPageNavigation(buildDir, baseUrl = 'https://nanless.github.io/audio-paper-digest-blog/') {
+function verifyPageNavigation(buildDir, baseUrl = 'https://nanless.github.io/audio-research-portal/') {
   const root = path.resolve(buildDir);
   const base = new URL(baseUrl);
   const files = filesUnder(root);
@@ -75,6 +75,10 @@ function verifyPageNavigation(buildDir, baseUrl = 'https://nanless.github.io/aud
       references += 1;
       let url;
       try { url = new URL(href, documentUrl); } catch { fail(relative, `无效链接 ${href}`); continue; }
+      if (url.origin === base.origin && base.pathname !== '/audio-paper-digest-blog/' && url.pathname.startsWith('/audio-paper-digest-blog/')) {
+        fail(relative, `站内链接泄漏旧站点前缀 ${href}`);
+        continue;
+      }
       if (url.origin !== base.origin || !url.pathname.startsWith(base.pathname)) continue;
       let target;
       let fragment;

@@ -25,7 +25,7 @@
       {{- end -}}
     {{- end -}}
     {{- $audioUrl := printf "%s" (or $episode.audioUrl $episode.audio_url "") -}}
-    {{- $validAudio := and (ne $audioUrl "") (gt (len (findRE `^https://github\.com/nanless/audio-paper-digest(?:-blog)?/releases/download/[A-Za-z0-9._-]{1,128}/[A-Za-z0-9._-]{1,128}\.mp3$` $audioUrl 1)) 0) (not (in $audioUrl "..")) (not (in $audioUrl "/releases/download/./")) (not (hasSuffix $audioUrl "/.mp3")) -}}
+    {{- $validAudio := and (ne $audioUrl "") (gt (len (findRE `^https://github\.com/nanless/(?:audio-paper-digest(?:-blog)?|audio-research-(?:workbench|portal))/releases/download/[A-Za-z0-9._-]{1,128}/[A-Za-z0-9._-]{1,128}\.mp3$` $audioUrl 1)) 0) (not (in $audioUrl "..")) (not (in $audioUrl "/releases/download/./")) (not (hasSuffix $audioUrl "/.mp3")) -}}
     {{- if $validAudio -}}
       {{- $siteBasePath := (urls.Parse site.BaseURL).Path -}}
       {{- if not (hasSuffix $siteBasePath "/") }}{{ $siteBasePath = printf "%s/" $siteBasePath }}{{ end -}}

@@ -7,7 +7,7 @@ const path = require('node:path');
 const { createHash } = require('node:crypto');
 const test = require('node:test');
 const { verifyEditionFeature } = require('../scripts/verify-edition-feature');
-const PREFIX = '/audio-paper-digest-blog';
+const PREFIX = '/audio-research-portal';
 
 function fixture(t, { local = false, escaped = false } = {}) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'verify-edition-feature-'));
@@ -50,7 +50,7 @@ test('real Hugo minified unquoted trailing-slash CTA, paper H3 and read links ke
   for (const relative of Object.keys(f.files)) {
     f.change(relative, html => html.replace(/href="([^"\s]+)"/g, 'href=$1').replace(/>\s+</g, '><'));
   }
-  assert.match(f.files['index.html'], /href=\/audio-paper-digest-blog\/posts\/2026-10-20\/>阅读本期完整速递/);
+  assert.match(f.files['index.html'], /href=\/audio-research-portal\/posts\/2026-10-20\/>阅读本期完整速递/);
   assert.match(f.files['index.html'], /class=edition-feature__read href=[^>]+\/>读这篇完整解读/);
   assert.match(f.files['posts/2026-10-20/index.html'], /<h3><a href=[^>]+\/>1\. DF-PALM/);
   assert.equal(verifyEditionFeature(f.root, f.manifest).memberCount, 1);

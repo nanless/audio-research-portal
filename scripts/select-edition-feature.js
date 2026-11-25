@@ -31,7 +31,7 @@ function readPage(file) {
 }
 function postRoute(url) {
   // Exact site-local routes, without URL normalization hiding traversal.
-  const match = String(url).match(/^\/(?:audio-paper-digest-blog\/)?posts\/([a-z0-9][a-z0-9-]*)\/?$/);
+  const match = String(url).match(/^\/(?:(?:audio-research-portal|audio-paper-digest-blog)\/)?posts\/([a-z0-9][a-z0-9-]*)\/?$/);
   return match ? `/posts/${match[1]}/` : '';
 }
 function membersOf(page) {
@@ -135,7 +135,7 @@ function imageMapOf(root) {
   } catch (_) { return null; }
 }
 function localImage(root, url, arxivId, mapped = false) {
-  const relative = String(url).replace(/^\/audio-paper-digest-blog(?=\/)/, '');
+  const relative = String(url).replace(/^\/(?:audio-research-portal|audio-paper-digest-blog)(?=\/)/, '');
   const match = relative.match(/^\/images\/papers\/([0-9]{4}\.[0-9]{4,5})\/figure-([0-9]+)-([a-f0-9]{16})\.(png|svg)$/);
   if (!match || match[1] !== arxivId) return null;
   const file = path.join(root, 'static' + relative);

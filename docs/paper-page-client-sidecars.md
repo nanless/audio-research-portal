@@ -4,7 +4,7 @@
 
 ## 现行字段集合
 
-声明是一个以文件名为键的对象，键集合必须正好是 `citation.json`、`citation.bib`、`citation.ris`、`rethink-context.json`，不能多也不能少。四个文件放在同一个目录，地址形如 `<站点基础路径>/client/papers/<日期>/<论文标识>/<文件名>`；本站当前的基础路径是 `/audio-paper-digest-blog`。
+声明是一个以文件名为键的对象，键集合必须正好是 `citation.json`、`citation.bib`、`citation.ris`、`rethink-context.json`，不能多也不能少。四个文件放在同一个目录，地址形如 `<站点基础路径>/client/papers/<日期>/<论文标识>/<文件名>`；本站当前的基础路径是 `/audio-research-portal`（历史文章中保留的旧前缀 `/audio-paper-digest-blog` 在构建渲染阶段自动归一化）。
 
 `citation.json`、`citation.bib`、`citation.ris` 每条记录只有两个字段：
 

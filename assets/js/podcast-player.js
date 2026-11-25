@@ -15,7 +15,7 @@
 }(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
 
-  var AUDIO_URL_PATTERN = /^https:\/\/github\.com\/nanless\/audio-paper-digest(?:-blog)?\/releases\/download\/([A-Za-z0-9._-]{1,128})\/([A-Za-z0-9._-]{1,128})\.mp3$/;
+  var AUDIO_URL_PATTERN = /^https:\/\/github\.com\/nanless\/(?:audio-paper-digest(?:-blog)?|audio-research-(?:workbench|portal))\/releases\/download\/([A-Za-z0-9._-]{1,128})\/([A-Za-z0-9._-]{1,128})\.mp3$/;
   var ALLOWED_RATES = [0.75, 1.0, 1.25, 1.5, 2.0];
 
   function isAllowedPodcastAudioUrl(url) {

@@ -350,6 +350,8 @@ test('Track 12.4: Audio quick-spec card, Demo CTA, collapsible 8+ authors, Daily
     assert.doesNotMatch(indexHtml, /展开其余\s*\d+\s*段核心摘要/, 'abstract fold summary label must never appear');
     assert.match(indexHtml, /<p>第一段核心摘要完整显示，交代任务背景与核心痛点。<\/p>\s*<p>第二段方法细节同样直接展示，不再折叠。<\/p>\s*<p>第三段实验与适用边界完整呈现，无论多长都不折叠。<\/p>/);
     assert.match(indexHtml, /<p>只有一段核心摘要时同样完整显示。<\/p>/);
+    assert.doesNotMatch(indexHtml, /\/audio-paper-digest-blog\//, 'legacy site-relative links in untouched historical Markdown must normalize to /audio-research-portal/');
+    assert.match(indexHtml, /href=["']?\/audio-research-portal\/posts\/2026-11-24-paper-full-spec-2611-91001["']?/);
 
     // 4. Verify EVERY exported client/details/articles/*.html (5 papers + 1 daily index) strictly obeys v1.4.6 allowlist
     const articlesDir = path.join(buildDir, 'client/details/articles');

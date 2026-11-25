@@ -46,7 +46,7 @@ const {
 } = require('./export-resource-badges');
 
 const SITE_ORIGIN = 'https://nanless.github.io';
-const SITE_PREFIX = '/audio-paper-digest-blog/';
+const SITE_PREFIX = '/audio-research-portal/';
 const MAX_RSS_BYTES = 256 * 1024;
 const MAX_INDEX_BYTES = 8 * 1024 * 1024;
 

@@ -1,6 +1,6 @@
 # 博客生成、审查、推送与上线
 
-本页说明页面怎样从论文速递主仓库进入本站，以及本站的构建、部署和上线核验。生成、审查和推送在 `$HOME/code/github_repos/audio-paper-digest` 执行；本站保存页面、资源和站点代码，并负责站点构建、验证与部署。来源准备、分析、Reader 写作和费用规则见主仓库的 `AGENTS.md` 与 `docs/three-workflows.md`，本页不重复。
+本页说明页面怎样从论文速递主仓库进入本站，以及本站的构建、部署和上线核验。生成、审查和推送在 `$HOME/code/github_repos/audio-research-workbench` 执行；本站保存页面、资源和站点代码，并负责站点构建、验证与部署。来源准备、分析、Reader 写作和费用规则见主仓库的 `AGENTS.md` 与 `docs/three-workflows.md`，本页不重复。
 
 ## 三个阶段
 
@@ -34,7 +34,7 @@ CI 的 `.github/workflows/hugo.yaml` 固定 Hugo 0.160.1（extended）和 Node 2
 
 ## 部署与逐页核验
 
-推送到 `main` 会触发上面的 Pages 流程。部署任务成功只说明构建和部署动作完成；对用户宣告博客已上线前，还要逐页核验目标日期的汇总页和本批每篇论文页：正式地址是否正确、是否返回 HTTP 200、页面标题是否与生成清单一致。目标地址以站点基础路径 `https://nanless.github.io/audio-paper-digest-blog/` 为准，例如汇总页 `https://nanless.github.io/audio-paper-digest-blog/posts/YYYY-MM-DD/`。
+推送到 `main` 会触发上面的 Pages 流程。部署任务成功只说明构建和部署动作完成；对用户宣告博客已上线前，还要逐页核验目标日期的汇总页和本批每篇论文页：正式地址是否正确、是否返回 HTTP 200、页面标题是否与生成清单一致。目标地址以站点基础路径 `https://nanless.github.io/audio-research-portal/` 为准，例如汇总页 `https://nanless.github.io/audio-research-portal/posts/YYYY-MM-DD/`。
 
 在论文速递主仓库运行 `npm run digest:status -- --date YYYY-MM-DD`；其中的 `remoteOidVerified` 只证明 Git 提交已到远端，不能代替部署结果和网页核验。部署失败时先读失败任务的日志，修复后继续检查；`digest:status` 显示 complete 也不能跳过这一步。
 

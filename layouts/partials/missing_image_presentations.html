@@ -37,12 +37,18 @@
                   {{- $sourceContextValid := and $sourcePage.File (eq $sourcePage.File.Path $path) (eq $sourceRule.headingHTML "") -}}
                   {{- $paperHeadings := slice -}}
                   {{- range findRE `(?s)<h3\b[^>]*>.*?</h3>` $originalPrefix -}}
-                    {{- if findRE `href="/audio-paper-digest-blog/posts/[^"<>]+"` . 1 }}{{ $paperHeadings = $paperHeadings | append . }}{{ end -}}
+                    {{- if findRE `href="/(?:audio-research-portal|audio-paper-digest-blog)/posts/[^"<>]+"` . 1 }}{{ $paperHeadings = $paperHeadings | append . }}{{ end -}}
                   {{- end -}}
                   {{- with $paperHeadings -}}
                     {{- $heading := index . (sub (len .) 1) -}}
-                    {{- $targetHref := printf `href="%s"` (strings.TrimSuffix "/" $sourcePage.RelPermalink) -}}
-                    {{- $sourceContextValid = and (eq $heading $sourceRule.headingHTML) (or (in $heading $targetHref) (in $heading (printf `href="%s"` $sourcePage.RelPermalink))) -}}
+                    {{- $siteBasePath := (urls.Parse $page.Site.BaseURL).Path -}}
+                    {{- if not (hasSuffix $siteBasePath "/") }}{{ $siteBasePath = printf "%s/" $siteBasePath }}{{ end -}}
+                    {{- $relNoSlash := strings.TrimSuffix "/" $sourcePage.RelPermalink -}}
+                    {{- $targetHref := printf `href="%s"` $relNoSlash -}}
+                    {{- $legacyRelNoSlash := printf "/audio-paper-digest-blog/%s" (strings.TrimPrefix $siteBasePath $relNoSlash) -}}
+                    {{- $legacyTargetHref := printf `href="%s"` $legacyRelNoSlash -}}
+                    {{- $matchesTarget := or (in $heading $targetHref) (in $heading (printf `href="%s"` $sourcePage.RelPermalink)) (in $heading $legacyTargetHref) (in $heading (printf `href="%s/"` $legacyRelNoSlash)) -}}
+                    {{- $sourceContextValid = and (eq $heading $sourceRule.headingHTML) $matchesTarget -}}
                   {{- end -}}
                   {{- if and $sourceContextValid $sourcePage.File $citation.verified (eq $citation.pageType "paper") (eq $sourceRule.identityStatus "verified") (eq $sourceRule.committedFileSha256 (crypto.SHA256 (readFile (printf "content/%s" $sourcePage.File.Path)))) (eq $sourceRule.rawContentSha256 (crypto.SHA256 $sourcePage.RawContent)) (eq $sourceRule.paperId $citation.paperId) (eq $sourceRule.sourceUrl $citation.sourceUrl) (eq $sourceRule.pdfUrl $citation.pdfUrl) -}}
                     {{- $url := $citation.sourceUrl -}}{{- $label := "查看官方论文页" -}}

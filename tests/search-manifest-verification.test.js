@@ -12,7 +12,7 @@ test('build verification closes every shard, record, byte and SHA against the ma
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'verify-shards-'));
   t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
   const row = {title:'Original title',titleZh:'中文标题',summary:'Evidence',date:'2026-09-30',
-    pageType:'paper',tags:['语音识别'],permalink:'/audio-paper-digest-blog/posts/verified/'};
+    pageType:'paper',tags:['语音识别'],permalink:'/audio-research-portal/posts/verified/'};
   fs.writeFileSync(path.join(root,'index.json'),JSON.stringify([row]));
   const manifest=shardIndex(root);
   assert.equal(verifySearchManifest(manifest,root).itemCount,1);

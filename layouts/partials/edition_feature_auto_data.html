@@ -24,7 +24,9 @@
         {{- $links := findRE `\]\(/[^)]+\)` . -}}
         {{- if eq (len $links) 1 -}}
           {{- $target := strings.TrimPrefix "](" (strings.TrimSuffix ")" (index $links 0)) -}}
-          {{- $route := printf "/%s" (strings.TrimPrefix "/" (strings.TrimPrefix site.Home.RelPermalink $target)) -}}
+          {{- $strippedTarget := strings.TrimPrefix site.Home.RelPermalink $target -}}
+          {{- if eq $strippedTarget $target }}{{ $strippedTarget = strings.TrimPrefix "/audio-paper-digest-blog/" $target }}{{ end -}}
+          {{- $route := printf "/%s" (strings.TrimPrefix "/" $strippedTarget) -}}
           {{- if eq (strings.TrimSuffix "/" $route) (strings.TrimSuffix "/" $paperPath) }}{{ $members = add $members 1 }}{{ end -}}
         {{- end -}}
       {{- end -}}
@@ -50,10 +52,14 @@
       {{- $valid = and $valid $safePath (fileExists $imageFile) -}}
       {{- if $valid -}}
         {{- $imageUrl = strings.TrimPrefix "/" $imagePath | relURL -}}
-        {{- $sourcePath := printf "/%s" (strings.TrimPrefix "/" (strings.TrimPrefix site.Home.RelPermalink $imageSource)) -}}
+        {{- $strippedSource := strings.TrimPrefix site.Home.RelPermalink $imageSource -}}
+        {{- if eq $strippedSource $imageSource }}{{ $strippedSource = strings.TrimPrefix "/audio-paper-digest-blog/" $imageSource }}{{ end -}}
+        {{- $sourcePath := printf "/%s" (strings.TrimPrefix "/" $strippedSource) -}}
         {{- $sourceMatches := eq $sourcePath $imagePath -}}
         {{- with $record.renderedImageUrl -}}
-          {{- $mappedPath := printf "/%s" (strings.TrimPrefix "/" (strings.TrimPrefix site.Home.RelPermalink .)) -}}
+          {{- $strippedMapped := strings.TrimPrefix site.Home.RelPermalink . -}}
+          {{- if eq $strippedMapped . }}{{ $strippedMapped = strings.TrimPrefix "/audio-paper-digest-blog/" . }}{{ end -}}
+          {{- $mappedPath := printf "/%s" (strings.TrimPrefix "/" $strippedMapped) -}}
           {{- $sourceMatches = and $officialSource (eq (index (hugo.Data.arxiv_image_map | default dict) $imageSource) .) (eq $mappedPath $imagePath) -}}
         {{- end -}}
         {{- $valid = and $sourceMatches (eq (crypto.SHA256 (readFile $imageFile)) ($record.imageSha256 | default "")) (gt (int ($record.width | default 0)) 0) (gt (int ($record.height | default 0)) 0) -}}

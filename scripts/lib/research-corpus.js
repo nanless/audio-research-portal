@@ -53,7 +53,7 @@ function parseBasePath(repoRoot) {
       }
     } catch (_) { /* fall through */ }
   }
-  return '/audio-paper-digest-blog/';
+  return '/audio-research-portal/';
 }
 
 const RELEVANT_FM_KEYS = new Set([

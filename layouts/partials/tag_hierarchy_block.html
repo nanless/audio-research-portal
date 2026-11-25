@@ -46,7 +46,13 @@
 {{- end -}}
 {{- $markdown = printf "%s\n<!--paper-tag-hierarchy-v1:end-->" $markdown -}}
 {{- $expected := printf "%s" (.page.RenderString (dict "display" "block") $markdown) -}}
-{{- if and $valid (eq (strings.TrimSpace $block) (strings.TrimSpace $expected)) -}}
+{{- $papersUrl := "papers/" | relURL -}}
+{{- $legacyExpected := "" -}}
+{{- if ne $papersUrl "/audio-paper-digest-blog/papers/" -}}
+  {{- $legacyExpected = replace $expected (printf `href="%s?concept=` $papersUrl) `href="/audio-paper-digest-blog/papers/?concept=` -}}
+{{- end -}}
+{{- $trimmedBlock := strings.TrimSpace $block -}}
+{{- if and $valid (or (eq $trimmedBlock (strings.TrimSpace $expected)) (and (ne $legacyExpected "") (eq $trimmedBlock (strings.TrimSpace $legacyExpected)))) -}}
   {{- $cards := partial "tag_hierarchy_cards.html" (dict "selected" $selected "concepts" $concepts) -}}
   {{- $block = printf `<section class="paper-tags paper-tags--aggregate" aria-label="论文研究分类"><p class="paper-tags__title"><strong>研究分类</strong></p>%s</section>` $cards -}}
 {{- end -}}

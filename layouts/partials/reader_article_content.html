@@ -844,6 +844,13 @@
       {{- end -}}
     {{- end -}}
   {{- end -}}
+  {{- /* Rewrite legacy site-relative links/images from untouched historical Markdown after all raw-content SHA checks. */ -}}
+  {{- $siteBasePath := (urls.Parse site.BaseURL).Path -}}
+  {{- if not (hasSuffix $siteBasePath "/") }}{{ $siteBasePath = printf "%s/" $siteBasePath }}{{ end -}}
+  {{- if and (ne $siteBasePath "/audio-paper-digest-blog/") (in $content "/audio-paper-digest-blog/") -}}
+    {{- $content = replace $content `href="/audio-paper-digest-blog/` (printf `href="%s` $siteBasePath) -}}
+    {{- $content = replace $content `src="/audio-paper-digest-blog/` (printf `src="%s` $siteBasePath) -}}
+  {{- end -}}
   {{- range $marker, $block := $protected -}}{{- $content = replace $content $marker $block -}}{{- end -}}
 {{- end -}}
 {{- return $content -}}

@@ -525,9 +525,11 @@ test('Deliverable 3.1 (Wave 14.3): daily_podcast_player stays strictly outside #
   assert.doesNotMatch(playerJsSrc, /cdn\.jsdelivr\.net|unpkg\.com|cdnjs\.cloudflare\.com/i);
   assert.match(playerJsSrc, /textContent/);
 
-  // URL allowlist unit tests
+  // URL allowlist unit tests (both legacy and renamed repositories)
   assert.equal(podcastPlayer.isAllowedPodcastAudioUrl('https://github.com/nanless/audio-paper-digest/releases/download/podcast-2026-11-24/daily-2026-11-24.mp3'), true);
   assert.equal(podcastPlayer.isAllowedPodcastAudioUrl('https://github.com/nanless/audio-paper-digest-blog/releases/download/v1/ep.mp3'), true);
+  assert.equal(podcastPlayer.isAllowedPodcastAudioUrl('https://github.com/nanless/audio-research-workbench/releases/download/podcast-2026-11-24/daily-2026-11-24.mp3'), true);
+  assert.equal(podcastPlayer.isAllowedPodcastAudioUrl('https://github.com/nanless/audio-research-portal/releases/download/v1/ep.mp3'), true);
   for (const bad of [
     'http://github.com/nanless/audio-paper-digest/releases/download/v1/ep.mp3',
     'https://evil.example/ep.mp3',
@@ -607,7 +609,7 @@ test('Deliverable 3.1 (Wave 14.3): daily_podcast_player stays strictly outside #
 
   writePost(repo, '2026-11-24', {
     title: '语音/音乐/音频论文速递 2026-11-24', date: '2026-11-24', draft: false, paper_digest_page_type: 'index'
-  }, '# 语音/音乐/音频论文速递 2026-11-24\n\n共分析 1 篇论文。\n\n## 论文列表\n\n### 1. [播客提及论文](/audio-paper-digest-blog/posts/2026-11-24-paper-2611-96001/) {#paper-1}\n\n摘要。');
+  }, '# 语音/音乐/音频论文速递 2026-11-24\n\n共分析 1 篇论文。\n\n## 论文列表\n\n### 1. [播客提及论文](/audio-research-portal/posts/2026-11-24-paper-2611-96001/) {#paper-1}\n\n摘要。');
 
   writePost(repo, '2026-11-23', {
     title: '语音/音乐/音频论文速递 2026-11-23', date: '2026-11-23', draft: false, paper_digest_page_type: 'index'
@@ -628,7 +630,7 @@ test('Deliverable 3.1 (Wave 14.3): daily_podcast_player stays strictly outside #
         durationSeconds: 425,
         chapters: [
           { title: '开场与趋势总览', startSeconds: 0 },
-          { title: '精读：播客提及论文', startSeconds: 125, paperAnchor: '#paper-1', paperUrl: '/audio-paper-digest-blog/posts/2026-11-24-paper-2611-96001/' }
+          { title: '精读：播客提及论文', startSeconds: 125, paperAnchor: '#paper-1', paperUrl: '/audio-research-portal/posts/2026-11-24-paper-2611-96001/' }
         ]
       },
       {
@@ -822,9 +824,9 @@ test('Round 1 Regression (P0 #1 & P0 #2): render-image strips KaTeX HTML from al
     '',
     '### 共振峰点云是否支持高央元音的定位',
     '',
-    '[![原论文 Figure 2：Nuages de points de \\[a, i, I, u\\] "quoted" <tag>](https://nanless.github.io/audio-paper-digest-blog/og-default.png)](https://nanless.github.io/audio-paper-digest-blog/og-default.png)',
+    '[![原论文 Figure 2：Nuages de points de \\[a, i, I, u\\] "quoted" <tag>](https://nanless.github.io/audio-research-portal/og-default.png)](https://nanless.github.io/audio-research-portal/og-default.png)',
     '',
-    '![图 1：模型 \\(M_i\\) 与阈值 \\(\\alpha < \\beta\\) 的 "A & B" 对比](https://nanless.github.io/audio-paper-digest-blog/og-default.png)',
+    '![图 1：模型 \\(M_i\\) 与阈值 \\(\\alpha < \\beta\\) 的 "A & B" 对比](https://nanless.github.io/audio-research-portal/og-default.png)',
     '',
     '### 振幅距离时间曲线能否把摩擦元音等同于擦音',
     '',
@@ -1013,7 +1015,7 @@ test('Round 1 Regression (P1 #3 & P1 #4): strict podcast audioUrl/paperUrl allow
   assert.match(d1, /Good Chapter/);
   assert.doesNotMatch(d1, /Malformed Start Chapter/, 'non-numeric startSeconds chapter must fail closed without panicking Hugo');
   assert.doesNotMatch(d1, /evil\?x=1|a%2fb/, 'malformed paperUrl with query or percent-encoding must be dropped');
-  assert.match(d1, /\/audio-paper-digest-blog\/posts\/valid-paper-1\//);
+  assert.match(d1, /\/audio-research-portal\/posts\/valid-paper-1\//);
   const d2 = fs.readFileSync(path.join(dest, 'posts/2026-11-23/index.html'), 'utf8');
   assert.doesNotMatch(d2, /daily-podcast-card|<audio\b/, 'nested release path must be rejected');
 });
@@ -1044,12 +1046,12 @@ test('Round 1 Regression (P1 #5, P1 #6, P2 #7, P2 #8): zero-norm graph guard, RF
   fs.writeFileSync(path.join(repo, 'data/related-graph-auto.json'), JSON.stringify({
     contract: 'related-graph-auto-v1',
     totalN: 3,
-    basePath: '/audio-paper-digest-blog/',
+    basePath: '/audio-research-portal/',
     generatedAt: '2026-11-24T00:00:00Z',
     papers: {
-      'arxiv:2611.99001': [{ identity: 'arxiv:2611.99002', relPermalink: '/audio-paper-digest-blog/posts/normal-a/', score: 900, reasons: ['伪造推荐'] }],
-      'arxiv:2611.99002': [{ identity: 'arxiv:2611.99001', relPermalink: '/audio-paper-digest-blog/posts/zero-norm/', score: 900, reasons: ['指向零向量'] }],
-      'arxiv:2611.99003': [{ identity: 'arxiv:2611.99002', relPermalink: '/audio-paper-digest-blog/posts/normal-a/', score: 1000, reasons: ['共同研究任务：语音识别'] }]
+      'arxiv:2611.99001': [{ identity: 'arxiv:2611.99002', relPermalink: '/audio-research-portal/posts/normal-a/', score: 900, reasons: ['伪造推荐'] }],
+      'arxiv:2611.99002': [{ identity: 'arxiv:2611.99001', relPermalink: '/audio-research-portal/posts/zero-norm/', score: 900, reasons: ['指向零向量'] }],
+      'arxiv:2611.99003': [{ identity: 'arxiv:2611.99002', relPermalink: '/audio-research-portal/posts/normal-a/', score: 1000, reasons: ['共同研究任务：语音识别'] }]
     }
   }), 'utf8');
 
@@ -1078,19 +1080,19 @@ test('Round 1 Regression (P1 #5, P1 #6, P2 #7, P2 #8): zero-norm graph guard, RF
     paperCount: 2,
     edgeCount: 1,
     papers: {
-      'arxiv:2611.99002': [{ identity: 'arxiv:2611.99003', relPermalink: '/audio-paper-digest-blog/posts/normal-b/', score: 900, reasons: ['共同研究任务：语音识别'] }],
+      'arxiv:2611.99002': [{ identity: 'arxiv:2611.99003', relPermalink: '/audio-research-portal/posts/normal-b/', score: 900, reasons: ['共同研究任务：语音识别'] }],
       'arxiv:2611.99003': []
     }
   };
   fs.writeFileSync(graphFile, JSON.stringify(baseGraph), 'utf8');
   assert.equal(verifyRelatedGraph(destLive).edgeCount, 1);
   for (const [label, mut, re] of [
-    ['self-loop', { ...baseGraph, papers: { ...baseGraph.papers, 'arxiv:2611.99002': [{ identity: 'arxiv:2611.99002', relPermalink: '/audio-paper-digest-blog/posts/normal-a/', score: 900, reasons: [] }] } }, /自环/],
+    ['self-loop', { ...baseGraph, papers: { ...baseGraph.papers, 'arxiv:2611.99002': [{ identity: 'arxiv:2611.99002', relPermalink: '/audio-research-portal/posts/normal-a/', score: 900, reasons: [] }] } }, /自环/],
     ['paperCount mismatch', { ...baseGraph, paperCount: 99 }, /paperCount/],
     ['edgeCount mismatch', { ...baseGraph, edgeCount: 99 }, /edgeCount/],
     ['bad generatedAt', { ...baseGraph, generatedAt: 'not-a-date' }, /generatedAt/],
     ['off-prefix relPermalink', { ...baseGraph, papers: { ...baseGraph.papers, 'arxiv:2611.99002': [{ identity: 'arxiv:2611.99003', relPermalink: '/other/posts/x/', score: 900, reasons: [] }] } }, /越界/],
-    ['non-string reason', { ...baseGraph, papers: { ...baseGraph.papers, 'arxiv:2611.99002': [{ identity: 'arxiv:2611.99003', relPermalink: '/audio-paper-digest-blog/posts/normal-b/', score: 900, reasons: [123] }] } }, /字符串数组/]
+    ['non-string reason', { ...baseGraph, papers: { ...baseGraph.papers, 'arxiv:2611.99002': [{ identity: 'arxiv:2611.99003', relPermalink: '/audio-research-portal/posts/normal-b/', score: 900, reasons: [123] }] } }, /字符串数组/]
   ]) {
     fs.writeFileSync(graphFile, JSON.stringify(mut), 'utf8');
     assert.throws(() => verifyRelatedGraph(destLive), re, `verifyRelatedGraph must reject ${label}`);

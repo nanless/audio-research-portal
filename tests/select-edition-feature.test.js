@@ -198,7 +198,7 @@ function mapFixture(dir, sourceUrl, imagePath, raw) {
   const file = path.join(dir, 'static' + imagePath);
   fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, raw);
   fs.mkdirSync(path.join(dir, 'data'), { recursive: true });
-  const mapped = '/audio-paper-digest-blog' + imagePath;
+  const mapped = '/audio-research-portal' + imagePath;
   fs.writeFileSync(path.join(dir, 'data/arxiv_image_map.json'), JSON.stringify({ [sourceUrl]: mapped }));
   return mapped;
 }
@@ -206,7 +206,7 @@ test('the real renderer map reuses authenticated local PNG/SVG bytes while prese
   const map = JSON.parse(fs.readFileSync(path.join(root, 'data/arxiv_image_map.json'), 'utf8'));
   for (const sourceUrl of ['https://arxiv.org/html/2609.13195v1/unlearn.png', 'https://arxiv.org/html/2609.13814v1/Realtime-Venus_system_overview.svg']) fixture(dir => {
     const id = sourceUrl.match(/html\/([^v]+)v/)[1], mapped = map[sourceUrl];
-    const imagePath = mapped.replace(/^\/audio-paper-digest-blog/, '');
+    const imagePath = mapped.replace(/^\/(?:audio-research-portal|audio-paper-digest-blog)/, '');
     const raw = fs.readFileSync(path.join(root, 'static' + imagePath));
     mapFixture(dir, sourceUrl, imagePath, raw);
     paper(dir, 'mapped', { id, image: sourceUrl }); daily(dir, ['mapped']);
@@ -227,7 +227,7 @@ test('wrong mapped paper owners, missing or invalid bytes, malformed maps and in
   const cases = {
     'wrong owner': dir => { const local = `/images/papers/2610.24922/figure-2-${hash(svg).slice(0, 16)}.svg`; mapFixture(dir, sourceUrl, local, svg); },
     'bad mapped image bytes': dir => mapFixture(dir, sourceUrl, '/images/papers/2610.24921/figure-2-0123456789abcdef.svg', Buffer.from('not SVG')),
-    'missing local file': dir => { const mapped = mapFixture(dir, sourceUrl, `/images/papers/2610.24921/figure-2-${hash(svg).slice(0, 16)}.svg`, svg); fs.rmSync(path.join(dir, 'static' + mapped.replace(/^\/audio-paper-digest-blog/, ''))); },
+    'missing local file': dir => { const mapped = mapFixture(dir, sourceUrl, `/images/papers/2610.24921/figure-2-${hash(svg).slice(0, 16)}.svg`, svg); fs.rmSync(path.join(dir, 'static' + mapped.replace(/^\/(?:audio-research-portal|audio-paper-digest-blog)/, ''))); },
     'truncated SVG': dir => { const raw = svg.subarray(0, svg.length - 6); mapFixture(dir, sourceUrl, `/images/papers/2610.24921/figure-2-${hash(raw).slice(0, 16)}.svg`, raw); },
     'unbalanced SVG': dir => { const raw = Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><g></svg>'); mapFixture(dir, sourceUrl, `/images/papers/2610.24921/figure-2-${hash(raw).slice(0, 16)}.svg`, raw); },
     'missing viewBox': dir => { const raw = Buffer.from('<svg xmlns="http://www.w3.org/2000/svg"><path/></svg>'); mapFixture(dir, sourceUrl, `/images/papers/2610.24921/figure-2-${hash(raw).slice(0, 16)}.svg`, raw); },

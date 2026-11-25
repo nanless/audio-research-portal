@@ -17,6 +17,11 @@
 {{- $expectedRoot := .expectedRoot | default "" -}}
 {{- $siteRoot := .siteRoot | default "" -}}
 {{- $date := printf "%v" (.date | default "") -}}
+{{- $legacyRoot := "/audio-paper-digest-blog/" -}}
+{{- $activeRoot := $siteRoot -}}
+{{- if and (eq $activeRoot "") (ne $expectedRoot "") -}}
+  {{- $activeRoot = replaceRE `client/papers/.*$` "" $expectedRoot -}}
+{{- end -}}
 {{- $result := dict -}}
 {{- $derivedRoot := "" -}}
 {{- $names := slice "citation.json" "citation.bib" "citation.ris" "rethink-context.json" -}}
@@ -25,6 +30,9 @@
     {{- $item := index $sidecars $name -}}
     {{- if not (reflect.IsMap $item) -}}{{- $result = dict -}}{{- break -}}{{- end -}}
     {{- $url := printf "%v" ($item.url | default "") -}}
+    {{- if and (ne $activeRoot "") (ne $activeRoot $legacyRoot) (hasPrefix $url (printf "%sclient/papers/" $legacyRoot)) -}}
+      {{- $url = printf "%s%s" $activeRoot (strings.TrimPrefix $legacyRoot $url) -}}
+    {{- end -}}
     {{- $sha := printf "%v" ($item.sha256 | default "") -}}
     {{- $valid := and (ne $url "") (findRE `^[a-f0-9]{64}$` $sha 1) -}}
     {{- $parent := replaceRE `[^/]+$` "" $url -}}

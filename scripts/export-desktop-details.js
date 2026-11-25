@@ -11,7 +11,7 @@ const tagCore = require('../assets/js/tag-core');
 const { extractFrontMatter, frontMatterField } = require('./audit-content');
 
 const SITE_ORIGIN = 'https://nanless.github.io';
-const SITE_PREFIX = '/audio-paper-digest-blog/';
+const SITE_PREFIX = '/audio-research-portal/';
 
 const MANIFEST_CONTRACT = protocols.contract('paper-desktop-manifest');
 const SNAPSHOT_CONTRACT = protocols.contract('paper-desktop-snapshot');
