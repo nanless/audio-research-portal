@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32562v1",
+  "arxivId": "2611.32562",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32562v1",
+  "authors": [
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Guoxin Fan"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Weilun Feng"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences"
+      ],
+      "name": "Chuanguang Yang"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Mingqiang Wu"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Xiaokun Liu"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Jitao Lu"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences"
+      ],
+      "name": "Zhulin An"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences"
+      ],
+      "name": "Libo Huang"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences"
+      ],
+      "name": "Boyu Diao"
+    },
+    {
+      "affiliations": [
+        "Hangzhou Institute for Advanced Study, University of the Chinese Academy of Sciences"
+      ],
+      "name": "Di Gao"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences",
+        "Xiamen Institute of Data Intelligence, Xiamen, China"
+      ],
+      "name": "Yongjun Xu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.32562v1",
+  "originalTitle": "Sol$^{3}$: Accelerating Video Diffusion for Free via Hierarchical Sparse Attention Routing",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32562v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

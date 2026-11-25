@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32593v1",
+  "arxivId": "2611.32593",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32593v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Combei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dan Oneata"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Francesco Paissan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cem Subakan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Horia Cucu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Adriana Stan"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.32593v1",
+  "originalTitle": "Perfect Scores, Misplaced Explanations: A Controlled Study of Explainability in Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32593v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

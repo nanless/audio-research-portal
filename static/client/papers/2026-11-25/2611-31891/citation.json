@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.31891v1",
+  "arxivId": "2611.31891",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.31891v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weisong Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiangtai Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haochen Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haiquan Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhaoxiang Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.31891v1",
+  "originalTitle": "Open-OmniCoach: Evidence-Enhanced Trajectory Learning for Omni Video Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2611.31891v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

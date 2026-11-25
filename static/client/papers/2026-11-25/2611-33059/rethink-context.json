@@ -1,0 +1,69 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33059v1",
+  "abstract": "Voice activity detection (VAD) is one of the first steps in speech processing pipelines, from transcription and diarization to speech language models. Supervised detectors need labelled data and inherit the domain and annotation conventions of their training corpora. Existing unsupervised detectors rely on hand-crafted acoustic features which cannot benefit from data and degrade in far-field, noisy or atypical speech. We propose ClusterVAD, an unsupervised VAD built on frozen speech foundation model representations. Fitted once on a small set of untranscribed speech, it clusters the representations and labels each cluster as speech or non-speech with sonority, an acoustic measure. At inference, a frame-level speech probability is computed from the cluster assignments, and a two-state hidden Markov model fitted to each recording enables threshold-free detection. Across benchmarks covering meetings, far-field and noisy recordings, Mandarin and dysarthric speech, ClusterVAD obtains the lowest detection error on pause-level references and is competitive on speaker turn-level references. These results indicate that speech foundation models inherently capture the distinction between speech and non-speech, which can be leveraged without training a detector.",
+  "abstractSha256": "91d502dd5f0ad4d5728c8ebbca80481c2e76ab2e89939ad1f57714533d1af50c",
+  "arxivId": "2611.33059",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33059v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "语音活动检测",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.vad",
+          "label": "语音活动检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "语音活动检测",
+      "primaryTaskId": "task.vad",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Idiap Research Institute, Switzerland",
+        "EPFL, Switzerland"
+      ],
+      "name": "Karl El Hajal"
+    },
+    {
+      "affiliations": [
+        "Idiap Research Institute, Switzerland"
+      ],
+      "name": "Mathew Magimai. -Doss"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对跨域失配与标注粒度不一时无监督检测器难以利用数据的问题，ClusterVAD 用冻结基础模型表征加一次声响度标记码本与逐录音隐马尔可夫免阈值决策，在七项暂停级基准上取得最低检测错误率并在轮次级保持次优，代价是编码器计算开销大且短语音与轮次桥接仍弱。",
+  "originalTitle": "ClusterVAD: Threshold-Free Unsupervised Voice Activity Detection with Pre-Trained Neural Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33059v1.pdf",
+  "readerTitle": "冻结语音表征聚类实现免阈值无监督语音活动检测",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.31891v1",
+  "abstract": "Training capable omni video agents requires more than diverse question-answer pairs: agents must learn to reliably find, connect, and correct task-relevant evidence in omni-setting. However, we argue that existing data pipelines provide limited control over task-relevant evidence and weak supervision for these capabilities. In this work, we present Open OmniCoach, a new framework for evidence-seeking omni video agents. It contains a high-quality dataset, OmniCoach-240K, and a new agentic reinforcement learning (RL) method, Step-Level Evidence-Guided Policy Optimization (SEPO). For the former, OmniCoach-240K comprises 248.2K interaction trajectories, including 230.7K multi-span trajectories and 17.4K reflection trajectories. We design a three-stage data pipeline by leveraging both fine-grained omni-evidence and the agent's own errors. Meanwhile, compared with other RL baselines, SEPO provides turn-level credit based on improvements in evidence coverage and temporal localization. Applying both trajectory data and the SEPO method, we obtain Open OmniAgent models. The resulting models outperform the baselines across multiple video and audio-visual understanding tasks by significant margins, demonstrating the effectiveness of the Open OmniCoach framework. In particular, Open OmniAgent-30B improves average accuracy over Qwen3-Omni by 6.3 percentage points across nine benchmarks, with gains of 12.2 and 13.3 points on LVOmniBench and LVBench, respectively.",
+  "abstractSha256": "e820aa9e52eec5d127f91ace6221fec23e58ac8ffcc0349d3cec25ba28b3f4d4",
+  "arxivId": "2611.31891",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.31891v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "可验证奖励强化学习",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "task",
+          "id": "task.temporal-grounding",
+          "label": "音频时间定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.verifiable-reward-rl",
+          "label": "可验证奖励强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "可验证奖励强化学习",
+      "primaryMethodId": "method.verifiable-reward-rl",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Weisong Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xiangtai Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haochen Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Haiquan Wen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhaoxiang Zhang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对全域视频智能体找不准证据与不会改错的问题，本文用三阶段管线合成 248.2K 条多跨度与反思轨迹并提出逐步证据引导优化 SEPO，在 7B 与 30B 两档基座上同时提升音视频与通用视频理解，代价是依赖强教师合成与更多轮工具交互。",
+  "originalTitle": "Open-OmniCoach: Evidence-Enhanced Trajectory Learning for Omni Video Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2611.31891v1.pdf",
+  "readerTitle": "用细粒度证据与逐步奖励训练会找证据的全域视频智能体",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

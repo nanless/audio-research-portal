@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32641v1",
+  "abstract": "We present Balrogg, a lossless recompressor that replaces the entropy coding of Ogg Vorbis and Ogg Opus files with adaptive context mixing models. For Vorbis, we write each represent each codebook entry as a tuple of small signed integers (digits), binarized in five stages, and mixed with a direct context model, a bit-history model, and a match model, with weights selected by the neighboring digits and the previous residue pass. For Opus, each symbol is coded by an adaptive context model initialized with the codec's probability tables as priors, and the pyramid vector quantizer (PVQ) indices of the CELT layer are split recursively into pulse counts. At the default level, Balrogg reduces Vorbis music by 16.2\\%, Vorbis speech by 10.6%, and Opus speech by 5.4%; xz, zstd, ZPAQ, and bzip3 save at most 4.1% on the same files. Over 48 encoder configurations, files shrink to 66.5--96.1% of their size. Encoding and decoding are symmetric, run at 1.8--3.2~MB/s per core, and use less than 12~MiB of memory.",
+  "abstractSha256": "b30dbb0a22b696ee068bdc9100ad0b6647f6632698c4199effd2b18bd8ce2b99",
+  "arxivId": "2611.32641",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32641v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频编码",
+    "rankBucket": "前25%",
+    "score": 7.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Kamila Szewczyk"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 Vorbis 静态 Huffman 与 Opus 固定表格加均匀 PVQ 造成的熵冗余，Balrogg 只替换熵编码而保持解码比特精确，以居中数字混合器与编码器表格为先验的自适应模型实现 Vorbis 省下 10.6% 到 21.0% 与 Opus 语音省下 5.4%，代价是每核约 1.8 MB/s 到 3.2 MB/s 的对称编解码速度与高级别多遍搜索。",
+  "originalTitle": "Lossless Re-Encoding of Vorbis and Opus Audio Files",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32641v1.pdf",
+  "readerTitle": "Vorbis 与 Opus 的无损重编码：只替换熵编码的 Balrogg",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

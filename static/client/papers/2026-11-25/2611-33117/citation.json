@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33117v1",
+  "arxivId": "2611.33117",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33117v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Amir Razlighi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhuo Ning"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Naomi Ken Korem"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Nisarg Patel"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yiorgos Chrysanthou"
+    },
+    {
+      "affiliations": [
+        "Simon Fraser University University of Cyprus CYENS Centre of Excellence Lightricks MARZ VFX Tel Aviv University"
+      ],
+      "name": "Daniel Cohen-Or"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Ali Mahdavi Amiri"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.33117v1",
+  "originalTitle": "Read My Lips: Context-aware Lip Reading Using Language and Audio-Visual Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33117v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

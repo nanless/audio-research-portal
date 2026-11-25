@@ -1,0 +1,104 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33153v1",
+  "abstract": "We present DiaCap, an audiovisual LLM for comprehensive dialogue captioning, which produces the transcript, timestamps, and a visual description of the speaker for every utterance in a video. Considering that utterance timing and audiovisual diarization are tightly coupled, DiaCap unifies the tasks in a single model, trained in two complementary stages. First, we train DiaCap on 225K curated clips, using synthetic captions that densely label every utterance in detail. Second, we further refine the model via reinforcement learning on 2.9K human-corrected clips, using fine-grained feedback that directly evaluates utterance timing, speaker grouping, and speaker binding. On DiaDemBench, which we extend with utterance-level timestamps and subtitle redaction, both DiaCap with off-the-shelf transcripts and its end-to-end variant DiaCap-E2E achieve strong results. Specifically, DiaCap performs on par with Gemini 4 Argon in audiovisual diarization while clearly outperforming it in timestamp accuracy (76.59 vs. 42.76 TIME). It also maintains strong diarization on multilingual and minute-long videos, and transfers to audiovisual question answering.",
+  "abstractSha256": "8bb268003266b269fd6f8348a04ce74a38e9b710e1561fc600f7468273725fb7",
+  "arxivId": "2611.33153",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33153v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "可验证奖励强化学习",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.verifiable-reward-rl",
+          "label": "可验证奖励强化学习"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.audio-language",
+          "label": "音频大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "可验证奖励强化学习",
+      "primaryMethodId": "method.verifiable-reward-rl",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Georgia Tech"
+      ],
+      "name": "Binfei Ji"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Zhiwen Cao"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Anqi Yang"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Prem Seetharaman"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Shuo Yang"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Ratheesh Kalarot"
+    },
+    {
+      "affiliations": [
+        "Georgia Tech"
+      ],
+      "name": "Yingyan Celine Lin"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Mingze Xu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对对话字幕中计时与归属相互依赖却被分开学习的难题，DiaCap 以转录条件统一模型结合约 225K 个合成监督与约 2.9K 个人工难例细粒度强化反馈，在去字幕评测以 76.59 的 TIME 大幅超过专有最强的 42.76，代价是对小脸孔重叠语音仍脆弱并依赖外部转录质量与窗口化长视频处理。",
+  "originalTitle": "DiaCap: Jointly Learning Who Speaks When for Audiovisual Dialogue Captioning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33153v1.pdf",
+  "readerTitle": "谁在何时说话 DiaCap 联合学习话语计时与归属",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

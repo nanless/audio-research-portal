@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.31462v1",
+  "abstract": "What music can a text-to-music model actually make? The answer to this question has consequences for individual creators, communities, and musical culture more broadly. We introduce MADlibs, a framework to measure the expressive support of state-of-the-art music generators: the subset of musical behaviors they will actually produce across the space of prompts. We first develop strategies for generating musical prompts using natural language processing methods and existing caption corpora. Then, we use a set of MIR techniques to study the corresponding output spaces in terms of interpretable and qualitatively meaningful elements like key, beat, tempo, instrumentation, and dynamics. We find that text-to-music models are not interchangeable instruments for the same prompt space. Rather, each model has learned idiosyncratic properties that constrain the regime of music reachable via prompting it, for example, defaulting to certain tempi, failing to produce silences, or oversampling canonical band arrangements. Because users interact with these systems one prompt at a time, these biases are often invisible in practice yet cumulatively shape what AI-assisted music sounds like, risking the production of a new auditory monoculture hidden behind the promise of universal describability. We thus urge the MIR community to further study and responsibly steer population-level properties of music generation models.",
+  "abstractSha256": "d8fe191a40cbaedc6b26be53e58cfdbcd396a15869e3f4fdf7163eec1f558d73",
+  "arxivId": "2611.31462",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.31462v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "task",
+          "id": "task.music-understanding",
+          "label": "音乐分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Matthew Keating"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Noah Schaffer"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Michael Casey"
+    },
+    {
+      "affiliations": [
+        "Dartmouth College"
+      ],
+      "name": "Nikhil Singh"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "MADlibs 用空白对照、关键词混合、模板文法与依存图等多组伪随机提示策略各生成 10,000 条提示并以可解释 MIR 特征比较 MusicGen、ACE-Step 与 DiffRhythm，发现模型身份对输出分布的影响显著大于提示多样性，但结论依赖 MTG Jamendo 保守参考、默认参数与无主观听测的代理评估。",
+  "originalTitle": "MADlibs: Analyzing the Distribution of Generative Music",
+  "pdfUrl": "https://arxiv.org/pdf/2611.31462v1.pdf",
+  "readerTitle": "生成式音乐的分布透视：MADlibs 如何度量提示背后的表达性支撑",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

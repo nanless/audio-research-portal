@@ -1,0 +1,40 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33009v1",
+  "arxivId": "2611.33009",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33009v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Kraków, Poland",
+        "Doctoral School of Exact and Natural Sciences, Jagiellonian University, Kraków, Poland"
+      ],
+      "name": "Piotr Kubaty"
+    },
+    {
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Kraków, Poland"
+      ],
+      "name": "Mikhail Saladkou"
+    },
+    {
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Kraków, Poland",
+        "Centre for Credible Artificial Intelligence, Warsaw University of Technology, Poland"
+      ],
+      "name": "Jacek Tabor"
+    },
+    {
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Kraków, Poland"
+      ],
+      "name": "Łukasz Struski"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.33009v1",
+  "originalTitle": "Train What You Run: Probabilistic Convolutions for Learning Token Compaction in State Space Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33009v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

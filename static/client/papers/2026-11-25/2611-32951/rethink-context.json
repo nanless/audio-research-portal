@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32951v1",
+  "abstract": "Recent advances in harness-based recursive self-improvement (RSI) have improved video understanding by evolving executable agent workflows without updating foundation model parameters. However, extending this paradigm to omnimodal understanding remains challenging, as the heterogeneous and interdependent nature of multimodal perception and reasoning creates a complex evolution space, making targeted harness optimization difficult. To address these challenges, we propose OmniHarness-RSI, a modality-aware framework for evolving agent harnesses. Specifically, we factorize the evolution space into three capability dimensions: modality routing and collaboration, modality-aware evidence localization, and modality-specific perception. Based on this factorization, we construct a Factorized-Harness Agent integrating specialized perception experts and audio-video retrieval tools. We further introduce modality-guided harness evolution, which identifies deficiencies through structured modality-capability attribution and refines corresponding harness strategies through interactive code revisions and execution feedback. Validation-guided selection and held-out evaluation assess generalization within and across datasets. Experiments on WorldSense, Daily-Omni, and OmniVideoBench demonstrate test accuracy improvements of 8.86, 8.13, and 6.23 percentage points, respectively, consistently outperforming modality-agnostic RSI. The evolved harnesses also demonstrate cross-dataset transfer without adaptation, while reducing planner calls and viewed frames.",
+  "abstractSha256": "cb54e1d434ee1efa1959f9828c76713575008c12b4c1aba7ff38f28b814689d0",
+  "arxivId": "2611.32951",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32951v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-question-answering",
+          "label": "音视频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "音视频问答",
+      "primaryTaskId": "task.av-question-answering",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Shilin Ma"
+    },
+    {
+      "affiliations": [
+        "Tsinghua Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Xingming Shui"
+    },
+    {
+      "affiliations": [
+        "Tsinghua Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Jinglin Chen"
+    },
+    {
+      "affiliations": [
+        "Tsinghua Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Zetong Zhao"
+    },
+    {
+      "affiliations": [
+        "Tsinghua Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Jingqi Tian"
+    },
+    {
+      "affiliations": [
+        "Tsinghua Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Deyi Zhu"
+    },
+    {
+      "affiliations": [
+        "Tsinghua Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Yansong Tang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对全模态问答中路由、定位与感知纠缠导致通用支架进化失效的问题，论文提出按三维度因式分解支架并做模态引导的聚焦改写与验证筛选，在三个基准测试集上分别提升 8.86、8.13 与 6.23 个百分点并实现跨数据集迁移，而代价是部分基准工具调用略增且绝对分数仍落后于最强闭源配置。",
+  "originalTitle": "OmniHarness-RSI: Modality-Aware Harness Evolution for Omnimodal Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32951v1.pdf",
+  "readerTitle": "模态感知支架进化如何提升冻结模型的全模态理解",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

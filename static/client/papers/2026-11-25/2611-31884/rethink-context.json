@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.31884v1",
+  "abstract": "Spiking neural networks for multimodal audio-visual classification reach high accuracy by adopting deep-learning machinery: multi-stage convolutional or transformer encoders trained end-to-end with surrogate-gradient backpropagation through time. These prior works typically rely on full-precision (32-bit) parameters and do not treat hardware efficiency as a primary design objective. In this paper, we propose NeuTNN-AV, a much simpler hardware-amenable multimodal substrate built on the recently proposed NeuroAI Temporal Neural Network (NeuTNN) and demonstrate that it can match or outperform state-of-the-art SNN baselines with a fraction of their synapse counts. NeuTNN neurons carry multiple active dendritic segments. Each input line spikes at most once (temporal coding) and every weight is learned via a local reward-modulated spike-timing dependent plasticity (STDP) rule. All weights are 4-bit integers and inference uses only comparisons and additions. On CREMA-D, it reaches 78.6% with 2.34M synapses establishing a new state-of-the-art SNN accuracy, against 77.14% for MISNet-XL (31M parameters). On UrbanSound8K-AV, NeuTNN reaches 98.82% with 1.38M synapses, against 96.85% for SMMT (9.99M parameters) and 98.96% for MISNet-XL (31M parameters). Weight memory is 23-106x smaller than the spiking baselines, and the measured synaptic energy per inference is two to three orders of magnitude lower. Furthermore, the proposed NeuTNN learns CREMA-D in a single pass with 73.8% accuracy and demonstrates rapid online continual learning by adapting to unseen actors from a few dozen clips.",
+  "abstractSha256": "1b431ecba70e755e34533b5259364fff3bd2974c15bb929ed37205ec804899b7",
+  "arxivId": "2611.31884",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.31884v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "脉冲神经网络",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.spiking-neural-network",
+          "label": "脉冲神经网络"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "脉冲神经网络",
+      "primaryMethodId": "method.spiking-neural-network",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "ECE, Carnegie Mellon University"
+      ],
+      "name": "Shanmuga Venkatachalam"
+    },
+    {
+      "affiliations": [
+        "ECE, Carnegie Mellon University"
+      ],
+      "name": "Quinn Jacobson"
+    },
+    {
+      "affiliations": [
+        "ECE, Carnegie Mellon University"
+      ],
+      "name": "John Paul Shen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多模态脉冲网络依赖全精度深编码器与全局梯度而难部署的问题，NeuTNN-AV 以固定前端加有源树突类层与排序码决策层全用 4 位局部 STDP 学习，在 CREMA-D 以 2.34M 突触达 78.63% 超过 31.00M 的 MISNet-XL，在 UrbanSound8K-AV 以 1.38M 突触达 98.82% 接近最优，代价是依赖手工前端与按演员归一化并在持续学习中有小幅旧任务遗忘。",
+  "originalTitle": "HEAR, SEE, SPIKE ONCE: Highly Efficient NeuroAI Temporal Neural Networks for Low-Precision Multimodal Audio-Visual Classification and Online Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.31884v1.pdf",
+  "readerTitle": "只用一次脉冲与 4 位权重做音画融合",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

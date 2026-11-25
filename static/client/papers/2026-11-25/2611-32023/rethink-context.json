@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32023v1",
+  "abstract": "AI-generated music has become common on music streaming platforms, and listeners often cannot distinguish it from music made by humans. AI-music detection is therefore needed, but detectors trained on a fixed set of generators often fail on unseen generators. As new generators emerge frequently, updating a universal detector, a single model for all generators, typically requires substantial training data and computation, while risking performance degradation on previously learned generators. We therefore introduce IncrementDET, a detector that learns each new generator by a process called enrollment. For each generator, IncrementDET trains one linear classifier, which we call a needle, to separate samples of that generator from a fixed set of human reference tracks. Enrolling a new generator adds one needle while the previously constructed needles remain unchanged. A Sidak correction keeps the overall false-positive rate at its target as needles are added. To compare detectors under these conditions, we define the task of continual AI-generated music detection and introduce a benchmark in which generators arrive one at a time. The benchmark measures the accuracy of a detector before and after each update and the cost of each update. For this benchmark, we also construct EvoMusicFake-17K, a dataset of instrumental music from six recent generators and four human music platforms. Compared with SpecTTTra, a state-of-the-art universal detector, IncrementDET learns a new generator more accurately from only a few samples, generalizes better to unseen generators and better preserves detection performance on previously learned generators, at a substantially lower update cost. The structure of IncrementDET can also be applied to the detection of generated images and video, where new generators are released just as frequently.",
+  "abstractSha256": "ddffef05c0bac339a88454423fa4717f0ab4ca9d2b8aea062d82aa611ebc2252",
+  "arxivId": "2611.32023",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32023v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "持续学习",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.continual",
+          "label": "持续学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "持续学习",
+      "primaryMethodId": "method.continual",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Chicago"
+      ],
+      "name": "Runbao Du"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Wei Li"
+    },
+    {
+      "affiliations": [
+        "Fudan University"
+      ],
+      "name": "Qile He"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对新音乐生成器不断涌现而通用单模型泛化差与重训代价高的问题，论文提出冻结 MuQ 编码器加每生成器独立针头与 Šidák 校正的 IncrementDET，以 12 步后 97.2% 对 81.4% 的 TPR 与 25 首 93.2% 的新检出证明少样本低遗忘优势，代价是弱针阈值收紧与异源误报仍超目标且仅验证器乐。",
+  "originalTitle": "IncrementDET: Continual AI-Generated Music Detection via Enrollment",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32023v1.pdf",
+  "readerTitle": "注册式持续检测如何跟上新音乐生成器",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

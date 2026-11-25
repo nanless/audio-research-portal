@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32311v1",
+  "abstract": "Immersive scene modeling requires synchronized visual and auditory observations under changing viewpoints and scene conditions. Obtaining such observations and references for controlled scene changes remains challenging. We introduce SynAVID, a synthetic audio-visual immersive dataset comprising eight indoor and outdoor scenes. Each minute-scale episode combines fixed camera arrays and moving trajectories with synchronized, viewpoint-dependent binaural audio. Shared scene dynamics, sound-source events, and observer poses drive visual rendering and geometry-aware acoustic synthesis. We evaluate existing methods for visual reconstruction, binaural audio reconstruction, and audiovisual editing. Mixed-observation configurations generally improve visual reconstruction on fixed and moving test views, while transiently occupied and sparsely observed regions remain challenging. Methods rank differently on spectral, interaural, and perceptual audio metrics. Geometric and instance annotations expose uneven observation support and local Gaussian representations beyond aggregate scores. Paired references assess target edits and surrounding content, while controlled geometry changes produce listener-dependent acoustic responses. The project page is available at https://avery-xu.github.io/synavid-project/.",
+  "abstractSha256": "56e2b82de6b793097185989cdd6ba769ebd3b6dada046972afe7645528c4c47e",
+  "arxivId": "2611.32311",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32311v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.spatial-audio-generation",
+          "label": "空间音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Jun Xu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Sujing Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Chunhao Bi"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Zhengxue Cheng"
+    },
+    {
+      "affiliations": [
+        "Ant Group"
+      ],
+      "name": "Ronghua Wu"
+    },
+    {
+      "affiliations": [
+        "Ant Group"
+      ],
+      "name": "Qunshan Gu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Li Song"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对动态场景缺少视角相关的视听同步参照问题，SynAVID 用共享时间线驱动固定与移动观测的合成渲染与几何声学合成，在 8 个场景上显示混合观测改善视觉重建但残留局部失效且音频指标排序分歧，代价是合成假设与有限场景覆盖。",
+  "originalTitle": "SynAVID: A Synthetic Audio-Visual Immersive Dataset of Dynamic Scenes",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32311v1.pdf",
+  "readerTitle": "可控动态视听沉浸数据集 SynAVID 的同步重建与编辑评估",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

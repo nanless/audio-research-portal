@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32697v1",
+  "arxivId": "2611.32697",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32697v1",
+  "authors": [
+    {
+      "affiliations": [
+        "State Key Laboratory of Networking and Switching Technology, Beijing University of Posts and Telecommunications",
+        "First Research Institute of The Ministry of Public Security of PRC, Beijing 100048, China"
+      ],
+      "name": "Chang Sun"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of Networking and Switching Technology, Beijing University of Posts and Telecommunications"
+      ],
+      "name": "Dongliang Xie"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of Networking and Switching Technology, Beijing University of Posts and Telecommunications"
+      ],
+      "name": "Wanpeng Xie"
+    },
+    {
+      "affiliations": [
+        "First Research Institute of The Ministry of Public Security of PRC, Beijing 100048, China"
+      ],
+      "name": "Bo Qin"
+    },
+    {
+      "affiliations": [
+        "First Research Institute of The Ministry of Public Security of PRC, Beijing 100048, China"
+      ],
+      "name": "Hong Yang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.32697v1",
+  "originalTitle": "Cif-query bridging for audio-native asr transfer to visual speech recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32697v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

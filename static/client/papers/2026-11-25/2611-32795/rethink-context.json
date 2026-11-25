@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32795v1",
+  "abstract": "Neural audio codecs (NACs) have become a fundamental infrastructure for modern speech-language models, discretizing continuous speech signals into token sequences that enable large language models to process and generate audio. Most research evaluates codec quality at the decoding phase, assessing the naturalness of reconstructed speech. However, little research investigates what phonetic information is captured during encoding. In this paper, we investigated the potential correlates of prosody in the NAC Mimi, a codec used by conversational speech agents such as Moshi and Sesame and used in downstream tasks such as speech-to-speech translation (Hibiki).",
+  "abstractSha256": "4e98ffd25f6aeaf1cf87a3b0cbcc76cd6647d0f483b4c7deb8eb27486cf0dca2",
+  "arxivId": "2611.32795",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32795v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "音频编码",
+    "rankBucket": "后50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-coding",
+          "label": "音频编码"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "scientific_topic",
+          "id": "scientific_topic.prosody",
+          "label": "韵律"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "音频编码",
+      "primaryTaskId": "task.audio-coding",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "ALTAE, Université Paris Cité, F-75013 Paris, France"
+      ],
+      "name": "Nicolas Ballier"
+    },
+    {
+      "affiliations": [
+        "ALTAE, Université Paris Cité, F-75013 Paris, France"
+      ],
+      "name": "Artem Saloev"
+    },
+    {
+      "affiliations": [
+        "SCIAM, 10 rue de Penthièvre, F-75008 Paris, France"
+      ],
+      "name": "Erin Pacquetet"
+    },
+    {
+      "affiliations": [
+        "Linguistics & Cognitive Science, University of Richmond, USA"
+      ],
+      "name": "Taylor Arnold"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 Mimi 语义与声学码本分工是否成立的问题，本文用核典型相关与记忆分类探针检验合成韵律与 TIMIT 音段对应，发现时长预测达到 92.3% 而音高与滑音仅 15.5% 与 8.1%，代价是时长高分含有固定成帧的机械红利且缺少人工听测与显著性支撑。",
+  "originalTitle": "Is Prosody Encoded in the Neural Audio Codec Mimi?",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32795v1.pdf",
+  "readerTitle": "Mimi 编码器是否真的把韵律存进了声学码本",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

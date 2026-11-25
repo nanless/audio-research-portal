@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32399v1",
+  "arxivId": "2611.32399",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32399v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of Bristol"
+      ],
+      "name": "Omar Emara"
+    },
+    {
+      "affiliations": [
+        "University of Bristol"
+      ],
+      "name": "Nan Lu"
+    },
+    {
+      "affiliations": [
+        "University of Bristol"
+      ],
+      "name": "Dima Damen"
+    },
+    {
+      "affiliations": [
+        "Leiden University"
+      ],
+      "name": "Hazel Doughty"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.32399v1",
+  "originalTitle": "Not All Pairs Align: Caption-Guided Audio-Visual Contrastive Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32399v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

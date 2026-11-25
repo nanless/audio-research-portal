@@ -1,0 +1,87 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33009v1",
+  "abstract": "Visual token compaction reduces inference cost by passing only selected image patches or video tokens to later layers. In sequence models with local convolutions, each removal changes which tokens are neighbors. Learning which tokens to keep therefore requires a training signal that accounts for the new neighborhoods. We introduce ProbConv, which computes the exact expected convolution before activation at a kept position under independent keep decisions. The operator is differentiable in the keep probabilities. With binary decisions, ProbConv and step gating reproduce the compacted Mamba block. Across image, vision--language and video backbones, ProbConv is strongest under strong compaction: its advantage over matched training controls grows as more tokens are removed. In Cobra, it also outperforms adaptations of published vision--language pruning methods at matched inference budgets. ProbConv also improves over matched zero-mask training in video frame selection and speech frame dropping. Our code is available at: https://github.com/gmum/probconv",
+  "abstractSha256": "63095dec2c1dec7c9ddd1485fec228d4a115d388f5d977244c05e79fd483f0ff",
+  "arxivId": "2611.33009",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33009v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "视频动作识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-action-recognition",
+          "label": "视频动作识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.generic-multimodal-qa",
+          "label": "通用多模态问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "状态空间模型",
+      "primaryMethodId": "method.state-space",
+      "primaryTask": "视频动作识别",
+      "primaryTaskId": "task.video-action-recognition",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Kraków, Poland",
+        "Doctoral School of Exact and Natural Sciences, Jagiellonian University, Kraków, Poland"
+      ],
+      "name": "Piotr Kubaty"
+    },
+    {
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Kraków, Poland"
+      ],
+      "name": "Mikhail Saladkou"
+    },
+    {
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Kraków, Poland",
+        "Centre for Credible Artificial Intelligence, Warsaw University of Technology, Poland"
+      ],
+      "name": "Jacek Tabor"
+    },
+    {
+      "affiliations": [
+        "Faculty of Mathematics and Computer Science, Jagiellonian University, Kraków, Poland"
+      ],
+      "name": "Łukasz Struski"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对删掉 token 后卷积邻居与扫描状态错位导致训练与部署不一致的问题，ProbConv 以独立保持假设下的精确期望窗口加步长门控实现二进制下与紧凑网络等价，在越紧预算下越大幅领先零掩码对照，代价是训练仍走全长且批量为 1 时加速有限。",
+  "originalTitle": "Train What You Run: Probabilistic Convolutions for Learning Token Compaction in State Space Models",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33009v1.pdf",
+  "readerTitle": "训练即部署：概率卷积如何学会紧凑 token",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

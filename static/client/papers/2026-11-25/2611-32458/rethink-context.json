@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32458v1",
+  "abstract": "Existing video-to-audio (V2A) methods have achieved promising results in synthesizing high-quality audios. However, as V2A advances toward more flexible user-directed creation, existing methods remain notably limited in controlling the distinct acoustic identities of multiple events within a video. We therefore formulate multi-event reference-conditioned V2A (Mr-V2A), where each event is assigned a specific audio reference and target time span. Mr-V2A presents three key challenges. First, event-level reference-target training pairs are scarce. We introduce Intra-Video Event Variation (IntraEvtVar), which constructs non-oracle pairs through four variation modes of events mined within each video. Second, we organize the references into a Time-Aligned COmposite Reference (TACO-Ref) and inject it through local and global pathways: the local pathway retains time-resolved event cues, while an Audio Q-Former provides a clip-level acoustic-context condition. Third, jointly conditioning on multiple references can cause acoustic-attribute leakage across events. Localized reference attention and the TACO-Ref Router (TRR) explicitly constrain event-to-reference correspondence to reduce such interference. Experiments on VGGSound-Ref and VividBench demonstrate stronger reference controllability than existing V2A and exemplar-based methods while maintaining competitive Foley generation quality.",
+  "abstractSha256": "e5c92aa6ea5f974c4df3d7b2ed9f27d5e37ca8732fcc578fdbf1d298175b65bc",
+  "arxivId": "2611.32458",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32458v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "视频到声音生成",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-to-audio",
+          "label": "视频到声音生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "视频到声音生成",
+      "primaryTaskId": "task.video-to-audio",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The State Key Lab of Brain-Machine Intelligence, Zhejiang University",
+        "ReLER, CCAl, Zhejiang University, China",
+        "ByteDance, China"
+      ],
+      "name": "You Li"
+    },
+    {
+      "affiliations": [
+        "The State Key Lab of Brain-Machine Intelligence, Zhejiang University",
+        "ReLER, CCAl, Zhejiang University, China"
+      ],
+      "name": "Dewei Zhou"
+    },
+    {
+      "affiliations": [
+        "The State Key Lab of Brain-Machine Intelligence, Zhejiang University",
+        "ReLER, CCAl, Zhejiang University, China"
+      ],
+      "name": "Fan Ma"
+    },
+    {
+      "affiliations": [
+        "ByteDance, China"
+      ],
+      "name": "Dongliang He"
+    },
+    {
+      "affiliations": [
+        "The State Key Lab of Brain-Machine Intelligence, Zhejiang University",
+        "ReLER, CCAl, Zhejiang University, China"
+      ],
+      "name": "Yi Yang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文提出多事件参考条件视频配音任务并给出 VividAudio，用视频内扰动配对与时间对齐复合参考双路注入加局域路由，在 VGGSound-Ref 与 VividBench 上提升事件级音色跟随并保持可比拟音质量，代价是依赖神经代理指标且未覆盖长视频与完全重叠事件。",
+  "originalTitle": "VividAudio: Multi-Event Reference-Conditioned Video-to-Audio Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32458v1.pdf",
+  "readerTitle": "多事件参考条件视频配音：同一配乐内分段音色控制",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

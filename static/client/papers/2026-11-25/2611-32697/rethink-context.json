@@ -1,0 +1,87 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32697v1",
+  "abstract": "Audio-native automatic speech recognition (ASR) models provide strong speech-language priors, but their compact acoustic interfaces are mismatched with long, frame-level visual features. We propose CIF-Query Bridge, a lightweight connection from a Paraformer visual speech recognition (VSR) encoder to Qwen3-ASR. The existing visual continuous integrate-and-fire (CIF) predictor produces an input-dependent number of token-rate queries; a two-layer cross-attention bridge refines them against the complete frame sequence, and a linear adapter feeds the pretrained ASR projector and decoder. This design preserves access to uncompressed visual context while avoiding direct autoregressive processing of hundreds of video frames. On CMLR, the complete visual-only transfer system achieves 7.97% character error rate, compared with 11.78% for native Paraformer under the same test split and scoring protocol---a 3.81-point absolute and 32.3% relative reduction. Controlled ablations characterize bridge depth, projector initialization, adapter capacity, and CTC supervision. The results show that CIF-derived adaptive queries provide a compact interface for transferring audio-native ASR capability to VSR.",
+  "abstractSha256": "20234a1a3b51becd1b36b4697fb7657dbd49a664b5f9aec4adde19d14001dd68",
+  "arxivId": "2611.32697",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32697v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "唇读",
+    "rankBucket": "前50%",
+    "score": 6.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.lip-reading",
+          "label": "唇读"
+        },
+        {
+          "facet": "method",
+          "id": "method.transfer",
+          "label": "迁移学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.speech",
+          "label": "语音大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "迁移学习",
+      "primaryMethodId": "method.transfer",
+      "primaryTask": "唇读",
+      "primaryTaskId": "task.lip-reading",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "State Key Laboratory of Networking and Switching Technology, Beijing University of Posts and Telecommunications",
+        "First Research Institute of The Ministry of Public Security of PRC, Beijing 100048, China"
+      ],
+      "name": "Chang Sun"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of Networking and Switching Technology, Beijing University of Posts and Telecommunications"
+      ],
+      "name": "Dongliang Xie"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of Networking and Switching Technology, Beijing University of Posts and Telecommunications"
+      ],
+      "name": "Wanpeng Xie"
+    },
+    {
+      "affiliations": [
+        "First Research Institute of The Ministry of Public Security of PRC, Beijing 100048, China"
+      ],
+      "name": "Bo Qin"
+    },
+    {
+      "affiliations": [
+        "First Research Institute of The Ministry of Public Security of PRC, Beijing 100048, China"
+      ],
+      "name": "Hong Yang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对唇视频长帧特征与音频原生 ASR 紧凑声学接口的错配，本文用冻结 CIF 预测器产生输入相关查询并以两层交叉注意力检索全帧记忆后复用 Qwen3-ASR 投影与解码，在 CMLR 上以 7.97% 对 11.78% 的完整系统对比实现 3.81 个百分点下降，代价是依赖大规模外部预训练且增益归因仍受单种子与束宽差异限制。",
+  "originalTitle": "Cif-query bridging for audio-native asr transfer to visual speech recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32697v1.pdf",
+  "readerTitle": "用音频原生 ASR 补唇读短板：CIF 查询桥接方案解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

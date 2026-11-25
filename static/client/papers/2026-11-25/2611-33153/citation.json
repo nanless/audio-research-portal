@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33153v1",
+  "arxivId": "2611.33153",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33153v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Georgia Tech"
+      ],
+      "name": "Binfei Ji"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Zhiwen Cao"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Anqi Yang"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Prem Seetharaman"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Shuo Yang"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Ratheesh Kalarot"
+    },
+    {
+      "affiliations": [
+        "Georgia Tech"
+      ],
+      "name": "Yingyan Celine Lin"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Mingze Xu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.33153v1",
+  "originalTitle": "DiaCap: Jointly Learning Who Speaks When for Audiovisual Dialogue Captioning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33153v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

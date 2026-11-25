@@ -1,0 +1,26 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32457v1",
+  "arxivId": "2611.32457",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32457v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Biomedical Engineering, Fatih Sultan Mehmet Vakif University, Istanbul, Türkiye"
+      ],
+      "name": "Nur Elabid"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Electronics Engineering, Fatih Sultan Mehmet Vakif University, Istanbul, Türkiye"
+      ],
+      "name": "Mahmud Esad Arar"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.32457v1",
+  "originalTitle": "Do Layer Rankings Survive Silence Trimming? The Silence Shortcut in Frozen WavLM Representations for Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32457v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

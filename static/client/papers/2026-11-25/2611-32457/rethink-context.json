@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32457v1",
+  "abstract": "Layer-wise analyses of frozen self-supervised encoders are used to locate spoofing information in audio deepfake detection. On the ASVspoof 2019 logical access (LA) benchmark, bonafide recordings carry longer leading and trailing silence than spoofed ones, and detectors exploit this cue, the silence shortcut. This paper examines whether layer rankings for a frozen WavLM Base encoder survive the trimming of this silence. A small classifier is trained on each of the 12 layers with and without trimming and evaluated on ASVspoof 2019 LA and, zero-shot, on In-the-Wild, in all four train/test combinations, with speaker-level bootstrap intervals. Trimming at 40 dB raises the in-domain error at every layer and preserves the layer ranking only partly (Kendall's tau of 0.58 in domain, 0.73-0.76 on In-the-Wild). The best layer is unchanged at 40 dB, but on the evaluation set it moves from layer 5 to layer 6 at 15 dB and, with mean pooling, at 20 dB, thresholds at which trimming may also remove low-energy speech. At 40 dB, the equal error rate of a model trained with silence rises by 6.3-19.9 percentage points at every layer when only its test audio is trimmed. On In-the-Wild, the effect depends on the layer: at layers 3-5, trimming the test audio lowers the error only for models trained on trimmed audio, whereas at layers 6, 8, and 9 training on trimmed audio lowers it also on clean test audio. We quantify how zero padding alters WavLM features through group normalization, an effect that an attention mask does not fully undo.",
+  "abstractSha256": "554355383e4823cd407374067c61f693d410b0b3d99ed943546d8c498d3efe0e",
+  "arxivId": "2611.32457",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32457v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Biomedical Engineering, Fatih Sultan Mehmet Vakif University, Istanbul, Türkiye"
+      ],
+      "name": "Nur Elabid"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Electronics Engineering, Fatih Sultan Mehmet Vakif University, Istanbul, Türkiye"
+      ],
+      "name": "Mahmud Esad Arar"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文以冻结 WavLM Base 每层单分类器与保留修剪四格设计检验层排序，发现 40 dB 修剪使域内误差全层上升且排序仅部分保留，最优层不变但浅层大幅跌落，而域外效应呈层选择性，代价是更严阈值下最优层漂移与宽说话人级不确定性。",
+  "originalTitle": "Do Layer Rankings Survive Silence Trimming? The Silence Shortcut in Frozen WavLM Representations for Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32457v1.pdf",
+  "readerTitle": "静音修剪后冻结 WavLM 层排序能否保留",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

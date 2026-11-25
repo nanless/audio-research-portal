@@ -1,0 +1,128 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32562v1",
+  "abstract": "Sol-Attn (Sparsifying online attention) combines sparse exact computation with low-cost representative approximation to accelerate training-free inference in diffusion video models. However, intra-block attention can focus on only a few tokens. While preserving these key interactions exactly, the block-level decision incurs the cost of evaluating many low-response members. We propose Sol$^{3}$, a training-free hierarchical sparse attention method that further refines how exact computations are allocated. First, we introduce Gaussian-guided hierarchical routing, which determines the scope of exact computation step by step, from blocks to tokens, using statistical thresholds at each level. Only a subset of members within Mixed blocks that require refinement is selected for exact computation, while representative terms approximate the remaining members. We further design heterogeneous routing statistics that combine block-center correlations with variations in Key and Value within blocks to identify blocks that are difficult to approximate. Among these Mixed blocks, we uniformly compare raw token relevance to select members requiring exact computation. Experiments on video generation, audio-video co-generation, and world simulation tasks demonstrate that Sol$^{3}$ achieves 86% attention sparsity and delivers a $3.07\\times$ attention speedup while preserving quality. Our code is available at https://github.com/FofGofx/sol3.",
+  "abstractSha256": "d45d86c92c4a38129d74a78427673be23e2fa6c0a6714aa6c08c582be6f4941b",
+  "arxivId": "2611.32562",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32562v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "视频生成",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-generation",
+          "label": "视频生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "视频生成",
+      "primaryTaskId": "task.video-generation",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Guoxin Fan"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Weilun Feng"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences"
+      ],
+      "name": "Chuanguang Yang"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Mingqiang Wu"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Xiaokun Liu"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences",
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Jitao Lu"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences"
+      ],
+      "name": "Zhulin An"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences"
+      ],
+      "name": "Libo Huang"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences"
+      ],
+      "name": "Boyu Diao"
+    },
+    {
+      "affiliations": [
+        "Hangzhou Institute for Advanced Study, University of the Chinese Academy of Sciences"
+      ],
+      "name": "Di Gao"
+    },
+    {
+      "affiliations": [
+        "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences",
+        "Xiamen Institute of Data Intelligence, Xiamen, China"
+      ],
+      "name": "Yongjun Xu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对块级稀疏在块内异质交互上既浪费精确算力又丢失局部高响应的问题，Sol3 用高斯引导的三级路由与异构统计量实现按需细化，在 Wan2.2 上以 86.37% 稀疏度取得 3.07× 注意力加速并保持最优保真度，代价是去噪整体加速仅 1.88× 且个别成像子项略低于基线。",
+  "originalTitle": "Sol$^{3}$: Accelerating Video Diffusion for Free via Hierarchical Sparse Attention Routing",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32562v1.pdf",
+  "readerTitle": "Sol3 用分层稀疏路由为视频扩散免费加速",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

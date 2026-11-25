@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.31884v1",
+  "arxivId": "2611.31884",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.31884v1",
+  "authors": [
+    {
+      "affiliations": [
+        "ECE, Carnegie Mellon University"
+      ],
+      "name": "Shanmuga Venkatachalam"
+    },
+    {
+      "affiliations": [
+        "ECE, Carnegie Mellon University"
+      ],
+      "name": "Quinn Jacobson"
+    },
+    {
+      "affiliations": [
+        "ECE, Carnegie Mellon University"
+      ],
+      "name": "John Paul Shen"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.31884v1",
+  "originalTitle": "HEAR, SEE, SPIKE ONCE: Highly Efficient NeuroAI Temporal Neural Networks for Low-Precision Multimodal Audio-Visual Classification and Online Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.31884v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

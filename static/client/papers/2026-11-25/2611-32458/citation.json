@@ -1,0 +1,49 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32458v1",
+  "arxivId": "2611.32458",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32458v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The State Key Lab of Brain-Machine Intelligence, Zhejiang University",
+        "ReLER, CCAl, Zhejiang University, China",
+        "ByteDance, China"
+      ],
+      "name": "You Li"
+    },
+    {
+      "affiliations": [
+        "The State Key Lab of Brain-Machine Intelligence, Zhejiang University",
+        "ReLER, CCAl, Zhejiang University, China"
+      ],
+      "name": "Dewei Zhou"
+    },
+    {
+      "affiliations": [
+        "The State Key Lab of Brain-Machine Intelligence, Zhejiang University",
+        "ReLER, CCAl, Zhejiang University, China"
+      ],
+      "name": "Fan Ma"
+    },
+    {
+      "affiliations": [
+        "ByteDance, China"
+      ],
+      "name": "Dongliang He"
+    },
+    {
+      "affiliations": [
+        "The State Key Lab of Brain-Machine Intelligence, Zhejiang University",
+        "ReLER, CCAl, Zhejiang University, China"
+      ],
+      "name": "Yi Yang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.32458v1",
+  "originalTitle": "VividAudio: Multi-Event Reference-Conditioned Video-to-Audio Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32458v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

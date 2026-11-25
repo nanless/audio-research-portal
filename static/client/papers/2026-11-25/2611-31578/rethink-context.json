@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.31578v1",
+  "abstract": "Low-resource languages remain underrepresented in ASR benchmarks, limiting the ability to reliably assess and compare model performance. We present a large-scale benchmark for automatic speech recognition (ASR) on low-resource languages in Africa. The benchmark harmonizes six public corpora into a unified, reproducible evaluation framework and evaluates 52 state-of-the-art ASR models spanning three model architectural paradigms across 39 African languages on diverse datasets. Models are evaluated using standard accuracy and efficiency metrics, word error rate (WER), character error rate (CER), and inverse real-time factor (RTFx). This benchmark introduces architecture-aware comparison that systematically analyzes both individual models and broader model families. In addition, we quantify linguistic variance across language families, revealing how these factors shape ASR performance across diverse African languages. We also provide a comprehensive accuracy and efficiency trade-off analysis directly relevant to deployment in low-resource settings. Together, the benchmark, evaluation pipeline, and results support transparent, reproducible, and deployment-aware evaluation of ASR models for low-resource languages.",
+  "abstractSha256": "a04a2a89a6dc5562352c0982d27a35c6c7c9654215712487e83f12afe64be8cd",
+  "arxivId": "2611.31578",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.31578v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Microsoft Research Africa, Nairobi"
+      ],
+      "name": "Mercy Muchai"
+    },
+    {
+      "affiliations": [
+        "Microsoft Research Africa, Nairobi"
+      ],
+      "name": "Nick Mumero Mwangi"
+    },
+    {
+      "affiliations": [
+        "Microsoft Research Africa, Nairobi"
+      ],
+      "name": "Kevin Chege"
+    },
+    {
+      "affiliations": [
+        "Microsoft Research Africa, Nairobi"
+      ],
+      "name": "Samuel Chege Maina"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对非洲低资源语言评测只看平均精度会掩盖文字与架构差异的问题，PazaBench 用 6 库合一的统一框架评测 52 个模型，发现 OmniASR 在精度端领先而编码器结构在效率端领先且文字复杂度影响超过数据量，代价是最低误差伴随十余倍实时系数的低速与潜在的数据泄露不确定性。",
+  "originalTitle": "PazaBench: Large-Scale ASR Benchmark for Low-Resource Languages in Africa",
+  "pdfUrl": "https://arxiv.org/pdf/2611.31578v1.pdf",
+  "readerTitle": "非洲低资源语言语音识别的大规模精度效率基准",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

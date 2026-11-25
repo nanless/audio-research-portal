@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32311v1",
+  "arxivId": "2611.32311",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32311v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Jun Xu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Sujing Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Chunhao Bi"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Zhengxue Cheng"
+    },
+    {
+      "affiliations": [
+        "Ant Group"
+      ],
+      "name": "Ronghua Wu"
+    },
+    {
+      "affiliations": [
+        "Ant Group"
+      ],
+      "name": "Qunshan Gu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Li Song"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.32311v1",
+  "originalTitle": "SynAVID: A Synthetic Audio-Visual Immersive Dataset of Dynamic Scenes",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32311v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

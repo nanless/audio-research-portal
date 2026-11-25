@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32910v1",
+  "abstract": "Speech enhancement for spatial audio needs to improve speech quality and intelligibility while preserving the spatial characteristics of the acoustic scene. Time-frequency masking provides an effective approach for speech enhancement, but its performance and spatial fidelity may depend strongly on the signal representation in which the mask is applied. This work systematically compares time-frequency masking in the microphone, beamformer, and first-order Ambisonics domains in simulated reverberant acoustic scenes. Both an ideal ratio mask (IRM) and a lightweight deep-learning-based mask estimator are considered, with performance evaluated in terms of speech reconstruction, perceptual quality, intelligibility, reverberation preservation, and binaural spatial-cue preservation. The results show that channel-specific masking in the beamformer domain provides the highest speech quality and intelligibility, while channel-specific masking in the Ambisonics domain better preserves the spatial characteristics of the residual interference. Reducing the spatial representation from third- to first-order Ambisonics substantially reduces the performance gap between the beamformer and Ambisonics domains due to the lower spatial resolution of the resulting beamformers. Furthermore, a shared mask across first-order Ambisonics channels achieves speech enhancement performance close to that of channel-specific masking while requiring only a single mask-estimation network. These results demonstrate that the choice of signal representation and masking strategy should be considered jointly, and indicate that first-order Ambisonics with shared masking provides a practical compromise between speech enhancement performance, spatial fidelity, and computational complexity.",
+  "abstractSha256": "ff84e968fedce6edbd6fec41e227f997a7f7deae8cf3ac153617cd58ee7be379",
+  "arxivId": "2611.32910",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32910v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "语音增强",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-enhancement",
+          "label": "语音增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.time-frequency",
+          "label": "时频分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.spatial-audio",
+          "label": "空间音频信号"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multichannel",
+          "label": "多通道"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "时频分析",
+      "primaryMethodId": "method.time-frequency",
+      "primaryTask": "语音增强",
+      "primaryTaskId": "task.speech-enhancement",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Sheli Hendel"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Boaz Rafaely"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dorothea Kolossa"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对空间音频中去噪与空间保持难以兼得的问题，本文在相同仿真声场下比较麦克风、一阶 Ambisonics 与波束器三域的通道专用与共享掩蔽，发现波束器通道专用去噪最强而一阶 Ambisonics 共享以单个网络接近专用性能并更好地保留残留干扰空间线索，代价是结论仅来自仿真客观指标而无主观听测与真实部署验证。",
+  "originalTitle": "Mask-Based Speech Enhancement for Spatial Audio: Effects of Signal Representation and Channel-Specific Masking",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32910v1.pdf",
+  "readerTitle": "掩蔽域与掩蔽策略如何联合决定空间语音增强的权衡",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

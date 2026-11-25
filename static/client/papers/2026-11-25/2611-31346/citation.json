@@ -1,0 +1,58 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.31346v1",
+  "arxivId": "2611.31346",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.31346v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Information, Renmin University of China, Beijing, China"
+      ],
+      "name": "Yuhan Bian"
+    },
+    {
+      "affiliations": [
+        "Faculty of Engineering, The Chinese University of Hong Kong, Hong Kong, China"
+      ],
+      "name": "Zhaokai Liang"
+    },
+    {
+      "affiliations": [
+        "School of Information, Renmin University of China, Beijing, China"
+      ],
+      "name": "Jia Wang"
+    },
+    {
+      "affiliations": [
+        "School of Information, Renmin University of China, Beijing, China"
+      ],
+      "name": "Haoyu Liu"
+    },
+    {
+      "affiliations": [
+        "School of Smart Governance, Renmin University of China, Suzhou, China",
+        "State Key Laboratory of Novel Software Technology, Nanjing University, Nanjing, China"
+      ],
+      "name": "Yu Chen"
+    },
+    {
+      "affiliations": [
+        "School of Smart Governance, Renmin University of China, Suzhou, China"
+      ],
+      "name": "Jianfeng Qu"
+    },
+    {
+      "affiliations": [
+        "School of Information, Renmin University of China, Beijing, China",
+        "School of Smart Governance, Renmin University of China, Suzhou, China"
+      ],
+      "name": "Zhixu Li"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.31346v1",
+  "originalTitle": "What People Choose Not to Say: A Multimodal Benchmark for Fine-Grained Information Manipulation in Conversations",
+  "pdfUrl": "https://arxiv.org/pdf/2611.31346v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

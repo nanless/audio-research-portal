@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32593v1",
+  "abstract": "What if an explanation achieves perfect scores but it is uninterpretable? We show that this happens when explaining audio deepfake detectors. Using an optimization-based method, we explain a state-of-the-art wav2vec2-based detector. The explanations achieve optimal scores on standard explainability metrics, i.e. fidelity and faithfulness. Visual inspection, however, reveals unintuitive and uninterpretable patterns. To understand this discrepancy, we run a controlled perturbation study in which we modify known frequency regions of the speech signal. Although we propose a model that is able to obtain close-to-optimal results with respect to the metrics, the explanations locate the manipulated region only when it is fixed across samples, and mostly fall to chance level when it varies. We further show that the signal used to fill the removed regions largely determines the explanation and its localization, without being reflected in the metrics.",
+  "abstractSha256": "7896c39589d1e40c50d57ebc2b6c4f427bcd8155d59a3f4142945a03a3e98363",
+  "arxivId": "2611.32593",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32593v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "David Combei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Dan Oneata"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Francesco Paissan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Cem Subakan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Horia Cucu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Adriana Stan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 wav2vec 2.0 伪造检测器难解释且常用保真忠实指标可能失灵的问题，本文构建跨样本优化的时频掩码解释器，以三组数据上接近 1.000 的保真度与忠实度为最强证据，揭示其在变化频带上定位跌至随机水平的代价，且填充选择决定解释形态而指标无法反映。",
+  "originalTitle": "Perfect Scores, Misplaced Explanations: A Controlled Study of Explainability in Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32593v1.pdf",
+  "readerTitle": "满分却不可解释：音频伪造检测中解释指标的受控检验",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

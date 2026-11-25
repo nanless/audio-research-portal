@@ -1,0 +1,70 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32455v1",
+  "abstract": "Parameter-efficient adaptation of a speech foundation model to dysarthric speech requires a rarely justified choice: which encoder layers to adapt. A recently proposed strategy is to probe the encoder, find where phonetic information becomes most decodable, and put the adapters there. We test that inference across two ASR models (Qwen3-ASR, Whisper-small) and two dysarthric corpora (Mandarin CDSD, English UASpeech), holding recipe and seed discipline constant.   The inference fails. Measured under one pipeline rather than inherited from published figures, all four phoneme-error curves minimise between 83% and 92% of relative depth, each model's minimising layer moving no further between corpora than between probe seeds. The best adaptation band is not similarly constant: none of three natural mappings from the curve to a band -- steepest improvement, lowest band-mean error, or knee location -- recovers the best tested configuration. We do not claim no statistic of the curve could work, only that these three do not.   Placement still matters, but is model- and corpus-specific. On CDSD the models disagree -- Qwen3-ASR prefers its upper third (29.88% CER, three-seed mean), Whisper-small all-block LoRA (53.56%) -- while on UASpeech neither favours the upper band. At three seeds, upper-versus-all is resolved (-1.31 pp, CI [-2.16, -0.25]) but upper-versus-middle is not (-0.83 pp, CI [-2.06, +1.86]). The two models' preferences differ as a directly tested interaction (-4.71 pp, CI [-6.17, -2.89]); we designate this the primary claim, and record that the designation was made post hoc. On Qwen3-ASR x UASpeech, adapting near the input is reliably worse than not adapting at all (+9.90 pp CER). We recommend choosing the band by a short adaptation sweep on the model and corpus in hand, not by reading it off a probe.",
+  "abstractSha256": "658ca9504ef3a4312cc36e930a8845c38788bb35ffafaf9092f9d7030416dd60",
+  "arxivId": "2611.32455",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32455v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "LoRA",
+      "primaryMethodId": "method.lora",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Scott-Morgan Foundation, United Kingdom",
+        "SMF Labs, 28 rue du Colonel Pierre Avia, 75015 Paris, France"
+      ],
+      "name": "Bernard Muller"
+    },
+    {
+      "affiliations": [
+        "The Scott-Morgan Foundation, United Kingdom",
+        "SMF Labs, 28 rue du Colonel Pierre Avia, 75015 Paris, France"
+      ],
+      "name": "LaVonne Roberts"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文在同一管线下对比 Qwen3-ASR 与 Whisper-small 在 CDSD 与 UASpeech 上的探针深度曲线与四段 LoRA 扫描，证明最优段随编码器翻转而探针最低点恒在深部，三条读曲线定段的启发式全部失效，代价是结论受限于 6 与 5 个测试说话人且需以数小时扫描替代探针。",
+  "originalTitle": "Phoneme-identity depth profiles do not reliably predict LoRA placement for dysarthric ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32455v1.pdf",
+  "readerTitle": "音素探针深度不能可靠预测构音障碍适配的 LoRA 位置",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

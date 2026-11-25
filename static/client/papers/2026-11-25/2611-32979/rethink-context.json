@@ -1,0 +1,70 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.32979v1",
+  "abstract": "Deepfake detection benchmarks are commonly designed to evaluate whether models can distinguish authentic from manipulated audiovisual content. However, benchmark construction pipelines may introduce unintended associations between class labels and simple file-level properties. In this work, we identify a potential file-size bias in two widely used audio-visual deepfake datasets. In the 1M-Deepfakes Detection Challenge dataset, a score derived from file size alone achieves 70.13% AUC on the validation set. When file size is considered together with video duration, simple file-level methods exceed 90% AUC on 1M and 85% AUC on FakeAVCeleb. Although the same pattern is not observed in DFDC, the results suggest that the observed association is dataset-dependent rather than an inherent property of deepfake videos. We discuss several possible explanations, including differences in encoding, compression, source data, manipulation procedures, and post-processing, although the present analysis does not establish the underlying cause. We further discuss whether the factors associated with file size may also leave traces in decoded video or audio, and consequently whether they could influence content-based deepfake detection, as an important direction for future work. Our findings highlight the importance of examining simple file-level properties when constructing and evaluating deepfake datasets and benchmarks.",
+  "abstractSha256": "45b2eaaf6caafa9b139bbfcd861d7f856d8d46d829443306b8b411f6032871e9",
+  "arxivId": "2611.32979",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.32979v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "统计分析",
+      "primaryMethodId": "method.statistical-analysis",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Interdisciplinary Centre for Security, Reliability and Trust (SnT), University of Luxembourg, Luxembourg",
+        "Helmholtz AI, Helmholtz Munich, Germany"
+      ],
+      "name": "Marcella Astrid"
+    },
+    {
+      "affiliations": [
+        "Interdisciplinary Centre for Security, Reliability and Trust (SnT), University of Luxembourg, Luxembourg",
+        "Independent Researcher"
+      ],
+      "name": "Niki Maria Foteinopoulou"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文仅用文件大小与视频时长诊断音视频伪造基准的标签泄露，发现每秒大小规则在 1M 上超过 91% AUC 并可迁移到 FakeAVCeleb ，而 DFDC 接近随机，代价是成因未定且尚未证明内容模型利用了该捷径。",
+  "originalTitle": "File Size as a Potential Dataset Bias in Audio-Visual Deepfake Data",
+  "pdfUrl": "https://arxiv.org/pdf/2611.32979v1.pdf",
+  "readerTitle": "文件大小作为音视频伪造数据集的潜在偏差",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}
