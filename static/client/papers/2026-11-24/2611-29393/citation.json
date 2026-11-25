@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29393v1",
+  "arxivId": "2611.29393",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29393v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Moscow Institute of Physics and Technology"
+      ],
+      "name": "Vladislav Nesterenko"
+    },
+    {
+      "affiliations": [
+        "HSE University"
+      ],
+      "name": "Polina Doronicheva"
+    },
+    {
+      "affiliations": [
+        "Chelyabinsk State University"
+      ],
+      "name": "Olga Golubeva"
+    },
+    {
+      "affiliations": [
+        "HSE University"
+      ],
+      "name": "Polina Sheviakova"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.29393v1",
+  "originalTitle": "Can Speech LLMs Recognize When Audio Evidence Is Insufficient? A Diagnostic Study and a Pre-Generation Probing Mitigation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29393v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

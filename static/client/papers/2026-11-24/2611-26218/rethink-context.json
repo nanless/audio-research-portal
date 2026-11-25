@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26218v1",
+  "abstract": "Humanoid agents in everyday environments are expected to react to diverse cues as humans do, with semantically appropriate and physically executable behaviors. Existing cue-driven reaction generation methods support only a narrow range of cue modalities and are limited to purely kinematic generation, leaving the resulting reactions susceptible to physical artifacts. To this end, we present MixReact, the first unified framework for physics-based reactive humanoid control from text, audio, and video cues, integrating a Discrete--Continuous Mixture of Transformers (DisCo-MoT) for state prediction with a History-aware Action Transformer (HAT) for physical execution. DisCo-MoT couples a discrete masked-modeling branch with a continuous autoregressive diffusion branch via one-way mixture attention within a MoT architecture. Guidance from discrete context mitigates collapse into averaged behaviors in one-to-many reaction generation, while direct prediction in continuous state space bypasses the decoding bottleneck of discrete representations. HAT then maps the predicted next state and observed execution history to executable actions, enabling robust closed-loop control in physics-based simulation. Experiments across all three modalities demonstrate consistent improvements over the baselines in fidelity, diversity, and physical consistency, while ablations validate the complementary contributions of the components. Our code will be released to facilitate future research. Project page: https://binlee26.github.io/MixReact_Page/",
+  "abstractSha256": "e15e1c4f8c685692dc6295cd30999eefce918b774eea899c2f50d976015e4673",
+  "arxivId": "2611.26218",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26218v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "机器人技能学习与适配",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.robot-skill-learning-adaptation",
+          "label": "机器人技能学习与适配"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "机器人技能学习与适配",
+      "primaryTaskId": "task.robot-skill-learning-adaptation",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "ShanghaiTech University"
+      ],
+      "name": "Bin Li"
+    },
+    {
+      "affiliations": [
+        "ShanghaiTech University"
+      ],
+      "name": "Xing Zhu"
+    },
+    {
+      "affiliations": [
+        "ShanghaiTech University",
+        "InstAdapt"
+      ],
+      "name": "Jingya Wang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对文本音频视频线索到反应的一对多映射与纯运动学生成易穿透打滑的问题，MixReact 以离散完整计划经单向混合注意力引导连续扩散预测并用历史感知控制器闭环执行，在三模态的保真度多样性与悬空打滑上取得最优，代价是抖动未最优且大幅度视频跌倒率仍高。",
+  "originalTitle": "MixReact: Physics-Based Reactive Humanoid Control from Multimodal Cues via a Discrete-Continuous Mixture of Transformers",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26218v1.pdf",
+  "readerTitle": "多模态线索驱动的物理人形反应控制",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

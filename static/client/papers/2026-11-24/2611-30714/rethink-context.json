@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.30714v1",
+  "abstract": "Video-to-audio generation synthesizes sound that matches a video in content and timing, with applications ranging from film post-production to live streaming, games and interactive world models. Interactive applications receive video continuously and need the sound to follow it in real time, yet most existing video-to-audio models are bidirectional and must observe an entire clip before producing any sound. We propose LiveAudio, a streaming video-to-audio framework that generates high-quality and synchronized audio in real time while the video is playing. In contrast to prior streaming models trained from scratch, LiveAudio converts a bidirectional model into a streaming generator so as to build on its audio quality and synchronization. LiveAudio generates audio block by block, and each block depends only on the video that has already been played. The streaming generator is obtained from the bidirectional model through progressive causal fine-tuning and distillation, so that each block needs only a few sampling steps. Experiments on VGGSound show that LiveAudio outperforms existing streaming models in audio quality and synchronization, and surpasses the bidirectional model it starts from in synchronization. On a single A100 GPU, it runs in real time with a real-time factor of 0.79 and a time to first frame of 143 ms. Audio samples are available at https://streamaudio.github.io.",
+  "abstractSha256": "b64150cf0b90e6b6d08362f0a2dafc14600336d95ccfa4699b263b9805b017ba",
+  "arxivId": "2611.30714",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.30714v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "一致性模型与少步蒸馏",
+    "primaryTask": "视频到声音生成",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-to-audio",
+          "label": "视频到声音生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.consistency-distillation",
+          "label": "一致性模型与少步蒸馏"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "一致性模型与少步蒸馏",
+      "primaryMethodId": "method.consistency-distillation",
+      "primaryTask": "视频到声音生成",
+      "primaryTaskId": "task.video-to-audio",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Yuxuan Jiang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Zehua Chen"
+    },
+    {
+      "affiliations": [
+        "Monash University"
+      ],
+      "name": "Yusheng Dai"
+    },
+    {
+      "affiliations": [
+        "Renmin University of China"
+      ],
+      "name": "Andong Wang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Weibei Dou"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University"
+      ],
+      "name": "Jun Zhu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "LiveAudio 针对视频边播边配音的实时交互需求，选择把双向视频到音频扩散模型经因果微调与少步蒸馏转为块自回归流式生成器，在 VGGSound 上以 DeSync 0.395 取得全部对比模型中最优同步并在单张 A100 上以 RTF 0.79 实现实时，代价是分布距离略升且结论依赖神经代理指标与有限主观听测。",
+  "originalTitle": "LiveAudio: From Bidirectional to Autoregressive Diffusion for Real-Time Streaming Video-to-Audio Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.30714v1.pdf",
+  "readerTitle": "LiveAudio：从双向扩散到自回归扩散的实时流式视频生成音频",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,121 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29225v1",
+  "abstract": "Music creation is inherently iterative, yet many symbolic generation systems still center on producing or regenerating isolated outputs. We present IteraSong, an interactive web-based Digital Audio Workstation (DAW) for LLM-guided iterative symbolic music creation. Unlike one-shot generation systems, IteraSong supports a generate-audition-edit-refine loop over a persistent multi-track project. Users initialize a fully labeled pop draft, then progressively refine it through natural-language instructions. The LLM maps requests to a hierarchical action space of editing primitives exposed via Model Context Protocol (MCP) tools, spanning global, track, section, and bar/note scopes. The demo enables attendees to edit multi-track compositions in natural language, apply deterministic and generative edits, and undo/redo changes in real time.",
+  "abstractSha256": "3b300a19d9607f346c777aede4989214386e6bb95fc277c2be3d741579fb0278",
+  "arxivId": "2611.29225",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29225v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "后50%",
+    "score": 5.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.rule-based",
+          "label": "规则与词典方法"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.multilingual",
+          "label": "多语言"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Di Lu"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Xinran Zhang"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Yan Gao"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Yuan Zhang"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Xiaoqing Wang"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Qingwen Zhou"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Xiaobing Li"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China",
+        "Department of Computer Science and Technology, Tsinghua University"
+      ],
+      "name": "Maosong Sun"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对单次生成难以支撑反复听改对比的作曲需求，IteraSong 以持久 SongProject 与分层 MCP 编辑基元组织生成试听编辑闭环，在 20 个十轮会话中取得 145/160 的任务完成与 40/40 的安全拒止，代价是结论只在规则流行乐功能正确性内成立而未验证听感与泛化。",
+  "originalTitle": "IteraSong: LLM-Guided Iterative Symbolic Music Creation in a Web DAW",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29225v1.pdf",
+  "readerTitle": "IteraSong 以持久工程组织多轮符号音乐编辑",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

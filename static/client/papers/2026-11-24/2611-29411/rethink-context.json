@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29411v1",
+  "abstract": "When two musicians in an ensemble play the same instrument, they sound alike and their instruments look alike. Audio-only separators, and audio-visual separators that rely on appearance, cannot tell them apart. What still differs is how each player moves, and when. We study same-instrument per-player separation: a user clicks one musician in a video and receives that musician's sound alone, even when other players in the video play the same instrument. Our model follows the clicked player and describes them with high level video features and the velocities of body and hand keypoints. A pretrained music separator attends to these tokens through cross-attention. Earlier motion-based separators were scored only on synthetic mixtures of solo videos. We give the first per-player evaluation of same-instrument separation on real ensemble recordings. On 58 players in URMP, each sharing an instrument with at least one other player in the piece, our model reaches a median SDR of 5.3 dB, while four released separators, audio-only and audio-visual, stay at or below 0.3 dB. The gap is wider on same-instrument duets, and our model also beats the audio-visual baselines on their own MUSIC benchmark. Tests show that the gain comes from movement: replacing the video with a still frame removes it, and so does shifting the video by a fraction of a second against the audio.",
+  "abstractSha256": "f250599480e07807f6f3743ab8630a682d60d1510c2afca996b0c800a02e8c76",
+  "arxivId": "2611.29411",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29411v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音乐源分离",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-separation",
+          "label": "音乐源分离"
+        },
+        {
+          "facet": "task",
+          "id": "task.av-source-separation",
+          "label": "音视频声源分离"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音乐源分离",
+      "primaryTaskId": "task.music-separation",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Singapore University of Technology and Design"
+      ],
+      "name": "Abhinaba Roy"
+    },
+    {
+      "affiliations": [
+        "University of Venice"
+      ],
+      "name": "Ambuj Mehrish"
+    },
+    {
+      "affiliations": [
+        "University of Venice"
+      ],
+      "name": "Sebastiano Vascon"
+    },
+    {
+      "affiliations": [
+        "Singapore University of Technology and Design"
+      ],
+      "name": "Dorien Herremans"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "同乐器合奏中音色与外形都无法选人，本文用冻结跟踪加双路运动 token 经交叉注意力控制预训练分离器，在 58 人 URMP 上达 5.30 dB、纯二重奏 18.73 dB 且听测一致，代价是需视频点击与滑窗推理并在大人群与混合铜管中明显变弱。",
+  "originalTitle": "Who Plays What: Same-Instrument Music Separation from Video",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29411v1.pdf",
+  "readerTitle": "视频点击如何按人分离同乐器合奏",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

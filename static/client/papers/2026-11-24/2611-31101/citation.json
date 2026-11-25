@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.31101v1",
+  "arxivId": "2611.31101",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.31101v1",
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tianyi Huang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lucas Su"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Fred Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Andy Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Gordon Li"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.31101v1",
+  "originalTitle": "SayWhen: Set-Valued Semantic Commitment for Low-Regret Early Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2611.31101v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

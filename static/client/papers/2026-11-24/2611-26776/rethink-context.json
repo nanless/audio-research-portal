@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26776v1",
+  "abstract": "Systems that flag violent video for a human operator can now be built from language models without training, by combining perception models and letting a language model decide. We ask how the observations of the perception models should reach the decision, and which evidence matters. On the XD-Violence test set (799 clips) we fix one set of perception agents (video description, object detection, sound tagging, speech recognition and speech tagging) and one reasoning model, and compare three interfaces: messages between agents, a typed evidence graph explored with tools, and flat text read in one pass; and a single audio-visual model given the raw clip. Two annotators provide a human reference that records the decision, the incident segments and whether they relied on sight, sound or speech. Flat text matches the single model (F1 0.967 against 0.968), while the graph agent and message passing are less accurate; a variant of the graph agent developed on a separate set did not close the gap, and both graph summaries and multi-turn tool use lowered accuracy. These results hold with reworded prompts and with a larger reasoning model, except that the larger model weakens message passing enough for the graph agent to beat it. Sound events improve F1 by +0.012 [+0.004, +0.021], in line with the annotators, who used sound or speech on most violent clips. Citations of stored observations are faithful, changing about half of the decisions when removed, but no more so with the graph than with flat text, and the agent pipeline costs about 3 times the GPU time of the single model. We also report two artefacts of vision-language describers that mislead pipelines built on them.",
+  "abstractSha256": "aa8c7fbfbb17bdab16cdee60cb2c3aad6b8f11019e78b5ba04b149f5a3746cb0",
+  "arxivId": "2611.26776",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26776v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "method",
+          "id": "method.human-evaluation",
+          "label": "人类参与评测"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Mons"
+      ],
+      "name": "Mohammed El Amine Mokhtari"
+    },
+    {
+      "affiliations": [
+        "University of Mons"
+      ],
+      "name": "Matei Mancas"
+    },
+    {
+      "affiliations": [
+        "University of Mons"
+      ],
+      "name": "Virginie Vandenbulcke"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "为回答感知观察应如何送达决策，该研究固定同一组感知智能体与推理模型并对照单端到端模型、消息传递、图工具探索与平铺文本，发现平铺文本与单模型 F1 相当而结构化接口掉点，声音事件带来小幅稳定增益但智能体流水线花费约 3 倍 GPU 时间。",
+  "originalTitle": "What Helps Language-Model Agents Review Violent Video? A Controlled Comparison with a Human Evidence Reference",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26776v1.pdf",
+  "readerTitle": "暴力视频复核：固定感知只换接口的受控对照",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

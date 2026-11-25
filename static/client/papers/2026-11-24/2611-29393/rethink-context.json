@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29393v1",
+  "abstract": "Speech large language models are usually evaluated on questions that have answers. We ask what they do when a recording establishes none, and whether the standard way of finding out is sound. Diagnosed on synthesized speech the answer looks clear: Qwen2-Audio fabricates an answer to 92.5% of unanswerable questions, while an ASR cascade reading the same recordings reaches 2.5% hallucination at 6.7% over-refusal, placing the failure in reasoning rather than in perception. The identical protocol on 376 native SQuAD 2.0 questions over human-read recordings removes that conclusion: the cascade hallucinates on 67.7% against the end-to-end model's 69.8%, at a higher over-refusal cost. A paired subset asking the same questions of a synthesized and a human recording of each passage localises the effect in the ASR stage -- the end-to-end model's abstention behaviour does not move with the speaker, the cascade's goes from 11.1% to 65.9%. Reliance on synthesized speech has been named as a limitation of audio benchmarks but not quantified; we quantify it, and show it large enough to reverse a finding. Since no prompt we tested repairs the residual failure, we transfer pre-generation attention probing to the multimodal setting. A probe over frozen prompt representations reaches 0.773 AUROC at predicting which unanswerable questions the model will answer anyway, where semantic entropy over ten sampled generations is at chance: the model fabricates the same answer every time, so sample disagreement cannot see a failure it is confident about.",
+  "abstractSha256": "1906ee2d3fdb28b33439ed0c35acb34a1e4098405adfd76df8c7a6f9b01d662c",
+  "arxivId": "2611.29393",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29393v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.hallucination-faithfulness",
+          "label": "幻觉与忠实度"
+        },
+        {
+          "facet": "model_family",
+          "id": "model_family.speech",
+          "label": "语音大模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Moscow Institute of Physics and Technology"
+      ],
+      "name": "Vladislav Nesterenko"
+    },
+    {
+      "affiliations": [
+        "HSE University"
+      ],
+      "name": "Polina Doronicheva"
+    },
+    {
+      "affiliations": [
+        "Chelyabinsk State University"
+      ],
+      "name": "Olga Golubeva"
+    },
+    {
+      "affiliations": [
+        "HSE University"
+      ],
+      "name": "Polina Sheviakova"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文以端到端语音大模型与语音识别级联的同证据对照加合成与自然语音的配对比较，证明合成语音上感知与推理分离的诊断结论在自然语音上反转，并以冻结提示表示上的生成前探测达到 0.773 的 AUROC 预判模型仍会抢答的不可答题，而代价是小样本、单模型族与宽区间带来的选择乐观。",
+  "originalTitle": "Can Speech LLMs Recognize When Audio Evidence Is Insufficient? A Diagnostic Study and a Pre-Generation Probing Mitigation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29393v1.pdf",
+  "readerTitle": "语音大模型能否识别音频证据不足时的拒答边界",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

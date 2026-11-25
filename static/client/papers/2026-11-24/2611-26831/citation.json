@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26831v1",
+  "arxivId": "2611.26831",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26831v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Instituto Tecnologico de Informatica, Valencia, Spain"
+      ],
+      "name": "Guillem Fustier-Castillo"
+    },
+    {
+      "affiliations": [
+        "Instituto Tecnologico de Informatica, Valencia, Spain"
+      ],
+      "name": "Ruben Ribes-Serrano"
+    },
+    {
+      "affiliations": [
+        "Instituto Tecnologico de Informatica, Valencia, Spain"
+      ],
+      "name": "Jordi Grau-Haro"
+    },
+    {
+      "affiliations": [
+        "Instituto Tecnologico de Informatica, Valencia, Spain"
+      ],
+      "name": "Marta Garcia-Ballesteros"
+    },
+    {
+      "affiliations": [
+        "Instituto Tecnologico de Informatica, Valencia, Spain"
+      ],
+      "name": "Javier Naranjo-Alcazar"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.26831v1",
+  "originalTitle": "Impact of Edge Software Evolution on Audio Tagging Models: An Empirical Study on NVIDIA Jetson Orin Nano",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26831v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

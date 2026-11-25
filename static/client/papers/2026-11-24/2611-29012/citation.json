@@ -1,0 +1,27 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29012v1",
+  "arxivId": "2611.29012",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29012v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Xi’an Jiaotong-Liverpool University",
+        "University of Liverpool"
+      ],
+      "name": "Wenxuan He"
+    },
+    {
+      "affiliations": [
+        "Xi’an Jiaotong-Liverpool University"
+      ],
+      "name": "Shan Liang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.29012v1",
+  "originalTitle": "From Spatial Perception to Speech Recovery: Binaural Semantic Adaptation for Spatially Grounded Multi-Talker Transcription",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29012v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

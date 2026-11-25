@@ -1,0 +1,95 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.30288v1",
+  "abstract": "Multimodal Emotion Recognition (MER) is a fundamental task in multimedia understanding, where state-of-the-art methods have achieved prominent success relying on the assumption of complete, well-aligned multimodal inputs. However, real-world unconstrained scenarios often suffer from unpredictable modality degradation and information loss, leading to catastrophic performance collapse of existing MER models that heavily depend on facial cues as the core inference anchor. However, few systematic works evaluate model robustness under diverse, fine-grained incomplete settings, as prior works are limited to coarse-grained full-modality removal and neglect interpretable analysis of emotional reasoning. To bridge this gap, we formally define the Incomplete Multimodal Emotion Recognition (IMER) task, which benchmarks model generalization and robustness under multi-grained modality and emotional information loss. We further construct MIME, a dedicated IMER benchmark with 2,000 video segments covering realistic fine-grained facial-detail degradation, severe facial degradation, and extreme full-modality loss, surpassing the limited coarse-grained settings of prior works. We also propose the Chain of Emotion (CoE) analysis paradigm with tailored metrics to dissect the fine-grained emotional cue perception and reasoning process of Multimodal Large Language Models (MLLMs). Extensive experiments on seven mainstream MLLMs reveal that body language and scene context act as critical compensatory mechanisms under facial degradation, while a pronounced gap exists between models' basic visual perception ability and high-level cognitive reasoning. Our work provides a focused evaluation platform and actionable insights for advancing robust multimodal emotion recognition. Our dataset and code are public at https://yuxinokk.github.io/MIME.",
+  "abstractSha256": "571b1d8a7cb4e47d9a7bad6db7e3218fbab0907993256a11b2bb4ef97fb490e4",
+  "arxivId": "2611.30288",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.30288v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science and Engineering, Northeastern University, Shenyang, China",
+        "Hubei Key Laboratory of Multimedia and Network Communication Engineering, Wuhan University, Wuhan, China"
+      ],
+      "name": "Yuxin Jia"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Engineering, Northeastern University, Shenyang, China",
+        "State Key Lab. of Novel Software Technology, Nanjing University, Nanjing, China"
+      ],
+      "name": "Xing Lan"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Engineering, Northeastern University, Shenyang, China",
+        "National Engineering Research Centre for Multimedia Software (NERCMS), Wuhan University, Wuhan, China"
+      ],
+      "name": "Wensong Wang"
+    },
+    {
+      "affiliations": [
+        "School of Engineering Science, University of Chinese Academy of Sciences, Beijing, China"
+      ],
+      "name": "Jian Xue"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Engineering, Northeastern University, Shenyang, China"
+      ],
+      "name": "Feiliang Ren"
+    },
+    {
+      "affiliations": [
+        "School of Engineering Science, University of Chinese Academy of Sciences, Beijing, China"
+      ],
+      "name": "Ke Lu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对高度依赖人脸的情绪识别在真实缺失下崩塌的问题，MIME 以 7 档细粒度与粗粒度缺失加情感链评测为手段，证明身体与场景可在面部退化时补偿而最强模型 F1 仍不足 50，代价是 2,000 规模较小且依赖模型生成与自动打分。",
+  "originalTitle": "Face Is Not All You Need: MIME Benchmark for Incomplete Multimodal Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.30288v1.pdf",
+  "readerTitle": "脸并非全部：面向缺失模态的情绪识别基准 MIME 解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

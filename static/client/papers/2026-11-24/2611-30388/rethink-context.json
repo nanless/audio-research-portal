@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.30388v1",
+  "abstract": "Many end-to-end spoken dialogue models can now converse in real time and full duplex, and turning them into 3D avatars requires full-body gestures, listening feedback, and turn-taking. Existing methods couple the motion generator tightly to one dialogue model by reading its internal states or training speech and motion jointly. The motion module must then be retrained whenever the dialogue model changes, cannot be attached to cloud APIs that expose only audio, and entangles role, voice, and motion style. We propose BASE, a backend-agnostic streaming embodiment layer whose only interface to the dialogue model is its emitted speech. First, a conversation state manager driven solely by audio handles speaking, listening, idling, barge-in, and proactive turns on one timeline, while role, voice, motion style, and 3D appearance are set independently. Second, to run an offline 2 s flow-matching gesture model on live audio, we reformulate inference as sliding-window continuation with overlapped look-ahead ensembling, which removes seam jitter. Third, we show that the remaining streaming gap comes from errors accumulating in the self-generated motion history rather than missing future speech; our Drift-Aware History Perturbation (DAHP) reduces this gap in about 50 min on one GPU by injecting inference-like drift into ground-truth training histories, and transfers to a second generator. On BEAT2, streaming BASE reaches an FGD of 0.342, on par with the tightly coupled MIBURI (0.333), and viewers prefer its body motion over MIBURI's in 82% of forced-choice judgments. Without retraining, the same layer drives a cascaded pipeline, three open full-duplex models, and a cloud API in real time.",
+  "abstractSha256": "bc5fbd6dfb9ec59b184e71e222c1889b13494642c3793b5b6c2a4cb56375870d",
+  "arxivId": "2611.30388",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.30388v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "语音驱动手势生成",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-driven-gesture",
+          "label": "语音驱动手势生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "语音驱动手势生成",
+      "primaryTaskId": "task.speech-driven-gesture",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "College of Computing and Artificial Intelligence, United Arab Emirates University"
+      ],
+      "name": "Chenye Yang"
+    },
+    {
+      "affiliations": [
+        "College of Computing and Artificial Intelligence, United Arab Emirates University"
+      ],
+      "name": "Jin Jiang"
+    },
+    {
+      "affiliations": [
+        "College of Computing and Artificial Intelligence, United Arab Emirates University"
+      ],
+      "name": "Shengcai Liao"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对紧耦合化身更换后端需重训且无法接入只给音频的云端 API 的问题，BASE 仅以发射语音驱动会话状态机与滑动窗手势生成，以 BEAT2 上 streaming FGD 0.342 持平耦合式 MIBURI 0.333 且获约八成观众偏好为证据，代价是动作质量系于输入韵律并需 VAD 与姿态弹簧兜底长时漂移与延迟。",
+  "originalTitle": "BASE: A Backend-Agnostic Streaming Embodiment Layer for Full-Duplex Conversational Avatars",
+  "pdfUrl": "https://arxiv.org/pdf/2611.30388v1.pdf",
+  "readerTitle": "只听发射语音的全双工化身：BASE 的滑动延续与漂移感知训练",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,106 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.30241v1",
+  "abstract": "While unified audio generators can synthesize speech, music, and sound effects within a single model, producing a plausible mixture is only part of the challenge: a complex scene request also specifies which events occur, who produces them, and when they are heard. To satisfy these compositional constraints in a single generation pass, we present SonicRender, a unified multi-event audio renderer. Its Temporal Audio Scene Graph (TASG) binds persistent source identities to localized speech, music, ambience, and sound-effect events, together with their content, acoustic roles, relations, and timestamped windows. We further introduce AbsTime, which supplies the audio latent stream with absolute-frame coordinates and valid-canvas duration. Through joint text-audio attention and conditional flow matching, the renderer learns to realize structured, timed scenes as coherent mixtures. On the MMAG timestamp benchmark, SonicRender achieves speech/sound F1 scores of 0.79/0.60, exceeding the strongest reported scores in our comparison. On our SceneMix evaluation, it attains 85.4% all-event recall, 83.9% window-hit rate, and 95.7% speaker accuracy. Subjective study further demonstrates significant improvements over all five comparison systems in both perceived audio quality and scene realization. Results across speech, general audio, music, multi-event load, and temporal-grounding analyses establish precise, composition-aware audio rendering within a unified generator. Demo page: https://caiyunrui.github.io/SonicRender.",
+  "abstractSha256": "e210ac7687c64823c5949100bb83b306e11db53a778e6f28025ab3c82c0e4711",
+  "arxivId": "2611.30241",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.30241v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "音频生成",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-generation",
+          "label": "音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "音频生成",
+      "primaryTaskId": "task.audio-generation",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Kling AI",
+        "The Chinese University of Hong Kong"
+      ],
+      "name": "Yunrui Cai"
+    },
+    {
+      "affiliations": [
+        "Kling AI"
+      ],
+      "name": "Xu Li"
+    },
+    {
+      "affiliations": [
+        "Kling AI"
+      ],
+      "name": "Yan Rong"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong"
+      ],
+      "name": "Dingdong Wang"
+    },
+    {
+      "affiliations": [
+        "Kling AI"
+      ],
+      "name": "Yucheng Zhou"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong"
+      ],
+      "name": "Xixin Wu"
+    },
+    {
+      "affiliations": [
+        "Kling AI"
+      ],
+      "name": "Chen Zhang"
+    },
+    {
+      "affiliations": [
+        "Shenzhen International Graduate School, Tsinghua University"
+      ],
+      "name": "Zhiyong Wu"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong"
+      ],
+      "name": "Helen Meng"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对单次生成中漏事件、错说话人与放错时间的问题，SonicRender 以 TASG 绑定身份与事件并以 AbsTime 把秒级窗口落到潜在帧，在 SceneMix 取得 85.4% 事件召回与 83.9% 窗口命中且听测显著领先，代价是依赖整数秒时钟与内部大规模数据及模型裁判。",
+  "originalTitle": "SonicRender: Structured and Time-Grounded Rendering of Multi-Event Audio Scene Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.30241v1.pdf",
+  "readerTitle": "结构化时间接地实现多事件音频场景的一次渲染",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

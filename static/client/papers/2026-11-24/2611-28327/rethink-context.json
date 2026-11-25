@@ -1,0 +1,82 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28327v1",
+  "abstract": "Multimodal emotion recognition (MMER) systems typically rely on learned feature representations and attention mechanisms that implicitly weight information across time and modalities. However, these mechanisms do not explicitly incorporate input reliability, despite the presence of noise in audio, occlusions in visual data, and the sparse and event-driven nature of affective cues. We propose AV-FLARE, a framework that explicitly estimates fine-grained reliability scores across both temporal and feature dimensions prior to temporal modeling and uses them to modulate feature representations. Reliability is computed using two complementary components: (i) a supervised network trained jointly with the classification objective, and (ii) an unsupervised Gaussian Mixture Model that models global feature distributions. These signals are combined to provide both task-driven and distribution-aware reliability estimates. To integrate modalities, we introduce a hierarchical cross-modal attention mechanism in which textual features are used to guide audio-visual fusion as a semantic reference modality. Experiments on the IEMOCAP dataset show that AV-FLARE improves over a no-reliability baseline, achieving 90.81\\% accuracy and 81.69\\% F1-score, corresponding to gains of +4.41% and +8.56%, respectively. These results suggest that incorporating explicit input reliability estimation may improve robustness in multimodal emotion recognition under the evaluated setting.",
+  "abstractSha256": "fa888868f39cb42026008abeda21540b08fdc1d1af28a996f64165f62fc6610e",
+  "arxivId": "2611.28327",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28327v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "不确定性估计与校准",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "不确定性估计与校准",
+      "primaryMethodId": "method.uncertainty-estimation",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Université TÉLUQ , Montréal, Québec, Canada",
+        "Concordia University, Montréal, Québec, Canada"
+      ],
+      "name": "Ines Jemmali"
+    },
+    {
+      "affiliations": [
+        "Université TÉLUQ , Montréal, Québec, Canada",
+        "Concordia University, Montréal, Québec, Canada"
+      ],
+      "name": "Alaa Nfissi"
+    },
+    {
+      "affiliations": [
+        "Université TÉLUQ , Montréal, Québec, Canada"
+      ],
+      "name": "Wassim Bouachir"
+    },
+    {
+      "affiliations": [
+        "Concordia University, Montréal, Québec, Canada"
+      ],
+      "name": "Nizar Bouguila"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对音频与视频在时间与通道维度质量不均并易在早期污染时序表征的问题，AV-FLARE 在卷积特征后与时序编码前用有监督前馈网络与无监督高斯混合模型估计逐帧逐通道可靠性并做乘性调制，再以文本为语义锚做分层跨模态融合，在 IEMOCAP 上取得 90.81% 准确率与 81.69% F1 分数，但结论仅限单数据集话语级随机划分且 F1 并非同表最优。",
+  "originalTitle": "AV-FLARE: Feature-Level Reliability Estimation for Multimodal Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28327v1.pdf",
+  "readerTitle": "时序建模前显式估计可靠性：AV-FLARE 解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

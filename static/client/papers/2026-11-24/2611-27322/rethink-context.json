@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.27322v1",
+  "abstract": "Understanding how spiking neural networks (SNNs) efficiently process data streams is key to (i) studying how biological brains conserve energy for lifelong predictions and (ii) enabling efficient continuous AI inference. In this work, we propose a theory on how an SNN incrementally tracks its corresponding firing-rate network, a continuous-valued neural network (ANN). We prove that the output of a discrete SNN continuously tracks the instantaneous ANN output implicitly determined by the SNN input. Based on this principle, we develop LIF-Stream, a conversion framework for efficient SNN inference over unbounded data streams. It enables the converted SNN to reuse its prior activation state and compute only the activation updates between frames, thereby reducing the average number of time steps needed per frame. Specifically, LIF-Stream controls the SNN to continuously track the reference ANN output, which gives a high-accuracy prediction for every frame. Evaluation on three large-scale streaming inference benchmarks with distinct modalities shows that LIF-Stream achieves the best efficiency-accuracy trade-off compared to high-accuracy SNN techniques.",
+  "abstractSha256": "8b9b56ca1f5b207486c8ac946ab627735e836ec8d27ee96fa1d3c95943c8a2e3",
+  "arxivId": "2611.27322",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.27322v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "脉冲神经网络",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.visual-gesture-recognition",
+          "label": "视觉手势识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.spiking-neural-network",
+          "label": "脉冲神经网络"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "脉冲神经网络",
+      "primaryMethodId": "method.spiking-neural-network",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hyunseok Oh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Youngki Lee"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文证明离散 LIF 脉冲网络以常数步长持续跟踪时变 ReLU1 网络输出，并据此做出无复位流式推理框架 LIF-Stream，在视觉、语音与事件流三项任务上以更少 tick 达到可比峰值精度，但结论依赖前馈可收缩权重与标准神经形态约束且无真实芯片实测。",
+  "originalTitle": "Spiking Neural Networks Incrementally Track Firing-Rate Networks",
+  "pdfUrl": "https://arxiv.org/pdf/2611.27322v1.pdf",
+  "readerTitle": "脉冲网络如何增量跟踪发放率网络",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

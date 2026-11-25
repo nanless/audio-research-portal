@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28823v1",
+  "abstract": "Large audio-language models (LALMs) have recently been shown to bypass audio CAPTCHAs designed around limitations of automatic speech recognition. To address this threat, we introduce reverse-capability verification, a general CAPTCHA framework that reverses the conventional human-easy, machine-hard relationship with respect to the physical ground truth. It selects challenges in which stable human perceptual limitations cause the human-reference answer to differ from the physical ground truth, while machine analysis tends toward that truth. Because the verifier accepts the human-reference answer, advanced solver capabilities and resulting improved recovery of the physical ground truth may instead strengthen the human-machine separation.   We instantiate the framework through psychoacoustics and design two audio CAPTCHAs: HIPI, a classification task, and YINGCHEN, a counting task, together with their conjunctive composition. Across seven LALMs and eight attack strategies, the maximum observed machine acceptance rates are 19%, 17%, and 3% for HIPI, YINGCHEN, and their composition, respectively, compared with 45-100% for nine prior schemes. A multidimensional human usability study yields corresponding human acceptance rates of 78%, 90%, and 76%, while maintaining competitive efficiency and satisfaction. Further analysis demonstrates that advanced LALMs tend toward physical ground truth. These results show that reverse-capability verification substantially reduces machine acceptance while retaining high human acceptance through an approach different from conventional CAPTCHAs.",
+  "abstractSha256": "d315713cdf320c715a6f99b819b0601ab12960366637e698cc35679b60881e0d",
+  "arxivId": "2611.28823",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28823v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "心理声学实验",
+    "primaryTask": "音频系统攻击与防御",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-system-attack-defense",
+          "label": "音频系统攻击与防御"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.psychoacoustic-experiment",
+          "label": "心理声学实验"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "心理声学实验",
+      "primaryMethodId": "method.psychoacoustic-experiment",
+      "primaryTask": "音频系统攻击与防御",
+      "primaryTaskId": "task.audio-system-attack-defense",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Wuhan University"
+      ],
+      "name": "Mingjie Bao"
+    },
+    {
+      "affiliations": [
+        "Wuhan University"
+      ],
+      "name": "Yu Dai"
+    },
+    {
+      "affiliations": [
+        "Wuhan University"
+      ],
+      "name": "Guangke Chen"
+    },
+    {
+      "affiliations": [
+        "Institute of Information Engineering"
+      ],
+      "name": "Guozhu Meng"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对大音频语言模型绕过传统音频验证码提出反向能力验证，用心理声学稳定错觉使验证答案偏离物理真相并构建 Hipi 分类 Yingchen 计数及其组合，在七模型八策略下把最大机器接受率压到 19% 17% 与 3% 而人类接受率保持 78.0% 90.0% 与 76.0%，代价是分类耗时较长组合时长叠加且依赖特定人群阈值。",
+  "originalTitle": "When Being Wrong Is Right: Reverse-Capability Audio CAPTCHAs through Psychoacoustic Design",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28823v1.pdf",
+  "readerTitle": "错答为对：用心理声学构建反向能力音频验证码",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

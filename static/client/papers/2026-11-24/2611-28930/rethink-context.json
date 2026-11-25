@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28930v1",
+  "abstract": "CANDOR assembles 61 corpora across 17 languages and five aetiological classes plus a mixed/other group. Its register counts 2,057 speakers classified as dysarthric and 19,538 healthy controls. The collection contains 4,469.7 hours of audio, including 1,178.8 hours in the dysarthric subset. Counts use speech-impairment labels where available and diagnosis labels otherwise. The collection includes 732 dysarthric speakers across 14 non-English languages; 194 speakers use six languages unsupported by Qwen3-ASR, the model underlying its non-English baselines. We document composition, chain of custody, licences and transfer terms, while distinguishing corpus-level provenance from participant-level consent records, which we hold for few constituents. Among 31 dysarthric-bearing corpora, open licences cover 29.0% of corpora, 10.5% of speakers and 8.2% of hours. Excluding the English Speech Accessibility Project raises the open hour share to 31.2%, showing its dependence on this collection's composition. CANDOR cannot be redistributed as a single audio resource; we specify public, restricted and conditional artefacts. Severity labels available in 15 corpora do not provide a validated cross-corpus mapping. Within the non-English ASR baselines, only Mandarin yields a real-speech estimate meeting our evaluation criteria. It differs sharply from the synthesis result and remains imprecise; an English challenge result uses a different model and protocol. CANDOR provides a documented basis for research on under-represented languages while making constraints on evaluation, comparability and sharing explicit.",
+  "abstractSha256": "10287dcd99b2e8adb24e5fafc857395267a240c4a9a038789f240eaaa8d1cd55",
+  "arxivId": "2611.28930",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28930v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dataset-curation",
+          "label": "数据集构建"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "数据集构建",
+      "primaryMethodId": "method.dataset-curation",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Scott-Morgan Foundation, Torquay, United Kingdom"
+      ],
+      "name": "Bernard Muller"
+    },
+    {
+      "affiliations": [
+        "The Scott-Morgan Foundation, Torquay, United Kingdom",
+        "SMF Labs, 28 rue du Colonel Pierre Avia, 75015 Paris, France"
+      ],
+      "name": "LaVonne Roberts"
+    },
+    {
+      "affiliations": [
+        "SMF Labs, 28 rue du Colonel Pierre Avia, 75015 Paris, France"
+      ],
+      "name": "Leo Kaiya"
+    },
+    {
+      "affiliations": [
+        "Tecnológico de Monterrey, Monterrey, Mexico"
+      ],
+      "name": "Antonio Ortiz Barrañón"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "CANDOR 组装 61 个语料的 2,057 名构音障碍说话人并文档化许可与来源链，最强证据是同一普通话模型在合成集 4.72% 与真实语音 33.73% 相差约 7 倍，代价是开放音频仅占 8.2% 小时且可用真实基线只剩普通话一种语言。",
+  "originalTitle": "CANDOR: A Multilingual Provenance-Documented Corpus for Dysarthric Speech Research",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28930v1.pdf",
+  "readerTitle": "多语构音障碍语料 CANDOR 的规模偏斜许可与基线限度",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

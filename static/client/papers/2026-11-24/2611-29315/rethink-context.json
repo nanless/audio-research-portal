@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29315v1",
+  "abstract": "Generative voice cloning threatens voice-based authentication, yet current deepfake detectors rely on power-hungry, high-precision models unsuited to edge hardware. We present SWIFT (Streaming Whiten-Integer Forensic Trust-Engine), a handcrafted detector that works in the high-frequency noise domain where synthesis artifacts concentrate. A first-order integer high-pass residual drives nine families of fixed-point descriptors, among them integer lifting-wavelet cepstral quantiles, Mahalanobis anomaly distances, Poincaré phase-space geometry, and phase jitter, fused by calibrated gradient-boosted trees and a sparse L1-regularised meta-learner. Under leakage-controlled nested cross-validation, with one shared preprocessing chain for real and fake audio, this reference model reaches accuracy of up to 99.86% and an Equal Error Rate (EER) as low as 0.03% across eight benchmarks. Its integer front-end and a fixed-point linear classifier run on the programmable logic of a PYNQ-Z2 (Zynq-7020) board, with a 7.85 microseconds per-frame datapath latency (127.4k frames/s) at 1.734 W and 11.2% LUT utilisation. Integer-only audio deepfake feature extraction is thus feasible at the edge without pretrained neural models or floating-point units.",
+  "abstractSha256": "8761d561b74b29bbbf7bb1b405ef1fc28602ee09c0d9bf7319585febe62b171a",
+  "arxivId": "2611.29315",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29315v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-deepfake",
+          "label": "音频深度伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "method",
+          "id": "method.ensemble-learning",
+          "label": "集成学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.hardware-system-design",
+          "label": "硬件系统设计与验证"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频深度伪造检测",
+      "primaryTaskId": "task.audio-deepfake",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Information Technology, Indian Institute of Engineering Science and Technology, Shibpur, Howrah, West Bengal 711103, India"
+      ],
+      "name": "Chirantan Banerjee"
+    },
+    {
+      "affiliations": [
+        "School of VLSI Technology, Indian Institute of Engineering Science and Technology, Shibpur, Howrah, West Bengal 711103, India"
+      ],
+      "name": "Soumita Chatterjee"
+    },
+    {
+      "affiliations": [
+        "School of VLSI Technology, Indian Institute of Engineering Science and Technology, Shibpur, Howrah, West Bengal 711103, India"
+      ],
+      "name": "Bhargab B. Bhattacharya"
+    },
+    {
+      "affiliations": [
+        "Department of Information Technology, Indian Institute of Engineering Science and Technology, Shibpur, Howrah, West Bengal 711103, India"
+      ],
+      "name": "Hafizur Rahaman"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对大模型伪造检测器难以上边缘的问题，SWIFT 以一阶整数残差与九族定点描述子加校准堆叠在八个基准上达到最高 99.86% 准确率与最低 0.03% EER，但可见生成器评测与仅前端加线性分类器上板使 1.33 个百分点的部署损失与泛化边界成为代价。",
+  "originalTitle": "SWIFT: A Handcrafted, Arithmetic-Minimal FPGA Engine for Real-Time Audio Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29315v1.pdf",
+  "readerTitle": "无神经网络的整数音频伪造检测与 FPGA 实时实现",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

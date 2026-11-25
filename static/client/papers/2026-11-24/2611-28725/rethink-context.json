@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28725v1",
+  "abstract": "Mixture-of-Experts (MoE) classifiers are increasingly applied to multimodal emotion recognition, yet the health of their routing distributions is rarely measured. We study a seven-expert MoE head on IEMOCAP under two conditions that differ only in how modality embeddings are fused before reaching it: a learned scalar gate alone, and the same gate preceded by pairwise cross-modal attention. Under scalar fusion the router collapses, concentrating on 1.88 of seven experts at a normalised entropy of 0.241. Cross-modal fusion raises entropy to 0.537 and utilisation to 3.25 experts, a 2.23x increase (p=0.035, Cohen's d=2.55), and induces emotion-differentiated routing absent in the scalar case. This recovered diversity confers no detectable benefit: across six seeds per condition, weighted accuracy (p=0.646) and run-to-run variance (p=0.768) are statistically indistinguishable. We further observe a 13-point accuracy spread under identical configuration. In this regime, router health and task performance are decoupled, and diagnosing collapse does not by itself justify fixing it.",
+  "abstractSha256": "41d548c82c898295d10ca2cf248c861720d84f7282c3917e4da30ccb51655fe7",
+  "arxivId": "2611.28725",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28725v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.moe",
+          "label": "混合专家模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "混合专家模型",
+      "primaryMethodId": "method.moe",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science, FAST National University of Computer and Emerging Sciences, Karachi 75030, Pakistan"
+      ],
+      "name": "Syed Hussamuddin"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, FAST National University of Computer and Emerging Sciences, Karachi 75030, Pakistan"
+      ],
+      "name": "Mubashra Fayyaz"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "在 IEMOCAP 四分类上固定 7 专家头并仅切换融合方式，对照实验显示跨模态注意力把路由熵从 0.241 提升到 0.537 却没有带来加权准确率的可检测提升，同时暴露 13 个点的种子抖动使单次运行比较不可靠。",
+  "originalTitle": "Routing Collapse in Multimodal Mixture-of-Experts: Cross-Modal Conditioning Restores Expert Diversity Without Improving Accuracy",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28725v1.pdf",
+  "readerTitle": "路由坍缩与跨模态修复：专家多样性恢复为何换不来准确率",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

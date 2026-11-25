@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29085v1",
+  "abstract": "Partially spoofed audio embeds spoofed segments in a bonafide utterance, and spoof localization is the task of locating them. Most countermeasures (CMs) operate at the frame level. Typically, they include a front-end representing the audio as frames and a back-end classifying each frame as bonafide or spoof. Such frame-level detection ties the reference, the predictions and the evaluation to a pre-defined temporal resolution: a frame containing a transition receives a single label, a boundary cannot lie inside a frame, and the evaluation also depends on the resolution. To tackle these issues, we treat spoof localization as regression. We propose a single-stage boundary regressor that outputs (start-time, end-time, score) tuples with continuous-valued time stamps, trained on the exact reference intervals. Results show that the proposed CM outperforms previous frame-level and boundary-based CMs, and generalizes better.",
+  "abstractSha256": "9a79add266f688f3c197eceead2de832bab5497c921816ff12b8a73da04db9f3",
+  "arxivId": "2611.29085",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29085v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "端到端学习",
+    "primaryTask": "伪造片段定位",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.forgery-localization",
+          "label": "伪造片段定位"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.end-to-end-learning",
+          "label": "端到端学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "端到端学习",
+      "primaryMethodId": "method.end-to-end-learning",
+      "primaryTask": "伪造片段定位",
+      "primaryTaskId": "task.forgery-localization",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Stuttgart, Germany"
+      ],
+      "name": "Yixuan Xiao"
+    },
+    {
+      "affiliations": [
+        "National Institute of Informatics, Japan"
+      ],
+      "name": "Xin Wang"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Germany"
+      ],
+      "name": "Yassine El Kheir"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Germany"
+      ],
+      "name": "Feidi Kallel"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Germany"
+      ],
+      "name": "Arnab Das"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Germany"
+      ],
+      "name": "Tim Polzehl"
+    },
+    {
+      "affiliations": [
+        "Technical University of Berlin, Germany"
+      ],
+      "name": "Sebastian Möller"
+    },
+    {
+      "affiliations": [
+        "University of Stuttgart, Germany"
+      ],
+      "name": "Ngoc Thang Vu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对帧级分类受 20 ms 分辨率束缚而无法输出帧内边界的问题，论文提出单阶段连续边界回归并以精确区间训练，在 PartialSpoof 上以最大融合取得最低点式与区间式等错误率且跨库泛化更好，代价是依赖精确标注并需 Soft-NMS 后处理且整句全伪造存在任务错位。",
+  "originalTitle": "Spoof Localization as Boundary Regression",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29085v1.pdf",
+  "readerTitle": "把伪造定位做成连续边界回归",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

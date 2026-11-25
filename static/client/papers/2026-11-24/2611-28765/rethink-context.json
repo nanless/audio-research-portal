@@ -1,0 +1,122 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28765v1",
+  "abstract": "Symbolic music generation often continues MIDI passages by predicting subsequent notes or events. Held-out prediction loss can overestimate generalization to unseen compositions when training contains another performance or arrangement of a test work. We introduce Multi-View Alignment-Aware Same-Work Identification, combining complementary musical representations with temporal alignment of shared passages to remove test-work versions from training while preserving unrelated material and fixing evaluation files. In a controlled cohort of 100 manually verified pairs selected for high embedding similarity, replacing 3.29% of training windows with test-work versions reduces mean per-group NLL by up to 30.16% relative to matched unrelated content. Across two datasets and two generators, our method brings test losses closest to a reference built from independent work labels. Compared with removing the same number of files at random, it leaves fewer test works exposed and retains more eligible content, including about 99% of eligible tokens on the piano-performance dataset. A separate study on that dataset matches training tokens and updates: no test works remain exposed under the dataset labels, and mean relative test loss is 2.15% higher than an independently selected reference. These findings support keeping all versions of each composition in one split when evaluating generalization to unseen works. The project is available at https://kunbai05-nb.github.io/.",
+  "abstractSha256": "1b04ea38f00b6aee546802f087a3dede2b2684284cc8de8f934ca9ff709049e3",
+  "arxivId": "2611.28765",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28765v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "翻唱与曲目识别",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.cover-song-identification",
+          "label": "翻唱与曲目识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "翻唱与曲目识别",
+      "primaryTaskId": "task.cover-song-identification",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Intelligence Science and Technology, Beijing University of Civil Engineering and Architecture, Beijing 102616, China"
+      ],
+      "name": "Kun Bai"
+    },
+    {
+      "affiliations": [
+        "College of Science, Beijing Forestry University, Beijing 100083, China"
+      ],
+      "name": "Yinghan Wang"
+    },
+    {
+      "affiliations": [
+        "Sun Yat-sen University, Shenzhen 518107, China"
+      ],
+      "name": "Canran Xiao"
+    },
+    {
+      "affiliations": [
+        "School of Computation, Information and Technology, Technical University of Munich, Munich 80333, Germany, and also with the Centre for Digital Music, School of Electronic Engineering and Computer Science, Queen Mary University of London, London E1 4NS, UK"
+      ],
+      "name": "Jiachen Luo"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Luebeck 23562, Germany"
+      ],
+      "name": "Huy Phan"
+    },
+    {
+      "affiliations": [
+        "X-Humanoid, Beijing 101111, China"
+      ],
+      "name": "Yong Dai"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Telecommunication Engineering, Jiangsu University, Zhenjiang 212013, China"
+      ],
+      "name": "Jiaqi Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Washington, Seattle, WA 98195, USA"
+      ],
+      "name": "Yunwei Li"
+    },
+    {
+      "affiliations": [
+        "Centre for Digital Music, School of Electronic Engineering and Computer Science, Queen Mary University of London, London E1 4NS, UK"
+      ],
+      "name": "Lin Wang"
+    },
+    {
+      "affiliations": [
+        "Centre for Digital Music, School of Electronic Engineering and Computer Science, Queen Mary University of London, London E1 4NS, UK"
+      ],
+      "name": "Joshua Reiss"
+    },
+    {
+      "affiliations": [
+        "Chair of Health Informatics, Technical University of Munich, Munich 81675, Germany, and also with the Group on Language, Audio and Music, Imperial College London, London SW7 2AZ, UK"
+      ],
+      "name": "Björn W. Schuller"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对文件不重叠仍残留同作品版本并压低留出损失的问题，提出结合多视角检索与保序对齐及校准验证的 MVA-SWI ，在 100 组高相似对中替换 3.29% 训练窗口使 MIDI-GPT 组内平均 NLL 下降 30.16% 的敏感性证据下实现最接近独立标签参考的隔离，但 Table IV 随机划分审计在 LMD-clean 残留 17.75% 暴露，这与下游固定划分暴露 25/142 个测试作品约 17.61% 属不同口径，而干净保留略低与听感差异不显著构成主要代价。",
+  "originalTitle": "Beyond File-Level Splits: Rethinking Symbolic Music Evaluation via Multi-View Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28765v1.pdf",
+  "readerTitle": "从文件去重到作品隔离：多视角对齐的符号音乐评测清洗",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

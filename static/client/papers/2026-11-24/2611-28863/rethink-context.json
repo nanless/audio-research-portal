@@ -1,0 +1,69 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28863v1",
+  "abstract": "Voice anonymization aims to conceal speaker identity while preserving linguistic and paralinguistic information. However, certain applications also require the ability to attribute anonymized recordings to their original speakers. Existing recovery approaches often rely on specially designed reversible anonymization systems, limiting their applicability to different anonymization architectures. In this work, we propose a post-hoc framework for restorable multilingual voice anonymization that enables speaker attribution without reconstructing the original waveform or modifying the underlying anonymization systems. Specifically, we convert 192-dimensional speaker embeddings into binary identity payloads through sign quantization and embed them into anonymized speech using a segment-wise audio watermarking strategy. Recovered payloads are subsequently matched against enrollment speaker templates for identity attribution. We evaluate the framework across four languages using two distinct anonymization backbones, BM1 and T24. Under clean conditions, the approach achieves approximately 99% exact payload recovery and 0.96% attribution EER while largely preserving the original privacy-utility performance. Experiments further show that speaker attribution remains reliable under several audio distortions despite imperfect payload recovery, although temporal rescaling severely disrupts recovery. Additional analyses reveal that watermark robustness varies across languages, carrier durations, and anonymization backbones.",
+  "abstractSha256": "d53f99cfad47afa875bc5e76a6cb677dc2bea6aebf6453ea6069ea9b673d5098",
+  "arxivId": "2611.28863",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28863v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "说话人匿名化",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anonymization",
+          "label": "说话人匿名化"
+        },
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "说话人匿名化",
+      "primaryTaskId": "task.anonymization",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Duke Kunshan University"
+      ],
+      "name": "Haoyuan Zheng"
+    },
+    {
+      "affiliations": [
+        "Singapore Institute of Technology"
+      ],
+      "name": "Guang Hua"
+    },
+    {
+      "affiliations": [
+        "Duke Kunshan University"
+      ],
+      "name": "Xiaoxiao Miao"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多语匿名语音需在不改动匿名器的前提下实现授权身份归属的问题，本文提出把 192 维说话人嵌入符号量化为 192 比特并用分段 AudioSeal 水印嵌入已匿名语音，干净条件下达到约 99% 精确恢复与约 0.96% 归属 EER 且几乎不改变原有隐私效用，代价是对变速完全失效且公开解码器下无访问控制。",
+  "originalTitle": "Restorable Multilingual Voice Anonymization via Audio Watermarking",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28863v1.pdf",
+  "readerTitle": "事后水印如何让多语匿名语音可恢复归属",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

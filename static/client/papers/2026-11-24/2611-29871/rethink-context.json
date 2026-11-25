@@ -1,0 +1,73 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29871v1",
+  "abstract": "Frozen self-supervised speech encoders have been frequently used for audio deepfake detection. However, the layers are usually chosen from a development set. We examine this choice for singing-voice deepfake detection on CtrSVDD. We train one detection head per layer, plus a learned layer mix, on frozen XEUS (3-4 seeds) and XLS-R (2 seeds). We test on clean audio and under noise, reverberation and lossy coding. On clean audio, the middle layers beat the last layer in both encoders and the learned mix does not beat the best single layer. The layer chosen on the development set is 2.3 (XEUS) and 4.1 (XLS-R) percentage points of EER worse than the best test layer. Under noise and coding, XEUS's best layers stay in the middle, while under reverberation its upper layers catch up, whereas XLS-R's best layer moves shallower. In an exploratory analysis, XEUS detects a commercial synthesis attack best with an earlier layer, especially under noise. The layer therefore cannot be chosen reliably on an in-domain development set and clean audio alone.",
+  "abstractSha256": "9d547c17f74409c4db55b30615463cb96c503f95b95f4ba724d40527fe559c8c",
+  "arxivId": "2611.29871",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29871v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of California, Santa Barbara"
+      ],
+      "name": "Benjamin Hurt"
+    },
+    {
+      "affiliations": [
+        "University of California, Santa Barbara"
+      ],
+      "name": "Yefei Yang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对冻结语音编码器做歌声伪造检测时该信任哪一层的问题，论文在 CtrSVDD 上为 XEUS 与 XLS-R 的每一层训练配对检测头并在干净与 9 种损伤下对比，发现中间层优于末层且开发集选层带来 2.3 与 4.1 个百分点的等错误率损失，而最优深度随混响与域外攻击漂移。",
+  "originalTitle": "Which Layer to Trust? Layer Selection in Frozen Speech Encoders for Singing-Voice Deepfake Detection under Signal Corruption",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29871v1.pdf",
+  "readerTitle": "冻结语音编码器哪一层更可信：歌声伪造检测的层选择与信号损伤鲁棒性",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

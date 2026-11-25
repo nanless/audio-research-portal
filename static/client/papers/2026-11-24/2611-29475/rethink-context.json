@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29475v1",
+  "abstract": "Musical style, a global attribute that functions throughout a whole piece, is a lever widely used by users in modern large music generation models. Yet how style is represented inside these models, and which components drive it, remains largely unexplored. In language models, circuit analysis traces a representation to a sparse sub-network of a few key components, namely attention heads and MLP neurons, and has been used successfully to explain and control global attributes such as emotion. In this work, we use circuit analysis to study the mechanisms behind musical style. Based on YuE2, we build a dataset that pairs the same lyrics with five styles and design a three-step framework. First, stage localization shows that the style forms mainly in the score-planning stage. Second, static observation across the positions of this stage further reveals that style is not a fixed vector but a dynamic representation across tokens. Third, we therefore merge the activation differences across positions into one direction per style, and trace the neurons and attention heads that drive this direction into a sparse circuit. Without any style text, steering this circuit successfully transfers one piece into the target style, matching and even exceeding the style prompt. To our knowledge, this is the first work to analyze and control musical style at the circuit level in a large music generation model. Audio and score examples are available at https://aristo233.github.io/Music_Circuit/.",
+  "abstractSha256": "81908e539323b6b2f800cb266676a9296d068ee0a73bc8dccd3f84ee27a3f1cf",
+  "arxivId": "2611.29475",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29475v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-generation",
+          "label": "音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.interpretability",
+          "label": "可解释性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "激活因果干预",
+      "primaryMethodId": "method.activation-intervention",
+      "primaryTask": "音乐生成",
+      "primaryTaskId": "task.music-generation",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
+      "name": "Ruiji Yu"
+    },
+    {
+      "affiliations": [
+        "McGill University"
+      ],
+      "name": "Wenye Ma"
+    },
+    {
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
+      "name": "Gus Xia"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文追问音乐风格在 YuE2 内部如何表征与归因，提出按逐拍 KL 加权聚合激活差异得到单条动态方向并组装 560 个组件稀疏电路，无文本转向在 150 次生成中以 133 次命中超越风格提示的 113 次，代价是音频更长且稀有节奏与默认风格仍难完全控制。",
+  "originalTitle": "Music Circuit: Trace and Control Style Dynamics in Large Music Generation Model",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29475v1.pdf",
+  "readerTitle": "电路视角下音乐风格的动态表征与无文本控制",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

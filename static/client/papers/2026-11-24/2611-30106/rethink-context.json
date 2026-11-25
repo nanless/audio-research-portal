@@ -1,0 +1,104 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.30106v1",
+  "abstract": "Recent advances in text-to-speech (TTS), voice conversion (VC), and AI-driven speech synthesis enable adversaries to convincingly impersonate trusted individuals during phone calls. Existing defenses often rely on offline analysis, degrade under telephony distortions, or remain vulnerable to adaptive attacks. To address these limitations, we present Ultrasound Watermark, a real-time, smartphone-native framework that protects live calls by binding speech to the caller's physical articulatory motion through acoustic watermarking. During a call, the smartphone emits ultrasonic signals and captures reflections from facial articulatory movements using only its built-in speaker and microphone. Ultrasound Watermark extracts motion features from these reflections and fuses them with outgoing speech to generate a dynamic watermark. Because the ultrasonic measurements are physically and temporally coupled with speech production, they are difficult to spoof without the underlying articulatory motion. A synchronized generator-detector architecture enforces cross-modal speech-motion consistency against replay, synthesized speech, and articulation-mimicking attacks. Ultrasound Watermark operates continuously with less than 200 ms latency overhead and requires no additional hardware. We implement Ultrasound Watermark on iOS and Android and evaluate it using over 2.5 hours of synchronized speech-ultrasound recordings from 22 speakers across eight smartphones and four real-world environments. Results demonstrate robustness to diverse attacks and telephony distortions while preserving perceptual audio quality.",
+  "abstractSha256": "2c1f5236354dd2e0e372c662675125919bb9bf70ed7a5271d1328d4fbf78ec18",
+  "arxivId": "2611.30106",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.30106v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频水印",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.watermarking",
+          "label": "音频水印"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频水印",
+      "primaryTaskId": "task.watermarking",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Bloomberg L.P., New York, New York, USA"
+      ],
+      "name": "Renzhi Hao"
+    },
+    {
+      "affiliations": [
+        "University of Massachusetts Amherst, Amherst, Massachusetts, USA"
+      ],
+      "name": "Shirui Cao"
+    },
+    {
+      "affiliations": [
+        "Indiana University Bloomington, Bloomington, Indiana, USA"
+      ],
+      "name": "Yizhu Wen"
+    },
+    {
+      "affiliations": [
+        "University of Maryland, Baltimore County, Baltimore, Maryland, USA"
+      ],
+      "name": "Rishav Gupta"
+    },
+    {
+      "affiliations": [
+        "University of Maryland, Baltimore County, Baltimore, Maryland, USA"
+      ],
+      "name": "Dharani Nadendla"
+    },
+    {
+      "affiliations": [
+        "Amazon, San Diego, California, USA"
+      ],
+      "name": "Mehran Kafai"
+    },
+    {
+      "affiliations": [
+        "Indiana University Bloomington, Bloomington, Indiana, USA"
+      ],
+      "name": "Hanqing Guo"
+    },
+    {
+      "affiliations": [
+        "University of Maryland, Baltimore County, Baltimore, Maryland, USA"
+      ],
+      "name": "Dong Li"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对电话中实时语音冒充难以用纯音频离线方法阻断的问题，本文用手机超声感知发音运动并经跨模态融合生成动态水印，在非同步伪造下达到 1.00 面积而在同步模仿下回落至 0.84 至 0.88，代价是对强滤波与低码率压缩显著敏感且依赖通话双方安装同一应用。",
+  "originalTitle": "Ultrasound Watermark: Real-time Acoustic Watermarking against Voice Scams on Smartphones",
+  "pdfUrl": "https://arxiv.org/pdf/2611.30106v1.pdf",
+  "readerTitle": "超声水印如何把发音动作绑进通话语音以实时抵御语音诈骗",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

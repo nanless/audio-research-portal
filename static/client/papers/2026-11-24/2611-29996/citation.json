@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29996v1",
+  "arxivId": "2611.29996",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29996v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan"
+      ],
+      "name": "Xiaojie Gu"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan"
+      ],
+      "name": "Haoyu Zhang"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan"
+      ],
+      "name": "Qian Niu"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan"
+      ],
+      "name": "Fan Gao"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan"
+      ],
+      "name": "Rio Yang"
+    },
+    {
+      "affiliations": [
+        "Yale School of Medicine, New Haven, Connecticut, United States"
+      ],
+      "name": "Eleni Friligkou"
+    },
+    {
+      "affiliations": [
+        "Yale School of Medicine, New Haven, Connecticut, United States"
+      ],
+      "name": "Kevin Jin"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Bunkyo-ku, Tokyo, Japan"
+      ],
+      "name": "Yutaka Matsuo"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan"
+      ],
+      "name": "Irene Li"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.29996v1",
+  "originalTitle": "MindBridge: A Multilingual and Multimodal Tool for Interactive Cognitive Monitoring",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29996v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

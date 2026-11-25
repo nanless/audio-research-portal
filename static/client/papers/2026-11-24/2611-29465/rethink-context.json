@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29465v1",
+  "abstract": "Voice systems increasingly combine streaming speech, persistent state, reasoning, tool use, and embodied control. Once these functions share a runtime, spoken input can change digital or physical state, and recognition or response quality alone no longer characterizes the system. This article studies the interfaces through which spoken evidence becomes consequential. \\emph{Auditory intelligence} denotes the capabilities required to perceive, understand, coordinate, and generate spoken interaction; \\emph{auditory agency} denotes the causal path from that interaction to stateful decisions and observable consequences. The \\emph{commitment boundary} marks where revisable auditory evidence becomes persistent state, a plan, or an executable request. \\emph{Agency closure} then follows an authorized action through observation, verification, recovery or compensation, and communication of the outcome. Evidence from full-duplex interaction, reasoning, memory, tools, embodiment, and human control shows a consistent systems-level mismatch: integration is advancing faster than end-to-end observation of what the integrated system actually does. The resulting design problem is to preserve a trace from spoken evidence to consequence while keeping commitment, execution, and verification attributable.",
+  "abstractSha256": "d76c346889c4294536ea53a62bd10882538fb44694551f0db213dcd4d8c64a1b",
+  "arxivId": "2611.29465",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29465v1",
+  "assessment": {
+    "documentType": "综述",
+    "primaryMethod": "文献综述方法",
+    "primaryTask": "语音代理规划与工具使用",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-agent-planning",
+          "label": "语音代理规划与工具使用"
+        },
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.literature-review",
+          "label": "文献综述方法"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "文献综述方法",
+      "primaryMethodId": "method.literature-review",
+      "primaryTask": "语音代理规划与工具使用",
+      "primaryTaskId": "task.voice-agent-planning",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science, National University of Defense Technology, Changsha 410073, China, and with the State Key Laboratory of Complex & Critical Software Environment, Changsha 410073, China"
+      ],
+      "name": "Kele Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Qisheng Xu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Xinwang Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Huaimin Wang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文界定语音智能体从可修正语音证据经承诺边界到可验证后果的系统问题，用六类包络与四层功能及六类证据端点组织分析，表明低延迟调用生成与高部件精度不等于已授权已执行的后果，而保留可归因因果链与独立验证是主要代价。",
+  "originalTitle": "Voice Agents: From Auditory Intelligence to Auditory Agency",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29465v1.pdf",
+  "readerTitle": "语音智能体：从听觉智能到听觉行动",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

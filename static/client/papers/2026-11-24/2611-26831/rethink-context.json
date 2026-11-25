@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26831v1",
+  "abstract": "Audio tagging is a fundamental task in machine listening, enabling the automatic identification of acoustic events in applications such as intelligent monitoring, industrial inspection, environmental sensing, and smart environments. As these applications increasingly migrate to edge platforms, deployment-oriented metrics such as latency, energy consumption, and resource utilization become critical alongside predictive performance. However, most existing studies evaluate audio tagging models under a single software environment, overlooking the potential impact of software stack evolution on deployment efficiency. This paper investigates how software ecosystem updates affect the execution characteristics of state-of-the-art audio tagging architectures on edge devices. We evaluate representative convolutional and Transformer-based models, including PANNs (CNN and ResNet variants), AST, and PaSST, on an NVIDIA Jetson Orin Nano platform using two generations of NVIDIA's software ecosystem: JetPack 6.2 and JetPack 7.2. Under identical hardware conditions, we analyze inference latency, energy consumption, CPU/GPU utilization, and memory footprint across multiple inference backends and power modes. The results show that software stack evolution can substantially affect deployment performance. JetPack 7.2 reduces latency and energy consumption by more than 50% for several convolutional architectures when combined with TensorRT, while significantly increasing GPU utilization. In contrast, AST exhibits only marginal gains, whereas PaSST shows intermediate behavior. These findings demonstrate that software evolution is a critical factor in Edge AI evaluation and can alter the relative deployment efficiency of competing architectures. Consequently, software stack versions should be explicitly considered when benchmarking and selecting audio tagging models for embedded deployment.",
+  "abstractSha256": "3f847c328e441dce2b90b44401d2ddc5f9f8d3a20e989e5241bed29df48f2eb6",
+  "arxivId": "2611.26831",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26831v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "案例研究与实践报告",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.case-study",
+          "label": "案例研究与实践报告"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.on-device",
+          "label": "端侧运行"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "案例研究与实践报告",
+      "primaryMethodId": "method.case-study",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Instituto Tecnologico de Informatica, Valencia, Spain"
+      ],
+      "name": "Guillem Fustier-Castillo"
+    },
+    {
+      "affiliations": [
+        "Instituto Tecnologico de Informatica, Valencia, Spain"
+      ],
+      "name": "Ruben Ribes-Serrano"
+    },
+    {
+      "affiliations": [
+        "Instituto Tecnologico de Informatica, Valencia, Spain"
+      ],
+      "name": "Jordi Grau-Haro"
+    },
+    {
+      "affiliations": [
+        "Instituto Tecnologico de Informatica, Valencia, Spain"
+      ],
+      "name": "Marta Garcia-Ballesteros"
+    },
+    {
+      "affiliations": [
+        "Instituto Tecnologico de Informatica, Valencia, Spain"
+      ],
+      "name": "Javier Naranjo-Alcazar"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文在同一块 Jetson Orin Nano 上对比 JetPack 6.2 与 JetPack 7.2，发现结合 TensorRT 时新软件栈让轻量卷积延迟与能耗下降超 50% 并把 GPU 占用推至近满载，而注意力模型仅获边际改善，代价是结论限定于 FP32 与特定功耗模式且未验证量化与跨硬件泛化。",
+  "originalTitle": "Impact of Edge Software Evolution on Audio Tagging Models: An Empirical Study on NVIDIA Jetson Orin Nano",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26831v1.pdf",
+  "readerTitle": "软件升级如何改变边缘音频标签模型的延迟与能耗",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,85 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.30694v1",
+  "abstract": "Speech synthesized by text-to-speech engines is a low-cost substitute for recorded test sets in automatic speech recognition, yet an off-the-shelf synthetic test set is worth only a few dozen real recordings for estimating the real error rate of a recognizer. This paper examines which properties of real recordings are missing from synthetic speech and how much of the gap can be closed. For 507 Turkish Common Voice recordings, synthetic twins are built: a ladder of synthetic copies that adds, one factor at a time, the pitch of the speaker, a clone of the same speaker, the real recording channel and the speaking rate. At each step, the agreement between ASR behaviour on the copy and on the real recording is measured. Across three zero-shot cloning engines and panels of six and 19 recognizers, the speaker clone is the step that improves agreement on which sentences are hard, raising the Spearman correlation from .41 to .55 for Chatterbox. Matching the channel or adding generic noise corrects the error level when the synthetic speech is easier than real speech. The twin with the highest worth is equivalent to 70 to 122 real recordings, depending on the recognizer panel, compared with about 9 for a stock voice. The findings replicate on VoxForge, a second corpus in which speaker identity is known rather than inferred: the clone raises sentence agreement from .31 to .50 and the worth from 8 to about 50 recordings. Agreement on which sentences are hard is distinct from agreement on how hard they are. The paper concludes with a practical recipe and a reporting checklist for synthetic ASR test sets.",
+  "abstractSha256": "ae752fbb599c43caf24f1c57388d25eab9bacf40ea7ba69a3de27893429ee87c",
+  "arxivId": "2611.30694",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.30694v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音识别",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.asr",
+          "label": "语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "task",
+          "id": "task.voice-cloning",
+          "label": "语音克隆"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "语音识别",
+      "primaryTaskId": "task.asr",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Data Science and Innovation Ata Technology Platforms Istanbul, Turkey"
+      ],
+      "name": "Nur Yağmur Tuncer"
+    },
+    {
+      "affiliations": [
+        "Data Science and Innovation Ata Technology Platforms Istanbul, Turkey"
+      ],
+      "name": "Mustafa Sertaç Türkel"
+    },
+    {
+      "affiliations": [
+        "Data Science and Innovation Ata Technology Platforms Istanbul, Turkey"
+      ],
+      "name": "Fatma Nur Korkmaz"
+    },
+    {
+      "affiliations": [
+        "Data Science and Innovation Ata Technology Platforms Istanbul, Turkey"
+      ],
+      "name": "Ahmet Tuğrul Bayrak"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对现成合成语音评测信息量仅值几句真实录音的问题，论文用逐句配对的音高、说话人克隆、通道与语速阶梯证明说话人克隆改善句子难度排序而通道匹配修正整体误差水平，最好的孪生体在 6 个识别器下等效 122 句真实录音，代价是仍需小样本真实锚集决策且语速与剩余细粒度差异尚未解决。",
+  "originalTitle": "Synthetic Twins: Closing the Gap Between TTS Test Sets and Real Recordings in Turkish ASR Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.30694v1.pdf",
+  "readerTitle": "合成孪生体如何弥合合成测试集与真实录音的差距",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

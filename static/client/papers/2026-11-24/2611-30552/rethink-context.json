@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.30552v1",
+  "abstract": "As generative AI becomes integrated into everyday life, understanding how avatars shape human-AI interaction and the perception of AI as a social partner is becoming increasingly important. This paper builds a research instrument on audio-output coupling, which connects the audio output of a generative AI to an external avatar. There are two implementations: the browser implementation captures the audio of a tab selected through screen sharing without installing additional software, and the desktop implementation captures the audio of the service embedded in the application. Both work with the voice AI as people ordinarily use it, and as a method neither depends on a particular service. The implementation reported here, Deskmate, generates speech state, mouth shape, and expression from low-level features such as voice-band mean amplitude, RMS, peak, and transients. Because it uses no microphone, speech recognition, or transcription, Deskmate acquires neither the user's voice nor the content of the conversation. Records of the conversation remain with the voice AI provider, but none are kept automatically on the side of Deskmate. Three interchangeable backends are provided for rendering the avatar: 3D (VRM), 2D (Live2D), and CSS. Deskmate allows researchers to manipulate avatar presentation as an experimental condition, without changing the commercial service's interface, voice, or response generation. Because conversation content is not held fixed, the estimand is the total effect, including the changes in the participant's speech and the AI's responses that the presentation brings about. A server edition, served from the researcher's server for online experiments, is also provided. The effectiveness of avatar presentation has not yet been evaluated; this paper reports the design and implementation.",
+  "abstractSha256": "df2c1e2c3539b133409b90ffbefef5da8c3ea18f5e2881ca85d544dba8344ece",
+  "arxivId": "2611.30552",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.30552v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音驱动人像视频生成",
+    "rankBucket": "后50%",
+    "score": 5.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.talking-portrait",
+          "label": "语音驱动人像视频生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-interaction",
+          "label": "语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.software",
+          "label": "软件工具"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "语音驱动人像视频生成",
+      "primaryTaskId": "task.talking-portrait",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hiroshi Hamada"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Lin Gu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对无法只改变商用语音 AI 身体呈现的实验困境，论文以播放音频为耦合点实现浏览器与桌面两种捕获并经低层特征生成与渲染无关的化身状态，已确认同一套代码可驱动 ChatGPT 与 Grok 而效果尚未评估，代价是内容成为事后变量只能估计总效应且结果绑定服务版本。",
+  "originalTitle": "An Experimental Apparatus for Embodied Conversational AI: A Simple Implementation Coupling a Commercial Voice AI with an Avatar",
+  "pdfUrl": "https://arxiv.org/pdf/2611.30552v1.pdf",
+  "readerTitle": "只换身体不动 AI：音频输出耦合的具身对话实验装置解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

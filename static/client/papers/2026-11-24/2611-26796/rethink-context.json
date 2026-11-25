@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26796v1",
+  "abstract": "Multi-talker automatic speech recognition (ASR) can be performed by conditioning a single-speaker recognizer on frame-level speaker activity. However, this approach requires a complete diarization pass to obtain the conditioning signals and one ASR pass per speaker, making both the frontend and recognition costs dependent on the number of speakers. We reduce these costs by using Heuristic Error Assignment Training (HEAT) to merge the activities of an arbitrary number of speakers into two speaker-agnostic streams. Conditioning on these streams limits recognition to two ASR passes regardless of the number of participants. Through an analysis of the resulting encoder representations, we show that under a stream-assignment heuristic suited to conversational speech, the recognizer represents a stream target much as it does a speaker target. Because the streams do not encode persistent speaker identities, we further replace the conventional sliding-window diarization and clustering frontend with a model that predicts both activity streams directly from the audio in a single pass. A combination of arrival-order and permutation-invariant training objectives over the two-stream powerset labels prevents the predictor from collapsing to identical streams. We also investigate post-hoc speaker attribution by matching decoded utterances to speaker activities within their assigned streams. Experiments on corpora with diverse conversational dynamics demonstrate a favorable efficiency--accuracy tradeoff. On AMI and ICSI, two-stream conditioning is respectively 44\\% and 87\\% faster than per-speaker conditioning using the same diarization frontend, with less than 2\\% relative WER degradation. Direct activity prediction increases these speedups to 79\\% and 132\\%, with relative WER degradations of 10\\% and 21\\%, respectively.",
+  "abstractSha256": "c93873e824b0d413092bb089d00b07f49d023ce8290a8bca7e8f70e817c59877",
+  "arxivId": "2611.26796",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26796v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "多说话人语音识别",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multi-talker-asr",
+          "label": "多说话人语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.rule-based",
+          "label": "规则与词典方法"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "规则与词典方法",
+      "primaryMethodId": "method.rule-based",
+      "primaryTask": "多说话人语音识别",
+      "primaryTaskId": "task.multi-talker-asr",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Human Language Technology Center of Excellence, Johns Hopkins University, Baltimore, Maryland, USA"
+      ],
+      "name": "Xiluo He"
+    },
+    {
+      "affiliations": [
+        "AGH University of Krakow, Kraków, Poland"
+      ],
+      "name": "Magdalena Rybicka"
+    },
+    {
+      "affiliations": [
+        "Department of Signal Theory and Communications, Universidad Carlos III de Madrid, Leganes, Spain"
+      ],
+      "name": "Laureano Moro-Velazquez"
+    },
+    {
+      "affiliations": [
+        "Human Language Technology Center of Excellence, Johns Hopkins University, Baltimore, Maryland, USA"
+      ],
+      "name": "Jesús Villalba"
+    },
+    {
+      "affiliations": [
+        "Agence Ministérielle pour l’Intelligence Artificielle de Défense, Palaiseau, France"
+      ],
+      "name": "Thomas Thebaud"
+    },
+    {
+      "affiliations": [
+        "Human Language Technology Center of Excellence, Johns Hopkins University, Baltimore, Maryland, USA"
+      ],
+      "name": "Najim Dehak"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对逐说话人条件识别中前端日志与识别遍数均随人数增长的问题，本文以启发式分配把任意人数合并为 2 条无关流并直接预测流掩码，在 AMI 与 ICSI 上分别实现约 44% 与 87% 加速而相对词错误率仅上升不足 2% ，进一步去掉日志的直接预测则加速至约 79% 与 132% 但代价升至约 10% 与 21% 。",
+  "originalTitle": "Efficient Conversational Multi-Talker ASR with Predicted Speaker-Agnostic Activity Streams",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26796v1.pdf",
+  "readerTitle": "以两条无关流固定两次识别的高效多人会话识别",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.27214v1",
+  "arxivId": "2611.27214",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.27214v1",
+  "authors": [
+    {
+      "affiliations": [
+        "AI Lab, Country Garden Services Group"
+      ],
+      "name": "Yumiao Li"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Country Garden Services Group"
+      ],
+      "name": "Haoxiang Jie"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Country Garden Services Group"
+      ],
+      "name": "Xinbei Li"
+    },
+    {
+      "affiliations": [
+        "AI Lab, Country Garden Services Group"
+      ],
+      "name": "Yaoyuan Yan"
+    },
+    {
+      "affiliations": [
+        "Tongji University"
+      ],
+      "name": "Yue Qu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.27214v1",
+  "originalTitle": "EAF-TTS: Rethinking Codec-Latent Coordinates for Flow TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2611.27214v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

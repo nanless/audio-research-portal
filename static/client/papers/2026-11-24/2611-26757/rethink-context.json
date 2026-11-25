@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26757v1",
+  "abstract": "As bird calls weaken with distance, their recordings lose spectral detail. We examine how species recognition varies with distance using controlled playback of ten-second excerpts from 20 bird species at seven distances from 1 to 48 ft. An STM32-based recording system acquires and stores the audio, which is subsequently analyzed on a computer using acoustic measurements and BirdNET. Across four metadata configurations, mean-aggregated top-1 accuracy is 95--100% through 24 ft, 90--95% at 36 ft, and 80--90% at 48 ft, with 20 recordings evaluated per configuration at each distance. Across the screened recordings, the median upper spectral edge is below its 1-ft reference at every evaluated distance from 4 to 36 ft, indicating an overall reduction in upper-frequency content with distance. These results show that recognition remains high through 24 ft despite measurable spectral degradation, followed by greater and configuration-dependent losses at longer distances.",
+  "abstractSha256": "472e32566dc1fcaa40eaad561edb42b13db63677826b2c58bdf3aaf71ce70bf4",
+  "arxivId": "2611.26757",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26757v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频分类",
+    "rankBucket": "后50%",
+    "score": 5.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-classification",
+          "label": "音频分类"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "application",
+          "id": "application.bioacoustics",
+          "label": "生物声学监测"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.evaluation",
+          "label": "模型评估"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "信号处理",
+      "primaryMethodId": "method.signal-processing",
+      "primaryTask": "音频分类",
+      "primaryTaskId": "task.audio-classification",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Viterbi School of Engineering, University of Southern California"
+      ],
+      "name": "Hasmik Gharibyan"
+    },
+    {
+      "affiliations": [
+        "Viterbi School of Engineering, University of Southern California"
+      ],
+      "name": "Bhaskar Krishnamachari"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对短距离回放下声学退化是否转化为识别失效的问题，本研究用 20 个物种 7 个距离的 STM32 同录音配对声学测量与 BirdNET 评分，证实平均汇聚 top-1 准确率在 24 ft 内保持 95% 至 100% 而 48 ft 靠地点元数据才回升至 90%，代价是总功率已衰减约 44 dB 且谱统计子集在远距离急剧流失。",
+  "originalTitle": "Bird-Call Recognition Across Distance: Acoustic Degradation and BirdNET Performance",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26757v1.pdf",
+  "readerTitle": "鸟鸣远距离识别与频谱退化的配对实证",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

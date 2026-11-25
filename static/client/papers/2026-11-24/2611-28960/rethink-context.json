@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28960v1",
+  "abstract": "Multimodal Emotion Recognition (MER) involves detecting the underlying emotion behind each utterance within a conversation, which is essential for emotionally aware human-computer interaction. While omni-modal large language models (Omni-LLMs) demonstrate strong capability for MER by jointly processing modalities including text, audio, and vision, different modality combinations yield different prediction outcomes across utterances: acoustic and visual inputs can help recover annotated labels missed by text-only inference, but can also turn correct predictions into errors. Processing all modalities for every utterance is also computationally expensive. To this end, we introduce EmoRouter, a training-free, model-agnostic framework for adaptive modality cascading that selects an exit tier for each utterance along a predefined modality order. The routing is guided by prediction-uncertainty estimates derived from Conformal Prediction. EmoRouter routes each utterance through a sequence of increasing-cost modality levels and exits at the first level when the model is confident in the emotion. To determine when to exit, we propose Conformal Set Contraction, a structural calibration criterion that calibrates the per-tier CP error budgets used for these exit decisions. Comprehensive evaluations on 4 MER benchmarks and 3 Omni-LLMs reveal that EmoRouter matches or outperforms the full modalities while reducing inference latency by 67.9--94.5%. Furthermore, EmoRouter demonstrates high transferability across different models, validating its robustness. Code is available at https://github.com/tianyi-lab/EmoRouter.",
+  "abstractSha256": "5ada58a4842fad45a5f4bd114f291d3827b8a640af484e1805f8f7cbaaf6ad39",
+  "arxivId": "2611.28960",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28960v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "动态计算与早退",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前25%",
+    "score": 7.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.dynamic-computation",
+          "label": "动态计算与早退"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "动态计算与早退",
+      "primaryMethodId": "method.dynamic-computation",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Maryland, College Park"
+      ],
+      "name": "Fangxu Yu"
+    },
+    {
+      "affiliations": [
+        "University of Maryland, College Park"
+      ],
+      "name": "Lingzhi Yuan"
+    },
+    {
+      "affiliations": [
+        "University of Illinois Chicago"
+      ],
+      "name": "Dehai Min"
+    },
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Tao Feng"
+    },
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Ge Liu"
+    },
+    {
+      "affiliations": [
+        "University of Maryland, College Park"
+      ],
+      "name": "Furong Huang"
+    },
+    {
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
+      "name": "Tianyi Zhou"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对固定模态又贵又不稳的问题，EmoRouter 用三层级联与共形集合收缩自动选预算，在 4 套基准与 3 个 Omni-LLM 上以 67.9% 到 94.5% 的延迟节省持平或超越全模态，而 MOSI 等文本极强场景仍是例外。",
+  "originalTitle": "EmoRouter: Adaptive Modality Cascading for Multimodal Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28960v1.pdf",
+  "readerTitle": "EmoRouter：用共形集合大小逐句选择模态",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,83 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.27465v1",
+  "abstract": "Reconstructing an editable music score requires musical events, sung text and the instructions that organise them on the page. Existing recognition targets often omit part of this information, while direct MusicXML prediction repeats substantial structural markup. We introduce Cecilia, a compact representation of canonicalised MusicXML that retains musical content, lyric attachments and layout instructions. Cecilia-OMR predicts this representation through metadata and measure-bounded music segments from shared visual memory. A learned count head determines the number of output segments. Across paired complete scores under a common tokeniser, the ratio of mean MusicXML to Cecilia sequence lengths is 27.73. Cecilia-OMR outperforms Legato 2 on Camera String Quartets and both Lieder conditions, with a four-condition OpenScore macro normalised edit distance of 0.2232 against 0.2998. Separate evaluations of lyrics, notation trees and rendered layout reveal complementary aspects of reconstruction and quantify the contribution of layout instructions. Training-stage, reward and candidate-selection studies further examine how recognition changes across model adaptation and decoding.",
+  "abstractSha256": "27a2d7fc62b03e716c2205d3da7e07ee463349c777129b71c0ea541648bbaabf",
+  "arxivId": "2611.27465",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.27465v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "光学乐谱识别",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.optical-music-recognition",
+          "label": "光学乐谱识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.verifiable-reward-rl",
+          "label": "可验证奖励强化学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "光学乐谱识别",
+      "primaryTaskId": "task.optical-music-recognition",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Central Conservatory of Music",
+        "Tsinghua University"
+      ],
+      "name": "Congren Dai"
+    },
+    {
+      "affiliations": [
+        "Central Conservatory of Music",
+        "Tsinghua University"
+      ],
+      "name": "Zhancheng Guo"
+    },
+    {
+      "affiliations": [
+        "Central Conservatory of Music"
+      ],
+      "name": "Xiaobing Li"
+    },
+    {
+      "affiliations": [
+        "Central Conservatory of Music",
+        "Tsinghua University"
+      ],
+      "name": "Maosong Sun"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "Cecilia 以紧凑字面树编码保留 MusicXML 的音符歌词与版式指令，并以共享视觉记忆与小节分段解码实现识别，在四个 OpenScore 基准域宏平均 OMR-NED 上从 0.2998 降至 0.2232，代价是渲染四重奏与手写谱仍落后且版式几何精度依然有限。",
+  "originalTitle": "Cecilia: Towards Layout-Inclusive Optical Music Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.27465v1.pdf",
+  "readerTitle": "Cecilia 兼顾音符歌词与版式的光学乐谱识别",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

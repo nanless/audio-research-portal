@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29865v1",
+  "arxivId": "2611.29865",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29865v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of California, Santa Barbara, USA"
+      ],
+      "name": "Benjamin Hurt"
+    },
+    {
+      "affiliations": [
+        "Columbia University, New York, USA"
+      ],
+      "name": "Oscar O'Donnell"
+    },
+    {
+      "affiliations": [
+        "University of California, Santa Barbara, USA"
+      ],
+      "name": "Yefei Yang"
+    },
+    {
+      "affiliations": [
+        "University of California, Santa Barbara, USA"
+      ],
+      "name": "Anjani Sethi"
+    },
+    {
+      "affiliations": [
+        "University of California, Santa Barbara, USA"
+      ],
+      "name": "Priyanka Durai"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.29865v1",
+  "originalTitle": "Characterizing Frozen SSL Encoders and Backends for Cross-Domain Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29865v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

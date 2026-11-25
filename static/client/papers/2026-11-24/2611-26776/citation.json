@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26776v1",
+  "arxivId": "2611.26776",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26776v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of Mons"
+      ],
+      "name": "Mohammed El Amine Mokhtari"
+    },
+    {
+      "affiliations": [
+        "University of Mons"
+      ],
+      "name": "Matei Mancas"
+    },
+    {
+      "affiliations": [
+        "University of Mons"
+      ],
+      "name": "Virginie Vandenbulcke"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.26776v1",
+  "originalTitle": "What Helps Language-Model Agents Review Violent Video? A Controlled Comparison with a Human Evidence Reference",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26776v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

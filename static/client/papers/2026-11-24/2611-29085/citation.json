@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29085v1",
+  "arxivId": "2611.29085",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29085v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of Stuttgart, Germany"
+      ],
+      "name": "Yixuan Xiao"
+    },
+    {
+      "affiliations": [
+        "National Institute of Informatics, Japan"
+      ],
+      "name": "Xin Wang"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Germany"
+      ],
+      "name": "Yassine El Kheir"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Germany"
+      ],
+      "name": "Feidi Kallel"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Germany"
+      ],
+      "name": "Arnab Das"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Germany"
+      ],
+      "name": "Tim Polzehl"
+    },
+    {
+      "affiliations": [
+        "Technical University of Berlin, Germany"
+      ],
+      "name": "Sebastian Möller"
+    },
+    {
+      "affiliations": [
+        "University of Stuttgart, Germany"
+      ],
+      "name": "Ngoc Thang Vu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.29085v1",
+  "originalTitle": "Spoof Localization as Boundary Regression",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29085v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

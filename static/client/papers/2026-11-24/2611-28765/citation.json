@@ -1,0 +1,80 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28765v1",
+  "arxivId": "2611.28765",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28765v1",
+  "authors": [
+    {
+      "affiliations": [
+        "School of Intelligence Science and Technology, Beijing University of Civil Engineering and Architecture, Beijing 102616, China"
+      ],
+      "name": "Kun Bai"
+    },
+    {
+      "affiliations": [
+        "College of Science, Beijing Forestry University, Beijing 100083, China"
+      ],
+      "name": "Yinghan Wang"
+    },
+    {
+      "affiliations": [
+        "Sun Yat-sen University, Shenzhen 518107, China"
+      ],
+      "name": "Canran Xiao"
+    },
+    {
+      "affiliations": [
+        "School of Computation, Information and Technology, Technical University of Munich, Munich 80333, Germany, and also with the Centre for Digital Music, School of Electronic Engineering and Computer Science, Queen Mary University of London, London E1 4NS, UK"
+      ],
+      "name": "Jiachen Luo"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Luebeck 23562, Germany"
+      ],
+      "name": "Huy Phan"
+    },
+    {
+      "affiliations": [
+        "X-Humanoid, Beijing 101111, China"
+      ],
+      "name": "Yong Dai"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Telecommunication Engineering, Jiangsu University, Zhenjiang 212013, China"
+      ],
+      "name": "Jiaqi Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Washington, Seattle, WA 98195, USA"
+      ],
+      "name": "Yunwei Li"
+    },
+    {
+      "affiliations": [
+        "Centre for Digital Music, School of Electronic Engineering and Computer Science, Queen Mary University of London, London E1 4NS, UK"
+      ],
+      "name": "Lin Wang"
+    },
+    {
+      "affiliations": [
+        "Centre for Digital Music, School of Electronic Engineering and Computer Science, Queen Mary University of London, London E1 4NS, UK"
+      ],
+      "name": "Joshua Reiss"
+    },
+    {
+      "affiliations": [
+        "Chair of Health Informatics, Technical University of Munich, Munich 81675, Germany, and also with the Group on Language, Audio and Music, Imperial College London, London SW7 2AZ, UK"
+      ],
+      "name": "Björn W. Schuller"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.28765v1",
+  "originalTitle": "Beyond File-Level Splits: Rethinking Symbolic Music Evaluation via Multi-View Alignment",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28765v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

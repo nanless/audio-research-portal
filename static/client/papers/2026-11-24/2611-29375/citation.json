@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29375v1",
+  "arxivId": "2611.29375",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29375v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Singapore University of Technology and Design"
+      ],
+      "name": "Abhinaba Roy"
+    },
+    {
+      "affiliations": [
+        "University of Venice"
+      ],
+      "name": "Ambuj Mehrish"
+    },
+    {
+      "affiliations": [
+        "Singapore University of Technology and Design"
+      ],
+      "name": "Dorien Herremans"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.29375v1",
+  "originalTitle": "MusicListenBench: Can Audio LLMs Hear the Difference Yet?",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29375v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

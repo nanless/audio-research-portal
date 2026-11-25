@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29557v1",
+  "abstract": "Evaluating speech-to-speech translation (S$2$ST) systems requires assessing multiple dimensions of translated speech, including semantic adequacy, speaker similarity, and acoustic naturalness. Existing approaches are largely text-based, relying on ASR transcripts and primarily assessing semantic adequacy, while other dimensions require separate metrics. We propose S$2$SCORE, a unified text-free evaluation framework that jointly models these dimensions within a multi-task architecture and produces a human-calibrated overall quality score. S$2$SCORE is trained using supervision derived from established evaluation models, enabling scalable learning without direct human annotations. Evaluated across five language pairs, S$2$SCORE shows strong agreement with human judgments, independent reference metrics, and the training supervision metrics, indicating robust generalization. The reference-free variant, S$2$SCORE-QE, consistently outperforms S$2$SCORE-REF and achieves stronger semantic adequacy prediction than BLASER~$2.0$.",
+  "abstractSha256": "50194a58663fe4a7211e2b26ea6bf34338ef2fe812525868e34b1414dac392e6",
+  "arxivId": "2611.29557",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29557v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "语音质量评估",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-quality",
+          "label": "语音质量评估"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-translation",
+          "label": "语音翻译"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多任务学习",
+      "primaryMethodId": "method.multitask",
+      "primaryTask": "语音质量评估",
+      "primaryTaskId": "task.speech-quality",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of EECE, IIT Dharwad, Dharwad, India"
+      ],
+      "name": "Lalaram Arya"
+    },
+    {
+      "affiliations": [
+        "Department of CSE, IIT Jammu, Jammu, India"
+      ],
+      "name": "Mrinmoy Bhattacharjee"
+    },
+    {
+      "affiliations": [
+        "Department of EECE, IIT Dharwad, Dharwad, India"
+      ],
+      "name": "S. R. Mahadeva Prasanna"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对语音到语音翻译缺少统一无文本评估的问题， S2SCORE 用共享网络联合建模语义 说话人与自然度并以人类评分校准总分，在 5 个英译语言对上无参考版本与人类整体质量达 0.714 等级相关且超越 BLASER 2.0 ，代价是依赖机器指标监督与合成音色训练并仅验证到英语方向。",
+  "originalTitle": "S$2$SCORE: A Textless Unified Evaluation Metric for Speech-to-Speech Translation Systems",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29557v1.pdf",
+  "readerTitle": "不依赖文本统一评估语音翻译的语义 音色与自然度",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

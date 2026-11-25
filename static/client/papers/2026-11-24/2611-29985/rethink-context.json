@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29985v1",
+  "abstract": "Flow-matching text-to-speech (TTS) models learn how native speakers realize a text, yet this knowledge is used only for synthesis. We show that a frozen TTS model can score non-native (L2) pronunciation without generating audio. For a learner utterance, we compare the model's velocity-prediction error under the target text with its error under a counterfactual text (dropped or swapped) on the same noised input; the difference behaves like a generative goodness-of-pronunciation score. The signal is confined to a narrow band of high-noise timesteps, which a native-speech criterion locates and a closed-form rule transfers across backbones. On speaker-disjoint speechocean762, four frozen TTS models reach $r{=}0.58$--$0.63$ with human scores, within the range of zero-shot ASR and phone-level baselines, and adding them to those baselines in a label-free fusion raises $r$ from $0.698$ to $0.757$. Cached frame scores also flag word-level errors at no extra TTS cost.",
+  "abstractSha256": "0afd3c9ae4ce5b244cb5fdce1c942c072b627efaeb6d790cbb9fbb9a43949f4c",
+  "arxivId": "2611.29985",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29985v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "发音评估",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pronunciation-assessment",
+          "label": "发音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.zero-shot",
+          "label": "零样本"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "发音评估",
+      "primaryTaskId": "task.pronunciation-assessment",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Beijing Jiaotong University"
+      ],
+      "name": "Zehan Liu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对免合成复用冻结 TTS 先验为 L2 发音打分的问题，论文用同一噪声下目标与反事实文本的速度误差差并限定高噪声窄带与语音帧池化，在说话人无关集上达到 r 0.58 到 0.63 并将判别式融合从 0.698 提升到 0.757，代价是依赖干净常速规范文本且单用仍不及最强音素基线。",
+  "originalTitle": "Scoring L2 Pronunciation Without Synthesis: Counterfactual Velocity Contrast in Frozen Flow-Matching TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29985v1.pdf",
+  "readerTitle": "不合成音频的 L2 发音评分：冻结流匹配 TTS 的反事实速度对比",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

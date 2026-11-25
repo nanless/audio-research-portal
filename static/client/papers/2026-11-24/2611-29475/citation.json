@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29475v1",
+  "arxivId": "2611.29475",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29475v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
+      "name": "Ruiji Yu"
+    },
+    {
+      "affiliations": [
+        "McGill University"
+      ],
+      "name": "Wenye Ma"
+    },
+    {
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
+      "name": "Gus Xia"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.29475v1",
+  "originalTitle": "Music Circuit: Trace and Control Style Dynamics in Large Music Generation Model",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29475v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

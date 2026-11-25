@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28718v1",
+  "abstract": "Speech deepfake detectors make few errors on standard benchmarks, yet a simple attack defeats them: the attacker passes fake speech through one short filter, tuned against the detector, and many fakes then pass as real. Training with random filters does not stop this attack, because the attacker uses the worst filter, not a random one.   We therefore train the detector against the worst case: during training, a small set of filters is updated to fool the current detector, at about the cost of random filters. In a preregistered study, this made the detector more robust to filter attacks on real-world recordings than random filters did. It also lowered the in-domain attack error of the standard detector, and beat one-step adversarial training with additive noise on real-world recordings. The price is a higher error on unfiltered speech, and a validation study shows that choosing the checkpoint on held-out spoofing systems made the standard detector about as robust.",
+  "abstractSha256": "8ea7f47e8de165a694eef6fcdca746605223a4803fe53f27644590f89d66d112",
+  "arxivId": "2611.28718",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28718v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗训练",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对抗训练",
+      "primaryMethodId": "method.adversarial-training",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science and Engineering, The Ohio State University, Columbus, OH, USA"
+      ],
+      "name": "Ali Alavi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对一段可学习短滤波即可击穿伪造语音检测器的问题，本文以 8 个滤波器的最坏情况库替代随机增强，并在预注册真实录音攻击上取得比随机滤波低 8.02 个百分点的 EER ，代价是干净语音 EER 系统性上升且留出系统选检查点可使标准检测器同样鲁棒。",
+  "originalTitle": "Training speech deepfake detectors against worst-case filters: Gains, Costs and Limits",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28718v1.pdf",
+  "readerTitle": "最坏情况滤波训练能否抵御击穿语音伪造检测器的短滤波攻击",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

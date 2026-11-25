@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29226v1",
+  "arxivId": "2611.29226",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29226v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Tencent Yuanbao, Tencent Ethereal Audio Lab"
+      ],
+      "name": "Changfeng Gao"
+    },
+    {
+      "affiliations": [
+        "Tencent Yuanbao, Tencent Ethereal Audio Lab"
+      ],
+      "name": "Yong Ren"
+    },
+    {
+      "affiliations": [
+        "Tencent Yuanbao, Tencent Ethereal Audio Lab"
+      ],
+      "name": "Jun Yuan"
+    },
+    {
+      "affiliations": [
+        "Tencent Yuanbao, Tencent Ethereal Audio Lab"
+      ],
+      "name": "Zhengkun Tian"
+    },
+    {
+      "affiliations": [
+        "Tencent Yuanbao, Tencent Ethereal Audio Lab"
+      ],
+      "name": "Ye Bai"
+    },
+    {
+      "affiliations": [
+        "Tencent Yuanbao, Tencent Ethereal Audio Lab"
+      ],
+      "name": "Zhao You"
+    },
+    {
+      "affiliations": [
+        "Tencent Yuanbao, Tencent Ethereal Audio Lab"
+      ],
+      "name": "Shidong Shang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.29226v1",
+  "originalTitle": "Tenlai-TTS 2.0: Continuous-Representation LLM-Based TTS System with End-to-End Training",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29226v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

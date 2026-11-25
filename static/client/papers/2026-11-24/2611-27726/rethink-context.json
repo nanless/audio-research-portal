@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.27726v1",
+  "abstract": "Personalized amplification gains for hearing aids have been shown to be preferred over prescriptive gains. Since the preferred settings can vary depending on the background audio environment, this paper presents a switching mechanism or system that automatically selects personalized gains for a current background audio environment. To prevent foreground speech from interfering with background environment analysis, a one-class voice activity detector is designed to identify speech activity from speech mixed with noise. A consistency check is conducted to enable distinguishing foreground speech from background speech, preserving babble as a background environment of interest because hearing aid users often struggle to understand speech in background babble. Sound segments without foreground speech are then analyzed by an online discovery method combining Bayesian change-point detection with a memory of previously encountered environments. This discovery method detects changes, recognizes returning environments, and discovers new ones without a predefined number of environments. Experimental results show that three-seed mean macro-averaged F1 scores of 85.53%-91.98% across eight speech/background-corpus pairs covering 36 background noise types were achieved. Furthermore, the discovery method achieved adjusted Rand indices of 0.91 and 0.96 on two families of test streams. In the same-recording-return condition of audio streams combining speech with four background audio environments often encountered by hearing aid users, the switching mechanism selected the correct personalized gain profile after 105 environment changes, recalled the stored gain profile at every return, and made no switches to an incorrect gain profile.",
+  "abstractSha256": "3aa66a5accf28cb8bbfcc74f1145a686d6c543c0082980d26ba0e27e535f92a2",
+  "arxivId": "2611.27726",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.27726v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "声学场景分类",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.scene-classification",
+          "label": "声学场景分类"
+        },
+        {
+          "facet": "task",
+          "id": "task.vad",
+          "label": "语音活动检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "application",
+          "id": "application.hearing-aids",
+          "label": "助听器"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "声学场景分类",
+      "primaryTaskId": "task.scene-classification",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, The University of Texas at Dallas, Richardson, TX 75080, USA"
+      ],
+      "name": "Nafisa Zarrin Tasnim"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Computer Engineering, The University of Texas at Dallas, Richardson, TX 75080, USA"
+      ],
+      "name": "Nasser Kehtarnavaz"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对同一用户在不同背景下偏好增益不同且前景语音会污染环境判断的问题，本文用单类前景检测筛选背景音频再做在线变点与环境记忆的切换系统，在同录音返回的 105 次变化中全部选对且零误切，代价是十余秒的确认延迟与异录音返回时易增建轮廓。",
+  "originalTitle": "A Switching Mechanism for Selecting Environment-Adaptive Personalized Gains in Hearing Aids",
+  "pdfUrl": "https://arxiv.org/pdf/2611.27726v1.pdf",
+  "readerTitle": "随背景环境自动切换助听器个性化增益的机制",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

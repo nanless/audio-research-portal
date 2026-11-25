@@ -1,0 +1,40 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28327v1",
+  "arxivId": "2611.28327",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28327v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Université TÉLUQ , Montréal, Québec, Canada",
+        "Concordia University, Montréal, Québec, Canada"
+      ],
+      "name": "Ines Jemmali"
+    },
+    {
+      "affiliations": [
+        "Université TÉLUQ , Montréal, Québec, Canada",
+        "Concordia University, Montréal, Québec, Canada"
+      ],
+      "name": "Alaa Nfissi"
+    },
+    {
+      "affiliations": [
+        "Université TÉLUQ , Montréal, Québec, Canada"
+      ],
+      "name": "Wassim Bouachir"
+    },
+    {
+      "affiliations": [
+        "Concordia University, Montréal, Québec, Canada"
+      ],
+      "name": "Nizar Bouguila"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.28327v1",
+  "originalTitle": "AV-FLARE: Feature-Level Reliability Estimation for Multimodal Emotion Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28327v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

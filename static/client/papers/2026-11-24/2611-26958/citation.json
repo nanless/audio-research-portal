@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26958v1",
+  "arxivId": "2611.26958",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26958v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Duke University"
+      ],
+      "name": "Yixuan Huang"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, Denton, USA"
+      ],
+      "name": "Xiao Yun"
+    },
+    {
+      "affiliations": [
+        "Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Jiayin Zheng"
+    },
+    {
+      "affiliations": [
+        "Duke University"
+      ],
+      "name": "Simon Mak"
+    },
+    {
+      "affiliations": [
+        "Duke University"
+      ],
+      "name": "Yue Jiang"
+    },
+    {
+      "affiliations": [
+        "Duke University"
+      ],
+      "name": "Cynthia Rudin"
+    },
+    {
+      "affiliations": [
+        "Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Stephen Ni-Hahn"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.26958v1",
+  "originalTitle": "A Novel Dataset and Framework for Schenkerian Optical Music Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26958v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

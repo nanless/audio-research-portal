@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.30390v1",
+  "abstract": "Early screening of Autism Spectrum Disorder (ASD) is critical for timely clinical intervention, although establishing reliable speech based screening systems remains problematic due to limited clinical data, class imbalance, and the need for reliable uncertainty estimation. We propose an uncertainty-aware ASD screening framework based on self-supervised HuBERT representations, combining Leave-One-Subject-Out (LOSO) crossvalidation, balanced k-bagging, and Monte Carlo (MC) Dropout. Multiple HuBERT models are fine-tuned on balanced subsets, with predictions combined through probability-based ensemble averaging and aggregated at the subject level. Experiments on the Child Pathological Speech Database (CPSD) show strong performance, achieving 86.30% balanced accuracy and 93.74% ROC-AUC at the utterance level, and 95.04% and 96.30%, respectively, at the subject level. Furthermore, predictive entropy effectively reflects classification reliability: incorrectly classified segments show higher entropy than correctly classified ones (0.4605 $\\pm$ 0.2314 vs. 0.1717 $\\pm$ 0.1830), with a significant correlation with errors (r = 0.3981, p = 7.38 x 10 -170 ) and an error-detection ROC-AUC of 0.8359. These results demonstrate the potential of the proposed framework as a robust and uncertainty-aware computer-aided tool for ASD screening.",
+  "abstractSha256": "b1e8bdcaec825f63b01f0984c88f5a48c04b4f91f8fa5e2b0fab65e29557f3e5",
+  "arxivId": "2611.30390",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.30390v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "模型集成",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.pathological-speech",
+          "label": "病理语音评估"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        },
+        {
+          "facet": "method",
+          "id": "method.uncertainty-estimation",
+          "label": "不确定性估计与校准"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "模型集成",
+      "primaryMethodId": "method.model-ensemble",
+      "primaryTask": "病理语音评估",
+      "primaryTaskId": "task.pathological-speech",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Nihel Loubna Ghennani"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Mourtada Benazzouz"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从 arXiv PDF 文本可靠映射"
+      ],
+      "name": "Julie Mauclair"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对小样本类别不平衡下语音自闭症筛查缺乏可信度的问题，论文用平衡 K 袋装 HuBERT 集成结合 MC Dropout 与被试级平均，在 CPSD 留一被试评测中达到话语级 0.8630 与被试级 0.9504 的平衡准确率，并以预测熵区分正误，代价是每折训练 3 个模型且推理需多次随机前向，以及单数据集验证与残余过自信。",
+  "originalTitle": "Trustworthy Speech-Based Autism Screening under Class Imbalance with Uncertainty-Aware HuBERT Ensembles",
+  "pdfUrl": "https://arxiv.org/pdf/2611.30390v1.pdf",
+  "readerTitle": "不确定性感知 HuBERT 集成实现可信语音自闭症筛查",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

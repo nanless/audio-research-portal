@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26958v1",
+  "abstract": "Music theory enables performers, composers, and listeners to engage more deeply with music. Schenkerian analysis (SchA) is a particularly illustrative and widely used approach for modeling tonal structure, organizing music into hierarchical layers of harmonic and voice-leading relationships. Despite its importance in pedagogy and scholarship, producing well-formatted Schenkerian graphs remains difficult. A typical workflow might involve writing the Schenkerian analysis on paper, and then manually, painstakingly, entering each symbol by hand into music software, exporting to vector graphics, and manually refining layouts in graphical editors. Existing optical music recognition (OMR) systems for handwritten common western music notation (CWMN) can be leveraged for their ability to recognize small-scale symbols common to those in SchA. However, CWMN OMR models generally fail to recognize large symbols such as phrase slurs, struggle with dense notation, and do not recognize Schenkerian analysis markings. Thus, these models do not extend well to digitizing SchA. This paper introduces a novel framework for optical music recognition of both CWMN and SchA. Our novel contributions include (1) an ensemble model in which each individual model follows a different image-cropping scheme for improved object detection, (2) a topological neural network architecture for notation assembly, where candidate hyperedges attend to one another and perform hierarchical message passing, (3) the first dataset of labeled handwritten SchAs, gathered with novel model integration to the OMR-annotation software, MuNG Studio, and (4) the first algorithm for converting semantic Schenkerian graphs into typeset format.",
+  "abstractSha256": "fa86a00c84973909f88beda72ed427f37fff27d30bfa536901c1bb9eb83ad8bc",
+  "arxivId": "2611.26958",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26958v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "图神经网络",
+    "primaryTask": "光学乐谱识别",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.optical-music-recognition",
+          "label": "光学乐谱识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.gnn",
+          "label": "图神经网络"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "method",
+          "id": "method.model-ensemble",
+          "label": "模型集成"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "图神经网络",
+      "primaryMethodId": "method.gnn",
+      "primaryTask": "光学乐谱识别",
+      "primaryTaskId": "task.optical-music-recognition",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Duke University"
+      ],
+      "name": "Yixuan Huang"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, Denton, USA"
+      ],
+      "name": "Xiao Yun"
+    },
+    {
+      "affiliations": [
+        "Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Jiayin Zheng"
+    },
+    {
+      "affiliations": [
+        "Duke University"
+      ],
+      "name": "Simon Mak"
+    },
+    {
+      "affiliations": [
+        "Duke University"
+      ],
+      "name": "Yue Jiang"
+    },
+    {
+      "affiliations": [
+        "Duke University"
+      ],
+      "name": "Cynthia Rudin"
+    },
+    {
+      "affiliations": [
+        "Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Stephen Ni-Hahn"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对手写申克分析大小符号悬殊与长程依赖，论文用 YOLOv8L 与 RF-DETR 分治检测加候选超边注意力拓扑装配实现识别到排版，在 HandSchA 句法微平均 F1 达 86.48% 显著领先基线，代价是仅 47 页专家标注且符号识别仍高度依赖数据规模。",
+  "originalTitle": "A Novel Dataset and Framework for Schenkerian Optical Music Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26958v1.pdf",
+  "readerTitle": "手写申克图的识别到排版：互补检测与拓扑装配",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

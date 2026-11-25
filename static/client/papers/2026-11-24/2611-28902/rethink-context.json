@@ -1,0 +1,129 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28902v1",
+  "abstract": "Video generators can now render convincing short clips, yet complete audiovisual works require coordinating visuals, sound, and editing across multiple stages. Existing benchmarks focus on individual generators or video agents under narrower production settings, leaving end-to-end creation by general multimodal large language models (MLLMs) underexplored. We introduce StudioBench, a benchmark comprising 160 tasks across eight video genres and five task types, spanning diverse audiovisual production requirements. Models produce minutes of finished audiovisual content using 33 atomic generation, editing, and inspection tools, without shell access or workflow templates. We evaluate the delivered films, while analyzing reconstructed workflow graphs to characterize production behavior and diagnose failures. Across seven MLLMs, explicit requirements are nearly saturated, yet production quality varies substantially in picture clarity and composition, object structure, motion, and lip sync. All models spontaneously organize multi-stage production workflows without predefined templates. However, higher-quality models exhibit more selective production workflows, whereas additional tool calls alone show little association with quality. These findings identify the missing quality loop of effective inspection, selection, and revision as a key bottleneck in productive audiovisual creation.",
+  "abstractSha256": "03587da929e782a41c0079e4563bba3046b27d7aac05faa7597d13ad1361ba81",
+  "arxivId": "2611.28902",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28902v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前25%",
+    "score": 8.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-generation",
+          "label": "音视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "音视频生成",
+      "primaryTaskId": "task.av-generation",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Xinglong Xu"
+    },
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Yuxia Zhu"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Siyuan Li"
+    },
+    {
+      "affiliations": [
+        "Qilu University of Technology"
+      ],
+      "name": "Lixu Tian"
+    },
+    {
+      "affiliations": [
+        "Qilu University of Technology"
+      ],
+      "name": "Xiaofei Zhao"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Yuxin Liu"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Caijun Jia"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Jintao Chen"
+    },
+    {
+      "affiliations": [
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Bihui Yu"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Alden Cai"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Asher Qin"
+    },
+    {
+      "affiliations": [
+        "Qilu University of Technology"
+      ],
+      "name": "Jingxuan Wei"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Cheng Tan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "StudioBench 以 160 项任务与 33 个原子工具检验通用模型从简报到成片的自主制作，发现显式需求接近饱和而工艺差距显著，最高 92.2 分伴随保留率越低分数越高的筛选效应，代价是数美元费用与数十分钟耗时及缺失的检查修订闭环。",
+  "originalTitle": "StudioBench: Benchmarking Agentic Multimodal Large Language Models for Productive Audiovisual Creation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28902v1.pdf",
+  "readerTitle": "通用多模态大模型能否自主导演数分钟声画作品",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

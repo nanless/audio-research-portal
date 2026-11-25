@@ -1,0 +1,39 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28930v1",
+  "arxivId": "2611.28930",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28930v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The Scott-Morgan Foundation, Torquay, United Kingdom"
+      ],
+      "name": "Bernard Muller"
+    },
+    {
+      "affiliations": [
+        "The Scott-Morgan Foundation, Torquay, United Kingdom",
+        "SMF Labs, 28 rue du Colonel Pierre Avia, 75015 Paris, France"
+      ],
+      "name": "LaVonne Roberts"
+    },
+    {
+      "affiliations": [
+        "SMF Labs, 28 rue du Colonel Pierre Avia, 75015 Paris, France"
+      ],
+      "name": "Leo Kaiya"
+    },
+    {
+      "affiliations": [
+        "Tecnológico de Monterrey, Monterrey, Mexico"
+      ],
+      "name": "Antonio Ortiz Barrañón"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.28930v1",
+  "originalTitle": "CANDOR: A Multilingual Provenance-Documented Corpus for Dysarthric Speech Research",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28930v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

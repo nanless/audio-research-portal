@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29333v1",
+  "abstract": "Experimental platforms that enable multiple participants to engage in spoken dialogue and perform physical actions concurrently in a shared environment are important for studying cooperation between humans and embodied AI agents. In this paper, we propose EMIP (Embodied Multi-Party Interaction Platform), a virtual environment platform built on Minecraft. Through an Internet-based client-server architecture, EMIP connects multiple humans and multiple AI agents to the same virtual environment and supports full-duplex speech communication and simultaneous physical interaction. It provides interfaces based on the Model Context Protocol (MCP) for environmental observation, physical action execution, and audio input and output, enabling researchers to develop their own agent control methods using large language models (LLMs). Additional features include centralized control of an agent group through a single EMIP agent client, collaborative object transportation by multiple agents, and experimental support functions such as recording and retrieving observation histories. By integrating these features into a reusable platform, EMIP aims to support research on human-human, human-agent, and agent-agent cooperation under different participant configurations and agent control methods. Usage examples illustrate concurrent speech and physical action, task coordination, and overlapping speech. The source code for the platform is publicly available on GitHub (https://github.com/AI-Humans-Lab/EMIP-Embodied-Multi-Party-Interaction-Platform).",
+  "abstractSha256": "2f5d416d5d380d6215fb388724526af161ad0952e7617d9e69d8b6d3db4db5cf",
+  "arxivId": "2611.29333",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29333v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 6.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.open-source-tool",
+          "label": "开源工具"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "全双工语音交互",
+      "primaryTaskId": "task.full-duplex",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Okayama Prefectural University",
+        "AI and Humans Lab"
+      ],
+      "name": "Koichiro Terao"
+    },
+    {
+      "affiliations": [
+        "AI and Humans Lab",
+        "University of Shizuoka"
+      ],
+      "name": "Rikunari Sagara"
+    },
+    {
+      "affiliations": [
+        "Okayama Prefectural University",
+        "AI and Humans Lab"
+      ],
+      "name": "Moe Nagao"
+    },
+    {
+      "affiliations": [
+        "Okayama Prefectural University",
+        "AI and Humans Lab"
+      ],
+      "name": "Naoto Iwahashi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多人多智能体协作缺少同时支持并发语音与物理动作的可复用底座问题，EMIP 选择以 Minecraft 为共享世界并用 MCP 固定观察行动与语音信念接口，三段人机并发协作示例展示了重叠对话与角色分配的可行性，代价是加速效果受 LLM 与音频延迟制约且尚无多参与者定量性能验证。",
+  "originalTitle": "EMIP: Embodied Multi-Party Interaction Platform",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29333v1.pdf",
+  "readerTitle": "EMIP：让多人多智能体在同一 Minecraft 世界里边说话边动手",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

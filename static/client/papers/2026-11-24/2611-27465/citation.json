@@ -1,0 +1,41 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.27465v1",
+  "arxivId": "2611.27465",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.27465v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Central Conservatory of Music",
+        "Tsinghua University"
+      ],
+      "name": "Congren Dai"
+    },
+    {
+      "affiliations": [
+        "Central Conservatory of Music",
+        "Tsinghua University"
+      ],
+      "name": "Zhancheng Guo"
+    },
+    {
+      "affiliations": [
+        "Central Conservatory of Music"
+      ],
+      "name": "Xiaobing Li"
+    },
+    {
+      "affiliations": [
+        "Central Conservatory of Music",
+        "Tsinghua University"
+      ],
+      "name": "Maosong Sun"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.27465v1",
+  "originalTitle": "Cecilia: Towards Layout-Inclusive Optical Music Recognition",
+  "pdfUrl": "https://arxiv.org/pdf/2611.27465v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

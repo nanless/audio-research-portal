@@ -1,0 +1,103 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.30171v1",
+  "abstract": "We introduce Audio-Visual Rearrangement (AVR), a novel task in which an agent hears a spoken request, retrieves a suitable object, and delivers it to the requesting user or an instruction-specified destination. AVR requires the agent to understand the spoken request and acoustically localize the speaker for delivery. To support this task, we construct a dataset covering three query types: explicit target specification, speaker-relative spatial references, and implicit user intent, spanning eight subtypes with diverse object selection and delivery requirements. Moreover, we propose a framework that integrates a motion-aware spatial audio module into an audio-visual large language model to encode spatial cues from the spoken request and update them as the agent moves. We further incorporate auxiliary supervision for speech understanding, spatial audio perception, and visual grounding through multitask instruction tuning to improve action prediction. Experiments establish baseline performance in both seen and unseen environments, laying the groundwork for future research on embodied intelligence and human-robot interaction. The code will be publicly available soon.",
+  "abstractSha256": "61b3441384125b99b61bdc6a84a1384a066e88d46f20805ec73e37e13c84db45",
+  "arxivId": "2611.30171",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.30171v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "视听导航",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-visual-navigation",
+          "label": "视听导航"
+        },
+        {
+          "facet": "task",
+          "id": "task.spoken-understanding",
+          "label": "口语理解"
+        },
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "视听导航",
+      "primaryTaskId": "task.audio-visual-navigation",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "China Agricultural University"
+      ],
+      "name": "Ruohao Guo"
+    },
+    {
+      "affiliations": [
+        "China Agricultural University"
+      ],
+      "name": "Jiatong Ye"
+    },
+    {
+      "affiliations": [
+        "China Agricultural University"
+      ],
+      "name": "Chenwei Dong"
+    },
+    {
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
+      "name": "Jinxing Zhou"
+    },
+    {
+      "affiliations": [
+        "University of California, Berkeley"
+      ],
+      "name": "Dantong Niu"
+    },
+    {
+      "affiliations": [
+        "China Agricultural University"
+      ],
+      "name": "Guangyao Li"
+    },
+    {
+      "affiliations": [
+        "China Agricultural University"
+      ],
+      "name": "Zhenbo Li"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "语音重排要求智能体从一次 spoken 请求中同时解析找什么与说话人在哪里，基线以双耳运动感知编码与多任务微调连接语义理解、声定位与视觉操作，在已见与未见场景小幅领先基线但绝对成功率仍低，且并发声干扰与精细放置构成主要代价。",
+  "originalTitle": "Audio-Visual Rearrangement",
+  "pdfUrl": "https://arxiv.org/pdf/2611.30171v1.pdf",
+  "readerTitle": "听见一句话后找物送人的语音视觉重排任务",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

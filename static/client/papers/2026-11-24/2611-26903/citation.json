@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26903v1",
+  "arxivId": "2611.26903",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26903v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Wichita State University, USA"
+      ],
+      "name": "Aishwarya Fursule"
+    },
+    {
+      "affiliations": [
+        "Wichita State University, USA"
+      ],
+      "name": "Vamshi Nallaguntla"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin, USA"
+      ],
+      "name": "Yuan Tseng"
+    },
+    {
+      "affiliations": [
+        "The University of Texas at Austin, USA"
+      ],
+      "name": "David Harwath"
+    },
+    {
+      "affiliations": [
+        "Institut national de la recherche scientifique (INRS-EMT), Canada"
+      ],
+      "name": "Anderson Avila"
+    },
+    {
+      "affiliations": [
+        "Wichita State University, USA"
+      ],
+      "name": "Shruti Kshirsagar"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.26903v1",
+  "originalTitle": "Towards Robust Partial-Edit Deepfake Localization: An edit and Generator Conditioned Analysis",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26903v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

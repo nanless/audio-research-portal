@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28290v1",
+  "abstract": "Effective prosody modeling is essential in natural speech generation applications, but complications arise in speaker anonymization, since speaker attributes are present in acoustic correlates of prosody. Our work aims to improve previous reported tradeoffs between effective speaker obfuscation and preservation of prosodic content. To this end, we integrate an existing pretrained privacy-preserving prosody encoder into a speech synthesis model, enabling prosody-preserving speaker anonymization. By conditioning speech generation on prosody features, we find that human subjects more reliably perceive intended prosodic meaning, while anonymization performance is competitive with previous work.",
+  "abstractSha256": "54cfe1eb621ba4271072cf2f441f5c40b9ba487525dfb1c8b9bb633ac021e6eb",
+  "arxivId": "2611.28290",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28290v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "说话人匿名化",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.anonymization",
+          "label": "说话人匿名化"
+        },
+        {
+          "facet": "task",
+          "id": "task.speech-synthesis",
+          "label": "语音合成"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "流匹配",
+      "primaryMethodId": "method.flow-matching",
+      "primaryTask": "说话人匿名化",
+      "primaryTaskId": "task.anonymization",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Washington"
+      ],
+      "name": "Kevin Everson"
+    },
+    {
+      "affiliations": [
+        "University of Washington"
+      ],
+      "name": "Mari Ostendorf"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对级联匿名化丢韵律与变声残留音色的矛盾，本文在 CosyVoice2 语言模型与流匹配两处接入解耦韵律编码器，人听指派准确率达 94.3% 且合成检测率大幅下降，代价是语言模型侧韵律会拉低等错误率。",
+  "originalTitle": "Preserving Prosody in Speaker Anonymization",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28290v1.pdf",
+  "readerTitle": "保留韵律的说话人匿名化",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

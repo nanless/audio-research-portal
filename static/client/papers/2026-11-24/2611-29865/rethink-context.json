@@ -1,0 +1,91 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29865v1",
+  "abstract": "Self-supervised learning (SSL) encoders are the dominant front end for speech deepfake detection, and the prevailing recipe fine-tunes the full encoder on a small spoofing corpus, maximizing in-domain accuracy at the cost of known degradation under domain shift. Taking a recent cross-attention fusion of SSL and constant-Q cepstral features as a fixed reference recipe, we freeze its encoder and ask which encoder and which backend behave best across domains. We cross two frozen encoders, the massively multilingual XEUS and Wav2Vec2 XLSR-53, with two backends, multi-head factorized attentive (MHFA) pooling and AASIST, and evaluate on ASVspoof 2019 LA, ASVspoof 2021 LA and DF, In-the-Wild (ITW), and ASVspoof 5, training every system in one pipeline over three seeds. We report three findings. First, encoder and backend interact: MHFA suits the stronger encoder, while AASIST recovers more from and stabilizes the weaker one. Second, within this recipe, the frozen encoder produces large, repeatable differences. With MHFA, frozen XEUS lowers error relative to frozen XLSR-53 by 58-77% on LA21, DF21, and ASV5, and more modestly on ITW. This ordering persists in a matched-aggregation ablation, and a capacity-matched WavLM Large diagnostic shows that parameter count alone does not explain XLSR-53's weaker performance. Third, against a three-seed fine-tuned baseline, frozen XEUS updates under 0.4M parameters versus 316M, wins on ASVspoof 5 (in EER and min-DCF) and modestly on LA21, trails on DF21 and ITW, and shows lower seed variation on three of the four out-of-domain sets.",
+  "abstractSha256": "d4a4b6020070b1965828502bbc8d8bc1ace1b1f7423a467b402eae8a2e315c32",
+  "arxivId": "2611.29865",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29865v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.robustness",
+          "label": "鲁棒性"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of California, Santa Barbara, USA"
+      ],
+      "name": "Benjamin Hurt"
+    },
+    {
+      "affiliations": [
+        "Columbia University, New York, USA"
+      ],
+      "name": "Oscar O'Donnell"
+    },
+    {
+      "affiliations": [
+        "University of California, Santa Barbara, USA"
+      ],
+      "name": "Yefei Yang"
+    },
+    {
+      "affiliations": [
+        "University of California, Santa Barbara, USA"
+      ],
+      "name": "Anjani Sethi"
+    },
+    {
+      "affiliations": [
+        "University of California, Santa Barbara, USA"
+      ],
+      "name": "Priyanka Durai"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对全量微调跨域退化问题，论文在固定交叉注意力 CQCC 融合配方中冻结编码器并交叉两种编码器与两种后端，证明冻结 XEUS 加 MHFA 以不足 0.4M 可训练参数在 LA21 与 ASV5 超越约 316M 微调并大幅优于冻结 XLSR-53，代价是在 DF21 与 ITW 落后且结论受来源重叠与单流水线限定。",
+  "originalTitle": "Characterizing Frozen SSL Encoders and Backends for Cross-Domain Speech Deepfake Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29865v1.pdf",
+  "readerTitle": "冻结语音编码器与后端如何决定跨域伪造检测",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

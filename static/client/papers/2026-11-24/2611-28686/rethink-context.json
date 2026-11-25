@@ -1,0 +1,129 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28686v1",
+  "abstract": "Large-scale redistributable symbolic pop-melody data remain scarce due to copyright restrictions, creating a bottleneck for both practical deployment and reproducible research in music generation. We present PopMelodyGen, a copyright-aware platform for controllable pop-melody generation that combines rule-based synthesis with neural generation. Our approach first uses an expert synthesizer to produce large-scale labeled synthetic melodies from explicit musical knowledge and templates, providing scalable pretraining data with auditable provenance. A neural model is then pretrained on this corpus and adapted with a small licensed real-pop corpus to improve melodic naturalness while preserving controllability. The platform supports interactive melody creation with accompaniment playback and export for creators, as well as batch construction of annotated symbolic datasets for researchers. PopMelodyGen demonstrates a practical training and deployment paradigm for creative AI when large-scale reusable real-world data are limited.",
+  "abstractSha256": "10f05e2dca8e8ab7c9203eca55df0309c2298c5b40cd59e09918c23fe5eaf8e4",
+  "arxivId": "2611.28686",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28686v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.symbolic-music",
+          "label": "符号音乐生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.rule-based",
+          "label": "规则与词典方法"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "规则与词典方法",
+      "primaryMethodId": "method.rule-based",
+      "primaryTask": "符号音乐生成",
+      "primaryTaskId": "task.symbolic-music",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Di Lu"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Xinran Zhang"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Qingwen Zhou"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Yan Gao"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Yuan Zhang"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Xiaoqing Wang"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Yuming Sun"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China"
+      ],
+      "name": "Xiaobing Li"
+    },
+    {
+      "affiliations": [
+        "Department of AI Music and Music Information Technology, Central Conservatory of Music",
+        "Key Laboratory of Music and Brain Science, Central Conservatory of Music, Ministry of Education, China",
+        "Laboratory of AI Music, Central Conservatory of Music, Laboratory of Philosophy and Social Sciences, Ministry of Education, China",
+        "Department of Computer Science and Technology, Tsinghua University"
+      ],
+      "name": "Maosong Sun"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对可再分发流行旋律数据稀缺，PopMelodyGen 用规则合成预训练加少量许可 RWC 适应实现可控生成，Real-FT 以 MOS 3.548 与 48.3% 偏好领先但客观可控性小幅回落且风格覆盖仍有限",
+  "originalTitle": "PopMelodyGen: A Copyright-Aware Platform for Controllable Pop-Melody Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28686v1.pdf",
+  "readerTitle": "版权审慎的可控流行旋律生成：合成预训练与少量真实适应的平台实践",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

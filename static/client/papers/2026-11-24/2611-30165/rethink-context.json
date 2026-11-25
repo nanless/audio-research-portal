@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.30165v1",
+  "abstract": "Can a language model learn more from the same information simply by encountering it in different forms? We answer this in the affirmative by introducing Multimodal View Training (MVT), a simple training approach that presents identical information through text, speech, and images, without requiring new facts or supervision. Starting from a text sample, MVT generates corresponding audio and rendered-text image views, and trains a multimodal language model to produce the same target output across all three views. To further bring these benefits to text-only large language models (LLMs), we train lightweight connector modules to pretrained audio and vision encoders, allowing the LLM to learn from multimodal inputs while retaining its text-only architecture at inference. Across question answering, machine unlearning, and knowledge editing, adaptive MVT improves QA recall by +15.2 percentage points, forget quality by +40.7 points, and editing generality by +25.2 points over text-only training. Combining MVT with standard augmentation further improves QA and editing generality. Our theoretical analysis illustrates how training across modalities can shift weight updates toward shared factual content and reduce their reliance on features specific to each view.",
+  "abstractSha256": "0974eed93a590eb52580847dfda3dc9d02f1251206b5a510a9e35d8b409e2346",
+  "arxivId": "2611.30165",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.30165v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-question-answering",
+          "label": "音频问答"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.augmentation",
+          "label": "数据增强"
+        },
+        {
+          "facet": "method",
+          "id": "method.lora",
+          "label": "LoRA"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "音频问答",
+      "primaryTaskId": "task.audio-question-answering",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "New York University"
+      ],
+      "name": "Devang Kulshreshtha"
+    },
+    {
+      "affiliations": [
+        "Snorkel AI"
+      ],
+      "name": "Priyanka Kaswan"
+    },
+    {
+      "affiliations": [
+        "Meta"
+      ],
+      "name": "Minh Pham"
+    },
+    {
+      "affiliations": [
+        "New York University"
+      ],
+      "name": "Chinmay Hegde"
+    },
+    {
+      "affiliations": [
+        "Technion – Israel Institute of Technology"
+      ],
+      "name": "Niv Cohen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对同一事实换一种问法就失效的问题，论文提出同一监督下文本语音与打印图像三视图联合训练共享 LoRA，自适应加权在问答召回、遗忘质量与编辑泛化上带来两位数提升，代价是三倍前向训练开销且局部性与图像遗忘仍未解决。",
+  "originalTitle": "Multimodal View Training: Learning More Through Different Modalities",
+  "pdfUrl": "https://arxiv.org/pdf/2611.30165v1.pdf",
+  "readerTitle": "同一内容换三种模态呈现如何改善纯文本学习",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

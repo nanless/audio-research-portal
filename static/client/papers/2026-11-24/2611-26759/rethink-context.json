@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26759v1",
+  "abstract": "Windchime is an audiovisual installation in which spoken language retrieves music and interactive animations from an artist authored corpus. A local Automatic Speech Recognition (ASR) model transcribes each prompt while an audio-language model (ALM) embeds it and retrieval over 406 audio stems returns a soundscape with live coded Strudel fragments that layer into audio output. Simultaneously each spoken input results in retrieval of interactive Three.js animation scenes each containing unique tactile control via monome grid and arc hardware. Windchime distributes agency in three distinct directions; across the artist who authored the possible outputs, the ALM that influences what areas of the corpus can be retrieved, and the visitor whose spoken inputs result in multimodal embodied interaction.",
+  "abstractSha256": "aee141ec0e5ecb2e8a86715368e50d1ee3707cca99c7218251a9554242d2307e",
+  "arxivId": "2611.26759",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26759v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "检索增强",
+    "primaryTask": "音频检索",
+    "rankBucket": "后50%",
+    "score": 5.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.audio-retrieval",
+          "label": "音频检索"
+        },
+        {
+          "facet": "task",
+          "id": "task.audio-interaction",
+          "label": "音频交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.retrieval-augmented",
+          "label": "检索增强"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.audiovisual",
+          "label": "音视频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "检索增强",
+      "primaryMethodId": "method.retrieval-augmented",
+      "primaryTask": "音频检索",
+      "primaryTaskId": "task.audio-retrieval",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Trent Eriksen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Celeste Betancur Gutierrez"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "Windchime 以本地语音转写加可替换 ALM (音频语言模型) 检索 406 个分轨并叠加 Strudel 现场编码与触觉动画来探索话语与素材对应中的代理分配，Gray Area 公开展示验证了链路可运行且更换模型会改变可达素材范围，代价是缺乏受控评测与量化指标。",
+  "originalTitle": "Windchime: an Audiovisual Installation with Audio-Language Model implementations",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26759v1.pdf",
+  "readerTitle": "Windchime 用说话检索音乐与动画的具身装置解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

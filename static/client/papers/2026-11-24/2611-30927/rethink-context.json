@@ -1,0 +1,84 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.30927v1",
+  "abstract": "Most large language model (LLM)-based text-to-speech (TTS) methods offer no explicit function for correcting pronunciation. Consequently, these systems frequently mispronounce many everyday words, such as proper nouns, heteronyms, numerals, and domain-specific terms. While weight-editing or fine-tuning can mitigate this, these solutions risk quality degradation and must operate offline. We propose SpeechSplice, a training-free encoder-output replacement approach for pronunciation control in encoder-decoder LLM-based TTS. SpeechSplice replaces the encoder-output hidden states of a word with those of its intended reading. Cross-architecture and cross-lingual experiments cover ten public TTS systems in 17 model-language conditions. At the hidden state we replace, the intervention moves pronunciation toward the target reading more often when the generator reads the text through cross-attention than when text and speech share one self-attention sequence. In human evaluations, native-language listeners identified speech generated with SpeechSplice as realizing the target reading in 98.6-100.0% of judgments, while a separate study found no significant naturalness difference from unmodified synthesis. By clarifying the conditions under which pronunciation correction succeeds, this study offers an empirical basis for investigating pronunciation control in LLM-based TTS architectures.",
+  "abstractSha256": "4fdde47d680facbd08bca44595b2b30ded2e2aea3e01fff68c39e76a13e38f81",
+  "arxivId": "2611.30927",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.30927v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.cross-lingual",
+          "label": "跨语言"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "激活因果干预",
+      "primaryMethodId": "method.activation-intervention",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Matsuo Institute, Inc., Japan",
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Kiyoshi Kurihara"
+    },
+    {
+      "affiliations": [
+        "Matsuo Institute, Inc., Japan",
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Jumpei Ukita"
+    },
+    {
+      "affiliations": [
+        "Matsuo Institute, Inc., Japan",
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Yusuke Iwasawa"
+    },
+    {
+      "affiliations": [
+        "Matsuo Institute, Inc., Japan",
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Yutaka Matsuo"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 LLM-TTS 拿掉可编辑发音接口而频繁读错专有名词的问题， SpeechSplice 以冻结编码器输出处的实体隐状态替换实现无训练局部纠正，在三语母语听测中以接近满分的选择率实现目标读法且自然度无显著下降，但仅在生成器经交叉注意力读取文本且分词标识可分的条件下成立。",
+  "originalTitle": "SpeechSplice: Pronunciation Control in Encoder-Decoder LLM-based TTS by Replacing Encoder Hidden States",
+  "pdfUrl": "https://arxiv.org/pdf/2611.30927v1.pdf",
+  "readerTitle": "冻结编码器输出替换实现 LLM 语音合成的发音控制",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

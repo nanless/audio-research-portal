@@ -1,0 +1,38 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.30694v1",
+  "arxivId": "2611.30694",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.30694v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Data Science and Innovation Ata Technology Platforms Istanbul, Turkey"
+      ],
+      "name": "Nur Yağmur Tuncer"
+    },
+    {
+      "affiliations": [
+        "Data Science and Innovation Ata Technology Platforms Istanbul, Turkey"
+      ],
+      "name": "Mustafa Sertaç Türkel"
+    },
+    {
+      "affiliations": [
+        "Data Science and Innovation Ata Technology Platforms Istanbul, Turkey"
+      ],
+      "name": "Fatma Nur Korkmaz"
+    },
+    {
+      "affiliations": [
+        "Data Science and Innovation Ata Technology Platforms Istanbul, Turkey"
+      ],
+      "name": "Ahmet Tuğrul Bayrak"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.30694v1",
+  "originalTitle": "Synthetic Twins: Closing the Gap Between TTS Test Sets and Real Recordings in Turkish ASR Evaluation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.30694v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

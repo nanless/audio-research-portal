@@ -1,0 +1,57 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.27601v1",
+  "arxivId": "2611.27601",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.27601v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications",
+        "National Key Laboratory of General Artificial Intelligence, BIGAI"
+      ],
+      "name": "Sulong Yang"
+    },
+    {
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications"
+      ],
+      "name": "Zhi Zeng"
+    },
+    {
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications"
+      ],
+      "name": "Xiupeng Wu"
+    },
+    {
+      "affiliations": [
+        "National Key Laboratory of General Artificial Intelligence, BIGAI"
+      ],
+      "name": "Juewen Hu"
+    },
+    {
+      "affiliations": [
+        "National Key Laboratory of General Artificial Intelligence, BIGAI"
+      ],
+      "name": "Pring Wong"
+    },
+    {
+      "affiliations": [
+        "Beijing University of Posts and Telecommunications"
+      ],
+      "name": "Shuwu Zhang"
+    },
+    {
+      "affiliations": [
+        "National Key Laboratory of General Artificial Intelligence, BIGAI"
+      ],
+      "name": "Shuo Chen"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.27601v1",
+  "originalTitle": "PromptTTSD: Controllable Text to Spoken Dialogue Synthesis with Open-Ended Text Descriptions",
+  "pdfUrl": "https://arxiv.org/pdf/2611.27601v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

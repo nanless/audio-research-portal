@@ -1,0 +1,97 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29040v1",
+  "abstract": "This study investigates the prosodic patterns of emotional speech across Chinese (CN), German (DE), and English (EN), with a focus on acoustic characteristics. Using ANOVA and mixed-effects modeling, we reveal cross-linguistic and emotion-specific prosodic patterns. A comparative analysis of Speech Emotion Recognition (SER) performance demonstrates that humans outperform Self-Supervised Learning (SSL) models in cross-lingual tasks, while SSL models show significant improvement in cross-lingual SER through an efficient fine-tuning process, achieving performance competitive with native human speakers. The study also analyzes the performance of Speech Emotion Diarization (SED) between models and humans, highlighting the effectiveness of SSL models in transfer learning scenarios. These findings emphasize the interplay between universal prosodic features (e.g., intensity, pitch) and language-specific factors. Moreover, the SSL model's outstanding performance indicates the potential value of these acoustic features in emotion processing, implying possible advancements in cross-lingual emotion recognition through refined training techniques.",
+  "abstractSha256": "707d318dfb3e70ce2e529b00b71fed78d25f78c45f8d6ae6c191f42ef1d9c2b6",
+  "arxivId": "2611.29040",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29040v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "后50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.self-supervised",
+          "label": "自监督学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.peft",
+          "label": "参数高效微调"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.human-evaluation",
+          "label": "人类参与评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自监督学习",
+      "primaryMethodId": "method.self-supervised",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Tianqi Geng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Zhichen Han"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Hui Feng"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Jiahong Yuan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Korin Richmond"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Yuanchao Li"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对汉语德语英语情感韵律共性不清与跨语识别困难，论文以方差分析与混合效应建模结合 W2V2 分层探测与参数高效微调系统比较人类与模型，证明人类跨语更稳健而微调使模型接近母语水平，代价是语料不均衡与小规模听测限制结论外推。",
+  "originalTitle": "Speech Emotion Recognition Across Languages: Prosodic Patterns and Self-Supervised Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29040v1.pdf",
+  "readerTitle": "跨语言语音情感的韵律模式与自监督模型人机比较",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

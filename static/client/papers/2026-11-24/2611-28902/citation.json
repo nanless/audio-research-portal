@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.28902v1",
+  "arxivId": "2611.28902",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.28902v1",
+  "authors": [
+    {
+      "affiliations": [
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Xinglong Xu"
+    },
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Yuxia Zhu"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Siyuan Li"
+    },
+    {
+      "affiliations": [
+        "Qilu University of Technology"
+      ],
+      "name": "Lixu Tian"
+    },
+    {
+      "affiliations": [
+        "Qilu University of Technology"
+      ],
+      "name": "Xiaofei Zhao"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Yuxin Liu"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Caijun Jia"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Jintao Chen"
+    },
+    {
+      "affiliations": [
+        "University of Chinese Academy of Sciences"
+      ],
+      "name": "Bihui Yu"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Alden Cai"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Asher Qin"
+    },
+    {
+      "affiliations": [
+        "Qilu University of Technology"
+      ],
+      "name": "Jingxuan Wei"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Cheng Tan"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.28902v1",
+  "originalTitle": "StudioBench: Benchmarking Agentic Multimodal Large Language Models for Productive Audiovisual Creation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.28902v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

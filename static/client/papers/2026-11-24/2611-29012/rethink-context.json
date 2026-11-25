@@ -1,0 +1,69 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.29012v1",
+  "abstract": "Spatial audio large language models increasingly combine general audio understanding with spatial perception. Yet overlapping conversations require more than locating speakers. A model must also recover what each person says and match the words to their positions. We examine this challenge in MiDashengLM-Spatial, a binaural model designed for both spatial reasoning and general audio understanding. To test these abilities, we introduce BiCP-Bench, a benchmark of overlapping two-speaker binaural recordings that contrasts candidate-based recognition, position-guided transcription, and joint transcription with spatial attribution. The model can identify a target utterance among candidates but struggles to transcribe it without them. Its semantic encoder uses only one ear. Changing that ear shifts which side's speech is recovered more accurately, despite unchanged binaural input to the spatial branch. We therefore propose Binaural Semantic Adaptation (BiSA), which combines shared encoding of both ears with cross-ear differential interactions. With the backbone frozen and 0.027% trainable parameters, BiSA raises correctly attributed joint transcription success from 0% to 57.81% for simultaneous onsets. For staggered onsets, later-speaker word error rate falls from 109.47% to 29.58%. On full-length Clarity CEC1 mixtures, word error rate falls from 59.33% to 39.60%. Spatial reasoning on MMAU-Pro improves by 9.54 percentage points without updating the spatial encoder, and general audio performance remains largely intact.",
+  "abstractSha256": "6f7d238e30b16d98f752691eb244a5bda3daeeee5fa101e40f93b79f7dc56b1b",
+  "arxivId": "2611.29012",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.29012v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "参数高效微调",
+    "primaryTask": "多说话人语音识别",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multi-talker-asr",
+          "label": "多说话人语音识别"
+        },
+        {
+          "facet": "task",
+          "id": "task.target-speaker",
+          "label": "目标说话人提取"
+        },
+        {
+          "facet": "method",
+          "id": "method.peft",
+          "label": "参数高效微调"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "参数高效微调",
+      "primaryMethodId": "method.peft",
+      "primaryTask": "多说话人语音识别",
+      "primaryTaskId": "task.multi-talker-asr",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Xi’an Jiaotong-Liverpool University",
+        "University of Liverpool"
+      ],
+      "name": "Wenxuan He"
+    },
+    {
+      "affiliations": [
+        "Xi’an Jiaotong-Liverpool University"
+      ],
+      "name": "Shan Liang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对重叠双人语音中定位容易而完整复述困难的问题，论文以共享双耳语义编码加跨耳差分实现 0.027% 参数适配，使同步联合转写归属成功率从 0% 升至 57.81%，后说者词错误率从 109.47% 降至 29.58%，代价是结论限于双人受控合成与客观指标且部署开销未披露。",
+  "originalTitle": "From Spatial Perception to Speech Recovery: Binaural Semantic Adaptation for Spatially Grounded Multi-Talker Transcription",
+  "pdfUrl": "https://arxiv.org/pdf/2611.29012v1.pdf",
+  "readerTitle": "双耳互补如何从空间感知走向多人语音恢复",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

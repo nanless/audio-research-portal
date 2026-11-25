@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.31043v1",
+  "abstract": "Pretrained audio embeddings are increasingly used as intermediate representations for sound event detection (SED) and other always-on acoustic sensing tasks. While these representations are selected for their utility on downstream tasks, they may also retain sensitive information unrelated to their intended purpose, creating privacy risks even when raw audio is not exposed. In this work, we present an empirical framework for auditing privacy leakage from pretrained audio embeddings using two complementary approaches. First, we quantify representation-level leakage by measuring statistical dependence between an audio embedding and a representation specialized for encoding sensitive information. Second, we measure attack-level leakage by training lightweight adversarial probes to recover sensitive attributes directly from the embedding. We apply this framework to four widely used audio representations (CLAP, PANNs, AST, and YAMNet) and evaluate leakage of speaker identity and gender. We found that speaker identification balanced accuracy ranges from $0.43$ to $0.72$, while gender information is also strongly recoverable. Moreover, representation-level and attack-based measurements exhibit consistent trends, with CLAP leaking the most and YAMNet leaking the lest speaker identity. These results demonstrate that intermediate audio representations are not inherently privacy-preserving interfaces and motivate privacy leakage as an explicit criterion, alongside downstream utility, when selecting representations for acoustic sensing systems.",
+  "abstractSha256": "8fe9478c8232bba8341dd57c483b0d0416802693f0311107e03623b49394517d",
+  "arxivId": "2611.31043",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.31043v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "音频隐私攻击与防御",
+    "rankBucket": "前50%",
+    "score": 6.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.privacy-attack-defense",
+          "label": "音频隐私攻击与防御"
+        },
+        {
+          "facet": "task",
+          "id": "task.speaker-identification",
+          "label": "说话人识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "音频隐私攻击与防御",
+      "primaryTaskId": "task.privacy-attack-defense",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Penn State University"
+      ],
+      "name": "Bhawana Chhaglani"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文针对通用音频表征在服务声音事件检测的同时可能残留说话人信息的问题，用与 ECAPA-TDNN 的统计依赖和冻结向量上的轻量探针做双视角审计，发现 CLAP 说话人识别达 0.72 与性别达 1.00 而 YAMNet 最低，但结论仅在 5 位说话人的小样本与已见说话人划分下成立且未量化效用权衡。",
+  "originalTitle": "What Do Sound Event Embeddings Reveal? Auditing Speaker Leakage in Audio Representations",
+  "pdfUrl": "https://arxiv.org/pdf/2611.31043v1.pdf",
+  "readerTitle": "声音事件表征是否泄漏说话人信息：双视角隐私审计",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

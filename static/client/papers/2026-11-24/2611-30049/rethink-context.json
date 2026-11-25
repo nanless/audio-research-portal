@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.30049v1",
+  "abstract": "AIRPiano aims to bring sound to the common practice of rehearsing piano music on a tabletop. Guided by a known score, users make piano-like finger movements on a flat surface without reproducing absolute keyboard positions. The score supplies pitches, while hand motion determines which score events to play and when. We formulate this interaction as online alignment between tabletop hand motion and symbolic score events. To address the ambiguity of tabletop motion, its differences from piano-playing motion, and the scarcity of aligned motion-score data, we develop motion and score representations, build a data processing pipeline, and train a Transformer with supervised attention on existing piano performance recordings. We further design a streaming inference framework that combines local alignment predictions with sequence tracking for real-time interaction. We construct two evaluation sets, VSF-Piano and VSF-Tabletop, to assess alignment on piano and tabletop performances, respectively. After a post-hoc global timing adjustment, AIRPiano achieves a mean chord alignment rate of 74% within a 133 ms tolerance on the paired subset of VSF-Tabletop, compared with 79% on VSF-Piano.",
+  "abstractSha256": "619f134de42d63505338b897be9d5ab50ba8929bc24a9849eb66a528fba298ff",
+  "arxivId": "2611.30049",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.30049v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "乐谱对齐",
+    "rankBucket": "前50%",
+    "score": 6.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.score-alignment",
+          "label": "乐谱对齐"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.music",
+          "label": "音乐"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "乐谱对齐",
+      "primaryTaskId": "task.score-alignment",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Rochester, Rochester, USA"
+      ],
+      "name": "Jinxuan Zhu"
+    },
+    {
+      "affiliations": [
+        "University of Rochester, Rochester, USA"
+      ],
+      "name": "Zhiyao Duan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "AIRPiano 把桌面类钢琴手势到已知乐谱的对齐定义为在线帧到和弦预测，用腕相对表示加监督注意力从钢琴演出视频迁移到桌面，在配对桌面子集事后平移 5 帧后于 133 ms 容差下达到 74% 和弦对齐率，代价是严格容差下的系统性延迟与转录谱依赖。",
+  "originalTitle": "AIRPiano: Piano Score Following with Tabletop Hand Gestures",
+  "pdfUrl": "https://arxiv.org/pdf/2611.30049v1.pdf",
+  "readerTitle": "桌面手势如何按谱发声：AIRPiano 的在线动作乐谱对齐",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

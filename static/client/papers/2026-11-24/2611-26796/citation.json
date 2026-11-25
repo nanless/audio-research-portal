@@ -1,0 +1,50 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.26796v1",
+  "arxivId": "2611.26796",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.26796v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Human Language Technology Center of Excellence, Johns Hopkins University, Baltimore, Maryland, USA"
+      ],
+      "name": "Xiluo He"
+    },
+    {
+      "affiliations": [
+        "AGH University of Krakow, Kraków, Poland"
+      ],
+      "name": "Magdalena Rybicka"
+    },
+    {
+      "affiliations": [
+        "Department of Signal Theory and Communications, Universidad Carlos III de Madrid, Leganes, Spain"
+      ],
+      "name": "Laureano Moro-Velazquez"
+    },
+    {
+      "affiliations": [
+        "Human Language Technology Center of Excellence, Johns Hopkins University, Baltimore, Maryland, USA"
+      ],
+      "name": "Jesús Villalba"
+    },
+    {
+      "affiliations": [
+        "Agence Ministérielle pour l’Intelligence Artificielle de Défense, Palaiseau, France"
+      ],
+      "name": "Thomas Thebaud"
+    },
+    {
+      "affiliations": [
+        "Human Language Technology Center of Excellence, Johns Hopkins University, Baltimore, Maryland, USA"
+      ],
+      "name": "Najim Dehak"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.26796v1",
+  "originalTitle": "Efficient Conversational Multi-Talker ASR with Predicted Speaker-Agnostic Activity Streams",
+  "pdfUrl": "https://arxiv.org/pdf/2611.26796v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}
