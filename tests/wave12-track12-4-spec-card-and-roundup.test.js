@@ -267,11 +267,11 @@ test('Track 12.4: Audio quick-spec card, Demo CTA, collapsible 8+ authors, Daily
       '',
       '📌 **核心摘要**',
       '',
-      '第一段核心摘要保留可见，交代任务背景与核心痛点。',
+      '第一段核心摘要完整显示，交代任务背景与核心痛点。',
       '',
-      '第二段方法细节默认折叠，点击后展开阅读完整机制。',
+      '第二段方法细节同样直接展示，不再折叠。',
       '',
-      '第三段实验与适用边界同样收入折叠区。',
+      '第三段实验与适用边界完整呈现，无论多长都不折叠。',
       '',
       '🔗 **开源资源**',
       '',
@@ -283,7 +283,7 @@ test('Track 12.4: Audio quick-spec card, Demo CTA, collapsible 8+ authors, Daily
       '',
       '📌 **核心摘要**',
       '',
-      '只有一段核心摘要时不折叠。',
+      '只有一段核心摘要时同样完整显示。',
       '',
       '---',
       ''
@@ -346,10 +346,10 @@ test('Track 12.4: Audio quick-spec card, Demo CTA, collapsible 8+ authors, Daily
     assert.match(indexHtml, /class=["']?digest-reading-tiers["']?/);
     assert.match(indexHtml, /class=["']?digest-spotlight-card["']?/);
     assert.match(indexHtml, /<details class=["']?compact-authors-details["']?><summary>论文作者（共 9 位，点击展开全部）<\/summary>/);
-    assert.equal((indexHtml.match(/class=["']?index-abstract-more["']?/g) || []).length, 1, 'only multi-paragraph abstract should fold');
-    assert.match(indexHtml, /展开其余 2 段核心摘要/);
-    assert.match(indexHtml, /第一段核心摘要保留可见/);
-    assert.match(indexHtml, /只有一段核心摘要时不折叠/);
+    assert.doesNotMatch(indexHtml, /index-abstract-more/, 'multi-paragraph abstract must never fold');
+    assert.doesNotMatch(indexHtml, /展开其余\s*\d+\s*段核心摘要/, 'abstract fold summary label must never appear');
+    assert.match(indexHtml, /<p>第一段核心摘要完整显示，交代任务背景与核心痛点。<\/p>\s*<p>第二段方法细节同样直接展示，不再折叠。<\/p>\s*<p>第三段实验与适用边界完整呈现，无论多长都不折叠。<\/p>/);
+    assert.match(indexHtml, /<p>只有一段核心摘要时同样完整显示。<\/p>/);
 
     // 4. Verify EVERY exported client/details/articles/*.html (5 papers + 1 daily index) strictly obeys v1.4.6 allowlist
     const articlesDir = path.join(buildDir, 'client/details/articles');

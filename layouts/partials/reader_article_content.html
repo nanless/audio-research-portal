@@ -843,36 +843,6 @@
         {{- $content = printf "%s%s" (delimit $ovOut "") $listPart -}}
       {{- end -}}
     {{- end -}}
-    {{- /* Fold multi-paragraph paper abstracts in daily/conference index lists while keeping paragraph 1 visible (O(N)). */ -}}
-    {{- $absMarker := "<p>📌 <strong>核心摘要</strong></p>" -}}
-    {{- if in $content $absMarker -}}
-      {{- $absChunks := split $content $absMarker -}}
-      {{- $absOut := slice (index $absChunks 0) -}}
-      {{- range $cIdx, $chunk := after 1 $absChunks -}}
-        {{- $absHead := $chunk -}}
-        {{- $absTail := "" -}}
-        {{- range $delim := slice "<p>🔗 <strong>开源资源</strong></p>" "<p>💡 <strong>" "<hr" "<h3" "<h2" -}}
-          {{- if in $absHead $delim -}}
-            {{- $parts := split $absHead $delim -}}
-            {{- $newHead := index $parts 0 -}}
-            {{- $afterDelim := strings.TrimPrefix $newHead $absHead -}}
-            {{- $absHead = $newHead -}}
-            {{- $absTail = printf "%s%s" $afterDelim $absTail -}}
-          {{- end -}}
-        {{- end -}}
-        {{- if and (not (findRE `(?i)<(?:table|ul|ol|div|details|blockquote|img|figure|pre|h[1-6])\b` $absHead 1)) (not (in $absHead "index-abstract-more")) -}}
-          {{- $ps := findRE `(?s)<p\b[^>]*>.*?</p>` $absHead -}}
-          {{- $leftover := strings.TrimSpace (replaceRE `(?s)<p\b[^>]*>.*?</p>` "" $absHead) -}}
-          {{- if and (ge (len $ps) 2) (eq $leftover "") -}}
-            {{- $firstP := index $ps 0 -}}
-            {{- $restPs := after 1 $ps -}}
-            {{- $absHead = printf "\n%s\n<details class=\"index-abstract-more\"><summary>展开其余 %d 段核心摘要</summary>\n%s\n</details>\n" $firstP (len $restPs) (delimit $restPs "\n") -}}
-          {{- end -}}
-        {{- end -}}
-        {{- $absOut = $absOut | append $absMarker $absHead $absTail -}}
-      {{- end -}}
-      {{- $content = delimit $absOut "" -}}
-    {{- end -}}
   {{- end -}}
   {{- range $marker, $block := $protected -}}{{- $content = replace $content $marker $block -}}{{- end -}}
 {{- end -}}
