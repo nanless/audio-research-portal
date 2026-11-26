@@ -1,0 +1,98 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33727v1",
+  "abstract": "Global aging makes digital technology important for older adults healthy aging, yet graphical user interfaces remain inaccessible to many. Voice agents based on large language models may help, but users needs and reasons for sustained use remain unclear. We developed a phone-call-style companion that initiates conversations proactively and structures calls using a persona, conversation rules, and prior-call memory (facts, insights, relationship background). We conducted a two-week mixed-methods field study with 33 community-dwelling Korean older adults (29 women; aged 67-91), collecting call logs, pre-post questionnaires, and interviews. Participants made 608 calls following a daily-use recommendation; 25 continued afterward despite turn-taking difficulties. Loneliness and depression scores decreased significantly; among loneliness subfactors, only isolation (emotional loneliness) decreased significantly. Participants disclosed concerns withheld from family and linked companionship to being addressed by name, being remembered, and experiencing emotional reciprocity. We propose personalized conversation rules, accessible interaction, and user control over frequency and topics.",
+  "abstractSha256": "cc765e47f3ff7ec93dc5b5a39076d28b6c8f29e08e34c6a573bf54e7a9692ead",
+  "arxivId": "2611.33727",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33727v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "用户研究",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "后50%",
+    "score": 5.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "method",
+          "id": "method.user-study",
+          "label": "用户研究"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "用户研究",
+      "primaryMethodId": "method.user-study",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Seoul National University, Seoul, Republic of Korea"
+      ],
+      "name": "Inhee Cho"
+    },
+    {
+      "affiliations": [
+        "Hanyang University ERICA, Ansan, Republic of Korea"
+      ],
+      "name": "Jinyoung Jeong"
+    },
+    {
+      "affiliations": [
+        "Hanyang University, Seoul, Republic of Korea"
+      ],
+      "name": "Byung Ju Kim"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, Seoul, Republic of Korea"
+      ],
+      "name": "Jiwon Baek"
+    },
+    {
+      "affiliations": [
+        "Yonsei University, Seoul, Republic of Korea"
+      ],
+      "name": "Jungmin Lee"
+    },
+    {
+      "affiliations": [
+        "KOREATECH, Cheonan, Republic of Korea"
+      ],
+      "name": "Jiseob Park"
+    },
+    {
+      "affiliations": [
+        "Dankook University, Yongin, Republic of Korea"
+      ],
+      "name": "Youngjae Yoo"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对老年人数字接入难与晚间倾诉缺口，研究以电话隐喻加主动提问与跨通话记忆构建 Jiho 并开展 33 人两周实地部署，发现孤独总分与隔离子因子及抑郁显著下降且 25 人在结束后继续使用，代价是单组无对照无法确证因果并伴随轮次错位与每日打卡负担。",
+  "originalTitle": "Knocking on Minds Door; A Mixed-Methods Field Study of a Voice LLM Companion in Older Adults Daily Lives",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33727v1.pdf",
+  "readerTitle": "电话式语音陪伴如何在老年人日常中被使用并缓解孤独感",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

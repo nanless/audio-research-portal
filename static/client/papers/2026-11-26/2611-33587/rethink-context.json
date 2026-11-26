@@ -1,0 +1,93 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33587v1",
+  "abstract": "In underwater acoustic sensor networks, depth-dependent variations in sound speed refract acoustic rays, complicating the estimation of target positions from travel-time measurements. Propagation-model-based methods rely on an assumed or estimated sound speed profile (SSP), and a mismatch between that profile and the current environment can bias position estimates. To address this limitation, this paper proposes an underwater graph attention network (UGAN) that fuses synchronized time-of-arrival (TOA) observations from multiple stations with reference-station coordinates to estimate three-dimensional target positions without requiring the current sound speed profile at inference. UGAN constructs one graph per target for batch inference. Its geometry--time attention mechanism combines interstation geometry with ordered pairs of TOA observations to compute attention weights in all three graph layers and enrich the messages in the last two layers. A shared nonlinear encoder supplies individual TOA features directly to every layer. In ray-tracing simulations with a fixed five-station deployment and two SSPs held out from training and validation, UGAN achieves mean localization root mean square errors (RMSE) of 0.307, 0.577, and 0.989~m at three increasing TOA noise levels, representing reductions of 52.0\\%, 31.0\\%, and 22.8\\% relative to the evaluated GATv2 baseline, respectively. At the intermediate noise level, incorporating station-pair relations into the messages reduces the mean localization RMSE by 9.4\\% with relation-based attention scoring enabled. For 4,000 target observations, UGAN takes a median of 58.14~ms on the same GPU, 7.0\\% less time than GATv2.",
+  "abstractSha256": "b3658094d3045666c272bf6f676a2dcceba7011e8dfc25c5723f5b722fe05adc",
+  "arxivId": "2611.33587",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33587v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "声源定位",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.localization",
+          "label": "声源定位"
+        },
+        {
+          "facet": "method",
+          "id": "method.attention",
+          "label": "注意力机制"
+        },
+        {
+          "facet": "method",
+          "id": "method.gnn",
+          "label": "图神经网络"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "注意力机制",
+      "primaryMethodId": "method.attention",
+      "primaryTask": "声源定位",
+      "primaryTaskId": "task.localization",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Faculty of Information Science and Engineering, Ocean University of China, Qingdao, Shandong 266100, China"
+      ],
+      "name": "Wei Huang"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Science and Engineering, Ocean University of China, Qingdao, Shandong 266100, China"
+      ],
+      "name": "Hongfei Chang"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, China"
+      ],
+      "name": "Kaitao Meng"
+    },
+    {
+      "affiliations": [
+        "Shandong University (Weihai), Weihai, 264200, China"
+      ],
+      "name": "Tianhe Xu"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Science and Engineering, Ocean University of China, Qingdao, Shandong 266100, China"
+      ],
+      "name": "Hao Zhang"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Science and Engineering, Ocean University of China, Qingdao, Shandong 266100, China"
+      ],
+      "name": "Yanan Wu"
+    },
+    {
+      "affiliations": [
+        "China Waterborne Transport Research Institute, Beijing, China"
+      ],
+      "name": "Qian Sun"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对推理时无当前声速剖面下多站 TOA 三维定位受折射与失配偏差困扰的问题，论文提出融合站间几何与有序 TOA 对的 UGAN，并在固定 5 站与两条留出剖面的射线追踪测试中以 0.307 m、0.577 m 与 0.989 m 的平均 RMSE 较 GATv2 降低 52.0%、31.0% 与 22.8%，代价是结论仅在同部署与仿真噪声下成立且近海底与高噪声时误差明显增大。",
+  "originalTitle": "Geometry-Time Graph Attention for 3-D TOA Localization in Underwater Acoustic Sensor Networks",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33587v1.pdf",
+  "readerTitle": "几何时间图注意力实现无剖面输入的水下三维 TOA 定位",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

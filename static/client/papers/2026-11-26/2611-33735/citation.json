@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33735v1",
+  "arxivId": "2611.33735",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33735v1",
+  "authors": [
+    {
+      "affiliations": [
+        "TianjuDihe (Suzhou) Technology Co., Ltd."
+      ],
+      "name": "Yuyang Jin"
+    },
+    {
+      "affiliations": [
+        "TianjuDihe (Suzhou) Technology Co., Ltd."
+      ],
+      "name": "Bingfeng Pi"
+    },
+    {
+      "affiliations": [
+        "TianjuDihe (Suzhou) Technology Co., Ltd."
+      ],
+      "name": "Jiamei Sun"
+    },
+    {
+      "affiliations": [
+        "Suzhou Jupiter Smart Technology Co., Ltd."
+      ],
+      "name": "Wei Jin"
+    },
+    {
+      "affiliations": [
+        "Monash University Joint Graduate School (Suzhou), Southeast University"
+      ],
+      "name": "Dongyang Wang"
+    },
+    {
+      "affiliations": [
+        "Xi’an Jiaotong-Liverpool University"
+      ],
+      "name": "Yunpeng Li"
+    },
+    {
+      "affiliations": [
+        "Suzhou Jupiter Smart Technology Co., Ltd."
+      ],
+      "name": "Yan Bai"
+    },
+    {
+      "affiliations": [
+        "TianjuDihe (Suzhou) Technology Co., Ltd."
+      ],
+      "name": "Lei Zuo"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.33735v1",
+  "originalTitle": "JOVE ICE: Intent Guided Cloud Edge Device Collaboration for AI Glasses",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33735v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

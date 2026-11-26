@@ -1,0 +1,111 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33628v1",
+  "abstract": "Modern music platforms expose users to heterogeneous audio content domains such as songs, playlists, and podcasts. Multi-domain sequential recommendation (MDSR) seeks to exploit such cross-domain behavior, yet two obstacles persist in practice. First, joint optimization across heterogeneous domains is prone to negative transfer, with high-traffic domains dominating the shared parameter space and suppressing weaker domains. Second, conventional ID-based collaborative signals fail to bridge domains that are semantically related but exhibit little behavioral overlap. This paper presents CAMAR, a multi-modal causal disentanglement framework for multi-domain audio recommendation. From a causal perspective, user behavior is modeled as the joint outcome of a domain-invariant preference and domain-specific preferences. Guided by this view, CAMAR factorizes user representations into domain-invariant and domain-specific components and enforces domain adversarial invariance together with orthogonality, restricting cross-domain interaction to the invariant subspace and suppressing harmful transfer paths. To strengthen cross-domain semantic coupling, CAMAR derives trainable semantic-ID embeddings from pre-trained text, vision, and audio features through residual quantization, yielding an end-to-end multi-modal adaptation tailored to recommendation. A transfer network imputes user representations for inactive domains, mitigating cross-domain cold start. Experiments on both public and industrial datasets demonstrate consistent gains over strong baselines. In online A/B tests on NetEase Cloud Music, one of China's largest music streaming platforms, CAMAR delivers consistent gains across all three domains in their main traffic scenarios, validating its effectiveness in multi-domain audio recommendation at scale.",
+  "abstractSha256": "631732be4a679b4b6ca169e7b022c4b5bffb62c6bb0c62faba990a1609d87dd3",
+  "arxivId": "2611.33628",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33628v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗训练",
+    "primaryTask": "音乐推荐",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.music-recommendation",
+          "label": "音乐推荐"
+        },
+        {
+          "facet": "method",
+          "id": "method.adversarial-training",
+          "label": "对抗训练"
+        },
+        {
+          "facet": "method",
+          "id": "method.multitask",
+          "label": "多任务学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "对抗训练",
+      "primaryMethodId": "method.adversarial-training",
+      "primaryTask": "音乐推荐",
+      "primaryTaskId": "task.music-recommendation",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Hangzhou Dianzi University, Hangzhou, China",
+        "NetEase Cloud Music, Hangzhou, China"
+      ],
+      "name": "Yu Ren"
+    },
+    {
+      "affiliations": [
+        "NetEase Cloud Music, Hangzhou, China"
+      ],
+      "name": "Pengcheng Li"
+    },
+    {
+      "affiliations": [
+        "NetEase Cloud Music, Hangzhou, China"
+      ],
+      "name": "Weijun Xu"
+    },
+    {
+      "affiliations": [
+        "NetEase Cloud Music, Hangzhou, China"
+      ],
+      "name": "Hengzhong Zhou"
+    },
+    {
+      "affiliations": [
+        "NetEase Cloud Music, Hangzhou, China"
+      ],
+      "name": "Shufeng Ye"
+    },
+    {
+      "affiliations": [
+        "NetEase Cloud Music, Hangzhou, China"
+      ],
+      "name": "Qiang Xiao"
+    },
+    {
+      "affiliations": [
+        "Hangzhou Dianzi University, Hangzhou, China"
+      ],
+      "name": "Dongjing Wang"
+    },
+    {
+      "affiliations": [
+        "NetEase Cloud Music, Hangzhou, China"
+      ],
+      "name": "Chuanjiang Luo"
+    },
+    {
+      "affiliations": [
+        "NetEase Cloud Music, Hangzhou, China"
+      ],
+      "name": "Yong Li"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多域音频序列推荐中高流量域主导导致的负迁移与标识共现稀疏导致的语义断裂，CAMAR 以域不变与域特有偏好的因果解耦加可训练多模态语义码本与跨域补全建模，在工业与 Amazon 三域召回上全面最优且稀疏域相对提升近 30% ，代价是三阶段调参与成对补全等额外复杂度且无延迟与方差报告。",
+  "originalTitle": "Multi-Modal Causal Disentanglement for Multi-Domain Sequential Audio Recommendation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33628v1.pdf",
+  "readerTitle": "多模态因果解耦如何支撑多域音频序列推荐",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

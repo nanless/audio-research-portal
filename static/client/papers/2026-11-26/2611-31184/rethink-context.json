@@ -1,0 +1,82 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.31184",
+  "abstract": "Modern visual generative models operate on tokens, and every visual asset they receive, whether an identity, a scribble, a depth map, or a motion video, is tokenized and appended to the input token sequence. Consequently, conditioning quickly dominates the computation cost. Yet most of these tokens carry redundant spatiotemporal information. Our key insight is that identifying what is genuinely new is exactly the problem that classical video codecs have long solved. Thus, we first introduce a codec-based token pruning method that discards redundant tokens. Then, we propose an on-policy self-distillation (OPSD) strategy to train a DiT adapter capable of learning the codec pruning pattern well without quality degradation. Together, they form On-Policy Codec Distillation (CodecOPSD). We scale CodecOPSD to 16 condition modalities on our own video diffusion model, where it prunes 66% of the condition tokens on average with almost no quality drop. Therefore, denoising becomes 2x faster, and the cache memory shrinks by up to 73% in KV cache mode. CodecOPSD also extends to other state-of-the-art pretrained image and video generative models, where its benefit grows further with more conditions, longer frames, and higher resolution.",
+  "abstractSha256": "0e9a62b462e92914a3a16eb963251a521633ff7c0766b5323c14beee57f57473",
+  "arxivId": "2611.31184",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "视频生成",
+    "rankBucket": "前25%",
+    "score": 7.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-generation",
+          "label": "视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "research_focus",
+          "id": "research_focus.efficiency",
+          "label": "高效推理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "视频生成",
+      "primaryTaskId": "task.video-generation",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Adobe Research",
+        "University of Virginia"
+      ],
+      "name": "Boyang Wang"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Kevin Blackburn-Matzen"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Oindrila Saha"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Matheus Gadelha"
+    },
+    {
+      "affiliations": [
+        "University of Virginia"
+      ],
+      "name": "Zezhou Cheng"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多条件拼接导致注意力成本二次增长的问题，论文用 H.264 运动向量与残差剪掉平均 66% 条件词元，并以同策略自蒸馏训练 LoRA 适配器，在接近教师质量下实现最高 2.30× 去噪加速与最高 73% 缓存显存下降。",
+  "originalTitle": "On-Policy Codec Distillation for Efficient All-in-One Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.31184.pdf",
+  "readerTitle": "用视频编码器信号剪掉冗余条件词元并以自展蒸馏保持质量",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

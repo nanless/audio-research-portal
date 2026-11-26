@@ -1,0 +1,45 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.31184",
+  "arxivId": "2611.31184",
+  "arxivVersion": null,
+  "arxivVersionedId": null,
+  "authors": [
+    {
+      "affiliations": [
+        "Adobe Research",
+        "University of Virginia"
+      ],
+      "name": "Boyang Wang"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Kevin Blackburn-Matzen"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Oindrila Saha"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Matheus Gadelha"
+    },
+    {
+      "affiliations": [
+        "University of Virginia"
+      ],
+      "name": "Zezhou Cheng"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.31184",
+  "originalTitle": "On-Policy Codec Distillation for Efficient All-in-One Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.31184.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33247v1",
+  "abstract": "Fans of multi-member pop groups annotate songs line by line with the member who sings each line, but speech diarization does not transfer to this setting: a commercial diarizer finds one or two speakers in songs by groups of four to eight. We study line-level singer diarization: given a song and its lyric-line timings, group the lines by singer with no prior knowledge of the group. We release ColorCoded-SD, a benchmark of 43 K-pop songs (1,740 lines, 3-8 singers per song) built from crowd annotations verified by independent annotators, together with alignment and scoring tools, and we derive line labels for the IdolSongsJp corpus from its per-singer solo renditions for evaluation on unseen singers. Combining lead-vocal isolation with a karaoke separator, singing-adapted speaker embeddings, and two training-free song-level decoders (a sticky Viterbi pass over line order and unsupervised linking of a group's songs) improves B-cubed F1 over the standard pipeline (vocal separation, speaker embeddings, per-song clustering) by +0.058 on ColorCoded-SD (p=0.001) and by +0.066 on IdolSongsJp (p=0.003). Isolating the lead is the largest single factor wherever the separator leaves a lead voice (+0.04 to +0.06 on the same lines), and with the singers' dry studio takes two different encoders become indistinguishable; the remaining errors concentrate on short lines that carry too little audio for a voiceprint. We also report negative results (more or cleaner training data, weight editing, a song-context model, and target-singer extraction) that bound where further gains can come from.",
+  "abstractSha256": "2bf0a6fb3efa92b8a0debaae8f7171348ef8a4077787c4bd23d972cbb30fcc19",
+  "arxivId": "2611.33247",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33247v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "说话人分离标注",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.diarization",
+          "label": "说话人分离标注"
+        },
+        {
+          "facet": "method",
+          "id": "method.clustering",
+          "label": "聚类与类别匹配"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "聚类与类别匹配",
+      "primaryMethodId": "method.clustering",
+      "primaryTask": "说话人分离标注",
+      "primaryTaskId": "task.diarization",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "nagiflow LLC, Tokyo, Japan"
+      ],
+      "name": "Allen Ng"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多人流行歌曲已知行时间下按行分歌手的问题，论文用卡拉 OK 主唱分离加歌唱适配声纹加免训练歌曲级解码，在 ColorCoded-SD 上相对标准流程提升 +0.058 B3-F1，在未见歌手的 IdolSongsJp 上提升 +0.066，代价是每首歌约 3.5 min 分离耗时与短行无声纹瓶颈。",
+  "originalTitle": "Line-Level Singer Diarization in Multi-Member Pop Songs: A Benchmark, Lead-Vocal Isolation, and Song-Level Decoding",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33247v1.pdf",
+  "readerTitle": "多人流行歌曲按行分歌手：主唱分离、歌唱适配声纹与歌曲级解码",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

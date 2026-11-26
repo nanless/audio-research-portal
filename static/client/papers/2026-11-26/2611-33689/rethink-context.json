@@ -1,0 +1,74 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33689v1",
+  "abstract": "Acoustic echo cancellation (AEC) depends on accurate time-delay estimation (TDE): the adaptive canceller converges only after the bulk delay between the far-end reference and the microphone is compensated. GCC-PHAT remains the standard TDE front-end and, in our stress tests, wins or ties against a fully learned estimator under interference, low SNR, strong reverberation, loudspeaker nonlinearity, and noisy references. Its principal failure mode is short-window sustained double-talk, where near-end speech creates spurious correlation peaks that classical smoothing and confidence gating cannot reliably suppress. We therefore retain GCC-PHAT as a fixed, non-learnable backbone and learn only a 13.2K-parameter causal 2-D CNN stabilizer over the time--lag correlogram. The stabilizer exploits a simple temporal distinction: true delays form persistent ridges, whereas double-talk artifacts appear as transient spikes. Across synthetic and real AEC-Challenge echo paths, it reduces MAE and gross-outlier rates by approximately $3$--$5\\x$ over tuned classical estimators and the WebRTC AEC3 matched filter. A faithful AEC3-style downstream testbed further shows that these delay gains translate into lower echo-leak rates and faster post-jump ERLE recovery in time-varying regimes, closing much of the gap to the oracle-delay ceiling. An optional coarse-to-fine pre-alignment stage extends the same residual stabilizer to stable 100--400\\,ms bulk delays without retraining, while keeping the learned component focused on short-window double-talk robustness.",
+  "abstractSha256": "fceffaa8f7e5a5be45f75d3068249cfcc8f44facad34441b7720e872419aa16e",
+  "arxivId": "2611.33689",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33689v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "回声消除",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.echo-cancellation",
+          "label": "回声消除"
+        },
+        {
+          "facet": "method",
+          "id": "method.cnn",
+          "label": "CNN"
+        },
+        {
+          "facet": "method",
+          "id": "method.signal-processing",
+          "label": "信号处理"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "CNN",
+      "primaryMethodId": "method.cnn",
+      "primaryTask": "回声消除",
+      "primaryTaskId": "task.echo-cancellation",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "JD.com, Inc., Beijing, China"
+      ],
+      "name": "Lu Ma"
+    },
+    {
+      "affiliations": [
+        "JD.com, Inc., Beijing, China"
+      ],
+      "name": "Yongliang Wang"
+    },
+    {
+      "affiliations": [
+        "JD.com, Inc., Beijing, China"
+      ],
+      "name": "Zhewen Su"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对短窗持续双讲下 GCC-PHAT 伪峰跳变，论文保留固定 GCC 主干只学习 13.2K 参数因果二维稳定器，在合成与真实路径上将 MAE 与粗大误差率降低约 3 倍至 5 倍并转化为时变下游 ERLE 与泄漏率增益，代价是恢复速度未最优且大时延依赖批量恒定的非学习粗阶段。",
+  "originalTitle": "Learning Temporal Stabilization for Double-Talk-Robust Delay Estimation in Acoustic Echo Cancellation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33689v1.pdf",
+  "readerTitle": "固定 GCC 主干只学时间稳定以应对双讲时延跳变",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33587v1",
+  "arxivId": "2611.33587",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33587v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Faculty of Information Science and Engineering, Ocean University of China, Qingdao, Shandong 266100, China"
+      ],
+      "name": "Wei Huang"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Science and Engineering, Ocean University of China, Qingdao, Shandong 266100, China"
+      ],
+      "name": "Hongfei Chang"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, China"
+      ],
+      "name": "Kaitao Meng"
+    },
+    {
+      "affiliations": [
+        "Shandong University (Weihai), Weihai, 264200, China"
+      ],
+      "name": "Tianhe Xu"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Science and Engineering, Ocean University of China, Qingdao, Shandong 266100, China"
+      ],
+      "name": "Hao Zhang"
+    },
+    {
+      "affiliations": [
+        "Faculty of Information Science and Engineering, Ocean University of China, Qingdao, Shandong 266100, China"
+      ],
+      "name": "Yanan Wu"
+    },
+    {
+      "affiliations": [
+        "China Waterborne Transport Research Institute, Beijing, China"
+      ],
+      "name": "Qian Sun"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.33587v1",
+  "originalTitle": "Geometry-Time Graph Attention for 3-D TOA Localization in Underwater Acoustic Sensor Networks",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33587v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,56 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33727v1",
+  "arxivId": "2611.33727",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33727v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Seoul National University, Seoul, Republic of Korea"
+      ],
+      "name": "Inhee Cho"
+    },
+    {
+      "affiliations": [
+        "Hanyang University ERICA, Ansan, Republic of Korea"
+      ],
+      "name": "Jinyoung Jeong"
+    },
+    {
+      "affiliations": [
+        "Hanyang University, Seoul, Republic of Korea"
+      ],
+      "name": "Byung Ju Kim"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, Seoul, Republic of Korea"
+      ],
+      "name": "Jiwon Baek"
+    },
+    {
+      "affiliations": [
+        "Yonsei University, Seoul, Republic of Korea"
+      ],
+      "name": "Jungmin Lee"
+    },
+    {
+      "affiliations": [
+        "KOREATECH, Cheonan, Republic of Korea"
+      ],
+      "name": "Jiseob Park"
+    },
+    {
+      "affiliations": [
+        "Dankook University, Yongin, Republic of Korea"
+      ],
+      "name": "Youngjae Yoo"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.33727v1",
+  "originalTitle": "Knocking on Minds Door; A Mixed-Methods Field Study of a Voice LLM Companion in Older Adults Daily Lives",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33727v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

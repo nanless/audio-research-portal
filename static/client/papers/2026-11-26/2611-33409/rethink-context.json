@@ -1,0 +1,68 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33409v1",
+  "abstract": "We propose the Audio-Visual Query Transformer (AVQFormer), a highly efficient architecture built upon a 2.7B parameter LLM featuring a fixed-length $K=16$ semantic alignment module, stabilized via Adaptive Self-Critical Sequence Training (ASCST) with Entropy Regularization. Multimodal Large Language Models (LLMs) often rely on global audio representations to compensate for inefficient, frame-based visual encoders. While our Phase 1 prompted evaluations demonstrate that the Multimodal Base Model achieves strong deep semantic alignment (scoring 0.889 on BERTScore F1), optimizing this architecture for legacy metrics reveals a performance gap. We explore this gap as a hypothesis we term temporal alignment friction: a conflict where global audio representations disrupt the chronological sequence of visual frames, leading to penalties under visually-focused evaluation metrics. Consequently, by stripping away the audio, our Video-Only ablation conforms more closely to this rigid syntax, achieving 63.0 CIDEr. While trailing larger models such as Qwen2.5-VL (67.4 CIDEr), this establishes a strong baseline for sub-3B parameter LLM-based models. This indicates that CIDEr, as applied to datasets such as MSR-VTT, may exhibit a bias toward visually grounded syntax, limiting its ability to fully capture multimodal semantic richness.",
+  "abstractSha256": "a96ecfb622f3f598bf5ddef895c61a6469a7e3ce1e8527c760c6844a890ac708",
+  "arxivId": "2611.33409",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33409v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "音视频理解",
+    "rankBucket": "后50%",
+    "score": 5.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.peft",
+          "label": "参数高效微调"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "强化学习",
+      "primaryMethodId": "method.reinforcement",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Johns Hopkins University, Baltimore, MD, USA"
+      ],
+      "name": "Albert Chiwara"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University, Baltimore, MD, USA"
+      ],
+      "name": "Erhan Guven"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文针对 MSR-VTT 上全局音频破坏视觉时序而被 CIDEr 惩罚的问题，采用冻结 CLIP 与 CLAP 加 K = 16 查询瓶颈与 Phi-2 解码器的 AVQFormer 并以自适应自评判序列训练稳定优化，最终纯视频配置取得 63.0 CIDEr 与 0.9367 BERTScore F1 的轻量级竞争力，代价是多模态配置字面分回落且结论仅在单基准自动指标上成立。",
+  "originalTitle": "A Semantics-First Approach to Multimodal Video Captioning with Frozen Encoders and Stabilized Reinforcement Learning",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33409v1.pdf",
+  "readerTitle": "语义优先的视频描述：冻结编码器与稳定化强化学习下的模态取舍",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}
