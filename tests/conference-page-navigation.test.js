@@ -52,7 +52,7 @@ test('real Hugo renders edition-specific returns and body shortcuts without gues
     assert.ok(shortcut); assert.equal(decodeURIComponent(shortcut[1]), '#论文列表');
     assert.ok(!read('no-list').includes('直达本届论文列表'));
     const daily = read('2026-10-19');
-    assert.match(daily, /href=\/blog\/archives\/>日更归档/);
+    assert.match(daily, /href=\/blog\/archives\/>每日归档/);
     assert.match(daily, /href=#article-body>连续阅读全文 ↓/);
     assert.match(daily, /浏览论文库/); assert.match(daily, /订阅日报/);
     assert.equal((daily.match(/id=article-body/g) || []).length, 1);

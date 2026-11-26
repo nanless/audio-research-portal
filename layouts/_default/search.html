@@ -1,6 +1,7 @@
 {{ define "main" }}
 <section class="research-search">
   <header class="page-header">
+    {{ partial "breadcrumbs.html" . }}
     <div class="rw-eyebrow">全站检索</div>
     <h1>搜索论文</h1>
     <p class="research-terms__intro">支持中英文题目、研究方向与 arXiv ID 的模糊匹配，也可按 <kbd>⌘K</kbd> 随时唤起全站分面快捷搜索。<button id="search-open-cmdk" class="rw-filter-chip" type="button">打开 ⌘K 快捷面板</button> 需要年份、评分或开源筛选？<a href="{{ "papers/" | relURL }}">进入论文库</a>。</p>
@@ -10,7 +11,7 @@
     <input id="searchInput" placeholder="例如：speech enhancement、语音增强、2609.03620" aria-label="搜索论文" type="search" autocomplete="off" maxlength="200">
     <ul id="searchResults" class="searchResults" aria-label="搜索结果"></ul>
   </div>
-  <noscript><p>搜索需要 JavaScript。你仍可通过<a href="{{ "archives/" | relURL }}">每日归档</a>或<a href="{{ "tags/" | relURL }}">研究主题</a>阅读论文。</p></noscript>
+  <noscript><p>搜索需要 JavaScript。你仍可通过<a href="{{ "archives/" | relURL }}">每日归档</a>或<a href="{{ "tags/" | relURL }}">研究方向</a>阅读论文。</p></noscript>
 </section>
 {{- $loader := resources.Get "js/search-index-loader.js" | minify | fingerprint }}
 {{- $cache := resources.Get "js/index-shard-cache.js" | minify | fingerprint }}

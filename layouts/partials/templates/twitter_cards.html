@@ -21,7 +21,8 @@
   <meta name="twitter:image" content="{{ "og-default.png" | absURL }}">
 {{- end }}
 
-{{- with or .Title site.Title site.Params.title | plainify }}
+{{- $twTitle := partial "page_title.html" . }}
+{{- with or $twTitle site.Title site.Params.title | plainify }}
   <meta name="twitter:title" content="{{ . }}">
 {{- end }}
 

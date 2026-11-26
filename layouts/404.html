@@ -1,16 +1,29 @@
 {{- define "main" }}
-<div style="text-align:center;padding:4rem 1rem;">
-  <div style="font-size:6rem;font-weight:700;color:var(--primary);margin-bottom:1rem;">404</div>
-  <h1 style="margin-bottom:1rem;">页面未找到</h1>
-  <p style="color:var(--secondary);margin-bottom:2rem;">抱歉，您访问的页面不存在或已被移除。</p>
-  <a href="{{ "" | absURL }}" style="display:inline-block;padding:0.75rem 1.5rem;background:var(--primary);color:var(--theme);border-radius:var(--radius);text-decoration:none;font-weight:600;transition:opacity 0.2s;">返回首页</a>
-  <div style="margin-top:2rem;">
-    <form class="home-search" action="{{ "papers/" | relURL }}" role="search">
-      <label class="sr-only" for="missing-query">搜索论文题目、arXiv 或 IEEE 编号</label>
-      <input id="missing-query" type="search" name="q" placeholder="搜索论文题目、arXiv 或 IEEE 编号" required>
-      <button class="rw-action" type="submit">查找论文</button>
-    </form>
-    <p><a href="{{ "archives/" | absURL }}">浏览每日归档</a></p>
+<section class="not-found-card" aria-labelledby="not-found-title">
+  <div class="not-found-card__badge" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+      <rect x="3" y="12" width="3.5" height="8" rx="1.75" fill="currentColor"></rect>
+      <rect x="8.75" y="7" width="3.5" height="18" rx="1.75" fill="currentColor"></rect>
+      <rect class="studio-brand-mark__accent" x="14.5" y="3" width="3.5" height="26" rx="1.75"></rect>
+      <rect x="20.25" y="8.5" width="3.5" height="15" rx="1.75" fill="currentColor"></rect>
+      <rect x="26" y="13" width="3.5" height="6" rx="1.75" fill="currentColor"></rect>
+    </svg>
+    <span>HTTP 404 · PAGE NOT FOUND</span>
   </div>
-</div>
+  <div class="not-found-card__code" aria-hidden="true">404</div>
+  <h1 id="not-found-title">页面未找到</h1>
+  <p class="not-found-card__lead">抱歉，您访问的页面不存在、已归档或链接路径已调整。可直接检索论文库，或从下方入口继续探索音频研究。</p>
+  <form class="home-search not-found-card__search" action="{{ "papers/" | relURL }}" role="search">
+    <label class="sr-only" for="missing-query">搜索论文题目、arXiv 或 IEEE 编号</label>
+    <input id="missing-query" type="search" name="q" placeholder="搜索论文题目、arXiv 或 IEEE 编号" required>
+    <button class="rw-action rw-action--primary" type="submit">查找论文</button>
+  </form>
+  <nav class="not-found-card__actions" aria-label="站内恢复入口">
+    <a class="rw-action rw-action--primary" href="{{ "" | absURL }}">返回首页</a>
+    {{- with site.GetPage "/papers" }}<a class="rw-action" href="{{ .RelPermalink }}">浏览论文库</a>{{ end }}
+    {{- with site.GetPage "/hubs" }}<a class="rw-action" href="{{ .RelPermalink }}">专题导航</a>{{ end }}
+    {{- with site.GetPage "/conferences" }}<a class="rw-action" href="{{ .RelPermalink }}">会议论文集</a>{{ end }}
+    {{- with site.GetPage "/archives" }}<a class="rw-action" href="{{ .RelPermalink }}">浏览每日归档</a>{{ else }}<a class="rw-action" href="{{ "archives/" | absURL }}">浏览每日归档</a>{{ end }}
+  </nav>
+</section>
 {{- end }}

@@ -8,7 +8,8 @@
 {{- end }}
 
 {{- /* Title */}}
-<title>{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ site.Title }}</title>
+{{- $pageTitle := partial "page_title.html" . }}
+<title>{{ if .IsHome }}{{ else }}{{ if $pageTitle }}{{ $pageTitle }} | {{ end }}{{ end }}{{ site.Title }}</title>
 
 {{- /* Meta */}}
 {{- $headMeta := partial "research_metadata.html" . }}
@@ -20,7 +21,7 @@
 {{- with $kwList }}<meta name="keywords" content="{{- range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}">{{ end }}
 {{- end }}
 {{- $rawDesc := "" }}
-{{- with .Description }}{{ $rawDesc = . }}{{- else }}{{- if or .IsPage .IsSection }}{{ $rawDesc = .Summary | default (printf "%s - %s" .Title site.Title) }}{{- else }}{{- with site.Params.description }}{{ $rawDesc = . }}{{- end }}{{- end }}{{- end }}
+{{- with .Description }}{{ $rawDesc = . }}{{- else }}{{- if or .IsPage .IsSection }}{{ $rawDesc = .Summary | default (printf "%s - %s" $pageTitle site.Title) }}{{- else }}{{- with site.Params.description }}{{ $rawDesc = . }}{{- end }}{{- end }}{{- end }}
 {{- $cleanDesc := partial "plain_summary.html" $rawDesc }}
 <meta name="description" content="{{ $cleanDesc }}">
 <meta name="author" content="{{ (partial "author.html" . ) }}">
@@ -87,8 +88,8 @@
 
 {{- /* Favicons */}}
 <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ site.Params.assets.favicon32x32 | default "og-default.png" | absURL }}">
-<link rel="apple-touch-icon" href="{{ site.Params.assets.apple_touch_icon | default "og-default.png" | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL }}">
+<link rel="apple-touch-icon" href="{{ site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL }}">
 <link rel="mask-icon" href="{{ site.Params.assets.safari_pinned_tab | default "favicon.svg" | absURL }}" color="#0f5c58">
 <meta name="theme-color" content="{{ site.Params.assets.theme_color | default "#0f5c58" }}">
 <meta name="msapplication-TileColor" content="{{ site.Params.assets.msapplication_TileColor | default "#0f5c58" }}">

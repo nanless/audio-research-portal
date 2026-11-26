@@ -1,17 +1,26 @@
-{{- /* Giscus 评论区 */ -}}
-<script src="https://giscus.app/client.js"
-        data-repo="nanless/audio-research-portal"
-        data-repo-id="R_kgDOSF_Bzg"
-        data-category="General"
-        data-category-id="DIC_kwDOSF_Bzs4C8prG"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>
+{{- /* Giscus 评论区（Studio Monograph 标题容器，位于 #article-body 之外） */ -}}
+<section class="research-comments" aria-labelledby="research-comments-title" data-pagefind-ignore="all">
+  <header class="research-comments__header">
+    <div class="rw-eyebrow">DISCUSSION · 学术讨论</div>
+    <h2 id="research-comments-title">读者评论与勘误交流</h2>
+    <p class="research-comments__note">欢迎围绕实验细节、复现经验、代码试听或延伸文献展开讨论（由 GitHub Discussions 驱动）。</p>
+  </header>
+  <div class="research-comments__body">
+    <script src="https://giscus.app/client.js"
+            data-repo="nanless/audio-research-portal"
+            data-repo-id="R_kgDOSF_Bzg"
+            data-category="General"
+            data-category-id="DIC_kwDOSF_Bzs4C8prG"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="0"
+            data-input-position="bottom"
+            data-theme="preferred_color_scheme"
+            data-lang="zh-CN"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</section>

@@ -1,6 +1,7 @@
 {{- define "main" }}
 <section class="research-library" id="paper-library" data-index-url="{{ "client/index.json" | relURL }}" data-legacy-index-url="{{ "index.json" | relURL }}">
   <header class="research-library__header">
+    {{ partial "breadcrumbs.html" . }}
     <div class="rw-eyebrow">Research Library</div>
     <h1>论文库</h1>
     <p>检索中英文题目、arXiv ID 与摘要，按多级研究方向筛选。同一论文的已核实解读合并展示。</p>
@@ -45,11 +46,16 @@
     </details>
   </form>
 
-  <div class="research-library__quick-filters" aria-label="快捷研究方向">
+  <div class="research-library__quick-filters" aria-label="快捷研究方向与精选筛选">
     <button class="rw-filter-chip" type="button" data-concept="task.asr" aria-pressed="false">语音识别</button>
     <button class="rw-filter-chip" type="button" data-concept="task.speech-synthesis" aria-pressed="false">语音合成</button>
     <button class="rw-filter-chip" type="button" data-concept="task.speech-enhancement" aria-pressed="false">语音增强</button>
     <button class="rw-filter-chip" type="button" data-concept="task.music-generation" aria-pressed="false">音乐生成</button>
+    <button class="rw-filter-chip" type="button" data-concept="model_family.audio-language" aria-pressed="false">音频大模型</button>
+    <span class="research-library__quick-sep" aria-hidden="true"></span>
+    <button class="rw-filter-chip rw-filter-chip--signal" type="button" data-quick-filter="minScore" data-quick-value="8.0" aria-pressed="false">高分 ≥8.0</button>
+    <button class="rw-filter-chip rw-filter-chip--signal" type="button" data-quick-filter="oss" data-quick-value="code" aria-pressed="false">含开源</button>
+    <button class="rw-filter-chip rw-filter-chip--signal" type="button" data-quick-filter="oss" data-quick-value="demo" aria-pressed="false">含试听 Demo</button>
   </div>
 
   <div class="research-library__status" aria-live="polite">

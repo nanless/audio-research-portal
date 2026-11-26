@@ -1,0 +1,9 @@
+{{- $title := .Title -}}
+{{- if eq .Kind "404" -}}
+  {{- $title = "页面未找到" -}}
+{{- else if and (eq .Kind "taxonomy") (eq .Type "tags") -}}
+  {{- $title = "标签总览" -}}
+{{- else if and (eq .Kind "taxonomy") (eq .Type "categories") -}}
+  {{- $title = "分类总览" -}}
+{{- end -}}
+{{- return $title -}}

@@ -94,10 +94,10 @@ params:
 
   assets:
     disableFingerprinting: false
-    favicon: "og-default.png"
-    favicon16x16: "og-default.png"
-    favicon32x32: "og-default.png"
-    apple_touch_icon: "og-default.png"
+    favicon: "favicon-32x32.png"
+    favicon16x16: "favicon-32x32.png"
+    favicon32x32: "favicon-32x32.png"
+    apple_touch_icon: "apple-touch-icon.png"
     safari_pinned_tab: "favicon.svg"
     theme_color: "#0f5c58"
     msapplication_TileColor: "#0f5c58"

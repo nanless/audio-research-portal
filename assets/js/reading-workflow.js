@@ -125,11 +125,36 @@
         jumpTo(heading, true);
       });
     });
+    var MODAL_ID = 'reading-chapters';
+    function getModalStack() {
+      window.__rwModalStack = window.__rwModalStack || [];
+      return window.__rwModalStack;
+    }
+    function pushModal() {
+      var stack = getModalStack();
+      var pos = stack.indexOf(MODAL_ID);
+      if (pos >= 0) stack.splice(pos, 1);
+      stack.push(MODAL_ID);
+      if (document.body && document.body.style) document.body.style.overflow = 'hidden';
+    }
+    function popModal() {
+      var stack = getModalStack();
+      var pos = stack.indexOf(MODAL_ID);
+      if (pos >= 0) stack.splice(pos, 1);
+      if (!stack.length && document.body && document.body.style) document.body.style.overflow = '';
+    }
+    function isTopModal() {
+      var stack = getModalStack();
+      return stack.length === 0 || stack[stack.length - 1] === MODAL_ID;
+    }
+    var desktopLinkSet = new Set(desktopLinks);
+    var tocDetails = typeof document.querySelector === 'function' ? document.querySelector('.workbench-toc details.toc') : null;
     function closePanel(returnFocus) {
       if (!panel) return;
       panel.hidden = true;
       trigger.setAttribute('aria-expanded', 'false');
       document.body.classList.remove('reading-chapters-open');
+      popModal();
       if (returnFocus) trigger.focus();
     }
     if (trigger && panel && close && linksContainer) {
@@ -153,6 +178,7 @@
       if (searchable) {
         searchGroup.hidden = false;
         trigger.classList.add('reading-chapters-trigger--searchable');
+        var chapterComposing = false;
         function filterChapters() {
           var query = search.value.trim().toLocaleLowerCase();
           var visible = 0;
@@ -163,7 +189,12 @@
           clear.hidden = search.value === '';
           empty.hidden = visible !== 0;
         }
-        search.addEventListener('input', filterChapters);
+        search.addEventListener('compositionstart', function () { chapterComposing = true; });
+        search.addEventListener('compositionend', function () { chapterComposing = false; filterChapters(); });
+        search.addEventListener('input', function (event) {
+          if (chapterComposing || (event && event.isComposing)) return;
+          filterChapters();
+        });
         clear.addEventListener('click', function () { search.value = ''; filterChapters(); search.focus(); });
         filterChapters();
       }
@@ -172,13 +203,18 @@
         panel.hidden = false;
         trigger.setAttribute('aria-expanded', 'true');
         document.body.classList.add('reading-chapters-open');
+        pushModal();
         if (searchable) search.focus();
         else close.focus();
       });
       close.addEventListener('click', function () { closePanel(true); });
       panel.addEventListener('click', function (event) { if (event.target === panel) closePanel(true); });
       panel.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') { event.preventDefault(); closePanel(true); }
+        if (event.key === 'Escape') {
+          if (!isTopModal()) return;
+          event.preventDefault();
+          closePanel(true);
+        }
         if (event.key === 'Tab') {
           var focusable = [close];
           if (searchable) { focusable.push(search); if (!clear.hidden) focusable.push(clear); }
@@ -208,21 +244,28 @@
       linksById.get(id).push(link);
     });
     var frame = false, activeId = null;
-    function markLinks(id, selected) {
+    function markLinks(id, selected, shouldAutoScroll) {
       (linksById.get(id) || []).forEach(function (link) {
         link.classList.toggle('active', selected);
-        if (selected) link.setAttribute('aria-current', 'location');
-        else link.removeAttribute('aria-current');
+        if (selected) {
+          link.setAttribute('aria-current', 'location');
+          if (shouldAutoScroll && desktopLinkSet.has(link) && !(tocDetails && tocDetails.open === false) && typeof link.scrollIntoView === 'function') {
+            link.scrollIntoView({ block: 'nearest' });
+          }
+        } else {
+          link.removeAttribute('aria-current');
+        }
       });
     }
     function update() {
       frame = false;
       var current = currentHeading(flowHeadings, document.documentElement.clientHeight * .25);
-      if (!current) { if (activeId !== null) markLinks(activeId, false); activeId = null; return; }
+      if (!current) { if (activeId !== null) markLinks(activeId, false, false); activeId = null; return; }
       if (current.id === activeId) return;
+      var hadPrevious = activeId !== null;
       if (trigger) trigger.textContent = (searchable ? '查找章节 · ' : '章节 · ') + headingLabel(current).slice(0, 24);
-      if (activeId !== null) markLinks(activeId, false);
-      markLinks(current.id, true);
+      if (hadPrevious) markLinks(activeId, false, false);
+      markLinks(current.id, true, hadPrevious);
       activeId = current.id;
     }
     window.addEventListener('scroll', function () { if (!frame) { frame = true; window.requestAnimationFrame(update); } }, { passive: true });
@@ -316,6 +359,16 @@
       list.appendChild(li);
     });
     breakdownEl.appendChild(list);
+    var scoreHeading = Array.prototype.slice.call(article.querySelectorAll('h2[id], h3[id]')).find(function (h) {
+      return /评分/.test(h.textContent || '');
+    });
+    if (scoreHeading && scoreHeading.id) {
+      var jump = document.createElement('a');
+      jump.className = 'rw-score-jump';
+      jump.href = '#' + encodeURIComponent(scoreHeading.id);
+      jump.textContent = '查看评分明细 ↓';
+      breakdownEl.appendChild(jump);
+    }
     breakdownEl.hidden = false;
     if (breakdownEl.parentElement && breakdownEl.parentElement.classList) {
       breakdownEl.parentElement.classList.add('research-signal-card--enhanced');

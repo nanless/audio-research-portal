@@ -126,6 +126,23 @@
     </div>
 
     {{- if $isPaper }}
+    {{- $venueLabel := "" }}
+    {{- $confCtx := partial "conference_page_context.html" . }}
+    {{- if $confCtx }}
+      {{- $venueLabel = printf "%s %v" $confCtx.entry.name $confCtx.entry.year }}
+    {{- else if hasPrefix $metadata.paperId "conference:" }}
+      {{- $pidParts := split $metadata.paperId ":" }}
+      {{- if ge (len $pidParts) 3 }}
+        {{- $vKey := lower (index $pidParts 1) }}
+        {{- $vMap := dict "icml" "ICML" "iclr" "ICLR" "icassp" "ICASSP" "interspeech" "Interspeech" "neurips" "NeurIPS" "acl" "ACL" "emnlp" "EMNLP" "aaai" "AAAI" "cvpr" "CVPR" "iccv" "ICCV" "eccv" "ECCV" "ismir" "ISMIR" "waspaa" "WASPAA" "slt" "SLT" "asru" "ASRU" "eusipco" "EUSIPCO" "chime" "CHiME" "dcase" "DCASE" "acmmm" "ACM MM" "mm" "ACM MM" "naacl" "NAACL" "ijcai" "IJCAI" "taslp" "TASLP" }}
+        {{- $vName := index $vMap $vKey | default (upper $vKey) }}
+        {{- $venueLabel = printf "%s %s" $vName (index $pidParts 2) }}
+      {{- else }}
+        {{- $venueLabel = "会议论文" }}
+      {{- end }}
+    {{- else if eq $metadata.sourceKind "arxiv" }}
+      {{- $venueLabel = "arXiv" }}
+    {{- end }}
     <aside class="research-signal-rail" aria-label="论文研究信号" data-pagefind-ignore="all">
       {{- if $score }}
       <section class="research-signal-card research-signal-card--score">
@@ -133,6 +150,16 @@
         <span class="research-score">{{ $score }}</span>
         <div class="research-score-breakdown" id="research-score-breakdown" hidden></div>
         <p>编辑性研究评价，不替代同行评审结论。</p>
+      </section>
+      {{- end }}
+      {{- if or $venueLabel $metadata.hasCode $metadata.hasDemo }}
+      <section class="research-signal-card research-signal-card--signals">
+        <span class="research-signal-card__label">来源与复现信号</span>
+        <div class="research-signal-pills">
+          {{- with $venueLabel }}<span class="research-signal-pill research-signal-pill--venue">{{ . }}</span>{{ end }}
+          {{- if $metadata.hasCode }}<span class="research-signal-pill research-signal-pill--code">💻 含开源</span>{{ end }}
+          {{- if $metadata.hasDemo }}<span class="research-signal-pill research-signal-pill--demo">🔊 含试听</span>{{ end }}
+        </div>
       </section>
       {{- end }}
       <section class="research-signal-card">

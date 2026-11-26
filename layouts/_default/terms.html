@@ -7,6 +7,7 @@
 {{- $facets := slice (dict "id" "task" "name" "研究任务") (dict "id" "method" "name" "研究方法") (dict "id" "setting" "name" "研究条件") (dict "id" "signal" "name" "信号") (dict "id" "application" "name" "应用") (dict "id" "research_focus" "name" "研究重点") (dict "id" "artifact" "name" "研究产物") (dict "id" "scientific_topic" "name" "科学主题") (dict "id" "model_family" "name" "模型家族") }}
 <section class="research-terms">
   <header class="page-header">
+    {{ partial "breadcrumbs.html" . }}
     <div class="rw-eyebrow">{{ if $categories }}按来源浏览{{ else }}按方向浏览{{ end }}</div>
     <h1>{{ if $categories }}内容分类{{ else }}研究方向与多级分类{{ end }}</h1>
     <p class="research-terms__intro">{{ if $categories }}从每日研究或会议论文集进入。{{ else }}任务、方法、条件是并列的分类视角。点击方向名称进入论文库，点击箭头展开下一级；父方向可包含全部子方向。{{ end }}也可以在<a href="{{ "papers/" | relURL }}">论文库</a>组合筛选。</p>

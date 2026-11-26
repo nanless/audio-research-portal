@@ -28,6 +28,7 @@
 {{- end -}}
 <section class="conference-directory" id="conference-directory">
   <header class="conference-directory__header">
+    {{ partial "breadcrumbs.html" . }}
     <div class="rw-eyebrow">会议研究导航</div>
     <h1>{{ .Title }}</h1>
     <p>{{ .Description }}</p>

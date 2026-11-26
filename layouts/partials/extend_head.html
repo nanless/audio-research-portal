@@ -28,19 +28,24 @@
   transition: width 0.1s;
 }
 .highlight { position: relative; }
-.highlight::before {
+.highlight[data-lang]::before {
   content: attr(data-lang);
   position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.2rem 0.6rem;
-  font-size: 0.75rem;
+  top: 7px;
+  left: 12px;
+  right: auto;
+  padding: 0.14rem 0.55rem;
+  font-size: 0.72rem;
+  line-height: 1.4;
   font-family: var(--font-mono);
-  color: var(--secondary);
-  background: var(--code-bg);
-  border-bottom-left-radius: var(--radius);
+  font-weight: 600;
+  color: rgba(235, 240, 238, 0.78);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 4px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
+  pointer-events: none;
   z-index: 2;
 }
 @media screen and (min-width: 1280px) {

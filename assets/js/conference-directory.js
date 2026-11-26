@@ -176,7 +176,13 @@
     }
     form.addEventListener('submit', function (event) { event.preventDefault(); update(); });
     Object.values(controls).forEach(function (control) { control.addEventListener('change', update); });
-    controls.query.addEventListener('input', update);
+    var queryComposing = false;
+    controls.query.addEventListener('compositionstart', function () { queryComposing = true; });
+    controls.query.addEventListener('compositionend', function () { queryComposing = false; update({ type: 'input' }); });
+    controls.query.addEventListener('input', function (event) {
+      if (queryComposing || (event && event.isComposing)) return;
+      update(event);
+    });
     controls.query.addEventListener('blur', function () { inputSession = false; });
     document.getElementById('conference-clear').addEventListener('click', function () { setControls({ year: 'all', month: 'all', grade: 'all', venue: 'all', query: '' }); update(); });
     document.getElementById('conference-empty-clear').addEventListener('click', function () { setControls({ year: 'all', month: 'all', grade: 'all', venue: 'all', query: '' }); update(); controls.query.focus(); });

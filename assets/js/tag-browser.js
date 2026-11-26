@@ -117,7 +117,8 @@
         status.textContent = '选择分类视角，逐级浏览。';
       });
     });
-    input.addEventListener('input', function () {
+    var inputComposing = false;
+    function runTagSearch() {
       var query = normalize(input.value);
       results.replaceChildren();
       results.hidden = !query;
@@ -137,6 +138,12 @@
         link.addEventListener('focus', function () { showConcept(match.concept.id); });
         results.appendChild(link);
       });
+    }
+    input.addEventListener('compositionstart', function () { inputComposing = true; });
+    input.addEventListener('compositionend', function () { inputComposing = false; runTagSearch(); });
+    input.addEventListener('input', function (event) {
+      if (inputComposing || (event && event.isComposing)) return;
+      runTagSearch();
     });
     var selected = new URLSearchParams(location ? location.search : '').get('concept');
     if (selected && graph.byId[selected]) showConcept(selected);

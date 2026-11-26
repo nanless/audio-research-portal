@@ -309,6 +309,7 @@
   var moreButton = document.getElementById('library-more');
   var quickButtons = Array.prototype.slice.call(document.querySelectorAll('[data-query]'));
   var directionButtons = Array.prototype.slice.call(document.querySelectorAll('[data-concept]'));
+  var signalQuickButtons = Array.prototype.slice.call(document.querySelectorAll('[data-quick-filter]'));
   var panel = document.getElementById('library-direction-panel');
   var treeNode = document.getElementById('library-direction-tree');
   var selectedNode = document.getElementById('library-directions');
@@ -340,6 +341,62 @@
   var allEntries = [];
   var filteredEntries = [];
   var visibleCount = PAGE_SIZE;
+
+  var VENUE_DISPLAY_NAMES = {
+    icml: 'ICML', iclr: 'ICLR', icassp: 'ICASSP', interspeech: 'Interspeech',
+    neurips: 'NeurIPS', acl: 'ACL', emnlp: 'EMNLP', aaai: 'AAAI',
+    cvpr: 'CVPR', iccv: 'ICCV', eccv: 'ECCV', ismir: 'ISMIR',
+    waspaa: 'WASPAA', slt: 'SLT', asru: 'ASRU', eusipco: 'EUSIPCO',
+    chime: 'CHiME', dcase: 'DCASE', acmmm: 'ACM MM', mm: 'ACM MM',
+    naacl: 'NAACL', ijcai: 'IJCAI', taslp: 'TASLP'
+  };
+
+  function venueLabel(entry) {
+    if (!entry || entry.type !== 'paper') return '';
+    var pid = entry.paperId || '';
+    var confMatch = pid.match(/^conference:([a-z0-9-]+):(\d{4}):/i);
+    if (confMatch) {
+      var key = confMatch[1].toLowerCase();
+      var name = VENUE_DISPLAY_NAMES[key] || confMatch[1].toUpperCase();
+      return name + ' ' + confMatch[2];
+    }
+    if (entry.citation && typeof entry.citation.venue === 'string' && entry.citation.venue.trim()) {
+      return entry.citation.venue.trim();
+    }
+    if (entry.sourceKind === 'arxiv' || entry.arxivId) return 'arXiv';
+    if (entry.sourceKind === 'conference') return '会议论文';
+    return '';
+  }
+
+  function renderLoadingSkeleton() {
+    if (!resultsNode) return;
+    if (typeof resultsNode.setAttribute === 'function') resultsNode.setAttribute('aria-busy', 'true');
+    if (typeof resultsNode.replaceChildren === 'function') resultsNode.replaceChildren();
+    else resultsNode.textContent = '';
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < 4; i += 1) {
+      var card = document.createElement('div');
+      card.className = 'library-skeleton';
+      card.setAttribute('aria-hidden', 'true');
+      var body = document.createElement('div');
+      body.className = 'library-skeleton__body';
+      var line1 = document.createElement('div');
+      line1.className = 'library-skeleton__line library-skeleton__line--title';
+      var line2 = document.createElement('div');
+      line2.className = 'library-skeleton__line library-skeleton__line--sub';
+      var line3 = document.createElement('div');
+      line3.className = 'library-skeleton__line library-skeleton__line--meta';
+      body.appendChild(line1);
+      body.appendChild(line2);
+      body.appendChild(line3);
+      var score = document.createElement('div');
+      score.className = 'library-skeleton__pill';
+      card.appendChild(body);
+      card.appendChild(score);
+      frag.appendChild(card);
+    }
+    resultsNode.appendChild(frag);
+  }
 
   function typeLabel(type) {
     return type === 'daily' ? '每日研究' : type === 'conference' ? '会议专题' : '论文解读';
@@ -417,9 +474,16 @@
     meta.textContent = [typeLabel(entry.type), entry.date, entry.task, entry.method,
       entry.arxivId ? 'arXiv ' + entry.arxivId : ''].filter(Boolean).join(' · ');
     body.appendChild(meta);
-    if (entry.hasCode || entry.hasDemo) {
+    var venue = venueLabel(entry);
+    if (venue || entry.hasCode || entry.hasDemo) {
       var badges = document.createElement('div');
       badges.className = 'library-result__badges';
+      if (venue) {
+        var venueBadge = document.createElement('span');
+        venueBadge.className = 'library-result__badge library-result__badge--venue';
+        venueBadge.textContent = venue;
+        badges.appendChild(venueBadge);
+      }
       if (entry.hasCode) {
         var codeBadge = document.createElement('span');
         codeBadge.className = 'library-result__badge library-result__badge--code';
@@ -480,7 +544,7 @@
       var score = document.createElement('span');
       var scoreTier = entry.score >= 8.0 ? ' library-result__score--high' : entry.score >= 7.0 ? ' library-result__score--good' : '';
       score.className = 'library-result__score' + scoreTier;
-      score.textContent = entry.score.toFixed(1).replace('.0', '') + '/10';
+      score.textContent = entry.score.toFixed(1) + '/10';
       score.setAttribute('aria-label', '本站评分 ' + score.textContent);
       article.appendChild(score);
     }
@@ -488,6 +552,7 @@
   }
 
   function render() {
+    if (typeof resultsNode.setAttribute === 'function') resultsNode.setAttribute('aria-busy', 'false');
     resultsNode.textContent = '';
     var visible = filteredEntries.slice(0, visibleCount);
     if (!visible.length) {
@@ -569,6 +634,13 @@
       button.setAttribute('aria-pressed', String(button.dataset.query === queryInput.value.trim()));
     });
     directionButtons.forEach(function (button) { button.setAttribute('aria-pressed', String(selectedIds(directions).includes(button.dataset.concept))); });
+    signalQuickButtons.forEach(function (button) {
+      var key = button.dataset.quickFilter;
+      var val = button.dataset.quickValue;
+      var active = (key === 'minScore' && scoreSelect && scoreSelect.value === val)
+        || (key === 'oss' && ossSelect && ossSelect.value === val);
+      button.setAttribute('aria-pressed', String(Boolean(active)));
+    });
     if (!restoring) writeState(push === true);
     render();
   }
@@ -801,7 +873,15 @@
       draft = cloneDirections(directions); applyFilters(false, true);
     });
   });
-  if (directionSearch) directionSearch.addEventListener('input', revealDirections);
+  if (directionSearch) {
+    var dirComposing = false;
+    directionSearch.addEventListener('compositionstart', function () { dirComposing = true; });
+    directionSearch.addEventListener('compositionend', function () { dirComposing = false; revealDirections(); });
+    directionSearch.addEventListener('input', function (event) {
+      if (dirComposing || (event && event.isComposing)) return;
+      revealDirections();
+    });
+  }
   var applyButton = document.getElementById('library-direction-apply');
   if (applyButton) applyButton.addEventListener('click', function () {
     directions = cloneDirections(draft);
@@ -833,10 +913,29 @@
     });
   });
 
+  signalQuickButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var key = button.dataset.quickFilter;
+      var val = button.dataset.quickValue;
+      var control = key === 'minScore' ? scoreSelect : key === 'oss' ? ossSelect : null;
+      if (!control) return;
+      control.value = control.value === val ? 'all' : val;
+      typeSelect.value = 'paper';
+      applyFilters(false, true);
+    });
+  });
+
   var debounceTimer;
-  queryInput.addEventListener('input', function () {
+  var queryComposing = false;
+  function scheduleQueryFilter() {
     window.clearTimeout(debounceTimer);
     debounceTimer = window.setTimeout(applyFilters, 120);
+  }
+  queryInput.addEventListener('compositionstart', function () { queryComposing = true; });
+  queryInput.addEventListener('compositionend', function () { queryComposing = false; scheduleQueryFilter(); });
+  queryInput.addEventListener('input', function (event) {
+    if (queryComposing || (event && event.isComposing)) return;
+    scheduleQueryFilter();
   });
   [typeSelect, yearSelect, sortSelect, scoreSelect, sourceSelect, ossSelect].filter(Boolean).forEach(function (control) {
     control.addEventListener('change', function () { applyFilters(false, true); });
@@ -874,6 +973,7 @@
   });
 
   function renderLoadError(error) {
+    if (typeof resultsNode.setAttribute === 'function') resultsNode.setAttribute('aria-busy', 'false');
     resultsNode.replaceChildren();
     var empty = document.createElement('div');
     empty.className = 'research-library__empty';
@@ -933,7 +1033,7 @@
   function startLoad() {
   if (loading) return; loading = true;
   countNode.textContent = '正在读取静态论文索引…';
-  resultsNode.textContent = '正在读取并校验索引，请稍候…';
+  renderLoadingSkeleton();
   return Promise.all([
     loadIndex(),
     loadTagAssets(),

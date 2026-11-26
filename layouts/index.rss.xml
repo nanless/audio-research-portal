@@ -1,8 +1,6 @@
 {{- /* Keep home-scoped index.rss.xml so Hugo 0.146+/0.160.1 does not let layouts/index.rsshighscore.xml shadow layouts/_default/rss.xml for /index.xml. */ -}}
 {{- $dailyPages := slice }}
 {{- range where site.RegularPages "Section" "posts" }}
-  {{- $baseName := "" }}
-  {{- with .File }}{{ $baseName = .BaseFileName }}{{ end }}
   {{- $metadata := partial "research_metadata.html" . }}
   {{- if eq $metadata.pageType "daily" }}
     {{- $dailyPages = $dailyPages | append . }}
@@ -23,7 +21,30 @@
     <lastBuildDate>{{ (index $pages 0).Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
     {{- end }}
     {{- range $pages }}
-    {{- $summary := partial "plain_summary.html" .Summary | truncate 480 }}
+    {{- $parts := slice }}
+    {{- $desc := strings.TrimSpace (partial "plain_summary.html" (.Description | default "")) }}
+    {{- if $desc }}{{ $parts = $parts | append $desc }}{{ end }}
+    {{- $raw := .RawContent | default "" }}
+    {{- range findRE `(?m)^-[ \t]+\*\*(?:焦点方向|阅读与开源快照)\*\*[：:][^\n]+` $raw 2 }}
+      {{- $line := replaceRE `^-[ \t]+` "" . }}
+      {{- $line = replaceRE `\[([^\]]+)\]\([^)]+\)` "$1" $line }}
+      {{- $line = replace $line "**" "" }}
+      {{- $line = strings.TrimSpace (partial "plain_summary.html" $line) }}
+      {{- if $line }}{{ $parts = $parts | append $line }}{{ end }}
+    {{- end }}
+    {{- with .Params.tags }}
+      {{- $topTags := first 6 . }}
+      {{- if gt (len $topTags) 0 }}
+        {{- $suffix := cond (gt (len .) 6) "等" "" }}
+        {{- $parts = $parts | append (printf "涵盖方向：%s%s" (delimit $topTags "、") $suffix) }}
+      {{- end }}
+    {{- end }}
+    {{- $summary := "" }}
+    {{- if gt (len $parts) 0 }}
+      {{- $summary = delimit $parts " · " | truncate 460 }}
+    {{- else }}
+      {{- $summary = printf "%s 每日语音、音乐与声学 AI 论文深度导读与完整目录。" (.Date.Format "2006-01-02") }}
+    {{- end }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>

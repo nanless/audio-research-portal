@@ -5,6 +5,7 @@
 {{ $editions = sort $editions "Date" "desc" }}
 <section class="research-archives">
   <header class="page-header">
+    {{ partial "breadcrumbs.html" . }}
     <div class="rw-eyebrow">每日研究记录</div>
     <h1>每日归档</h1>
     <p class="research-terms__intro">{{ len $editions }} 期每日研究，按月份倒序排列。查找单篇解读请使用<a href="{{ "papers/" | relURL }}">论文库</a>；会议内容见<a href="{{ "conferences/" | relURL }}">会议论文集</a>。</p>

@@ -38,16 +38,39 @@
     {{- end }}
     {{- $feature := partial "edition_feature_data.html" . }}
     <section class="edition-focus{{ if $feature }} edition-focus--illustrated{{ end }}" aria-labelledby="latest-edition-title">
-      <svg class="edition-focus__watermark" viewBox="0 0 640 220" preserveAspectRatio="none" aria-hidden="true">
+      <svg class="edition-focus__watermark" viewBox="0 0 640 240" preserveAspectRatio="xMaxYMin slice" aria-hidden="true">
         <g stroke="currentColor" stroke-width="1" fill="none" opacity="0.16">
-          <path d="M0 110 Q40 42 80 110 T160 110 T240 110 T320 110 T400 110 T480 110 T560 110 T640 110"></path>
-          <path d="M0 110 Q32 168 64 110 T128 110 T192 110 T256 110 T320 110 T384 110 T448 110 T512 110 T576 110 T640 110" opacity="0.65"></path>
-          <line x1="0" y1="55" x2="640" y2="55" stroke-dasharray="3 6"></line>
-          <line x1="0" y1="110" x2="640" y2="110" stroke-dasharray="2 8"></line>
-          <line x1="0" y1="165" x2="640" y2="165" stroke-dasharray="3 6"></line>
+          <line x1="120" y1="48" x2="624" y2="48" stroke-dasharray="3 7"></line>
+          <line x1="120" y1="108" x2="624" y2="108"></line>
+          <line x1="120" y1="168" x2="624" y2="168" stroke-dasharray="3 7"></line>
+          <line x1="240" y1="24" x2="240" y2="210" stroke-dasharray="2 8"></line>
+          <line x1="380" y1="24" x2="380" y2="210" stroke-dasharray="2 8"></line>
+          <line x1="520" y1="24" x2="520" y2="210" stroke-dasharray="2 8"></line>
+        </g>
+        <g fill="currentColor" opacity="0.13">
+          <rect x="262" y="88" width="5" height="40" rx="2.5"></rect>
+          <rect x="278" y="70" width="5" height="76" rx="2.5"></rect>
+          <rect x="294" y="80" width="5" height="56" rx="2.5"></rect>
+          <rect x="310" y="54" width="5" height="108" rx="2.5"></rect>
+          <rect x="326" y="66" width="5" height="84" rx="2.5"></rect>
+          <rect x="342" y="38" width="5" height="140" rx="2.5"></rect>
+          <rect x="358" y="52" width="5" height="112" rx="2.5"></rect>
+          <rect x="374" y="28" width="6" height="160" rx="3" opacity="1.35"></rect>
+          <rect x="390" y="48" width="5" height="120" rx="2.5"></rect>
+          <rect x="406" y="36" width="6" height="144" rx="3" opacity="1.25"></rect>
+          <rect x="422" y="62" width="5" height="92" rx="2.5"></rect>
+          <rect x="438" y="50" width="5" height="116" rx="2.5"></rect>
+          <rect x="454" y="72" width="5" height="72" rx="2.5"></rect>
+          <rect x="470" y="64" width="5" height="88" rx="2.5"></rect>
+          <rect x="486" y="82" width="5" height="52" rx="2.5"></rect>
+          <rect x="502" y="90" width="5" height="36" rx="2.5"></rect>
+        </g>
+        <g fill="none" stroke-linecap="round">
+          <path d="M120 108 C186 108 214 48 278 48 C338 48 344 166 404 166 C462 166 476 58 538 78 C576 90 598 108 624 108" stroke="currentColor" stroke-width="1.6" opacity="0.28"></path>
+          <path d="M120 108 C176 108 206 146 266 138 C322 130 338 38 394 38 C452 38 474 168 532 148 C570 135 596 108 624 108" stroke="#e39b6d" stroke-width="1.35" opacity="0.34"></path>
         </g>
       </svg>
-      <div class="edition-focus__topline"><span class="edition-focus__badge">最新日报 · {{ .Date.Format "01-02" }}</span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time></div>
+      <div class="edition-focus__topline"><span class="edition-focus__badge"><span class="edition-focus__dot" aria-hidden="true"></span>最新一期</span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time></div>
       <div class="edition-focus__date" aria-hidden="true"><span class="edition-focus__year">{{ .Date.Format "2006" }}</span><span class="edition-focus__day">{{ .Date.Format "01.02" }}</span></div>
       <h2 id="latest-edition-title">每日音频研究</h2>
       <p class="research-home-hero__lead">{{ if $count }}<strong class="edition-focus__count">{{ $count }}</strong> 篇精选论文 · 来源封存目录与逐篇精读{{ else }}本期全量目录与逐篇精读{{ end }}</p>
@@ -113,7 +136,28 @@
     {{- $hub := index $hubMap $slug | default dict }}
     {{- $shortTitle := replaceRE `（[^）]+）$` "" .Title }}
     <a class="hubs-home__card" href="{{ .RelPermalink }}" data-hub-slug="{{ $slug }}">
-      <span class="hubs-home__title">{{ $shortTitle }}</span>
+      <span class="hubs-home__head">
+        <span class="hubs-home__icon" aria-hidden="true">
+          {{- if eq $slug "asr" -}}
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+          {{- else if eq $slug "tts" -}}
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+          {{- else if eq $slug "speech-enhancement" -}}
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+          {{- else if eq $slug "audio-llm" -}}
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"></rect><line x1="9" y1="9" x2="9" y2="15"></line><line x1="12" y1="7" x2="12" y2="17"></line><line x1="15" y1="10" x2="15" y2="14"></line></svg>
+          {{- else if eq $slug "music-mir" -}}
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+          {{- else if eq $slug "spatial-audio" -}}
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.2"></circle><circle cx="12" cy="12" r="6.5" stroke-dasharray="3 2.5"></circle><circle cx="12" cy="12" r="10"></circle></svg>
+          {{- else if eq $slug "audio-understanding" -}}
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 12 6 12 9 4 14 20 17 12 22 12"></polyline></svg>
+          {{- else -}}
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h3l2-5 3 10 2-5h3"></path><path d="M17 8l4 4-4 4"></path></svg>
+          {{- end -}}
+        </span>
+        <span class="hubs-home__title">{{ $shortTitle }}</span>
+      </span>
       {{- with $hub.subtitle }}<span class="hubs-home__sub" lang="en">{{ . }}</span>{{ end }}
       {{- if $hub }}
       <span class="hubs-home__stats">

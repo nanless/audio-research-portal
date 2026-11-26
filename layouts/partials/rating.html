@@ -1,9 +1,16 @@
 {{- if not .Params.noRating }}
+{{- $issueMeta := partial "research_metadata.html" . }}
+{{- $issueHeadline := ($issueMeta.headline | default .Title | plainify | strings.TrimSpace) }}
+{{- $issueTitle := printf "[勘误] %s" $issueHeadline }}
+{{- $arxivLine := "" -}}
+{{- with $issueMeta.arxivId }}{{ $arxivLine = printf "arXiv ID：%s\n" . }}{{ end -}}
+{{- $issueBody := printf "页面链接：%s\n页面标题：%s\n%s\n问题描述：\n\n原文位置或可核查证据链接：\n" .Permalink $issueHeadline $arxivLine }}
+{{- $issueUrl := printf "https://github.com/nanless/audio-research-portal/issues/new?title=%s&body=%s" ($issueTitle | urlquery) ($issueBody | urlquery) }}
 <section class="analysis-feedback" aria-labelledby="analysis-feedback-title">
   <div>
     <strong id="analysis-feedback-title">发现事实错误或证据遗漏？</strong>
     <p>本站分析由 AI 辅助生成。欢迎提交可核查的原文位置、数据或链接，帮助持续修正。</p>
   </div>
-  <a class="rw-action" href="https://github.com/nanless/audio-research-portal/issues/new" target="_blank" rel="noopener noreferrer">提交勘误 ↗</a>
+  <a class="rw-action" href="{{ $issueUrl }}" target="_blank" rel="noopener noreferrer">提交勘误 ↗</a>
 </section>
 {{- end }}

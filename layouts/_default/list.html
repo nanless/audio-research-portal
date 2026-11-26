@@ -128,16 +128,26 @@
   {{- if and $.IsHome (eq $metadata.pageType "daily") }}
   {{- $count := "" }}
   {{- with findRE `共分析[ \t]*[0-9]+[ \t]*篇` (.Description | default "") 1 }}{{ $count = replaceRE `[^0-9]` "" (index . 0) }}{{ end }}
+  {{- $dailyTags := .Params.tags | default slice }}
+  {{- $tagTotal := len $dailyTags }}
+  {{- $shownTags := cond (le $tagTotal 5) $dailyTags (first 4 $dailyTags) }}
+  {{- $overflowTags := cond (gt $tagTotal 5) (sub $tagTotal 4) 0 }}
   <div class="edition-row">
     <time class="edition-row__date" datetime="{{ .Date.Format "2006-01-02" }}"><span class="edition-row__month">{{ .Date.Format "01" }} 月</span><span class="edition-row__day">{{ .Date.Format "02" }}</span><span class="edition-row__year">{{ .Date.Format "2006" }}</span></time>
     <div class="edition-row__body">
       <div class="research-entry__kicker">每日音频研究{{ if and (eq $paginator.PageNumber 1) (eq $index 0) }} <span class="edition-row__latest">最新一期</span>{{ end }}</div>
       <header class="entry-header">{{ if eq $paginator.PageNumber 1 }}<h3 class="edition-row__title">{{ .Date.Format "2006年1月2日" }} · 音频研究日报</h3>{{ else }}<h2 class="edition-row__title">{{ .Date.Format "2006年1月2日" }} · 音频研究日报</h2>{{ end }}</header>
       {{- if ne (.Param "hideSummary") true }}<div class="entry-content"><p>{{ .Description | default "本期论文概览、完整目录与逐篇解读。" | plainify | htmlUnescape }}</p></div>{{ end }}
+      {{- if gt (len $shownTags) 0 }}
+      <div class="edition-row__tags" aria-label="本期涵盖方向">
+        {{- range $shownTags }}<span class="edition-row__tag">{{ . }}</span>{{ end }}
+        {{- if gt $overflowTags 0 }}<span class="edition-row__tag edition-row__tag--more">+{{ $overflowTags }}</span>{{ end }}
+      </div>
+      {{- end }}
       <footer class="entry-footer research-entry__footer"><span class="edition-row__count">{{ if $count }}{{ $count }} 篇论文{{ else }}完整目录{{ end }}</span><span class="research-entry__cta">阅读完整日报 <span aria-hidden="true">↗</span></span></footer>
     </div>
   </div>
-  <a class="entry-link" aria-label="阅读：{{ $metadata.headline | plainify }}" href="{{ .Permalink }}"></a>
+  <a class="entry-link" aria-label="阅读：{{ .Date.Format "2006年1月2日" }} 音频研究日报" href="{{ .Permalink }}"></a>
   {{- else }}
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}

@@ -559,7 +559,7 @@
           var metaParts = [
             entry.pageType === 'daily' ? '每日研究' : entry.pageType === 'conference' ? '会议专题' : '论文解读',
             entry.date,
-            entry.score >= 0 ? entry.score.toFixed(1).replace('.0', '') + '/10' : '',
+            entry.score >= 0 ? entry.score.toFixed(1) + '/10' : '',
             entry.hasCode ? '💻 开源' : '',
             entry.hasDemo ? '🔊 Demo' : '',
             entry.arxivId ? 'arXiv ' + entry.arxivId : ''
@@ -725,13 +725,20 @@
         if (event && event.target === dialog) closePalette();
       });
 
-      input.addEventListener('input', function () {
+      var inputComposing = false;
+      function scheduleSearch() {
         if (debounceTimer && typeof win.clearTimeout === 'function') win.clearTimeout(debounceTimer);
         if (typeof win.setTimeout === 'function' && opts.debounceMs !== 0) {
           debounceTimer = win.setTimeout(runSearch, opts.debounceMs || 80);
         } else {
           runSearch();
         }
+      }
+      input.addEventListener('compositionstart', function () { inputComposing = true; });
+      input.addEventListener('compositionend', function () { inputComposing = false; scheduleSearch(); });
+      input.addEventListener('input', function (event) {
+        if (inputComposing || (event && event.isComposing)) return;
+        scheduleSearch();
       });
 
       function collectDialogFocusable() {
@@ -746,6 +753,7 @@
 
       dialog.addEventListener('keydown', function (event) {
         if (!state.open || !event) return;
+        if (inputComposing || event.isComposing || event.keyCode === 229) return;
         if (event.key === 'Escape') {
           if (!isTopModal()) return;
           event.preventDefault();
