@@ -214,22 +214,95 @@ test('tier navigation follows filtered groups and hides empty destinations', () 
   assert.equal(aLink.hidden, false); assert.equal(bLink.hidden, false);
 });
 
-test('actual 19-edition catalog has verified interval filters, source scope and retained routes', () => {
+test('actual conference directory catalog satisfies strict schema, date, CCF ranking, parent and route invariants', () => {
   const catalog = JSON.parse(fs.readFileSync(path.join(root, 'data/conference-directory.json'), 'utf8'));
   const entries = api.normalizeCatalog(catalog);
-  assert.equal(entries.length, 19);
-  assert.deepEqual(api.availableYears(entries), ['2026']);
-  assert.equal(entries.filter(item => item.dateStatus === 'confirmed').length, 19);
-  assert.deepEqual(Object.fromEntries(['A', 'B', 'C', 'unlisted', 'pending'].map(grade => [grade, entries.filter(item => item.grade === grade).length])), { A: 5, B: 3, C: 1, unlisted: 10, pending: 0 });
-  assert.deepEqual(Object.fromEntries(['A', 'B', 'C', 'unlisted', 'pending'].map(grade => [grade, entries.filter(item => item.placementGrade === grade).length])), { A: 5, B: 4, C: 1, unlisted: 9, pending: 0 });
+  assert.ok(entries.length >= 19, `expected at least 19 conference editions, got ${entries.length}`);
+  assert.equal(entries.length, catalog.entries.length);
+
+  const years = api.availableYears(entries);
+  assert.ok(years.includes('2026'), 'availableYears must include 2026');
+  assert.equal(new Set(years).size, years.length, 'availableYears must not contain duplicates');
+  for (let index = 0; index < years.length; index += 1) {
+    assert.match(years[index], /^20\d{2}$/, `invalid available year: ${years[index]}`);
+    if (index > 0) assert.ok(years[index - 1] > years[index], 'availableYears must be sorted descending');
+  }
+
+  const validGrades = new Set(['A', 'B', 'C', 'unlisted', 'pending']);
+  const validDateStatuses = new Set(['confirmed', 'tba', 'pending']);
+  const seenIds = new Set();
+  const seenEditions = new Set();
+  const byId = new Map(entries.map(item => [item.id, item]));
+  const rawById = new Map(catalog.entries.map(item => [item.id, item]));
+  const isOfficialHttps = value => {
+    try { const u = new URL(String(value || '').trim()); return u.protocol === 'https:' && !u.username && !u.password; }
+    catch { return false; }
+  };
+
+  for (const item of entries) {
+    const raw = rawById.get(item.id);
+    assert.ok(raw, `missing raw entry for ${item.id}`);
+    assert.match(item.id, /^[a-z0-9][a-z0-9-]*$/);
+    assert.match(item.venueId, /^[a-z0-9][a-z0-9-]*$/);
+    assert.ok(item.name.length > 0, `${item.id} must have a non-empty name`);
+    assert.match(item.year, /^20\d{2}$/, `${item.id} must have a valid 4-digit year`);
+    assert.ok(!seenIds.has(item.id), `duplicate conference id: ${item.id}`);
+    seenIds.add(item.id);
+    const editionKey = `${item.venueId}:${item.year}`;
+    assert.ok(!seenEditions.has(editionKey), `duplicate venueId:year edition: ${editionKey}`);
+    seenEditions.add(editionKey);
+
+    assert.ok(validDateStatuses.has(item.dateStatus), `${item.id} invalid dateStatus: ${item.dateStatus}`);
+    assert.ok(validGrades.has(item.grade), `${item.id} invalid grade: ${item.grade}`);
+    assert.ok(validGrades.has(item.placementGrade), `${item.id} invalid placementGrade: ${item.placementGrade}`);
+
+    if (item.dateStatus === 'confirmed') {
+      assert.equal(api.date(item.startDate), item.startDate, `${item.id} confirmed startDate must be a valid calendar date`);
+      assert.equal(api.date(item.endDate), item.endDate, `${item.id} confirmed endDate must be a valid calendar date`);
+      assert.ok(item.startDate <= item.endDate, `${item.id} startDate must be <= endDate`);
+      assert.ok(isOfficialHttps(raw.event?.sourceUrl), `${item.id} confirmed event requires official HTTPS sourceUrl`);
+    } else if (item.dateStatus === 'tba') {
+      assert.equal(item.startDate, '');
+      assert.equal(item.endDate, '');
+      assert.equal(raw.event?.status, 'tba');
+      assert.ok(isOfficialHttps(raw.event?.sourceUrl), `${item.id} tba event requires official HTTPS sourceUrl`);
+    } else {
+      assert.equal(item.startDate, '');
+      assert.equal(item.endDate, '');
+      assert.notEqual(raw.event?.status, 'confirmed', `${item.id} declared event.status=confirmed must not silently degrade to pending`);
+    }
+
+    if (['A', 'B', 'C', 'unlisted'].includes(raw.ranking?.grade)) {
+      assert.equal(item.grade, raw.ranking.grade, `${item.id} declared ranking.grade=${raw.ranking.grade} must not silently degrade to pending`);
+    }
+
+    if (item.parentConferenceId) {
+      const parent = byId.get(item.parentConferenceId);
+      assert.ok(parent, `${item.id} references missing parentConferenceId: ${item.parentConferenceId}`);
+      assert.notEqual(parent.id, item.id, `${item.id} cannot reference itself as parent`);
+      assert.equal(parent.year, item.year, `${item.id} parent must share the same edition year`);
+      assert.equal(parent.parentConferenceId, '', `${item.id} parent cannot itself be a workshop`);
+      assert.equal(item.placementGrade, parent.grade, `${item.id} placementGrade must match parent grade`);
+    } else {
+      assert.equal(item.placementGrade, item.grade, `${item.id} non-workshop placementGrade must equal grade`);
+    }
+  }
+
+  assert.ok(entries.filter(item => item.dateStatus === 'confirmed').length >= 19, 'existing confirmed baseline must remain intact');
   assert.equal(entries.find(item => item.id === 'chime-2026').parentConferenceId, 'icassp-2026');
   assert.equal(entries.find(item => item.id === 'chime-2026').grade, 'unlisted');
   for (const [venue, months] of [['eusipco', ['08', '09']], ['interspeech', ['09', '10']]]) {
     for (const month of months) assert.equal(api.filterEntries(entries, state({ year: '2026', month, venue })).length, 1);
   }
   for (const item of catalog.entries) {
+    assert.ok(item.summaryPath.startsWith('/posts/') && item.summaryPath.endsWith('/'), `summaryPath must be /posts/<slug>/: ${item.summaryPath}`);
     assert.ok(fs.existsSync(path.join(root, 'content', item.summaryPath.replace(/^\//, '').replace(/\/$/, '.md'))), item.summaryPath);
-    assert.ok(item.categoryPath.startsWith('/categories/'));
+    assert.ok(item.categoryPath.startsWith('/categories/'), `categoryPath must start with /categories/: ${item.categoryPath}`);
+    for (const link of (item.links || [])) {
+      if (typeof link.path === 'string' && link.path.startsWith('/posts/')) {
+        assert.ok(fs.existsSync(path.join(root, 'content', link.path.replace(/^\//, '').replace(/\/$/, '.md'))), link.path);
+      }
+    }
   }
 });
 

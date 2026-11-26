@@ -344,11 +344,14 @@
 
   var VENUE_DISPLAY_NAMES = {
     icml: 'ICML', iclr: 'ICLR', icassp: 'ICASSP', interspeech: 'Interspeech',
-    neurips: 'NeurIPS', acl: 'ACL', emnlp: 'EMNLP', aaai: 'AAAI',
-    cvpr: 'CVPR', iccv: 'ICCV', eccv: 'ECCV', ismir: 'ISMIR',
+    neurips: 'NeurIPS', nips: 'NeurIPS', acl: 'ACL', emnlp: 'EMNLP',
+    naacl: 'NAACL', eacl: 'EACL', aaai: 'AAAI', ijcai: 'IJCAI',
+    aistats: 'AISTATS', uai: 'UAI', cvpr: 'CVPR', iccv: 'ICCV',
+    eccv: 'ECCV', acmmm: 'ACM MM', mm: 'ACM MM', ismir: 'ISMIR',
     waspaa: 'WASPAA', slt: 'SLT', asru: 'ASRU', eusipco: 'EUSIPCO',
-    chime: 'CHiME', dcase: 'DCASE', acmmm: 'ACM MM', mm: 'ACM MM',
-    naacl: 'NAACL', ijcai: 'IJCAI', taslp: 'TASLP'
+    chime: 'CHiME', dcase: 'DCASE', taslp: 'TASLP', dafx: 'DAFx',
+    icmc: 'ICMC', nime: 'NIME', jep: 'JEP', odyssey: 'Odyssey',
+    speechprosody: 'Speech Prosody', iwslt: 'IWSLT'
   };
 
   function venueLabel(entry) {

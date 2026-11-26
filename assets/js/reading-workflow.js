@@ -333,6 +333,9 @@
 
     var list = document.createElement('ul');
     list.className = 'rw-score-bars';
+    if (dims.some(function (dim) { return dim.max !== 10; })) {
+      list.className = 'rw-score-bars rw-score-bars--weighted';
+    }
     list.setAttribute('aria-label', '八维评分明细');
     dims.forEach(function (dim) {
       var li = document.createElement('li');
@@ -352,7 +355,7 @@
       track.appendChild(fill);
       var valSpan = document.createElement('span');
       valSpan.className = 'rw-score-bar-val';
-      valSpan.textContent = dim.val.toFixed(1);
+      valSpan.textContent = dim.max === 10 ? dim.val.toFixed(1) : dim.val.toFixed(1) + '/' + dim.max;
       li.appendChild(nameSpan);
       li.appendChild(track);
       li.appendChild(valSpan);

@@ -16,17 +16,22 @@
 {{- $citationTitle := $source.title -}}
 {{- $sidecars := .Params.paper_digest_sidecars -}}
 {{- $siteRoot := (urls.Parse site.BaseURL).Path -}}{{- if not (hasSuffix $siteRoot "/") }}{{ $siteRoot = printf "%s/" $siteRoot }}{{ end -}}
+{{- $legacyRoot := "/audio-paper-digest-blog/" -}}
 {{- $sidecarID := replace (replace $baseID "." "-") "/" "-" -}}
-{{- $sidecarRoot := printf "%sdata/papers/%s/%s/" $siteRoot (.Date.Format "2006-01-02") $sidecarID -}}
+{{- if and (not $hasID) (eq $source.sourceKind "conference") $source.paperKey -}}
+  {{- $sidecarID = printf "conference-%s" (substr (crypto.SHA256 $source.paperKey) 0 24) -}}
+{{- end -}}
+{{- $sidecarRoot := "" -}}
+{{- if $sidecarID -}}
+  {{- $sidecarRoot = printf "%sdata/papers/%s/%s/" $siteRoot (.Date.Format "2006-01-02") $sidecarID -}}
+{{- end -}}
 {{- $workbenchHeader := dict "contract" (.Params.paper_digest_workbench_contract | default "") -}}
 {{- with .Params.paper_digest_workbench_schema_fingerprint }}{{ $workbenchHeader = merge $workbenchHeader (dict "schemaFingerprint" .) }}{{ end -}}
 {{- $validWorkbench := partial "protocol_header_valid.html" (dict "name" "researcher-workbench" "record" $workbenchHeader) -}}
 {{- $currentWorkbench := and $validWorkbench (eq $workbenchHeader.contract "researcher-workbench") -}}
 {{- $clientSidecars := dict -}}
-{{- if $currentWorkbench -}}
-  {{- $clientID := $sidecarID -}}
-  {{- if eq $source.sourceKind "conference" }}{{ $clientID = printf "conference-%s" (substr (crypto.SHA256 $source.paperKey) 0 24) }}{{ end -}}
-  {{- $clientRoot := printf "%sclient/papers/%s/%s/" $siteRoot (.Date.Format "2006-01-02") $clientID -}}
+{{- if and $currentWorkbench $sidecarID -}}
+  {{- $clientRoot := printf "%sclient/papers/%s/%s/" $siteRoot (.Date.Format "2006-01-02") $sidecarID -}}
   {{- /* Hugo 会把参数 map 的嵌套键小写化，不能直接 jsonify；按白名单重建以保留 camelCase。 */ -}}
   {{- $clientSidecars = partial "client_sidecars.html" (dict "sidecars" $sidecars "expectedRoot" $clientRoot) -}}
 {{- end -}}
@@ -59,13 +64,19 @@
   <details class="paper-tools__help paper-tools__advanced"><summary>引用文件与研究资料</summary>
     {{- if $hasID }}
     <div class="paper-tools__group"><span class="paper-tools__identifier">arXiv <code>{{ $resolvedID }}</code></span><button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $baseID }}" data-copy-label="arXiv ID" hidden>复制 ID</button>{{ if ne $resolvedID $baseID }}<button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $resolvedID }}" data-copy-label="版本 ID" hidden>复制版本 ID</button>{{ end }}</div>
+    {{- else if and (eq $source.sourceKind "conference") $source.paperKey }}
+    <div class="paper-tools__group"><span class="paper-tools__identifier">论文 ID <code>{{ $source.paperKey }}</code></span><button class="paper-tool paper-tool-copy" type="button" data-copy-text="{{ $source.paperKey }}" data-copy-label="论文 ID" hidden>复制 ID</button></div>
+    {{- end }}
     <div class="paper-tools__group" aria-label="下载引用">
-      {{- if and $validWorkbench (reflect.IsMap $sidecars) }}
+      {{- if and $validWorkbench $sidecarRoot (reflect.IsMap $sidecars) }}
         {{- range $filename, $label := dict "citation.json" "Citation JSON" "citation.bib" "BibTeX" "citation.ris" "RIS" }}
           {{- $record := index $sidecars $filename -}}
           {{- $url := "" -}}
-          {{- with $record }}{{ with .url }}{{ $url = . }}{{ end }}{{ end }}
+          {{- with $record }}{{ with .url }}{{ $url = printf "%v" . }}{{ end }}{{ end }}
           {{- if and $currentWorkbench (eq (len $clientSidecars) 4) }}{{ $url = replace $url "/client/papers/" "/data/papers/" }}{{ end -}}
+          {{- if and (ne $siteRoot $legacyRoot) (hasPrefix $url (printf "%sdata/papers/" $legacyRoot)) -}}
+            {{- $url = printf "%s%s" $siteRoot (strings.TrimPrefix $legacyRoot $url) -}}
+          {{- end -}}
           {{- if eq $url (printf "%s%s" $sidecarRoot $filename) }}
       <a class="paper-tool paper-tool--download" href="{{ $url | safeURL }}" download>{{ $label }}</a>
             {{- $citationFiles = merge $citationFiles (dict $filename true) -}}
@@ -74,19 +85,22 @@
       {{- end }}
       {{- range $format, $label := dict "bib" "BibTeX" "ris" "RIS" }}
         {{- if not (index $citationFiles (printf "citation.%s" $format)) }}
+          {{- if $hasID }}
       <button class="paper-tool paper-tool--download paper-tool-citation" type="button" data-citation-format="{{ $format }}" data-citation-id="{{ $resolvedID }}" data-citation-title="{{ $citationTitle }}" hidden>下载简要 {{ $label }}</button>
+          {{- else }}
+      <button class="paper-tool paper-tool--download paper-tool-citation" type="button" data-citation-format="{{ $format }}" hidden>下载 {{ $label }}</button>
+          {{- end }}
         {{- end }}
       {{- end }}
+      {{- if $hasID }}
       <a class="paper-tool" href="{{ $absURL }}" target="_blank" rel="noopener noreferrer">在 arXiv 查看引用信息</a>
       {{- if or (not (index $citationFiles "citation.bib")) (not (index $citationFiles "citation.ris")) }}
       <span class="paper-tools__note">{{ if and (eq (len $source.authors) 0) (not $source.date) }}简要引用使用本站题目、arXiv ID 和官方链接；作者与出版日期未提供，请到 arXiv 核对补全。{{ else }}引用仅包含有来源记录的作者、日期与论文标识；缺失字段请核对官方记录补全。{{ end }}</span>
       {{- end }}
+      {{- else }}
+      <p class="paper-tools__note">引用仅包含当前有来源记录的字段；缺失作者、出版日期或 DOI 时保持缺失。</p>
+      {{- end }}
     </div>
-
-    {{- else }}
-    <div class="paper-tools__group">{{ range $format, $label := dict "bib" "BibTeX" "ris" "RIS" }}<button class="paper-tool paper-tool-citation" type="button" data-citation-format="{{ $format }}" hidden>下载 {{ $label }}</button>{{ end }}</div>
-    <p class="paper-tools__note">引用仅包含当前有来源记录的字段；缺失作者、出版日期或 DOI 时保持缺失。</p>
-    {{- end }}
     <p>{{ if $hasGuide }}下载本页导读、官方链接与可得引用字段，并保留来源和版本提示。导读是本站的二次解读。{{ else }}下载本页官方链接与可得引用字段，并保留来源和版本提示。本页暂无导读正文。{{ end }}</p><button class="paper-tool paper-tool--pack" type="button" hidden>{{ if $hasGuide }}下载导读与引用{{ else }}下载来源与引用{{ end }}</button>
   </details>
   {{- else }}

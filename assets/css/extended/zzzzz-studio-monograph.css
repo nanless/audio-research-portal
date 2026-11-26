@@ -1584,6 +1584,10 @@ body, body.list {
   font-size: 11.5px;
 }
 
+.rw-score-bars--weighted .rw-score-bar-row {
+  grid-template-columns: 44px minmax(0, 1fr) 48px;
+}
+
 .rw-score-bar-label {
   color: var(--rw-muted);
   white-space: nowrap;
@@ -1621,6 +1625,7 @@ body, body.list {
   color: var(--rw-text);
   text-align: right;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 /* In-Article Monograph Polish (100% pure CSS, zero extra HTML nodes) */

@@ -294,3 +294,41 @@ test('desktop links reveal a real legacy author disclosure, push the native frag
   // Once revealed, a subsequent native anchor click needs no JS intervention.
   assert.equal(click(authorLink), false);
 });
+
+test('sidebar score breakdown omits /10 denominator for v2 ten-point bars and displays exact denominator for weighted v1 bars', () => {
+  function runScoreBreakdown(scoreText) {
+    let breakdownNode;
+    browserFixture({
+      configure({ headings, article, node, document }) {
+        breakdownNode = node('research-score-breakdown');
+        breakdownNode.parentElement = node('score-card');
+        const scoreBlock = { textContent: scoreText };
+        article.querySelectorAll = (selector) => {
+          if (selector === 'blockquote, p') return [scoreBlock];
+          return headings;
+        };
+        const origGetById = document.getElementById;
+        document.getElementById = (id) => (id === 'research-score-breakdown' ? breakdownNode : origGetById(id));
+        document.createElement = (tag) => {
+          const el = node(tag);
+          el.style = { setProperty(k, v) { this[k] = v; } };
+          Object.defineProperty(el, 'hash', { get: () => el.href });
+          return el;
+        };
+      }
+    });
+    const list = breakdownNode.children.find(child => child.id === 'ul');
+    const values = list.children.map(li => li.children[2].textContent);
+    return { breakdownNode, list, values };
+  }
+
+  const v2 = runScoreBreakdown('⭐ 评分：8.4/10 | 方法创新 8.5/10 | 实验充分 8.0/10 | 开源 9.0/10');
+  assert.equal(v2.breakdownNode.hidden, false);
+  assert.equal(v2.list.className, 'rw-score-bars');
+  assert.deepEqual(v2.values, ['8.5', '8.0', '9.0']);
+
+  const v1 = runScoreBreakdown('⭐ 评分：7.4/10 | 方法创新 1.4/2 | 实验充分 1.2/1.5 | 开源 0.3/0.5');
+  assert.equal(v1.breakdownNode.hidden, false);
+  assert.equal(v1.list.className, 'rw-score-bars rw-score-bars--weighted');
+  assert.deepEqual(v1.values, ['1.4/2', '1.2/1.5', '0.3/0.5']);
+});

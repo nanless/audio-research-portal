@@ -310,3 +310,183 @@ test('Track 13.2: conference index page compacts conference unbound authors whil
   assert.match(body, /<li>Carol Wu：Tsinghua University<\/li>/);
   assert.match(body, /<li>Dave Park：机构信息未能从会议 PDF 纯文本可靠映射<\/li>/);
 });
+
+test('Canonical pageType powers conference Roundup 2.0 cards, task CTAs, historical papers without page_type, and unified venue labels', () => {
+  const ALLOWED_TAGS = new Set([
+    'div', 'p', 'span', 'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+    'ul', 'ol', 'li', 'blockquote', 'pre', 'code',
+    'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td', 'caption',
+    'img', 'figure', 'figcaption', 'strong', 'b', 'em', 'i', 'u', 's', 'sup', 'sub',
+    'br', 'hr', 'details', 'summary', 'dl', 'dt', 'dd',
+    'math', 'mrow', 'mi', 'mo', 'mn', 'msup', 'msub', 'msubsup', 'mfrac',
+    'msqrt', 'mroot', 'mtext', 'mtable', 'mtr', 'mtd', 'mover', 'munder',
+    'munderover', 'semantics', 'annotation'
+  ]);
+  const ALLOWED_ATTRS = new Set([
+    'id', 'class', 'title', 'alt', 'width', 'height', 'colspan', 'rowspan', 'scope',
+    'display', 'mathvariant', 'xmlns', 'encoding',
+    'href', 'src', 'loading', 'decoding', 'target', 'rel',
+    'hidden', 'aria-hidden', 'tabindex', 'style'
+  ]);
+
+  const rendered = renderFixturePosts({
+    'posts/conference-dafx-2026.md': [
+      '---',
+      'title: "DAFx 2026 会议总览"',
+      'date: 2026-10-15',
+      'draft: false',
+      '---',
+      '',
+      '## ⚡ 会议概览',
+      '',
+      '### 🧭 会议研究脉络',
+      '',
+      '- **焦点方向**：数字音频效果器与神经建模。',
+      '',
+      '### 🎯 三档阅读分级',
+      '',
+      '- **🔥 精读必看**：实时非线性建模。',
+      '',
+      '### 🌟 会议精选焦点',
+      '',
+      '> 🥇 **DAFx 精选论文** · 总分 **8.4**/10',
+      '',
+      '---',
+      '',
+      '## 📋 论文列表',
+      '',
+      '### Paper A',
+      '',
+      '- Alice Zhang：机构信息未能从会议 PDF 纯文本可靠映射',
+      '- Bob Li：机构信息未能从会议 PDF 纯文本可靠映射',
+      ''
+    ].join('\n'),
+    'posts/conference-dafx-2026-task-effects.md': [
+      '---',
+      'title: "DAFx 2026 音频效果专题"',
+      'date: 2026-10-15',
+      'draft: false',
+      '---',
+      '',
+      '## 📋 论文详情',
+      '',
+      '### 效果器论文 1',
+      '',
+      '正文介绍。',
+      ''
+    ].join('\n'),
+    'posts/2026-05-01-historical-missing-type.md': [
+      '---',
+      'title: "Historical Missing Page Type Paper"',
+      'date: 2026-05-01',
+      'draft: false',
+      'description: "语音合成 | 7.6/10"',
+      '---',
+      '',
+      '## 📌 核心摘要',
+      '',
+      '历史论文即使缺失 paper_digest_page_type 也能获得规范化纸页卡片。',
+      '',
+      '## 👥 作者与机构',
+      '',
+      '- Alice Zhang：机构信息未能从 arXiv PDF 文本可靠映射',
+      '- Bob Li：机构信息未能从 arXiv PDF 文本可靠映射',
+      '',
+      '## ⚖️ 评分明细',
+      '',
+      '- 评分规则：type-aware-v1',
+      ''
+    ].join('\n'),
+    'posts/conference-speechprosody-paper.md': [
+      '---',
+      'title: "Prosody Modeling Study"',
+      'date: 2026-10-15',
+      'draft: false',
+      'paper_digest_page_type: paper',
+      'paper_digest_source_kind: conference',
+      'paper_digest_paper_id: "conference:speechprosody:2026:paper:p1"',
+      '---',
+      '',
+      '## 📌 核心摘要',
+      '',
+      '韵律建模论文。',
+      ''
+    ].join('\n'),
+    'posts/conference-dafx-paper.md': [
+      '---',
+      'title: "Neural Amplifier Study"',
+      'date: 2026-10-15',
+      'draft: false',
+      'paper_digest_page_type: paper',
+      'paper_digest_source_kind: conference',
+      'paper_digest_paper_id: "conference:dafx:2026:paper:p2"',
+      '---',
+      '',
+      '## 📌 核心摘要',
+      '',
+      '音频效果器建模论文。',
+      ''
+    ].join('\n')
+  });
+
+  // Conference summary without explicit paper_digest_page_type gets digest class, Roundup 2.0 cards, compact authors, and CTA
+  const confSummary = rendered['posts/conference-dafx-2026.md'];
+  assert.match(confSummary, /research-workbench--digest/);
+  assert.match(confSummary, /直达本届论文列表 ↓/);
+  const confSummaryBody = extractArticleContent(confSummary);
+  assert.match(confSummaryBody, /class="digest-brief-card"/);
+  assert.match(confSummaryBody, /class="digest-reading-tiers"/);
+  assert.match(confSummaryBody, /class="digest-spotlight-card"/);
+  assert.match(confSummaryBody, /<p class="compact-authors-line"><strong>论文作者：<\/strong>Alice Zhang · Bob Li<\/p>/);
+
+  // Conference task page with ## 📋 论文详情 gets digest class and primary CTA "直达论文详情 ↓"
+  const confTask = rendered['posts/conference-dafx-2026-task-effects.md'];
+  assert.match(confTask, /research-workbench--digest/);
+  assert.match(confTask, /class="rw-action rw-action--primary" href="#[^"]+">直达论文详情 ↓<\/a>/);
+
+  // Historical paper without paper_digest_page_type enters paper branch cleanly and hides legacy pipe-stub TL;DR
+  const histPaper = rendered['posts/2026-05-01-historical-missing-type.md'];
+  assert.doesNotMatch(histPaper, /research-tldr-title/);
+  const histBody = extractArticleContent(histPaper);
+  assert.match(histBody, /class="executive-abstract-card"/);
+  assert.match(histBody, /class="compact-authors-line"/);
+  assert.match(histBody, /class="scoring-audit-card"/);
+
+  // Venue display labels on single.html
+  assert.match(rendered['posts/conference-speechprosody-paper.md'], /research-signal-pill--venue">Speech Prosody 2026<\/span>/);
+  assert.match(rendered['posts/conference-dafx-paper.md'], /research-signal-pill--venue">DAFx 2026<\/span>/);
+
+  // Strict v1.4.6 54-tag & attr allowlist across all rendered article bodies
+  for (const [name, fullHtml] of Object.entries(rendered)) {
+    const body = extractArticleContent(fullHtml);
+    assert.ok(!body.includes('<!--'), `${name}: must not contain HTML comments`);
+    const re = /<(\/?)([A-Za-z][A-Za-z0-9:-]*)\b((?:"[^"]*"|'[^']*'|[^'">])*)>/g;
+    let m;
+    while ((m = re.exec(body)) !== null) {
+      const tag = m[2].toLowerCase();
+      assert.ok(ALLOWED_TAGS.has(tag), `${name}: unallowlisted tag <${tag}>`);
+      if (m[1] !== '/') {
+        for (const a of (m[3] || '').matchAll(/\s([^\s=/>]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?/g)) {
+          const attr = a[1].toLowerCase();
+          assert.ok(ALLOWED_ATTRS.has(attr), `${name}: unallowlisted attr ${attr} on <${tag}>`);
+        }
+      }
+    }
+  }
+
+  // Venue map parity across single.html, paper-library.js, and research-corpus.js
+  const corpusApi = require('../scripts/lib/research-corpus');
+  const singleSrc = fs.readFileSync(path.join(ROOT, 'layouts/_default/single.html'), 'utf8');
+  const librarySrc = fs.readFileSync(path.join(ROOT, 'assets/js/paper-library.js'), 'utf8');
+  const expectedVenues = {
+    dafx: 'DAFx', icmc: 'ICMC', nime: 'NIME', jep: 'JEP', odyssey: 'Odyssey',
+    speechprosody: 'Speech Prosody', iwslt: 'IWSLT', eacl: 'EACL', aistats: 'AISTATS',
+    uai: 'UAI', dcase: 'DCASE', iccv: 'ICCV', eccv: 'ECCV', ijcai: 'IJCAI',
+    taslp: 'TASLP', ismir: 'ISMIR', emnlp: 'EMNLP', waspaa: 'WASPAA', asru: 'ASRU'
+  };
+  for (const [key, display] of Object.entries(expectedVenues)) {
+    assert.equal(corpusApi.resolveVenue({ paperId: `conference:${key}:2026:paper:1`, sourceKind: 'conference' }), display, `research-corpus ${key}`);
+    assert.ok(singleSrc.includes(`"${key}" "${display}"`), `single.html missing ${key} => ${display}`);
+    assert.ok(librarySrc.includes(`${key}: '${display}'`), `paper-library.js missing ${key} => ${display}`);
+  }
+});

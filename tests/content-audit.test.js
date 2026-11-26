@@ -78,3 +78,15 @@ test('broken internal post links fail at the Markdown source line', () => {
   const issue = auditContent(root, { duplicateAllowlist: {} }).issues[0];
   assert.match(issue, /content\/posts\/source\.md:8: 站内论文链接无法解析/);
 });
+
+test('bare /posts/ internal links are audited for both valid routes and broken targets', () => {
+  const root = fixture({
+    'content/posts/conference-aaai-2026.md': post('title: AAAI 2026\ntags: []'),
+    'content/posts/valid.md': post('title: valid\ntags: []', '[总览](/posts/conference-aaai-2026/#list)'),
+    'content/posts/broken.md': post('title: broken\ntags: []', '段落\n\n[失效裸链](/posts/conference-missing-2099/)')
+  });
+  const result = auditContent(root, { duplicateAllowlist: {} });
+  assert.equal(result.issues.length, 1);
+  assert.match(result.issues[0], /content\/posts\/broken\.md:8: 站内论文链接无法解析：\/posts\/conference-missing-2099\//);
+  assert.equal(result.stats.internalPostLinks, 2);
+});

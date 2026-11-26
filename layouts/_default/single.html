@@ -20,7 +20,7 @@
 {{- $isSourceV2 := and $hasVerifiedTags (in (slice "historical-source-taxonomy-classification-v2" "historical-source-taxonomy-classification-v3") $tagProof.classificationContract) (in (slice "historical-source-taxonomy-supplement-v2" "historical-current-page-source-taxonomy-supplement-v2" "historical-source-taxonomy-supplement-v3") $tagProof.evidenceContract) }}
 {{- $researchRole := $tagProof.primaryResearchRole | default dict }}
 
-<article class="post-single research-workbench{{ if $isPaper }} research-workbench--paper{{ else if $isDaily }} research-workbench--digest{{ end }}" data-pagefind-body data-reading-base-path="{{ (urls.Parse site.BaseURL).Path }}">
+<article class="post-single research-workbench{{ if $isPaper }} research-workbench--paper{{ else if or $isDaily $isConferenceSummary $isTask }} research-workbench--digest{{ end }}" data-pagefind-body data-reading-base-path="{{ (urls.Parse site.BaseURL).Path }}">
   <a class="skip-to-article" href="#article-body" data-pagefind-ignore="all">跳到正文</a>
   <header class="research-paper-header">
     <span class="sr-only" data-pagefind-filter="类型">{{ if $isPaper }}论文解读{{ else if $isDaily }}每日研究{{ else }}会议专题{{ end }}</span>
@@ -62,18 +62,23 @@
       {{- if $isPaper }}<a class="rw-action rw-action--primary" href="#article-body">阅读解读正文 ↓</a>{{ end }}
       {{- if or $isConferenceSummary $isTask -}}
         {{- $listAnchor := "" -}}
+        {{- $listLabel := "直达本届论文列表 ↓" -}}
         {{- range findRE `(?s)<a\b[^>]*>.*?</a>` (printf "%s" .TableOfContents) -}}
-          {{- if and (not $listAnchor) (findRE `论文列表$` (strings.TrimSpace (. | plainify)) 1) -}}
+          {{- $tocLabel := strings.TrimSpace (. | plainify) -}}
+          {{- if and (not $listAnchor) (findRE `论文(?:列表|详情)$` $tocLabel 1) -}}
             {{- with findRE `href="#[^"]+"` . 1 }}{{ $listAnchor = replaceRE `^href="([^"]+)"$` "$1" (index . 0) }}{{ end -}}
+            {{- if hasSuffix $tocLabel "论文详情" }}{{ $listLabel = "直达论文详情 ↓" }}{{ end -}}
           {{- end -}}
         {{- end -}}
-        {{- with $listAnchor }}<a class="rw-action rw-action--primary" href="{{ . | safeURL }}">直达本届论文列表 ↓</a>{{ end -}}
+        {{- with $listAnchor }}<a class="rw-action rw-action--primary" href="{{ . | safeURL }}">{{ $listLabel }}</a>{{ end -}}
       {{- end -}}
       <a class="rw-action" href="{{ "papers/" | absURL }}">浏览论文库</a>
       {{- if $isDaily }}<a class="rw-action" href="{{ "index.xml" | absURL }}">订阅日报</a>{{ end }}
     </div>
     {{- $intro := $metadata.oneSentence }}
-    {{- if and (not $intro) (not $score) }}{{ $intro = .Description }}{{ end }}
+    {{- $desc := strings.TrimSpace (.Description | default "") }}
+    {{- $isLegacyScoreStub := findRE `^[^|]*\|\s*(?:评分[：:]\s*)?[0-9]+(?:\.[0-9]+)?\s*/\s*10\s*$` $desc 1 }}
+    {{- if and (not $intro) $desc (not $isLegacyScoreStub) }}{{ $intro = $desc }}{{ end }}
     {{- $introComparison := partial "research_normalized_title.html" (partial "plain_summary.html" ($intro | markdownify)) }}
     {{- if and $intro (not $isDaily) (ne $introComparison $headlineComparison) (not (and $showOriginal (eq $introComparison $originalComparison))) }}
     <section class="research-tldr research-tldr--header" aria-labelledby="research-tldr-title">
@@ -134,7 +139,7 @@
       {{- $pidParts := split $metadata.paperId ":" }}
       {{- if ge (len $pidParts) 3 }}
         {{- $vKey := lower (index $pidParts 1) }}
-        {{- $vMap := dict "icml" "ICML" "iclr" "ICLR" "icassp" "ICASSP" "interspeech" "Interspeech" "neurips" "NeurIPS" "acl" "ACL" "emnlp" "EMNLP" "aaai" "AAAI" "cvpr" "CVPR" "iccv" "ICCV" "eccv" "ECCV" "ismir" "ISMIR" "waspaa" "WASPAA" "slt" "SLT" "asru" "ASRU" "eusipco" "EUSIPCO" "chime" "CHiME" "dcase" "DCASE" "acmmm" "ACM MM" "mm" "ACM MM" "naacl" "NAACL" "ijcai" "IJCAI" "taslp" "TASLP" }}
+        {{- $vMap := dict "icml" "ICML" "iclr" "ICLR" "icassp" "ICASSP" "interspeech" "Interspeech" "neurips" "NeurIPS" "nips" "NeurIPS" "acl" "ACL" "emnlp" "EMNLP" "naacl" "NAACL" "eacl" "EACL" "aaai" "AAAI" "ijcai" "IJCAI" "aistats" "AISTATS" "uai" "UAI" "cvpr" "CVPR" "iccv" "ICCV" "eccv" "ECCV" "acmmm" "ACM MM" "mm" "ACM MM" "ismir" "ISMIR" "waspaa" "WASPAA" "slt" "SLT" "asru" "ASRU" "eusipco" "EUSIPCO" "chime" "CHiME" "dcase" "DCASE" "taslp" "TASLP" "dafx" "DAFx" "icmc" "ICMC" "nime" "NIME" "jep" "JEP" "odyssey" "Odyssey" "speechprosody" "Speech Prosody" "iwslt" "IWSLT" }}
         {{- $vName := index $vMap $vKey | default (upper $vKey) }}
         {{- $venueLabel = printf "%s %s" $vName (index $pidParts 2) }}
       {{- else }}

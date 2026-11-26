@@ -157,9 +157,13 @@
         Emits strictly v1.4.6 client-allowlisted HTML5 elements and attributes
         without altering heading counts, heading inner text, images or tables. */ -}}
   {{- $pageType := "" -}}
+  {{- if and (not (reflect.IsMap $page)) (templates.Exists "partials/research_metadata.html") -}}
+    {{- $pageType = (partial "research_metadata.html" $page).pageType | default "" -}}
+  {{- else if $page.Params -}}
+    {{- $pageType = $page.Params.paper_digest_page_type | default "" -}}
+  {{- end -}}
   {{- $rawReaderSections := slice -}}
   {{- with $page.Params -}}
-    {{- $pageType = .paper_digest_page_type | default "" -}}
     {{- with .paper_digest_reader_sections -}}
       {{- if reflect.IsSlice . -}}
         {{- $rawReaderSections = . -}}
@@ -694,7 +698,7 @@
       {{- end -}}
       {{- $content = $rebuilt -}}
     {{- end -}}
-  {{- else if eq $pageType "index" -}}
+  {{- else if or (eq $pageType "daily") (eq $pageType "conference") (eq $pageType "index") -}}
     {{- /* Compact all-unbound author lists on daily/conference index pages in O(N) time (no O(N^2) whole-page replace). */ -}}
     {{- $unboundPrefix := "：机构信息未" -}}
     {{- if in $content $unboundPrefix -}}
@@ -774,11 +778,11 @@
       {{- end -}}
       {{- $content = delimit $outParts "" -}}
     {{- end -}}
-    {{- /* Wrap Daily Roundup 2.0 overview sections in visual cards (allowlisted HTML only, O(N)). */ -}}
-    {{- if or (in $content "今日研究脉络") (in $content "三档阅读分级") (in $content "今日精选焦点") -}}
+    {{- /* Wrap Daily & Conference Roundup 2.0 overview sections in visual cards (allowlisted HTML only, O(N)). */ -}}
+    {{- if or (in $content "今日研究脉络") (in $content "会议研究脉络") (in $content "三档阅读分级") (in $content "今日精选焦点") (in $content "会议精选焦点") -}}
       {{- $overviewPart := $content -}}
       {{- $listPart := "" -}}
-      {{- with findRE `(?s)<h2\b[^>]*>[^<]*论文列表[^<]*</h2>` $content 1 -}}
+      {{- with findRE `(?s)<h2\b[^>]*>[^<]*论文(?:列表|详情)[^<]*</h2>` $content 1 -}}
         {{- $listHeading := index . 0 -}}
         {{- $ovSplits := split $content $listHeading -}}
         {{- if ge (len $ovSplits) 2 -}}
@@ -789,7 +793,7 @@
       {{- $ovH3List := findRE `(?s)<h3\b[^>]*>.*?</h3>` $overviewPart -}}
       {{- $ovH3Count := len $ovH3List -}}
       {{- if gt $ovH3Count 0 -}}
-        {{- $ovCardMap := dict "🧭 今日研究脉络" "digest-brief-card" "🎯 三档阅读分级" "digest-reading-tiers" "🌟 今日精选焦点" "digest-spotlight-card" -}}
+        {{- $ovCardMap := dict "🧭 今日研究脉络" "digest-brief-card" "🧭 会议研究脉络" "digest-brief-card" "今日研究脉络" "digest-brief-card" "会议研究脉络" "digest-brief-card" "🎯 三档阅读分级" "digest-reading-tiers" "三档阅读分级" "digest-reading-tiers" "🌟 今日精选焦点" "digest-spotlight-card" "🌟 会议精选焦点" "digest-spotlight-card" "今日精选焦点" "digest-spotlight-card" "会议精选焦点" "digest-spotlight-card" -}}
         {{- $ovRem := $overviewPart -}}
         {{- $ovOut := slice -}}
         {{- range $ovIdx, $ovH3 := $ovH3List -}}

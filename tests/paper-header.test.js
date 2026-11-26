@@ -18,6 +18,9 @@ test('paper header removes only exact visible duplicates and preserves informati
     { id: 'empty', headline: 'Speech Study', original: '   ', description: 'An informative description.', subtitle: false, intro: true },
     { id: 'markdown', headline: '**Speech** & Evidence', original: 'speech & evidence', oneSentence: '**SPEECH** & Evidence', subtitle: false, intro: false },
     { id: 'summary', headline: 'Speech Study', original: 'Speech Study', oneSentence: 'A distinct one-sentence research summary.', description: 'Speech Study', subtitle: false, intro: true },
+    { id: 'conf-prose-with-score', headline: '副语言毒性检测研究', original: 'Paralinguistic Toxicity Detection', score: 7.8, description: '针对纯文本审核漏掉语气、情绪与语速等副语言毒性的问题，该研究构建 ToxiAlert-Bench 并显著提升宏平均 F1。', subtitle: true, intro: true },
+    { id: 'legacy-pipe-score-stub', headline: '旧版管线评分存根', original: 'Legacy Pipe Score Stub', score: 7.5, description: '语音合成 | 7.5/10', subtitle: true, intro: false },
+    { id: 'bare-pipe-score-stub', headline: '裸管道评分存根', original: 'Bare Pipe Score Stub', description: '| 7.5/10', subtitle: true, intro: false },
   ];
   const temp = fs.mkdtempSync(path.join(tmpdir(), 'paper-header-'));
   try {
@@ -25,6 +28,7 @@ test('paper header removes only exact visible duplicates and preserves informati
     fs.writeFileSync(path.join(temp, 'hugo.yaml'), 'baseURL: "https://example.test/audio-paper-digest-blog/"\nlanguageCode: "zh-CN"\ndefaultContentLanguage: "zh-cn"\ntheme: PaperMod\nbuildFuture: true\ndisableKinds: [home, section, taxonomy, term, RSS, sitemap, robotsTXT, "404"]\nstaticDir: []\nparams:\n  env: production\n  ShowToc: true\n  ShowShareButtons: false\n  comments: false\n');
     for (const item of cases) {
       const metadata = { title: item.headline, date: '2026-09-05', paper_digest_page_type: 'paper', paper_digest_reader_title: item.headline, paper_digest_original_title: item.original, description: item.description || '', paper_digest_one_sentence: item.oneSentence || '' };
+      if (item.score !== undefined) metadata.paper_digest_score = item.score;
       fs.writeFileSync(path.join(temp, 'content/posts', item.id + '.md'), '---\n' + Object.entries(metadata).map(([key,value]) => key + ': ' + JSON.stringify(value)).join('\n') + '\n---\n\n## 方法\n\n有区别的正文必须保留。\n');
     }
     execFileSync('hugo', ['--source', repo, '--config', path.join(temp, 'hugo.yaml'), '--contentDir', path.join(temp, 'content'), '--destination', path.join(temp, 'public'), '--minify'], { stdio: 'pipe' });

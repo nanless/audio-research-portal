@@ -586,8 +586,16 @@ const VENUE_NORMALIZE = Object.freeze({
   acl: 'ACL',
   emnlp: 'EMNLP',
   naacl: 'NAACL',
+  eacl: 'EACL',
   aaai: 'AAAI',
+  ijcai: 'IJCAI',
+  aistats: 'AISTATS',
+  uai: 'UAI',
   cvpr: 'CVPR',
+  iccv: 'ICCV',
+  eccv: 'ECCV',
+  acmmm: 'ACM MM',
+  mm: 'ACM MM',
   eusipco: 'EUSIPCO',
   waspaa: 'WASPAA',
   asru: 'ASRU',
@@ -599,9 +607,10 @@ const VENUE_NORMALIZE = Object.freeze({
   icmc: 'ICMC',
   odyssey: 'Odyssey',
   iwslt: 'IWSLT',
-  eacl: 'EACL',
   chime: 'CHiME',
-  jep: 'JEP'
+  dcase: 'DCASE',
+  jep: 'JEP',
+  taslp: 'TASLP'
 });
 
 function resolveVenue({ paperId, sourceKind, arxivId, categories, baseName }) {
@@ -612,7 +621,7 @@ function resolveVenue({ paperId, sourceKind, arxivId, categories, baseName }) {
   }
   const cats = Array.isArray(categories) ? categories : [];
   for (const c of cats) {
-    const m = String(c || '').toLowerCase().match(/^(icassp|interspeech|neurips|iclr|icml|acl|emnlp|naacl|aaai|cvpr|eusipco|waspaa|asru|slt|ismir|speechprosody|nime|dafx|icmc|odyssey|iwslt|eacl|chime|jep)(?:-20\d{2})?$/);
+    const m = String(c || '').toLowerCase().match(/^([a-z0-9-]+?)(?:-20\d{2})?$/);
     if (m && VENUE_NORMALIZE[m[1]]) return VENUE_NORMALIZE[m[1]];
   }
   if (baseName) {

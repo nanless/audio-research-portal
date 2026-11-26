@@ -8,13 +8,13 @@ const vm = require('node:vm');
 
 const repo = resolve(__dirname, '..');
 
-function renderFixture(frontmatter, body = '## 方法\n\n正文。') {
+function renderFixture(frontmatter, body = '## 方法\n\n正文。', baseURL = 'https://example.test/audio-paper-digest-blog/') {
   const temp = mkdtempSync(join(tmpdir(), 'paper-toolbar-'));
   const content = join(temp, 'content', 'posts');
   const output = join(temp, 'public');
   mkdirSync(content, { recursive: true });
   writeFileSync(join(temp, 'hugo.yaml'), [
-    'baseURL: "https://example.test/audio-paper-digest-blog/"',
+    `baseURL: "${baseURL}"`,
     'languageCode: "zh-CN"',
     'defaultContentLanguage: "zh-cn"',
     'theme: "PaperMod"',
@@ -253,4 +253,70 @@ test('verified paper exposes BibTeX copy and Obsidian YAML copy without data-cit
   await obsHandlers.click();
   assert.match(writes[1], /^---\ntitle: "Original paper"/);
   assert.match(writes[1], /score: 8\.5/);
+});
+
+test('historical rewritten pages normalize legacy /audio-paper-digest-blog/data/papers/ sidecars under /audio-research-portal/', () => {
+  const portalBase = 'https://example.test/audio-research-portal/';
+  const portalSidecarRoot = '/audio-research-portal/data/papers/2026-09-05/2609-01234/';
+  const html = renderFixture(workbench, '## 方法\n\n正文。', portalBase);
+  for (const name of ['citation.json', 'citation.bib', 'citation.ris']) {
+    assert.ok(html.includes('href=' + portalSidecarRoot + name), 'normalized historical sidecar ' + name);
+    assert.ok(!html.includes('href=' + sidecarRoot + name), 'legacy base prefix must not leak into href for ' + name);
+  }
+  assert.doesNotMatch(html, /data-citation-format/, 'static citation files replace JS-only fallback buttons');
+
+  // Forged external URL still rejected even under portal baseURL
+  const poisoned = renderFixture(workbench.replace(sidecarRoot + 'citation.ris', 'https://evil.example/citation.ris'), '## 方法\n\n正文。', portalBase);
+  assert.doesNotMatch(poisoned, /evil\.example/);
+  assert.match(poisoned, /data-citation-format=ris/);
+  assert.doesNotMatch(poisoned, /data-citation-format=bib/);
+});
+
+test('conference papers with valid workbench sidecars emit static Citation JSON/BibTeX/RIS links and paper ID copy chip', () => {
+  const crypto = require('node:crypto');
+  const protocols = require('../assets/js/protocol-registry');
+  const header = protocols.recordHeader('researcher-workbench', 'researcher-workbench');
+  const paperId = 'conference:icassp:2026:paper:demo-42';
+  const confHash = 'conference-' + crypto.createHash('sha256').update(paperId).digest('hex').slice(0, 24);
+  const portalBase = 'https://example.test/audio-research-portal/';
+  const clientRoot = `/audio-paper-digest-blog/client/papers/2026-09-05/${confHash}/`;
+  const expectedDataRoot = `/audio-research-portal/data/papers/2026-09-05/${confHash}/`;
+  const expectedClientRoot = `/audio-research-portal/client/papers/2026-09-05/${confHash}/`;
+  const descriptors = Object.fromEntries(
+    ['citation.json', 'citation.bib', 'citation.ris', 'rethink-context.json'].map((name) => [
+      name,
+      {
+        url: clientRoot + name,
+        sha256: 'b'.repeat(64),
+        ...(name === 'rethink-context.json' ? protocols.recordHeader('paper-research-context', 'paper-research-context') : {})
+      }
+    ])
+  );
+  const fm = [
+    'title: "Conference Static Sidecars"',
+    'date: 2026-09-05',
+    'draft: false',
+    'paper_digest_page_type: paper',
+    'paper_digest_source_kind: conference',
+    `paper_digest_paper_id: "${paperId}"`,
+    'paper_digest_conference_record_url: "https://official.test/demo-42"',
+    'paper_digest_conference_pdf_url: "https://official.test/demo-42.pdf"',
+    'paper_digest_authors: [{"name":"Conference Author"}]',
+    'paper_digest_citation_date: "2026-05-04"',
+    `paper_digest_workbench_contract: "${header.contract}"`,
+    `paper_digest_workbench_schema_fingerprint: "${header.schemaFingerprint}"`,
+    'paper_digest_sidecars: ' + JSON.stringify(descriptors)
+  ].join('\n');
+  const html = renderFixture(fm, '## 方法\n\n会议论文正文。', portalBase);
+  assert.match(html, /class=paper-tools__client-sidecars/);
+  const sidecarScript = html.match(/class=paper-tools__client-sidecars>([\s\S]*?)<\/script>/);
+  assert.ok(sidecarScript, 'conference page emits normalized client sidecars');
+  const emitted = JSON.parse(sidecarScript[1]);
+  assert.equal(emitted['rethink-context.json'].url, expectedClientRoot + 'rethink-context.json');
+  for (const name of ['citation.json', 'citation.bib', 'citation.ris']) {
+    assert.ok(html.includes('href=' + expectedDataRoot + name), 'conference static download link ' + name);
+  }
+  assert.doesNotMatch(html, /data-citation-format/, 'static conference sidecars suppress JS-only fallback buttons');
+  assert.match(html, new RegExp(`data-copy-text=${paperId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`));
+  assert.doesNotMatch(html, /name=citation_arxiv_id|data-paper-arxiv-id/);
 });

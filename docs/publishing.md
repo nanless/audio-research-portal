@@ -38,6 +38,24 @@ CI 的 `.github/workflows/hugo.yaml` 固定 Hugo 0.160.1（extended）和 Node 2
 
 在音频研究工作台主仓库运行 `npm run digest:status -- --date YYYY-MM-DD`；其中的 `remoteOidVerified` 只证明 Git 提交已到远端，不能代替部署结果和网页核验。部署失败时先读失败任务的日志，修复后继续检查；`digest:status` 显示 complete 也不能跳过这一步。
 
+## 新会议接入与历史内容核验
+
+接入新一届会议或补充历史论文时，除了从主仓库生成页面和静态资料外，还要在本站完成目录登记与一致性核验：
+
+1. **登记会议目录**：在 `data/conference-directory.json` 新增对应届次条目，确保 `id`（如 `icassp-2027`）与 `venueId:year` 唯一、`summaryPath` 指向已存在于 `content/posts/` 的总览页、`categoryPath` 以 `/categories/` 开头。
+2. **核验日期与 CCF 元数据**：
+   - `event` 必须填写经官网核对的真实举办日期和 HTTPS `sourceUrl`；官方尚未公布日期时使用 `status: "tba"`（附官方 `sourceUrl`），尚未核实时保持 `status: "pending"`，不得用博客发布日期替代会期。
+   - `ranking` 按 CCF 第七版正式目录核对 `grade`（`A`、`B`、`C`、`unlisted` 或 `pending`）、`edition`、`scope`（主会完整长文 `main-conference-full-regular-paper`，未收录 `not-listed`）与官方 `sourceUrl`。
+   - 卫星 Workshop 须在 `relationship` 中提供官方 `sourceUrl`、`checkedAt`、`sourceQuote` 并绑定同届主会 `parentConferenceId`；Workshop 会保留自身 `grade`，仅在目录中归入主会对应分组。
+3. **同步新会议显示名称**：若引入此前未收录的 `venueId` 代码，同步更新 `layouts/_default/single.html`、 `assets/js/paper-library.js` 和 `scripts/lib/research-corpus.js` 中的会议显示名映射，避免单篇页信号栏、论文库卡片与 SOTA/关联图谱显示不一致。
+4. **运行全套门禁与构建验证**：提交或推送前在本站仓库运行：
+
+```bash
+npm test && npm run build:verify
+```
+
+该检查会依次验证：`tests/conference-directory.test.js` 的目录结构/引用完整性不变量、`scripts/audit-content.js` 对所有站内 `/posts/...`（含带站点前缀与不带前缀形式）链接和标签/arXiv ID 的校验、历史与会议页面的静态引用文件（`citation.json` / `citation.bib` / `citation.ris`）及客户端声明、全量桌面端详情包（`client/details/`）导出与 `scripts/verify-build.js public` 构建验收。
+
 ## 失败恢复
 
 - 生成失败：用同一日期重跑 `npm run blog:generate -- --date YYYY-MM-DD`，从已保存的生成清单和逐页状态继续。不要手改已生成页面，也不要用旧日期的生成、审查或推送证据替代当前批次。

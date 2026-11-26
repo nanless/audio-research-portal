@@ -213,7 +213,7 @@ function auditContent(repoRoot, options = {}) {
     }
   }
 
-  const linkPattern = /\]\(\s*<?(\/(?:audio-research-portal|audio-paper-digest-blog)\/posts\/[^\s)>?#]+\/?)(?:[?#][^\s)>]*)?>?\s*\)/g;
+  const linkPattern = /\]\(\s*<?(\/(?:(?:audio-research-portal|audio-paper-digest-blog)\/)?posts\/[^\s)>?#]+\/?)(?:[?#][^\s)>]*)?>?\s*\)/g;
   let linkCount = 0;
   for (const record of records) {
     const starts = lineStarts(record.source);
