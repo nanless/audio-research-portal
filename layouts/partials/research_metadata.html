@@ -151,11 +151,11 @@
       {{- end -}}
       {{- range $line := findRE `(?m)^-[ \t]+[^\n]+` $resSec -}}
         {{- $clean := strings.TrimSpace (replace (replaceRE `^-[ \t]+` "" $line) "**" "") -}}
-        {{- if and (not (hasPrefix $clean "第三方资源：")) (not (hasPrefix $clean "第三方资源:")) (not (hasPrefix $clean "论文所列链接：")) (not (hasPrefix $clean "论文所列链接:")) -}}
-          {{- if and (not $hasCode) (findRE `^(?:代码|开源代码|项目代码)[^：:]{0,12}[：:]` $clean 1) (in $clean "https://") (not (in $clean "链接不可用")) (not (in $clean "暂时无法访问")) (not (findRE `(?:未提及代码链接|暂未开源|代码未公开|仓库仅见文档框架|未检出代码)` $clean 1)) -}}
+        {{- if and (in $clean "https://") (not (in $clean "链接不可用")) (not (in $clean "暂时无法访问")) (not (findRE `^(?:第三方资源|论文所列链接|论文中引用的开源项目)[：:]` $clean 1)) -}}
+          {{- if and (not $hasCode) (findRE `^(?:代码|开源代码|项目代码|项目与代码)[^：:]{0,16}[：:]` $clean 1) (not (findRE `(?:未提及代码链接|暂未开源|代码未公开|仓库仅见文档框架|未检出代码)` $clean 1)) -}}
             {{- $hasCode = true -}}
           {{- end -}}
-          {{- if and (not $hasDemo) (or (hasPrefix $clean "演示资源：") (hasPrefix $clean "演示资源:")) (in $clean "https://") (in $clean "链接可访问") (not (in $clean "链接不可用")) (not (in $clean "暂时无法访问")) -}}
+          {{- if and (not $hasDemo) (findRE `(?i)^(?:演示资源|Demo|在线演示|试听)[^：:]{0,16}[：:]` $clean 1) (or (not (or (hasPrefix $clean "演示资源：") (hasPrefix $clean "演示资源:"))) (in $clean "链接可访问")) (not (findRE `(?:未提及|暂未公开|未公开|未发布|未提供|暂未提供|无演示)` $clean 1)) -}}
             {{- $hasDemo = true -}}
           {{- end -}}
         {{- end -}}

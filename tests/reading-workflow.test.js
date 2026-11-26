@@ -332,3 +332,36 @@ test('sidebar score breakdown omits /10 denominator for v2 ten-point bars and di
   assert.equal(v1.list.className, 'rw-score-bars rw-score-bars--weighted');
   assert.deepEqual(v1.values, ['1.4/2', '1.2/1.5', '0.3/0.5']);
 });
+
+test('boot sequence defers only on readyState === loading and mounts immediately on interactive or complete', () => {
+  const vm = require('node:vm');
+  const script = fs.readFileSync(path.join(__dirname, '../assets/js/reading-workflow.js'), 'utf8');
+  for (const state of ['interactive', 'complete']) {
+    let mountedImmediate = 0;
+    const listeners = {};
+    const document = {
+      readyState: state,
+      addEventListener(name, fn) { listeners[name] = fn; },
+      getElementById(id) { if (id === 'article-body') mountedImmediate++; return null; },
+      querySelector() { return null; }
+    };
+    vm.runInNewContext(script, { window: { document } });
+    assert.equal(listeners.DOMContentLoaded, undefined, `readyState=${state} must not wait for DOMContentLoaded`);
+    assert.equal(mountedImmediate, 1, `readyState=${state} must invoke mount immediately`);
+  }
+  const listeners = {};
+  let queriedEarly = 0;
+  const document = {
+    readyState: 'loading',
+    addEventListener(name, fn, opts) { listeners[name] = { fn, opts }; },
+    getElementById() { queriedEarly++; return null; },
+    querySelector() { return null; }
+  };
+  const win = { document };
+  vm.runInNewContext(script, { window: win });
+  assert.equal(queriedEarly, 0);
+  assert.equal(typeof listeners.DOMContentLoaded?.fn, 'function');
+  assert.equal(listeners.DOMContentLoaded.opts?.once, true);
+  listeners.DOMContentLoaded.fn();
+  assert.equal(queriedEarly, 1);
+});

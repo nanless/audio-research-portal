@@ -6,7 +6,7 @@
     global.ResearchReadingWorkflow = api;
     var start = function () { api.mount(global); };
     // Mount only chapter navigation; legacy storage helpers are never invoked.
-    if (global.document.readyState !== 'complete') global.document.addEventListener('DOMContentLoaded', start, { once: true });
+    if (global.document.readyState === 'loading') global.document.addEventListener('DOMContentLoaded', start, { once: true });
     else start();
   }
 }(typeof window !== 'undefined' ? window : null, function () {

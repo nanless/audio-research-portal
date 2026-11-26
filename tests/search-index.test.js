@@ -168,3 +168,137 @@ test('Hugo search index preserves source titles, spaced scores and conference da
   assert.match(archive, /1 期每日研究/);
   assert.match(archive, /posts\/special-edition\//);
 });
+
+test('research_metadata.html hasCode/hasDemo parity with research-corpus.js across resource bullet variants', (t) => {
+  const { extractResourceSignals } = require('../scripts/lib/research-corpus');
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'blog-res-parity-'));
+  t.after(() => fs.rmSync(root, { recursive: true, force: true }));
+  const content = path.join(root, 'content', 'posts');
+  fs.mkdirSync(content, { recursive: true });
+  const dataDir = path.join(root, 'data');
+  fs.mkdirSync(dataDir, { recursive: true });
+  for (const name of fs.readdirSync(path.resolve(__dirname, '..', 'data'))) {
+    if (name.startsWith('fullsite-r6-') || name === 'exact1028-qualified-classification.json' || name.startsWith('taxonomy-history') || name.startsWith('fullsite-taxonomy-') || name === 'taxonomy-old-v2-publication-holds.json'
+      || !fs.statSync(path.resolve(__dirname, '..', 'data', name)).isFile()) continue;
+    fs.copyFileSync(path.resolve(__dirname, '..', 'data', name), path.join(dataDir, name));
+  }
+  const config = path.join(root, 'hugo.yaml');
+  fs.writeFileSync(config, [
+    'baseURL: https://example.test/blog/',
+    'theme: PaperMod',
+    'buildFuture: true',
+    'disableKinds: [section, taxonomy, term, RSS, sitemap, robotsTXT, "404"]',
+    'staticDir: []',
+    `dataDir: ${JSON.stringify(dataDir)}`,
+    'outputs:',
+    '  home: [JSON]',
+    'params:',
+    '  mainSections: [posts]',
+    ''
+  ].join('\n'));
+
+  const fixtures = [
+    {
+      slug: 'code-project-and-code',
+      title: 'Project and Code Paper',
+      expectCode: true,
+      expectDemo: false,
+      body: [
+        '# 📄 项目与代码格式',
+        '',
+        '## 🔗 开源与复现资源',
+        '',
+        '- 项目与代码（AGPL-3.0）：<https://github.com/mtg/allmusiccaps/>',
+        '- 模型权重（CC BY-NC-SA 4.0）：仅限非商业应用。',
+      ].join('\n'),
+    },
+    {
+      slug: 'skip-referenced-open-source-and-match-demo',
+      title: 'Demo Without Verified Suffix',
+      expectCode: false,
+      expectDemo: true,
+      body: [
+        '# 📄 跳过引用开源项目并匹配 Demo',
+        '',
+        '## 🔗 开源与复现资源',
+        '',
+        '- 代码：论文中未提及代码链接',
+        '- Demo：在线演示链接为 <https://example.github.io/demo/> ，提示词示例同样载于该页面',
+        '- 论文中引用的开源项目：Qwen3 <https://huggingface.co/Qwen/Qwen3>',
+      ].join('\n'),
+    },
+    {
+      slug: 'demo-listen-and-online',
+      title: 'Chinese Online Demo Variant',
+      expectCode: false,
+      expectDemo: true,
+      body: [
+        '# 📄 中文在线试听格式',
+        '',
+        '## 🔗 开源与复现资源',
+        '',
+        '- 试听页面：<https://example.github.io/samples/>',
+      ].join('\n'),
+    },
+    {
+      slug: 'demo-negative-and-unverified-standard',
+      title: 'Negative Demo And Unverified Standard Bullet',
+      expectCode: false,
+      expectDemo: false,
+      body: [
+        '# 📄 负向 Demo 与未核验演示资源',
+        '',
+        '## 🔗 开源与复现资源',
+        '',
+        '- 演示资源：<https://example.github.io/unchecked-demo/>',
+        '- Demo：论文暂未提供公开链接，仅引用 <https://example.github.io/baseline/>',
+        '- 论文中引用的开源项目：代码仓库 <https://github.com/example/third-party>',
+      ].join('\n'),
+    },
+    {
+      slug: 'demo-verified-standard',
+      title: 'Verified Standard Demo Bullet',
+      expectCode: false,
+      expectDemo: true,
+      body: [
+        '# 📄 已核验演示资源',
+        '',
+        '## 🔗 开源与复现资源',
+        '',
+        '- 演示资源：<https://example.github.io/verified-demo/> — 链接可访问（HTTP 200）',
+      ].join('\n'),
+    },
+  ];
+
+  for (const item of fixtures) {
+    fs.writeFileSync(path.join(content, `${item.slug}.md`), [
+      '---',
+      `title: ${JSON.stringify(item.title)}`,
+      'date: 2026-09-03',
+      'paper_digest_page_type: paper',
+      '---',
+      item.body,
+      ''
+    ].join('\n'));
+  }
+
+  for (const directory of ['layouts', 'assets', 'themes']) {
+    fs.cpSync(path.resolve(__dirname, '..', directory), path.join(root, directory), { recursive: true });
+  }
+  execFileSync('hugo', [
+    '--source', root, '--config', config,
+    '--contentDir', path.join(root, 'content'), '--destination', path.join(root, 'public'),
+    '--noBuildLock', '--panicOnWarning'
+  ], { stdio: 'pipe' });
+
+  const records = JSON.parse(fs.readFileSync(path.join(root, 'public', 'index.json'), 'utf8'));
+  for (const item of fixtures) {
+    const rec = records.find((entry) => entry.title === item.title);
+    assert.ok(rec, `missing index record for ${item.slug}`);
+    const corpusSignals = extractResourceSignals(item.body);
+    assert.equal(Boolean(rec.hasCode), item.expectCode, `${item.slug}: Hugo hasCode mismatch`);
+    assert.equal(Boolean(rec.hasDemo), item.expectDemo, `${item.slug}: Hugo hasDemo mismatch`);
+    assert.equal(Boolean(rec.hasCode), corpusSignals.hasCode, `${item.slug}: Hugo vs research-corpus hasCode parity`);
+    assert.equal(Boolean(rec.hasDemo), corpusSignals.hasDemo, `${item.slug}: Hugo vs research-corpus hasDemo parity`);
+  }
+});

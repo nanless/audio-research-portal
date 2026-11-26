@@ -193,9 +193,23 @@ test('Chinese composition input waits for committed text before changing the dir
   const f = browser(), input = f.nodes['daily-edition-query'];
   input.value = '语'; input.fire('input', { isComposing: true }); f.tick();
   assert.equal(f.historyEntries.length, 1); assert.equal(input.value, '语');
+  assert.equal(f.nodes['daily-edition-directory'].open, false);
   input.value = '语音识别'; input.fire('input', { isComposing: false }); f.tick();
   assert.equal(f.window.location.searchParams.get('edition_q'), '语音识别');
   assert.equal(f.nodes['daily-edition-results'].children.length, 30);
+
+  // compositionstart/compositionend guard must also block input events lacking event.isComposing
+  const f2 = browser(), input2 = f2.nodes['daily-edition-query'];
+  input2.fire('compositionstart');
+  input2.value = "yu'yin"; input2.fire('input', {}); f2.tick();
+  assert.equal(f2.historyEntries.length, 1);
+  assert.equal(f2.nodes['daily-edition-directory'].open, false);
+  assert.equal(input2.value, "yu'yin");
+  input2.value = 'Paper 12';
+  input2.fire('compositionend'); f2.tick();
+  assert.equal(f2.window.location.searchParams.get('edition_q'), 'Paper 12');
+  assert.equal(f2.nodes['daily-edition-directory'].open, true);
+  assert.equal(f2.nodes['daily-edition-results'].children.length, 1);
 });
 test('conference and incomplete/ambiguous editions keep their original page with enhancement hidden', () => {
   assert.equal(browser({ kind: 'conference' }).mounted, null);

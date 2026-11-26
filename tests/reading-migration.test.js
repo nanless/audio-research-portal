@@ -177,15 +177,31 @@ test('progress writers and resumes consume authoritative state even when compati
   assert.deepEqual(workflow.readStore(storage, store.positionStorageKey, store).positions[a.permalink], position);
 });
 
-test('a deferred body reader waits for footer store initialization before mounting', () => {
+test('reading-workflow waits for DOMContentLoaded only while loading and mounts immediately once interactive', () => {
   const vm = require('node:vm'), fs = require('node:fs'), path = require('node:path');
-  const events = {}, document = { readyState: 'interactive', addEventListener(name, callback) { events[name] = callback; } };
-  const window = { document };
-  vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../assets/js/reading-workflow.js'), 'utf8'), { window });
-  assert.equal(typeof events.DOMContentLoaded, 'function');
-  let mounts = 0; window.ResearchReadingWorkflow.mount = () => { mounts++; };
-  assert.equal(mounts, 0);
-  events.DOMContentLoaded(); assert.equal(mounts, 1);
+  const script = fs.readFileSync(path.join(__dirname, '../assets/js/reading-workflow.js'), 'utf8');
+
+  const loadingEvents = {};
+  const loadingDoc = { readyState: 'loading', addEventListener(name, callback, opts) { loadingEvents[name] = { callback, opts }; } };
+  const loadingWin = { document: loadingDoc };
+  vm.runInNewContext(script, { window: loadingWin });
+  assert.equal(typeof loadingEvents.DOMContentLoaded?.callback, 'function');
+  assert.equal(loadingEvents.DOMContentLoaded.opts?.once, true);
+  let loadingMounts = 0; loadingWin.ResearchReadingWorkflow.mount = () => { loadingMounts++; };
+  assert.equal(loadingMounts, 0);
+  loadingEvents.DOMContentLoaded.callback(); assert.equal(loadingMounts, 1);
+
+  const interactiveEvents = {};
+  let interactiveQueried = 0;
+  const interactiveDoc = {
+    readyState: 'interactive',
+    addEventListener(name, callback) { interactiveEvents[name] = callback; },
+    getElementById() { interactiveQueried++; return null; },
+    querySelector() { return null; }
+  };
+  vm.runInNewContext(script, { window: { document: interactiveDoc } });
+  assert.equal(interactiveEvents.DOMContentLoaded, undefined);
+  assert.equal(interactiveQueried, 1);
 });
 
 test('corrupted legacy progress blocks overwrite while exact original bytes remain exportable', () => {

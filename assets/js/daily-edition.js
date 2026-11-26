@@ -214,12 +214,18 @@
       if (next !== current) window.history[replace ? 'replaceState' : 'pushState'](window.history.state, '', next);
     }
     function cancelPending() { if (pending !== null) window.clearTimeout(pending); pending = null; }
-    query.addEventListener('input', function (event) {
-      if (event && event.isComposing) return;
+    var queryComposing = false;
+    function onQueryInput() {
       state.query = query.value.slice(0, 200); state.shown = PAGE_SIZE;
       // Keep the caret where the user is typing; don't replace the input's value on each key.
       var caret = query.selectionStart; render(); revealActiveDirectory(); if (typeof query.setSelectionRange === 'function' && caret !== null) query.setSelectionRange(caret, caret);
       cancelPending(); pending = window.setTimeout(function () { writeHistory(typed); typed = true; pending = null; }, 250);
+    }
+    query.addEventListener('compositionstart', function () { queryComposing = true; });
+    query.addEventListener('compositionend', function () { queryComposing = false; onQueryInput(); });
+    query.addEventListener('input', function (event) {
+      if (queryComposing || (event && event.isComposing)) return;
+      onQueryInput();
     });
     query.addEventListener('change', function () { cancelPending(); writeHistory(typed); typed = false; });
     function change() { cancelPending(); state = { query: clean(query.value).slice(0, 200), task: task.value, sort: sort.value === 'score' ? 'score' : 'original', shown: PAGE_SIZE }; typed = false; render(); revealActiveDirectory(); writeHistory(false); }
