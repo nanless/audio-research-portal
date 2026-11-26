@@ -55,6 +55,7 @@
     <div class="research-paper-header__meta">
       {{ partial "post_meta.html" . }}
       {{- if $task }}<span{{ if .Params.paper_digest_primary_task }} title="本页主要研究任务"{{ end }}>&nbsp;·&nbsp;{{ if .Params.paper_digest_primary_task }}★&nbsp;{{ end }}{{ $task }}</span>{{ end }}
+      {{- if and $isPaper $score }}<span class="research-header-score" aria-label="本站评分 {{ $score }}">★ {{ $score }}</span>{{ end }}
     </div>
     <div class="research-paper-header__actions" aria-label="论文操作">
       {{- if $isDaily }}<a class="rw-action rw-action--primary" href="#article-body">连续阅读全文 ↓</a>{{ end }}
@@ -74,7 +75,7 @@
     {{- $intro := $metadata.oneSentence }}
     {{- if and (not $intro) (not $score) }}{{ $intro = .Description }}{{ end }}
     {{- $introComparison := partial "research_normalized_title.html" (partial "plain_summary.html" ($intro | markdownify)) }}
-    {{- if and $intro (ne $introComparison $headlineComparison) (not (and $showOriginal (eq $introComparison $originalComparison))) }}
+    {{- if and $intro (not $isDaily) (ne $introComparison $headlineComparison) (not (and $showOriginal (eq $introComparison $originalComparison))) }}
     <section class="research-tldr research-tldr--header" aria-labelledby="research-tldr-title">
       <strong id="research-tldr-title">研究速览</strong>
       <p>{{ $intro | markdownify }}</p>
@@ -127,9 +128,10 @@
     {{- if $isPaper }}
     <aside class="research-signal-rail" aria-label="论文研究信号" data-pagefind-ignore="all">
       {{- if $score }}
-      <section class="research-signal-card">
+      <section class="research-signal-card research-signal-card--score">
         <span class="research-signal-card__label">本站评分</span>
         <span class="research-score">{{ $score }}</span>
+        <div class="research-score-breakdown" id="research-score-breakdown" hidden></div>
         <p>编辑性研究评价，不替代同行评审结论。</p>
       </section>
       {{- end }}
@@ -151,15 +153,19 @@
     {{- if not $hasVerifiedTags }}
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     {{- $primaryTask := .Params.paper_digest_primary_task | default "" }}
-    {{- if eq ($metadata.tagPublicationStatus | default "") "withheld" }}{{ $primaryTask = "" }}<p class="tag-note">研究分类暂缓展示，待核验后补充。</p>{{ end }}
+    {{- $isWithheldTags := eq ($metadata.tagPublicationStatus | default "") "withheld" }}
+    {{- if $isWithheldTags }}{{ $primaryTask = "" }}<p class="tag-note">研究分类暂缓展示，待核验后补充。</p>{{ end }}
+    {{- $tagTerms := $.GetTerms $tags }}
+    {{- if and $tagTerms (not $isWithheldTags) }}
     <ul class="post-tags">
       {{- $translations := hugo.Data.tag_translations }}
-      {{- range ($.GetTerms $tags) }}
+      {{- range $tagTerms }}
       {{- $en := index $translations .LinkTitle }}
       {{- $isPrimary := and $primaryTask (eq .LinkTitle $primaryTask) }}
       <li><a href="{{ .Permalink }}"{{ if $isPrimary }} class="primary-task" title="主要研究任务以 ★ 标记"{{ end }}>{{ if $isPrimary }}<span class="primary-task__mark" aria-hidden="true">★</span><span class="sr-only">主任务：</span>{{ end }}{{ .LinkTitle }}{{ if $en }}<span style="opacity:.6;font-size:.75em;margin-left:.25em;"> · {{ $en }}</span>{{ end }}</a></li>
       {{- end }}
     </ul>
+    {{- end }}
     {{- end }}
     {{- if and $isPaper (.Param "ShowPostNavLinks") }}{{ partial "post_nav_links.html" . }}{{ end }}
     {{- if and site.Params.ShowShareButtons (ne .Params.disableShare true) }}{{ partial "share_icons.html" . }}{{ end }}

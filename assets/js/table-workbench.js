@@ -14,7 +14,19 @@
   'use strict';
 
   var MISSING_PATTERN = /^(?:|-|--|—|–|n\/a|na|null|none|\/|\*|tbd|\?)$/i;
-  var MAGNITUDE_MULTIPLIERS = { k: 1e3, K: 1e3, M: 1e6, B: 1e9, T: 1e12 };
+  var UNIT_MULTIPLIERS = {
+    k: 1e3, K: 1e3, M: 1e6, B: 1e9, T: 1e12,
+    ms: 1e-3, s: 1, m: 1,
+    Hz: 1, kHz: 1e3, MHz: 1e6, GHz: 1e9,
+    KB: 1e3, MB: 1e6, GB: 1e9, TB: 1e12,
+    bps: 1, kbps: 1e3, Mbps: 1e6
+  };
+
+  function unitMultiplier(suffix) {
+    return suffix && Object.prototype.hasOwnProperty.call(UNIT_MULTIPLIERS, suffix)
+      ? UNIT_MULTIPLIERS[suffix]
+      : 1;
+  }
 
   function parseNumericCell(rawText) {
     var trimmed = String(rawText || '').replace(/\u00a0/g, ' ').replace(/\s+/g, ' ').trim();
@@ -24,7 +36,7 @@
     var normalized = trimmed
       .replace(/[−–]/g, '-')
       .replace(/,/g, '')
-      .replace(/\s*[±]\s*[+-]?\d+(?:\.\d+)?(?:e[+-]?\d+)?\s*%?/gi, '')
+      .replace(/\s*[±]\s*[+-]?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?\s*%?/g, '')
       .replace(/\s*\([^)]*\)\s*$/g, '')
       .replace(/[\s*†‡↓↑]+$/g, '')
       .trim();
@@ -39,23 +51,20 @@
       normalized = normalized.slice(cmpMatch[0].length).trim();
     }
 
-    // Match scientific notation like 3.1×10^-4 or 3.1 x 10^-4
-    var sciCross = normalized.match(/^([+-]?\d+(?:\.\d+)?)\s*[×x]\s*10\^?([+-]?\d+)\s*(?:%|dB|ms|s|m|Hz|kHz|MHz|GHz|bps|kbps|Mbps)?$/i);
+    // Match scientific notation like 3.1×10^-4 or 3.1 x 10^-4 with case-sensitive SI/audio units
+    var sciCross = normalized.match(/^([+-]?\d+(?:\.\d+)?)\s*[×x]\s*10\^?([+-]?\d+)\s*(%|dB|ms|s|m|Hz|kHz|MHz|GHz|KB|MB|GB|TB|bps|kbps|Mbps)?$/);
     if (sciCross) {
-      var valCross = Number(sciCross[1]) * Math.pow(10, Number(sciCross[2]));
+      var valCross = Number(sciCross[1]) * Math.pow(10, Number(sciCross[2])) * unitMultiplier(sciCross[3] || '');
       if (Number.isFinite(valCross)) return { kind: 'number', value: valCross, bias: bias };
     }
 
-    // Match number + optional SI magnitude (uppercase M/B/T or k/K; lowercase m stays meters with multiplier 1) OR standard audio/eval units
-    var match = normalized.match(/^([+-]?(?:\d+(?:\.\d+)?|\.\d+)(?:e[+-]?\d+)?)\s*(%|dB|ms|s|m|Hz|kHz|MHz|GHz|bps|kbps|Mbps|GB|MB|KB|x|×|[kKMBT])?$/i);
+    // Case-sensitive match for number + SI/audio units (lowercase 'm' stays meters=1, uppercase 'M'=1e6, ms=1e-3, kHz=1e3, etc.)
+    var match = normalized.match(/^([+-]?(?:\d+(?:\.\d+)?|\.\d+)(?:[eE][+-]?\d+)?)\s*(%|dB|ms|s|m|Hz|kHz|MHz|GHz|KB|MB|GB|TB|bps|kbps|Mbps|x|×|[kKMBT])?$/);
     if (match) {
       var baseNum = Number(match[1]);
       if (Number.isFinite(baseNum)) {
         var suffix = match[2] || '';
-        var multiplier = (suffix.length === 1 && Object.prototype.hasOwnProperty.call(MAGNITUDE_MULTIPLIERS, suffix))
-          ? MAGNITUDE_MULTIPLIERS[suffix]
-          : 1;
-        return { kind: 'number', value: baseNum * multiplier, bias: bias };
+        return { kind: 'number', value: baseNum * unitMultiplier(suffix), bias: bias };
       }
     }
 
@@ -154,6 +163,30 @@
     var modalBody = null;
     var modalCloseBtn = null;
     var activeModalState = null;
+    var MODAL_ID = 'table-fullscreen';
+
+    function getModalStack() {
+      if (!win) return [];
+      win.__rwModalStack = win.__rwModalStack || [];
+      return win.__rwModalStack;
+    }
+    function pushModal() {
+      var stack = getModalStack();
+      var pos = stack.indexOf(MODAL_ID);
+      if (pos >= 0) stack.splice(pos, 1);
+      stack.push(MODAL_ID);
+      if (doc.body && doc.body.style) doc.body.style.overflow = 'hidden';
+    }
+    function popModal() {
+      var stack = getModalStack();
+      var pos = stack.indexOf(MODAL_ID);
+      if (pos >= 0) stack.splice(pos, 1);
+      if (!stack.length && doc.body && doc.body.style) doc.body.style.overflow = '';
+    }
+    function isTopModal() {
+      var stack = getModalStack();
+      return stack.length === 0 || stack[stack.length - 1] === MODAL_ID;
+    }
 
     function closeFullscreen() {
       if (!activeModalState || !modal) return;
@@ -165,7 +198,7 @@
       }
       st.shell.classList.remove('rw-table-shell--fullscreen');
       modal.hidden = true;
-      if (doc.body && doc.body.style) doc.body.style.overflow = '';
+      popModal();
       st.updateScrollState();
       if (st.triggerBtn && typeof st.triggerBtn.focus === 'function') st.triggerBtn.focus();
     }
@@ -204,6 +237,7 @@
       modal.addEventListener('keydown', function (event) {
         if (!activeModalState || !event) return;
         if (event.key === 'Escape') {
+          if (!isTopModal()) return;
           event.preventDefault();
           closeFullscreen();
         } else if (event.key === 'Tab') {
@@ -232,6 +266,7 @@
     }
 
     var controllers = [];
+    var resizeUpdaters = [];
 
     tables.forEach(function (table) {
       if (table.dataset) table.dataset.rwTableBound = '1';
@@ -288,9 +323,7 @@
       }
 
       scrollBox.addEventListener('scroll', updateScrollState, { passive: true });
-      if (win && typeof win.addEventListener === 'function') {
-        win.addEventListener('resize', updateScrollState, { passive: true });
-      }
+      resizeUpdaters.push(updateScrollState);
       updateScrollState();
 
       var sortState = { col: -1, dir: 'none' };
@@ -393,7 +426,7 @@
         modalBody.appendChild(shell);
         shell.classList.add('rw-table-shell--fullscreen');
         modal.hidden = false;
-        if (doc.body && doc.body.style) doc.body.style.overflow = 'hidden';
+        pushModal();
         activeModalState = {
           shell: shell,
           placeholder: placeholder,
@@ -418,9 +451,38 @@
       });
     });
 
+    if (resizeUpdaters.length) {
+      var resizeFrame = false;
+      var runAllResize = function () {
+        resizeFrame = false;
+        resizeUpdaters.forEach(function (fn) { fn(); });
+      };
+      var scheduleResize = function () {
+        if (resizeFrame) return;
+        resizeFrame = true;
+        if (win && typeof win.requestAnimationFrame === 'function') {
+          win.requestAnimationFrame(runAllResize);
+        } else {
+          runAllResize();
+        }
+      };
+      var ResizeObserverCtor = (win && win.ResizeObserver) || (typeof ResizeObserver !== 'undefined' ? ResizeObserver : null);
+      if (typeof ResizeObserverCtor === 'function') {
+        try {
+          var ro = new ResizeObserverCtor(scheduleResize);
+          controllers.forEach(function (c) { ro.observe(c.scrollBox); });
+        } catch (_) {
+          if (win && typeof win.addEventListener === 'function') win.addEventListener('resize', scheduleResize, { passive: true });
+        }
+      } else if (win && typeof win.addEventListener === 'function') {
+        win.addEventListener('resize', scheduleResize, { passive: true });
+      }
+    }
+
     if (win && typeof win.addEventListener === 'function') {
       win.addEventListener('keydown', function (event) {
         if (activeModalState && event && event.key === 'Escape') {
+          if (!isTopModal()) return;
           event.preventDefault();
           closeFullscreen();
         }

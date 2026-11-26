@@ -83,7 +83,7 @@
 </section>
 <script id="conference-directory-data" type="application/json">{{ $catalog | jsonify | safeJS }}</script>
 {{- $script := resources.Get "js/conference-directory.js" | minify | fingerprint -}}
-<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
 {{- end -}}
 
 {{- define "conference-directory-card" -}}
@@ -114,7 +114,7 @@
   <details class="conference-card__sources">
     <summary>日期、档次与领域来源</summary>
     <p>{{ if $sourceOk }}<a href="{{ $event.sourceUrl }}">会议官方日期</a>{{ with $event.checkedAt }} · 核对于 {{ . }}{{ end }}{{ else }}尚待核对官方举办日期。{{ end }}</p>
-    {{- with $parent }}<p>与 {{ .name }} {{ .year }} 并列展示，Workshop 不继承主会评级。<a href="{{ $entry.relationship.sourceUrl }}">主会与 Workshop 关系来源</a></p>{{ end -}}
+    {{- with $parent }}<p>与 {{ .name }} {{ .year }} 并列展示，Workshop 不继承主会评级。{{- if findRE $https ($entry.relationship.sourceUrl | default "") 1 }}<a href="{{ $entry.relationship.sourceUrl }}">主会与 Workshop 关系来源</a>{{- end }}</p>{{ end -}}
     {{- with $event.dateNote }}<p>{{ . }}</p>{{ end -}}
     {{- if and $event.mainConferenceStartDate $event.mainConferenceEndDate }}<p>主会议：{{ $event.mainConferenceStartDate }} — {{ $event.mainConferenceEndDate }}；上方日期包含官方整体活动范围。</p>{{ end -}}
     <p>采用 CCF 署名的第七版正式目录公开副本，可通过下方官方发布说明和目录原文核对。</p>

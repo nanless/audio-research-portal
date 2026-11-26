@@ -52,7 +52,11 @@
     <button class="rw-filter-chip" type="button" data-concept="task.music-generation" aria-pressed="false">音乐生成</button>
   </div>
 
-  <div id="library-directions" class="library-directions" aria-live="polite"></div>
+  <div class="research-library__status" aria-live="polite">
+    <span id="library-count">正在读取静态论文索引…</span>
+    <a href="{{ "search/" | absURL }}">模糊搜索</a>
+  </div>
+
   <details id="library-direction-panel" class="library-direction-panel">
     <summary>选择研究方向与匹配范围</summary>
     <div class="library-direction-panel__body">
@@ -70,18 +74,12 @@
       </div>
     </div>
   </details>
-  <p id="library-coverage" class="library-coverage"></p>
   <details class="tag-note">
     <summary>覆盖数字与筛选说明</summary>
     <p>按已核论文身份去重，身份待核时按页面保留。研究类型与范围仅展示已有核验记录，缺失信息不自动补填。方向覆盖数量不代表所有论文都接受了逐篇原文复审。</p>
     <p>同分面任选其一，跨分面同时满足。主要研究角色与主方法只匹配明确标注；方向条件仅适用于论文解读，浏览汇总页时请清除方向条件。</p>
   </details>
-
-  <div class="research-library__status" aria-live="polite">
-    <span id="library-count">正在读取静态论文索引…</span>
-    <a href="{{ "search/" | absURL }}">模糊搜索</a>
-  </div>
-  <details class="library-export-panel" id="library-export-panel" open>
+  <details class="library-export-panel" id="library-export-panel">
     <summary>选择与导出论文清单</summary>
   <div class="library-export-actions" aria-label="导出论文清单">
     <button id="library-select-visible" class="rw-filter-chip" type="button">选择当前显示论文</button><button id="library-selection-clear" class="rw-filter-chip" type="button">清空选择</button>
@@ -89,6 +87,9 @@
     <button id="library-export" class="rw-action" type="button">导出所选论文</button><span id="library-export-status" role="status">尚未选择论文</span>
   </div>
   </details>
+
+  <div id="library-directions" class="library-directions" aria-live="polite"></div>
+  <p id="library-coverage" class="library-coverage"></p>
   <div id="library-results" class="research-library__results" role="list">
     <div class="research-library__loading">正在载入论文索引…</div>
   </div>

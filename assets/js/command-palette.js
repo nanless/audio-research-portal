@@ -27,11 +27,12 @@
 
   var QUICK_COMMANDS = [
     { id: 'papers', label: '进入论文库（按方向/评分/开源筛选）', path: 'papers/', badge: '导航' },
+    { id: 'hubs', label: '专题导航（八大音频方向榜单）', path: 'hubs/', badge: '导航' },
     { id: 'search', label: '打开高级搜索页', path: 'search/', badge: '导航' },
     { id: 'conferences', label: '浏览会议论文集目录', path: 'conferences/', badge: '导航' },
     { id: 'tags', label: '查看九维研究方向树', path: 'tags/', badge: '导航' },
     { id: 'archives', label: '按日期查看每日归档', path: 'archives/', badge: '导航' },
-    { id: 'theme', label: '切换明暗主题', action: 'theme', badge: '快捷操作' }
+    { id: 'theme', label: '切换深浅主题', action: 'theme', badge: '快捷操作' }
   ];
 
   function safeSiteUrl(value, origin, siteBasePath) {
@@ -274,7 +275,29 @@
     var loaderUrl = opts.loaderUrl || (scriptEl && scriptEl.getAttribute && scriptEl.getAttribute('data-cmdk-loader-url')) || '';
     var workerUrl = opts.workerUrl || (scriptEl && scriptEl.getAttribute && scriptEl.getAttribute('data-cmdk-worker-url')) || '';
     var fetcher = opts.fetch
-      || (typeof win.fetch === 'function' ? win.fetch.bind(win) : (typeof fetch === 'function' ? fetch.bind(root) : null));
+      || (typeof win.fetch === 'function' ? win.fetch.bind(win) : (!opts.window && typeof fetch === 'function' ? fetch.bind(root) : null));
+    var MODAL_ID = 'cmdk';
+    function getModalStack() {
+      win.__rwModalStack = win.__rwModalStack || [];
+      return win.__rwModalStack;
+    }
+    function pushModal() {
+      var stack = getModalStack();
+      var pos = stack.indexOf(MODAL_ID);
+      if (pos >= 0) stack.splice(pos, 1);
+      stack.push(MODAL_ID);
+      if (doc.body && doc.body.style) doc.body.style.overflow = 'hidden';
+    }
+    function popModal() {
+      var stack = getModalStack();
+      var pos = stack.indexOf(MODAL_ID);
+      if (pos >= 0) stack.splice(pos, 1);
+      if (!stack.length && doc.body && doc.body.style) doc.body.style.overflow = '';
+    }
+    function isTopModal() {
+      var stack = getModalStack();
+      return stack.length === 0 || stack[stack.length - 1] === MODAL_ID;
+    }
 
     var state = {
       open: false,
@@ -397,6 +420,7 @@
     function setActive(index) {
       if (!state.selectableItems.length) {
         state.activeIndex = -1;
+        if (input && typeof input.removeAttribute === 'function') input.removeAttribute('aria-activedescendant');
         return;
       }
       var next = Math.max(0, Math.min(index, state.selectableItems.length - 1));
@@ -405,8 +429,11 @@
         var isCurrent = idx === next;
         item.row.classList.toggle('is-active', isCurrent);
         item.row.setAttribute('aria-selected', String(isCurrent));
-        if (isCurrent && item.row && typeof item.row.scrollIntoView === 'function') {
-          item.row.scrollIntoView({ block: 'nearest' });
+        if (isCurrent) {
+          if (input && item.row.id) input.setAttribute('aria-activedescendant', item.row.id);
+          if (item.row && typeof item.row.scrollIntoView === 'function') {
+            item.row.scrollIntoView({ block: 'nearest' });
+          }
         }
       });
     }
@@ -415,15 +442,20 @@
       if (listNode) listNode.replaceChildren();
       state.selectableItems = [];
       state.activeIndex = -1;
+      if (input && typeof input.removeAttribute === 'function') input.removeAttribute('aria-activedescendant');
     }
 
     function renderQuickCommands() {
       clearList();
+      var hasMenu = Boolean(typeof doc.getElementById === 'function' && doc.getElementById('menu'));
+      var hasHubsLink = !hasMenu || Boolean(typeof doc.querySelector === 'function' && doc.querySelector('a[href*="/hubs/"]'));
       var fragment = doc.createDocumentFragment();
-      QUICK_COMMANDS.forEach(function (cmd) {
+      QUICK_COMMANDS.forEach(function (cmd, idx) {
+        if (cmd.id === 'hubs' && !hasHubsLink) return;
         var href = cmd.path ? safeSiteUrl(basePath + cmd.path, origin, basePath) : null;
         if (cmd.path && !href) return;
         var li = doc.createElement('li');
+        li.id = 'cmdk-option-' + idx;
         li.className = 'cmdk-item';
         li.setAttribute('role', 'option');
         li.setAttribute('aria-selected', 'false');
@@ -468,10 +500,11 @@
         return;
       }
       var fragment = doc.createDocumentFragment();
-      items.forEach(function (item) {
+      items.forEach(function (item, idx) {
         var safeHref = safeSiteUrl(item.href, origin, basePath);
         if (!safeHref) return;
         var li = doc.createElement('li');
+        li.id = 'cmdk-option-' + idx;
         li.className = 'cmdk-item';
         li.setAttribute('role', 'option');
         li.setAttribute('aria-selected', 'false');
@@ -520,12 +553,35 @@
         updateModeUi('输入论文标题、关键词或 arXiv ID；支持 ↑↓ 选择、Enter 打开');
         return Promise.resolve();
       }
+      function renderClientResults(queryStr) {
+        var ranked = rankClientEntries(state.clientEntries, queryStr, state.facet);
+        var mappedClient = ranked.map(function (entry) {
+          var metaParts = [
+            entry.pageType === 'daily' ? '每日研究' : entry.pageType === 'conference' ? '会议专题' : '论文解读',
+            entry.date,
+            entry.score >= 0 ? entry.score.toFixed(1).replace('.0', '') + '/10' : '',
+            entry.hasCode ? '💻 开源' : '',
+            entry.hasDemo ? '🔊 Demo' : '',
+            entry.arxivId ? 'arXiv ' + entry.arxivId : ''
+          ].filter(Boolean);
+          return {
+            href: entry.href,
+            title: entry.title,
+            excerpt: entry.summary || entry.originalTitle,
+            meta: metaParts.join(' · ')
+          };
+        });
+        renderResultCards(mappedClient, splitQueryTokens(queryStr), false);
+        updateModeUi('索引检索显示 ' + mappedClient.length + ' 条匹配结果');
+      }
       return ensureSearchBackend().then(function (mode) {
         if (seq !== state.searchSeq) return;
         if (mode === 'pagefind' && state.pagefind) {
           var filters = pagefindFiltersForFacet(state.facet);
           var searchOpts = filters ? { filters: filters } : undefined;
-          return Promise.resolve(state.pagefind.search(query || null, searchOpts)).then(function (res) {
+          return Promise.resolve().then(function () {
+            return state.pagefind.search(query || null, searchOpts);
+          }).then(function (res) {
             if (seq !== state.searchSeq) return;
             var rawResults = (res && Array.isArray(res.results)) ? res.results.slice(0, MAX_RESULTS) : [];
             return Promise.all(rawResults.map(function (entry) { return entry.data(); })).then(function (loaded) {
@@ -544,28 +600,21 @@
               renderResultCards(mapped, splitQueryTokens(query), true);
               updateModeUi('全文检索找到 ' + (res.results ? res.results.length : mapped.length) + ' 条，显示前 ' + mapped.length + ' 条');
             });
+          }).catch(function () {
+            state.pagefind = null;
+            state.initPromise = null;
+            return loadClientIndexFallback().then(function (fallbackMode) {
+              if (seq !== state.searchSeq) return;
+              if (fallbackMode === 'client-index' && Array.isArray(state.clientEntries)) {
+                renderClientResults(query);
+                return;
+              }
+              throw new Error('Fallback search unavailable');
+            });
           });
         }
         if (mode === 'client-index' && Array.isArray(state.clientEntries)) {
-          var ranked = rankClientEntries(state.clientEntries, query, state.facet);
-          var mappedClient = ranked.map(function (entry) {
-            var metaParts = [
-              entry.pageType === 'daily' ? '每日研究' : entry.pageType === 'conference' ? '会议专题' : '论文解读',
-              entry.date,
-              entry.score >= 0 ? entry.score.toFixed(1).replace('.0', '') + '/10' : '',
-              entry.hasCode ? '💻 开源' : '',
-              entry.hasDemo ? '🔊 Demo' : '',
-              entry.arxivId ? 'arXiv ' + entry.arxivId : ''
-            ].filter(Boolean);
-            return {
-              href: entry.href,
-              title: entry.title,
-              excerpt: entry.summary || entry.originalTitle,
-              meta: metaParts.join(' · ')
-            };
-          });
-          renderResultCards(mappedClient, splitQueryTokens(query), false);
-          updateModeUi('索引检索显示 ' + mappedClient.length + ' 条匹配结果');
+          renderClientResults(query);
           return;
         }
         renderQuickCommands();
@@ -603,6 +652,10 @@
       input.id = 'cmdk-input';
       input.className = 'cmdk-input';
       input.type = 'search';
+      input.setAttribute('role', 'combobox');
+      input.setAttribute('aria-autocomplete', 'list');
+      input.setAttribute('aria-controls', 'cmdk-results-list');
+      input.setAttribute('aria-expanded', 'false');
       input.setAttribute('autocomplete', 'off');
       input.setAttribute('placeholder', '搜索论文标题、方法、摘要或 arXiv ID…');
       input.setAttribute('aria-label', '搜索全站论文');
@@ -652,6 +705,7 @@
       statusNode.setAttribute('aria-live', 'polite');
 
       listNode = doc.createElement('ul');
+      listNode.id = 'cmdk-results-list';
       listNode.className = 'cmdk-results';
       listNode.setAttribute('role', 'listbox');
       listNode.setAttribute('aria-label', '搜索与命令列表');
@@ -693,6 +747,7 @@
       dialog.addEventListener('keydown', function (event) {
         if (!state.open || !event) return;
         if (event.key === 'Escape') {
+          if (!isTopModal()) return;
           event.preventDefault();
           closePalette();
         } else if (event.key === 'ArrowDown') {
@@ -736,7 +791,8 @@
       state.previousFocus = triggerEl || doc.activeElement || null;
       state.open = true;
       dialog.hidden = false;
-      if (doc.body && doc.body.style) doc.body.style.overflow = 'hidden';
+      if (input) input.setAttribute('aria-expanded', 'true');
+      pushModal();
       var hasActiveFilterOrQuery = Boolean((input && input.value.trim()) || state.facet !== 'all');
       if (hasActiveFilterOrQuery) {
         runSearch();
@@ -755,7 +811,8 @@
       if (!state.open || !dialog) return;
       state.open = false;
       dialog.hidden = true;
-      if (doc.body && doc.body.style) doc.body.style.overflow = '';
+      if (input) input.setAttribute('aria-expanded', 'false');
+      popModal();
       if (state.previousFocus && typeof state.previousFocus.focus === 'function') {
         state.previousFocus.focus();
       }
@@ -775,13 +832,16 @@
       if (!event) return;
       var key = String(event.key || '');
       if (key === 'Escape' && state.open) {
+        if (!isTopModal()) return;
         event.preventDefault();
         closePalette();
       } else if ((event.metaKey || event.ctrlKey) && key.toLowerCase() === 'k') {
+        if (!state.open && getModalStack().length > 0) return;
         event.preventDefault();
         if (state.open) closePalette();
         else openPalette(trigger || doc.activeElement);
       } else if (key === '/' && !event.metaKey && !event.ctrlKey && !event.altKey && !state.open && !isEditableTarget(event.target)) {
+        if (getModalStack().length > 0) return;
         event.preventDefault();
         openPalette(trigger || doc.activeElement);
       }

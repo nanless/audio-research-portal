@@ -391,8 +391,12 @@ test('Track 12.4: Audio quick-spec card, Demo CTA, collapsible 8+ authors, Daily
     }
 
     // 5. Run sibling markdown_hugo_gate.py and assert the current API Reader paper is ACTUALLY inspected (not skipped!)
-    const gateScript = path.resolve(BLOG_ROOT, '..', 'audio-paper-digest', 'scripts', 'markdown_hugo_gate.py');
-    if (fs.existsSync(gateScript)) {
+    const gateCandidates = [
+      path.resolve(BLOG_ROOT, '..', 'audio-research-workbench', 'scripts', 'markdown_hugo_gate.py'),
+      path.resolve(BLOG_ROOT, '..', 'audio-paper-digest', 'scripts', 'markdown_hugo_gate.py')
+    ];
+    const gateScript = gateCandidates.find((p) => fs.existsSync(p));
+    if (gateScript) {
       const py = [
         'import sys, re',
         'from pathlib import Path',

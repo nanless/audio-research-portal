@@ -230,6 +230,96 @@
     // complete chapter directory is retained while only visible flow is probed.
     article.addEventListener('toggle', function (event) { if (event.target && event.target.tagName === 'DETAILS') refreshFlowHeadings(); }, true);
     update();
+    mountScoreBreakdown(document, article);
+  }
+  function mountScoreBreakdown(document, article) {
+    var breakdownEl = document.getElementById('research-score-breakdown');
+    if (!breakdownEl || !article || typeof article.querySelectorAll !== 'function') return;
+    var candidates = Array.prototype.slice.call(article.querySelectorAll('blockquote, p'));
+    var scoreLine = '';
+    for (var i = 0; i < candidates.length && i < 12; i += 1) {
+      var text = String(candidates[i].textContent || '').replace(/\s+/g, ' ').trim();
+      if (/评分[：:]\s*\d+(?:\.\d+)?\s*\/\s*10/.test(text) && text.indexOf('|') > 0) {
+        scoreLine = text;
+        break;
+      }
+    }
+    if (!scoreLine) return;
+    var overallMatch = scoreLine.match(/评分[：:]\s*(\d+(?:\.\d+)?)\s*\/\s*10/);
+    var overallVal = overallMatch ? Number(overallMatch[1]) : NaN;
+    var parts = scoreLine.split('|').slice(1);
+    var dims = [];
+    parts.forEach(function (part) {
+      var m = part.trim().match(/^([^\s：:]+)\s+(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)$/);
+      if (!m) return;
+      var val = Number(m[2]);
+      var max = Number(m[3]);
+      if (!Number.isFinite(val) || !Number.isFinite(max) || max <= 0) return;
+      dims.push({
+        label: m[1].replace('工程/实践', '工程').replace('技术严谨', '严谨').replace('实验充分', '实验'),
+        fullLabel: m[1],
+        val: val,
+        max: max,
+        pct: Math.max(0, Math.min(100, (val / max) * 100))
+      });
+    });
+    if (!dims.length) return;
+    if (typeof breakdownEl.replaceChildren === 'function') breakdownEl.replaceChildren();
+    else breakdownEl.textContent = '';
+
+    if (Number.isFinite(overallVal)) {
+      var ringWrap = document.createElement('div');
+      ringWrap.className = 'rw-score-ring-wrap';
+      var ring = document.createElement('div');
+      ring.className = 'rw-score-ring';
+      var pct = Math.max(0, Math.min(100, (overallVal / 10) * 100));
+      if (ring.style && typeof ring.style.setProperty === 'function') {
+        ring.style.setProperty('--score-pct', pct.toFixed(1) + '%');
+      }
+      var ringNum = document.createElement('span');
+      ringNum.className = 'rw-score-ring__num';
+      ringNum.textContent = overallVal.toFixed(1);
+      var ringDen = document.createElement('span');
+      ringDen.className = 'rw-score-ring__den';
+      ringDen.textContent = '/10';
+      ring.appendChild(ringNum);
+      ring.appendChild(ringDen);
+      ringWrap.appendChild(ring);
+      breakdownEl.appendChild(ringWrap);
+    }
+
+    var list = document.createElement('ul');
+    list.className = 'rw-score-bars';
+    list.setAttribute('aria-label', '八维评分明细');
+    dims.forEach(function (dim) {
+      var li = document.createElement('li');
+      li.className = 'rw-score-bar-row';
+      li.setAttribute('title', dim.fullLabel + ' ' + dim.val + '/' + dim.max);
+      var nameSpan = document.createElement('span');
+      nameSpan.className = 'rw-score-bar-label';
+      nameSpan.textContent = dim.label;
+      var track = document.createElement('span');
+      track.className = 'rw-score-bar-track';
+      track.setAttribute('aria-hidden', 'true');
+      var fill = document.createElement('span');
+      fill.className = 'rw-score-bar-fill';
+      if (dim.pct >= 80) fill.classList.add('rw-score-bar-fill--high');
+      else if (dim.pct < 60) fill.classList.add('rw-score-bar-fill--low');
+      if (fill.style) fill.style.width = dim.pct.toFixed(1) + '%';
+      track.appendChild(fill);
+      var valSpan = document.createElement('span');
+      valSpan.className = 'rw-score-bar-val';
+      valSpan.textContent = dim.val.toFixed(1);
+      li.appendChild(nameSpan);
+      li.appendChild(track);
+      li.appendChild(valSpan);
+      list.appendChild(li);
+    });
+    breakdownEl.appendChild(list);
+    breakdownEl.hidden = false;
+    if (breakdownEl.parentElement && breakdownEl.parentElement.classList) {
+      breakdownEl.parentElement.classList.add('research-signal-card--enhanced');
+    }
   }
   return { mount: mount, storageKey: storageKey, normalizeStore: normalizeStore, readStore: readStore,
     writePosition: writePosition, currentHeading: currentHeading, headingLabel: headingLabel };

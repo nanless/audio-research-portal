@@ -132,7 +132,7 @@
     <time class="edition-row__date" datetime="{{ .Date.Format "2006-01-02" }}"><span class="edition-row__month">{{ .Date.Format "01" }} 月</span><span class="edition-row__day">{{ .Date.Format "02" }}</span><span class="edition-row__year">{{ .Date.Format "2006" }}</span></time>
     <div class="edition-row__body">
       <div class="research-entry__kicker">每日音频研究{{ if and (eq $paginator.PageNumber 1) (eq $index 0) }} <span class="edition-row__latest">最新一期</span>{{ end }}</div>
-      <header class="entry-header"><h2>{{ .Date.Format "2006年1月2日" }} · 音频研究日报</h2></header>
+      <header class="entry-header">{{ if eq $paginator.PageNumber 1 }}<h3 class="edition-row__title">{{ .Date.Format "2006年1月2日" }} · 音频研究日报</h3>{{ else }}<h2 class="edition-row__title">{{ .Date.Format "2006年1月2日" }} · 音频研究日报</h2>{{ end }}</header>
       {{- if ne (.Param "hideSummary") true }}<div class="entry-content"><p>{{ .Description | default "本期论文概览、完整目录与逐篇解读。" | plainify | htmlUnescape }}</p></div>{{ end }}
       <footer class="entry-footer research-entry__footer"><span class="edition-row__count">{{ if $count }}{{ $count }} 篇论文{{ else }}完整目录{{ end }}</span><span class="research-entry__cta">阅读完整日报 <span aria-hidden="true">↗</span></span></footer>
     </div>

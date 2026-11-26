@@ -25,7 +25,7 @@
     <nav class="tag-facet-nav" aria-label="分类视角">
       {{ range $facets }}<a href="#facet-{{ .id }}" class="rw-action">{{ .name }}</a>{{ end }}
     </nav>
-    <div id="tag-concept-panel" class="tag-concept-panel" aria-live="polite" hidden></div>
+    <div id="tag-concept-panel" class="tag-concept-panel" hidden></div>
     <div class="tag-facets">
       {{ range $facet := $facets }}
       <details class="tag-facet" id="facet-{{ .id }}"{{ if in (slice "task" "method" "setting") .id }} open{{ end }}>

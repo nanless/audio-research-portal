@@ -21,57 +21,44 @@
 }
 </script>
 {{- else if (or .IsPage .IsSection) }}
-{{/* BreadcrumbList */}}
-{{- $url := replace .Parent.Permalink ( printf "%s" site.Home.Permalink) "" }}
-{{- $lang_url := strings.TrimPrefix ( printf "%s/" .Lang) $url }}
-{{- $bc_list := (split $lang_url "/")}}
-
-{{- $scratch := newScratch }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-  {{- range $index, $element := $bc_list }}
-
-    {{- $scratch.Add "path" (printf "%s/" $element ) | safeJS }}
-    {{- $bc_pg := site.GetPage ($scratch.Get "path") -}}
-
-    {{- if (and ($bc_pg) (gt (len . ) 0))}}
-    {{- if (and $index)}}, {{end }}
-    {
-      "@type": "ListItem",
-      "position": {{ add 1 $index  }},
-      "name": {{ $bc_pg.Name }},
-      "item": {{ $bc_pg.Permalink | safeHTML }}
-    }
+{{/* BreadcrumbList — structurally immune to dangling commas */}}
+{{- $bcItems := slice }}
+{{- with .Parent }}
+  {{- $url := replace .Permalink (printf "%s" site.Home.Permalink) "" }}
+  {{- $lang_url := strings.TrimPrefix (printf "%s/" $.Lang) $url }}
+  {{- $bc_list := split $lang_url "/" }}
+  {{- $scratch := newScratch }}
+  {{- range $element := $bc_list }}
+    {{- if gt (len $element) 0 }}
+      {{- $scratch.Add "path" (printf "%s/" $element) }}
+      {{- $bc_pg := site.GetPage ($scratch.Get "path") }}
+      {{- if $bc_pg }}
+        {{- $bcItems = $bcItems | append (dict "@type" "ListItem" "position" (add 1 (len $bcItems)) "name" $bc_pg.Name "item" $bc_pg.Permalink) }}
+      {{- end }}
     {{- end }}
-
   {{- end }}
-  {{- /*  self-page addition  */ -}}
-  {{- if (ge (len $bc_list) 2) }}, {{end }}
-    {
-      "@type": "ListItem",
-      "position": {{len $bc_list}},
-      "name": {{ .Name }},
-      "item": {{ .Permalink | safeHTML }}
-    }
-  ]
-}
-</script>
+{{- end }}
+{{- $bcItems = $bcItems | append (dict "@type" "ListItem" "position" (add 1 (len $bcItems)) "name" .Name "item" .Permalink) }}
+{{- $bcSchema := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $bcItems }}
+<script type="application/ld+json">{{ $bcSchema | jsonify | safeJS }}</script>
 {{- if .IsPage }}
+{{- $schemaMeta := partial "research_metadata.html" . }}
+{{- $isWithheld := eq ($schemaMeta.tagPublicationStatus | default "") "withheld" }}
+{{- $citSrc := partial "citation_source.html" . }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": {{ .Title | plainify}},
-  "name": "{{ .Title | plainify }}",
+  "headline": {{ .Title | plainify }},
+  "name": {{ .Title | plainify }},
   "description": {{ partial "plain_summary.html" (.Description | default .Summary) }},
   "keywords": [
-    {{- if .Params.keywords }}
-    {{ range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
-    {{- else }}
-    {{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+    {{- if not $isWithheld }}
+      {{- if .Params.keywords }}
+      {{ range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+      {{- else }}
+      {{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+      {{- end }}
     {{- end }}
   ],
   "wordCount" : "{{ .WordCount }}",
@@ -91,10 +78,11 @@
   {{- end -}}
   "datePublished": {{ .PublishDate }},
   "dateModified": {{ .Lastmod }},
-  {{- with (.Params.author | default site.Params.author) }}
+  {{- $explicitAuthor := .Params.author | default site.Params.author }}
+  {{- if $explicitAuthor }}
   "author":
-    {{- if (or (eq (printf "%T" .) "[]string") (eq (printf "%T" .) "[]interface {}")) -}}
-  [{{- range $i, $v := . -}}
+    {{- if (or (eq (printf "%T" $explicitAuthor) "[]string") (eq (printf "%T" $explicitAuthor) "[]interface {}")) -}}
+  [{{- range $i, $v := $explicitAuthor -}}
   {{- if $i }}, {{end -}}
   {
     "@type": "Person",
@@ -104,9 +92,16 @@
     {{- else -}}
   {
     "@type": "Person",
-    "name": {{ . }}
+    "name": {{ $explicitAuthor }}
   },
     {{- end -}}
+  {{- else if and (eq $citSrc.pageType "paper") (gt (len ($citSrc.authors | default slice)) 0) }}
+  "author": [{{- range $i, $v := $citSrc.authors -}}{{- if $i }}, {{ end -}}{ "@type": "Person", "name": {{ $v }} }{{- end }}],
+  {{- else }}
+  "author": {
+    "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
+    "name": {{ site.Title }}
+  },
   {{- end }}
   "mainEntityOfPage": {
     "@type": "WebPage",

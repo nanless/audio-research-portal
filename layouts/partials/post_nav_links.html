@@ -21,7 +21,7 @@
 {{- $curFile := "" -}}{{- with .File }}{{ $curFile = .Path }}{{ end -}}
 {{- $curKey := printf "%s|%s" .RelPermalink $curFile -}}
 {{- with index (site.Store.Get $navMemoKey) $curKey }}
-<nav class="paginav">
+<nav class="paginav" aria-label="上下篇导航">
   {{- with .next }}
   <a class="prev" href="{{ .permalink }}">
     <span class="title">« {{ i18n "prev_page" }}</span>

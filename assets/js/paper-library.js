@@ -66,7 +66,7 @@
     if (!match) return 'other';
     var slug = match[1];
     if (/^\d{4}-\d{2}-\d{2}$/.test(slug) || /(?:论文速递|音频研究门户|音频研究日报|每日音频研究)\s+\d{4}-\d{2}-\d{2}/.test(title)) return 'daily';
-    if (/^(icassp|iclr|icml)\d{4}-(summary|task-.+)$/.test(slug)) return 'conference';
+    if (/^(icassp|iclr|icml)\d{4}-(summary|task-.+)$/.test(slug) || /^conference-[a-z0-9-]+-20[0-9]{2}(?:-task-.+)?$/.test(slug)) return 'conference';
     return 'paper';
   }
 
@@ -288,10 +288,8 @@
   if (typeof window !== 'undefined' && typeof window.matchMedia === 'function') {
     var compactPanels = window.matchMedia('(max-width: 600px)');
     function syncCompactPanels() {
-      ['library-filter-panel', 'library-export-panel'].forEach(function (id) {
-        var detail = document.getElementById(id);
-        if (detail) detail.open = !compactPanels.matches;
-      });
+      var detail = document.getElementById('library-filter-panel');
+      if (detail) detail.open = !compactPanels.matches;
     }
     syncCompactPanels();
     if (compactPanels.addEventListener) compactPanels.addEventListener('change', syncCompactPanels);
@@ -480,7 +478,8 @@
 
     if (entry.score >= 0) {
       var score = document.createElement('span');
-      score.className = 'library-result__score';
+      var scoreTier = entry.score >= 8.0 ? ' library-result__score--high' : entry.score >= 7.0 ? ' library-result__score--good' : '';
+      score.className = 'library-result__score' + scoreTier;
       score.textContent = entry.score.toFixed(1).replace('.0', '') + '/10';
       score.setAttribute('aria-label', '本站评分 ' + score.textContent);
       article.appendChild(score);
@@ -627,7 +626,7 @@
   }
 
   function renderTree() {
-    if (!treeNode) return;
+    if (!treeNode || (panel && !panel.open)) return;
     treeNode.textContent = '';
     nodeViews = Object.create(null);
     facetViews = Object.create(null);
@@ -824,8 +823,10 @@
     button.addEventListener('click', function () {
       if (!graph || !graph.byId[button.dataset.concept]) return;
       var node = graph.byId[button.dataset.concept];
-      directions = { facets: {}, scope: 'subtree', role: 'any', error: '', requestedIds: [] };
-      directions.facets[node.facet] = [node.id];
+      var currentIds = selectedIds(directions);
+      var toggleOff = currentIds.length === 1 && currentIds[0] === node.id;
+      directions = { facets: {}, scope: 'subtree', role: 'any', domainScope: directions.domainScope || 'all', researchType: directions.researchType || 'all', error: '', requestedIds: [] };
+      if (!toggleOff) directions.facets[node.facet] = [node.id];
       draft = cloneDirections(directions);
       typeSelect.value = 'paper';
       applyFilters(false, true);
@@ -946,7 +947,13 @@
       var versions = payload.assets.versions;
       // 旧读取器只使用含概念数组的快照与已知旧目录，缺项时保持原降级范围。
       if (!registry || Array.isArray(registry) || !Array.isArray(registry.concepts)) registry = null;
-      if (versions && !['paper-tag-catalog-versions-v2', 'paper-taxonomy-version-catalog-v1'].includes(versions.contract)) versions = null;
+      if (versions) {
+        var protocols = typeof window !== 'undefined' ? window.PaperDigestProtocols : null;
+        var validVersions = protocols && typeof protocols.hasValidHeader === 'function'
+          ? protocols.hasValidHeader(versions, 'paper-tag-catalog-versions')
+          : ['paper-tag-catalog-versions', 'paper-tag-catalog-versions-v2', 'paper-taxonomy-version-catalog-v1'].includes(versions.contract);
+        if (!validVersions) versions = null;
+      }
       var seen = new Set();
       if (!Array.isArray(items)) throw new Error('Index must be an array');
       if (api && registry) {

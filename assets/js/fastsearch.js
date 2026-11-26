@@ -266,8 +266,26 @@ return loadIndex()
 }
 startLoad();
 
-input.addEventListener('input', search);
-input.addEventListener('search', search);
+let searchTimer = null;
+let composing = false;
+function scheduleSearch() {
+  if (searchTimer && typeof window.clearTimeout === 'function') window.clearTimeout(searchTimer);
+  if (typeof window.setTimeout === 'function') {
+    searchTimer = window.setTimeout(() => { searchTimer = null; search(); }, 120);
+  } else {
+    search();
+  }
+}
+input.addEventListener('compositionstart', () => { composing = true; });
+input.addEventListener('compositionend', () => { composing = false; scheduleSearch(); });
+input.addEventListener('input', (event) => {
+  if (composing || (event && event.isComposing)) return;
+  scheduleSearch();
+});
+input.addEventListener('search', () => {
+  if (searchTimer && typeof window.clearTimeout === 'function') window.clearTimeout(searchTimer);
+  search();
+});
 if (input.form) input.form.addEventListener('submit', (event) => { event.preventDefault(); search(); });
 window.addEventListener('popstate', () => {
   input.value = new URLSearchParams(window.location.search).get('q') || '';

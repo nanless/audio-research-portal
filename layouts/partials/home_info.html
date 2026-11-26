@@ -1,12 +1,34 @@
 {{- $posts := where site.RegularPages "Section" "posts" }}
 {{- $editions := slice }}
-{{- range $posts }}{{ if eq (partial "research_metadata.html" .).pageType "daily" }}{{ $editions = $editions | append . }}{{ end }}{{ end }}
+{{- $paperCount := 0 }}
+{{- range $posts }}
+  {{- $pt := (partial "research_metadata.html" .).pageType }}
+  {{- if eq $pt "daily" }}{{ $editions = $editions | append . }}{{ else if eq $pt "paper" }}{{ $paperCount = add $paperCount 1 }}{{ end }}
+{{- end }}
 {{- $latest := first 1 (sort $editions "Date" "desc") }}
+{{- $directory := index hugo.Data "conference-directory" }}
+{{- $confCount := 0 }}
+{{- with $directory.entries }}{{ $confCount = len . }}{{ end }}
+{{- $hubsPage := site.GetPage "/hubs" }}
+{{- $papersPage := site.GetPage "/papers" }}
+{{- $searchPage := site.GetPage "/search" }}
+{{- $tagsPage := site.GetPage "/tags" }}
+{{- $confsPage := site.GetPage "/conferences" }}
 <section class="edition-frontpage" aria-labelledby="research-home-title">
   <header class="edition-masthead">
-    <div class="rw-eyebrow">AUDIO RESEARCH PORTAL · 每日音频研究日志</div>
-    <h1 id="research-home-title">{{ site.Title }}</h1>
+    <div class="edition-masthead__identity">
+      <div class="rw-eyebrow">AUDIO RESEARCH PORTAL · 声学书房与精密研报</div>
+      <h1 id="research-home-title">{{ site.Title }}</h1>
+    </div>
+    {{- if or (gt $paperCount 0) (gt (len $editions) 0) (gt $confCount 0) }}
+    <div class="edition-masthead__telemetry" aria-label="站点语料统计">
+      {{- if gt $paperCount 0 }}<span class="masthead-stat"><strong>{{ $paperCount }}</strong> 篇论文</span>{{ end }}
+      {{- if gt (len $editions) 0 }}<span class="masthead-stat"><strong>{{ len $editions }}</strong> 期日报</span>{{ end }}
+      {{- if gt $confCount 0 }}<span class="masthead-stat"><strong>{{ $confCount }}</strong> 届顶会</span>{{ end }}
+    </div>
+    {{- else }}
     <p>每日精选研究 · 逐篇深入阅读 · 国际顶会专题</p>
+    {{- end }}
   </header>
   <div class="research-home-hero">
     {{- range $latest }}
@@ -16,50 +38,116 @@
     {{- end }}
     {{- $feature := partial "edition_feature_data.html" . }}
     <section class="edition-focus{{ if $feature }} edition-focus--illustrated{{ end }}" aria-labelledby="latest-edition-title">
-      <div class="edition-focus__topline"><span class="rw-eyebrow">最新一期 / DAILY EDITION</span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time></div>
+      <svg class="edition-focus__watermark" viewBox="0 0 640 220" preserveAspectRatio="none" aria-hidden="true">
+        <g stroke="currentColor" stroke-width="1" fill="none" opacity="0.16">
+          <path d="M0 110 Q40 42 80 110 T160 110 T240 110 T320 110 T400 110 T480 110 T560 110 T640 110"></path>
+          <path d="M0 110 Q32 168 64 110 T128 110 T192 110 T256 110 T320 110 T384 110 T448 110 T512 110 T576 110 T640 110" opacity="0.65"></path>
+          <line x1="0" y1="55" x2="640" y2="55" stroke-dasharray="3 6"></line>
+          <line x1="0" y1="110" x2="640" y2="110" stroke-dasharray="2 8"></line>
+          <line x1="0" y1="165" x2="640" y2="165" stroke-dasharray="3 6"></line>
+        </g>
+      </svg>
+      <div class="edition-focus__topline"><span class="edition-focus__badge">最新日报 · {{ .Date.Format "01-02" }}</span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time></div>
       <div class="edition-focus__date" aria-hidden="true"><span class="edition-focus__year">{{ .Date.Format "2006" }}</span><span class="edition-focus__day">{{ .Date.Format "01.02" }}</span></div>
       <h2 id="latest-edition-title">每日音频研究</h2>
-      <p class="research-home-hero__lead">{{ if $count }}<strong class="edition-focus__count">{{ $count }}</strong> 篇论文 · 本期全量目录与逐篇解读{{ else }}本期全量目录与逐篇解读{{ end }}</p>
+      <p class="research-home-hero__lead">{{ if $count }}<strong class="edition-focus__count">{{ $count }}</strong> 篇精选论文 · 来源封存目录与逐篇精读{{ else }}本期全量目录与逐篇精读{{ end }}</p>
       {{- if not $feature }}<p class="edition-focus__note">从研究概览进入，浏览完整排行，继续阅读每篇论文的方法、实验与局限。</p>{{ end }}
       <div class="edition-focus__actions research-home-hero__actions">
         <a class="rw-action rw-action--primary" href="{{ .RelPermalink }}">阅读本期完整日报 <span aria-hidden="true">↗</span></a>
         <a class="rw-action" href="#daily-editions">浏览往期 <span aria-hidden="true">↓</span></a>
       </div>
       {{- partial "edition_feature.html" $feature }}
-      <a class="edition-focus__latest" href="{{ .RelPermalink }}">最新日报 · {{ .Date.Format "01-02" }}</a>
     </section>
     {{- else }}
     <section class="edition-focus"><h2>每日音频研究</h2><p>从完整目录开始，逐篇阅读论文解读。</p><a class="rw-action" href="{{ "archives/" | relURL }}">浏览每日归档</a></section>
     {{- end }}
     <aside class="research-home-hero__panel portal-tools" aria-label="研究快捷入口">
-      <div class="portal-tools__intro"><div class="rw-eyebrow">你的研究工作台</div><h2>找到下一篇值得细读的论文</h2></div>
+      <div class="portal-tools__intro">
+        <div class="rw-eyebrow">RESEARCH WORKBENCH</div>
+        <h2>找到下一篇值得细读的论文</h2>
+      </div>
       <form class="home-search" action="{{ "papers/" | relURL }}" role="search">
         <label class="sr-only" for="home-query">搜索论文</label>
         <input id="home-query" type="search" name="q" placeholder="题目、arXiv / IEEE 编号" required>
-        <button class="rw-action rw-action--primary" type="submit">搜索论文</button>
+        <button class="rw-action rw-action--primary" type="submit">搜索</button>
       </form>
-      <div class="portal-tools__links"><a href="{{ "papers/" | absURL }}">浏览论文库 <span aria-hidden="true">↗</span></a><a href="{{ "search/" | relURL }}">全站搜索</a><a href="{{ "index.xml" | absURL }}">RSS 订阅</a></div>
       <div class="research-shortcuts">
-        <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.asr">语音识别<span>ASR · 包含下级方向</span></a>
-        <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.speech-synthesis">语音合成<span>TTS · 包含下级方向</span></a>
-        <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.audio-generation">音频生成<span>通用声音生成 · 包含下级方向</span></a>
+        <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.asr">语音识别<span>ASR · 流式与多语</span></a>
+        <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.speech-synthesis">语音合成<span>TTS · 克隆与韵律</span></a>
+        <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.audio-generation">音频生成<span>通用声音生成 · 下级方向</span></a>
         <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.music-generation">音乐生成<span>音频与符号音乐</span></a>
-        <a class="research-shortcut" href="{{ "conferences/" | absURL }}">会议论文集<span>按会议浏览 · 主题导航</span></a>
+        <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=task.speech-enhancement">语音增强<span>降噪 · 分离与去混响</span></a>
+        <a class="research-shortcut" href="{{ "papers/" | relURL }}?concept=model_family.audio-language">音频大模型<span>Audio LLM · 语音对话</span></a>
       </div>
-      <a class="portal-tools__directions" href="{{ "tags/" | relURL }}">展开全部研究方向 <span aria-hidden="true">→</span></a>
+      <div class="portal-tools__footer">
+        <div class="portal-tools__links">
+          <a href="{{ if $papersPage }}{{ $papersPage.RelPermalink }}{{ else }}{{ "papers/" | absURL }}{{ end }}">浏览论文库 <span aria-hidden="true">↗</span></a>
+          <a href="{{ if $searchPage }}{{ $searchPage.RelPermalink }}{{ else }}{{ "search/" | relURL }}{{ end }}">全站搜索</a>
+          {{- if $confsPage }}<a href="{{ $confsPage.RelPermalink }}">会议目录</a>{{ end }}
+          <a href="{{ "index.xml" | absURL }}">RSS 订阅</a>
+        </div>
+        <a class="portal-tools__directions" href="{{ if $tagsPage }}{{ $tagsPage.RelPermalink }}{{ else }}{{ "tags/" | relURL }}{{ end }}">展开全部九维研究方向 <span aria-hidden="true">→</span></a>
+      </div>
     </aside>
   </div>
 </section>
-{{- $directory := index hugo.Data "conference-directory" }}
+{{- if and $hubsPage (gt (len $hubsPage.RegularPages) 0) }}
+{{- $catalog := partialCached "related_catalog.html" "global" }}
+{{- $siteBasePath := (urls.Parse site.BaseURL).Path }}
+{{- if not (hasSuffix $siteBasePath "/") }}{{ $siteBasePath = printf "%s/" $siteBasePath }}{{ end }}
+{{- $rawHubs := index hugo.Data "sota-hubs-auto" | default dict }}
+{{- $hasLiveHubs := and (eq ($rawHubs.contract | default "") "sota-hubs-auto-v1") (eq ($rawHubs.basePath | default "") $siteBasePath) (eq (int ($rawHubs.totalN | default 0)) $catalog.totalN) (reflect.IsMap $rawHubs.hubs) }}
+{{- $hubMap := cond $hasLiveHubs ($rawHubs.hubs | default dict) dict }}
+<section class="hubs-home" aria-labelledby="hubs-home-title">
+  <div class="hubs-home__heading">
+    <div>
+      <div class="rw-eyebrow">RESEARCH HUBS · 核心方向榜单</div>
+      <h2 id="hubs-home-title">八大音频研究专题</h2>
+      <p>按已核验分类实时聚合高分精选、会议分布与近 6 个月收录趋势。</p>
+    </div>
+    <a class="rw-action" href="{{ $hubsPage.RelPermalink }}">全部专题与榜单 <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="hubs-home__grid">
+    {{- range $hubsPage.RegularPages.ByWeight }}
+    {{- $slug := .Params.hub_slug | default .File.BaseFileName }}
+    {{- $hub := index $hubMap $slug | default dict }}
+    {{- $shortTitle := replaceRE `（[^）]+）$` "" .Title }}
+    <a class="hubs-home__card" href="{{ .RelPermalink }}" data-hub-slug="{{ $slug }}">
+      <span class="hubs-home__title">{{ $shortTitle }}</span>
+      {{- with $hub.subtitle }}<span class="hubs-home__sub" lang="en">{{ . }}</span>{{ end }}
+      {{- if $hub }}
+      <span class="hubs-home__stats">
+        <span><strong>{{ $hub.totalPapers }}</strong> 篇</span>
+        <span><strong>{{ $hub.highScoreCount }}</strong> 高分</span>
+        <span><strong>{{ $hub.openSourceCount }}</strong> 开源</span>
+      </span>
+      {{- else }}
+      <span class="hubs-home__stats"><span>浏览专题榜单 →</span></span>
+      {{- end }}
+    </a>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
 <section class="conference-home" aria-labelledby="conference-home-title">
   <div class="conference-home__heading">
     <div><div class="rw-eyebrow">CONFERENCE COLLECTIONS</div><h2 id="conference-home-title">会议论文集</h2><p>沿会议总览、研究任务和完整论文目录继续阅读。{{ with $directory.entries }}<span>已收录 {{ len . }} 届会议。</span>{{ end }}</p></div>
-    <a class="rw-action" href="{{ "conferences/" | absURL }}">全部会议与筛选 <span aria-hidden="true">↗</span></a>
+    <a class="rw-action" href="{{ if $confsPage }}{{ $confsPage.RelPermalink }}{{ else }}{{ "conferences/" | absURL }}{{ end }}">全部会议与筛选 <span aria-hidden="true">↗</span></a>
   </div>
   {{- with $directory.entries }}
+  {{- $allConfs := . }}
   <nav class="conference-home__links" aria-label="已收录会议快捷入口">
-    {{- range . }}
-    <a class="conference-home__link" href="{{ strings.TrimPrefix "/" .summaryPath | relURL }}"><span>{{ .name }}</span><span class="conference-home__year">{{ .year }} <span aria-hidden="true">↗</span></span></a>
+    {{- range $allConfs }}
+    {{- $parent := partial "conference_parent.html" (dict "entry" . "entries" $allConfs) }}
+    {{- $anchor := . }}{{- if $parent }}{{ $anchor = $parent }}{{ end }}
+    {{- $grade := partial "conference_grade.html" $anchor }}
+    <a class="conference-home__link" href="{{ strings.TrimPrefix "/" .summaryPath | relURL }}">
+      <span class="conference-home__name">{{ .name }}</span>
+      <span class="conference-home__meta">
+        <span class="conference-home__grade" data-grade="{{ if $parent }}workshop{{ else }}{{ $grade }}{{ end }}">{{ if $parent }}WS{{ else if in (slice "A" "B" "C") $grade }}CCF {{ $grade }}{{ else }}专题{{ end }}</span>
+        <span class="conference-home__year">{{ .year }} <span aria-hidden="true">↗</span></span>
+      </span>
+    </a>
     {{- end }}
   </nav>
   {{- end }}

@@ -1,39 +1,41 @@
-/* Wave 14.2B (SOTA Hubs) & Wave 14.3 (Daily Podcast Player) */
+/* Wave 14.2B (SOTA Hubs) & Wave 14.3 (Daily Podcast Player) — Studio Monograph Tokens */
 .sota-hubs-directory,
 .sota-hub-page {
-  max-width: 1060px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 8px 0 32px;
+  padding: 6px 0 36px;
 }
 
 .sota-hubs-directory__header,
 .sota-hub-header {
   padding-bottom: 20px;
   border-bottom: 1px solid var(--rw-border, var(--border));
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .sota-hubs-directory__header h1,
 .sota-hub-header h1 {
   font-family: var(--portal-serif, Georgia, serif);
-  font-size: clamp(28px, 3.6vw, 38px);
+  font-size: clamp(28px, 3.4vw, 38px);
   line-height: 1.25;
+  color: var(--rw-text, var(--primary));
   margin: 8px 0 10px;
+  letter-spacing: -0.02em;
 }
 
 .sota-hubs-directory__lead,
 .sota-hub-header__desc {
-  color: var(--secondary);
-  font-size: 16px;
-  line-height: 1.7;
+  color: var(--rw-muted, var(--secondary));
+  font-size: 15.5px;
+  line-height: 1.72;
   max-width: 72ch;
 }
 
 .sota-hub-header__subtitle,
 .sota-hub-card__subtitle {
-  color: var(--secondary);
-  font-size: 13.5px;
-  letter-spacing: 0.01em;
+  color: var(--rw-muted, var(--secondary));
+  font-size: 13px;
+  letter-spacing: 0.015em;
   margin: 0 0 8px;
 }
 
@@ -42,20 +44,44 @@
   flex-wrap: wrap;
   gap: 8px 10px;
   margin-top: 14px;
-  font-size: 14px;
-  color: var(--secondary);
+  font-size: 13.5px;
+  color: var(--rw-muted, var(--secondary));
+  font-variant-numeric: tabular-nums;
+}
+
+.sota-hubs-directory__summary strong {
+  color: var(--rw-text, var(--primary));
 }
 
 .sota-hubs-directory__notice,
 .sota-hub-fallback {
   margin-top: 14px;
-  padding: 12px 16px;
+  padding: 14px 18px;
   border: 1px solid var(--rw-border, var(--border));
-  border-radius: 10px;
-  background: var(--entry);
-  color: var(--secondary);
+  border-radius: 12px;
+  background: var(--rw-surface, var(--entry));
+  color: var(--rw-muted, var(--secondary));
   font-size: 14px;
 }
+
+/* Per-hub domain accent palette */
+[data-hub-slug="asr"] { --hub-accent: #0f5c58; }
+[data-hub-slug="tts"] { --hub-accent: #b85a34; }
+[data-hub-slug="speech-enhancement"] { --hub-accent: #256380; }
+[data-hub-slug="audio-llm"] { --hub-accent: #6c4ea6; }
+[data-hub-slug="music-mir"] { --hub-accent: #9e4569; }
+[data-hub-slug="spatial-audio"] { --hub-accent: #2e6f56; }
+[data-hub-slug="audio-understanding"] { --hub-accent: #9a6d20; }
+[data-hub-slug="voice-conversion"] { --hub-accent: #4c5ea8; }
+
+:is(:root[data-theme="dark"], :root.dark, body.dark) [data-hub-slug="asr"] { --hub-accent: #54c4ba; }
+:is(:root[data-theme="dark"], :root.dark, body.dark) [data-hub-slug="tts"] { --hub-accent: #e39b6d; }
+:is(:root[data-theme="dark"], :root.dark, body.dark) [data-hub-slug="speech-enhancement"] { --hub-accent: #6cb8de; }
+:is(:root[data-theme="dark"], :root.dark, body.dark) [data-hub-slug="audio-llm"] { --hub-accent: #b49be8; }
+:is(:root[data-theme="dark"], :root.dark, body.dark) [data-hub-slug="music-mir"] { --hub-accent: #e38aae; }
+:is(:root[data-theme="dark"], :root.dark, body.dark) [data-hub-slug="spatial-audio"] { --hub-accent: #6fd1a6; }
+:is(:root[data-theme="dark"], :root.dark, body.dark) [data-hub-slug="audio-understanding"] { --hub-accent: #e4be6d; }
+:is(:root[data-theme="dark"], :root.dark, body.dark) [data-hub-slug="voice-conversion"] { --hub-accent: #90a6ee; }
 
 .sota-hubs-grid {
   display: grid;
@@ -69,28 +95,40 @@
   gap: 12px;
   padding: 20px 22px;
   border: 1px solid var(--rw-border, var(--border));
+  border-top: 3px solid var(--hub-accent, var(--rw-brand, var(--primary)));
   border-radius: 12px;
-  background: var(--entry);
+  background: var(--rw-surface, var(--entry));
+  box-shadow: var(--rw-shadow-sm, none);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.sota-hub-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--rw-shadow-md, 0 8px 24px rgba(0, 0, 0, 0.08));
+  border-color: color-mix(in srgb, var(--hub-accent, var(--rw-brand)) 42%, var(--rw-border));
 }
 
 .sota-hub-card__title {
   font-family: var(--portal-serif, Georgia, serif);
-  font-size: 20px;
-  line-height: 1.35;
+  font-size: 19.5px;
+  line-height: 1.38;
   margin: 0 0 4px;
 }
 
 .sota-hub-card__title a {
+  color: var(--rw-text, var(--primary));
   text-decoration: none;
 }
 
 .sota-hub-card__title a:hover {
+  color: var(--hub-accent, var(--rw-brand));
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .sota-hub-card__desc {
   margin: 0;
-  color: var(--secondary);
+  color: var(--rw-muted, var(--secondary));
   font-size: 14px;
   line-height: 1.65;
 }
@@ -107,7 +145,7 @@
 
 .sota-hub-card__kpis dt {
   font-size: 11.5px;
-  color: var(--secondary);
+  color: var(--rw-muted, var(--secondary));
   margin-bottom: 2px;
 }
 
@@ -115,6 +153,7 @@
   margin: 0;
   font-size: 18px;
   font-weight: 700;
+  color: var(--rw-text, var(--primary));
   font-variant-numeric: tabular-nums;
 }
 
@@ -129,24 +168,27 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 3px 9px;
+  padding: 4px 10px;
   border-radius: 999px;
   border: 1px solid var(--rw-border, var(--border));
-  background: var(--theme);
+  background: var(--rw-surface-subtle, var(--theme));
   font-size: 12.5px;
-  color: var(--primary);
+  color: var(--rw-text, var(--primary));
   text-decoration: none;
+  transition: border-color 0.14s ease, background-color 0.14s ease;
 }
 
 .sota-hub-chip em {
   font-style: normal;
   font-variant-numeric: tabular-nums;
-  color: var(--secondary);
+  color: var(--rw-muted, var(--secondary));
   font-size: 11.5px;
 }
 
 .sota-hub-chip--link:hover {
-  border-color: var(--primary);
+  border-color: var(--hub-accent, var(--rw-brand));
+  background: var(--rw-brand-soft, var(--theme));
+  color: var(--rw-brand, var(--primary));
 }
 
 .sota-hub-card__actions,
@@ -161,15 +203,26 @@
 .sota-hub-card__rss {
   margin-left: auto;
   font-size: 13px;
-  color: var(--secondary);
+  font-weight: 600;
+  color: var(--rw-muted, var(--secondary));
   text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sota-hub-card__rss:hover {
+  color: var(--rw-brand, var(--primary));
 }
 
 .sota-hubs-directory__note {
   margin: 24px 0 18px;
   font-size: 13px;
-  color: var(--secondary);
+  color: var(--rw-muted, var(--secondary));
   line-height: 1.65;
+}
+
+.sota-hub-page .sota-hub-header {
+  border-top: 3px solid var(--hub-accent, var(--rw-brand));
+  padding-top: 18px;
 }
 
 .sota-hub-kpis {
@@ -183,19 +236,21 @@
   padding: 16px 18px;
   border: 1px solid var(--rw-border, var(--border));
   border-radius: 12px;
-  background: var(--entry);
+  background: var(--rw-surface, var(--entry));
+  box-shadow: var(--rw-shadow-xs, none);
 }
 
 .sota-hub-kpi__label {
   display: block;
   font-size: 12.5px;
-  color: var(--secondary);
+  color: var(--rw-muted, var(--secondary));
   margin-bottom: 4px;
 }
 
 .sota-hub-kpi__value {
   font-size: 28px;
   line-height: 1.15;
+  color: var(--rw-text, var(--primary));
   font-variant-numeric: tabular-nums;
 }
 
@@ -211,11 +266,14 @@
   padding: 18px 20px;
   border: 1px solid var(--rw-border, var(--border));
   border-radius: 12px;
-  background: var(--entry);
+  background: var(--rw-surface, var(--entry));
+  box-shadow: var(--rw-shadow-xs, none);
 }
 
 .sota-hub-panel h2 {
-  font-size: 16px;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--rw-text, var(--primary));
   margin: 0 0 12px;
 }
 
@@ -233,6 +291,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
+  color: var(--rw-text, var(--primary));
   padding-bottom: 6px;
   border-bottom: 1px dashed var(--rw-border, var(--border));
 }
@@ -244,18 +303,25 @@
 
 .sota-hub-trend-item {
   display: grid;
-  grid-template-columns: 70px minmax(0, 1fr) 40px;
+  grid-template-columns: 72px minmax(0, 1fr) 40px;
   align-items: center;
   gap: 10px;
   font-size: 13.5px;
+  color: var(--rw-text, var(--primary));
   font-variant-numeric: tabular-nums;
+}
+
+.sota-hub-trend-month {
+  font-family: var(--font-mono, monospace);
+  font-size: 12.5px;
+  color: var(--rw-muted, var(--secondary));
 }
 
 .sota-hub-trend-bar-track {
   display: block;
-  height: 9px;
+  height: 10px;
   border-radius: 999px;
-  background: var(--theme);
+  background: var(--rw-surface-subtle, var(--theme));
   border: 1px solid var(--rw-border, var(--border));
   overflow: hidden;
 }
@@ -263,12 +329,14 @@
 .sota-hub-trend-bar-fill {
   display: block;
   height: 100%;
-  background: var(--primary);
+  background: linear-gradient(90deg, var(--hub-accent, var(--rw-brand)), color-mix(in srgb, var(--hub-accent, var(--rw-brand)) 62%, var(--rw-accent, #b85a34)));
   border-radius: 999px;
 }
 
 .sota-hub-trend-count {
   text-align: right;
+  font-family: var(--font-mono, monospace);
+  font-size: 13px;
 }
 
 .sota-hub-jump {
@@ -279,12 +347,24 @@
 }
 
 .sota-hub-jump a {
-  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 6px 14px;
   border-radius: 999px;
   border: 1px solid var(--rw-border, var(--border));
-  background: var(--entry);
+  background: var(--rw-surface, var(--entry));
+  color: var(--rw-text, var(--primary));
   font-size: 13.5px;
+  font-weight: 600;
   text-decoration: none;
+  transition: border-color 0.14s ease, background-color 0.14s ease, color 0.14s ease;
+}
+
+.sota-hub-jump a:hover {
+  border-color: var(--hub-accent, var(--rw-brand));
+  background: var(--rw-brand-soft, var(--theme));
+  color: var(--rw-brand, var(--primary));
 }
 
 .sota-hub-section,
@@ -296,6 +376,7 @@
 .sota-hub-concepts h2 {
   font-family: var(--portal-serif, Georgia, serif);
   font-size: 22px;
+  color: var(--rw-text, var(--primary));
   margin: 0 0 14px;
 }
 
@@ -308,10 +389,17 @@
 }
 
 .sota-hub-paper-item {
-  padding: 14px 16px;
+  padding: 16px 18px;
   border: 1px solid var(--rw-border, var(--border));
-  border-radius: 10px;
-  background: var(--entry);
+  border-radius: 12px;
+  background: var(--rw-surface, var(--entry));
+  box-shadow: var(--rw-shadow-xs, none);
+  transition: border-color 0.14s ease, transform 0.14s ease;
+}
+
+.sota-hub-paper-item:hover {
+  border-color: color-mix(in srgb, var(--hub-accent, var(--rw-brand)) 45%, var(--rw-border));
+  transform: translateY(-1px);
 }
 
 .sota-hub-paper-item__top {
@@ -325,12 +413,15 @@
 .sota-hub-paper-item__title {
   font-weight: 650;
   font-size: 16px;
-  line-height: 1.45;
+  line-height: 1.48;
+  color: var(--rw-text, var(--primary));
   text-decoration: none;
 }
 
 .sota-hub-paper-item__title:hover {
+  color: var(--rw-brand, var(--primary));
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .sota-hub-paper-item__badges {
@@ -340,50 +431,62 @@
 }
 
 .sota-hub-badge {
-  padding: 2px 8px;
+  padding: 2px 9px;
   border-radius: 999px;
   font-size: 12px;
   border: 1px solid var(--rw-border, var(--border));
-  background: var(--theme);
-  color: var(--secondary);
+  background: var(--rw-surface-subtle, var(--theme));
+  color: var(--rw-muted, var(--secondary));
   font-variant-numeric: tabular-nums;
 }
 
 .sota-hub-badge--score {
-  color: var(--primary);
-  font-weight: 650;
+  background: var(--rw-brand-soft, var(--theme));
+  border-color: color-mix(in srgb, var(--rw-brand, var(--primary)) 28%, var(--rw-border));
+  color: var(--rw-brand, var(--primary));
+  font-weight: 700;
 }
 
-.sota-hub-badge--oss,
+.sota-hub-badge--oss {
+  background: var(--rw-brand-soft, var(--theme));
+  color: var(--rw-brand, var(--primary));
+  font-weight: 600;
+}
+
 .sota-hub-badge--demo {
-  color: var(--primary);
+  background: var(--rw-accent-soft, var(--theme));
+  color: var(--rw-accent, var(--primary));
+  font-weight: 600;
 }
 
 .sota-hub-paper-item__summary {
-  margin: 6px 0 4px;
+  margin: 6px 0 6px;
   font-size: 14px;
-  color: var(--secondary);
-  line-height: 1.6;
+  color: var(--rw-muted, var(--secondary));
+  line-height: 1.65;
 }
 
 .sota-hub-paper-item__meta {
   margin: 0;
   font-size: 12.5px;
-  color: var(--secondary);
+  color: var(--rw-muted, var(--secondary));
+  font-variant-numeric: tabular-nums;
 }
 
 .sota-hub-empty {
-  color: var(--secondary);
+  color: var(--rw-muted, var(--secondary));
   font-size: 14px;
 }
 
-/* Wave 14.3 Daily Podcast Player (strictly outside #article-body) */
+/* Wave 14.3 Daily Podcast Player — Studio Audio Deck (strictly outside #article-body) */
 .daily-podcast-card {
-  margin: 0 0 22px;
-  padding: 20px 22px;
-  border: 1px solid var(--rw-border, var(--border));
+  margin: 0 0 24px;
+  padding: 20px 24px;
+  border: 1px solid color-mix(in srgb, var(--rw-brand, var(--border)) 28%, var(--rw-border));
+  border-top: 3px solid var(--rw-accent, var(--rw-brand));
   border-radius: 14px;
-  background: var(--entry);
+  background: linear-gradient(160deg, var(--rw-surface, var(--entry)), color-mix(in srgb, var(--rw-brand-soft, transparent) 38%, var(--rw-surface, var(--entry))));
+  box-shadow: var(--rw-shadow-sm, none);
 }
 
 .daily-podcast-card__header {
@@ -397,32 +500,42 @@
 
 .daily-podcast-card__eyebrow {
   margin: 0 0 4px;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--rw-accent, var(--rw-muted));
 }
 
 .daily-podcast-card__title {
   margin: 0;
   font-family: var(--portal-serif, Georgia, serif);
   font-size: 20px;
-  line-height: 1.35;
+  line-height: 1.38;
+  color: var(--rw-text, var(--primary));
 }
 
 .daily-podcast-card__meta {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 13px;
-  color: var(--secondary);
+  font-family: var(--font-mono, monospace);
+  font-size: 12.5px;
+  color: var(--rw-muted, var(--secondary));
   font-variant-numeric: tabular-nums;
+}
+
+.daily-podcast-card__duration {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--rw-surface-subtle, var(--theme));
+  border: 1px solid var(--rw-border, var(--border));
 }
 
 .daily-podcast-card__summary {
   margin: 0 0 14px;
   font-size: 14px;
   line-height: 1.65;
-  color: var(--secondary);
+  color: var(--rw-muted, var(--secondary));
 }
 
 .daily-podcast-card__controls {
@@ -432,7 +545,8 @@
 
 .daily-podcast-card__audio {
   width: 100%;
-  min-height: 42px;
+  min-height: 44px;
+  border-radius: 10px;
 }
 
 .daily-podcast-card__toolbar {
@@ -451,27 +565,40 @@
 }
 
 .daily-podcast-card__rates-label {
-  font-size: 13px;
-  color: var(--secondary);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--rw-muted, var(--secondary));
   margin-right: 4px;
 }
 
 .daily-podcast-card__rate {
-  padding: 4px 10px;
+  min-height: 36px;
+  padding: 4px 11px;
   border-radius: 999px;
   border: 1px solid var(--rw-border, var(--border));
-  background: var(--theme);
-  color: var(--primary);
+  background: var(--rw-surface, var(--theme));
+  color: var(--rw-text, var(--primary));
+  font-family: var(--font-mono, monospace);
   font-size: 12.5px;
   font-variant-numeric: tabular-nums;
   cursor: pointer;
+  transition: background-color 0.14s ease, border-color 0.14s ease, color 0.14s ease;
+}
+
+.daily-podcast-card__rate:hover {
+  border-color: var(--rw-brand, var(--primary));
+  color: var(--rw-brand, var(--primary));
 }
 
 .daily-podcast-card__rate.is-active {
-  background: var(--primary);
-  color: var(--theme);
-  border-color: var(--primary);
-  font-weight: 600;
+  background: var(--rw-brand, var(--primary));
+  color: #ffffff;
+  border-color: var(--rw-brand, var(--primary));
+  font-weight: 650;
+}
+
+:is(:root[data-theme="dark"], :root.dark, body.dark) .daily-podcast-card__rate.is-active {
+  color: #0d1112;
 }
 
 .daily-podcast-card__chapters {
@@ -483,8 +610,8 @@
 .daily-podcast-card__chapters-title {
   margin: 0 0 10px;
   font-size: 13px;
-  font-weight: 600;
-  color: var(--secondary);
+  font-weight: 650;
+  color: var(--rw-muted, var(--secondary));
 }
 
 .daily-podcast-card__chapter-list {
@@ -508,32 +635,45 @@
   align-items: baseline;
   gap: 10px;
   text-align: left;
-  padding: 7px 10px;
+  min-height: 40px;
+  padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid var(--rw-border, var(--border));
-  background: var(--theme);
-  color: var(--primary);
+  background: var(--rw-surface, var(--theme));
+  color: var(--rw-text, var(--primary));
   font-size: 13.5px;
   cursor: pointer;
+  transition: border-color 0.14s ease, background-color 0.14s ease;
+}
+
+.daily-podcast-card__chapter-btn:hover {
+  border-color: var(--rw-brand, var(--primary));
+  background: var(--rw-brand-soft, var(--theme));
 }
 
 .daily-podcast-card__chapter-btn.is-active {
-  border-color: var(--primary);
-  font-weight: 600;
+  border-color: var(--rw-brand, var(--primary));
+  background: var(--rw-brand-soft, var(--theme));
+  color: var(--rw-brand, var(--primary));
+  font-weight: 650;
 }
 
 .daily-podcast-card__chapter-time {
   font-family: var(--font-mono, monospace);
   font-size: 12px;
-  color: var(--secondary);
+  color: var(--rw-accent, var(--secondary));
   font-variant-numeric: tabular-nums;
   flex-shrink: 0;
 }
 
 .daily-podcast-card__chapter-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
   font-size: 12.5px;
-  color: var(--secondary);
+  color: var(--rw-brand, var(--secondary));
   text-decoration: underline;
+  text-underline-offset: 3px;
   white-space: nowrap;
 }
 
@@ -546,6 +686,12 @@
   .sota-hub-kpis,
   .sota-hub-card__kpis {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .daily-podcast-card__rate,
+  .sota-hub-jump a,
+  .daily-podcast-card__chapter-link {
+    min-height: 44px;
+    padding-inline: 14px;
   }
 }
 

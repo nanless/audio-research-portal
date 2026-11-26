@@ -5,7 +5,7 @@
     <div class="rw-eyebrow">{{ .Params.kicker | default "研究指南" }}</div>
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p class="reader-guide-lead">{{ . }}</p>{{ end }}
-    {{ with .Params.guide_actions }}<div class="reader-guide-actions" aria-label="开始使用">{{ range . }}<a class="rw-action" href="{{ .url | relURL }}">{{ .label }}</a>{{ end }}</div>{{ end }}
+    {{ with .Params.guide_actions }}<div class="reader-guide-actions" aria-label="开始使用">{{ range . }}{{- if or (ne .url "hubs/") (site.GetPage "/hubs") }}<a class="rw-action" href="{{ .url | relURL }}">{{ .label }}</a>{{- end }}{{ end }}</div>{{ end }}
     {{ with .TableOfContents }}<div class="reader-guide-nav" aria-label="本页目录">{{ . }}</div>{{ end }}
   </header>
   <div class="post-content md-content reader-guide-content">{{ partial "anchored_headings.html" .Content }}</div>

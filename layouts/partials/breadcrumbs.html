@@ -7,6 +7,9 @@
     {{ if eq $metadata.pageType "daily" }}<span aria-hidden="true"> › </span><a href="{{ "archives/" | relURL }}">日更归档</a>
     {{ else if or $conference (eq $metadata.pageType "conference") }}<span aria-hidden="true"> › </span><a href="{{ "conferences/" | relURL }}">会议论文集</a>{{ with $conference }}{{ if ne .summary.RelPermalink $.RelPermalink }}<span aria-hidden="true"> › </span><a href="{{ .summary.RelPermalink }}">{{ .entry.name }} {{ .entry.year }}</a>{{ end }}{{ end }}
     {{ else }}<span aria-hidden="true"> › </span><a href="{{ "papers/" | relURL }}">论文库</a>{{ end }}
+  {{ else if eq .Section "hubs" }}
+    {{ if .IsSection }}<span aria-hidden="true"> › </span><span aria-current="page">专题导航</span>
+    {{ else }}<span aria-hidden="true"> › </span><a href="{{ "hubs/" | relURL }}">专题导航</a><span aria-hidden="true"> › </span><span aria-current="page">{{ .Title }}</span>{{ end }}
   {{ end }}
   {{ if eq .Kind "term" }}<span aria-hidden="true"> › </span><a href="{{ printf "%s/" .Type | relURL }}">{{ if eq .Type "categories" }}分类{{ else }}研究主题{{ end }}</a>{{ end }}
 </nav>

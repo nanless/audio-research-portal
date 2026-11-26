@@ -174,6 +174,6 @@
       });
     }
   });
-  if (document.readyState !== 'complete') document.addEventListener('DOMContentLoaded', init, { once: true });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
   else init();
 })();

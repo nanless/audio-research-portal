@@ -115,7 +115,7 @@
   {{- $titles := slice (partial "research_normalized_title.html" ($headline | markdownify | plainify | htmlUnescape)) (partial "research_normalized_title.html" ($original | plainify | htmlUnescape)) -}}
   {{- with findRE `(?s)^\s*<h1\b[^>]*>.*?</h1>` $content 1 -}}
     {{- $first := index . 0 -}}
-    {{- $label := partial "research_normalized_title.html" ($first | plainify | htmlUnescape) -}}
+    {{- $label := partial "research_normalized_title.html" (replaceRE `^📄[ \t]*` "" (strings.TrimSpace ($first | plainify | htmlUnescape))) -}}
     {{- if and $label (in $titles $label) -}}
       {{- $anchor := replaceRE `(?s)^\s*<h1([^>]*)>.*?</h1>$` `<span${1} aria-hidden="true"></span>` $first -}}
       {{- $content = printf "%s%s" $anchor (strings.TrimPrefix $first $content) -}}

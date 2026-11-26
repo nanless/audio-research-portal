@@ -41,8 +41,18 @@
       snapshot = JSON.parse(snapshotNode.textContent);
       var versionsNode = hasNewAssets ? newVersionsNode : hasNeutralAssets ? oldVersionsNode : document.getElementById('taxonomy-catalog-data');
       var versions = versionsNode ? JSON.parse(versionsNode.textContent) : undefined;
-      if (hasNewAssets && (!snapshot || snapshot.contract !== 'paper-tag-catalog-snapshot-v2'
-        || !versions || versions.contract !== 'paper-tag-catalog-versions-v2')) throw new Error('新版标签显示资源的格式不受支持。');
+      var protocols = typeof window !== 'undefined' ? window.PaperDigestProtocols : null;
+      var validSnapshot = !!(snapshot && typeof snapshot === 'object' && !Array.isArray(snapshot) && (
+        protocols && typeof protocols.hasValidHeader === 'function'
+          ? (protocols.hasValidHeader(snapshot, 'paper-tag-catalog-snapshot') && ['paper-tag-catalog-snapshot', 'paper-tag-catalog-snapshot-v2'].includes(snapshot.contract))
+          : ['paper-tag-catalog-snapshot', 'paper-tag-catalog-snapshot-v2'].includes(snapshot.contract)
+      ));
+      var validVersions = !!(versions && typeof versions === 'object' && !Array.isArray(versions) && (
+        protocols && typeof protocols.hasValidHeader === 'function'
+          ? (protocols.hasValidHeader(versions, 'paper-tag-catalog-versions') && ['paper-tag-catalog-versions', 'paper-tag-catalog-versions-v2'].includes(versions.contract))
+          : ['paper-tag-catalog-versions', 'paper-tag-catalog-versions-v2'].includes(versions.contract)
+      ));
+      if (hasNewAssets && (!validSnapshot || !validVersions)) throw new Error('新版标签显示资源的格式不受支持。');
       graph = core.createRegistry(snapshot, versions);
     }
     catch (_error) {

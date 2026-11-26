@@ -1,4 +1,5 @@
 {{- $source := partial "citation_source.html" . -}}
+{{- $meta := partial "research_metadata.html" . -}}
 {{- if and (eq $source.pageType "paper") (eq $source.identityStatus "verified") $source.url -}}
 <meta name="citation_title" content="{{ $source.title }}">
 {{- range $source.authors }}<meta name="citation_author" content="{{ . }}">{{ end }}
@@ -8,7 +9,7 @@
 {{- with $source.arxivId }}<meta name="citation_arxiv_id" content="{{ . }}">{{ end }}
 {{- with $source.doi }}<meta name="citation_doi" content="{{ . }}">{{ end }}
 {{- with $source.venue }}<meta name="citation_conference_title" content="{{ . }}">{{ end }}
-{{- with .Params.tags }}<meta name="citation_keywords" content="{{ delimit . ", " | plainify }}">{{ end }}
+{{- if and .Params.tags (ne ($meta.tagPublicationStatus | default "") "withheld") }}<meta name="citation_keywords" content="{{ delimit .Params.tags ", " | plainify }}">{{ end }}
 {{- $authors := slice -}}{{- range $source.authors }}{{ $authors = $authors | append (dict "@type" "Person" "name" .) }}{{ end -}}
 {{- $schema := dict "@context" "https://schema.org" "@type" "ScholarlyArticle" "@id" $source.url "name" $source.title "url" $source.url "identifier" $source.paperKey -}}
 {{- with $authors }}{{ $schema = merge $schema (dict "author" .) }}{{ end -}}

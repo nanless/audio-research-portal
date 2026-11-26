@@ -507,8 +507,12 @@ test('P2 Blog UI enhances executive abstract, compact authors, collapsible third
     assert.ok(!codeMasked.includes('**'), 'no raw ** emphasis residue');
   }
 
-  const siblingGateScript = path.resolve(BLOG_ROOT, '..', 'audio-paper-digest', 'scripts', 'markdown_hugo_gate.py');
-  if (fs.existsSync(siblingGateScript)) {
+  const siblingGateCandidates = [
+    path.resolve(BLOG_ROOT, '..', 'audio-research-workbench', 'scripts', 'markdown_hugo_gate.py'),
+    path.resolve(BLOG_ROOT, '..', 'audio-paper-digest', 'scripts', 'markdown_hugo_gate.py')
+  ];
+  const siblingGateScript = siblingGateCandidates.find((p) => fs.existsSync(p));
+  if (siblingGateScript) {
     const pyCheck = [
       'import sys, json',
       'from pathlib import Path',

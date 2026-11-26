@@ -1,31 +1,65 @@
 {{- if not (.Param "hideFooter") }}
-<footer class="footer">
-    {{- if not site.Params.footer.hideCopyright }}
-        {{- if site.Copyright }}
-        <span>{{ site.Copyright | markdownify }}</span>
-        {{- else }}
-        <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
-        {{- end }}
-        {{- print " · "}}
-    {{- end }}
+{{- $pPapers := site.GetPage "/papers" -}}
+{{- $pHubs := site.GetPage "/hubs" -}}
+{{- $pConfs := site.GetPage "/conferences" -}}
+{{- $pTags := site.GetPage "/tags" -}}
+{{- $pArchives := site.GetPage "/archives" -}}
+{{- $pAbout := site.GetPage "/about" -}}
+{{- $pLinks := site.GetPage "/links" -}}
+{{- $rssFormat := site.Home.OutputFormats.Get "rss" -}}
+{{- $hiRssFormat := site.Home.OutputFormats.Get "RSSHighScore" -}}
+<footer class="footer studio-footer">
+    <div class="studio-footer__inner">
+        <div class="studio-footer__top">
+            <div class="studio-footer__brand">
+                <a class="studio-footer__title" href="{{ "" | absLangURL }}">{{ site.Title }}</a>
+                <p class="studio-footer__tagline">每日核验发布的语音、音乐与声学 AI 论文深度研究门户</p>
+            </div>
+            {{- if or $pPapers $pHubs $pConfs $pTags $pArchives $pAbout $pLinks $rssFormat }}
+            <nav class="studio-footer__nav" aria-label="页脚导航">
+                {{- with $pPapers }}<a href="{{ .RelPermalink }}">论文库</a>{{ end }}
+                {{- with $pHubs }}<a href="{{ .RelPermalink }}">专题导航</a>{{ end }}
+                {{- with $pConfs }}<a href="{{ .RelPermalink }}">会议论文集</a>{{ end }}
+                {{- with $pTags }}<a href="{{ .RelPermalink }}">研究方向</a>{{ end }}
+                {{- with $pArchives }}<a href="{{ .RelPermalink }}">每日归档</a>{{ end }}
+                {{- with $pAbout }}<a href="{{ .RelPermalink }}">使用方法</a>{{ end }}
+                {{- with $pLinks }}<a href="{{ .RelPermalink }}">资源指南</a>{{ end }}
+                {{- with $rssFormat }}<a href="{{ .RelPermalink }}">RSS</a>{{ end }}
+                {{- with $hiRssFormat }}<a href="{{ .RelPermalink }}">高分精选</a>{{ end }}
+            </nav>
+            {{- end }}
+        </div>
+        <div class="studio-footer__bottom">
+            <div class="studio-footer__meta">
+                {{- if not site.Params.footer.hideCopyright }}
+                    {{- if site.Copyright }}
+                    <span>{{ site.Copyright | markdownify }}</span>
+                    {{- else }}
+                    <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
+                    {{- end }}
+                    {{- print " · "}}
+                {{- end }}
 
-    {{- with site.Params.footer.text }}
-        {{ . | markdownify }}
-        {{- print " · "}}
-    {{- end }}
+                {{- with site.Params.footer.text }}
+                    <span>{{ . | markdownify }}</span>
+                    {{- print " · "}}
+                {{- end }}
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
+                <span>
+                    Powered by
+                    <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &amp;
+                    <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener noreferrer" target="_blank">PaperMod</a>
+                </span>
+            </div>
+        </div>
+    </div>
 </footer>
 {{- end }}
 
 {{- if (not site.Params.disableScrollToTop) }}
 <a href="#top" id="top-link" class="top-link hidden" aria-label="回到顶部" title="回到顶部 (Alt + G)" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up" aria-hidden="true">
         <polyline points="17 11 12 6 7 11"></polyline>
         <polyline points="17 18 12 13 7 18"></polyline>
     </svg>
@@ -80,79 +114,95 @@
 
 {{- if (not site.Params.disableScrollToTop) }}
 <script>
-    var toplink = document.getElementById("top-link");
-    window.onscroll = function () {
-        const scrollThreshold = window.innerHeight;
-        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
-            toplink.classList.remove("hidden");
-        } else {
-            toplink.classList.add("hidden");
+    (function () {
+        var toplink = document.getElementById("top-link");
+        if (!toplink) return;
+        function syncTopLink() {
+            var scrollThreshold = window.innerHeight || 600;
+            if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+                toplink.classList.remove("hidden");
+            } else {
+                toplink.classList.add("hidden");
+            }
         }
-    };
-
+        window.addEventListener("scroll", syncTopLink, { passive: true });
+        syncTopLink();
+    }());
 </script>
 {{- end }}
 
 {{- if (not site.Params.disableThemeToggle) }}
 <script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
+    (function () {
+        var toggle = document.getElementById("theme-toggle");
+        if (!toggle) return;
+        function syncGiscusTheme(theme) {
+            var iframe = document.querySelector("iframe.giscus-frame");
+            if (iframe && iframe.contentWindow) {
+                iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: theme } } }, "https://giscus.app");
+            }
         }
-    })
-
+        toggle.addEventListener("click", function () {
+            var html = document.documentElement;
+            var next = html.dataset.theme === "dark" ? "light" : "dark";
+            html.dataset.theme = next;
+            try { localStorage.setItem("pref-theme", next); } catch (_) {}
+            toggle.setAttribute("aria-pressed", String(next === "dark"));
+            syncGiscusTheme(next);
+        });
+    }());
 </script>
 {{- end }}
 
 {{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (.Param "ShowCodeCopyButtons")) }}
 <script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
+    document.querySelectorAll('pre > code').forEach(function (codeblock) {
+        var container = codeblock.parentNode && codeblock.parentNode.parentNode;
+        if (!container) return;
 
-        const copybutton = document.createElement('button');
+        var copyLabel = '{{- i18n "code_copy" | default "copy" }}';
+        var copiedLabel = '{{- i18n "code_copied" | default "copied!" }}';
+        var copybutton = document.createElement('button');
+        copybutton.type = 'button';
         copybutton.classList.add('copy-code');
-        copybutton.innerHTML = '{{- i18n "code_copy" | default "copy" }}';
+        copybutton.textContent = copyLabel;
 
         function copyingDone() {
-            copybutton.innerHTML = '{{- i18n "code_copied" | default "copied!" }}';
-            setTimeout(() => {
-                copybutton.innerHTML = '{{- i18n "code_copy" | default "copy" }}';
+            copybutton.textContent = copiedLabel;
+            window.setTimeout(function () {
+                copybutton.textContent = copyLabel;
             }, 2000);
         }
 
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
+        function legacyCopy() {
+            var range = document.createRange();
             range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
+            var selection = window.getSelection();
+            if (!selection) return;
             selection.removeAllRanges();
             selection.addRange(range);
             try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
+                if (document.execCommand('copy')) copyingDone();
+            } catch (_) {}
             selection.removeRange(range);
+        }
+
+        copybutton.addEventListener('click', function () {
+            if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+                navigator.clipboard.writeText(codeblock.textContent).then(copyingDone, legacyCopy);
+                return;
+            }
+            legacyCopy();
         });
 
-        if (container.classList.contains("highlight")) {
+        var tableHost = typeof codeblock.closest === 'function' ? codeblock.closest('table') : null;
+        if (container.classList && container.classList.contains("highlight")) {
             container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
+        } else if (container.parentNode && container.parentNode.firstChild === container) {
             // td containing LineNos
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            // table containing LineNos and code
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            // code blocks not having highlight as parent class
+        } else if (tableHost) {
+            tableHost.appendChild(copybutton);
+        } else if (codeblock.parentNode) {
             codeblock.parentNode.appendChild(copybutton);
         }
     });

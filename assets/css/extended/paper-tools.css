@@ -92,7 +92,10 @@
 .paper-tool--primary {
   background: var(--rw-brand, var(--primary));
   border-color: var(--rw-brand, var(--primary));
-  color: var(--theme);
+  color: #ffffff;
+}
+:is(:root[data-theme="dark"], :root.dark, body.dark) .paper-tool--primary {
+  color: #0d1112;
 }
 
 .paper-tool--download::before {

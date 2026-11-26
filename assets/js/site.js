@@ -21,42 +21,62 @@
           item.hidden = !item.textContent.normalize('NFKC').toLocaleLowerCase().includes(query);
           if (!item.hidden) matches += 1;
         });
-        document.getElementById('term-count').textContent = query ? '找到 ' + matches + ' / ' + items.length + ' 项' : '共 ' + items.length + ' 项';
-        document.getElementById('term-empty').hidden = matches > 0;
+        var termCount = document.getElementById('term-count');
+        var termEmpty = document.getElementById('term-empty');
+        if (termCount) termCount.textContent = query ? '找到 ' + matches + ' / ' + items.length + ' 项' : '共 ' + items.length + ' 项';
+        if (termEmpty) termEmpty.hidden = matches > 0;
       });
     }
     var articleToc = document.querySelector('.workbench-toc details');
-    if (articleToc && window.matchMedia('(max-width: 860px)').matches) {
+    if (articleToc && typeof window.matchMedia === 'function' && window.matchMedia('(max-width: 860px)').matches) {
       articleToc.open = false;
       articleToc.querySelectorAll('a[href^="#"]').forEach(function (link) {
         link.addEventListener('click', function () { articleToc.open = false; });
       });
     }
     var themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) themeToggle.setAttribute('aria-label', '切换明暗主题');
-    var progress = document.getElementById('reading-progress');
-    var ticking = false;
-
-    function updateScrollUi() {
-      var scrollTop = window.scrollY || document.documentElement.scrollTop;
-      var article = document.getElementById('article-body');
-      var start = article ? article.getBoundingClientRect().top + scrollTop : 0;
-      var scrollRange = article ? article.offsetHeight - document.documentElement.clientHeight : document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var percent = scrollRange > 0 ? Math.min(100, Math.max(0, (scrollTop - start) / scrollRange * 100)) : 0;
-      if (progress) {
-        progress.style.width = percent + '%';
-        progress.setAttribute('aria-valuenow', String(Math.round(percent)));
+    if (themeToggle) {
+      themeToggle.setAttribute('aria-label', '切换深浅主题');
+      var syncThemePressed = function () {
+        var isDark = Boolean(document.documentElement && document.documentElement.dataset && document.documentElement.dataset.theme === 'dark');
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+      };
+      syncThemePressed();
+      if (typeof themeToggle.addEventListener === 'function') {
+        themeToggle.addEventListener('click', function () {
+          if (typeof window.setTimeout === 'function') window.setTimeout(syncThemePressed, 0);
+          else syncThemePressed();
+        });
       }
-      ticking = false;
     }
 
-    window.addEventListener('scroll', function () {
-      if (!ticking) {
-        window.requestAnimationFrame(updateScrollUi);
-        ticking = true;
+    var progress = document.getElementById('reading-progress');
+    if (progress) {
+      var ticking = false;
+      var updateScrollUi = function () {
+        var docEl = document.documentElement || {};
+        var scrollTop = window.scrollY || docEl.scrollTop || 0;
+        var article = document.getElementById('article-body');
+        var start = article && typeof article.getBoundingClientRect === 'function' ? article.getBoundingClientRect().top + scrollTop : 0;
+        var clientH = docEl.clientHeight || 0;
+        var scrollRange = article ? (article.offsetHeight || 0) - clientH : (docEl.scrollHeight || 0) - clientH;
+        var percent = scrollRange > 0 ? Math.min(100, Math.max(0, (scrollTop - start) / scrollRange * 100)) : 0;
+        if (progress.style) progress.style.width = percent + '%';
+        if (typeof progress.setAttribute === 'function') progress.setAttribute('aria-valuenow', String(Math.round(percent)));
+        ticking = false;
+      };
+
+      if (typeof window.addEventListener === 'function') {
+        window.addEventListener('scroll', function () {
+          if (!ticking) {
+            ticking = true;
+            if (typeof window.requestAnimationFrame === 'function') window.requestAnimationFrame(updateScrollUi);
+            else updateScrollUi();
+          }
+        }, { passive: true });
       }
-    }, { passive: true });
-    updateScrollUi();
+      updateScrollUi();
+    }
 
     document.querySelectorAll('a[href]').forEach(function (anchor) {
       var value = anchor.getAttribute('href');
