@@ -1,0 +1,63 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Madison Rose"
+    },
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Michael Bennie"
+    },
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Valeria Pagliai"
+    },
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Hatice Kubra Karakis"
+    },
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Qian Shen"
+    },
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Xinyi Tai"
+    },
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Walter L. Leite"
+    },
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Zoey Liu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:conll:2026:conference-paper-id:2026.conll-main.35",
+  "originalTitle": "A Dataset for Oral Reading in Young English Readers",
+  "paperId": "conference:conll:2026:conference-paper-id:2026.conll-main.35",
+  "pdfUrl": "https://aclanthology.org/2026.conll-main.35.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.conll-main.35/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "1b0527450ff034f12bc239f70e87f811b267a6d81dd0d7d9375bb70932e02f28",
+  "type": "conference-paper"
+}

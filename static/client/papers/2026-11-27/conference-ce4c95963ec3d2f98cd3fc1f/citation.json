@@ -1,0 +1,28 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Linguistics and Modern Languages, The Chinese University of Hong Kong"
+      ],
+      "name": "Shuqi Wang"
+    },
+    {
+      "affiliations": [
+        "Department of Linguistics and Modern Languages, The Chinese University of Hong Kong",
+        "Brain and Mind Institute, The Chinese University of Hong Kong"
+      ],
+      "name": "Zhenguang Cai"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:conll:2026:conference-paper-id:2026.conll-main.6",
+  "originalTitle": "Similar Predictions, Different Processes: A Multi-Level Comparison of Human and Multimodal LLM Language Prediction",
+  "paperId": "conference:conll:2026:conference-paper-id:2026.conll-main.6",
+  "pdfUrl": "https://aclanthology.org/2026.conll-main.6.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.conll-main.6/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "09bb0c27d2d12dc59329ff1025f58259bfdddf75f4df3f748014ecef8905522f",
+  "type": "conference-paper"
+}

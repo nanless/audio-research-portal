@@ -1,0 +1,73 @@
+{
+  "abstract": "Among English child speech corpora, very few focus on oral reading. Existing resources such as the CMU Kids Corpus (Ellis Weismer et al., 2013) face limitations in the lack of grade-appropriate, curriculum-aligned reading texts, the annotation scope and quality, and most crucially, comprehensive annotation scheme for characterization of children’s reading errors. This study presents a multi-layered, fully manually annotated corpus of oral reading from 63 1st-3rd grade students residing in the U.S. who grow up hearing and speaking English. Additionally, we contribute methodologically rigorous annotation guidelines that categorize 10 reading error categories and 26 sublevel error labels. Using a digital reading platform supported by GPT-4o-mini (OpenAI, 2024), children read stories on topics of their own interest, while the system records their speech and logs their interactions with embedded digital supports. Each recording is paired with detailed demographic and educational metadata and subjected to linguistic annotations, including: (1) sentence- and word-level time alignment; (2) phonemic transcription; (3) reading errors.",
+  "abstractSha256": "81cceee2ac30e2bb85b2b0a9380345d91af24ba16823ffcf132ab4b1b7bb87ac",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "发音评估",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Madison Rose"
+    },
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Michael Bennie"
+    },
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Valeria Pagliai"
+    },
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Hatice Kubra Karakis"
+    },
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Qian Shen"
+    },
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Xinyi Tai"
+    },
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Walter L. Leite"
+    },
+    {
+      "affiliations": [
+        "University of Florida"
+      ],
+      "name": "Zoey Liu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对低年级朗读语料缺少课程对齐与细粒度误读标注的问题，作者以 Storiza 平台采集 320 个故事录音并完成双阶段人工标注与十类错误体系，交叉一致性达 0.90 左右且正确率随年级上升，代价是规模仅约 9 小时且依赖家庭录音与主观意图判断。",
+  "originalTitle": "A Dataset for Oral Reading in Young English Readers",
+  "paperId": "conference:conll:2026:conference-paper-id:2026.conll-main.35",
+  "pdfUrl": "https://aclanthology.org/2026.conll-main.35.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "低年级英语朗读误读标注语料的采集流程与十类错误体系解读",
+  "recordUrl": "https://aclanthology.org/2026.conll-main.35/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "1b0527450ff034f12bc239f70e87f811b267a6d81dd0d7d9375bb70932e02f28"
+}
