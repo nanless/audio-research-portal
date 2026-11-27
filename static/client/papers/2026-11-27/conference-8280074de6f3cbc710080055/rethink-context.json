@@ -1,0 +1,43 @@
+{
+  "abstract": "Spoken factual claims often occur within multi-turn conversations, where surrounding dialogue can provide context unavailable from the claim alone. Yet most fact-checking research evaluates isolated text, leaving conversational audio under-studied. We introduce MAD2, a synthetic Multi-turn Audio Dialogues benchmark for spoken claim verification with 1,000 two-speaker dialogues, 1,230 sentence-level check-worthy candidate annotations, and approximately 10 hours of audio. We also propose calibrated multimodal fusion of a context-aware audio encoder and a dialogue-aware text model. Adding dialogue context improves verification across settings, although the gains vary by scenario. Past-only context often approaches local offline performance, suggesting its usefulness when future context is unavailable. Fusion achieves its highest mean advantage over text with full-dialogue context, but does not consistently or significantly outperform text across settings. Under full-dialogue context, exploratory subgroup results show greater performance variation across dialogue scenarios for text and fusion, but across spread styles for audio.",
+  "abstractSha256": "e862fd9786a6c2d6a8f5a43c8fc0fdc062d7a4404b7da1a0609df4ded42be881",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "模型融合",
+    "primaryTask": "音频理解",
+    "rankBucket": "前50%",
+    "score": 6.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Pennsylvania State University, USA"
+      ],
+      "name": "Chaewan Chun"
+    },
+    {
+      "affiliations": [
+        "University of Sheffield, UK"
+      ],
+      "name": "Delvin Ce Zhang"
+    },
+    {
+      "affiliations": [
+        "The Pennsylvania State University, USA"
+      ],
+      "name": "Dongwon Lee"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对播客多轮对话中孤立核查失效问题构建带时间戳的 MAD2 合成基准并在相同句子窗口下比较音频与文本及校准融合，发现全对话上下文可将音频 AUC 从 0.651 提升到 0.784 且过去上下文已接近离线，但融合超越文本的最大均值优势 0.839 对 0.819 均无统计显著且音频训练成本更高。",
+  "originalTitle": "Context-Aware Multimodal Claim Verification in Spoken Dialogues",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.12",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.12.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "对话语音核查中上下文与音频补充作用的受控检验",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.12/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "48f46a8a8ba18bd9e22bee66389699a31073cc3f1bb9b896db4dfd371f387c48"
+}

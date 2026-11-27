@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Alef Iury Siqueira Ferreira"
+    },
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Lucas Rafael Stefanel Gris"
+    },
+    {
+      "affiliations": [
+        "Federal University of Mato Grosso, Cuiabá, Brazil"
+      ],
+      "name": "F S de Oliveira"
+    },
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Arlindo Rodrigues Galvão Filho"
+    },
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Anderson Da Silva Soares"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:salma:2026:conference-paper-id:2026.salma-1.10",
+  "originalTitle": "Echoes in Plato’s Cave: Measuring Global and Local Alignment Between Speech and Language Representations",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.10",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.10.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.10/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "9d654882bfe9b814da27e28533fac597c885546f0894bbf6c92bdbc6f95a2422",
+  "type": "conference-paper"
+}

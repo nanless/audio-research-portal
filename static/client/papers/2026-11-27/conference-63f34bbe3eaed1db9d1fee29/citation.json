@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Akash Das"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Ishan Roy"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:salma:2026:conference-paper-id:2026.salma-1.3",
+  "originalTitle": "When How You Speak Changes What Models Refuse: Investigating Prosody-Conditioned Safety Divergence in Audio-Language Models",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.3",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.3.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.3/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "b29aa6b3300700db81d123df5e3a72ec560bf976581ce1c6010ce5ab07f1ba72",
+  "type": "conference-paper"
+}

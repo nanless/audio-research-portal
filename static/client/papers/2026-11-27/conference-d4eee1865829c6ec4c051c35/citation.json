@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Shama Gupta"
+    },
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Hoang H Nguyen"
+    },
+    {
+      "affiliations": [
+        "Qualcomm Technologies, Inc."
+      ],
+      "name": "Chelsea Huang"
+    },
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Lindsay Devon Brin"
+    },
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Fanny Riols"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:salma:2026:conference-paper-id:2026.salma-1.11",
+  "originalTitle": "CoSE-E: A Benchmark for Code-switched Speech Evaluation in Enterprise Settings",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.11",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.11.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.11/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "2f4aa00734924efeee2ee7fcf0532feb7b911db3af71f339e50d10cd76e2f5bd",
+  "type": "conference-paper"
+}

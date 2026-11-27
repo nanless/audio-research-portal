@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "University of Parma, Italy"
+      ],
+      "name": "Giuseppe Chiriatti"
+    },
+    {
+      "affiliations": [
+        "Språkbanken, University of Gothenburg, Sweden"
+      ],
+      "name": "Dimitrios Kokkinakis"
+    },
+    {
+      "affiliations": [
+        "University of Parma, Italy"
+      ],
+      "name": "Flavio Bertini"
+    },
+    {
+      "affiliations": [
+        "Språkbanken, University of Gothenburg, Sweden"
+      ],
+      "name": "Ricardo Muñoz Sánchez"
+    },
+    {
+      "affiliations": [
+        "Språkbanken, University of Gothenburg, Sweden"
+      ],
+      "name": "Herbert Lange"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:salma:2026:conference-paper-id:2026.salma-1.4",
+  "originalTitle": "Gold-Preserving Synthetic Augmentation for Verbatim Swedish Automatic Speech Recognition",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.4",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.4.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.4/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "57ba6bbbb16cf17b7afb09aeb9a0928690b7831b3634146359ed2b65a35ffed9",
+  "type": "conference-paper"
+}

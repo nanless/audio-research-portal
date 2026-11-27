@@ -1,0 +1,49 @@
+{
+  "abstract": "The functional organization of prosody within the Residual Vector Quantization (RVQ) codebooks of neural audio codecs remains an open question. Prior work relies on correlational probing, showing that pitch features can be decoded from frozen codebook embeddings. Decodability, however, does not imply causal necessity: a codebook may encode pitch information the decoder ignores, while another may be essential despite containing little probe-recoverable signal. We address this gap through causal output-side ablation: for each codebook, we zero or mean-replace its discrete tokens, re-decode the waveform, and measure degradation in fundamental frequency F0 (CREPE), energy (frame-wise RMS), and intelligibility (STOI) against the unablated reconstruction. Experiments span 200 LibriSpeech test-clean utterances under clean, 15, 5, and 0 dB SNR with MUSAN noise across multiple neural audio codecs. Across different architectures, we find a consistent two-tier causal structure: a codec-specific subset of codebooks is reconstruction-critical, while the remaining intelligibility-preserving codebooks exhibit a stable pitch-contribution hierarchy that persists under additive noise. These findings provide new evidence for how neural audio codecs causally organize prosodic information.",
+  "abstractSha256": "4846b375a672749dd6e1b4b1d6448b3714ec4be80ded0bad7dc4aa89ed7b5858",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "语音编码",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Nikunj Gupta"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Shreshth Rai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Kartik Sharma"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Dinesh K Vishwakarma"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文以输出侧逐码本消融追问韵律在神经音频编码器中的因果归属，发现少数重建关键码本之外存在跨噪声稳定的音高贡献层级并在三编码器复现，代价是干预偏离训练流形且仅以 STOI 划分混杂而无人工听测。",
+  "originalTitle": "Am I Audible Now? Dissecting Prosody in Neural Audio Codecs",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.9",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.9.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "神经音频编码器中韵律的因果归属：输出侧消融揭示的双层结构",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.9/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "f1c0af1e084cb3ae54e2b4f1d1a562350a42c0c270e9192dc377667f2efbf622"
+}

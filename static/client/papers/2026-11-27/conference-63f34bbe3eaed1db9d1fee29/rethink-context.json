@@ -1,0 +1,37 @@
+{
+  "abstract": "Audio-Language Models (ALMs) natively fuse lexical content with continuous paralinguistic acoustics such as intonation, tone, and speaker identity. While considerable progress has been made in aligning the semantic outputs of text-based models against harmful instructions, current ALM safety alignment evaluation largely treats speech as a noisy text channel, leaving modality-specific vulnerabilities unexamined. In this work, we introduce and investigate Prosody-Conditioned Safety Divergence: a vulnerability where an ALM’s safety behavior shifts systematically based entirely on paralinguistic variation, even when lexical semantic payload is held completely constant. Rather than assuming the existence of coarse, high-variance acoustic “authority” subspaces, we conduct a controlled causal analysis to track how specific prosodic manipulations—including variations in pitch contour and intensity—interact with safety-associated latent directions across the encoder, projector, and decoder layers. Our preliminary empirical evaluations characterize the localization of this divergence, establishing a framework for targeted inference-time interventions that restore alignment metrics without compromising baseline utility on benign speech tasks.",
+  "abstractSha256": "86de2dad7a8cb76c88dedbde3083d949fda9726fa97481e2287548f54555e5c8",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "音频系统攻击与防御",
+    "rankBucket": "前50%",
+    "score": 7.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Akash Das"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Ishan Roy"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文界定词汇固定时仅凭韵律变化改变安全表现的分歧现象，以四阶段因果链定位到中段解码器低秩方向并以推理期转向将对抗合规大幅压低，仅付出约 1 个百分点的良性效用代价。",
+  "originalTitle": "When How You Speak Changes What Models Refuse: Investigating Prosody-Conditioned Safety Divergence in Audio-Language Models",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.3",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.3.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "说法改变拒绝：韵律条件安全分歧的定位与选择性修复",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.3/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "b29aa6b3300700db81d123df5e3a72ec560bf976581ce1c6010ce5ab07f1ba72"
+}

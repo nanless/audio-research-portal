@@ -1,0 +1,55 @@
+{
+  "abstract": "Verbatim transcripts, which keep the hesitations and interactional particles that ordinary automatic speech recognition (ASR) removes, are a prerequisite for speech-based cognitive assessment, and they are hardest to obtain for languages with little annotated speech. We study this problem for Swedish with a 1.02-hour corpus of manually transcribed spontaneous speech, too small for full fine-tuning of KB-Whisper-large. We adapt the model with a low-rank adapter and compare three ways of extending the training data: pseudo-labeling of untranscribed in-domain audio, unguided synthesis with a language model and a text-to-speech system, and a gold-preserving pipeline that reproduces the disfluency distribution of the gold corpus by construction and can be audited before training. Fine-tuning reduces disfluency-segment word error rate (WER) by 32% relative, with blockwise-bootstrap confidence intervals disjoint from the zero-shot baseline, while the three augmentation strategies are not separable by WER across five seeds. The gold-preserving pipeline needs no untranscribed audio, and its disfluency distribution can be verified in advance.",
+  "abstractSha256": "1c45346f5193c19efad6e21b8a3ac8118c226c4fe1c01cff6a1bd5f948840655",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Parma, Italy"
+      ],
+      "name": "Giuseppe Chiriatti"
+    },
+    {
+      "affiliations": [
+        "Språkbanken, University of Gothenburg, Sweden"
+      ],
+      "name": "Dimitrios Kokkinakis"
+    },
+    {
+      "affiliations": [
+        "University of Parma, Italy"
+      ],
+      "name": "Flavio Bertini"
+    },
+    {
+      "affiliations": [
+        "Språkbanken, University of Gothenburg, Sweden"
+      ],
+      "name": "Ricardo Muñoz Sánchez"
+    },
+    {
+      "affiliations": [
+        "Språkbanken, University of Gothenburg, Sweden"
+      ],
+      "name": "Herbert Lange"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对仅 1.02 小时瑞典语逐字金标导致大模型抑制迟疑的问题，论文以低秩适配器微调并对比伪标注、无引导合成与金标保留合成，发现微调降低迟疑片段 WER（词错误率）约 32% 且区间与基线分离，而三种扩增均值不可区分且 2.35:1 放大会退化，代价是仅 6 个测试文件与 5 个种子下的高方差与无人工听测。",
+  "originalTitle": "Gold-Preserving Synthetic Augmentation for Verbatim Swedish Automatic Speech Recognition",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.4",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.4.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "金标保留合成如何为瑞典语逐字识别补足迟疑分布",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.4/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "57ba6bbbb16cf17b7afb09aeb9a0928690b7831b3634146359ed2b65a35ffed9"
+}

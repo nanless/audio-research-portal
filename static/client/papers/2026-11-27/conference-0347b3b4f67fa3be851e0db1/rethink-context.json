@@ -1,0 +1,37 @@
+{
+  "abstract": "Instruction-guided text-to-speech (TTS) systems are among the most intuitive for controllable speech synthesis, but writing descriptive instructions in the form of style prompts is too cumbersome for users to maintain natural conversation rhythm. We introduce TurnStyle, a prompt generation system, that produces style prompts for instruction-guided TTS, leveraging a bimodal dialogue history (speech and text transcripts) and a user script query. To address the unintuitive interface problem, TurnStyle creates a style prompt by conditioning the Llama-3.2-3B-Instruct model on a prefix vector generated from an embedded bimodal representation of a dialogue. Computational experiments with performance measured across standard metrics like BERTscore and ROUGE-L show that TurnStyle’s architecture improved on a comparative baseline model for the understudied task of style prompt generation. The introduced model also consumed over 15 times less energy than the baseline and required less memory, suggesting that the TurnStyle framework may feasibly run on edge devices.",
+  "abstractSha256": "703f8e041680a3d667af9e2e041c9ed7722a0b9f313d73624eedf74f59294ac3",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "韵律与风格控制",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science, Rochester Institute of Technology, Rochester, NY 14586"
+      ],
+      "name": "Jack McLaughlin"
+    },
+    {
+      "affiliations": [
+        "School of Psychology and Cognitive Science, Rochester Institute of Technology, Rochester, NY 14586"
+      ],
+      "name": "Cecilia O Alm"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对手写语音风格提示会打断对话节奏的问题， TurnStyle 以双模态对话编码加前缀向量条件冻结大模型生成风格描述，在两个测试集的文本相似度与标签还原上均高于少样本基线且推理能耗低一个数量级，但语义指标区分度弱、无人工听测且说话人与口音覆盖有限。",
+  "originalTitle": "TurnStyle: Suggesting Style Prompts for Instruction-Guided Text-to-Speech Using Bimodal Dialogue Contexts",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.1",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.1.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "为对话下一句自动生成语音风格描述：TurnStyle 双模态上下文建模解读",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.1/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "0926ea9c67f678c1f6b7b884875e95dddb66e33d4cd771dabe18e07372b0adf6"
+}

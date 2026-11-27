@@ -1,0 +1,55 @@
+{
+  "abstract": "Code-switching (CS), a seamless alternation between languages within a single utterance, remains a critical challenge in automatic speech recognition (ASR). While prior works focus on conversational CS-ASR, enterprise settings demand evaluation of operational impact beyond edit-distance errors: how code-switching transcription errors propagate to downstream voice agent task failures. In this work, we propose (1) a CS-ASR synthetic benchmark and multidimensional evaluation framework tailored to enterprise domains, (2) systematic evaluation of frontier ASR systems across 5 language pairs, (3) diagnostic analysis of the additional transcription errors that code-switching introduces across language pairs and models. We release CoSE-E to support enterprise-focused CS-ASR evaluation for multilingual voice agents in enterprise deployment.",
+  "abstractSha256": "d4e28c2028650d39ae0c013d24a8fc271ce047b52f32b58c3849edf084b59a18",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Shama Gupta"
+    },
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Hoang H Nguyen"
+    },
+    {
+      "affiliations": [
+        "Qualcomm Technologies, Inc."
+      ],
+      "name": "Chelsea Huang"
+    },
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Lindsay Devon Brin"
+    },
+    {
+      "affiliations": [
+        "ServiceNow AI Research"
+      ],
+      "name": "Fanny Riols"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对企业场景中混读转写误差向工单路由等任务失败传导难以用字面误差衡量的问题，本文构建 1,212 条五语言对合成基准并引入问答式任务误差率，以八系统评测揭示字面误差与任务成败排序背离且关键实体损坏使任务恶化概率上升约八倍，代价是合成单厂商音频与计算量较大的代理式评测。",
+  "originalTitle": "CoSE-E: A Benchmark for Code-switched Speech Evaluation in Enterprise Settings",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.11",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.11.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "企业混读语音评测如何从字面误差走向任务成败",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.11/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "2f4aa00734924efeee2ee7fcf0532feb7b911db3af71f339e50d10cd76e2f5bd"
+}

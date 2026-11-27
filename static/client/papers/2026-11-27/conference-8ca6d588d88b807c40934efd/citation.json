@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Sajjad Haider"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Solat J. Sheikh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Zuha Aqib"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Farah Inayat"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Zehra Ahmed"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:salma:2026:conference-paper-id:2026.salma-1.7",
+  "originalTitle": "Improving Urdu ASR with Fine-Tuned Small Language Models for Post-ASR Error Correction",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.7",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.7.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.7/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "d87fd0c7b32339cad8577e9e7830d7d0b96d76734dddf93b4ca094126efdcff5",
+  "type": "conference-paper"
+}

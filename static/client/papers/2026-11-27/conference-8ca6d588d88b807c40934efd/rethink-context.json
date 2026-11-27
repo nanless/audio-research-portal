@@ -1,0 +1,55 @@
+{
+  "abstract": "Current multilingual automatic speech recognition (ASR) models have substantially improved speech recognition across many languages, yet recognition quality remains limited for low-resource languages such as Urdu. A common approach to improve recognition quality is to fine-tune the ASR model itself, but this requires labelled speech data and retraining the recognizer. A recently emerging alternative is Generative Error Correction (GEC), in which a language model post-processes ASR output to correct transcription errors while leaving the underlying speech recognizer unchanged. This paper investigates this approach for Urdu by keeping Whisper-Turbo frozen and fine-tuning small language models to correct its transcription errors. To address data scarcity in Urdu, we construct a pseudo-gold training dataset using a strong teacher model. Fine-tuning 3.5–4B parameter language models on this data achieves a ~33% relative WER reduction (from 11.74% to 7.81%), outperforming zero-shot baselines as well as significantly larger 12–14B zero-shot models. These results show that combining a frozen recognizer with a small fine-tuned corrector provides a practical, resource-efficient framework for Urdu ASR improvement without relying on ASR retraining or substantially larger models.",
+  "abstractSha256": "cbfe59949ae647e6115bc6eba65039f0002cb5b673ec7df9720fb481d5e292db",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Sajjad Haider"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Solat J. Sheikh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Zuha Aqib"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Farah Inayat"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Zehra Ahmed"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对乌尔都语标注稀缺导致 Whisper-Turbo 转写误差偏高的问题，论文冻结识别器并用教师模型生成的伪金标准语料微调 3.5B - 4B 小模型，将平均词错误率从 11.74% 降至 7.81%，代价是评测依赖自动生成的参考文本且纯文本改写无法恢复严重声学缺失。",
+  "originalTitle": "Improving Urdu ASR with Fine-Tuned Small Language Models for Post-ASR Error Correction",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.7",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.7.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "冻结识别器加小模型改写提升乌尔都语识别",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.7/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "d87fd0c7b32339cad8577e9e7830d7d0b96d76734dddf93b4ca094126efdcff5"
+}

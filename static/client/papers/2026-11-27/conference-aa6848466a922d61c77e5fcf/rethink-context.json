@@ -1,0 +1,55 @@
+{
+  "abstract": "We investigate representational alignment between nine independently trained speech encoders and ten text encoders. We build a controlled corpus in which the same sentences are rendered by different speakers and under different emotional conditions, so that prosody varies while linguistic content is held fixed. We compare every speech–text layer pair and calibrate the strongest match with a permutation procedure that prevents the search over pairs from inflating alignment scores. Local neighborhood agreement between modalities survives calibration throughout and is strongest between late speech layers and early text layers, providing strong evidence of genuine local alignment. Global similarity measures, however, do not provide reliable evidence that the two modalities share a common geometric space as a whole. Alignment is unaffected by speaker identity and prosodic variation, so the shared structure is tied to the content of the sentence itself rather than to how it is spoken. It also does not increase with model capability or with how well a text model reproduces human judgments of meaning, suggesting that this shared structure corresponds more closely to lexical and surface-level representations than to fine-grained sentence meaning. These findings indicate where speech and text representations can be connected, suggest that cross-modal transfer may benefit from exploiting neighborhood structure rather than assuming a shared global geometry, and provide new alignment methods with an existing lexical correspondence to build on, while pointing to sentence-level meaning as the structure that future speech representations could capture so that alignment extends beyond the lexical level.",
+  "abstractSha256": "2d447d51fd609e43d8c4188cc592f7d62cd2a2fe92d808ed0a61dd0c0e791f5c",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "口语理解",
+    "rankBucket": "前50%",
+    "score": 6.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Alef Iury Siqueira Ferreira"
+    },
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Lucas Rafael Stefanel Gris"
+    },
+    {
+      "affiliations": [
+        "Federal University of Mato Grosso, Cuiabá, Brazil"
+      ],
+      "name": "F S de Oliveira"
+    },
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Arlindo Rodrigues Galvão Filho"
+    },
+    {
+      "affiliations": [
+        "Federal University of Goiás, Goiânia, Brazil"
+      ],
+      "name": "Anderson Da Silva Soares"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文用内容固定而说话人与情感系统变化的 14,400 条受控合成语音比较 9 个语音与 10 个文本编码器的全部层对，经 200 次聚合感知置换校准后发现 k = 10 的互近邻一致保留约 92.4% 而小带宽核相似度仅保留约 7.4% ，且对齐由语音侧主导并集中于语音深层配文本浅层，但合成来源不均与词汇语义混淆限制了全局趋同的推论。",
+  "originalTitle": "Echoes in Plato’s Cave: Measuring Global and Local Alignment Between Speech and Language Representations",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.10",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.10.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "独立训练的语音与文本是整体重合还是邻域相近",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.10/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "9d654882bfe9b814da27e28533fac597c885546f0894bbf6c92bdbc6f95a2422"
+}

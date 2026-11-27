@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electrical and Electronic Engineering, KUET, Khulna, Bangladesh"
+      ],
+      "name": "Sanjid Hasan"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science and Engineering, BUET, Dhaka, Bangladesh"
+      ],
+      "name": "A H M Fuad"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science and Engineering, BUET, Dhaka, Bangladesh"
+      ],
+      "name": "Risalat Labib"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science and Engineering, BUET, Dhaka, Bangladesh"
+      ],
+      "name": "Bayazid Hasan"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:salma:2026:conference-paper-id:2026.salma-1.13",
+  "originalTitle": "Lipi-Ghor: A Large-Scale, Diarized, Multi-Domain Bengali Speech Corpus and a Scalable Pipeline for Building It",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.13",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.13.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.13/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "76737aae350855de7f56016a2380c5f9e69a7c808116afe34e6bc3d7b19be023",
+  "type": "conference-paper"
+}

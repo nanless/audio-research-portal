@@ -1,0 +1,49 @@
+{
+  "abstract": "While text-based hallucination detection is well studied, reference-free detection of factual alterations in speech remains underexplored, especially for low-resource languages. Our spoken benchmark comprises 12,013 English, Russian, and Kazakh news samples with three synthetic alteration types and three severity levels, pairing source articles with rewrites as text, synthesized audio, and ASR transcripts. We add 290 fact-checked misinformation items collected in Russian (225) and Kazakh (65), translated into the other language and rendered through the same TTS–ASR pipeline. We evaluate fine-tuned multilingual encoders and zero-shot multimodal decoders on text, transcripts, and audio. Detectors receive only target inputs without source articles or external evidence; the task evaluates reference-free classification rather than evidence-grounded verification. Encoder degradation from source text to transcripts generally tracks per-language ASR error on the binary task. Among decoders, only Gemma-3n exceeds the binary majority-class baseline in macro-F1, on transcripts only; the other four do not exceed their respective baselines. Comparisons between audio and transcripts are confounded by differences in evaluation coverage and class balance. Synthetic-trained detectors achieve 0.82–0.88 macro-F1 on real-world misinformation source text; Russian provenance analysis reveals veracity-related and model-dependent machine-style signals, a key confound in synthetic hallucination benchmarks.",
+  "abstractSha256": "bd198859db4b3e5b3068c861278b799b54b3681f53f134bf4804ed8e3f7fe6db",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音频理解",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Satbayev University, Almaty, Kazakhstan"
+      ],
+      "name": "Meruyert Aristombayeva"
+    },
+    {
+      "affiliations": [
+        "University of Colorado Boulder, Boulder, CO, USA"
+      ],
+      "name": "Jason S Lucas"
+    },
+    {
+      "affiliations": [
+        "The Pennsylvania State University, University Park, PA, USA"
+      ],
+      "name": "Chaewan Chun"
+    },
+    {
+      "affiliations": [
+        "The Pennsylvania State University, University Park, PA, USA"
+      ],
+      "name": "Dongwon Lee"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对参考无关的三语口语事实改写分类，原文构建 12,013 个样本与 290 条真实错误信息的三形态基准，证明微调编码器在真实内容上达 0.82–0.88 宏平均 F1 而仅 Gemma-3n 在转写本二元上超基线，代价是转写退化随识别误差放大、音频与转写本不可比及合成二元信号混杂机器风格。",
+  "originalTitle": "Lost in Speech: Trilingual Spoken Hallucination Detection Across Audio and Transcripts",
+  "paperId": "conference:salma:2026:conference-paper-id:2026.salma-1.6",
+  "pdfUrl": "https://aclanthology.org/2026.salma-1.6.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "三语口语幻觉检测中合成基准与流水线噪声及来源混杂",
+  "recordUrl": "https://aclanthology.org/2026.salma-1.6/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "cf31de7504d1ed2e8ebef93ff68922aa96aa667faec0b0975510067f6f1963cf"
+}
