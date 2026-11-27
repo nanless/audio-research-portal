@@ -590,14 +590,29 @@ function extractResourceSignals(body) {
 const VENUE_NORMALIZE = Object.freeze({
   icassp: 'ICASSP',
   interspeech: 'Interspeech',
+  speech_prosody: 'Speech Prosody',
+  'speech-prosody': 'Speech Prosody',
+  speechprosody: 'Speech Prosody',
+  waspaa: 'WASPAA',
+  asru: 'ASRU',
+  slt: 'SLT',
+  ismir: 'ISMIR',
+  dcase: 'DCASE',
+  taslp: 'TASLP',
+  ieee_acm_taslp: 'TASLP',
+  'ieee-acm-taslp': 'TASLP',
+  ieeeacmtaslp: 'TASLP',
   neurips: 'NeurIPS',
   nips: 'NeurIPS',
-  iclr: 'ICLR',
   icml: 'ICML',
+  iclr: 'ICLR',
   acl: 'ACL',
   emnlp: 'EMNLP',
   naacl: 'NAACL',
   eacl: 'EACL',
+  lrec: 'LREC',
+  coling: 'COLING',
+  tacl: 'TACL',
   aaai: 'AAAI',
   ijcai: 'IJCAI',
   aistats: 'AISTATS',
@@ -606,38 +621,61 @@ const VENUE_NORMALIZE = Object.freeze({
   iccv: 'ICCV',
   eccv: 'ECCV',
   acmmm: 'ACM MM',
+  acm_mm: 'ACM MM',
+  'acm-mm': 'ACM MM',
   mm: 'ACM MM',
+  siggraph: 'SIGGRAPH',
+  chi: 'CHI',
+  ubicomp: 'UbiComp',
+  mobicom: 'MobiCom',
+  mobisys: 'MobiSys',
+  sensys: 'SenSys',
   eusipco: 'EUSIPCO',
-  waspaa: 'WASPAA',
-  asru: 'ASRU',
-  slt: 'SLT',
-  ismir: 'ISMIR',
-  speechprosody: 'Speech Prosody',
-  nime: 'NIME',
+  chime: 'CHiME',
   dafx: 'DAFx',
   icmc: 'ICMC',
+  nime: 'NIME',
+  jep: 'JEP',
   odyssey: 'Odyssey',
   iwslt: 'IWSLT',
-  chime: 'CHiME',
-  dcase: 'DCASE',
-  jep: 'JEP',
-  taslp: 'TASLP'
+  kdd: 'KDD',
+  www: 'WWW',
+  icra: 'ICRA',
+  iros: 'IROS',
+  corl: 'CoRL',
+  jmlr: 'JMLR',
+  tmlr: 'TMLR',
+  spl: 'SPL'
 });
+
+function lookupVenue(raw) {
+  if (typeof raw !== 'string' || !raw) return '';
+  const key = raw.toLowerCase();
+  if (Object.prototype.hasOwnProperty.call(VENUE_NORMALIZE, key)) return VENUE_NORMALIZE[key];
+  const norm = key.replace(/-/g, '_');
+  if (Object.prototype.hasOwnProperty.call(VENUE_NORMALIZE, norm)) return VENUE_NORMALIZE[norm];
+  const compact = norm.replace(/_/g, '');
+  if (Object.prototype.hasOwnProperty.call(VENUE_NORMALIZE, compact)) return VENUE_NORMALIZE[compact];
+  return '';
+}
 
 function resolveVenue({ paperId, sourceKind, arxivId, categories, baseName }) {
   if (typeof paperId === 'string' && paperId.startsWith('conference:')) {
     const code = paperId.split(':')[1]?.toLowerCase() || '';
-    if (VENUE_NORMALIZE[code]) return VENUE_NORMALIZE[code];
+    const mapped = lookupVenue(code);
+    if (mapped) return mapped;
     if (code) return code.toUpperCase();
   }
   const cats = Array.isArray(categories) ? categories : [];
   for (const c of cats) {
-    const m = String(c || '').toLowerCase().match(/^([a-z0-9-]+?)(?:-20\d{2})?$/);
-    if (m && VENUE_NORMALIZE[m[1]]) return VENUE_NORMALIZE[m[1]];
+    const m = String(c || '').toLowerCase().match(/^([a-z0-9_-]+?)(?:[-_]20\d{2})?$/);
+    const mapped = m ? lookupVenue(m[1]) : '';
+    if (mapped) return mapped;
   }
-  if (baseName) {
-    const bm = baseName.toLowerCase().match(/^conference-([a-z0-9-]+)-20\d{2}/);
-    if (bm && VENUE_NORMALIZE[bm[1]]) return VENUE_NORMALIZE[bm[1]];
+  if (typeof baseName === 'string' && baseName) {
+    const bm = baseName.toLowerCase().match(/^conference-([a-z0-9_-]+?)-20\d{2}/);
+    const mapped = bm ? lookupVenue(bm[1]) : '';
+    if (mapped) return mapped;
   }
   if (sourceKind === 'arxiv' || arxivId) return 'arXiv';
   if (sourceKind === 'conference') return '其他会议';
@@ -1109,6 +1147,7 @@ module.exports = {
   parseMarkdownPage,
   extractResourceSignals,
   extractResourceSignalsFromBuffer,
+  VENUE_NORMALIZE,
   resolveVenue,
   loadResearchCorpus,
   writeJsonAtomic

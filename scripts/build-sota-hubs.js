@@ -14,7 +14,8 @@ const CONTRACT = 'sota-hubs-auto-v1';
 const OUTPUT = 'data/sota-hubs-auto.json';
 
 const HEADLINE_VENUES = Object.freeze([
-  'arXiv', 'ICASSP', 'Interspeech', 'NeurIPS', 'ICLR', 'ICML', 'ACL'
+  'arXiv', 'ICASSP', 'Interspeech', 'NeurIPS', 'ICLR', 'ICML', 'ACL',
+  'EMNLP', 'ISMIR', 'DCASE', 'WASPAA', 'ASRU', 'SLT', 'CVPR', 'AAAI'
 ]);
 
 const HUB_DEFINITIONS = Object.freeze([

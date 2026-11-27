@@ -139,8 +139,10 @@
       {{- $pidParts := split $metadata.paperId ":" }}
       {{- if ge (len $pidParts) 3 }}
         {{- $vKey := lower (index $pidParts 1) }}
-        {{- $vMap := dict "icml" "ICML" "iclr" "ICLR" "icassp" "ICASSP" "interspeech" "Interspeech" "neurips" "NeurIPS" "nips" "NeurIPS" "acl" "ACL" "emnlp" "EMNLP" "naacl" "NAACL" "eacl" "EACL" "aaai" "AAAI" "ijcai" "IJCAI" "aistats" "AISTATS" "uai" "UAI" "cvpr" "CVPR" "iccv" "ICCV" "eccv" "ECCV" "acmmm" "ACM MM" "mm" "ACM MM" "ismir" "ISMIR" "waspaa" "WASPAA" "slt" "SLT" "asru" "ASRU" "eusipco" "EUSIPCO" "chime" "CHiME" "dcase" "DCASE" "taslp" "TASLP" "dafx" "DAFx" "icmc" "ICMC" "nime" "NIME" "jep" "JEP" "odyssey" "Odyssey" "speechprosody" "Speech Prosody" "iwslt" "IWSLT" }}
-        {{- $vName := index $vMap $vKey | default (upper $vKey) }}
+        {{- $vMap := dict "icassp" "ICASSP" "interspeech" "Interspeech" "speech_prosody" "Speech Prosody" "speech-prosody" "Speech Prosody" "speechprosody" "Speech Prosody" "waspaa" "WASPAA" "asru" "ASRU" "slt" "SLT" "ismir" "ISMIR" "dcase" "DCASE" "taslp" "TASLP" "ieee_acm_taslp" "TASLP" "ieee-acm-taslp" "TASLP" "ieeeacmtaslp" "TASLP" "neurips" "NeurIPS" "nips" "NeurIPS" "icml" "ICML" "iclr" "ICLR" "acl" "ACL" "emnlp" "EMNLP" "naacl" "NAACL" "eacl" "EACL" "lrec" "LREC" "coling" "COLING" "tacl" "TACL" "aaai" "AAAI" "ijcai" "IJCAI" "aistats" "AISTATS" "uai" "UAI" "cvpr" "CVPR" "iccv" "ICCV" "eccv" "ECCV" "acmmm" "ACM MM" "acm_mm" "ACM MM" "acm-mm" "ACM MM" "mm" "ACM MM" "siggraph" "SIGGRAPH" "chi" "CHI" "ubicomp" "UbiComp" "mobicom" "MobiCom" "mobisys" "MobiSys" "sensys" "SenSys" "eusipco" "EUSIPCO" "chime" "CHiME" "dafx" "DAFx" "icmc" "ICMC" "nime" "NIME" "jep" "JEP" "odyssey" "Odyssey" "iwslt" "IWSLT" "kdd" "KDD" "www" "WWW" "icra" "ICRA" "iros" "IROS" "corl" "CoRL" "jmlr" "JMLR" "tmlr" "TMLR" "spl" "SPL" }}
+        {{- $vKeyNorm := replace $vKey "-" "_" }}
+        {{- $vKeyCompact := replace $vKeyNorm "_" "" }}
+        {{- $vName := index $vMap $vKey | default (index $vMap $vKeyNorm) | default (index $vMap $vKeyCompact) | default (upper $vKey) }}
         {{- $venueLabel = printf "%s %s" $vName (index $pidParts 2) }}
       {{- else }}
         {{- $venueLabel = "会议论文" }}

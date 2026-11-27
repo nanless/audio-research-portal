@@ -426,6 +426,96 @@ test('Canonical pageType powers conference Roundup 2.0 cards, task CTAs, histori
       '',
       '音频效果器建模论文。',
       ''
+    ].join('\n'),
+    'posts/conference-speech-prosody-underscore.md': [
+      '---',
+      'title: "Underscore Prosody Study"',
+      'date: 2026-10-15',
+      'draft: false',
+      'paper_digest_page_type: paper',
+      'paper_digest_source_kind: conference',
+      'paper_digest_paper_id: "conference:speech_prosody:2026:paper:p3"',
+      '---',
+      '',
+      '## 📌 核心摘要',
+      '',
+      '带下划线会议代号测试论文。',
+      ''
+    ].join('\n'),
+    'posts/conference-acm-mm-hyphen.md': [
+      '---',
+      'title: "ACM MM Hyphen Study"',
+      'date: 2026-10-15',
+      'draft: false',
+      'paper_digest_page_type: paper',
+      'paper_digest_source_kind: conference',
+      'paper_digest_paper_id: "conference:acm-mm:2026:paper:p4"',
+      '---',
+      '',
+      '## 📌 核心摘要',
+      '',
+      '带连字符会议代号测试论文。',
+      ''
+    ].join('\n'),
+    'posts/conference-ieeeacmtaslp.md': [
+      '---',
+      'title: "Compact TASLP Study"',
+      'date: 2026-10-15',
+      'draft: false',
+      'paper_digest_page_type: paper',
+      'paper_digest_source_kind: conference',
+      'paper_digest_paper_id: "conference:ieeeacmtaslp:2026:paper:p5"',
+      '---',
+      '',
+      '## 📌 核心摘要',
+      '',
+      '紧凑拼接 TASLP 会议代号测试论文。',
+      ''
+    ].join('\n'),
+    'posts/conference-ieee-acm-mixed.md': [
+      '---',
+      'title: "Mixed Separator TASLP Study"',
+      'date: 2026-10-15',
+      'draft: false',
+      'paper_digest_page_type: paper',
+      'paper_digest_source_kind: conference',
+      'paper_digest_paper_id: "conference:ieee-acm_taslp:2026:paper:p6"',
+      '---',
+      '',
+      '## 📌 核心摘要',
+      '',
+      '混合分隔符 TASLP 会议代号测试论文。',
+      ''
+    ].join('\n'),
+    'posts/conference-inter-speech.md': [
+      '---',
+      'title: "Hyphen Interspeech Study"',
+      'date: 2026-10-15',
+      'draft: false',
+      'paper_digest_page_type: paper',
+      'paper_digest_source_kind: conference',
+      'paper_digest_paper_id: "conference:inter-speech:2026:paper:p7"',
+      '---',
+      '',
+      '## 📌 核心摘要',
+      '',
+      '连字符 Interspeech 会议代号测试论文。',
+      ''
+    ].join('\n'),
+    'posts/conference-neur-ips.md': [
+      '---',
+      'title: "Underscore NeurIPS Study"',
+      'date: 2026-10-15',
+      'draft: false',
+      'paper_digest_page_type: paper',
+      'paper_digest_source_kind: conference',
+      'paper_digest_paper_id: "conference:neur_ips:2026:paper:p8"',
+      '---',
+      '',
+      '## 📌 核心摘要',
+      '',
+      '下划线 NeurIPS 会议代号测试论文。',
+      ''
     ].join('\n')
   });
 
@@ -455,6 +545,12 @@ test('Canonical pageType powers conference Roundup 2.0 cards, task CTAs, histori
   // Venue display labels on single.html
   assert.match(rendered['posts/conference-speechprosody-paper.md'], /research-signal-pill--venue">Speech Prosody 2026<\/span>/);
   assert.match(rendered['posts/conference-dafx-paper.md'], /research-signal-pill--venue">DAFx 2026<\/span>/);
+  assert.match(rendered['posts/conference-speech-prosody-underscore.md'], /research-signal-pill--venue">Speech Prosody 2026<\/span>/);
+  assert.match(rendered['posts/conference-acm-mm-hyphen.md'], /research-signal-pill--venue">ACM MM 2026<\/span>/);
+  assert.match(rendered['posts/conference-ieeeacmtaslp.md'], /research-signal-pill--venue">TASLP 2026<\/span>/);
+  assert.match(rendered['posts/conference-ieee-acm-mixed.md'], /research-signal-pill--venue">TASLP 2026<\/span>/);
+  assert.match(rendered['posts/conference-inter-speech.md'], /research-signal-pill--venue">Interspeech 2026<\/span>/);
+  assert.match(rendered['posts/conference-neur-ips.md'], /research-signal-pill--venue">NeurIPS 2026<\/span>/);
 
   // Strict v1.4.6 54-tag & attr allowlist across all rendered article bodies
   for (const [name, fullHtml] of Object.entries(rendered)) {
@@ -474,19 +570,103 @@ test('Canonical pageType powers conference Roundup 2.0 cards, task CTAs, histori
     }
   }
 
-  // Venue map parity across single.html, paper-library.js, and research-corpus.js
+  // Full canonical 58-key venue map parity across single.html, paper-library.js, and research-corpus.js
   const corpusApi = require('../scripts/lib/research-corpus');
+  const libraryApi = require('../assets/js/paper-library');
   const singleSrc = fs.readFileSync(path.join(ROOT, 'layouts/_default/single.html'), 'utf8');
-  const librarySrc = fs.readFileSync(path.join(ROOT, 'assets/js/paper-library.js'), 'utf8');
   const expectedVenues = {
-    dafx: 'DAFx', icmc: 'ICMC', nime: 'NIME', jep: 'JEP', odyssey: 'Odyssey',
-    speechprosody: 'Speech Prosody', iwslt: 'IWSLT', eacl: 'EACL', aistats: 'AISTATS',
-    uai: 'UAI', dcase: 'DCASE', iccv: 'ICCV', eccv: 'ECCV', ijcai: 'IJCAI',
-    taslp: 'TASLP', ismir: 'ISMIR', emnlp: 'EMNLP', waspaa: 'WASPAA', asru: 'ASRU'
+    icassp: 'ICASSP', interspeech: 'Interspeech',
+    speech_prosody: 'Speech Prosody', 'speech-prosody': 'Speech Prosody', speechprosody: 'Speech Prosody',
+    waspaa: 'WASPAA', asru: 'ASRU', slt: 'SLT', ismir: 'ISMIR', dcase: 'DCASE',
+    taslp: 'TASLP', ieee_acm_taslp: 'TASLP', 'ieee-acm-taslp': 'TASLP', ieeeacmtaslp: 'TASLP',
+    neurips: 'NeurIPS', nips: 'NeurIPS', icml: 'ICML', iclr: 'ICLR',
+    acl: 'ACL', emnlp: 'EMNLP', naacl: 'NAACL', eacl: 'EACL',
+    lrec: 'LREC', coling: 'COLING', tacl: 'TACL',
+    aaai: 'AAAI', ijcai: 'IJCAI', aistats: 'AISTATS', uai: 'UAI',
+    cvpr: 'CVPR', iccv: 'ICCV', eccv: 'ECCV',
+    acmmm: 'ACM MM', acm_mm: 'ACM MM', 'acm-mm': 'ACM MM', mm: 'ACM MM',
+    siggraph: 'SIGGRAPH', chi: 'CHI', ubicomp: 'UbiComp',
+    mobicom: 'MobiCom', mobisys: 'MobiSys', sensys: 'SenSys',
+    eusipco: 'EUSIPCO', chime: 'CHiME', dafx: 'DAFx', icmc: 'ICMC',
+    nime: 'NIME', jep: 'JEP', odyssey: 'Odyssey', iwslt: 'IWSLT',
+    kdd: 'KDD', www: 'WWW', icra: 'ICRA', iros: 'IROS', corl: 'CoRL',
+    jmlr: 'JMLR', tmlr: 'TMLR', spl: 'SPL'
   };
+  assert.equal(Object.keys(expectedVenues).length, 58, 'expectedVenues must contain all 58 canonical keys');
+
+  const vMapMatch = singleSrc.match(/\$vMap\s*:=\s*dict\s+([\s\S]*?)\s*\}\}/);
+  assert.ok(vMapMatch, 'single.html must declare $vMap dict');
+  assert.equal(vMapMatch[1].replace(/"[^"]+"/g, '').trim(), '', 'single.html $vMap must contain only quoted key/value pairs');
+  const vMapTokens = [...vMapMatch[1].matchAll(/"([^"]+)"/g)].map(m => m[1]);
+  assert.equal(vMapTokens.length % 2, 0, 'single.html $vMap must have even number of quoted tokens');
+  const parsedSingleVMap = {};
+  for (let i = 0; i < vMapTokens.length; i += 2) {
+    assert.ok(!Object.prototype.hasOwnProperty.call(parsedSingleVMap, vMapTokens[i]), `single.html $vMap duplicate key: ${vMapTokens[i]}`);
+    parsedSingleVMap[vMapTokens[i]] = vMapTokens[i + 1];
+  }
+  assert.deepEqual(parsedSingleVMap, expectedVenues, 'single.html $vMap must deep-equal canonical 58-key venue map');
+  assert.deepEqual(corpusApi.VENUE_NORMALIZE, expectedVenues, 'research-corpus VENUE_NORMALIZE must match canonical 58-key venue map');
+  assert.deepEqual(libraryApi.VENUE_DISPLAY_NAMES, expectedVenues, 'paper-library VENUE_DISPLAY_NAMES must match canonical 58-key venue map');
+  assert.ok(Object.isFrozen(corpusApi.VENUE_NORMALIZE), 'research-corpus VENUE_NORMALIZE must be frozen');
+  assert.ok(Object.isFrozen(libraryApi.VENUE_DISPLAY_NAMES), 'paper-library VENUE_DISPLAY_NAMES must be frozen');
+
   for (const [key, display] of Object.entries(expectedVenues)) {
     assert.equal(corpusApi.resolveVenue({ paperId: `conference:${key}:2026:paper:1`, sourceKind: 'conference' }), display, `research-corpus ${key}`);
-    assert.ok(singleSrc.includes(`"${key}" "${display}"`), `single.html missing ${key} => ${display}`);
-    assert.ok(librarySrc.includes(`${key}: '${display}'`), `paper-library.js missing ${key} => ${display}`);
+    assert.equal(libraryApi.venueLabel({ type: 'paper', paperId: `conference:${key}:2026:paper:1`, sourceKind: 'conference' }), `${display} 2026`, `paper-library venueLabel ${key}`);
   }
+
+  // 3-step separator normalization (raw -> '-' to '_' -> strip '_'), category underscore year, and double-year slug
+  const variantCases = [
+    ['ieeeacmtaslp', 'TASLP'],
+    ['ieee-acm_taslp', 'TASLP'],
+    ['inter-speech', 'Interspeech'],
+    ['neur_ips', 'NeurIPS']
+  ];
+  for (const [variant, display] of variantCases) {
+    assert.equal(
+      libraryApi.venueLabel({ type: 'paper', paperId: `conference:${variant}:2026:paper:1`, sourceKind: 'conference' }),
+      `${display} 2026`,
+      `paper-library venueLabel variant ${variant}`
+    );
+    assert.equal(
+      corpusApi.resolveVenue({ paperId: `conference:${variant}:2026:paper:1`, sourceKind: 'conference' }),
+      display,
+      `research-corpus paperId variant ${variant}`
+    );
+    assert.equal(
+      corpusApi.resolveVenue({ categories: [`${variant}_2026`], sourceKind: 'conference' }),
+      display,
+      `research-corpus category variant ${variant}_2026`
+    );
+    assert.equal(
+      corpusApi.resolveVenue({ baseName: `conference-${variant}-2026-sample-paper`, sourceKind: 'conference' }),
+      display,
+      `research-corpus baseName variant ${variant}`
+    );
+  }
+  assert.equal(
+    corpusApi.resolveVenue({ categories: ['speech_prosody_2026'], sourceKind: 'conference' }),
+    'Speech Prosody',
+    'research-corpus must strip underscore year from speech_prosody_2026'
+  );
+  assert.equal(
+    corpusApi.resolveVenue({ baseName: 'conference-icassp-2026-revisiting-2025-model', sourceKind: 'conference' }),
+    'ICASSP',
+    'research-corpus must lazily extract venue from double-year slug conference-icassp-2026-revisiting-2025-model'
+  );
+  assert.equal(
+    libraryApi.venueLabel({ type: 'paper', paperId: 12345, sourceKind: 'arxiv' }),
+    'arXiv',
+    'paper-library venueLabel must guard non-string paperId'
+  );
+  assert.equal(
+    libraryApi.venueLabel({ type: 'paper', paperId: 'conference:constructor:2026:paper:1', sourceKind: 'conference' }),
+    'CONSTRUCTOR 2026',
+    'paper-library venueLabel must not resolve Object.prototype properties'
+  );
+  assert.equal(
+    corpusApi.resolveVenue({ paperId: 'conference:constructor:2026:paper:1', sourceKind: 'conference' }),
+    'CONSTRUCTOR',
+    'research-corpus resolveVenue must not resolve Object.prototype properties'
+  );
 });

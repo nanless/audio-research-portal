@@ -19,6 +19,7 @@ const {
 const {
   HUB_DEFINITIONS,
   HUB_SLUGS,
+  HEADLINE_VENUES,
   validateHubDefinitions,
   writeSotaHubsAuto
 } = require('../scripts/build-sota-hubs');
@@ -1153,4 +1154,118 @@ test('Round 1 Regression (P1 #5, P1 #6, P2 #7, P2 #8): zero-norm graph guard, RF
   assert.equal(sig.hasCode, true);
   assert.equal(sig.hasModel, true);
   assert.deepEqual(sig.codeUrls, ['https://github.com/real-org/real-repo']);
+});
+
+test('Round 3 Portal Polish: expanded SOTA HEADLINE_VENUES & 3-path workbench podcast sync alignment', (t) => {
+  // 1. Verify expanded HEADLINE_VENUES list and venue breakdown surfacing
+  const expectedHeadlineVenues = [
+    'arXiv', 'ICASSP', 'Interspeech', 'NeurIPS', 'ICLR', 'ICML', 'ACL',
+    'EMNLP', 'ISMIR', 'DCASE', 'WASPAA', 'ASRU', 'SLT', 'CVPR', 'AAAI'
+  ];
+  assert.deepEqual([...HEADLINE_VENUES], expectedHeadlineVenues);
+
+  const { workspace, repo } = setupFixtureRepo(t, 'wave14-r3-venues-podcast-', { copyHubs: true, copyTopLevelPages: true, enableGit: true });
+  const { snap, flatHeader, conceptObj } = makeConceptHelpers();
+
+  const venueFixtures = [
+    { slug: '2026-11-24-emnlp-asr', venue: 'emnlp', concepts: ['task.asr'] },
+    { slug: '2026-11-24-asru-asr', venue: 'asru', concepts: ['task.asr'] },
+    { slug: '2026-11-24-slt-asr', venue: 'slt', concepts: ['task.asr'] },
+    { slug: '2026-11-24-ismir-music', venue: 'ismir', concepts: ['task.music-generation'] },
+    { slug: '2026-11-24-dcase-sed', venue: 'dcase', concepts: ['task.audio-understanding', 'task.event-detection'] },
+    { slug: '2026-11-24-waspaa-se', venue: 'waspaa', concepts: ['task.speech-enhancement'] },
+    { slug: '2026-11-24-cvpr-llm', venue: 'cvpr', concepts: ['model_family.audio-language'] },
+    { slug: '2026-11-24-aaai-llm', venue: 'aaai', concepts: ['model_family.audio-language'] },
+    { slug: '2026-11-24-odyssey-asr', venue: 'odyssey', concepts: ['task.asr'] }
+  ];
+  for (const vf of venueFixtures) {
+    writePost(repo, vf.slug, {
+      title: `Headline Venue ${vf.venue.toUpperCase()}`,
+      date: '2026-11-24',
+      draft: false,
+      paper_digest_page_type: 'paper',
+      paper_digest_source_kind: 'conference',
+      paper_digest_paper_id: `conference:${vf.venue}:2026:paper:demo1`,
+      paper_digest_score: 8.3,
+      paper_digest_tags_contract: flatHeader.contract,
+      paper_digest_tags_schema_fingerprint: flatHeader.schemaFingerprint,
+      paper_digest_tags_registry_sha256: snap.registrySha256,
+      paper_digest_tags_concepts: vf.concepts.map(conceptObj)
+    }, `# 📄 ${vf.slug}\n\n## 📌 核心摘要\n\n测试会议归类。`);
+  }
+  writePost(repo, '2026-11-24', {
+    title: '语音/音乐/音频论文速递 2026-11-24',
+    date: '2026-11-24',
+    draft: false,
+    paper_digest_page_type: 'index'
+  }, '# 语音/音乐/音频论文速递 2026-11-24\n\n共分析 9 篇论文。');
+
+  const builtHubs = writeSotaHubsAuto(repo);
+  assert.deepEqual(
+    builtHubs.manifest.hubs.asr.venueBreakdown,
+    [{ venue: 'EMNLP', count: 1 }, { venue: 'ASRU', count: 1 }, { venue: 'SLT', count: 1 }, { venue: '其他会议', count: 1 }]
+  );
+  assert.deepEqual(builtHubs.manifest.hubs['music-mir'].venueBreakdown, [{ venue: 'ISMIR', count: 1 }]);
+  assert.deepEqual(builtHubs.manifest.hubs['audio-understanding'].venueBreakdown, [{ venue: 'DCASE', count: 1 }]);
+  assert.deepEqual(builtHubs.manifest.hubs['speech-enhancement'].venueBreakdown, [{ venue: 'WASPAA', count: 1 }]);
+  assert.deepEqual(builtHubs.manifest.hubs['audio-llm'].venueBreakdown, [{ venue: 'CVPR', count: 1 }, { venue: 'AAAI', count: 1 }]);
+
+  // 2. Verify exact 3-path podcast alignment matching workbench `publish-daily-podcast.js --portal-repo`:
+  //    - static/feeds/podcast.xml -> public/feeds/podcast.xml
+  //    - data/podcast-episodes.json -> daily_podcast_player.html
+  //    - static/client/podcast/feed.json -> public/client/podcast/feed.json
+  const podcastHeader = protocols.recordHeader('paper-daily-podcast-feed', 'paper-daily-podcast-feed');
+  const clientPodcastFeed = {
+    ...podcastHeader,
+    generatedAt: '2026-11-24T08:00:00+08:00',
+    episodes: [
+      {
+        id: 'podcast-2026-11-24',
+        date: '2026-11-24',
+        title: '音频研究日报播客 2026-11-24',
+        summary: '覆盖 EMNLP/ISMIR/DCASE 等顶会论文速览。',
+        audioUrl: 'https://github.com/nanless/audio-research-portal/releases/download/podcast-2026-11/podcast-2026-11-24.mp3',
+        bytes: 1234567,
+        sha256: 'a'.repeat(64),
+        durationSeconds: 365.4,
+        mimeType: 'audio/mpeg',
+        chapters: [
+          { title: '开场概览', startSeconds: 0, endSeconds: 45.2, paperId: null },
+          { title: '精讲 1', startSeconds: 45.2, endSeconds: 365.4, paperId: 'conference:emnlp:2026:paper:demo1' }
+        ],
+        paperIds: ['conference:emnlp:2026:paper:demo1']
+      }
+    ]
+  };
+  const feedJsonText = `${JSON.stringify(clientPodcastFeed, null, 2)}\n`;
+  const rssXmlText = '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>音频研究工作台播客</title></channel></rss>\n';
+  fs.mkdirSync(path.join(repo, 'static/feeds'), { recursive: true });
+  fs.mkdirSync(path.join(repo, 'static/client/podcast'), { recursive: true });
+  fs.writeFileSync(path.join(repo, 'static/feeds/podcast.xml'), rssXmlText, 'utf8');
+  fs.writeFileSync(path.join(repo, 'data/podcast-episodes.json'), feedJsonText, 'utf8');
+  fs.writeFileSync(path.join(repo, 'static/client/podcast/feed.json'), feedJsonText, 'utf8');
+
+  gitExec(repo, ['init']);
+  gitExec(repo, ['add', '.']);
+  gitExec(repo, ['commit', '-m', 'test: round 3 headline venues and 3-path podcast sync']);
+
+  const dest = path.join(workspace, 'public');
+  runHugo(repo, dest);
+  shardIndex(dest);
+  exportDesktopDetails(dest, repo);
+  verifyDesktopDetails(dest);
+  verifyPageNavigation(dest);
+
+  // Confirm all 3 published outputs & template bindings
+  assert.equal(fs.readFileSync(path.join(dest, 'feeds/podcast.xml'), 'utf8'), rssXmlText);
+  const publishedClientFeed = JSON.parse(fs.readFileSync(path.join(dest, 'client/podcast/feed.json'), 'utf8'));
+  assert.equal(protocols.isCurrentHeader(publishedClientFeed, 'paper-daily-podcast-feed'), true);
+  assert.deepEqual(publishedClientFeed, clientPodcastFeed);
+  const dailyHtml = fs.readFileSync(path.join(dest, 'posts/2026-11-24/index.html'), 'utf8');
+  assert.match(dailyHtml, /daily-podcast-card/);
+  assert.match(dailyHtml, /src=https:\/\/github\.com\/nanless\/audio-research-portal\/releases\/download\/podcast-2026-11\/podcast-2026-11-24\.mp3/);
+  assert.match(dailyHtml, /时长 06:05/);
+  assert.match(dailyHtml, /data-start-sec=45/);
+  assert.match(dailyHtml, /feeds\/podcast\.xml/);
+  assert.match(dailyHtml, /🎙️ 每日播客 RSS/);
 });

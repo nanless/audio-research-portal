@@ -264,6 +264,50 @@
     };
   }
 
+  var VENUE_DISPLAY_NAMES = Object.freeze({
+    icassp: 'ICASSP', interspeech: 'Interspeech',
+    speech_prosody: 'Speech Prosody', 'speech-prosody': 'Speech Prosody', speechprosody: 'Speech Prosody',
+    waspaa: 'WASPAA', asru: 'ASRU', slt: 'SLT', ismir: 'ISMIR', dcase: 'DCASE',
+    taslp: 'TASLP', ieee_acm_taslp: 'TASLP', 'ieee-acm-taslp': 'TASLP', ieeeacmtaslp: 'TASLP',
+    neurips: 'NeurIPS', nips: 'NeurIPS', icml: 'ICML', iclr: 'ICLR',
+    acl: 'ACL', emnlp: 'EMNLP', naacl: 'NAACL', eacl: 'EACL',
+    lrec: 'LREC', coling: 'COLING', tacl: 'TACL',
+    aaai: 'AAAI', ijcai: 'IJCAI', aistats: 'AISTATS', uai: 'UAI',
+    cvpr: 'CVPR', iccv: 'ICCV', eccv: 'ECCV',
+    acmmm: 'ACM MM', acm_mm: 'ACM MM', 'acm-mm': 'ACM MM', mm: 'ACM MM',
+    siggraph: 'SIGGRAPH', chi: 'CHI', ubicomp: 'UbiComp',
+    mobicom: 'MobiCom', mobisys: 'MobiSys', sensys: 'SenSys',
+    eusipco: 'EUSIPCO', chime: 'CHiME', dafx: 'DAFx', icmc: 'ICMC',
+    nime: 'NIME', jep: 'JEP', odyssey: 'Odyssey', iwslt: 'IWSLT',
+    kdd: 'KDD', www: 'WWW', icra: 'ICRA', iros: 'IROS', corl: 'CoRL',
+    jmlr: 'JMLR', tmlr: 'TMLR', spl: 'SPL'
+  });
+
+  function venueLabel(entry) {
+    if (!entry || entry.type !== 'paper') return '';
+    var pid = typeof entry.paperId === 'string' ? entry.paperId : '';
+    var confMatch = pid.match(/^conference:([a-z0-9_-]+):(\d{4}):/i);
+    if (confMatch) {
+      var key = confMatch[1].toLowerCase();
+      var norm = key.replace(/-/g, '_');
+      var compact = norm.replace(/_/g, '');
+      var name = Object.prototype.hasOwnProperty.call(VENUE_DISPLAY_NAMES, key)
+        ? VENUE_DISPLAY_NAMES[key]
+        : Object.prototype.hasOwnProperty.call(VENUE_DISPLAY_NAMES, norm)
+          ? VENUE_DISPLAY_NAMES[norm]
+          : Object.prototype.hasOwnProperty.call(VENUE_DISPLAY_NAMES, compact)
+            ? VENUE_DISPLAY_NAMES[compact]
+            : confMatch[1].toUpperCase();
+      return name + ' ' + confMatch[2];
+    }
+    if (entry.citation && typeof entry.citation.venue === 'string' && entry.citation.venue.trim()) {
+      return entry.citation.venue.trim();
+    }
+    if (entry.sourceKind === 'arxiv' || entry.arxivId) return 'arXiv';
+    if (entry.sourceKind === 'conference') return '会议论文';
+    return '';
+  }
+
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
       safeSiteUrl: safeSiteUrl,
@@ -276,6 +320,8 @@
       selectedIds: selectedIds,
       libraryResults: libraryResults,
       coverageCounts: coverageCounts,
+      VENUE_DISPLAY_NAMES: VENUE_DISPLAY_NAMES,
+      venueLabel: venueLabel,
     };
   }
 
@@ -341,35 +387,6 @@
   var allEntries = [];
   var filteredEntries = [];
   var visibleCount = PAGE_SIZE;
-
-  var VENUE_DISPLAY_NAMES = {
-    icml: 'ICML', iclr: 'ICLR', icassp: 'ICASSP', interspeech: 'Interspeech',
-    neurips: 'NeurIPS', nips: 'NeurIPS', acl: 'ACL', emnlp: 'EMNLP',
-    naacl: 'NAACL', eacl: 'EACL', aaai: 'AAAI', ijcai: 'IJCAI',
-    aistats: 'AISTATS', uai: 'UAI', cvpr: 'CVPR', iccv: 'ICCV',
-    eccv: 'ECCV', acmmm: 'ACM MM', mm: 'ACM MM', ismir: 'ISMIR',
-    waspaa: 'WASPAA', slt: 'SLT', asru: 'ASRU', eusipco: 'EUSIPCO',
-    chime: 'CHiME', dcase: 'DCASE', taslp: 'TASLP', dafx: 'DAFx',
-    icmc: 'ICMC', nime: 'NIME', jep: 'JEP', odyssey: 'Odyssey',
-    speechprosody: 'Speech Prosody', iwslt: 'IWSLT'
-  };
-
-  function venueLabel(entry) {
-    if (!entry || entry.type !== 'paper') return '';
-    var pid = entry.paperId || '';
-    var confMatch = pid.match(/^conference:([a-z0-9-]+):(\d{4}):/i);
-    if (confMatch) {
-      var key = confMatch[1].toLowerCase();
-      var name = VENUE_DISPLAY_NAMES[key] || confMatch[1].toUpperCase();
-      return name + ' ' + confMatch[2];
-    }
-    if (entry.citation && typeof entry.citation.venue === 'string' && entry.citation.venue.trim()) {
-      return entry.citation.venue.trim();
-    }
-    if (entry.sourceKind === 'arxiv' || entry.arxivId) return 'arXiv';
-    if (entry.sourceKind === 'conference') return '会议论文';
-    return '';
-  }
 
   function renderLoadingSkeleton() {
     if (!resultsNode) return;
