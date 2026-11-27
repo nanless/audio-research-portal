@@ -1,0 +1,67 @@
+{
+  "abstract": "In recent years, several Speech Language Models (SLMs) that represent speech and written text jointly have been presented. The question then emerges about how model-internal mechanisms are similar and different when operating in the two modalities. We focus on how these systems encode, store, and retrieve factual knowledge, which has previously been investigated for text-only models. To investigate mechanisms behind the storage and recall of factual association in SLMs, we leverage Causal Mediation Analysis, a technique previously applied to text-based models. Initial results using SpiritLM, a multimodal model integrating discrete speech tokens reveal discrepancies between text-to-text and speech-to-text results, suggesting that the emergent mechanisms for factual recall are only partially carried over from the text to the speech modality. These results advance our understanding of how internal mechanisms encode factual associations in SLMs while contributing insights for improving speech-enabled AI systems.",
+  "abstractSha256": "d2eaf630f369e9131d9c3a077217b7c8b73253a9d8abd5039e324962926043a3",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "音频问答",
+    "rankBucket": "后50%",
+    "score": 5.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Zenseact",
+        "Chalmers University of Technology",
+        "University of Gothenburg"
+      ],
+      "name": "Luca Modica"
+    },
+    {
+      "affiliations": [
+        "Unbox AI",
+        "Chalmers University of Technology",
+        "University of Gothenburg"
+      ],
+      "name": "Filip Landin"
+    },
+    {
+      "affiliations": [
+        "Chalmers University of Technology",
+        "University of Gothenburg"
+      ],
+      "name": "Mehrdad Farahani"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology"
+      ],
+      "name": "Livia Qian"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology"
+      ],
+      "name": "Gabriel Skantze"
+    },
+    {
+      "affiliations": [
+        "Chalmers University of Technology",
+        "University of Gothenburg"
+      ],
+      "name": "Richard Johansson"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文追问文本模型的事实定位机制能否沿用到语音，用三轮因果中介分析比较 SpiritLM 在文本到文本与语音到文本下的平均间接效应，发现语音侧仅剩大幅减弱但仍可辨的定位信号，代价是结论仅在过滤后的合成已知集与离散词元系统上成立。",
+  "originalTitle": "Do Factual Recall Mechanisms Carry over from Text to Speech in Multimodal Language Models?",
+  "paperId": "conference:starsem:2026:conference-paper-id:2026.starsem-conference.28",
+  "pdfUrl": "https://aclanthology.org/2026.starsem-conference.28.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "事实回忆机制能否从文本沿用到语音：对 SpiritLM 的因果追踪解读",
+  "recordUrl": "https://aclanthology.org/2026.starsem-conference.28/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "16a38f3734304c63af9a763c818aed3dc4a9778d2b77fe8b960f23bde4d3661b"
+}

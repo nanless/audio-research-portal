@@ -1,0 +1,57 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Zenseact",
+        "Chalmers University of Technology",
+        "University of Gothenburg"
+      ],
+      "name": "Luca Modica"
+    },
+    {
+      "affiliations": [
+        "Unbox AI",
+        "Chalmers University of Technology",
+        "University of Gothenburg"
+      ],
+      "name": "Filip Landin"
+    },
+    {
+      "affiliations": [
+        "Chalmers University of Technology",
+        "University of Gothenburg"
+      ],
+      "name": "Mehrdad Farahani"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology"
+      ],
+      "name": "Livia Qian"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology"
+      ],
+      "name": "Gabriel Skantze"
+    },
+    {
+      "affiliations": [
+        "Chalmers University of Technology",
+        "University of Gothenburg"
+      ],
+      "name": "Richard Johansson"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:starsem:2026:conference-paper-id:2026.starsem-conference.28",
+  "originalTitle": "Do Factual Recall Mechanisms Carry over from Text to Speech in Multimodal Language Models?",
+  "paperId": "conference:starsem:2026:conference-paper-id:2026.starsem-conference.28",
+  "pdfUrl": "https://aclanthology.org/2026.starsem-conference.28.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.starsem-conference.28/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "16a38f3734304c63af9a763c818aed3dc4a9778d2b77fe8b960f23bde4d3661b",
+  "type": "conference-paper"
+}
