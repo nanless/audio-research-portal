@@ -1,6 +1,6 @@
 # 论文页的客户端资料声明
 
-论文页的 `<script class="paper-tools__client-sidecars">` 是已发行客户端读取引用与导读上下文的入口。声明由 `layouts/partials/client_sidecars.html` 生成；页面还须声明当前 `paper_digest_workbench_contract: researcher-workbench` 和对应的 `paper_digest_workbench_schema_fingerprint`，否则模板不会输出这段声明，客户端回落到旧的兄弟链接。
+论文页的 `<script class="paper-tools__client-sidecars">` 是已发行客户端读取单篇引用与导读上下文的入口。声明由 `layouts/partials/client_sidecars.html` 生成；页面还须声明当前 `paper_digest_workbench_contract: researcher-workbench` 和对应的 `paper_digest_workbench_schema_fingerprint`，否则模板不会输出这段声明，客户端回落到旧的兄弟链接。
 
 ## 现行字段集合
 
@@ -14,7 +14,7 @@
 `rethink-context.json` 记录在 `url` 和 `sha256` 之外，再写 `contract` 和 `schemaFingerprint`：
 
 - `contract`：当前是 `paper-research-context`；
-- `schemaFingerprint`：当前格式的 64 位小写十六进制结构指纹，取自已登记的 `paper-research-context` 格式（浏览器端见 `assets/js/protocol-registry.js`），不能手写，也不能从别的格式复制。
+- `schemaFingerprint`：当前格式的 64 位小写十六进制结构指纹，取自已登记的 `paper-research-context` 格式（协议总表见 `data/paperdigest-protocols.json`，浏览器端见 `assets/js/protocol-registry.js`），不能手写，也不能从别的格式复制。
 
 新页不得写 `paper-research-context-v2`。该合同名只在协议登记中作为历史格式保留，用来读取旧记录；它没有当前 `schemaFingerprint`。模板只重建 `contract` 和 `schemaFingerprint`，写 v2 的页面不会通过当前头部校验，也不会输出客户端声明。旧页面继续按原记录读取，不批量改写成新格式。
 
@@ -27,6 +27,15 @@ Hugo 会把 front matter 解析成参数 map，并把嵌套 map 的键递归小�
 - 模板按白名单逐字段重建记录：每个文件写 `url`、`sha256`，上下文记录再补 `contract` 和 `schemaFingerprint`。
 - 重建后调用 `protocol_header_valid.html` 校验上下文头；URL、SHA、合同名或指纹任何一项不合法，页面都不输出声明。论文页按精确的 `client/papers/<日期>/<论文标识>/` 目录核对，索引模板只按站点基础路径和日期核对同一个目录。
 - `layouts/_default/index.json` 的 `clientSidecars` 使用同一份重建结果，不要单独序列化参数。
+
+## 与全站客户端静态数据的关系
+
+除单篇页内嵌的侧车声明外，门户构建还会输出面向 macOS / Android 原生应用的全站只读静态数据（所有协议与指纹统一登记在 `data/paperdigest-protocols.json`）：
+
+- `client/details/manifest.json`（`paper-desktop-manifest` / `paper-desktop-snapshot` / `paper-desktop-detail`）：内容寻址全站目录快照、tombstone 与净化后的单篇 HTML 片段，由 `scripts/export-desktop-details.js` 导出。
+- `client/index.json`（`paper-search-index-manifest`）：SHA 绑定的有序搜索索引分片清单（兼顾旧 `index.json` 兼容入口）。
+- `client/signals/resource-badges.json`（`paper-resource-badges-index`）：严格独立于 `client/details/*` 的可选开源代码、模型、数据集与试听 Demo 信号索引，由 `scripts/export-resource-badges.js` 导出。
+- `client/podcast/feed.json`（`paper-daily-podcast-feed`）：每日音频播客客户端订阅源，随工作台播客发布按需同步。
 
 ## 构建时 verify-build 的检查项
 

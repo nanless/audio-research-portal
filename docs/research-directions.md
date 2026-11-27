@@ -4,7 +4,7 @@
 
 ## 分类与查询
 
-九个分类维度分别描述论文的不同方面，上下级关系只发生在同一维度内，每个概念最多有一个直接上级。同一维度选多个方向时，论文满足其中一个即可；不同维度的条件必须同时满足。
+九个分类维度分别描述论文的不同方面（研究任务、研究方法、研究条件、信号、应用、研究重点、研究产物、科学主题、模型家族），上下级关系只发生在同一维度内，每个概念最多有一个直接上级。同一维度选多个方向时，论文满足其中一个即可；不同维度的条件必须同时满足。
 
 默认的 `scope=subtree` 包含所选方向及全部下级，`scope=direct` 只匹配论文直接标注的方向。使用 `role=primary` 时，任务、方法、科学主题、研究重点和研究产物按明确记录的主要角色筛选，其余维度按相关标注筛选。主要角色必须属于有效分类，不能根据标签顺序猜测。
 
@@ -16,25 +16,25 @@
 
 上级方向的数量取该方向及全部下级所含论文的并集，不能直接相加下级数量。列表、方向计数和角色筛选共用 `assets/js/tag-core.js`；Hugo 统计采用相同的分类与身份规则，测试使用真实页面样本和完整语料对照。旧标签网址显示的页面数与按论文身份去重的方向数含义不同，不能相加。
 
-普通关键词搜索包含历史文章；选择研究方向后，只使用已经核验的分类。
+普通关键词搜索包含历史文章；选择研究方向后，只使用已经核验的分类。此外，八大音频专题导航（`/hubs/`，由 `scripts/build-sota-hubs.js` 预计算，覆盖 15 个重点来源/顶会统计与近 6 个月趋势）与跨论文知识图谱（`data/related-graph.json`，由 `scripts/build-related-graph.js` 预计算）同样通过 `scripts/lib/research-corpus.js` 复用这份已核验分类与身份去重口径，并严格排除暂缓展示分类（withheld）的论文。
 
 ## 显示词表与历史词表
 
-当前目录显示400个概念。历史论文仍按记录中的词表来源SHA读取当时保存的完整快照，先核验原标签、主要角色和依据，再按稳定概念ID对应到当前目录。旧快照不能改写成新证明。
+当前目录显示 400 个概念。历史论文仍按记录中的词表来源 SHA 读取当时保存的完整快照，先核验原标签、主要角色和依据，再按稳定概念 ID 对应到当前目录。旧快照不能改写成新证明。
 
 上下级筛选、方向计数、路径显示和关键词中的上级名称使用当前目录关系。原来的上级链仍保留在分类对象中，供历史核验使用。同一论文的不同导读仍须各自满足全部筛选条件，不能把对应到当前目录的结果拼在一起。目录显示并不表示每篇历史论文都已重新进行科学分类审查。
 
-当前资源为 `tag-catalog-snapshot.json`、`tag-catalog-versions.json` 和 `tag-presentation-policy.json`。显示快照与按来源SHA选择的原快照分开使用；版本目录保留原完整对象。旧资源和证明继续按原内容读取。
+当前资源为 `tag-catalog-snapshot.json`、`tag-catalog-versions.json` 和 `tag-presentation-policy.json`。`layouts/partials/tag_display_assets.html` 通过 `protocol_header_valid.html` 校验显示资源头，同时支持现行去版本化契约（`paper-tag-catalog-snapshot` / `paper-tag-catalog-versions` 及其 `schemaFingerprint`）与历史 `-v2` 契约，并在头部缺失、指纹漂移或快照内容不一致时 fail-closed 阻断构建。显示快照与按来源 SHA 选择的原快照分开使用；版本目录保留原完整对象。旧资源和证明继续按原内容读取。
 
 ## 模板与资源
 
-`tag_valid_records.html` 核验记录格式、概念ID、分类维度、首选名称及有效状态；`tag_navigation_records.html` 在核验后返回当前目录节点；`tag_catalog_index.html` 缓存词表索引，避免为每篇论文遍历整个词表。统计先按论文分组，再累积直接方向及上级方向的集合。
+`tag_valid_records.html` 核验记录格式、概念 ID、分类维度、首选名称及有效状态；`tag_navigation_records.html` 在核验后返回当前目录节点；`tag_catalog_index.html` 缓存词表索引，避免为每篇论文遍历整个词表。统计先按论文分组，再累积直接方向及上级方向的集合。
 
-目录由 terms 模板依次加载 `tag-core` 和 `tag-browser`。脚本不能放进按 Kind 缓存的主题 footer 后再按 Type 判断，否则 tags 与 categories 可能共用错误的缓存结果。论文库依次加载 `tag-core`、`search-index-loader` 和 `paper-library`。资源保留内容指纹和完整性校验。
+目录由 `layouts/_default/terms.html` 依次加载 `protocol-registry`、`tag-core` 和 `tag-browser`。脚本不能放进按 Kind 缓存的主题 footer 后再按 Type 判断，否则 tags 与 categories 可能共用错误的缓存结果。论文库由 `layouts/_default/library.html` 依次加载 `protocol-registry`、`tag-core`、`index-shard-cache`、`search-index-loader`（配合 Web Worker `search-index-worker`）、`citation-source`、`reading-export` 和 `paper-library`。所有资源保留内容指纹和完整性校验（SRI）。
 
 搜索索引保留中英文检索字段，省略重复原题；上级名称和别名从共享快照读取。历史首选名称仍可检索，上级名称则使用当前目录。方向搜索没有结果时，目录仍可浏览。论文库筛选和全文关键词搜索需要 JavaScript；没有 JavaScript 时，时间归档、目录和论文原链接仍可访问。
 
-链接保留站点基础路径。
+链接保留站点基础路径（当前为 `/audio-research-portal/`）。
 
 ## 搜索索引分片
 
@@ -46,4 +46,4 @@
 
 ## 验证
 
-在沙箱外运行 `npm test` 与 `npm run build:verify`。`npm run build` 在调用 Hugo 前依次运行 `verify-tags-v2.js`、`verify-tags-v3.js` 和 `verify-fullsite-tags.js`，核验历史记录与当前页面；Hugo 成功后调用 `scripts/shard-search-index.js` 分片。`npm run build:verify` 还先运行 `npm run audit:content`，并在构建后运行 `npm run verify` 核验页面与分片。检查上下级关系、别名、各维度组合、主要角色、不同导读隔离、论文计数、未知身份、旧标签回退及脚本顺序。浏览器还须检查实际文章、390像素宽的手机页面、展开和筛选操作、应用与取消、刷新恢复以及页面是否溢出。
+在沙箱外运行 `npm test` 与 `npm run build:verify`。`npm run build` 在调用 Hugo 前依次运行 `verify-tags-v2.js`、`verify-tags-v3.js`、`verify-fullsite-tags.js`，选择每日选读封面并经共享语料生成关联图谱与 8 大专题导航；Hugo 成功后依次运行 `scripts/shard-search-index.js`、`scripts/export-desktop-details.js`、`scripts/export-resource-badges.js`、公开关联图谱导出与 `scripts/build-pagefind.js`。`npm run build:verify` 还先运行 `npm run audit:content`，并在构建后运行 `npm run verify` 核验页面、专题导航、客户端数据包与索引分片。检查上下级关系、别名、各维度组合、主要角色、不同导读隔离、论文计数、未知身份、旧标签回退及脚本顺序。浏览器还须检查实际文章、390 像素宽的手机页面、展开和筛选操作、应用与取消、刷新恢复以及页面是否溢出。

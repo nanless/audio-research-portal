@@ -4,7 +4,7 @@ layout: "reader-guide"
 description: "按发现论文、核对来源、整理阅读和研究写作的顺序，选择真正能进入日常工作的工具。"
 kicker: "从发现到研究"
 noRating: true
-reviewed: "2026-11-26"
+reviewed: "2026-11-27"
 guide_actions:
   - label: "进入论文库"
     url: "papers/"
@@ -14,7 +14,7 @@ guide_actions:
     url: "about/"
 ---
 
-不用先搭建一套复杂系统。先确定研究问题，保存少量候选论文，核对原文，写下自己的判断，再把需要的材料交给 AI agent。下面只保留适合这条路线的官方入口与本站研究工具；功能与链接于 **2026 年 11 月 26 日**核对。
+不用先搭建一套复杂系统。先确定研究问题，保存少量候选论文，核对原文，写下自己的判断，再把需要的材料交给 AI agent。下面只保留适合这条路线的官方入口与本站研究工具；功能与链接于 **2026 年 11 月 27 日**核对。
 
 ## 发现值得读的论文
 
@@ -22,11 +22,11 @@ guide_actions:
 - **[Hugging Face Papers](https://huggingface.co/papers)：发现社区关注的工作。** 日、周、月视图适合补充浏览线索；社区热度与自己的问题相关性要分别判断。找到候选后仍回到作者原论文。
 - **[OpenReview](https://openreview.net/)：查看会议公开记录。** 从对应 venue 或论文 forum 阅读公开稿件及可见讨论；不同会议的公开范围不同，以具体页面为准。不要把预印本、投稿稿与最终会议稿自动视为同一版本。
 
-已经知道要找什么时，可随时按 `⌘K`（或 `/`）呼出本站快捷命令面板按高分、开源与试听 Demo 过滤；通过顶部导航进入**专题导航**（`/hubs/`）查看八大音频方向榜单与近 6 个月趋势，或在[论文库](../papers/)按研究类型、范围及九维分类组合筛选；按会议查找则进入[会议目录](../conferences/)。也可以通过[高分精选 RSS](../feeds/high-score.xml)或各方向专题 RSS 订阅更新，并在每日研究页顶部收听已发布的每日论文音频播客。
+已经知道要找什么时，可随时按 `⌘K`（或 `/`）呼出本站快捷命令面板按高分、开源与试听 Demo 过滤；通过顶部导航进入**专题导航**（`/hubs/`）查看八大音频方向榜单、15 个主要来源/顶会分布与近 6 个月趋势，或在[论文库](../papers/)按研究类型、范围及 400 项九维分类组合筛选；按会议查找则进入[会议目录](../conferences/)。也可以通过[每日研究全量 RSS](../index.xml)、[高分精选 RSS](../feeds/high-score.xml)或[各方向专题 RSS](../about/#订阅与勘误)订阅更新，并在已发布音频播客的每日研究页顶部收听播客（同步支持 `feeds/podcast.xml` 订阅）。
 
 ## 核对原文与复现材料
 
-**从论文中的官方链接出发。** 先确认题目、作者、标识与版本，再查看作者项目页，避免用同名仓库或正文里引用的另一篇论文代替当前工作。[arXiv 版本标识说明](https://info.arxiv.org/help/arxiv_identifier.html)可以帮助区分同一论文的不同稿件。阅读本站单篇精读时，可用内建的配图查看器（点击图片缩放、平移与深浅反色切换）核对架构细节，并用表格工作台按数值与单位排序或全屏对比实验数据。
+**从论文中的官方链接出发。** 先确认题目、作者、标识与版本，再查看作者项目页，避免用同名仓库或正文里引用的另一篇论文代替当前工作。[arXiv 版本标识说明](https://info.arxiv.org/help/arxiv_identifier.html)可以帮助区分同一论文的不同稿件。阅读本站单篇精读时，数学公式已在构建期通过 KaTeX 本地化渲染，配合内建的配图查看器（点击图片 1×–6× 缩放、拖拽平移与深浅反色切换）核对架构细节，并用表格工作台按数值与单位排序或全屏对比实验数据。
 
 - **GitHub：读代码，也读运行条件。** 查看作者仓库的 README、许可证、依赖、训练与评测脚本；做实验时记录 commit 和配置。可用[官方文件浏览指南](https://docs.github.com/en/repositories/working-with-files/using-files/viewing-and-understanding-files)定位文件和历史。仓库存在不代表权重、训练数据或论文全部实验都已公开。
 - **Hugging Face Hub：核对模型与数据说明。** 到 [Models](https://huggingface.co/models) 或 [Datasets](https://huggingface.co/datasets) 找作者发布的资源，阅读 [Model Card](https://huggingface.co/docs/hub/model-cards) 与 [Dataset Card](https://huggingface.co/docs/hub/datasets-cards)。重点检查任务、许可证、适用范围、数据划分、评测条件与限制；缺失字段应记为待核查。
@@ -37,10 +37,11 @@ guide_actions:
 
 **把原始资料和自己的判断分开保存。** 原论文、PDF 与引用字段进入一个资料库；证据位置、自己的总结、反例与实验计划进入笔记。临时的 AI 对话和比较草稿留在工作目录，确认后再归档。用 DOI、arXiv ID 或官方链接关联，避免以相似标题合并不同论文。
 
+- **[音频研究工作台原生客户端（macOS / Android）](https://github.com/nanless/audio-research-workbench/releases)：配套的离线阅读与整理应用。** 由主仓库 [audio-research-workbench](https://github.com/nanless/audio-research-workbench) 构建发行，直接同步本门户静态托管的内容寻址快照（`client/details/manifest.json`）、分片索引、资源徽章与播客源，支持离线精读、本地书架与跨端一致的会议和分类浏览。
 - **[Zotero](https://www.zotero.org/support/adding_items_to_zotero)：可选的论文资料库。** 可从官方论文页使用 Connector，或按 DOI / arXiv ID 添加条目；也可通过“文件 → 导入”读取本站下载的 RIS / BibTeX，见[官方导入说明](https://www.zotero.org/support/kb/importing_standardized_formats)。保存后核对题目、作者和日期。[笔记功能](https://www.zotero.org/support/notes)可记录自己的观察。
 - **[Obsidian](https://obsidian.md/help/Files+and+folders/How+Obsidian+stores+data)：可选的本地笔记库。** 笔记是本地文件夹中的 Markdown，普通编辑器也能读写，适合把比较、概念与实验记录积累成笔记。本站单篇页工具栏已提供“复制 Obsidian 笔记”按钮，可直接生成带 YAML 元数据的阅读笔记模板；Obsidian 的[官方 CLI](https://obsidian.md/help/cli)也支持搜索、读取及创建笔记，供自动化工具使用。
 
-不需要这两种软件也可以开始：把官方 PDF、引用文件与本站导出的 Markdown / CSV 论文清单放进自己的文件夹，用普通文本文件记录证据位置和下一步问题。在[论文库](../papers/)勾选候选条目并展开“选择与导出论文清单”即可批量下载。
+不需要这些软件也可以开始：把官方 PDF、引用文件与本站导出的 Markdown / CSV 论文清单放进自己的文件夹，用普通文本文件记录证据位置和下一步问题。在[论文库](../papers/)勾选候选条目并展开“选择与导出论文清单”即可批量下载。
 
 **把已核验的研究线索带走。** Markdown / CSV 清单包含官方来源、版本提示，以及已有核验的研究类型、范围、主要研究任务 / 主题 / 重点 / 产物 / 机制、方法和直接多级分类路径。网页路径按现行目录导航，导出分类路径保留原签发版本，父级可能不同；这不改写原分类证据。方法“不适用”时保留完整理由；尚未核验的研究类型会明确说明。可以把清单交给外部 agent 初筛、比较研究问题或整理阅读顺序，再让它取得对应原论文并核对证据。清单不包含原论文全文，分类也不能替代原文结论。BibTeX / RIS 只保存可核实书目信息，不把本站分类当作作者的论文元数据。
 
