@@ -459,11 +459,22 @@ function isStrictClientHttpsUrl(raw) {
   return true;
 }
 
+const HTTPS_URL_SCAN_RE = /https:\/\/(?:(?![<>"'`)\]])[\x21-\x7e])+/g;
+const URL_BOUNDARY_AFTER_RE = /^[\s<>"'`)\]\p{P}\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]$/u;
+
 function cleanHttpsUrls(text) {
+  if (typeof text !== 'string' || !text) return [];
   const urls = [];
   const seen = new Set();
-  for (const m of text.matchAll(/https:\/\/[^\s<>"'`)\]]+/g)) {
-    const raw = m[0].replace(/[.,;!?。，；！？]+$/, '');
+  for (const m of text.matchAll(HTTPS_URL_SCAN_RE)) {
+    const start = m.index;
+    const end = start + m[0].length;
+    if (start > 0 && text[start - 1] === '<' && text[end] !== '>') continue;
+    if (end < text.length) {
+      const nextChar = String.fromCodePoint(text.codePointAt(end));
+      if (!URL_BOUNDARY_AFTER_RE.test(nextChar)) continue;
+    }
+    const raw = m[0].replace(/[.,;!?]+$/, '');
     if (!isStrictClientHttpsUrl(raw)) continue;
     const href = new URL(raw).href;
     if (!isStrictClientHttpsUrl(href)) continue;
@@ -1093,6 +1104,7 @@ module.exports = {
   ALL_FACETS,
   DANGEROUS_KEYS,
   isStrictClientHttpsUrl,
+  cleanHttpsUrls,
   parseBasePath,
   parseMarkdownPage,
   extractResourceSignals,
