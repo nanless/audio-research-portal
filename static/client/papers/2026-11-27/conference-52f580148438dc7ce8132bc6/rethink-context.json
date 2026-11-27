@@ -1,0 +1,37 @@
+{
+  "abstract": "Safety alignment in large audio-language models (LALMs) is typically evaluated through single-turn interactions with direct prompts. In real-world deployments, however, these models are often integrated into agent frameworks that introduce developer-controlled system prompts, tool-calling loops, and intermediate encoding steps between user speech and model input. This raises a practical question: can a text-based jailbreak remain effective after being converted to speech by an off-the-shelf text-to-speech (TTS) system and processed through an agent? We investigate this question using 270 prohibited questions spanning nine policy categories, an open-weight TTS model with 82 million parameters, and a minimal LangChain question-answering agent whose system prompt combines a persona with a fuzzing-derived template. Across three audio-capable models, we observe attack success rates (ASRs) ranging from 57.0% to 64.1%. To assess the impact of synthesis errors, we use automatic speech recognition to verify the generated audio and find that 87.4% of clips are transcribed exactly. Our analysis indicates that faithfully rendered speech alone achieves an ASR above 50% on every model tested, while manual evaluation of a 50-response sample agrees with the automatic judge in 92% of cases. These findings suggest that the agent framework does not compensate for the loss of safety robustness introduced by the text-to-audio transition. Even a readily available TTS pipeline requiring only minutes of computation can therefore provide a practical attack surface for transferring text-based jailbreaks to audio-agent settings.",
+  "abstractSha256": "228ea9bfa423fb8dbbc8b794cfa7548d41fa6edcf45acade35dd30a896ab10ab",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音频系统攻击与防御",
+    "rankBucket": "后50%",
+    "score": 5.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Illinois, Urbana-Champaign, IL, USA"
+      ],
+      "name": "Kashyap R Manjusha"
+    },
+    {
+      "affiliations": [
+        "Argonne National Laboratory, Lemont, IL, USA"
+      ],
+      "name": "Murali Emani"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文检验文字越狱经商品化语音合成与问答智能体转交后能否诱使音频模型输出违禁内容，发现三个模型聚合成功率在 57.0% 至 64.1% 之间且忠实合成语音单独已高于五成，代价是仅覆盖三模型、单合成配置与英语聚合统计而未验证任何防御有效性。",
+  "originalTitle": "Transferring Text Jailbreaks to Audio in Tool-Using LLM Agents",
+  "paperId": "conference:trustaudio:2026:conference-paper-id:2026.trustaudio-1.3",
+  "pdfUrl": "https://aclanthology.org/2026.trustaudio-1.3.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "文字越狱经语音合成穿透工具型智能体是否依然有效",
+  "recordUrl": "https://aclanthology.org/2026.trustaudio-1.3/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "6d503b3652516dcb7110ef13bc4e21b7df356d6e6acdb72a9c479ebc47401a9c"
+}

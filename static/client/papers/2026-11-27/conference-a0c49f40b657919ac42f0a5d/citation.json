@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Yashas Harshad Patil"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Krish Rawat"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Anup Shanbhag"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:trustaudio:2026:conference-paper-id:2026.trustaudio-1.1",
+  "originalTitle": "What Frozen Speech Embeddings Reveal About Audio Deepfake Detection Difficulty",
+  "paperId": "conference:trustaudio:2026:conference-paper-id:2026.trustaudio-1.1",
+  "pdfUrl": "https://aclanthology.org/2026.trustaudio-1.1.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.trustaudio-1.1/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "79ff6accdf5684aaecb62f3e9aba5088233d0f67dca92c1bf431cb12e7cc60a6",
+  "type": "conference-paper"
+}

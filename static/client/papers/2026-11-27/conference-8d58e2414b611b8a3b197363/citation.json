@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Qassim University"
+      ],
+      "name": "Rahaf Alshahrani"
+    },
+    {
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
+      "name": "Ayana Niwa"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:trustaudio:2026:conference-paper-id:2026.trustaudio-1.4",
+  "originalTitle": "Activation-Level Characterization of Cross-Model Adversarial Jailbreak Transferability in Speech Language Models",
+  "paperId": "conference:trustaudio:2026:conference-paper-id:2026.trustaudio-1.4",
+  "pdfUrl": "https://aclanthology.org/2026.trustaudio-1.4.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.trustaudio-1.4/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "d448ff402728c234817f731e7cb2d38defedf5d5878e1edb229a5d76b00f9fba",
+  "type": "conference-paper"
+}

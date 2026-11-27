@@ -1,0 +1,43 @@
+{
+  "abstract": "Audio deepfake detectors perform unevenly across synthesis systems. Can frozen speech representations expose structure behind this variation? We construct a simple direction between genuine and synthetic WavLM embeddings and characterize each system’s position and spread along it. Across 61 MLAAD text-to-speech system–language groups, projected spread is strongly associated with mean detector difficulty across three runs (𝜌=0.60). It is the only feature surviving correction over 83 recorded tests, and leave-one-system-out ridge prediction gives R2=0.277. The genuine–synthetic directions also differ markedly across corpora, revealing domain-dependent representation geometry. As an auxiliary utterance score, the centroid projection reduces MLAAD detector equal error rate from 27.2% to 16.3%, improving on both component scores. Supervised probe comparisons further identify where adaptation gains originate. Together, these results establish a compact representation-space diagnostic of attack-specific detector behavior; the informative statistic and benefits of score adaptation depend on the corpus and detector.",
+  "abstractSha256": "35f1c15ad25ca38439d6348cc23ef148e61d4f31fce5f6e0bd1cc51bcfa54ffc",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Yashas Harshad Patil"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Krish Rawat"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Anup Shanbhag"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对伪造检测器在不同合成系统上表现不均的问题，以冻结 WavLM 质心方向上投影离散程度描述难度，在 61 个 MLAAD 系统上得到等级相关 0.60 与留一系统岭回归 R2 为 0.277，代价是结论随语料与检测器变化且自适应仍需标注校准数据。",
+  "originalTitle": "What Frozen Speech Embeddings Reveal About Audio Deepfake Detection Difficulty",
+  "paperId": "conference:trustaudio:2026:conference-paper-id:2026.trustaudio-1.1",
+  "pdfUrl": "https://aclanthology.org/2026.trustaudio-1.1.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "冻结语音嵌入如何揭示音频伪造检测的系统级难度",
+  "recordUrl": "https://aclanthology.org/2026.trustaudio-1.1/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "79ff6accdf5684aaecb62f3e9aba5088233d0f67dca92c1bf431cb12e7cc60a6"
+}

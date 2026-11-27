@@ -1,0 +1,37 @@
+{
+  "abstract": "Audio deepfake research has focused on a few high resource languages, leaving human perception of synthesized Arabic speech unexplored. We present the current study of how human listeners perceive Arabic audio deepfakes. Thirty eight native speakers judged Modern Standard Arabic stimuli in two formats generated with proprietary and open-source models. The two formats are a binary task pairing genuine clips with text-to-speech counterparts and a unary task requiring single-clip authenticity judgments of voice-cloned political speech. The results showed that listeners performed only moderately above chance in both formats (binary: 62.9%; unary balanced accuracy: 64.6%). In the unary task, listeners showed a systematic bias toward judging audio as authentic (d'=0.77, c=0.27), accepting 45% of synthetic clips as real. Confidence was positively related to accuracy in the binary condition but inversely related in the unary condition. Because the two conditions also differ in synthesis method, speakers, and stimuli, we treat this as a descriptive contrast between conditions rather than an effect of task format. An exploratory coded analysis of participants’ rationales suggested that reasoning from subjective certainty was associated with lower accuracy and concrete perceptual cues with higher accuracy, while no cue category reliably predicted confidence. These findings suggest that individual listeners are an unreliable safeguard against Arabic fake audio detection, and motivate future direct comparisons with automatic detectors.",
+  "abstractSha256": "6651f6f373ed53809a1fcc2e2274d8275b38a7035c743df2ec18df6926b89824",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "主观评测",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "后50%",
+    "score": 5.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Purdue University, West Lafayette, IN, USA"
+      ],
+      "name": "Elsayed Issa"
+    },
+    {
+      "affiliations": [
+        "Purdue University, West Lafayette, IN, USA"
+      ],
+      "name": "Yi-Fang Cheng"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本研究以 38 位母语者对现代标准阿拉伯语二元配对与一元克隆判断的在线听测，证明人类仅略高于机会水平且系统性偏向真实、一元自信与准确率反转，但结论受小样本与多重混杂限制。",
+  "originalTitle": "Human Perception of Arabic Fake Audio",
+  "paperId": "conference:trustaudio:2026:conference-paper-id:2026.trustaudio-1.5",
+  "pdfUrl": "https://aclanthology.org/2026.trustaudio-1.5.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "阿拉伯语伪造音频的人类感知：中等准确率、偏向真实与失准的自信",
+  "recordUrl": "https://aclanthology.org/2026.trustaudio-1.5/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "56331afa3567ff72689ee7929f55691a8cbc492d014af59c50ffd62ada2d4b9a"
+}

@@ -1,0 +1,37 @@
+{
+  "abstract": "Cross-model adversarial jailbreak transferability poses a security challenge for speech-language models (SLMs), as adversarial audio examples generated on one model can remain effective on other architectures. Previous work has shown that transferred attacks against SLMs are feasible, but it remains unclear how transferred adversarial inputs are reflected in the internal representations of different models. We investigate cross-model adversarial jailbreak transferability by combining behavioral evaluation with layer-wise activation analysis across heterogeneous SLMs. Using 386 PGD-based adversarial jailbreak examples provided by SPIRIT that satisfied SPIRIT’s original success criterion on the source model, Qwen2-Audio, we evaluate them on other SLMs without further optimization, revealing substantial differences in behavioral vulnerability across models. Conditional on source-model success, LLaMA-Omni reaches an attack success rate of 98.7% and Qwen2.5-Omni only 2.1%, while 86.5% of the examples also satisfy our stricter criterion on the source model Qwen2-Audio. We further analyze layer wise activation shifts between clean and adversarial inputs in LLaMA-Omni and the source Qwen2-Audio. In both models, activation shifts generally increase toward deeper transformer layers, with the largest changes occurring in the final layers. These findings characterize how adversarial inputs are reflected in internal representations under a cross-model transfer setting.",
+  "abstractSha256": "a547acc054c4b8a147629c13a415c6fa384261999c276a572a34afff59019645",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "音频系统攻击与防御",
+    "rankBucket": "后50%",
+    "score": 5.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Qassim University"
+      ],
+      "name": "Rahaf Alshahrani"
+    },
+    {
+      "affiliations": [
+        "Mohamed bin Zayed University of Artificial Intelligence"
+      ],
+      "name": "Ayana Niwa"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文以在 Qwen2-Audio 上生成的 386 个 PGD 对抗音频为条件，复用评估其向异构语音语言模型的迁移并逐层刻画激活偏移，发现 LLaMA-Omni 条件迁移率高达 98.7% 而 Qwen2.5-Omni 仅 2.1%，且两模型的偏移均向深层放大，但结论仅在预筛选样本、严格自动判定与描述性分析前提下成立。",
+  "originalTitle": "Activation-Level Characterization of Cross-Model Adversarial Jailbreak Transferability in Speech Language Models",
+  "paperId": "conference:trustaudio:2026:conference-paper-id:2026.trustaudio-1.4",
+  "pdfUrl": "https://aclanthology.org/2026.trustaudio-1.4.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "跨模型语音越狱迁移的行为与内部激活刻画",
+  "recordUrl": "https://aclanthology.org/2026.trustaudio-1.4/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "d448ff402728c234817f731e7cb2d38defedf5d5878e1edb229a5d76b00f9fba"
+}

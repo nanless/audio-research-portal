@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "HiLCoE School of Computer Science and Technology, 2 GSMA , 3 gheero"
+      ],
+      "name": "Dagnachew Mekonnen Marilign"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Enrique Molero"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Abrham Haile"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Louis Powell"
+    },
+    {
+      "affiliations": [
+        "Saarland University"
+      ],
+      "name": "Israel Abebe Azime"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:trustaudio:2026:conference-paper-id:2026.trustaudio-1.2",
+  "originalTitle": "TeleASR-Amharic: A Benchmark for Robust Amharic ASR in Realistic Telecommunication Conditions",
+  "paperId": "conference:trustaudio:2026:conference-paper-id:2026.trustaudio-1.2",
+  "pdfUrl": "https://aclanthology.org/2026.trustaudio-1.2.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.trustaudio-1.2/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "c10d04027b0c9f1f41d721097e73a4116838f451984437450322e2faa3e25156",
+  "type": "conference-paper"
+}
