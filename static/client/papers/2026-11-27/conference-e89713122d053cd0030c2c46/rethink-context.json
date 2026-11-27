@@ -1,0 +1,127 @@
+{
+  "abstract": "AfriVoices-KE is a large-scale multilingual speech dataset comprising approximately 3,000 hours of audio across five Kenyan languages: Dholuo, Kikuyu, Kalenjin, Maasai, and Somali. The dataset includes 750 hours of scripted speech and 2,250 hours of spontaneous speech, collected from 4,777 native speakers across diverse regions and demographics. This work addresses the critical underrepresentation of African languages in speech technology by providing a high-quality, linguistically diverse resource. Data collection followed a dual methodology: scripted recordings drew from compiled text corpora, translations, and domain-specific generated sentences spanning eleven domains relevant to the Kenyan context, while unscripted speech was elicited through textual and image prompts to capture natural linguistic variation and dialectal nuances. A customized mobile application enabled contributors to record using smartphones. Quality assurance operated at multiple layers, encompassing automated signal-to-noise ratio validation prior to recording and human review for content accuracy. Though the project encountered challenges common to low-resource settings, including unreliable infrastructure, device compatibility issues, and community trust barriers, these were mitigated through local mobilizers, stakeholder partnerships, and adaptive training protocols. AfriVoices-KE provides a foundational resource for developing inclusive automatic speech recognition and text-to-speech systems, while advancing the digital preservation of Kenya’s linguistic heritage.",
+  "abstractSha256": "7ffa81e93c613a2813d8578821f82f3d21101863d9f4a05fccc7792d28bffc6d",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Lilian Wanzare"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Cynthia Jayne Amol"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Ezekiel Maina"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Nelson Odhiambo"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Hope Kerubo"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Leila Misula"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Vivian Oloo"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Rennish Mboya"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Edwin Onkoba"
+    },
+    {
+      "affiliations": [
+        "United States International University, Kenya"
+      ],
+      "name": "Edward Ombui"
+    },
+    {
+      "affiliations": [
+        "Dedan Kimathi University of Technology, Kenya"
+      ],
+      "name": "Joseph Muguro"
+    },
+    {
+      "affiliations": [
+        "Dedan Kimathi University of Technology, Kenya"
+      ],
+      "name": "Ciira wa Maina"
+    },
+    {
+      "affiliations": [
+        "Kabarak University, Kenya"
+      ],
+      "name": "Andrew Kipkebut"
+    },
+    {
+      "affiliations": [
+        "Jaramogi Oginga Odinga University of Science and Technology, Kenya"
+      ],
+      "name": "Alfred Omondi Otom"
+    },
+    {
+      "affiliations": [
+        "Tech Innovators Network (THiNK), Kenya"
+      ],
+      "name": "Ian Ndung’u Kang’ethe"
+    },
+    {
+      "affiliations": [
+        "Tech Innovators Network (THiNK), Kenya"
+      ],
+      "name": "Angela Wambui Kanyi"
+    },
+    {
+      "affiliations": [
+        "Tech Innovators Network (THiNK), Kenya"
+      ],
+      "name": "Brian Gichana Omwenga"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对肯尼亚本土语言语音资源稀缺且领域单一的问题，AfriVoices-KE 以约 75% 无稿加约 25% 有稿的双轨手机采集与多层人工质检建成 3,005 小时语料，最强的地域与方言覆盖证据伴随人群偏向高学历青年、无模型基线验证的主要代价。",
+  "originalTitle": "AfriVoices-KE: A Multilingual Speech Dataset for Kenyan Languages",
+  "paperId": "conference:sigul:2026:conference-paper-id:2026.sigul-1.29",
+  "pdfUrl": "https://aclanthology.org/2026.sigul-1.29.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "肯尼亚五种语言 3,005 小时语音数据集的采集与质检",
+  "recordUrl": "https://aclanthology.org/2026.sigul-1.29/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "4084863e443aa8f6703e8057a51d90ddc3fffec0a260fb3cdafa7d2b3abc0e3e"
+}

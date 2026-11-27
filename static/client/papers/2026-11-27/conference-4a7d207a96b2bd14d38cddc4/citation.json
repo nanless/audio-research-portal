@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Jadavpur University, Kolkata, India"
+      ],
+      "name": "Anuran Mitra"
+    },
+    {
+      "affiliations": [
+        "Jadavpur University, Kolkata, India"
+      ],
+      "name": "Anirvan Chakravarty"
+    },
+    {
+      "affiliations": [
+        "Jadavpur University, Kolkata, India"
+      ],
+      "name": "Tapabrata Mondal"
+    },
+    {
+      "affiliations": [
+        "Jadavpur University, Kolkata, India"
+      ],
+      "name": "Sivaji Bandyopadhyay"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:sigul:2026:conference-paper-id:2026.sigul-1.22",
+  "originalTitle": "From LLM Prompts to Acoustic Baselines: A Scalable Pipeline for Under-Resourced Disfluent Code-Mixed Speech",
+  "paperId": "conference:sigul:2026:conference-paper-id:2026.sigul-1.22",
+  "pdfUrl": "https://aclanthology.org/2026.sigul-1.22.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.sigul-1.22/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "2b693221d2077b095f43ff6fceb1eb3d4a5e1109300eccccd6ffb0e6ce717e86",
+  "type": "conference-paper"
+}

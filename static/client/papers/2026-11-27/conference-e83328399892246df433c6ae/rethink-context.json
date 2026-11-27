@@ -1,0 +1,43 @@
+{
+  "abstract": "The Amazon basin along the Peru–Brazil border hosts extraordinary linguistic diversity, including many Indigenous languages whose speaker communities span national frontiers. Despite sustained documentation work, most remain extremely low-resource languages (ELRLs) for Natural Language Processing (NLP): reusable corpora are scarce, orthographies vary across countries and institutions, and basic tools such as tokenizers, taggers, and morphological analyzers are largely unavailable. We present a resource-oriented survey of five Indigenous languages of the Western Amazon—Matsés, Amahuaca, Kashinawa, Ticuna, and Kukama-Kukamiria—aimed at supporting more realistic NLP and speech work in extreme low-resource settings. Using a systematic search across academic venues, language archives, and public code/model repositories, we identify and cross-check available materials spanning lexical resources, text corpora, linguistic annotation, and speech collections. For each item we record practical reuse information, including the relevant task or modality, source location, and any stated access, licensing, or usage conditions. Our findings show strong cross-language asymmetries and fragmentation: most materials concentrate in documentation artifacts and lexicons, while standardized datasets with clear access and reuse conditions suitable for training and evaluation remain rare. We conclude with concrete recommendations to improve discoverability, normalize orthographic variation, and prioritize resource creation that maximizes interoperability across tools and benchmarks.",
+  "abstractSha256": "c239ec75a771f0f83426d4ff41def1e47a732a17d621370cddd21e80ca3c30bb",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "综述",
+    "primaryMethod": "系统综述",
+    "primaryTask": "语音识别",
+    "rankBucket": "后50%",
+    "score": 5.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Universitat Pompeu Fabra, Spain"
+      ],
+      "name": "Rodolfo Joel Zevallos"
+    },
+    {
+      "affiliations": [
+        "Barcelona Supercomputing Center, Spain"
+      ],
+      "name": "Fabrício Carraro"
+    },
+    {
+      "affiliations": [
+        "Northeastern University, The United States"
+      ],
+      "name": "John E. Ortega"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本调查系统检索学术发表与语言档案来源，揭示 5 种亚马孙极低资源语言的资源高度不对称与碎片化，并指出语音为先与正字法归一是最现实的推进路径，而许可异质与转写稀缺是主要代价。",
+  "originalTitle": "AmazoniaNLP: A Survey of Extreme Low-Resource Languages in the Peruvian-Brazilian Amazon",
+  "paperId": "conference:sigul:2026:conference-paper-id:2026.sigul-1.28",
+  "pdfUrl": "https://aclanthology.org/2026.sigul-1.28.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "亚马孙极低资源语言的计算现状调查",
+  "recordUrl": "https://aclanthology.org/2026.sigul-1.28/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "cabb7051008c7819fb93b60a62a004aa55cbaacfa2dc426632cbe6169d8dde1f"
+}

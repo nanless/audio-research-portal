@@ -1,0 +1,49 @@
+{
+  "abstract": "We present a new database of Romance clitics across nine varieties. The database includes speech, transcriptions, and linguistic annotations. The database concentrates on clitics, and includes varieties of Romance with stressed clitics. Specifically, the database includes data from the regions of Corsica, Pyrénées-Atlantiques, Sardinia, Liguria, Basilicata, Campania, Mallorca, Menorca, and Formentera. A publicly accessible interface allows easy searching. The database and, separately, the interface code will be made publicly available.",
+  "abstractSha256": "e07e385163a8c19d697998f3475c0a69bbdb944cfd96f1fe432ce71b0c402b17",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "后50%",
+    "score": 5.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Linguistics and IACS, Stony Brook University, New York, NY, USA"
+      ],
+      "name": "Abdelrahim Qaddoumi"
+    },
+    {
+      "affiliations": [
+        "Linguistics and IACS, Stony Brook University, New York, NY, USA"
+      ],
+      "name": "Owen Rambow"
+    },
+    {
+      "affiliations": [
+        "Linguistics and IACS, Stony Brook University, New York, NY, USA"
+      ],
+      "name": "Lori Repetti"
+    },
+    {
+      "affiliations": [
+        "Linguistics and IACS, Stony Brook University, New York, NY, USA"
+      ],
+      "name": "Francisco Ordóñez"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对少见罗曼语变体中与重音交互的附着词缺乏有声可检索记录的问题，作者采集 75 位发音人 266.19 分钟诱发翻译语料并配 42 项标注与可复用检索界面，分布统计证实了重音与顺序变异的可查性，代价是语料为诱发句式且部分子库与特征极为稀疏并无模型基准验证。",
+  "originalTitle": "A Database of Romance Clitics With Speech Samples",
+  "paperId": "conference:sigul:2026:conference-paper-id:2026.sigul-1.9",
+  "pdfUrl": "https://aclanthology.org/2026.sigul-1.9.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "带录音的罗曼语附着词数据库：采集、标注与检索界面",
+  "recordUrl": "https://aclanthology.org/2026.sigul-1.9/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "1507029486b96b5b8656c19eee810d2fbf403766b11b917d3dfe0ed61d8ea785"
+}

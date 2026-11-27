@@ -1,0 +1,37 @@
+{
+  "abstract": "This paper introduces the Spontaneous Persian Speech (SPS) dataset designed for automatic speech recognition (ASR) tasks and a methodology laying the groundwork for addressing the shortage of spontaneous speech data. The corpus aims to support research on natural and conversational Persian, which remains under-represented in current ASR resources. The dataset consists of 694 minutes of audio from a total of 65 speakers, including 34 male and 31 female speakers. It contains 526,585 tokens. The audio segmentation step produces intervals of 1.24 to 3.25 seconds, each containing 3 to 9 words. The recordings cover a variety of environments, from inside cars to homes and shopping areas, including both busy and quiet settings. We use the SPS dataset to fine-tune Whisper and the performance increases significantly for both the small and medium models based on Word Error Rate (WER). This could be an initiative toward building domain-oriented datasets for specific ASR tasks.",
+  "abstractSha256": "fe5791aa63588a7ecbb26e7bebc118df8e705f2d4ee053b4aa0277d991897731",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音识别",
+    "rankBucket": "后50%",
+    "score": 5.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Behnoosh Namdarzadeh"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Nicolas Ballier"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对波斯语自发对话识别失准问题，本文构建 694 分钟自发语音数据集并以 2 轮微调将中小 Whisper 模型的平均词错误率从 2.5 左右降至 0.8 左右，代价是仅覆盖德黑兰口音且数据集未公开、缺乏人工听测与方差报告。",
+  "originalTitle": "Fine-tuning Whisper with Spontaneous Persian Speech (SPS)",
+  "paperId": "conference:sigul:2026:conference-paper-id:2026.sigul-1.26",
+  "pdfUrl": "https://aclanthology.org/2026.sigul-1.26.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "自发波斯语语音识别：SPS 数据集构建与 Whisper 微调解读",
+  "recordUrl": "https://aclanthology.org/2026.sigul-1.26/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "d544cb755ea534a5480003959a7c4d27f92ff819c614564eb426b82f43378259"
+}

@@ -1,0 +1,43 @@
+{
+  "abstract": "In this early-stage study, we investigate whether transfer learning from lexifier or substrate languages can improve text-to-speech (TTS) performance for low-resource creoles. We conducted a controlled experiment using two creoles of distinct lexical origins: Nigerian Pidgin (English-based) and Guadeloupean Creole (French-based). Single-speaker TTS datasets of approximately 30 minutes each were recorded and used to fine-tune pretrained models for English, French, and Yoruba. Objective metrics and informal subjective evaluations were employed to assess synthesis quality. Though partially inconclusive, our results suggest that the French-based models outperform others for both creoles, while Yoruba-based models yield weaker performance. These findings may suggest that lexical similarity or historic influences alone do not fully predict transfer learning effectiveness, and that phonotactic compatibility and orthographic depth may also be relevant factors. Our work provides insight into TTS model development for creoles and other low-resource languages, and highlights avenues for further research on leveraging relevant linguistic and orthographic features for model development.",
+  "abstractSha256": "d0f16eaac5e6c62e8c09a781db28d732434ecbd9e5da620082a5eeceb0e98a39",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "文本到语音",
+    "rankBucket": "后50%",
+    "score": 4.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "National Institute for Oriental Languages and Civilizations (INALCO), France"
+      ],
+      "name": "Emmett Strickland"
+    },
+    {
+      "affiliations": [
+        "Paris-Saclay University, France"
+      ],
+      "name": "Marc Evrard"
+    },
+    {
+      "affiliations": [
+        "National Institute for Oriental Languages and Civilizations (INALCO), France"
+      ],
+      "name": "Valentina Fedchenko"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文以尼日利亚皮钦语与瓜德罗普克里奥尔语为对照，用同量同轮的三起点微调比较词源与底层语言的迁移价值，发现法语起点在两组上均占优且仅瓜德罗普 PESQ 达到显著，但结论受小样本与非正式听感限制。",
+  "originalTitle": "Transfer Learning for Creole TTS: A Pilot Study on Whether Substrate Phonologies or Lexifier Vocabularies Matter More",
+  "paperId": "conference:sigul:2026:conference-paper-id:2026.sigul-1.11",
+  "pdfUrl": "https://aclanthology.org/2026.sigul-1.11.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "词源词汇与底层音系谁更能帮助克里奥尔语语音合成",
+  "recordUrl": "https://aclanthology.org/2026.sigul-1.11/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "41d6508733274abad76f6a43e4652068bb8d0626af9c94a3c4ec5e467d26a505"
+}

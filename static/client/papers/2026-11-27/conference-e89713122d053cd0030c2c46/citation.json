@@ -1,0 +1,117 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Lilian Wanzare"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Cynthia Jayne Amol"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Ezekiel Maina"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Nelson Odhiambo"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Hope Kerubo"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Leila Misula"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Vivian Oloo"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Rennish Mboya"
+    },
+    {
+      "affiliations": [
+        "Maseno University, Kenya"
+      ],
+      "name": "Edwin Onkoba"
+    },
+    {
+      "affiliations": [
+        "United States International University, Kenya"
+      ],
+      "name": "Edward Ombui"
+    },
+    {
+      "affiliations": [
+        "Dedan Kimathi University of Technology, Kenya"
+      ],
+      "name": "Joseph Muguro"
+    },
+    {
+      "affiliations": [
+        "Dedan Kimathi University of Technology, Kenya"
+      ],
+      "name": "Ciira wa Maina"
+    },
+    {
+      "affiliations": [
+        "Kabarak University, Kenya"
+      ],
+      "name": "Andrew Kipkebut"
+    },
+    {
+      "affiliations": [
+        "Jaramogi Oginga Odinga University of Science and Technology, Kenya"
+      ],
+      "name": "Alfred Omondi Otom"
+    },
+    {
+      "affiliations": [
+        "Tech Innovators Network (THiNK), Kenya"
+      ],
+      "name": "Ian Ndung’u Kang’ethe"
+    },
+    {
+      "affiliations": [
+        "Tech Innovators Network (THiNK), Kenya"
+      ],
+      "name": "Angela Wambui Kanyi"
+    },
+    {
+      "affiliations": [
+        "Tech Innovators Network (THiNK), Kenya"
+      ],
+      "name": "Brian Gichana Omwenga"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:sigul:2026:conference-paper-id:2026.sigul-1.29",
+  "originalTitle": "AfriVoices-KE: A Multilingual Speech Dataset for Kenyan Languages",
+  "paperId": "conference:sigul:2026:conference-paper-id:2026.sigul-1.29",
+  "pdfUrl": "https://aclanthology.org/2026.sigul-1.29.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.sigul-1.29/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "4084863e443aa8f6703e8057a51d90ddc3fffec0a260fb3cdafa7d2b3abc0e3e",
+  "type": "conference-paper"
+}

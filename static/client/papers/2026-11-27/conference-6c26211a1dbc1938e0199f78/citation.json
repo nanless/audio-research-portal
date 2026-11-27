@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Linguistics and IACS, Stony Brook University, New York, NY, USA"
+      ],
+      "name": "Abdelrahim Qaddoumi"
+    },
+    {
+      "affiliations": [
+        "Linguistics and IACS, Stony Brook University, New York, NY, USA"
+      ],
+      "name": "Owen Rambow"
+    },
+    {
+      "affiliations": [
+        "Linguistics and IACS, Stony Brook University, New York, NY, USA"
+      ],
+      "name": "Lori Repetti"
+    },
+    {
+      "affiliations": [
+        "Linguistics and IACS, Stony Brook University, New York, NY, USA"
+      ],
+      "name": "Francisco Ordóñez"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:sigul:2026:conference-paper-id:2026.sigul-1.9",
+  "originalTitle": "A Database of Romance Clitics With Speech Samples",
+  "paperId": "conference:sigul:2026:conference-paper-id:2026.sigul-1.9",
+  "pdfUrl": "https://aclanthology.org/2026.sigul-1.9.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.sigul-1.9/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "1507029486b96b5b8656c19eee810d2fbf403766b11b917d3dfe0ed61d8ea785",
+  "type": "conference-paper"
+}

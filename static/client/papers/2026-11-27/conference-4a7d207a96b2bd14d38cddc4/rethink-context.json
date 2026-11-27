@@ -1,0 +1,49 @@
+{
+  "abstract": "Spontaneous speech in multilingual communities often involves rapid code-mixing (CM) and natural disfluencies, yet such patterns are rarely reflected in available training data for under-resourced languages. This gap limits the development of robust automatic speech recognition (ASR) systems. To address this, we introduce BEHE-CMDisfl, a fully synthetic Bengali–English and Hindi–English disfluent code-mixed speech corpus generated through a controlled Large Language Model (LLM) and Text-to-Speech (TTS) pipeline. The dataset explicitly incorporates conversational phenomena such as filled pauses, repetitions, and restarts. We evaluate its usefulness under two ASR settings. In a micro-resource scenario (∼1.3 hours), a GMM-HMM Kaldi baseline achieved a 37.74% Word Error Rate (WER) after phonetic normalization to reduce transliteration inconsistencies, and successfully retained disfluency markers in decoding. We also examined adaptation of a modern foundation model. In zero-shot testing, openai/whisper-small failed on the code-mixed speech due to severe hallucinations and looping behavior. After applying parameter-efficient fine-tuning (LoRA) for 1,000 steps, the model stabilized, reduced insertion errors, captured rapid language switching more reliably, and achieved a WER of 21.37%. These findings show that synthetic data combined with efficient fine-tuning offers a practical path for ASR development in complex low-resource disfluent CM settings.",
+  "abstractSha256": "051b06fa320c8ac413f700188c200cb434b66483db5dd9d84c8168639dab2005",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音识别",
+    "rankBucket": "后50%",
+    "score": 5.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Jadavpur University, Kolkata, India"
+      ],
+      "name": "Anuran Mitra"
+    },
+    {
+      "affiliations": [
+        "Jadavpur University, Kolkata, India"
+      ],
+      "name": "Anirvan Chakravarty"
+    },
+    {
+      "affiliations": [
+        "Jadavpur University, Kolkata, India"
+      ],
+      "name": "Tapabrata Mondal"
+    },
+    {
+      "affiliations": [
+        "Jadavpur University, Kolkata, India"
+      ],
+      "name": "Sivaji Bandyopadhyay"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对孟加拉语与印地语混英语自发不流利语音极度缺少数据的问题，本文用大语言模型受控生成加语音合成构建 BEHE-CMDisfl，并在约 1.3 小时子集上以宽波束统计方法达到 37.74% 的词错误率、以 1,000 步低秩适配将基础模型稳定至 21.37%，代价是结论仅在合成域内成立且未经真实对话验证。",
+  "originalTitle": "From LLM Prompts to Acoustic Baselines: A Scalable Pipeline for Under-Resourced Disfluent Code-Mixed Speech",
+  "paperId": "conference:sigul:2026:conference-paper-id:2026.sigul-1.22",
+  "pdfUrl": "https://aclanthology.org/2026.sigul-1.22.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "从受控提示到合成波形：微资源不流利语码混合语音的自举方法",
+  "recordUrl": "https://aclanthology.org/2026.sigul-1.22/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "2b693221d2077b095f43ff6fceb1eb3d4a5e1109300eccccd6ffb0e6ce717e86"
+}
