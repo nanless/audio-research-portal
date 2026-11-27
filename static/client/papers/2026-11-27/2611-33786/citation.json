@@ -1,0 +1,51 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33786v1",
+  "arxivId": "2611.33786",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33786v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Dept. of Radiology, Mass General Brigham and Harvard Medical School, Boston, MA, USA",
+        "Data Science, Harvard John A. Paulson School of Engineering and Applied Sciences, Harvard University, Cambridge, MA, USA"
+      ],
+      "name": "Karlo Vrancic"
+    },
+    {
+      "affiliations": [
+        "Dept. of Radiology, Mass General Brigham and Harvard Medical School, Boston, MA, USA"
+      ],
+      "name": "Fangxu Xing"
+    },
+    {
+      "affiliations": [
+        "Dept. of Radiology, University of Maryland School of Medicine, Baltimore, MD, USA"
+      ],
+      "name": "Jiachen Zhuo"
+    },
+    {
+      "affiliations": [
+        "Dept. of Neural and Pain Sciences, University of Maryland School of Dentistry, Baltimore, MD, USA"
+      ],
+      "name": "Maureen Stone"
+    },
+    {
+      "affiliations": [
+        "Dept. of Electrical and Computer Engineering, Johns Hopkins University, Baltimore, MD, USA"
+      ],
+      "name": "Jerry L. Prince"
+    },
+    {
+      "affiliations": [
+        "Dept. of Radiology, Mass General Brigham and Harvard Medical School, Boston, MA, USA"
+      ],
+      "name": "Jonghye Woo"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.33786v1",
+  "originalTitle": "Evaluating Cine and Tagged MRI-to-Speech Synthesis with Complementary Metrics and MRI-Free Controls",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33786v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

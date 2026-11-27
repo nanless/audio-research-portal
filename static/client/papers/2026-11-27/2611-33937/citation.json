@@ -1,0 +1,67 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33937v1",
+  "arxivId": "2611.33937",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33937v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University",
+        "Shanghai Innovation Institute"
+      ],
+      "name": "Haitao Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Tian Tan"
+    },
+    {
+      "affiliations": [
+        "Tencent Hunyuan"
+      ],
+      "name": "Yuguang Yang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Innovation Institute",
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Guanrou Yang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Innovation Institute",
+        "Xiamen University"
+      ],
+      "name": "Wenhao Guan"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University",
+        "Shanghai Innovation Institute"
+      ],
+      "name": "Chenglin Li"
+    },
+    {
+      "affiliations": [
+        "Tencent Hunyuan"
+      ],
+      "name": "Shan Yang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Innovation Institute",
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Xie Chen"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.33937v1",
+  "originalTitle": "InstructTTS-OPD: On-Policy Distillation for Multi-Objective Instruction-Following TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33937v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

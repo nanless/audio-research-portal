@@ -1,0 +1,83 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33861v1",
+  "arxivId": "2611.33861",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33861v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Daili Hua"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University",
+        "Zhongguancun Academy"
+      ],
+      "name": "Yifan Dai"
+    },
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Bohan Zeng"
+    },
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Yuran Wang"
+    },
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Zihao Wu"
+    },
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Chengzhuo Tong"
+    },
+    {
+      "affiliations": [
+        "Kuaishou Technology"
+      ],
+      "name": "Guoqing Jiang"
+    },
+    {
+      "affiliations": [
+        "Kuaishou Technology"
+      ],
+      "name": "Liwei Chen"
+    },
+    {
+      "affiliations": [
+        "Kuaishou Technology"
+      ],
+      "name": "Zhiheng Qin"
+    },
+    {
+      "affiliations": [
+        "Kuaishou Technology"
+      ],
+      "name": "Xuanping Li"
+    },
+    {
+      "affiliations": [
+        "Peking University",
+        "Zhongguancun Academy",
+        "Beijing Key Laboratory of Data Intelligence and Security (Peking University)"
+      ],
+      "name": "Wentao Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.33861v1",
+  "originalTitle": "OmniMeld: Enhancing Audio-Visual Understanding via Multi-Teacher On-Policy Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33861v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

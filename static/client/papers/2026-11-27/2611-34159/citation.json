@@ -1,0 +1,20 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34159v1",
+  "arxivId": "2611.34159",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34159v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Istituto di Informatica e Telematica, Consiglio Nazionale delle Ricerche, Via G. Moruzzi, 1, Pisa, 56124, Italy"
+      ],
+      "name": "Caterina Senette"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.34159v1",
+  "originalTitle": "Interacting with Alexa: A Longitudinal Case Study of Voice Assistant Use in Down Syndrome",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34159v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

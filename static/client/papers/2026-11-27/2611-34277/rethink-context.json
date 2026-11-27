@@ -1,0 +1,75 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34277v1",
+  "abstract": "Beat and downbeat tracking have seen multiple improvements through recent deep learning approaches, but most target an offline setting, precluding their use in real-time scenarios. We adapt a recent offline beat tracking model, Beat This, for online, low-latency operation and propose Beat This! Live, a causal variant designed for real-time beat and downbeat tracking. We present the architectural modifications required to obtain a causal system suitable for streaming inference and measure their impact on accuracy. By training our model with temporally shifted labels, it produces predictions slightly ahead of the current frame, which not only reduces latency, but enables much more effective peak-picking. Evaluation on the GTZAN dataset shows the F1-score improves from 80.6 to 86.7 for beats and 56.5 to 74.1 for downbeats compared to BeatNet+, the current state of the art in online beat tracking.",
+  "abstractSha256": "9fdb92d5705c209883e226b1b3df1d07ffa287a78c9750e5d6a2981c85c5bb1a",
+  "arxivId": "2611.34277",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34277v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "节拍跟踪",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.beat-tracking",
+          "label": "节拍跟踪"
+        },
+        {
+          "facet": "method",
+          "id": "method.transformer",
+          "label": "Transformer"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.real-time",
+          "label": "实时处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "Transformer",
+      "primaryMethodId": "method.transformer",
+      "primaryTask": "节拍跟踪",
+      "primaryTaskId": "task.beat-tracking",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Bánk Juhász"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria",
+        "LIT AI Lab, Linz Institute of Technology, Austria"
+      ],
+      "name": "Gerhard Widmer"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Jan Schlüter"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对离线节拍模型无法实时运行的问题，Beat This! Live 以因果卷积注意力加滑动窗口与标签前移加移位局部极大后处理实现在线化，在 GTZAN 上把节拍 F1 从 80.6 提升至 86.7、下拍从 56.5 提升至 74.1，代价是特征前视补偿与暖机损失及大模型开销。",
+  "originalTitle": "Beat This! Live - Online Beat and Downbeat Tracking by Predicting the Future",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34277v1.pdf",
+  "readerTitle": "预测未来实现零延迟 Beat This! Live 在线节拍跟踪解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

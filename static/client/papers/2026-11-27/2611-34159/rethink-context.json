@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34159v1",
+  "abstract": "As life expectancy for individuals with Down syndrome (DS) continues to increase, supporting cog- nitive engagement, everyday autonomy, and participation throughout adulthood has become an important research priority. Conversational voice assistants have emerged as promising assistive tech- nologies for these purposes, yet evidence regarding their long-term use in naturalistic settings remains limited. This paper presents a longitudinal case study of the everyday use of Amazon Alexa by an adult with Down syndrome over nine months in a real domestic environment. The study combines analyses of interaction logs, audio recordings, and qualitative observations to investigate usage pat- terns, interaction performance, communicative adaptation, and the integration of the voice assistant into everyday life. Results show that Alexa became progressively embedded in daily routines, sup- porting entertainment, information access, and autonomy-related activities. Longitudinal analyses reveal stable interaction patterns, reduced retry behavior, and the emergence of effective communi- cation strategies, while qualitative observations highlight increasing communicative engagement and the value of proactive reminders. The study also identifies important limitations of current commer- cial voice assistants, including reduced robustness to non-normative speech, limited conversational continuity, and poor contextual reasoning. Beyond providing rare ecologically valid evidence of long- term voice assistant use, the findings highlight design considerations that are relevant to the ongoing evolution of LLM-based conversational systems.",
+  "abstractSha256": "113d5ef9db1de7c4c172fff1e6fd0d2dd628f43086107e772ff4d96ddf5784c7",
+  "arxivId": "2611.34159",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34159v1",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "案例研究与实践报告",
+    "primaryTask": "语音交互",
+    "rankBucket": "后50%",
+    "score": 5.7,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-interaction",
+          "label": "语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.case-study",
+          "label": "案例研究与实践报告"
+        },
+        {
+          "facet": "application",
+          "id": "application.accessibility",
+          "label": "无障碍"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "案例研究与实践报告",
+      "primaryMethodId": "method.case-study",
+      "primaryTask": "语音交互",
+      "primaryTaskId": "task.speech-interaction",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Istituto di Informatica e Telematica, Consiglio Nazionale delle Ricerche, Via G. Moruzzi, 1, Pisa, 56124, Italy"
+      ],
+      "name": "Caterina Senette"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "面对唐氏综合征成人长期日常支持不足与图形界面障碍，论文以 9 个月单案例家庭部署观察商用 Alexa 的挪用与适应，发现使用稳定、重试明显下降且主动提醒支撑服药与惯例，但结论以单一样本与无对照为代价而不具统计推广力。",
+  "originalTitle": "Interacting with Alexa: A Longitudinal Case Study of Voice Assistant Use in Down Syndrome",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34159v1.pdf",
+  "readerTitle": "与 Alexa 共处 9 个月：唐氏综合征成人家庭语音助手使用的纵向观察",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

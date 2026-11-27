@@ -1,0 +1,99 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34184v1",
+  "abstract": "Multimodal sentiment analysis (MSA) in real-world systems must handle unpredictable modality missingness caused by sensor failures, privacy masking, and unstable transmission. Existing methods either learn reliability-aware representations or reconstruct missing inputs, often using a single flattened encoder output. This overlooks deep encoders' semantic hierarchy and intra- and inter-modal interactions, causing semantic averaging and ill-posed mappings. We propose Hierarchical Semantic Learning (HSL), a framework that exploits semantic hierarchy for robust MSA with missing modalities. Hierarchical Semantic Decoupling exposes low-, mid-, and high-level feature streams from each modality encoder. Cross-Modal Cross-Level Semantic Reconstruction performs ladder-style recovery, using high-level semantics from observed modalities as global anchors to progressively reconstruct mid-level structures and low-level details of missing modalities. To stabilize cross-level reconstruction, Hierarchical Cascade Error Supervisor applies prototypical contrastive regularization to observed and reconstructed features, enforcing level-specific semantic consistency and limiting error propagation. Finally, Hierarchical Interactive Fusion captures dense interactions across modalities and semantic levels to produce robust predictions under diverse missingness patterns. Experiments on CMU-MOSI, CMU-MOSEI, IEMOCAP, and CH-SIMS show that HSL outperforms baselines in most missing-modality settings.",
+  "abstractSha256": "359ab7378142cf8d176b9947d6d5d8a074b2c9ed64b64fee8d0d1715dbcd33d6",
+  "arxivId": "2611.34184",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34184v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前50%",
+    "score": 6.3,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.multimodal-sentiment",
+          "label": "多模态情感极性分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.multimodal-learning",
+          "label": "多模态学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.contrastive",
+          "label": "对比学习"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "多模态学习",
+      "primaryMethodId": "method.multimodal-learning",
+      "primaryTask": "多模态情感极性分析",
+      "primaryTaskId": "task.multimodal-sentiment",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "College of Intelligent Robotics and Advanced Manufacturing, Fudan University, Shanghai, China"
+      ],
+      "name": "Chunlei Meng"
+    },
+    {
+      "affiliations": [
+        "University of Macau"
+      ],
+      "name": "Rong Fu"
+    },
+    {
+      "affiliations": [
+        "Aerospace Information Research Institute, Chinese Academy of Sciences"
+      ],
+      "name": "Zhan Chen"
+    },
+    {
+      "affiliations": [
+        "College of Intelligent Robotics and Advanced Manufacturing, Fudan University, Shanghai, China"
+      ],
+      "name": "Yi Liu"
+    },
+    {
+      "affiliations": [
+        "School of Information Science and Technology, Fudan University"
+      ],
+      "name": "Zhuo Zou"
+    },
+    {
+      "affiliations": [
+        "Department of Information Technology, Old Dominion University"
+      ],
+      "name": "LiDa Xu"
+    },
+    {
+      "affiliations": [
+        "College of Intelligent Robotics and Advanced Manufacturing, Fudan University, Shanghai, China"
+      ],
+      "name": "Chun Ouyang"
+    },
+    {
+      "affiliations": [
+        "College of Intelligent Robotics and Advanced Manufacturing, Fudan University, Shanghai, China"
+      ],
+      "name": "Zhongxue Gan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对缺失模态下扁平表示的语义平均与病态映射问题， HSL 以高层锚点自顶向下重建中低层并辅以原型监督与层级融合，在四库两类缺失协议平均上取得最优且训练更快，但在纯视觉单模态与单噪声源锚点条件下仍存在明显短板。",
+  "originalTitle": "Hierarchical Semantic Learning for Multimodal Sentiment Analysis with Missing Modalities",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34184v1.pdf",
+  "readerTitle": "层级语义学习如何支撑缺失模态下的多模态情感分析",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,86 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34426v1",
+  "abstract": "Self-supervised learning (SSL) speech backbones are the standard frontend for synthetic-speech detection, and layer-wise probing has established which layers carry the most signal. But analysis stops there: which of a layer's twelve attention heads compute the spoof decision is unknown. We present the first head-level study of two frozen backbones, WavLM-base and Wav2Vec2-base, on ASVspoof 5. Per-head ablation shows that only a few heads carry the decision while others actively oppose it; removing those heads lowers equal error rate (EER) with no retraining, by 13% relative in WavLM and 22% in Wav2Vec2. We also find a probe-free signature: spoofed speech draws more focused attention than genuine speech, and this gap alone separates the two almost as well as the full representation, peaking at each backbone's most discriminative layer. Finally, attack identity is decodable from every head, yet heads differ in what they do, not in what they know.",
+  "abstractSha256": "486fb18a7950cd18e99adad1e6718af407984fae7889e81cae1732aa8ceaf083",
+  "arxivId": "2611.34426",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34426v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-spoofing",
+          "label": "语音伪造检测"
+        },
+        {
+          "facet": "method",
+          "id": "method.activation-intervention",
+          "label": "激活因果干预"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "激活因果干预",
+      "primaryMethodId": "method.activation-intervention",
+      "primaryTask": "语音伪造检测",
+      "primaryTaskId": "task.speech-spoofing",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "EURECOM, Sophia Antipolis, France"
+      ],
+      "name": "Mohamed Mallat"
+    },
+    {
+      "affiliations": [
+        "EURECOM, Sophia Antipolis, France"
+      ],
+      "name": "Michele Panariello"
+    },
+    {
+      "affiliations": [
+        "EURECOM, Sophia Antipolis, France"
+      ],
+      "name": "Massimiliano Todisco"
+    },
+    {
+      "affiliations": [
+        "LIUM, Le Mans Université, France"
+      ],
+      "name": "Anthony Larcher"
+    },
+    {
+      "affiliations": [
+        "EURECOM, Sophia Antipolis, France"
+      ],
+      "name": "Nicholas Evans"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对层级探针无法定位层内哪几个头决定伪造检测且在未见攻击上泛化失效的问题，论文在冻结 WavLM-base 与 Wav2Vec2-base 的最优层做逐头置零因果消融与注意力熵检验，发现仅保留 9 个与 8 个头即可无重训练相对降低 EER 13% 与 22%，且熵签名单独达 5.95% 接近全表征探针 5.4%，代价是结论仅限单一英语语料两条基座的观测性分析且熵单独检测在另一主干差距仍大。",
+  "originalTitle": "A Head-Level Investigative Study of Self-Supervised Backbones for Synthetic Speech Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34426v1.pdf",
+  "readerTitle": "谁在计算真伪判决：冻结语音主干的注意力头级因果与熵签名",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

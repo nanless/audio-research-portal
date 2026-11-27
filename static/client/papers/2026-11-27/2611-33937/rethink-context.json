@@ -1,0 +1,109 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33937v1",
+  "abstract": "Instruction-following text-to-speech (Instruct-TTS) renders a target transcript in the manner described by a free-form natural-language instruction, and a good rendition must succeed on three fronts at once: following the instruction, pronouncing the transcript correctly, and sounding natural. Reinforcement learning has become the standard way to post-train such generative models toward human preferences, and TTS systems increasingly adopt it. When the three objectives are optimized together under a single scalar reward, typically with group relative policy optimization (GRPO), training tends to be unstable: the objectives compete, and the shared update drifts toward whichever one is easiest to improve, producing a seesaw among them. We instead adapt on-policy distillation (OPD), which fuses several single-objective teachers by matching their velocity fields on the student's own rollouts. Realizing this for Instruct-TTS first calls for a sound reward on each axis, which we analyze carefully: a distilled Qwen-Omni proxy for the costly Gemini judge, dialect-free data for the WER reward, and DNSMOS in place of the language-biased UTMOS. We then train three single-objective teachers with GRPO and fuse them with OPD, routing each rollout to the instruction-following or WER teacher by its data domain and letting every rollout additionally follow the MOS teacher for quality. This lets instruction following and intelligibility improve together without a trade-off, but the quality target conflicts with instruction following, so following it additively reintroduces the seesaw. We therefore propose conflict-aware velocity fusion, which projects the quality target off the direction that opposes the primary objective before fusing, and show that it markedly reduces the instruction-following/quality trade-off. The fused model improves over scalar-reward GRPO on all three objectives at once.",
+  "abstractSha256": "cf1a201b6b682d7a4adbffc95b845623b55c793eeea78dbf23666ce5bc41853b",
+  "arxivId": "2611.33937",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33937v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "method",
+          "id": "method.reinforcement",
+          "label": "强化学习"
+        },
+        {
+          "facet": "method",
+          "id": "method.flow-matching",
+          "label": "流匹配"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University",
+        "Shanghai Innovation Institute"
+      ],
+      "name": "Haitao Li"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Tian Tan"
+    },
+    {
+      "affiliations": [
+        "Tencent Hunyuan"
+      ],
+      "name": "Yuguang Yang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Innovation Institute",
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Guanrou Yang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Innovation Institute",
+        "Xiamen University"
+      ],
+      "name": "Wenhao Guan"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University",
+        "Shanghai Innovation Institute"
+      ],
+      "name": "Chenglin Li"
+    },
+    {
+      "affiliations": [
+        "Tencent Hunyuan"
+      ],
+      "name": "Shan Yang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Innovation Institute",
+        "Shanghai Jiao Tong University"
+      ],
+      "name": "Xie Chen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对指令跟随语音合成中单标量 GRPO 导致指令跟随、可懂度与自然度跷跷板的问题，方法先训三个单目标教师再以域路由加冲突感知投影在学生自采样轨迹上匹配速度场，在 zh_DSD 上以 IF 81.1% 、CER 2.25% 与 Avg 0.82 同时超越标量多奖励基线，代价是 DNSMOS 以 3.28 略低于去投影版的 3.31 且在 RP 与英文上仍落后闭源系统。",
+  "originalTitle": "InstructTTS-OPD: On-Policy Distillation for Multi-Objective Instruction-Following TTS",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33937v1.pdf",
+  "readerTitle": "三目标如何同时保住：指令跟随语音合成的在策略蒸馏",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

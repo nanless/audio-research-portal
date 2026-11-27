@@ -1,0 +1,147 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34457v1",
+  "abstract": "Recent video generators produce realistic videos, yet controlling how scenes unfold remains challenging. Structural proxies, such as animated 3D blockouts, guide generation by specifying scene layout, motion, camera behavior, and event order. However, these coarse inputs leave details unspecified and may contain artifacts that should not be reproduced. Successful proxy-guided generation must therefore Preserve intended structure, Complete missing content and correct proxy artifacts, and Bind text, image, and audio conditions to the right entities and events. We introduce ProxyGenBench to study these interacting requirements, with 312 evaluation cases from 60 scenes across three scene tasks and controlled variations in proxy fidelity, text detail, and multimodal inputs. We evaluate five video generators using verified, case-specific checklists. Experiments show that proxies improve spatiotemporal control, but greater proxy detail can coincide with poorer completion, while strong structural adherence does not ensure correct binding.",
+  "abstractSha256": "f71fe74f171302e83f63a9b9c550c38d0cf6eafa04a1cfba26383b82a3ec3a1a",
+  "arxivId": "2611.34457",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34457v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "视频生成",
+    "rankBucket": "前50%",
+    "score": 6.9,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-generation",
+          "label": "视频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "method",
+          "id": "method.human-evaluation",
+          "label": "人类参与评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "视频生成",
+      "primaryTaskId": "task.video-generation",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "New Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences",
+        "Tencent",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Zhenchen Tang"
+    },
+    {
+      "affiliations": [
+        "University of California, San Diego",
+        "Tencent"
+      ],
+      "name": "Haolin Lu"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology",
+        "Tencent"
+      ],
+      "name": "Songlin Yang"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Xiaotong Zhao"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Ran Zhang"
+    },
+    {
+      "affiliations": [
+        "New Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Bo Peng"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Shuai Li"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Haotian Fan"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Haobin Zhong"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Yanni Zhang"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Songlian Li"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Ning Zhang"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Xun Gao"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Alan Zhao"
+    },
+    {
+      "affiliations": [
+        "New Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Jing Dong"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "ProxyGenBench 以 60 个场景 312 个用例检验代理引导生成中保留结构补全细节绑定条件的三重要求，发现代理改善时空控制但更精细代理普遍降低补全且高保留不保证正确绑定，Seedance-2.5 以严格分 0.450 领先而联合成功仅 0.140 即是代价写照。",
+  "originalTitle": "ProxyGenBench: Benchmarking Proxy-Guided Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34457v1.pdf",
+  "readerTitle": "结构代理引导视频生成保留补全绑定的基准检验",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

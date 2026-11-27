@@ -1,0 +1,33 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34277v1",
+  "arxivId": "2611.34277",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34277v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Bánk Juhász"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria",
+        "LIT AI Lab, Linz Institute of Technology, Austria"
+      ],
+      "name": "Gerhard Widmer"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Jan Schlüter"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.34277v1",
+  "originalTitle": "Beat This! Live - Online Beat and Downbeat Tracking by Predicting the Future",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34277v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

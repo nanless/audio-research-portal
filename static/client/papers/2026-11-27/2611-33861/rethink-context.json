@@ -1,0 +1,120 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33861v1",
+  "abstract": "Audio-visual understanding requires perceptual grounding, temporal understanding, and semantic inference. Multi-teacher distillation can consolidate these capabilities, but direct probability matching does not explicitly capture teacher prediction changes across audio-visual conditions. We introduce OmniMeld, a multi-teacher on-policy distillation method that integrates domain expertise through modality-response-guided distribution matching. We train four teachers covering grounding and correspondence, temporal dynamics and event structure, causal and inferential reasoning, and contextual and holistic understanding. Each sample is routed to its corresponding teacher for supervision conditioned on student-generated answer prefixes. We derive transport costs from teacher prediction changes over shared candidate tokens across audio-visual conditions, using optimal transport to match student predictions to those of the teacher under complete audio-visual input. We also construct OmniMeld-20K for domain-specialized teacher training. The dataset spans four capability domains, with responses structured into evidence, reasoning, and answer sections and verified through consistency checks and media-based review. Experiments on audio-visual and general video understanding benchmarks demonstrate competitive teacher performance among similarly sized open-source models. The student improves over its base model across all evaluated benchmarks and surpasses the teachers' base model on several benchmarks.",
+  "abstractSha256": "d5212fa6a84357cc2a635752c5072d880a83b0d0961ce7aeaacc4df84afb90f1",
+  "arxivId": "2611.33861",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33861v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 6.8,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.av-understanding",
+          "label": "音视频理解"
+        },
+        {
+          "facet": "method",
+          "id": "method.distillation",
+          "label": "知识蒸馏"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.dataset",
+          "label": "数据集"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "知识蒸馏",
+      "primaryMethodId": "method.distillation",
+      "primaryTask": "音视频理解",
+      "primaryTaskId": "task.av-understanding",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Daili Hua"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University",
+        "Zhongguancun Academy"
+      ],
+      "name": "Yifan Dai"
+    },
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Bohan Zeng"
+    },
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Yuran Wang"
+    },
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Zihao Wu"
+    },
+    {
+      "affiliations": [
+        "Peking University"
+      ],
+      "name": "Chengzhuo Tong"
+    },
+    {
+      "affiliations": [
+        "Kuaishou Technology"
+      ],
+      "name": "Guoqing Jiang"
+    },
+    {
+      "affiliations": [
+        "Kuaishou Technology"
+      ],
+      "name": "Liwei Chen"
+    },
+    {
+      "affiliations": [
+        "Kuaishou Technology"
+      ],
+      "name": "Zhiheng Qin"
+    },
+    {
+      "affiliations": [
+        "Kuaishou Technology"
+      ],
+      "name": "Xuanping Li"
+    },
+    {
+      "affiliations": [
+        "Peking University",
+        "Zhongguancun Academy",
+        "Beijing Key Laboratory of Data Intelligence and Security (Peking University)"
+      ],
+      "name": "Wentao Zhang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "OmniMeld 针对音频视觉问答中定位时序推理与整体理解难以统一的问题，用四领域教师路由与四条件模态响应构造的最优传输匹配把专长蒸馏到统一的 3B 学生，该学生在四个音频视觉基准上全面超越 3B 基座并在前三项超越 7B 基座，代价是额外视图打分只用于训练且长视频增益有限。",
+  "originalTitle": "OmniMeld: Enhancing Audio-Visual Understanding via Multi-Teacher On-Policy Distillation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33861v1.pdf",
+  "readerTitle": "四领域教师与模态响应引导的最优传输蒸馏",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

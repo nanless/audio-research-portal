@@ -1,0 +1,93 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33786v1",
+  "abstract": "Relating tongue motion measured with dynamic MRI to the speech it produces could inform rehabilitation after glossectomy. Prior studies have translated cine or tagged MRI into log-mel spectrograms and used the two-dimensional Pearson correlation between predicted and recorded spectrograms (Corr2D) to quantify the acoustic information captured by each imaging modality. However, Corr2D has not been calibrated against MRI-free predictors that preserve basic acoustic structure. Our contribution is an evaluation framework for speech synthesis from cine MRI, tagged MRI and their combination; the synthesis network is held fixed. On identical leave-one-subject-out folds, we compare four trained input configurations with two MRI-free controls: a static mean-spectrum baseline and a time-aligned cohort template. Across 44 subjects (18 after glossectomy) producing two utterances, the cohort template, which never sees an MRI, reached a Corr2D of 0.745 and 0.664. The static baseline, which contains no timing, reached 87 to 89% of that score. No trained configuration outperformed the template on Corr2D, a cepstral distance or ESTOI; seven of the eight fell significantly short on Corr2D. For cine MRI this held across three positional encodings, an encoder temporal-attention module and a training objective matched to the metric. Cine and tagged MRI differed consistently within subjects, although the direction depended on the metric. Absolute Corr2D alone therefore does not show that a model recovers acoustics from the MRI. The two controls are a reusable method: any study can compute them from its own training recordings, so a model's margin over them measures what its images contribute.",
+  "abstractSha256": "08182912d06bb30d84d9941e646912df670960e934d6eceef57dbf6db02a156e",
+  "arxivId": "2611.33786",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33786v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "静默语音接口",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.silent-speech",
+          "label": "静默语音接口"
+        },
+        {
+          "facet": "method",
+          "id": "method.evaluation-protocol",
+          "label": "评测协议"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        },
+        {
+          "facet": "application",
+          "id": "application.medical",
+          "label": "医疗音频"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "评测协议",
+      "primaryMethodId": "method.evaluation-protocol",
+      "primaryTask": "静默语音接口",
+      "primaryTaskId": "task.silent-speech",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Dept. of Radiology, Mass General Brigham and Harvard Medical School, Boston, MA, USA",
+        "Data Science, Harvard John A. Paulson School of Engineering and Applied Sciences, Harvard University, Cambridge, MA, USA"
+      ],
+      "name": "Karlo Vrancic"
+    },
+    {
+      "affiliations": [
+        "Dept. of Radiology, Mass General Brigham and Harvard Medical School, Boston, MA, USA"
+      ],
+      "name": "Fangxu Xing"
+    },
+    {
+      "affiliations": [
+        "Dept. of Radiology, University of Maryland School of Medicine, Baltimore, MD, USA"
+      ],
+      "name": "Jiachen Zhuo"
+    },
+    {
+      "affiliations": [
+        "Dept. of Neural and Pain Sciences, University of Maryland School of Dentistry, Baltimore, MD, USA"
+      ],
+      "name": "Maureen Stone"
+    },
+    {
+      "affiliations": [
+        "Dept. of Electrical and Computer Engineering, Johns Hopkins University, Baltimore, MD, USA"
+      ],
+      "name": "Jerry L. Prince"
+    },
+    {
+      "affiliations": [
+        "Dept. of Radiology, Mass General Brigham and Harvard Medical School, Boston, MA, USA"
+      ],
+      "name": "Jonghye Woo"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对动态 MRI 到语音合成中 Corr2D 虚高且缺乏校准的问题，论文固定同一主干比较 4 种 MRI 输入与两种无 MRI 对照，发现队列模板以 Corr2D 0.745 和 0.664 持平或超越所有模型，而静态均谱已占模板分数 87–89% ，代价是结论仅限双短语单中心数据与特定渲染。",
+  "originalTitle": "Evaluating Cine and Tagged MRI-to-Speech Synthesis with Complementary Metrics and MRI-Free Controls",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33786v1.pdf",
+  "readerTitle": "无 MRI 对照揭示磁共振到语音合成评价的虚高",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

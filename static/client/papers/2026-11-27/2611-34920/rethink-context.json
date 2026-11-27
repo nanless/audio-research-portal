@@ -1,0 +1,120 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34920v1",
+  "abstract": "Voice agents in shared spaces must satisfy interdependent multi-user requests while upholding per-user authority, privacy, and task constraints. Existing evaluations offer limited coverage when participants react throughout a session. We introduce $μ$-Bench, a benchmark for joint task completion in closed-loop, full-duplex multi-user voice interaction. Simulated participants act from isolated profiles of goals, knowledge, and permissions, adapting to the agent's speech and tool outcomes. Across 20 domains, 100 scenarios vary group size, acoustics, and follow-up demands to form 800 cases (408 tool-augmented, 392 tool-free). Joint Task Success (JTS) requires all user goals, privacy boundaries, and terminal states to hold jointly, while Pure JTS further disallows unauthorized tool calls; Attribution, Threading, and Coordination (ATC) diagnostics localize failures. Across 13 voice agents, proprietary systems peak at 62.24\\% tool-free and 65.44\\% tool-augmented success, while open-weight models remain below 20\\%. ATC diagnostics show that open-weight models lag primarily in multi-turn attribution and threading, and controlled contrasts reveal that larger groups consistently degrade joint task success across capable systems. By coupling reactive multi-user simulation with verifiable session-level outcomes, $μ$-Bench provides a rigorous testbed for shared voice agents.",
+  "abstractSha256": "001086c5b56f1bb1a144ee07cb3b3cd5f82ace86e0c1cef588f4533ece01e10f",
+  "arxivId": "2611.34920",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34920v1",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 7.2,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-dialogue",
+          "label": "语音对话系统"
+        },
+        {
+          "facet": "task",
+          "id": "task.full-duplex",
+          "label": "全双工语音交互"
+        },
+        {
+          "facet": "method",
+          "id": "method.benchmark-design",
+          "label": "基准设计"
+        },
+        {
+          "facet": "artifact",
+          "id": "artifact.benchmark",
+          "label": "基准测试"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "基准设计",
+      "primaryMethodId": "method.benchmark-design",
+      "primaryTask": "语音对话系统",
+      "primaryTaskId": "task.speech-dialogue",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University, Shanghai, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Qihao Lin"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University, Shanghai, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Guanxu Chen"
+    },
+    {
+      "affiliations": [
+        "University of Chinese Academy of Sciences, Beijing, China"
+      ],
+      "name": "Shuhang Zheng"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University, Shanghai, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Xiaoya Lu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China",
+        "Fudan University, Shanghai, China"
+      ],
+      "name": "Jingyi Yang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University, Beijing, China"
+      ],
+      "name": "Terumi Chiba"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University, Beijing, China"
+      ],
+      "name": "Wenyi Yu"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University, Beijing, China"
+      ],
+      "name": "Chao Zhang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Zhuan Shi"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Jing Shao"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对共享全双工语音中多用户目标交织与权限隐私冲突问题，μ-Bench 以闭环多用户模拟器加可验证会话级评分构建 800 个对照案例，测得专有系统工具增强轨最高 65.44% 而开源模型不足 20%，代价是人群扩大与未授权调用使联合成功率显著下降且需严格 Pure JTS 审计。",
+  "originalTitle": "$μ$-Bench: Benchmarking Multi-User Task Completion in Shared Interaction Voice Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34920v1.pdf",
+  "readerTitle": "共享语音助手如何完成多用户联合任务",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

@@ -1,0 +1,92 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34801v1",
+  "abstract": "Guidance repels the prediction of a diffusion model away from a weaker reference prediction. It substantially improves sample quality, but its mechanism remains poorly understood. We first find that, at the scales used in practice, guidance does not improve the prediction of the posterior mean (the model's training target); it makes the prediction worse, while samples improve. Second, posterior-mean predictions have less variance than the data, and we find that guidance restores it. We introduce variance-matched guidance: a closed-form rule that picks the guidance scale by matching the variance of the guided predictions to that of the data. Without tuning, it recovers the hand-picked scales of eleven widely used models across image, video, audio, motion, and world generation; to our knowledge, no previous explanation of guidance predicts them. Applied per noise level, it yields a schedule without tuned hyperparameters that users prefer to hand-crafted ones on SD 3.5 Medium. Third, we offer an interpretation of the mechanism behind guidance: each model makes a random error in predicting the posterior mean, and guidance rescales the difference of these errors into a sample with the posterior's covariance, which improves sampling. This view also suggests two new hypotheses that our experiments support: guidance can work with negative scales, and guiding a model with its own checkpoint needs a larger scale than guiding it with an independently trained model.",
+  "abstractSha256": "9ab8795042d2619b380b70d39e55588092f2145e5216728c84e0639cb2aed482",
+  "arxivId": "2611.34801",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34801v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "文本到音频生成",
+    "rankBucket": "前25%",
+    "score": 7.5,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.text-to-audio",
+          "label": "文本到音频生成"
+        },
+        {
+          "facet": "method",
+          "id": "method.diffusion",
+          "label": "扩散模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.formal-analysis",
+          "label": "形式化分析"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "扩散模型",
+      "primaryMethodId": "method.diffusion",
+      "primaryTask": "文本到音频生成",
+      "primaryTaskId": "task.text-to-audio",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology"
+      ],
+      "name": "Ali Backour"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology"
+      ],
+      "name": "Artem Lukoianov"
+    },
+    {
+      "affiliations": [
+        "Toyota Research Institute"
+      ],
+      "name": "Frank Permenter"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology"
+      ],
+      "name": "Tommi Jaakkola"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology"
+      ],
+      "name": "Justin Solomon"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology"
+      ],
+      "name": "Vincent Sitzmann"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文发现实践尺度的引导增大了去噪误差却补足了后验均值缺失的方差，由此给出无须扫描的方差匹配闭式尺度，它复现了 11 个模型的发布值并在盲测中更受偏好，代价是多样性下降与部分分布指标未最优。",
+  "originalTitle": "Guidance as Variance Matching",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34801v1.pdf",
+  "readerTitle": "引导即方差匹配：为何放大误差反而改善采样",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

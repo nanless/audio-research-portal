@@ -1,0 +1,105 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34237v1",
+  "abstract": "Code-driven video generation asks a coding agent to write and run rendering programs. This gives exact control over typography, data visualizations, synchronized audio, and multi-shot scenes, and it leaves an editable project behind. A program that exits cleanly can still render overlapping labels, a camera aimed away from its subject, broken object interactions, or narration that drifts out of sync, and none of these raise a runtime error. Feeding rendered frames and audio back into the coding session bloats its long-horizon context, while critiquing only the finished full-resolution render turns early design mistakes into costly rewrites. We introduce VibeVideoAgent, a training-free framework that lets coding agents inspect their drafts throughout production. Multimodal perception runs in short-lived contexts kept apart from the coder and returns compact, grounded Findings. Seven primitives operate on a unified multi-clock representation of assets and drafts: they explore media from coarse to fine, verify quoted requirements with evidence from every required modality, compare a draft with a reference or an earlier revision on separate clocks, and measure stream signals locally. A lightweight staged protocol has the agent test its riskiest decision on a minimal preview first. On all 239 VibeVideoBench tasks, with matched agent runtimes and a fixed perception model, VibeVideoAgent improves holistic audiovisual quality (L3) for Claude Opus 5.5 (4.03 -> 4.43, while L2 rubric compliance rises from 98.87% to 99.35%), GPT-6 Astra (4.03 -> 4.27), and Claude Sonnet 5.5 (3.97 -> 4.10), with the largest gains in audio-visual synchronization (up to +0.56). Controlled ablations show that each component contributes, and trajectory audits show that the granularity of code edits governs the trade-off between rubric adherence and perceptual quality.",
+  "abstractSha256": "04b92b8d879b357229512e421625479a71723e4a676603f34aa656d243e38858",
+  "arxivId": "2611.34237",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34237v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "视频生成",
+    "rankBucket": "前50%",
+    "score": 7.0,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.video-generation",
+          "label": "视频生成"
+        },
+        {
+          "facet": "task",
+          "id": "task.av-synchronization",
+          "label": "音画同步"
+        },
+        {
+          "facet": "method",
+          "id": "method.tool-augmentation",
+          "label": "工具增强与约束解码"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "工具增强与约束解码",
+      "primaryMethodId": "method.tool-augmentation",
+      "primaryTask": "视频生成",
+      "primaryTaskId": "task.video-generation",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "KlingAI Research"
+      ],
+      "name": "Xuanyu Zheng"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research"
+      ],
+      "name": "Luoyuan Zhang"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research"
+      ],
+      "name": "Yancheng Long"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research"
+      ],
+      "name": "Haoyang Xu"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research"
+      ],
+      "name": "Muxi Diao"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research"
+      ],
+      "name": "Yuzhe Chen"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research"
+      ],
+      "name": "Kaiyu Jiang"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research"
+      ],
+      "name": "Bin Wen"
+    },
+    {
+      "affiliations": [
+        "KlingAI Research"
+      ],
+      "name": "Tingting Gao"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对渲染程序零退出码仍残留视觉与音画同步缺陷且原始媒体堆积长上下文的问题， VibeVideoAgent 以训练无关的多时钟表示、七个感知原语与分阶段协议把密集检查搬到短暂隔离上下文，在 239 个任务上把 Opus 的 L3 均值从 4.03 提升到 4.43 且同步分项最高涨 0.56，代价是部分合规项回落、中间渲染开销增加且结论依赖自动评审。",
+  "originalTitle": "VibeVideoAgent: Closing the Perceptual Loop for Code-Driven Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34237v1.pdf",
+  "readerTitle": "把感知搬出长上下文：代码驱动视频的在制品检查与修复",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

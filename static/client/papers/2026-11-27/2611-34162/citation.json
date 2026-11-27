@@ -1,0 +1,32 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34162v1",
+  "arxivId": "2611.34162",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34162v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Integrated Vision Language Lab, KAIST"
+      ],
+      "name": "Minyeong Jeong"
+    },
+    {
+      "affiliations": [
+        "Integrated Vision Language Lab, KAIST"
+      ],
+      "name": "Yeonju Kim"
+    },
+    {
+      "affiliations": [
+        "Integrated Vision Language Lab, KAIST"
+      ],
+      "name": "Yong Man Ro"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.34162v1",
+  "originalTitle": "Modality-Shift Contrastive Decoding for Temporally Grounded Audio-Visual Understanding",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34162v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

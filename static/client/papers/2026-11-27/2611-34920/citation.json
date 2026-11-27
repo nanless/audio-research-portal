@@ -1,0 +1,78 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34920v1",
+  "arxivId": "2611.34920",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34920v1",
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University, Shanghai, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Qihao Lin"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University, Shanghai, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Guanxu Chen"
+    },
+    {
+      "affiliations": [
+        "University of Chinese Academy of Sciences, Beijing, China"
+      ],
+      "name": "Shuhang Zheng"
+    },
+    {
+      "affiliations": [
+        "Shanghai Jiao Tong University, Shanghai, China",
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Xiaoya Lu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China",
+        "Fudan University, Shanghai, China"
+      ],
+      "name": "Jingyi Yang"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University, Beijing, China"
+      ],
+      "name": "Terumi Chiba"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University, Beijing, China"
+      ],
+      "name": "Wenyi Yu"
+    },
+    {
+      "affiliations": [
+        "Tsinghua University, Beijing, China"
+      ],
+      "name": "Chao Zhang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Zhuan Shi"
+    },
+    {
+      "affiliations": [
+        "Shanghai Artificial Intelligence Laboratory, Shanghai, China"
+      ],
+      "name": "Jing Shao"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.34920v1",
+  "originalTitle": "$μ$-Bench: Benchmarking Multi-User Task Completion in Shared Interaction Voice Agents",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34920v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

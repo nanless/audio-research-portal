@@ -1,0 +1,62 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34241v1",
+  "abstract": "Autoregressive speech-token language models enable high-quality TTS but suffer from latency growth with sequence length, word omission or repetition without explicit alignment, and fidelity limits from discrete codebooks. We present TigerTTS, a production-grade LLM TTS system built around a lightweight non-autoregressive NAR model. With explicit alignment, the NAR model drafts tokens for the entire utterance, which are refined frame-by-frame by a compact autoregressive LLM. The draft is aligned frame-for-frame with LLM targets and injected at the input, ensuring training-inference consistency. Leveraging its accuracy, the LLM predicts 12 tokens per step across 3 frames and 4 groups, while a conditional-total-correlation bound keeps parallel prediction nearly lossless. We use a codebook-free FSQ tokenizer with four parallel groups and about 1800 bps to avoid codebook collapse. The backbone keeps positional information only in input embeddings, enabling exact MLA weight absorption and a four-fold KV-cache reduction. Decoding uses CUDA Graphs with a graph-safe multinomial sampler. A Fast mode further reduces first-packet latency: the NAR generator acts as a prefix synthesizer with RTF 0.03, producing the first 500 ms before LLM decoding. With CUDA-Graph decoding, TigerTTS reaches RTF 0.05, about 20x real-time, on one GPU. Despite using a 0.15B backbone, it outperforms standard PyTorch inference of VoxCPM2 2B by 5x and CosyVoice 2 by 16x. TigerTTS achieves the lowest CER and WER on SEED, 1.09 and 1.67, and strong WER, NMOS, and speaker similarity on LibriSpeech test-clean, 2.22, 4.36, and 0.820. Fast-mode guided semantic tokens provide a well-aligned content prior, reducing dropped words, loops, and runaway generation without sacrificing speed.",
+  "abstractSha256": "006b0b929ba1d5eb76c66d84b4bc5b8de6bec0ec7b4c162425a4f74569ad04dd",
+  "arxivId": "2611.34241",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34241v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 7.1,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.tts",
+          "label": "文本到语音"
+        },
+        {
+          "facet": "method",
+          "id": "method.autoregressive",
+          "label": "自回归模型"
+        },
+        {
+          "facet": "method",
+          "id": "method.vector-quantization",
+          "label": "向量量化"
+        },
+        {
+          "facet": "setting",
+          "id": "setting.streaming",
+          "label": "流式处理"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "自回归模型",
+      "primaryMethodId": "method.autoregressive",
+      "primaryTask": "文本到语音",
+      "primaryTaskId": "task.tts",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Wiz Holdings Pte. Ltd., Nanjing, China"
+      ],
+      "name": "Dewei Kong"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对自回归语音 Token 模型解码慢且易丢字重复的问题，TigerTTS 用轻量 NAR 草稿先定对齐再让小 LLM 每步并行精修 12 个 Token ，在同卡实测中以 0.35B 系统实现 RTF 0.05 约 20 倍实时并在 SEED 与 LibriSpeech 上取得最低可懂度误差，代价是并行帧数增大时质量单调下降且当前仅支持单流 batch 1 部署。",
+  "originalTitle": "TigerTTS: Draft-Guided Multi-Frame Parallel Speech-Token Language Model for Fast and Robust Text-to-Speech",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34241v1.pdf",
+  "readerTitle": "草稿先行再精修的快速语音合成：TigerTTS 解读",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

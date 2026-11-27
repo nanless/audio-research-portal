@@ -1,0 +1,44 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34426v1",
+  "arxivId": "2611.34426",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34426v1",
+  "authors": [
+    {
+      "affiliations": [
+        "EURECOM, Sophia Antipolis, France"
+      ],
+      "name": "Mohamed Mallat"
+    },
+    {
+      "affiliations": [
+        "EURECOM, Sophia Antipolis, France"
+      ],
+      "name": "Michele Panariello"
+    },
+    {
+      "affiliations": [
+        "EURECOM, Sophia Antipolis, France"
+      ],
+      "name": "Massimiliano Todisco"
+    },
+    {
+      "affiliations": [
+        "LIUM, Le Mans Université, France"
+      ],
+      "name": "Anthony Larcher"
+    },
+    {
+      "affiliations": [
+        "EURECOM, Sophia Antipolis, France"
+      ],
+      "name": "Nicholas Evans"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.34426v1",
+  "originalTitle": "A Head-Level Investigative Study of Self-Supervised Backbones for Synthetic Speech Detection",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34426v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,110 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34457v1",
+  "arxivId": "2611.34457",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34457v1",
+  "authors": [
+    {
+      "affiliations": [
+        "New Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences",
+        "Tencent",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Zhenchen Tang"
+    },
+    {
+      "affiliations": [
+        "University of California, San Diego",
+        "Tencent"
+      ],
+      "name": "Haolin Lu"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology",
+        "Tencent"
+      ],
+      "name": "Songlin Yang"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Xiaotong Zhao"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Ran Zhang"
+    },
+    {
+      "affiliations": [
+        "New Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Bo Peng"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Shuai Li"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Haotian Fan"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Haobin Zhong"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Yanni Zhang"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Songlian Li"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Ning Zhang"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Xun Gao"
+    },
+    {
+      "affiliations": [
+        "Tencent"
+      ],
+      "name": "Alan Zhao"
+    },
+    {
+      "affiliations": [
+        "New Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences",
+        "School of Artificial Intelligence, University of Chinese Academy of Sciences"
+      ],
+      "name": "Jing Dong"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.34457v1",
+  "originalTitle": "ProxyGenBench: Benchmarking Proxy-Guided Video Generation",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34457v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

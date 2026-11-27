@@ -1,0 +1,81 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.33581v1",
+  "abstract": "Autonomous Vehicles (AVs) share spaces with Vulnerable Road Users (VRUs) in encounters where driver cues are absent. This can leave people uncertain whether the vehicle has noticed them and understood their request. Existing research has studied how AVs communicate with pedestrians through external human-machine interfaces. This work investigates bidirectional multimodal VRU-AV interactions combining Augmented Reality (AR), speech, and gestures. The study follows four stages: literature synthesis of interactions, a survey with 124 participants, interaction loop implementation, and feasibility evaluation. Participants preferred AR cues that made vehicle motion or warnings explicit, high-level voice commands, and conventional gestures. Prototype measurements revealed a trade-off between faster local processing and more accurate infrastructure-assisted processing. The demonstration shows bidirectional interaction using AR wearables and vehicular communications, while leaving decision-making to the AV. Together, the results support treating AV-VRU interaction as a closed loop of intent expression, recognition, vehicle decision, and feedback.",
+  "abstractSha256": "2e8a69b4e17395e4c0a6f06b7eaa60c872e0b0c0f829868063868ab2e0d459f7",
+  "arxivId": "2611.33581",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.33581v1",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "主观评测",
+    "primaryTask": "语音交互",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-interaction",
+          "label": "语音交互"
+        },
+        {
+          "facet": "task",
+          "id": "task.visual-gesture-recognition",
+          "label": "视觉手势识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.subjective-evaluation",
+          "label": "主观评测"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "主观评测",
+      "primaryMethodId": "method.subjective-evaluation",
+      "primaryTask": "语音交互",
+      "primaryTaskId": "task.speech-interaction",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "André Clérigo"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Maximilian Schrapel"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Pedro Rito"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Susana Sargento"
+    },
+    {
+      "affiliations": [
+        "机构信息未能在本次解析中与作者逐人可靠绑定"
+      ],
+      "name": "Alexey Vinel"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对司机眼神消失后的双向不可读问题，论文用 AR 反馈加语音手势请求与车联验证构成闭环，124 人问卷与受控基准显示方向箭头与停止意图最受青睐且边缘转写更准，代价是本地更快而边缘更准的延迟误差权衡与年轻葡萄牙样本及合成语音的受控前提。",
+  "originalTitle": "Evaluating Strategies for Multimodal Bidirectional Interactions between Pedestrians and AVs",
+  "pdfUrl": "https://arxiv.org/pdf/2611.33581v1.pdf",
+  "readerTitle": "行人与自动驾驶如何互相听懂的双向多模态闭环",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

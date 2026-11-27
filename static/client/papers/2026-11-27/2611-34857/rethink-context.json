@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34857v1",
+  "abstract": "Continuous emotion recognition tracks how emotion changes over time, but its predictions often deviate from human ratings, and the traces it is trained on are rated in real time by several annotators, which is slow and costly. A few human reviews could help with both, but rejection only decides which predictions to hand over and adaptation adjusts the model or its outputs; neither uses reviews to correct unreviewed windows directly. We propose a Kalman-filter correction that models the predictor's error as a per-part offset plus a slow drift, estimates it from the reviewed windows and corrects every unreviewed window online, leaving the predictor unchanged. On MSP-Conversation, it beats four simpler corrections in all 48 paired comparisons, keeps correcting each part after reviewing stops and, for uncorrected predictions, tells a person which windows to take over. The same correction serves annotation: with 20% of windows reviewed, the completed trace comes closer to the raters.",
+  "abstractSha256": "038092a30333a75a16306f200594ba9786f8d02692f97214b092b40c7e364b64",
+  "arxivId": "2611.34857",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34857v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.6,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.emotion-recognition",
+          "label": "语音情感识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.state-space",
+          "label": "状态空间模型"
+        },
+        {
+          "facet": "signal",
+          "id": "signal.speech",
+          "label": "语音"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "状态空间模型",
+      "primaryMethodId": "method.state-space",
+      "primaryTask": "语音情感识别",
+      "primaryTaskId": "task.emotion-recognition",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Engineering and Sciences, Tecnologico de Monterrey, Monterrey, NL, 64700, Mexico"
+      ],
+      "name": "Jie Dong"
+    },
+    {
+      "affiliations": [
+        "School of Engineering and Sciences, Tecnologico de Monterrey, Monterrey, NL, 64700, Mexico"
+      ],
+      "name": "Mahdi Zareei"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对连续情绪预测长期偏向一侧且标注昂贵的问题，本文提出只修正输出的偏移漂移 Kalman 滤波，用已复核窗口估计固定偏移加缓慢漂移并外推到未复核窗口，在 MSP-Conversation 上 48 组配对比较全部显著最优且 20% 等间隔复核将按 part 平均 CCC 从 0.47 升至 0.58 与从 0.33 升至 0.52，代价是每 part 需至少 5 人复核且复核与参照共享评分组。",
+  "originalTitle": "An offset--drift Kalman filter for continuous emotion recognition and annotation from sparse human reviews",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34857v1.pdf",
+  "readerTitle": "用少量复核修正整段轨迹：偏移漂移 Kalman 滤波的在线误差追踪",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}

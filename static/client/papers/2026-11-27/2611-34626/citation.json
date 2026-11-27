@@ -1,0 +1,63 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34626v1",
+  "arxivId": "2611.34626",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34626v1",
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Yuki Okamoto"
+    },
+    {
+      "affiliations": [
+        "NEC Corporation, Japan"
+      ],
+      "name": "Noriyuki Tonami"
+    },
+    {
+      "affiliations": [
+        "NEC Corporation, Japan"
+      ],
+      "name": "Takao Kawamura"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Japan"
+      ],
+      "name": "Keisuke Imoto"
+    },
+    {
+      "affiliations": [
+        "Ritsumeikan University, Japan"
+      ],
+      "name": "Ryotaro Nagase"
+    },
+    {
+      "affiliations": [
+        "Kyoto Sangyo University, Japan"
+      ],
+      "name": "Riki Takizawa"
+    },
+    {
+      "affiliations": [
+        "Keio University, Japan"
+      ],
+      "name": "Minoru Kishi"
+    },
+    {
+      "affiliations": [
+        "Keio University, Japan",
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Shinnosuke Takamichi"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "2611.34626v1",
+  "originalTitle": "Investigation of generalization to unseen audio generation models in audio--text semantic-alignment score prediction",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34626v1.pdf",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "type": "preprint"
+}

@@ -1,0 +1,57 @@
+{
+  "absUrl": "https://arxiv.org/abs/2611.34256v1",
+  "abstract": "Speech recognizers often leave filled pauses such as uh and um out of the transcript. Fine-tuning on verbatim transcripts can bring them back, but it can also change the rest of the output. We show that most missing fillers can be recovered from values recorded during a single greedy decoding pass of a frozen recognizer, Qwen3-ASR-1.7B. For each gap between output words, UMAI (UM Aware Inference) pools frame-class posteriors over an audio window located by decoder attention. It combines them with the decoder states through two stages of linear discriminant analysis and calibrates the score by isotonic regression. No parameter is trained by gradient descent. UMAI inserts [uh] and [um] tags and leaves every recognized word unchanged. On the held-out AMI evaluation set, filler F1 rises from 12.2 to 82.6. On the Nyra verbatim benchmark, where the operating threshold was chosen, it rises from 37.2 to 96.5. Total processing time increases by 14%.",
+  "abstractSha256": "02b92d97a0ddf4e4e44839ac73ebc2a140ede9a454af5cc0cd01c91a4bd661f5",
+  "arxivId": "2611.34256",
+  "arxivVersion": 1,
+  "arxivVersionedId": "2611.34256v1",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 6.4,
+    "tagMetadata": {
+      "concepts": [
+        {
+          "facet": "task",
+          "id": "task.speech-attributes",
+          "label": "语音属性识别"
+        },
+        {
+          "facet": "method",
+          "id": "method.representation-probing",
+          "label": "表示探测"
+        },
+        {
+          "facet": "method",
+          "id": "method.statistical-analysis",
+          "label": "统计分析"
+        }
+      ],
+      "contract": "paper-tag-flat-tags",
+      "primaryMethod": "表示探测",
+      "primaryMethodId": "method.representation-probing",
+      "primaryTask": "语音属性识别",
+      "primaryTaskId": "task.speech-attributes",
+      "registrySha256": "cbc73274c47fbd5c437b03f452ad95d0291094f5a9ad2c3685220ebf41c4afcf",
+      "registryVersion": "paper-tag-catalog",
+      "schemaFingerprint": "27e36280a4b8d3df62ebe54d3ab037920f4d69feb2b554163f01bbae2caf4338",
+      "selectionContract": "paper-tag-selection"
+    }
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science, Hanyang University, Seoul, South Korea"
+      ],
+      "name": "Gyeongmin Kim"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "在冻结 Qwen3-ASR-1.7B 一字不改且只解码一次的约束下，UMAI 用注意力定位的音频窗口与两阶段线性判别加等渗校准找回漏掉的 uh 与 um，在 AMI 评测集上将填充词 F1 从 12.2 提升至 82.6，代价是处理时间增加 14% 与幻觉率上升。",
+  "originalTitle": "UMAI: UM Aware Inference with a Frozen Qwen3-ASR",
+  "pdfUrl": "https://arxiv.org/pdf/2611.34256v1.pdf",
+  "readerTitle": "冻结识别器一字不改如何找回漏掉的 uh 与 um",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383"
+}
