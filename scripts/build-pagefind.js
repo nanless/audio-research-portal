@@ -4,6 +4,34 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 
+const SKIP_TOP_DIRS = new Set(['pagefind', 'client', 'vendor', 'images', 'js', 'css', 'fonts', 'data', 'feeds']);
+const PAGEFIND_READY_ATTR_RE = /\bdata-cmdk-pagefind-ready=(?:"[01]"|'[01]'|[01])(?=[\s>])/g;
+
+function updatePagefindReadyFlag(root, readyValue) {
+  let updated = 0;
+  const replacement = `data-cmdk-pagefind-ready="${readyValue}"`;
+  function walk(dir) {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (entry.isSymbolicLink()) continue;
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        if (dir === root && SKIP_TOP_DIRS.has(entry.name)) continue;
+        walk(full);
+      } else if (entry.isFile() && entry.name.endsWith('.html')) {
+        const html = fs.readFileSync(full, 'utf8');
+        if (!html.includes('data-cmdk-pagefind-ready=')) continue;
+        const next = html.replace(PAGEFIND_READY_ATTR_RE, replacement);
+        if (next !== html) {
+          fs.writeFileSync(full, next, 'utf8');
+          updated += 1;
+        }
+      }
+    }
+  }
+  walk(root);
+  return updated;
+}
+
 function buildPagefind(buildDir = 'public', options = {}) {
   const root = path.resolve(buildDir);
   if (!fs.existsSync(root) || !fs.statSync(root).isDirectory()) {
@@ -16,7 +44,8 @@ function buildPagefind(buildDir = 'public', options = {}) {
     return {
       status: 'skipped',
       reason: 'pagefind-binary-not-installed',
-      binary: bin
+      binary: bin,
+      pagefindReady: false
     };
   }
   if (probe.error || probe.signal || probe.status !== 0) {
@@ -34,11 +63,14 @@ function buildPagefind(buildDir = 'public', options = {}) {
   if (!fs.existsSync(entry)) {
     throw new Error(`Pagefind 缺少产物入口：${entry}`);
   }
+  const updatedHtmlFiles = updatePagefindReadyFlag(root, '1');
   return {
     status: 'built',
     binary: bin,
     version: String(probe.stdout || '').trim(),
-    outputDir: path.join(root, 'pagefind')
+    outputDir: path.join(root, 'pagefind'),
+    pagefindReady: true,
+    updatedHtmlFiles
   };
 }
 
@@ -52,4 +84,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { buildPagefind };
+module.exports = { buildPagefind, updatePagefindReadyFlag };

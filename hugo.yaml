@@ -14,7 +14,7 @@ languages:
 
 pagination:
   pagerSize: 20
-enableGitInfo: true
+enableGitInfo: false
 enableRobotsTXT: true
 buildDrafts: false
 buildFuture: true

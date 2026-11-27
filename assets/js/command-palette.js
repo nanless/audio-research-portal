@@ -270,6 +270,14 @@
     var indexUrl = opts.indexUrl || (scriptEl && scriptEl.getAttribute && scriptEl.getAttribute('data-cmdk-index-url')) || (basePath + 'client/index.json');
     var legacyIndexUrl = opts.legacyIndexUrl || (scriptEl && scriptEl.getAttribute && scriptEl.getAttribute('data-cmdk-legacy-index-url')) || (basePath + 'index.json');
     var pagefindUrl = opts.pagefindUrl || (scriptEl && scriptEl.getAttribute && scriptEl.getAttribute('data-cmdk-pagefind-url')) || (basePath + 'pagefind/pagefind.js');
+    var pagefindReadyAttr = scriptEl && scriptEl.getAttribute && scriptEl.getAttribute('data-cmdk-pagefind-ready');
+    var pagefindEnabled = opts.pagefindReady !== undefined
+      ? Boolean(opts.pagefindReady)
+      : (pagefindReadyAttr !== null && pagefindReadyAttr !== undefined
+        ? (pagefindReadyAttr === '1' || pagefindReadyAttr === 'true')
+        : (typeof opts.loadPagefind === 'function'
+          ? true
+          : win.__PD_PAGEFIND_READY__ === true));
     var protocolsUrl = opts.protocolsUrl || (scriptEl && scriptEl.getAttribute && scriptEl.getAttribute('data-cmdk-protocols-url')) || '';
     var cacheUrl = opts.cacheUrl || (scriptEl && scriptEl.getAttribute && scriptEl.getAttribute('data-cmdk-cache-url')) || '';
     var loaderUrl = opts.loaderUrl || (scriptEl && scriptEl.getAttribute && scriptEl.getAttribute('data-cmdk-loader-url')) || '';
@@ -322,6 +330,7 @@
     var debounceTimer = null;
 
     function resolvePagefind() {
+      if (!pagefindEnabled) return Promise.resolve(null);
       if (typeof opts.loadPagefind === 'function') {
         return Promise.resolve().then(function () { return opts.loadPagefind(pagefindUrl); });
       }

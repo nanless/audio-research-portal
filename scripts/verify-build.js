@@ -49,6 +49,9 @@ const SITE_ORIGIN = 'https://nanless.github.io';
 const SITE_PREFIX = '/audio-research-portal/';
 const MAX_RSS_BYTES = 256 * 1024;
 const MAX_INDEX_BYTES = 8 * 1024 * 1024;
+const MATH_FALLBACK_ZERO_SINCE = '2026-11-26';
+const MAX_LEGACY_MATH_FALLBACKS = 212;
+const MATH_FALLBACK_TAG_RE = /<code\b[^>]*\bclass=(?:"[^"]*\bmath-fallback\b[^"]*"|'[^']*\bmath-fallback\b[^']*'|math-fallback\b)[^>]*>/gi;
 
 function invariant(condition, message) {
   if (!condition) throw new Error(message);
@@ -991,6 +994,70 @@ function verifyResourceBadges(buildDir) {
   return { paperCount: keys.length, bytes: st.size, contract: obj.contract, schemaFingerprint: obj.schemaFingerprint };
 }
 
+function extractPostDate(html, relPath) {
+  const propFirst = html.match(/<meta\b[^>]*\bproperty=["']?article:published_time["']?[^>]*\bcontent=["']?(\d{4}-\d{2}-\d{2})/i);
+  if (propFirst) return propFirst[1];
+  const contentFirst = html.match(/<meta\b[^>]*\bcontent=["']?(\d{4}-\d{2}-\d{2})[^"'>]*["']?[^>]*\bproperty=["']?article:published_time["']?/i);
+  if (contentFirst) return contentFirst[1];
+  const ldDate = html.match(/"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})/);
+  if (ldDate) return ldDate[1];
+  const timeDate = html.match(/<time\b[^>]*\bdatetime=["']?(\d{4}-\d{2}-\d{2})/i);
+  if (timeDate) return timeDate[1];
+  const slugDate = String(relPath || '').replace(/\\/g, '/').match(/(?:^|\/)(\d{4}-\d{2}-\d{2})(?:[-/]|$)/);
+  return slugDate ? slugDate[1] : '';
+}
+
+function verifyMathFallbacks(files, root, options = {}) {
+  const zeroSince = typeof options.zeroSince === 'string' && options.zeroSince ? options.zeroSince : MATH_FALLBACK_ZERO_SINCE;
+  const maxTotal = Number.isSafeInteger(options.maxTotal) ? options.maxTotal : MAX_LEGACY_MATH_FALLBACKS;
+  let totalFallbacks = 0;
+  let affectedPages = 0;
+  const newPostViolations = [];
+  for (const file of files.filter((item) => path.basename(item) === 'index.html')) {
+    const rel = root ? path.relative(root, file).replace(/\\/g, '/') : file.replace(/\\/g, '/');
+    if (rel === 'posts/index.html' || /^posts\/page\/\d+\/index\.html$/.test(rel)) continue;
+    const html = fs.readFileSync(file, 'utf8');
+    const matches = html.match(MATH_FALLBACK_TAG_RE);
+    if (!matches || matches.length === 0) continue;
+    affectedPages += 1;
+    totalFallbacks += matches.length;
+    const date = extractPostDate(html, rel);
+    if (date && date >= zeroSince) {
+      newPostViolations.push(`${rel} (${date}, ${matches.length})`);
+    }
+  }
+  invariant(
+    newPostViolations.length === 0,
+    `自 ${zeroSince} 起的新页面禁止出现 KaTeX math-fallback：${newPostViolations.slice(0, 10).join(', ')}`
+  );
+  invariant(
+    totalFallbacks <= maxTotal,
+    `KaTeX math-fallback 总数 (${totalFallbacks}) 超过基线上限 (${maxTotal})`
+  );
+  return {
+    totalFallbacks,
+    affectedPages,
+    maxAllowed: maxTotal,
+    zeroSince,
+    newPostFallbacks: 0
+  };
+}
+
+function verifyPagefindReadiness(homeHtml, buildDir) {
+  const root = path.resolve(buildDir);
+  const pagefindBuilt = fs.existsSync(path.join(root, 'pagefind', 'pagefind.js'));
+  const expectedFlag = pagefindBuilt ? '1' : '0';
+  const scripts = homeHtml.match(/<script\b[^>]*>/gi) || [];
+  const cmdkTag = scripts.find((tag) => /command-palette/i.test(attributeValue(tag, 'src')) || tag.includes('data-cmdk-pagefind-ready'));
+  invariant(cmdkTag, '首页缺少 command-palette 脚本标签');
+  const readyFlag = attributeValue(cmdkTag, 'data-cmdk-pagefind-ready');
+  invariant(
+    readyFlag === expectedFlag,
+    `首页 data-cmdk-pagefind-ready="${readyFlag}" 与构建产物 pagefind/pagefind.js 存在状态 (${expectedFlag}) 不一致`
+  );
+  return { pagefindBuilt, readyFlag };
+}
+
 function verifyBuild(buildDir) {
   const root = path.resolve(buildDir);
   const allFiles = walkFiles(root);
@@ -1058,9 +1125,10 @@ function verifyBuild(buildDir) {
     invariant(/textContent/.test(source), `播客脚本必须使用 textContent：${file}`);
     invariant(!/cdn\.jsdelivr\.net|unpkg\.com|cdnjs\.cloudflare\.com/i.test(source), `播客脚本不得引用外部 CDN：${file}`);
   }
-  const paperTools = verifyPaperToolCoverage(
-    allFiles.filter((file) => file.startsWith(`${path.join(root, 'posts')}${path.sep}`)), root
-  );
+  const postFiles = allFiles.filter((file) => file.startsWith(`${path.join(root, 'posts')}${path.sep}`));
+  const paperTools = verifyPaperToolCoverage(postFiles, root);
+  const mathFallbacks = verifyMathFallbacks(postFiles, root);
+  const pagefind = verifyPagefindReadiness(home, root);
   // 模板整体失效时，声明会从所有页面一起消失，构建仍可能成功。用源 Markdown
   // 中承诺了 /client/papers/ 附属资料的页面数做数量对账，把静默降级变成构建错误。
   const declaredSidecarPages = countDeclaredClientSidecarSources();
@@ -1098,6 +1166,8 @@ function verifyBuild(buildDir) {
     libraryScripts: libraryScripts.length,
     podcastScripts: podcastScripts.length,
     paperTools,
+    mathFallbacks,
+    pagefind,
     navigation: verifyPageNavigation(root)
   };
   process.stdout.write(`${JSON.stringify(stats, null, 2)}\n`);
@@ -1115,7 +1185,10 @@ if (require.main === module) {
 
 module.exports = {
   CURATED_FEED_FILES,
+  MATH_FALLBACK_ZERO_SINCE,
+  MAX_LEGACY_MATH_FALLBACKS,
   extractHead, verifyHead, verifyRss, verifyCuratedFeeds, verifySearchIndex,
-  verifyPaperToolCoverage, verifyBuild, verifySearchManifest, verifyDesktopDetails,
+  verifyPaperToolCoverage, verifyMathFallbacks, verifyPagefindReadiness,
+  verifyBuild, verifySearchManifest, verifyDesktopDetails,
   verifyRelatedGraph, verifySotaHubs, verifyResourceBadges
 };

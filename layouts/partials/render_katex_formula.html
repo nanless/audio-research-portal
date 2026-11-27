@@ -1,36 +1,126 @@
 {{- $type := .type -}}
 {{- $inner := .inner -}}
+{{- $macros := dict
+  "\\bm" "\\boldsymbol{#1}"
+  "\\indep" "\\perp\\!\\!\\!\\perp"
+  "\\mathbbm" "\\mathbb{#1}"
+  "\\mathds" "\\mathbb{#1}"
+  "\\mdmathbb" "\\mathbb{#1}"
+  "\\symAMSb" "\\mathbb{#1}"
+  "\\pazocal" "\\mathcal{#1}"
+  "\\textsc" "\\mathrm{#1}"
+  "\\mbox" "\\text{#1}"
+  "\\softmax" "\\operatorname{softmax}"
+  "\\clip" "\\operatorname{clip}"
+  "\\tr" "\\operatorname{tr}"
+  "\\sinc" "\\operatorname{sinc}"
+  "\\sinhc" "\\operatorname{sinhc}"
+  "\\med" "\\operatorname*{med}"
+  "\\Cov" "\\operatorname{Cov}"
+  "\\Var" "\\operatorname{Var}"
+  "\\updelta" "\\delta"
+  "\\xspace" ""
+  "\\minus" "-"
+  "\\accentset" "\\overset{#1}{#2}"
+  "\\textsuperscript" "^{\\mathrm{#1}}"
+-}}
 {{- $opts := dict
   "displayMode" (eq $type "block")
   "output" "htmlAndMathml"
   "throwOnError" true
-  "macros" (dict "\\bm" "\\boldsymbol{#1}")
+  "macros" $macros
 -}}
-{{- with try (transform.ToMath $inner $opts) -}}
-  {{- with .Err -}}
-    <code class="math-fallback">{{ $inner }}</code>
-  {{- else -}}
-    {{- $rendered := printf "%s" .Value -}}
-    {{- if in $rendered "<math" -}}
-      {{- range $mathBlock := findRE `(?s)<math\b[^>]*>.*?</math>` $rendered -}}
-        {{- $cleanMath := $mathBlock -}}
-        {{- $lower := lower $mathBlock -}}
-        {{- if in $lower "mlabeledtr" -}}
-          {{- $cleanMath = replaceRE `(?i)<(/?)mlabeledtr\b` `<${1}mtr` $cleanMath -}}
-        {{- end -}}
-        {{- if or (in $lower "style=") (in $lower "form=") (in $lower "linebreak=") (in $lower "mathsize=") (in $lower "mathcolor=") (in $lower "mathbackground=") (in $lower "largeop=") (in $lower "columnspan=") (in $lower "rowspan=") (in $lower "numalign=") (in $lower "denomalign=") (in $lower "bevelled=") -}}
-          {{- range $tag := findRE `<[a-zA-Z][^>]*>` $cleanMath -}}
-            {{- $cleanTag := replaceRE `(?i)\s+(?:linebreak|mathsize|mathcolor|mathbackground|largeop|form|columnspan|rowspan|numalign|denomalign|bevelled|style)=(?:"[^"]*"|'[^']*')` "" $tag -}}
-            {{- if ne $cleanTag $tag -}}
-              {{- $cleanMath = replace $cleanMath $tag $cleanTag -}}
-            {{- end -}}
-          {{- end -}}
-        {{- end -}}
-        {{- if ne $cleanMath $mathBlock -}}
-          {{- $rendered = replace $rendered $mathBlock $cleanMath -}}
-        {{- end -}}
+{{- $res := try (transform.ToMath $inner $opts) -}}
+{{- if $res.Err -}}
+  {{- /* Display-time healing runs only when strict rendering fails; valid formulas are untouched. */ -}}
+  {{- $healed := $inner -}}
+  {{- $healed = replaceRE "[\u200B\u200C\u200D\uFEFF]" "" $healed -}}
+  {{- $healed = replaceRE `⧵([^\s])` `\${1}` $healed -}}
+  {{- $healed = replaceRE `\\(?:v|h)skip\s*[+-]?(?:\d+(?:\.\d*)?|\.\d+)\s*(?:pt|em|ex|mm|cm|in|bp|pc|dd|cc|sp|mu)\s*` " " $healed -}}
+  {{- $healed = replaceRE `\\penalty(?:\\\s*|\s*-?\d+)\s*` " " $healed -}}
+  {{- $healed = replace $healed `\centering\@add@centering` "" -}}
+  {{- $healed = replace $healed `\mathchar 45` "-" -}}
+  {{- $healed = replaceRE `\\(?:text)?color\s*\[[A-Za-z]+\]\s*\{[^}]*\}` " " $healed -}}
+  {{- if in $healed `\begin{array}` -}}
+    {{- $healed = replaceRE `\\begin\{array\}\s*\[\]` `\begin{array}` $healed -}}
+    {{- range $arrSpec := findRE `\\begin\{array\}\{(?:[^{}]|\{[^{}]*\})*\}` $healed -}}
+      {{- if in $arrSpec "@" -}}
+        {{- $cleanSpec := replaceRE `@\{[^{}]*\}` "" $arrSpec -}}
+        {{- $healed = replace $healed $arrSpec $cleanSpec -}}
       {{- end -}}
     {{- end -}}
-    {{- $rendered | safeHTML -}}
   {{- end -}}
+  {{- $healed = replace $healed `\begin{split}` `\begin{aligned}` -}}
+  {{- $healed = replace $healed `\end{split}` `\end{aligned}` -}}
+  {{- $healed = replaceRE `\\scalebox\{[^{}]*\}\{([^{}]*)\}` "{${1}}" $healed -}}
+  {{- $healed = replaceRE `\\(?:mbox|text)\{\\boldmath\s*\\\(([^)]*?)\\\)\}` `\boldsymbol{${1}}` $healed -}}
+  {{- $healed = replaceRE `\\text\{([^{}]*)\\(?:big|Big|bigg|Bigg)[lr]?([(\[])([^{}]*)\\(?:big|Big|bigg|Bigg)[lr]?([)\]])([^{}]*)\}` `\text{${1}${2}${3}${4}${5}}` $healed -}}
+  {{- range $textSpan := findRE `\\text\{[^{}$]*_[^{}$]*\}` $healed -}}
+    {{- $cleanTextSpan := replaceRE `(^|[^\\])_` `${1}\_` $textSpan -}}
+    {{- if ne $cleanTextSpan $textSpan -}}
+      {{- $healed = replace $healed $textSpan $cleanTextSpan -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $healed = replace $healed "∥" ` \parallel ` -}}
+  {{- $healed = replace $healed "′" "'" -}}
+  {{- $healed = replace $healed "µ" ` \mu ` -}}
+  {{- $healed = replace $healed "∆" ` \Delta ` -}}
+  {{- $healed = replace $healed "∅" ` \emptyset ` -}}
+  {{- $healed = replace $healed "⊤" ` \top ` -}}
+  {{- $healed = replace $healed "⋆" ` \star ` -}}
+  {{- $healed = replace $healed "√" ` \surd ` -}}
+  {{- $healed = replace $healed "–" "-" -}}
+  {{- $healed = replaceRE `ˆ([A-Za-zα-ωΑ-Ωϵϕϑ])` `\hat{${1}}` $healed -}}
+  {{- $healed = replaceRE `˜([A-Za-zα-ωΑ-Ωϵϕϑ])` `\tilde{${1}}` $healed -}}
+  {{- $healed = replaceRE `¯([A-Za-zα-ωΑ-Ωϵϕϑ])` `\bar{${1}}` $healed -}}
+  {{- $healed = replace $healed `&\#40;` "(" -}}
+  {{- $healed = replace $healed `&\#41;` ")" -}}
+  {{- $healed = replace $healed "&#40;" "(" -}}
+  {{- $healed = replace $healed "&#41;" ")" -}}
+  {{- $healed = replace $healed "&lt;" "<" -}}
+  {{- $healed = replace $healed "&gt;" ">" -}}
+  {{- $healed = replaceRE `(^|[^\\])\\-` "${1}-" $healed -}}
+  {{- $healed = replaceRE `(^|[^\\])\\\+` "${1}+" $healed -}}
+  {{- $healed = replaceRE `(^|[^\\])\\\.(\d)` "${1}.${2}" $healed -}}
+  {{- $healed = replaceRE `(^|[^\\])\\\[` "${1}[" $healed -}}
+  {{- $healed = replaceRE `(^|[^\\])\\\]` "${1}]" $healed -}}
+  {{- if not (in $healed `\begin{`) -}}
+    {{- $healed = replaceRE `(^|[^\\])\\\\(hat|tilde|bar|vec|dot|ddot|check|acute|grave|breve|widehat|widetilde|overline|underline|sqrt|bm|boldsymbol|operatorname|math[a-z]+|text[a-z]*)\\\{([^}]*)\\\}` `${1}\${2}{${3}}` $healed -}}
+    {{- $healed = replaceRE `(^|[^\\])\\\\\|` `${1}\|` $healed -}}
+    {{- $healed = replaceRE `(^|[^\\])\\\\([a-zA-Z]+)` `${1}\${2}` $healed -}}
+    {{- $healed = replaceRE `(^|[^\\])\\\\%` `${1}\%` $healed -}}
+    {{- $healed = replaceRE `\\_\\\{([^}]*)\\\}` "_{${1}}" $healed -}}
+    {{- $healed = replaceRE `\^\\\{([^}]*)\\\}` "^{${1}}" $healed -}}
+  {{- end -}}
+  {{- $healed = replaceRE `(\d)%` `${1}\%` $healed -}}
+  {{- $healed = replaceRE `\^(?:\s*$|(\s*[}\])(\[,;_=]))` "^{*}${1}" $healed -}}
+  {{- if ne $healed $inner -}}
+    {{- $res = try (transform.ToMath $healed $opts) -}}
+  {{- end -}}
+{{- end -}}
+{{- with $res.Err -}}
+  <code class="math-fallback">{{ $inner }}</code>
+{{- else -}}
+  {{- $rendered := printf "%s" $res.Value -}}
+  {{- if in $rendered "<math" -}}
+    {{- range $mathBlock := findRE `(?s)<math\b[^>]*>.*?</math>` $rendered -}}
+      {{- $cleanMath := $mathBlock -}}
+      {{- $lower := lower $mathBlock -}}
+      {{- if in $lower "mlabeledtr" -}}
+        {{- $cleanMath = replaceRE `(?i)<(/?)mlabeledtr\b` `<${1}mtr` $cleanMath -}}
+      {{- end -}}
+      {{- if or (in $lower "style=") (in $lower "form=") (in $lower "linebreak=") (in $lower "mathsize=") (in $lower "mathcolor=") (in $lower "mathbackground=") (in $lower "largeop=") (in $lower "columnspan=") (in $lower "rowspan=") (in $lower "numalign=") (in $lower "denomalign=") (in $lower "bevelled=") -}}
+        {{- range $tag := findRE `<[a-zA-Z][^>]*>` $cleanMath -}}
+          {{- $cleanTag := replaceRE `(?i)\s+(?:linebreak|mathsize|mathcolor|mathbackground|largeop|form|columnspan|rowspan|numalign|denomalign|bevelled|style)=(?:"[^"]*"|'[^']*')` "" $tag -}}
+          {{- if ne $cleanTag $tag -}}
+            {{- $cleanMath = replace $cleanMath $tag $cleanTag -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if ne $cleanMath $mathBlock -}}
+        {{- $rendered = replace $rendered $mathBlock $cleanMath -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $rendered | safeHTML -}}
 {{- end -}}
