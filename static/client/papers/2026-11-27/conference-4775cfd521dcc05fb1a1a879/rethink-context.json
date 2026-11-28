@@ -1,0 +1,43 @@
+{
+  "abstract": "Speech variation between native and non-native speakers of French is addressed with a low-resource method based on a frame-wise comparison of wav2vec2 acoustic embeddings, using fine-grained phonetic transcriptions by expert annotators as baseline. z-normalisation and t-normalisation are explored to assess what the embeddings contain in terms of phonetically analysable information. We explore non-supervised methods for solving basic speech-related research questions. Adapting Dynamic Time Warping to speech embeddings, we compare phonologically similar recordings of sentences read-aloud by native vs. non-native speakers of French. The question is whether XLSR-53 embeddings are more robust than MFCCs to inter-speaker vs. intra-speaker variability for same words. Then we investigate whether native speaker productions are more stable than those of non-native speakers. Results suggest that the model allows phonetically meaningful correlative analyses. Working on the raw embeddings shows however that the representations are not speaker-independent, so with a view to address issues in relationship with L2 pronunciation variability, we show that t-normalisation brings us a way to separate fluency and accuracy effects in L2-speech. This shows that wav2vec2 encapsulates time-dependent phonetic information in the embeddings, including speaker accent which can not easily be disentangled from speaker ID.",
+  "abstractSha256": "47e6367de82c065e3b3d4d4235e1f69c431d2050a12a95e52e85cc65ed02bd10",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "后50%",
+    "score": 5.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "INALCO, Université Sorbonne Nouvelle, Université Paris Cité"
+      ],
+      "name": "Maxime Fily"
+    },
+    {
+      "affiliations": [
+        "INALCO, Université Sorbonne Nouvelle, Université Paris Cité"
+      ],
+      "name": "Martine Adda-Decker"
+    },
+    {
+      "affiliations": [
+        "INALCO, Université Sorbonne Nouvelle, Université Paris Cité"
+      ],
+      "name": "Guillaume Wisniewski"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对法语母语与俄语母语二语朗读同词差异问题，本文用冻结 XLSR-53 第 16 层嵌入的逐帧动态规划对齐代价对照 MFCC 与专家加权误差，证明嵌入保留说话人与口音信息而时间归一化可部分分离流利度与准确度，代价是小规模实验室朗读条件与残留说话人特异性。",
+  "originalTitle": "Investigating Speaker Pronunciation Variability in Speech Embeddings: Speaker and L1 Effects on French as a Second Language",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.10",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.10.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "嵌入能否量出法语二语发音中的说话人与母语差异",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.10/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "8bb41352ccb428d6f973e1b5f0e0f520700bf00809d441a03ca30132857d45ed"
+}

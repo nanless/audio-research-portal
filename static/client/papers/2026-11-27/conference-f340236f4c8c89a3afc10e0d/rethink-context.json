@@ -1,0 +1,37 @@
+{
+  "abstract": "Large self-supervised speech (SSL) models achieve strong downstream performance, but their size limits deployment in resource-constrained settings. We present HArnESS, an Arabic-centric self-supervised speech model family trained from scratch with iterative self-distillation, together with lightweight student variants that offer strong accuracy-efficiency trade-offs on Automatic Speech Recognition (ASR), Dialect Identification (DID), and Speech Emotion Recognition (SER). Our approach begins with a large bilingual Arabic-English teacher and progressively distills its knowledge into compressed student models while preserving Arabic-relevant acoustic and paralinguistic representations. We further study PCA-based compression of the teacher supervision signal to better match the capacity of shallow and thin students. Compared with HuBERT and XLS-R, HArnESS consistently improves performance on Arabic downstream tasks, while the compressed models remain competitive under substantial structural reduction. These results position HArnESS as a practical and accessible Arabic-centric SSL foundation for real-world speech applications.",
+  "abstractSha256": "c97ff83044bd16e23e4ae4acf9de88c009c0d87128ed52f071f11c6cdc1041a5",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "模型报告",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Amazon India"
+      ],
+      "name": "Vrunda Nileshkumar Sukhadia"
+    },
+    {
+      "affiliations": [
+        "Qatar Computing Research Institute, HBKU, Qatar"
+      ],
+      "name": "Shammur Absar Chowdhury"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对阿拉伯方言多样下通用模型表示不足与大模型难部署的矛盾，该文以约 23,000 小时双语迭代自蒸馏训练 HArnESS 家族并以主成分分析简化监督，冻结评测中教师在三项阿拉伯任务上优于英语与多语基线，而 4 层学生在 79.4% 压缩下保留多数性能但方言辨识下降最明显。",
+  "originalTitle": "HARNESS: Lightweight Distilled Arabic Speech Foundation Models",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.12",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.12.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "轻量蒸馏阿拉伯语音基础模型 HArnESS 的三轮自蒸馏与压缩评测",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.12/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "a24267daab8bca2bf0b471b99a014db4c68aff1bea24353cfb33402266e7d144"
+}

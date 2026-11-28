@@ -1,0 +1,43 @@
+{
+  "abstract": "We present a blank-aware decoding approach for transcript-free phoneme alignment with CTC-based speech foundation models, designed to improve annotation bootstrapping in low-resource languages. While CTC models provide frame-level phoneme posteriors without requiring transcripts, greedy decoding produces blank-dominated and temporally unstable segmentations that are difficult to correct manually. Our approach introduces two training-free blank-resolution strategies operating directly on CTC logits: (i) confidence-ratio substitution, which promotes competitive non-blank hypotheses relative to the blank symbol, and (ii) recursive context adjustment, which enforces local contextual consistency within blank spans. Experiments on English (TIMIT) and on Sardinian and Tyrolean dialect corpora show consistent improvements in boundary F1 prediction, phoneme duration regularity, and segmentation stability over greedy CTC decoding. Although absolute boundary deviations remain higher than transcript-conditioned aligners, the resulting alignments are structurally coherent and suitable for manual correction. A post-hoc phoneme-class analysis further reveals systematic asymmetries in blank resolution, highlighting complementary roles of local acoustic evidence and contextual cues, and outlining prominising venues for future improvements.",
+  "abstractSha256": "38c1dfb781e894911c7e4b1e0e40290371bc5fed9e201c0bea08675b2c701772",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "强制对齐",
+    "rankBucket": "后50%",
+    "score": 5.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Domenico De Cristofaro"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Barbara Plank"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Alessandro Vietti"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对无文本时 CTC 贪心解码空白主导导致边界不稳的问题 ，本文提出直接作用于对数几率的置信度比值替换与递归上下文调整两种免训练解码 ，在英语与撒丁岛 、 蒂罗尔方言上改善边界 F1 与时长规律性 ，代价是绝对偏差仍约 100 ms 且身份精度未提升 。",
+  "originalTitle": "Blank-Aware Decoding for Transcript-Free Phoneme Alignment in Low-Resource Languages and Dialects",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.19",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.19.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "空白感知解码如何改善无文本音素对齐",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.19/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "2708726704f5941fb6c38e34e13a267cafbb6869ef169b41285a9e2905e29f76"
+}

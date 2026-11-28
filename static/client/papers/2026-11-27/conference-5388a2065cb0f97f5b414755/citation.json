@@ -1,0 +1,21 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "College of Computer and Information Sciences, King Saud University, Riyadh, Saudi Arabia"
+      ],
+      "name": "Hend Al-Khalifa"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.13",
+  "originalTitle": "When Does OmniASR Fail? A Fine-Grained Human Evaluation on Saudi Arabic Dialects",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.13",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.13.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.13/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "bf8b2bf126cc402454ef2c247dbce90e49bac62982c5055b72314b265d825069",
+  "type": "conference-paper"
+}

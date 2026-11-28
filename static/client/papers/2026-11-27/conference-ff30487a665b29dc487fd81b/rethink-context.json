@@ -1,0 +1,43 @@
+{
+  "abstract": "This study investigates the ability of speech-based language identification (LID) systems to handle dialectal variation in low-resource settings and explores whether classification outcomes correspond to phonetic proximity and can serve as an exploratory tool for dataset quality. We collected corpora for three macrolanguages Mande, Quechuan, and Yiddish, each presenting distinct internal variation, and evaluated three types of models: GMM, Whisper, and Wav2vec2-based architectures. Models were tested both within language families and across the entire multilingual dataset to assess generalization. Layer-wise classifiers built on wav2vec2-XLSR embeddings were used to identify the layers most sensitive to phonetic or phonological features. Results show that simple GMM models can generalize well in small, highly similar datasets, while Whisper-based classifiers tend to overfit, particularly on closely related dialects. Wav2vec2-XLSR (layer 12 + MLP) captures better fine phonetic and prosodic distinctions, suggesting that embeddings encode nuanced pronunciation cues. For datasets with more diverse sources like Quechua, Whisper demonstrates better generalization. Overall, LID classifiers can both reveal linguistic patterns and highlight dataset quality issues, with model architecture and layer-specific representations shaping performance.",
+  "abstractSha256": "f30562b7176f6768fe3e9d5f170431adf0f2a90bb2afc8dbd3caf8c7f7d1d5d4",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "语言识别",
+    "rankBucket": "后50%",
+    "score": 5.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Johanna Cordova"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Eric Jordan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Valentina Fedchenko"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本研究针对低资源下细粒度方言难以量化且易受录音来源干扰的问题，对比高斯混合、Whisper 与 wav2vec2 三类口语识别模型在曼德语、克丘亚语与意第绪语十个变体上的行为，发现简单统计模型在小而同质集合上泛化更稳而第十二层表征能捕捉细微语音差异，但结论受录音类型混杂与缺乏人工验证限制而尚不能作为可靠的语言距离度量。",
+  "originalTitle": "What LID Systems Say About Dialectal Variation. The Case of Yiddish, Quechua and Mande",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.11",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.11.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "口语识别能否分辨方言连续体",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.11/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "e6665b1a2ab467bc9cf94b9ff04f708a199197ba8da9608eb8c5315d56d12e7e"
+}

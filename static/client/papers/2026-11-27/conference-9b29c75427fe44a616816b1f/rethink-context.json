@@ -1,0 +1,61 @@
+{
+  "abstract": "In recent years, there has been an upsurge in research on automatic speech recognition (ASR) for low-resource languages. Particularly, transfer learning using multi-lingual models has become a popular remedy for the lack of available datasets for target languages. However, given the complexities associated with each individual language, we argue it is unlikely that a single multi-lingual pre-training model will provide equal performance gains across all languages. We also recognise the important, and insufficiently studied influence that the specific pre-training dataset has on the performance of the model. In this paper, using the Irish language as a case study, we propose a more directed, incremental form of pre-training which we term multi-step fine-tuning. This method accounts for the complex relationships between the language and dataset features of the source pre-training and target datasets. We show multi-step fine-tuning improves performance over simple multi-lingual fine-tuning alone, and we investigate factors leading to certain pre-trained models achieving better results through linguistic and dataset similarity measures. This research also investigates the uniformity of the performance gains across different demographics. We show that the optimal pre-training strategy can differ between demographics suggesting that more careful pre-training dataset selection is necessary to ensure equitable outcomes in practice.",
+  "abstractSha256": "966764c6aec496f39b7dd136f5cad21e5c35f788a54c71ca8dc9506f48cc9677",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science and Statistics - Trinity College Dublin, SFI Lero, School of Computing - Dublin City University"
+      ],
+      "name": "Caoilfhionn Ní Dheoráin"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Statistics - Trinity College Dublin, SFI Lero, School of Computing - Dublin City University"
+      ],
+      "name": "Ruth Holmes"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Statistics - Trinity College Dublin, SFI Lero, School of Computing - Dublin City University"
+      ],
+      "name": "Nicholas Evans"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Statistics - Trinity College Dublin, SFI Lero, School of Computing - Dublin City University"
+      ],
+      "name": "Thomas Laurent"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Statistics - Trinity College Dublin, SFI Lero, School of Computing - Dublin City University"
+      ],
+      "name": "Anthony Ventresque"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Statistics - Trinity College Dublin, SFI Lero, School of Computing - Dublin City University"
+      ],
+      "name": "Ellen Rushe"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对爱尔兰语极小数据识别，论文提出先源语言微调再目标微调的多步策略，发现英语源平均最优而德语源严重负迁移，且数据量与单一语言相似度都无法单独预测最优源，人群间增益也不均匀。",
+  "originalTitle": "Doing More with Less: Determining Optimal Pre-training Model for Irish Automatic Speech Recognition through Multi-step Fine-tuning",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.18",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.18.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "少数据做爱尔兰语识别时两次微调如何选源语言",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.18/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "25a4c73456a98af03463960bbfb3ec74dc639937bd4c236886c1d34697df61b2"
+}

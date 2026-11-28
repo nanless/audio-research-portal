@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Domenico De Cristofaro"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Barbara Plank"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Alessandro Vietti"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.19",
+  "originalTitle": "Blank-Aware Decoding for Transcript-Free Phoneme Alignment in Low-Resource Languages and Dialects",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.19",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.19.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.19/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "2708726704f5941fb6c38e34e13a267cafbb6869ef169b41285a9e2905e29f76",
+  "type": "conference-paper"
+}

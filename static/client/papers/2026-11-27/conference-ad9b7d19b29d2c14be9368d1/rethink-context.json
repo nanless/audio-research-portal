@@ -1,0 +1,49 @@
+{
+  "abstract": "Automatic speech recognition (ASR) for low-resource languages remains challenging due to limited labeled data. Although multilingual models and the inclusion of related auxiliary languages enable cross-lingual transfer, it is still unclear how introducing cross-lingual information at different training stages-pre-training versus fine-tuning-affects downstream performance. Prior work largely treats transfer as a single-stage optimization problem without disentangling stage effects. We present a stage-aware analysis of cross-lingual transfer for Faroese ASR using related auxiliary languages and Wav2Vec 2.0 XLS-R models. We systematically compare two complementary adaptation pipelines: (i) cross-lingual supervised fine-tuning and (ii) cross-lingual continuous pre-training prior to fine-tuning. Both strategies are evaluated under a unified setup with controlled model architectures, balanced representation of auxiliary languages, and identical evaluation protocols. Results demonstrate that cross-lingual transfer is stage-dependent. Supervised adaptation optimizes in-domain accuracy, while pretraining-level adaptation enhances robustness and reduces Character Error Rate (CER). Auxiliary language effects vary across pipelines, reinforcing the idea that transfer effectiveness depends on when and how cross-lingual information is introduced. Comparisons with large-scale multilingual ASR models highlight trade-offs between model scale and explicit, small-scale domain-aware adaptation. These findings suggest that effective cross-lingual transfer for Faroese low-resource ASR is inherently stage-dependent rather than a single-step design choice.",
+  "abstractSha256": "71f6b374584e94a1cc912f35f9b3e02f00e9d45906a1cf9dd5f274f91ba92813",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Faculty of Science and Technology, University of the Faroe Islands, Faroe Islands"
+      ],
+      "name": "Dávid í Lág"
+    },
+    {
+      "affiliations": [
+        "Faculty of Science and Technology, University of the Faroe Islands, Faroe Islands"
+      ],
+      "name": "Barbara Scalvini"
+    },
+    {
+      "affiliations": [
+        "Language Technologies Laboratory, Barcelona Supercomputing Center (BSC), Spain"
+      ],
+      "name": "Carlos Daniel Mena"
+    },
+    {
+      "affiliations": [
+        "Department of Engineering, Reykjavik University, Iceland"
+      ],
+      "name": "Jón Guðnason"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对法罗语低资源识别中跨语言信息应在何阶段引入的问题，对比有监督微调与连续预训练两条流程，发现后者在议会口语上把 WER 从 37.78% 降至 26.46% ，代价是 1,000 小时同域无标注训练与说话人相关评测，且最优辅助语言随阶段而变。",
+  "originalTitle": "Stage-Aware Cross-Lingual Transfer for Faroese ASR: When and Which Languages Matter",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.17",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.17.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "何时引入跨语言信息 法罗语识别的两阶段迁移对照",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.17/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "f28f77ca8fa8ed84a271beafa5cc7861a517f3abea28030f0fd6fd5c2ae2477d"
+}

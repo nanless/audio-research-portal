@@ -1,0 +1,43 @@
+{
+  "abstract": "Automatic speech recognition (ASR) has advanced rapidly in recent years, driven by large-scale pretrained models and end-to-end architectures such as SLAM-ASR. A key component of SLAM-ASR systems is the Whisper speech encoder, which provides robust acoustic representations. While model pruning has been explored for the full Whisper encoder–decoder architecture, its impact within the SLAM-ASR setting remains under-investigated. In this work, we analyze the effects of layer pruning in the Whisper encoder when used as the acoustic backbone of SLAM-ASR. We further examine the extent to which LoRA-based fine-tuning can recover performance degradation caused by pruning. Experiments conducted across three Whisper variants (Small, Medium, Large-v2), three languages representing distinct resource levels (Danish, Dutch, English), and over 200 training runs demonstrate that pruning two encoder layers causes only 2–4% WER degradation, and that combining this pruning with LoRA adaptation consistently outperforms the unpruned baseline while reducing total parameters by 7–14%. Moreover, our error analysis reveals that LoRA primarily compensates through the language model’s linguistic priors, reducing total word errors by 18.2%, with substitution errors showing the largest reduction. However, for low-resource Danish, LoRA introduces increased insertion errors, indicating that compensation effectiveness depends on the LLM’s pre-existing language proficiency and available training data.",
+  "abstractSha256": "9f1b9f36f1e1cac6a75445034d1807509866c99c71c2c20b4b8e671967e744b1",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science and Electronic Engineering, University of Essex"
+      ],
+      "name": "Ganesh Pavan Kartikeya Bharadwaj Kolluri"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Electronic Engineering, University of Essex"
+      ],
+      "name": "Michael Kampouridis"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Electronic Engineering, University of Essex"
+      ],
+      "name": "Ravi Shekhar"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文研究 SLAM-ASR 中 Whisper 编码器顶层剪枝与大语言模型低秩适配的交互，发现两层剪枝加适配在丹麦语、荷兰语与英语上均优于完整基线并减少编码器侧参数，但低资源下补偿不稳定且会增加插入错误。",
+  "originalTitle": "On the Role of Encoder Depth: Pruning Whisper and LoRA Fine-Tuning in SLAM-ASR",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.20",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.20.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "剪掉两层编码器再做轻量适配为何能超越完整语音识别系统",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.20/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "a1eda8025d37491411934b3b772dca50a2736940e713a057eb72873af61c11ca"
+}

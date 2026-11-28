@@ -1,0 +1,46 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Telefónica Innovación Digital, Madrid, Spain",
+        "Universidad Autónoma de Madrid, Madrid, Spain"
+      ],
+      "name": "Fernando López"
+    },
+    {
+      "affiliations": [
+        "Telefónica Innovación Digital, Madrid, Spain"
+      ],
+      "name": "Paula Delgado-Santos"
+    },
+    {
+      "affiliations": [
+        "Telefónica Innovación Digital, Madrid, Spain"
+      ],
+      "name": "Pablo Gómez"
+    },
+    {
+      "affiliations": [
+        "Telefónica Innovación Digital, Madrid, Spain"
+      ],
+      "name": "David Solans"
+    },
+    {
+      "affiliations": [
+        "Telefónica Innovación Digital, Madrid, Spain"
+      ],
+      "name": "Jordi Luque"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.6",
+  "originalTitle": "\"OK Aura, Be Fair with Me\": Demographics-Agnostic Training for Bias Mitigation in Wake-up Word Detection",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.6",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.6.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.6/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "5681eb407d8675209e33d707ccf800290595060a2ebb56be510a0efe4dd03c1d",
+  "type": "conference-paper"
+}

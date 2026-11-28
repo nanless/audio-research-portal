@@ -1,0 +1,51 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science and Statistics - Trinity College Dublin, SFI Lero, School of Computing - Dublin City University"
+      ],
+      "name": "Caoilfhionn Ní Dheoráin"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Statistics - Trinity College Dublin, SFI Lero, School of Computing - Dublin City University"
+      ],
+      "name": "Ruth Holmes"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Statistics - Trinity College Dublin, SFI Lero, School of Computing - Dublin City University"
+      ],
+      "name": "Nicholas Evans"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Statistics - Trinity College Dublin, SFI Lero, School of Computing - Dublin City University"
+      ],
+      "name": "Thomas Laurent"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Statistics - Trinity College Dublin, SFI Lero, School of Computing - Dublin City University"
+      ],
+      "name": "Anthony Ventresque"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Statistics - Trinity College Dublin, SFI Lero, School of Computing - Dublin City University"
+      ],
+      "name": "Ellen Rushe"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.18",
+  "originalTitle": "Doing More with Less: Determining Optimal Pre-training Model for Irish Automatic Speech Recognition through Multi-step Fine-tuning",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.18",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.18.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.18/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "25a4c73456a98af03463960bbfb3ec74dc639937bd4c236886c1d34697df61b2",
+  "type": "conference-paper"
+}

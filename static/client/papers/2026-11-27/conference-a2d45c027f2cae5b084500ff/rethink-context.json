@@ -1,0 +1,62 @@
+{
+  "abstract": "This study explores how bilingual fine-tuning affects automatic speech recognition (ASR) in low-resource languages. We evaluate this method across nine linguistically and geographically diverse language pairs, covering a range of language families and writing systems. To distinguish the two languages, during training, we pre-pend each input text with a language identification token. At inference, the model jointly predicts both the language and transcription from the speech input alone. As texts for which the language is incorrectly determined show low ASR performance, we also conduct a follow-up experiment in which the language identification token is provided both during training and inference. Our results show that bilingual fine-tuning can be beneficial when language identification accuracy is high, and that in cases where language identification performance is low, including the language identification token at inference helps to improve ASR performance.",
+  "abstractSha256": "2e2898111c06dbb36a41b063974dde924992609fe451612cec4aa7b570641dcc",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.1
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Groningen"
+      ],
+      "name": "Reihaneh Amooie"
+    },
+    {
+      "affiliations": [
+        "University of Groningen"
+      ],
+      "name": "Yun Hao"
+    },
+    {
+      "affiliations": [
+        "University of Groningen"
+      ],
+      "name": "Wietse de Vries"
+    },
+    {
+      "affiliations": [
+        "Fryske Akademy"
+      ],
+      "name": "Jelske Dijkstra"
+    },
+    {
+      "affiliations": [
+        "University of Groningen"
+      ],
+      "name": "Matt Coler"
+    },
+    {
+      "affiliations": [
+        "University of Groningen",
+        "Vrije Universiteit Brussel"
+      ],
+      "name": "Martijn Wieling"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "低资源识别中双语微调联合预测语言标识与转写，在标识精度超 95% 时以弗里斯兰语 1.7 个百分点为代表取得小幅显著增益，而精度不足时增益消失甚至受损，推理时给定正确标识可部分挽回。",
+  "originalTitle": "Improving Low-resource ASR Using Bilingual Fine-tuning with Language Identification: A Cross-linguistic Evaluation",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.15",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.15.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "双语微调改善低资源语音识别的条件与标识精度的瓶颈作用",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.15/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "0473411bedc79ee5939ddcafbb8c77f4df6360cbcd1f1f69826b01661675e3b8"
+}

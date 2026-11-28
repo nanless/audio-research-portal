@@ -1,0 +1,43 @@
+{
+  "abstract": "Speech Large Language Models have recently enabled the processing of spoken language by coupling powerful language models (LLMs) with pre-trained speech encoders. However, their multilingual scalability remains limited, particularly for low - resource and unseen languages, while naïve fine- tuning often triggers catastrophic forgetting of previously learned languages. This work investigates how Continual Learning (CL) can be used to sustainably expand multilingual Speech LLMs. We first demonstrate that multilingual projectors can be efficiently bootstrapped to new languages , even with extremely small datasets, but at the cost of severe degradation on the original supported languages. To address this, we adopt rehearsal-based CL strategies and show that interleaving even small amounts of replay data effectively stabilizes multilingual performance. Through extensive ablations, we quantify the minimum rehearsal budget required to prevent forgetting and identify fragile languages that require more targeted reinforcement. We further evaluate sequential acquisition of four linguistically diverse languages (Ukrainian, Japanese, Thai, and Vietnamese), revealing the trade -offs between buffer size and long- term stability. Finally, based on these empirical observations, we propose a Fragility-Based Sampling heuristic as a pathway to allocate rehearsal data more efficiently by tiering languages according to their stability thresholds. Our findings provide a practical roadmap for scalable, resource-efficient multilingual expansion of Speech LLMs, enabling inclusive ASR systems that can grow over time without sacrificing prior knowledge.",
+  "abstractSha256": "2f24703f5e52f3599e52d9d20a18ea1b8f97f96cc2decd885ddb7c8d3b564b2e",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "持续学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Center for Augmented Intelligence, Fondazione Bruno Kessler, Trento, Italy"
+      ],
+      "name": "Lorenzo Concina"
+    },
+    {
+      "affiliations": [
+        "Center for Augmented Intelligence, Fondazione Bruno Kessler, Trento, Italy"
+      ],
+      "name": "Marco Matassoni"
+    },
+    {
+      "affiliations": [
+        "Center for Augmented Intelligence, Fondazione Bruno Kessler, Trento, Italy"
+      ],
+      "name": "Alessio Brutti"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对直接微调多语言语音大模型学新语言会冲掉旧语言的问题，论文用冻结编码器与大模型、只训练线性投影器加回放旧样本的任务递增学习，在乌克兰语等四语言序列上证明每种语言 5 个随机回放可稳住首轮、500 个或等预算脆弱度采样可将终点全局平均控制在 26.72% 至 29.46% 而 25 个样本会漂移至 56.06%，代价是新旧表示长期仍缓慢退化且分层并非每种语言都占优。",
+  "originalTitle": "Scalable Expansion of Multilingual Speech LLMs for ASR: A Continual Learning Approach",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.7",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.7.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "多语言语音大模型如何持续学会新语言而不忘记旧语言",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.7/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "5327b3e3d0d26cf5e590298cbcc8f8be5992d0dedaee0325441e78cb7a0c3cf4"
+}

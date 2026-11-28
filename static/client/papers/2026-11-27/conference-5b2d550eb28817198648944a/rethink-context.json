@@ -1,0 +1,31 @@
+{
+  "abstract": "Word Error Rate (WER) remains the standard metric in automatic speech recognition (ASR) evaluation, yet it does not capture higher-level linguistic distinctions such as prosody. This article examines how three state-of-the-art open-source ASR models (Whisper, Meta’s MMS, and GigaAM) handle the distinction between Russian polar questions and assertions. Russian is particularly suitable for this investigation because polar questions can be marked either morphologically (li, razve) or purely intonationally, without changes in word order. Using audio stimuli from a controlled psycholinguistic experiment, I compare human classification performance in two experimental studies with ASR transcriptions, taking sentence-final punctuation as a proxy for prosodic interpretation. While human participants show near-ceiling accuracy, the ASR models perform inconsistently, especially on intonationally marked questions. Additional contextual cues improve performance in some cases but also reveal instability across conditions. The results demonstrate that evaluating punctuation provides insights beyond WER and allows a more fine-grained view of how current ASR systems encode prosodic and grammatical information.",
+  "abstractSha256": "944c49c21ff2090472537c9fc85c8469da87477865f09f26560b2833921c261a",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音识别",
+    "rankBucket": "后50%",
+    "score": 5.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Charles University and Humboldt-Universität zu Berlin"
+      ],
+      "name": "Maria Onoeva"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 WER（词错误率）无法反映韵律句类区别的问题，本文以俄语三类极性问句与陈述句的句末标点为探针，对比 54 名母语者与 Whisper、MMS、GigaAM 在裸音频与 9 种语境拼接下的分类正确率，发现人类稳定在 97.2% 至 100% 而模型在肯定纯韵律问句上低至 0% 至 56.2% 且问句相关语境仅带来不稳定提升，代价是标点代理并非一对一映射且 MMS 后处理完全无法接触韵律。",
+  "originalTitle": "Not All Polar Questions Are the Same: ASR, Humans, and Russian",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.4",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.4.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "并非所有极性问句都相同：从俄语韵律看自动语音识别与人类的差距",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.4/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "8d195fbb3757bb9415227218b56e81b9af53938000cd62b543075e116b449d89"
+}

@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Felix E. Herron"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Ange Richard"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "François Portet"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Alexandre Allauzen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Solange Rossato"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.8",
+  "originalTitle": "Responsible Benchmarking of Fairness for Automatic Speech Recognition",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.8",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.8.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.8/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "f5453031eb3d58036a0d12b207d5ab539380179efd800f70447b7437d60177d3",
+  "type": "conference-paper"
+}

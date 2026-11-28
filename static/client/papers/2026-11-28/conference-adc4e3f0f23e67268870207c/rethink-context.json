@@ -1,0 +1,43 @@
+{
+  "abstract": "Automatic speech recognition (ASR) systems often exhibit uneven performance across accents, raising concerns about fairness and bias. This study investigates the impact of model fine-tuning strategies on ASR performance and accent-related disparities. We conduct a controlled empirical evaluation of two adaptation approaches—single-step and two-step fine-tuning—using pretrained Whisper (small) and Wav2Vec2-XLSR-53 models on African-accented English speech from the AfriSpeech-200 dataset, covering Yoruba, Igbo, Swahili, and Hausa accents. Both fine-tuning strategies substantially reduced mean word error rate (WER) for all models. However, these improvements did not translate into consistent reductions in accent-related performance gaps. When analysed separately across general and clinical subsets, WER gaps often increased due to uneven gains across accents. Although two-step fine-tuning provided modest improvements over single-step adaptation, its impact on reducing disparities remained limited. These findings indicate that fine-tuning primarily optimises performance without effectively addressing systematic bias across speaker groups, even when models are specialised for individual accents. This highlights the limitations of per-accent specialisation as a practical bias mitigation strategy.",
+  "abstractSha256": "6dabf2301f5106a43f8d28e156a3286a7c3b8e0e8184a6f815cfa5f0e3c01e1d",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.1
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Mykhailo Danilevskyi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Fernando Perez-Tellez"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Jelena Vasic"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文对照单步整体微调与两步按口音特化在四种非洲口音上的效果，发现平均 WER 可从 0.446 降至 0.183 左右，但口音间相对差距与多数组间显著差异依然存在，而两步仅带来小幅额外收益却需训练与维护多个专用模型。",
+  "originalTitle": "Addressing Accent Disparities in Automatic Speech Recognition: A Comparative Study of Single and Two-Step Adaptation",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.9",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.9.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "微调降低了平均错误却未缩小口音差距：单步与两步适应的对照",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.9/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "4e4287259cf598fad39c30847f7e554ca1062a32690adee215ac9d17e9d322d9"
+}

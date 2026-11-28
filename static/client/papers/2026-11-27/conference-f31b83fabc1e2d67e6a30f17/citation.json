@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "University of New South Wales"
+      ],
+      "name": "Sicheng Jin"
+    },
+    {
+      "affiliations": [
+        "University of New South Wales"
+      ],
+      "name": "Dipankar Srirag"
+    },
+    {
+      "affiliations": [
+        "University of New South Wales"
+      ],
+      "name": "Aditya Joshi"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.2",
+  "originalTitle": "PAREDA: A Multi-Accent Speech Dataset of Natural Language Processing Research Discussions",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.2",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.2.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.2/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "b1f8f041df320ca248c8b27a31f1306466f00504ec7dd5b9db4b4c17282edb32",
+  "type": "conference-paper"
+}

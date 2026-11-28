@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Copenhagen Business School, Copenhagen, Denmark"
+      ],
+      "name": "Arthur Söhler"
+    },
+    {
+      "affiliations": [
+        "Danske Bank, Copenhagen, Denmark"
+      ],
+      "name": "Julian Irigoyen"
+    },
+    {
+      "affiliations": [
+        "Jabra (GN Group), Copenhagen, Denmark"
+      ],
+      "name": "Andreas Søeborg Kirkedal"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.5",
+  "originalTitle": "Quantizing Whisper: How Design Choices Affect ASR Performance",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.5",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.5.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.5/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "56d742a3440a604933bad988e4577ddb5ee05794e347d12b3f63fb668870c024",
+  "type": "conference-paper"
+}

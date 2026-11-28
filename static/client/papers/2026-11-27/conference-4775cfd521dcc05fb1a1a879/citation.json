@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "INALCO, Université Sorbonne Nouvelle, Université Paris Cité"
+      ],
+      "name": "Maxime Fily"
+    },
+    {
+      "affiliations": [
+        "INALCO, Université Sorbonne Nouvelle, Université Paris Cité"
+      ],
+      "name": "Martine Adda-Decker"
+    },
+    {
+      "affiliations": [
+        "INALCO, Université Sorbonne Nouvelle, Université Paris Cité"
+      ],
+      "name": "Guillaume Wisniewski"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.10",
+  "originalTitle": "Investigating Speaker Pronunciation Variability in Speech Embeddings: Speaker and L1 Effects on French as a Second Language",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.10",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.10.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.10/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "8bb41352ccb428d6f973e1b5f0e0f520700bf00809d441a03ca30132857d45ed",
+  "type": "conference-paper"
+}

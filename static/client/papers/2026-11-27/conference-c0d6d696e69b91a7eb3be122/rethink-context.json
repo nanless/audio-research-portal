@@ -1,0 +1,56 @@
+{
+  "abstract": "Automatic Speech Recognition (ASR) has significantly transformed human-computer-interaction and natural language processing. However, many African spoken languages, including Efik, remain severely underrepresented in ASR research. This paper investigates the adoption of state-of-the-art foundational ASR models such as XLS-R and Whisper through fine-tuning for Efik, a low-resource tonal language and empirically evaluates their performance. We curate a 3-hour Efik speech dataset and conduct a comparative evaluation using standard ASR metrics. We further augmented the XLS-R CTC model with a 3-gram KenLM language model trained on an Efik text corpus. Experimental results show that XLS-R-300M + KenLM achieves a word error rate (WER) of 10.86% and a character error rate (CER) of 3.16%, substantially outperforming both the baseline XLS-R (WER: 29.2%, CER: 6.4%) and Whisper across noisy and multi-speaker conditions. These findings suggest that lightweight CTC models augmented with language model integration offer a more robust and practical approach for extremely low-resource tonal languages than larger sequence-to-sequence models.",
+  "abstractSha256": "f35a1441aac086bcbf44818f4c99e84053db81bfe05d9385d32911b6136d02b5",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "后50%",
+    "score": 5.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Cross River State",
+        "ML Collective"
+      ],
+      "name": "Offiong Bassey Edet"
+    },
+    {
+      "affiliations": [
+        "University of Cross River State"
+      ],
+      "name": "Stephen Orok Duke"
+    },
+    {
+      "affiliations": [
+        "University of Cross River State"
+      ],
+      "name": "Enoima Essien Umoh"
+    },
+    {
+      "affiliations": [
+        "Arthur Jarvis University"
+      ],
+      "name": "Benjamin Okon Nyong"
+    },
+    {
+      "affiliations": [
+        "University of Calabar"
+      ],
+      "name": "Andrew Asuquo Nkpanam"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对埃菲克语这一极低资源声调语言的数据稀缺与音高歧义难题，论文对比微调 XLS-R 与 Whisper 并外挂三元 KenLM，以单人安静集 10.86% 词错误率与 3.16% 字错误率为最强证据，代价是三小时单人训练导致多人噪声下语义分崩塌且束宽 100 推理开销未量化。",
+  "originalTitle": "Adapting Foundational ASR Models to Efik: An Empirical Study of an Extremely Low-Resource Tonal Language",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.1",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.1.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "三小时单人语料的声调突围：埃菲克语识别的迁移实证",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.1/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "79483681ea49a9b0b08684b873e537605f518751d02f4ba11319c03f7ad0da3c"
+}

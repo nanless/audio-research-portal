@@ -1,0 +1,56 @@
+{
+  "abstract": "Voice-based interfaces are widely used; however, achieving fair Wake-up Word detection across diverse speaker populations remains a critical challenge due to persistent demographic biases. This study evaluates the effectiveness of demographics-agnostic training techniques in mitigating performance disparities among speakers of varying sex, age, and accent. We utilize the OK Aura database for our experiments, employing a training methodology that excludes demographic labels, which are reserved for evaluation purposes. We explore (i) data augmentation techniques to enhance model generalization and (ii) Knowledge Distillation of pre-trained foundational speech models. The experimental results indicate that these demographics-agnostic training techniques markedly reduce demographic bias, leading to a more equitable performance profile across different speaker groups. Specifically, one of the evaluated techniques achieves a Predictive Disparity reduction of 39.94% for sex, 83.65% for age, and 40.48% for accent when compared to the baseline. This study highlights the effectiveness of label-agnostic methodologies in fostering fairness in Wake-up Word detection.",
+  "abstractSha256": "80097c61d1362eb1ea19eb51775fb64e71ef0568d0270e939806caedc7da1023",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音唤醒",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Telefónica Innovación Digital, Madrid, Spain",
+        "Universidad Autónoma de Madrid, Madrid, Spain"
+      ],
+      "name": "Fernando López"
+    },
+    {
+      "affiliations": [
+        "Telefónica Innovación Digital, Madrid, Spain"
+      ],
+      "name": "Paula Delgado-Santos"
+    },
+    {
+      "affiliations": [
+        "Telefónica Innovación Digital, Madrid, Spain"
+      ],
+      "name": "Pablo Gómez"
+    },
+    {
+      "affiliations": [
+        "Telefónica Innovación Digital, Madrid, Spain"
+      ],
+      "name": "David Solans"
+    },
+    {
+      "affiliations": [
+        "Telefónica Innovación Digital, Madrid, Spain"
+      ],
+      "name": "Jordi Luque"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "唤醒词短窗判决在性别年龄口音上形成不均等负担，论文用训练时不接触人口统计学标签的频谱增强与大模型蒸馏缩小组间 F1 差距，频率掩蔽相对缩小达性别 39.94%、年龄 83.65% 与口音 40.48%，代价是改善高度属性依赖且小样本分组只宜视为趋势。",
+  "originalTitle": "\"OK Aura, Be Fair with Me\": Demographics-Agnostic Training for Bias Mitigation in Wake-up Word Detection",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.6",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.6.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "训练不用人口统计学标签的唤醒词公平性改善",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.6/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "5681eb407d8675209e33d707ccf800290595060a2ebb56be510a0efe4dd03c1d"
+}

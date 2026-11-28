@@ -1,0 +1,43 @@
+{
+  "abstract": "While modern Automatic Speech Recognition (ASR) systems achieve high accuracy on benchmark corpora, their performance often degrades when there is real-world variability. This work focuses on variability arising due to accented, spontaneous, and domain-specific speech. In particular, we introduce PAper REading DAtaset (PAREDA), a first-of-its-kind multi-accent speech dataset consisting of discussions on academic Natural Language Processing (NLP) papers between speakers with Australian, Indian-English, and Chinese English accents. Each session elicits a spontaneous monologue (a summary of a paper’s abstract) and a non-monologue (a question-and-answer session between participants), resulting in a corpus rich with technical jargon and conversational phenomena. We evaluate the performance of SOTA ASR models on PAREDA, analysing the impact of accent mixing and increased speech rate. Our results show that, in the zero-shot setting, models perform worse, confirming the dataset’s challenging nature. However, fine-tuning on PAREDA significantly reduces the Word Error Rate (WER), demonstrating that our dataset captures linguistic characteristics often missing from existing corpora. PAREDA serves as a valuable new resource for building and evaluating more robust and inclusive ASR systems for specialised, real-world applications.",
+  "abstractSha256": "4c93cee74868aedc13ecbdc45f52dc0ce78aeaf97f79c1603b36e8154f6b3f0d",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音识别",
+    "rankBucket": "后50%",
+    "score": 5.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of New South Wales"
+      ],
+      "name": "Sicheng Jin"
+    },
+    {
+      "affiliations": [
+        "University of New South Wales"
+      ],
+      "name": "Dipankar Srirag"
+    },
+    {
+      "affiliations": [
+        "University of New South Wales"
+      ],
+      "name": "Aditya Joshi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多口音自发学术讨论识别退化问题，PAREDA 以 3.9 小时三口音自然语言处理论文独白问答为载体，证明领域微调可将 Medium 的 WER 降至 4.53%，代价是单人单口音小样本、合成扰动与无人工听测的局限。",
+  "originalTitle": "PAREDA: A Multi-Accent Speech Dataset of Natural Language Processing Research Discussions",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.2",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.2.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "多口音学术讨论为何难倒通用识别：PAREDA 数据集解读",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.2/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "b1f8f041df320ca248c8b27a31f1306466f00504ec7dd5b9db4b4c17282edb32"
+}

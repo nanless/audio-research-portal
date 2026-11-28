@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "HiTZ Center, University of the Basque Country, Spain"
+      ],
+      "name": "Md Abdur Razzaq Riyadh"
+    },
+    {
+      "affiliations": [
+        "HiTZ Center, University of the Basque Country, Spain"
+      ],
+      "name": "Eneko Agirre"
+    },
+    {
+      "affiliations": [
+        "HiTZ Center, University of the Basque Country, Spain"
+      ],
+      "name": "Eva Navas"
+    },
+    {
+      "affiliations": [
+        "Dept. of Artificial Intelligence, University of Malta, Malta"
+      ],
+      "name": "Claudia Borg"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.14",
+  "originalTitle": "SpeechLM for Automatic Speech Recognition in Low-resource Languages",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.14",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.14.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.14/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "8c9cebcc1b874742d7fc565fe04519d86369339ac8ba7945c88f8c152f1e3590",
+  "type": "conference-paper"
+}

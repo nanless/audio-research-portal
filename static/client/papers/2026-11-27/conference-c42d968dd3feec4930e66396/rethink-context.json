@@ -1,0 +1,55 @@
+{
+  "abstract": "Many studies have shown automatic speech processing (ASR) systems have unequal performance across speaker groups (SG’s). However, the manner in which such studies arrive at this conclusion is inconsistent. To pave the way for more reliable results in future studies, we lay out best practices for benchmarking ASR fairness based on literature from machine learning fairness, social sciences, and speech science. We then perform a case study on the Fair-speech benchmark, applying aforementioned best practices, and discuss how failing to do so can result in erroneous conclusions. On the whole, we advocate for as fine-grained an analysis as possible, taking into account as many variables as are available, in order to eschew dataset-level bias.",
+  "abstractSha256": "5337fa2cac01b62f5641fb2af4dd95f3c2b618bbfad63004aff8b73bfab1c23d",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Felix E. Herron"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Ange Richard"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "François Portet"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Alexandre Allauzen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Solange Rossato"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文针对语音识别公平性结论跨研究方向打架的问题，提出录音质量、文本复杂度与说话人级交叉分析等基准实践，并以 Fair-speech 上三套系统的复现证明单变量显著多为不平衡假象而黑人群体劣势在条件化后依然稳健，代价是每组约需 35 位说话人且多数稀疏群体仍无法得出显著结论。",
+  "originalTitle": "Responsible Benchmarking of Fairness for Automatic Speech Recognition",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.8",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.8.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "语音识别公平性为何测不准：从数据集偏差到条件化比较",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.8/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "f5453031eb3d58036a0d12b207d5ab539380179efd800f70447b7437d60177d3"
+}

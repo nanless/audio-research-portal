@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science and Electronic Engineering, University of Essex"
+      ],
+      "name": "Ganesh Pavan Kartikeya Bharadwaj Kolluri"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Electronic Engineering, University of Essex"
+      ],
+      "name": "Michael Kampouridis"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science and Electronic Engineering, University of Essex"
+      ],
+      "name": "Ravi Shekhar"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.20",
+  "originalTitle": "On the Role of Encoder Depth: Pruning Whisper and LoRA Fine-Tuning in SLAM-ASR",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.20",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.20.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.20/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "a1eda8025d37491411934b3b772dca50a2736940e713a057eb72873af61c11ca",
+  "type": "conference-paper"
+}

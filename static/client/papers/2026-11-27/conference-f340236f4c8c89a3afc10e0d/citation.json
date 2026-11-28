@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Amazon India"
+      ],
+      "name": "Vrunda Nileshkumar Sukhadia"
+    },
+    {
+      "affiliations": [
+        "Qatar Computing Research Institute, HBKU, Qatar"
+      ],
+      "name": "Shammur Absar Chowdhury"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.12",
+  "originalTitle": "HARNESS: Lightweight Distilled Arabic Speech Foundation Models",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.12",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.12.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.12/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "a24267daab8bca2bf0b471b99a014db4c68aff1bea24353cfb33402266e7d144",
+  "type": "conference-paper"
+}

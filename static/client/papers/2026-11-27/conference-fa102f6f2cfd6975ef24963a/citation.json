@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science, University of Jaffna"
+      ],
+      "name": "Adsajan Thillainathan"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, University of Jaffna"
+      ],
+      "name": "Nishanthini Kanthakumar"
+    },
+    {
+      "affiliations": [
+        "Department of Linguistics and English, University of Jaffna"
+      ],
+      "name": "Nivethiga Rasan"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, University of Jaffna"
+      ],
+      "name": "Kengatharaiyer Sarveswaran"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.21",
+  "originalTitle": "TaLK-Corpus: A Regionally Diverse Evaluation Set for Sri Lankan Tamil Speech",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.21",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.21.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.21/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "c6ea0c85f101b2faa980a3eaeca73c0c38361353f8093b95e2e156d75c996f82",
+  "type": "conference-paper"
+}

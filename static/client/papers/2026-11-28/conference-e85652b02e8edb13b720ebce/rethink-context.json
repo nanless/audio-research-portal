@@ -1,0 +1,49 @@
+{
+  "abstract": "Multi-modal Speech Language Models (SpeechLMs) are a recent advancement in natural language processing. These SpeechLMs are instruction-tuned and optimized for general tasks. Their usefulness for Automatic Speech Recognition (ASR), particularly in relatively low-resource scenarios, remains largely understudied. This work developed SpeechLM for ASR in Basque and Maltese and studied the impact of language-adapted Large Language Model (LLM) and speech encoder within the SpeechLM for ASR. Using supervised learning, we fine-tuned LLaMA-Omni, a SpeechLM, for ASR. We have conducted comprehensive hyperparameter tuning and experimented with language-adapted SpeechLM components to improve performance and evaluated our best models on in-distribution datasets for both languages and an out-of-distribution dataset for Basque. LLaMA-Omni achieved 8.09% WER in Basque and 25.65% WER for Maltese on average across multiple test splits. The in-distribution results show that SpeechLM outperforms a fine-tuned ASR system under specific constraints, whereas it underperforms the baseline model on out-of-distribution Basque, indicating weaker overall robustness. We also find that a language-adapted LLM within SpeechLM improves in out-of-distribution settings when compared to the off-the-shelf LLM within SpeechLM.",
+  "abstractSha256": "ab6939c8e0b789a0765a8e110d7b63803d1081f12a6cb2a659cb1df224daebc5",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "语音识别",
+    "rankBucket": "后50%",
+    "score": 5.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "HiTZ Center, University of the Basque Country, Spain"
+      ],
+      "name": "Md Abdur Razzaq Riyadh"
+    },
+    {
+      "affiliations": [
+        "HiTZ Center, University of the Basque Country, Spain"
+      ],
+      "name": "Eneko Agirre"
+    },
+    {
+      "affiliations": [
+        "HiTZ Center, University of the Basque Country, Spain"
+      ],
+      "name": "Eva Navas"
+    },
+    {
+      "affiliations": [
+        "Dept. of Artificial Intelligence, University of Malta, Malta"
+      ],
+      "name": "Claudia Borg"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "研究检验通用语音语言模型 LLaMA-Omni 能否经监督微调适配为巴斯克语和马耳他语识别器，发现其在约 676.0 小时巴斯克语上相对专用编码器基线提升约 22% 但在分布外退化，而在约 35.37 小时马耳他语上退化约 50%，语言适配大语言模型可部分改善分布外稳健性，代价是更高数据阈值与训练成本。",
+  "originalTitle": "SpeechLM for Automatic Speech Recognition in Low-resource Languages",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.14",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.14.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "通用语音语言模型能否做好低资源语音识别：巴斯克语与马耳他语的适配检验",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.14/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "8c9cebcc1b874742d7fc565fe04519d86369339ac8ba7945c88f8c152f1e3590"
+}

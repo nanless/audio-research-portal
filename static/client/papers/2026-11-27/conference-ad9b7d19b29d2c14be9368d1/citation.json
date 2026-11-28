@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Faculty of Science and Technology, University of the Faroe Islands, Faroe Islands"
+      ],
+      "name": "Dávid í Lág"
+    },
+    {
+      "affiliations": [
+        "Faculty of Science and Technology, University of the Faroe Islands, Faroe Islands"
+      ],
+      "name": "Barbara Scalvini"
+    },
+    {
+      "affiliations": [
+        "Language Technologies Laboratory, Barcelona Supercomputing Center (BSC), Spain"
+      ],
+      "name": "Carlos Daniel Mena"
+    },
+    {
+      "affiliations": [
+        "Department of Engineering, Reykjavik University, Iceland"
+      ],
+      "name": "Jón Guðnason"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.17",
+  "originalTitle": "Stage-Aware Cross-Lingual Transfer for Faroese ASR: When and Which Languages Matter",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.17",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.17.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.17/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "f28f77ca8fa8ed84a271beafa5cc7861a517f3abea28030f0fd6fd5c2ae2477d",
+  "type": "conference-paper"
+}

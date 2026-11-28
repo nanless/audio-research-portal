@@ -1,0 +1,52 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "University of Groningen"
+      ],
+      "name": "Reihaneh Amooie"
+    },
+    {
+      "affiliations": [
+        "University of Groningen"
+      ],
+      "name": "Yun Hao"
+    },
+    {
+      "affiliations": [
+        "University of Groningen"
+      ],
+      "name": "Wietse de Vries"
+    },
+    {
+      "affiliations": [
+        "Fryske Akademy"
+      ],
+      "name": "Jelske Dijkstra"
+    },
+    {
+      "affiliations": [
+        "University of Groningen"
+      ],
+      "name": "Matt Coler"
+    },
+    {
+      "affiliations": [
+        "University of Groningen",
+        "Vrije Universiteit Brussel"
+      ],
+      "name": "Martijn Wieling"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.15",
+  "originalTitle": "Improving Low-resource ASR Using Bilingual Fine-tuning with Language Identification: A Cross-linguistic Evaluation",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.15",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.15.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.15/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "0473411bedc79ee5939ddcafbb8c77f4df6360cbcd1f1f69826b01661675e3b8",
+  "type": "conference-paper"
+}

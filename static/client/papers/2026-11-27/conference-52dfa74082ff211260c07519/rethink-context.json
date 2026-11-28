@@ -1,0 +1,49 @@
+{
+  "abstract": "This study presents our attempt on applying Query by Example - Spoken Term Detection methodologies to a real-world, low-resource scenario: building an audio-based query functionality for the diasporan Teochew dictionary WhatTCSay. This functionality enables users to retrieve dictionary entries without prior knowledge of the writing systems in Teochew, thereby enhancing the accessibility of the dictionary and facilitating language revitalization efforts within Teochew communities. To address the retrieval task, we investigate two approaches: (i) an ASR-based approach using text-to-text matching, and (ii) a Dynamic Time Warping (DTW)-based acoustic framework for audio-to-audio retrieval. In the first approach, we compare an automatic romanization of the spoken query against the gold romanization from the dictionary; in the second, we directly match the user’s spoken query against audio recordings from the dictionary pronounced by a native speaker. Retrieval performance is evaluated using recall at rank k. Results show that text-to-text matching achieves better performance than audio-to-audio matching; however, the two approaches were not optimized under fully comparable conditions, as the ASR-based approach benefited from additional optimization, which was not equally available for the DTW method.",
+  "abstractSha256": "ee1aa1f9d922d3dc39de6045c1fd96c556954bca5d8336eba53574fbb67bc216",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "音频检索",
+    "rankBucket": "后50%",
+    "score": 5.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Siman Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Ilaine Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Maxime Fily"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Pierre Magistry"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对不会潮汕话拼音难以查词典的问题，论文对比转写加编辑距离与嵌入加动态时间规整两条路线，在 172 个域外查询上转写路线以 R@10 0.82 优于直接比对最优 0.63，代价是依赖额外声调去除与元音加权调优且两者并非完全可比。",
+  "originalTitle": "Leveraging Speech Models for Audio-based Lexical Retrieval in Dictionaries: The Case of the Teochew Language",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.16",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.16.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "用语音模型实现潮汕话词典的听音查词：转写匹配与直接声学比对的对比",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.16/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "579671f46b2a17ec951358772f27d79a5f4bebd3ca1c08c5b4cbbed2845a34e6"
+}

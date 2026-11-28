@@ -1,0 +1,43 @@
+{
+  "abstract": "Large speech recognition models like OpenAI’s Whisper achieve high accuracy but are difficult to deploy in resource-constrained environments due to their high memory and computational demands. This matters for low-resource and on-device settings, where compute and memory constraints often limit the practical use and evaluation of ASR systems. To address this, we present a unified, cross-library evaluation of post-training quantization (PTQ) on Whisper-small, comparing supported configurations across quantization scheme, method, granularity, and bit-width. Our study is based on four libraries—PyTorch, Optimum-Quanto, HQQ, and bitsandbytes. Experiments on LibriSpeech test-clean and test-other show that dynamic int8 quantization with Optimum-Quanto offers the best trade-off, reducing model size by 57% while lowering Word Error Rate below the baseline. Additional experiments on Whisper-base and Whisper-tiny confirm these trends, though with more pronounced degradation at lower bit-widths. Static quantization performed worse, likely due to the absence of efficient low-bit implementations for operations such as LayerNorm and Softmax. More aggressive formats (e.g., nf4, int3) achieved up to 71% compression at the cost of accuracy in acoustically challenging conditions. Our results demonstrate that carefully chosen PTQ methods can substantially reduce model size and inference cost without retraining, enabling efficient deployment of Whisper on constrained hardware.",
+  "abstractSha256": "65bb255e18bd3aff3a2fd0d24ca242154684c3a4aeb8583b56d0f258385d0b53",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "模型量化",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Copenhagen Business School, Copenhagen, Denmark"
+      ],
+      "name": "Arthur Söhler"
+    },
+    {
+      "affiliations": [
+        "Danske Bank, Copenhagen, Denmark"
+      ],
+      "name": "Julian Irigoyen"
+    },
+    {
+      "affiliations": [
+        "Jabra (GN Group), Copenhagen, Denmark"
+      ],
+      "name": "Andreas Søeborg Kirkedal"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对大语音模型在受限设备上难部署的问题建立四库统一评测，发现 GPU 上 Quanto 动态 int8 在压缩 57% 的同时反超基线，而低比特虽最高压缩 71% 却在困难语音上明显退化。",
+  "originalTitle": "Quantizing Whisper: How Design Choices Affect ASR Performance",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.5",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.5.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "量化 Whisper 设计选择如何影响精度速度与压缩",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.5/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "56d742a3440a604933bad988e4577ddb5ee05794e347d12b3f63fb668870c024"
+}

@@ -1,0 +1,31 @@
+{
+  "abstract": "Automatic Speech Recognition (ASR) evaluation has traditionally relied on Word Error Rate (WER), a metric that treats all errors equally and obscures critical failure modes. In this paper, we present a fine-grained human evaluation of Meta’s recently released OmniASR system on Saudi Arabic dialects using the SADA dataset. Three trained annotators evaluated 103 audio samples, producing 264 annotations across two dimensions (comprehensibility and naturalness) while categorizing errors using a novel 10-category Arabic-specific error taxonomy. OmniASR achieved a mean WER of 42.2% and mean comprehensibility of 3.62/5, but exhibited a bimodal performance pattern: 32.6% of transcriptions achieved perfect scores while 21.2% were essentially unusable. Error analysis reveals that hallucinations and deletions have the greatest negative impact on comprehensibility (−1.64 and −1.57 points respectively), roughly 6× more damaging than named entity errors. Importantly, WER correlates only moderately with human comprehensibility ratings (r = −0.679), explaining just 46% of variance in human judgments. These findings demonstrate the limitations of WER as a sole evaluation metric and highlight the need for human-centered, error-type-aware evaluation frameworks for Arabic ASR systems.",
+  "abstractSha256": "18e4b2bb1cca721c2766a1e311691457aa4a2d6262622d7d4671fda2ac213aaa",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "主观评测",
+    "primaryTask": "语音识别",
+    "rankBucket": "后50%",
+    "score": 5.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "College of Computer and Information Sciences, King Saud University, Riyadh, Saudi Arabia"
+      ],
+      "name": "Hend Al-Khalifa"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文针对平均词错误率掩盖阿拉伯语方言失效模式的问题，用 103 个沙特电视语音的 264 条人工可理解性标注与十类错误划分证明幻觉与删除比专名错误损害高约 6 倍且 WER 与人工判断相关达负 0.679 ，代价是小样本描述性估计与单系统离线评测难以直接推广。",
+  "originalTitle": "When Does OmniASR Fail? A Fine-Grained Human Evaluation on Saudi Arabic Dialects",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.13",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.13.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "OmniASR 何时在沙特方言上失效：细粒度人工评价揭示幻觉与删除最伤可理解性",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.13/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "bf8b2bf126cc402454ef2c247dbce90e49bac62982c5055b72314b265d825069"
+}

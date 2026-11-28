@@ -1,0 +1,49 @@
+{
+  "abstract": "This paper introduces the TaLK Corpus, the first speech benchmark corpus for Sri Lankan Tamil Automatic Speech Recognition (ASR) covering speech from 22 administrative districts of Sri Lanka. The corpus contains 1 hour and 33 minutes of speech from 22 native speakers (one per district) and includes rich metadata on demographics, location history, recording conditions, and domain information, along with transcriptions in Tamil script and the International Phonetic Alphabet (IPA). Standardised preprocessing (16 kHz mono WAV format) and segmentation using Silero Voice Activity Detection (VAD) resulted in 1,214 utterances. All recordings were manually transcribed by trained linguists, and MD5-based file naming used to ensure data integrity and consistency. TaLK corpus enables district-wise benchmarking of ASR systems and supports dialect-sensitive evaluation. We establish baseline results for multilingual models (Whisper Large-V3 and Facebook’s MMS) in zero-shot settings. The evaluation reveals substantial performance disparities across districts, highlighting the impact of regional phonological variation in low-resource Sri Lankan Tamil. Although Whisper Large-V3 outperforms MMS overall, it shows considerable variability, with mean Word Error Rates ranging from 0.672 to 0.903 across districts. These findings demonstrate strong regional effects even within a single model. By releasing TaLK-Corpus under the CC-BY-NC 4.0 licence, we aim to support dialect-robust ASR research and foster inclusive speech technologies for Sri Lankan Tamil-speaking communities.",
+  "abstractSha256": "4d18027caa0b7b0c9988e3a9626ac7afb5280f8909146828a7c4b8fafd7b8861",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音识别",
+    "rankBucket": "后50%",
+    "score": 5.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science, University of Jaffna"
+      ],
+      "name": "Adsajan Thillainathan"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, University of Jaffna"
+      ],
+      "name": "Nishanthini Kanthakumar"
+    },
+    {
+      "affiliations": [
+        "Department of Linguistics and English, University of Jaffna"
+      ],
+      "name": "Nivethiga Rasan"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, University of Jaffna"
+      ],
+      "name": "Kengatharaiyer Sarveswaran"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对斯里兰卡泰米尔缺少地区级识别评测的问题，论文构建覆盖 22 个行政区的 1 小时 33 分钟、1,214 条三语标注语料，并以零样本评测显示 Whisper V3 总体 WER 为 0.807 优于 MMS 的 0.845，但每区仅一位说话人使地区差异仅具指示性。",
+  "originalTitle": "TaLK-Corpus: A Regionally Diverse Evaluation Set for Sri Lankan Tamil Speech",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.21",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.21.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "以 22 区 22 人小样本诊断斯里兰卡泰米尔识别的地区差异",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.21/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "c6ea0c85f101b2faa980a3eaeca73c0c38361353f8093b95e2e156d75c996f82"
+}

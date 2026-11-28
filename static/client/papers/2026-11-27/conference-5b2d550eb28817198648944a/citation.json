@@ -1,0 +1,21 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Charles University and Humboldt-Universität zu Berlin"
+      ],
+      "name": "Maria Onoeva"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:speakable:2026:conference-paper-id:2026.speakable-1.4",
+  "originalTitle": "Not All Polar Questions Are the Same: ASR, Humans, and Russian",
+  "paperId": "conference:speakable:2026:conference-paper-id:2026.speakable-1.4",
+  "pdfUrl": "https://aclanthology.org/2026.speakable-1.4.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.speakable-1.4/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "8d195fbb3757bb9415227218b56e81b9af53938000cd62b543075e116b449d89",
+  "type": "conference-paper"
+}
