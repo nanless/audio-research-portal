@@ -1,0 +1,32 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "韵律与风格控制",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Johns Hopkins University, USA",
+        "The University of Texas at Dallas, USA"
+      ],
+      "name": "Shreeram Suresh Chandra"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对离散标签难以承载连续可组合说话风格的问题，论文以自然语言为统一接口串联跨模态对齐、免参考合成、可控描述与基准评测，并以 EmotionRankCLAP 的模态差距缩小与顺序一致性提升以及 TEMOTTS 在可懂度和主观评分上的同组最优为证据，代价是综述性质缺失划分、方差与部署验证。",
+  "originalTitle": "Natural Language as the Interface to Speaking Style: Describing and Controlling How Speech Is Delivered",
+  "paperId": "conference:dc:2026:conference-paper-id:chandra26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/chandra26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "以自然语言为接口描述与控制说话风格",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/chandra26_dc.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "67f3963cedd78c58aff6712cd5647f1692d69b69fd0f8c99cf6d93e433c476b1"
+}

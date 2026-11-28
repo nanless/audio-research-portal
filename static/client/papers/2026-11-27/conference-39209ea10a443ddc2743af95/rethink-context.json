@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Indian Institute of Technology Guwahati, India"
+      ],
+      "name": "Sneha Ray Barman"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文以阿萨姆语舌根前移元音和谐为试金石，通过真人声学基线、 fiwGAN 分布学习、冻结自监督探测与语音合成忠实度四项研究证明 ATR 相关信息高度可恢复但方向、触发与阻断等结构签名缺失，而常规话语级质量分数无法发现此类偏离，该结论仅在约 4,800 个词例、冻结模型与离线诊断条件下成立。",
+  "originalTitle": "Evaluating Phonological Knowledge in Foundational Speech Models",
+  "paperId": "conference:dc:2026:conference-paper-id:barman26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/barman26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "语音基础模型真的学到了音系过程吗",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/barman26_dc.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "af166ec660b608281a83f75bb33b07c9b2e25b1dfd00c8f798eb0b4de7efd291"
+}

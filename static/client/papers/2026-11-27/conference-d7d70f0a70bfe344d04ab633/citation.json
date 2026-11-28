@@ -1,0 +1,22 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electrical, Computer and Software Engineering, University of Auckland, New",
+        "Zealand"
+      ],
+      "name": "Himashi Rathnayake"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dc:2026:conference-paper-id:rathnayake26_dc",
+  "originalTitle": "Community-Oriented Development of Speech Emotion Recognition Framework for te reo Māori",
+  "paperId": "conference:dc:2026:conference-paper-id:rathnayake26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/rathnayake26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/rathnayake26_dc.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "9269069170ba03923a2f2e2f4039608b363237e0ff7f449da12a4f0e79c19235",
+  "type": "conference-paper"
+}

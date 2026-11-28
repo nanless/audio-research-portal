@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "后50%",
+    "score": 5.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Psychiatry, University of Cambridge, UK"
+      ],
+      "name": "Shrankhla Pandey"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文以德语叙事情感任务语音为对象，用情感对齐分数检验组间差异并用 12 维声学特征结合嵌套交叉验证区分健康对照与患者，结果显示声学特征将二分类宏平均 F1 从 0.45 ± 0.12 提升至 0.87 ± 0.21 而情感对齐仅在愤怒条件下显著且三分亚型中分裂情感性障碍 F1 仅 0.21，结论受制于仅 16 名健康对照与任务依赖性。",
+  "originalTitle": "Computational Measures of Speech and Language for Schizophrenia Spectrum Disorders",
+  "paperId": "conference:dc:2026:conference-paper-id:pandey26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/pandey26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "情感叙事语音能否支持精神分裂症谱系障碍的计算评估",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/pandey26_dc.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "602e56e41c76db0d9ea4f3e66d0eaa580b4fd803ce3f57f736bcf94af1b91dfa"
+}

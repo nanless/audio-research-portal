@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音合成",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Debasish Mohapatra"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 1D 声学保真不足与 3D 开销过大的矛盾，本文提出用深度图表达对称声道的 2.5D 时域有限差分求解器并用 GPU 实现实时播放，在 3 个基本元音上与 3D 有限元对照的传递函数接近，但结论限于静态对称元音且舌耦合尚未完成。",
+  "originalTitle": "Physics-Based Simulation of Vowel Utterances using a Biomechanical-Acoustic Model",
+  "paperId": "conference:dc:2026:conference-paper-id:mohapatra26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/mohapatra26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "用 2.5D 声波求解器连接舌肌激活与元音合成",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/mohapatra26_dc.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "c7004148de08b09235b2223950956c2822f5ec8e56a10a0f173078807ecc5d23"
+}

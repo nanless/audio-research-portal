@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音视频语音识别",
+    "rankBucket": "后50%",
+    "score": 5.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Zhaofeng Lin"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文诊断了在 LRS3 上已低于 1% 词错误率的音视识别系统，通过 0 dB 参照的有效信噪比增益与分布对齐的 MV2LRS3 新集揭示了仅 2 dB 至 6 dB 的有限视觉增益、斜率 10.4 的十倍放大退化与加视觉反变差现象，代价是结论仅基于 WER 且未覆盖真实噪声与部署开销。",
+  "originalTitle": "Towards Adaptive and Generalisable Audio-Visual Speech Recognition",
+  "paperId": "conference:dc:2026:conference-paper-id:lin26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/lin26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "逼近满分的音视语音识别为何换个分布就失灵",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/lin26_dc.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "f74ee138801e9a7900d84f5833b2aa73fde46ecfd87cc6a0b1f10d5318884a99"
+}

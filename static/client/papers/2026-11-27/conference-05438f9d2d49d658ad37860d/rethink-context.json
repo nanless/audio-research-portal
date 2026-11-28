@@ -1,0 +1,32 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "音频指纹",
+    "rankBucket": "后50%",
+    "score": 5.1
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Infobip",
+        "Faculty of Science, University of Sarajevo, Bosnia and Herzegovina"
+      ],
+      "name": "Kemal Altwlkany"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把在音乐上训练的自监督神经指纹迁移到电话语音服务，用低成本检索应对群发骚扰电话复用、语音指令识别与多样化标注三类问题，在噪声下语音检索仍明显低于音乐，而 93.9% 的骚扰检出准确率以私有数据与定性轻量断言为代价。",
+  "originalTitle": "Enhancing Voice Communication Services with Audio Fingerprinting Techniques",
+  "paperId": "conference:dc:2026:conference-paper-id:altwlkany26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/altwlkany26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "把音乐指纹搬到电话网上：骚扰拦截、运维提速与标注提效的三线探索",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/altwlkany26_dc.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "52e60f0672ea66951a729fa61c080eb53952726173e745fc5cfd525bc55d5730"
+}

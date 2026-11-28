@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据增强",
+    "primaryTask": "语音增强",
+    "rankBucket": "后50%",
+    "score": 5.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Electronics and Computer Science, University of Southampton, United Kingdom"
+      ],
+      "name": "Poppy Welch"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对音视频增强引入摄像头带来的隐私代价，本文以部署端按需回退、数据端合成视觉替代与表征端泄漏分析组织研究，在保持最大可懂度的 95% 以内时平均减少 58.7% 的视觉使用且合成视觉仅带来很小的客观指标下降，代价是隐私与性能仍需按场景权衡且身份泄漏尚未实测。",
+  "originalTitle": "Privacy Considerations for Audio-Visual Speech Enhancement",
+  "paperId": "conference:dc:2026:conference-paper-id:welch26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/welch26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "音视频语音增强的隐私代价：在部署、数据与表征三处减少视觉暴露",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/welch26_dc.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "e09c1aff2c170da1bceadb7b254f301c66ec78ce815788c903d2b4d2e91f081f"
+}

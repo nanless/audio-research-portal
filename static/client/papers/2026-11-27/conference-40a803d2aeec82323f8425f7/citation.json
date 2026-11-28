@@ -1,0 +1,21 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Human Media Interaction, University of Twente, The Netherlands"
+      ],
+      "name": "Rong Li"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dc:2026:conference-paper-id:li26_dc",
+  "originalTitle": "Detection and Perception of Smiled Speech",
+  "paperId": "conference:dc:2026:conference-paper-id:li26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/li26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/li26_dc.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "e81373dc0e6d5ef5f8d66e5f5cf9ef4c7b45d9cfc844181880f6a80a9fa5db23",
+  "type": "conference-paper"
+}

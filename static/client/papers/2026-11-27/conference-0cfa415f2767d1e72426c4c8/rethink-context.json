@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "文本到音频生成",
+    "rankBucket": "前50%",
+    "score": 6.1
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tsinghua University, China"
+      ],
+      "name": "Yuxuan Jiang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对文本生成音频难以同时实现定时、长音频、声学与语音内容精细控制的问题，本文以共享潜扩散骨干结合渐进训练与免训练可组合引导提出四项工作，在 AudioCondition 定时评测与多时长长音频评测中取得最优或稳定的分布与对齐指标，代价是免训练引导增加推理成本而统一解决四个研究问题的框架仍未实现。",
+  "originalTitle": "Toward a Holistic Modeling Paradigm for Accurate, Versatile, and Controllable Latent Audio Diffusion",
+  "paperId": "conference:dc:2026:conference-paper-id:jiang26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/jiang26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "面向准确多维可控的隐音频扩散整体范式",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/jiang26_dc.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "9c9e8072a717ab09347a549ff0b7c27b11811cac06d70866d8fe3bce4ad2377d"
+}

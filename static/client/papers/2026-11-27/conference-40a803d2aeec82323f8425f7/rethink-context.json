@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "人类参与评测",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "后50%",
+    "score": 5.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Human Media Interaction, University of Twente, The Netherlands"
+      ],
+      "name": "Rong Li"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "该博士计划追问不同微笑类型与语境下微笑语音如何产生、被感知与被建模，已完成 75 位听众在安静、 −3 dB SNR 与 −6 dB SNR 下的双任务听测以信号检测论分离证据与策略，发现任务 1 灵敏度 d′ = 1.87 降至 d′ = 0.58 而判断标准 c = 0.09 升至 c = 0.69，原文未提供机器基线可核对定量结果，代价是 AMuS 说话人少且缺视听自然数据，机器对比与 50 位视听库尚待完成。",
+  "originalTitle": "Detection and Perception of Smiled Speech",
+  "paperId": "conference:dc:2026:conference-paper-id:li26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/li26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "在噪声中听见微笑：微笑语音的感知、建模与数据库计划",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/li26_dc.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "e81373dc0e6d5ef5f8d66e5f5cf9ef4c7b45d9cfc844181880f6a80a9fa5db23"
+}

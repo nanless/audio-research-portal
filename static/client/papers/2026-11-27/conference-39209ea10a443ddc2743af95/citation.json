@@ -1,0 +1,21 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Indian Institute of Technology Guwahati, India"
+      ],
+      "name": "Sneha Ray Barman"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dc:2026:conference-paper-id:barman26_dc",
+  "originalTitle": "Evaluating Phonological Knowledge in Foundational Speech Models",
+  "paperId": "conference:dc:2026:conference-paper-id:barman26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/barman26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/barman26_dc.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "af166ec660b608281a83f75bb33b07c9b2e25b1dfd00c8f798eb0b4de7efd291",
+  "type": "conference-paper"
+}

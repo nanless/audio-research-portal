@@ -1,0 +1,32 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "后50%",
+    "score": 5.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electrical, Computer and Software Engineering, University of Auckland, New",
+        "Zealand"
+      ],
+      "name": "Himashi Rathnayake"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对毛利语尚无语音情感识别系统且英语情感类别并不适用的问题，论文以社群参与提炼 16 种文化相关类别并建成含 3,840 条录音的 Pā-Kakare 语料库，初步声学分析发现跨文化重叠与文化特异并存，代价是识别系统尚未建成且表演语料与小规模社群样本限制了泛化。",
+  "originalTitle": "Community-Oriented Development of Speech Emotion Recognition Framework for te reo Māori",
+  "paperId": "conference:dc:2026:conference-paper-id:rathnayake26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/rathnayake26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "社群共创毛利语语音情感识别：从 16 种文化情感发现到首个语料库与声学验证",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/rathnayake26_dc.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "9269069170ba03923a2f2e2f4039608b363237e0ff7f449da12a4f0e79c19235"
+}

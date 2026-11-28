@@ -1,0 +1,22 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "IRIT, CNRS, UT, Toulouse, France",
+        "QUT, Brisbane, Australia"
+      ],
+      "name": "Baptiste Ramonda"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dc:2026:conference-paper-id:ramonda26_dc",
+  "originalTitle": "Characterization and measurement of listenability for vulnerable individuals",
+  "paperId": "conference:dc:2026:conference-paper-id:ramonda26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/ramonda26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/ramonda26_dc.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "19d9e50261f46e9e36f2c10cefb7eee015127c5113e26858d1b828d7332c50b4",
+  "type": "conference-paper"
+}

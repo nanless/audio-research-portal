@@ -1,0 +1,21 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Psychiatry, University of Cambridge, UK"
+      ],
+      "name": "Shrankhla Pandey"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dc:2026:conference-paper-id:pandey26_dc",
+  "originalTitle": "Computational Measures of Speech and Language for Schizophrenia Spectrum Disorders",
+  "paperId": "conference:dc:2026:conference-paper-id:pandey26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/pandey26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/pandey26_dc.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "602e56e41c76db0d9ea4f3e66d0eaa580b4fd803ce3f57f736bcf94af1b91dfa",
+  "type": "conference-paper"
+}

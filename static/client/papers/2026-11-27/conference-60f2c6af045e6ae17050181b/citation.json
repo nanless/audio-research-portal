@@ -1,0 +1,21 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Debasish Mohapatra"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dc:2026:conference-paper-id:mohapatra26_dc",
+  "originalTitle": "Physics-Based Simulation of Vowel Utterances using a Biomechanical-Acoustic Model",
+  "paperId": "conference:dc:2026:conference-paper-id:mohapatra26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/mohapatra26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/mohapatra26_dc.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "c7004148de08b09235b2223950956c2822f5ec8e56a10a0f173078807ecc5d23",
+  "type": "conference-paper"
+}

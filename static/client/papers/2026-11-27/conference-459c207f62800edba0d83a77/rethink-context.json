@@ -1,0 +1,32 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音可懂度评估",
+    "rankBucket": "后50%",
+    "score": 5.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "IRIT, CNRS, UT, Toulouse, France",
+        "QUT, Brisbane, Australia"
+      ],
+      "name": "Baptiste Ramonda"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "该博士工作把可听性形式化为信息最大化与认知负荷最小化的联合优化，并以融合 6 个经典公式的全局可读性指数和合成语音控制的跨架构识别对比证明现代端到端模型对文本复杂度近乎正交却仍受人类主观难度影响，而代价是结论仍依赖自动指标且未经脆弱人群的人体生态验证与可复现代码支撑。",
+  "originalTitle": "Characterization and measurement of listenability for vulnerable individuals",
+  "paperId": "conference:dc:2026:conference-paper-id:ramonda26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/ramonda26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "面向脆弱人群的可听性：文本简化与识别解耦的博士阶段解读",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/ramonda26_dc.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "19d9e50261f46e9e36f2c10cefb7eee015127c5113e26858d1b828d7332c50b4"
+}

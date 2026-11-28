@@ -1,0 +1,22 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Johns Hopkins University, USA",
+        "The University of Texas at Dallas, USA"
+      ],
+      "name": "Shreeram Suresh Chandra"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dc:2026:conference-paper-id:chandra26_dc",
+  "originalTitle": "Natural Language as the Interface to Speaking Style: Describing and Controlling How Speech Is Delivered",
+  "paperId": "conference:dc:2026:conference-paper-id:chandra26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/chandra26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/chandra26_dc.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "67f3963cedd78c58aff6712cd5647f1692d69b69fd0f8c99cf6d93e433c476b1",
+  "type": "conference-paper"
+}

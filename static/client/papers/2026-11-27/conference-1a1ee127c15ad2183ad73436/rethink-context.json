@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Yang Xiao"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "语音基础模型在持续扩展新语言时面临灾难性遗忘，本文通过定位 Whisper 解码器中层的语义谷并据此设计深度感知适配，以约 80% 更少的可训练参数守住源语言精度，但结论仅在单步适配与 WER 口径下成立。",
+  "originalTitle": "From Representation to Retention: Locating and Protecting Knowledge for Continual Speech Adaptation",
+  "paperId": "conference:dc:2026:conference-paper-id:xiao26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/xiao26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "从表征定位到持续保留：语音模型的语义谷与深度感知适配",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/xiao26_dc.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "ed7cbce69c95f5335a0b19066484e169f0d0a16364d321503b5fa66e15608599"
+}

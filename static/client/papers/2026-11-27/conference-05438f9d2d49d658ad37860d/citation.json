@@ -1,0 +1,22 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Infobip",
+        "Faculty of Science, University of Sarajevo, Bosnia and Herzegovina"
+      ],
+      "name": "Kemal Altwlkany"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dc:2026:conference-paper-id:altwlkany26_dc",
+  "originalTitle": "Enhancing Voice Communication Services with Audio Fingerprinting Techniques",
+  "paperId": "conference:dc:2026:conference-paper-id:altwlkany26_dc",
+  "pdfUrl": "https://www.isca-archive.org/dc_2026/altwlkany26_dc.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/dc_2026/altwlkany26_dc.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "52e60f0672ea66951a729fa61c080eb53952726173e745fc5cfd525bc55d5730",
+  "type": "conference-paper"
+}
