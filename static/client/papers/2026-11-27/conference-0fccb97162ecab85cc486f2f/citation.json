@@ -1,0 +1,57 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Keio University, Japan"
+      ],
+      "name": "Satoki Hamanaka"
+    },
+    {
+      "affiliations": [
+        "NTT Inc., Japan"
+      ],
+      "name": "Yasue Kishino"
+    },
+    {
+      "affiliations": [
+        "NTT Inc., Japan"
+      ],
+      "name": "Yuiko Tsunomori"
+    },
+    {
+      "affiliations": [
+        "NTT Inc., Japan"
+      ],
+      "name": "Shin Mizutani"
+    },
+    {
+      "affiliations": [
+        "NTT Inc., Japan"
+      ],
+      "name": "Yuya Chiba"
+    },
+    {
+      "affiliations": [
+        "Keio University, Japan"
+      ],
+      "name": "Tadashi Okoshi"
+    },
+    {
+      "affiliations": [
+        "Keio University, Japan"
+      ],
+      "name": "Jin Nakazawa"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.12",
+  "originalTitle": "Sensor-Augmented Voice Activity Projection for Enhancing Turn-Taking Prediction",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.12",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.12.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.12/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "274132c61b4b393e98aa15862d51aa194a01f5461f934bc4dd9c896c31b7a62c",
+  "type": "conference-paper"
+}

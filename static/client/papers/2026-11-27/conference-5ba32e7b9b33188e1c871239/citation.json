@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "SANKEN, The University of Osaka"
+      ],
+      "name": "Takumi Furuta"
+    },
+    {
+      "affiliations": [
+        "SANKEN, The University of Osaka"
+      ],
+      "name": "Ryu Takeda"
+    },
+    {
+      "affiliations": [
+        "SANKEN, The University of Osaka"
+      ],
+      "name": "Kazunori Komatani"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.4",
+  "originalTitle": "Suppressing Unnecessary Clarification Requests for Unknown Word Acquisition in Spoken Dialogue Using Syllable-Based ASR Confidence",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.4",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.4.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.4/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "e07e25f28042b124dc209971a4502905aa3699319afafb4f499e5bcb57f0bb07",
+  "type": "conference-paper"
+}

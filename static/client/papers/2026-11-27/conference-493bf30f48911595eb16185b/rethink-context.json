@@ -1,0 +1,37 @@
+{
+  "abstract": "In spoken dialogues, paralinguistic cues frequently convey crucial information not captured by linguistic content alone. However, conventional spoken dialogue systems (SDSs), which typically comprise a cascade of an automatic speech recognition model and a large language model (LLM), lack the ability to recognize paralinguistic cues. Relying solely on transcribed text, paralinguistic-agnostic SDSs often cause dialogue breakdowns. To address this difficulty, integrating a paralinguistic recognition model into SDSs is essential. Therefore, this study focuses on evaluating such paralinguistic-aware SDSs. To this end, we propose a corpus-based evaluation method utilizing next-utterance classification as an automated alternative to human evaluation. Specifically, an LLM is tasked with predicting the dialogue act of the subsequent utterance given a transcribed dialogue history, comparing scenarios with and without paralinguistic attitude classes. Our experiments demonstrate that incorporating a paralinguistic attitude recognition model improves prediction performance, as measured by the mean reciprocal rank. Furthermore, we assessed the alignment of our proposed corpus-based evaluation method with subjective human evaluations. The results confirmed the validity of the proposed method as a reliable proxy for human evaluation, demonstrating its correlation with human rankings and agreement with human preferences in pairwise comparisons. Taken together, this work highlights that integrating paralinguistic recognition is a crucial step toward realizing more robust and natural spoken dialogue systems.",
+  "abstractSha256": "75b38033d1baa307b05caa755e9126fd1d16f33bc439cb8c36a76c4b0496cabd",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Fairy Devices Inc."
+      ],
+      "name": "Kouki Miyazawa"
+    },
+    {
+      "affiliations": [
+        "Fairy Devices Inc."
+      ],
+      "name": "Yoshinao Sato"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对只看文字的语音对话系统容易因忽视韵律等副语言线索而选错回应，论文提出用下一句对话行为排序的离线评价框架，并在 7,532 条日语地图任务话语上证明加入四类话语态度识别后排序与人类偏好更一致，但结论仅限任务型人工转写条件且未验证实时与开放对话场景。",
+  "originalTitle": "Evaluation of Paralinguistic-Aware Spoken Dialogue Systems using Next-Utterance Classification",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.50",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.50.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "用下一句分类离线评价能听懂语气的语音对话系统",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.50/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "4d7356dfc06085a46e2919d79a8dbc8dba6ce0b91e433c8a83d996f3585f814e"
+}

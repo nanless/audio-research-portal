@@ -1,0 +1,63 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Neurology, Emory University"
+      ],
+      "name": "Andrew G. Breithaupt"
+    },
+    {
+      "affiliations": [
+        "Computer Science, Emory University"
+      ],
+      "name": "Nayoung Choi"
+    },
+    {
+      "affiliations": [
+        "Computer Science, Emory University"
+      ],
+      "name": "James D. Finch"
+    },
+    {
+      "affiliations": [
+        "Neurology, Emory University"
+      ],
+      "name": "Jeanne M. Powell"
+    },
+    {
+      "affiliations": [
+        "Neurology, Emory University"
+      ],
+      "name": "Arin L. Nelson"
+    },
+    {
+      "affiliations": [
+        "Arts and Sciences, Emory University"
+      ],
+      "name": "Oz A. Alon"
+    },
+    {
+      "affiliations": [
+        "Neurology, University of California, San Francisco"
+      ],
+      "name": "Howard J. Rosen"
+    },
+    {
+      "affiliations": [
+        "Computer Science, Emory University"
+      ],
+      "name": "Jinho D. Choi"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.5",
+  "originalTitle": "Towards Conversational Patient History-Taking: Voice-Interactive AI Agents for Pre-visit Dementia Diagnostic Interviews",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.5",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.5.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.5/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "f6c562e85b604fde31a259f5e32bb127d0f189ee18492c9f6c9d48804632505a",
+  "type": "conference-paper"
+}

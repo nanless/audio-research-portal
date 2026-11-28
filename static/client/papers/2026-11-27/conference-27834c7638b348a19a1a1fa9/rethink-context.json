@@ -1,0 +1,43 @@
+{
+  "abstract": "Cough events during live spoken conversations carry clinically valuable respiratory signals, yet existing dialogue systems treat them as acoustic noise to be discarded. We present HealthCUES (Clinical Understanding from Embodied Sounds), a streaming pipeline for paralinguistic respiratory monitoring in real-time conversational agents, a capability that, to the best of our knowledge, is absent from all prior systems. HealthCUES processes audio through a rolling buffer aligned with dialogue turn boundaries, enabling sub-second event detection without interrupting conversational flow. Beyond binary cough detection, the system provides fine-grained analytics: (i) differentiation between coughing and throat clearing, (ii) cough subtype classification (dry, wet, barking, whooping) with confidence scores, and (iii) temporal duration estimation with start–end boundaries. To prevent alert fatigue, HealthCUES introduces dialogue-aware gating mechanisms that modulate triggering based on conversational context. The system leverages Qwen3-Omni, a multimodal large language model (MLLM), with constrained structured outputs, decomposing cough analysis into parallel prediction tasks for independent prompt optimization. Evaluation on 847 in-house conversational audio segments demonstrates 93% F1 for cough detection, 0.75 weighted-F1 for wet/dry subtype classification, and average end-to-end latency of 340ms; external validation on the AMI meeting corpus confirms robust cough, throat-clearing, and speech separation in the presence of speech (0.91 macro-F1). A user study with licensed healthcare professionals confirms the clinical relevance of subtype information and the system’s utility in telehealth workflows.",
+  "abstractSha256": "7e31ccc968286da8eed4c2adcab8e3ee1bf2796db7296e823ec6543926c1db8d",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Hippocratic AI"
+      ],
+      "name": "Tanmay Laud"
+    },
+    {
+      "affiliations": [
+        "Hippocratic AI"
+      ],
+      "name": "Herprit Mahal"
+    },
+    {
+      "affiliations": [
+        "Hippocratic AI"
+      ],
+      "name": "Subhabrata Mukherjee"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对实时对话中咳嗽被当作噪声丢弃的问题，HealthCUES 以轮次对齐缓存加三路并行结构化推理与对话门控实现亚秒级检测，在 847 段内部通话上取得 93% 咳嗽 F1 与 340 ms 平均延迟，代价是罕见亚型精度低且 p95 延迟超出预算。",
+  "originalTitle": "From Sound to Symptom: Real-Time Respiratory Signal Understanding for Conversational Healthcare Agents",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.39",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.39.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "从咳嗽声到症状追问：实时呼吸信号如何嵌入医疗对话",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.39/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "12edc9cad98c74002f9f92c4235bddd6e98f160c8c5f288558773a62eb70e116"
+}

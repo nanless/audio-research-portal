@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Graduate School of Informatics, Kyoto University, Japan"
+      ],
+      "name": "Taiga Mori"
+    },
+    {
+      "affiliations": [
+        "Graduate School of Informatics, Kyoto University, Japan"
+      ],
+      "name": "Koji Inoue"
+    },
+    {
+      "affiliations": [
+        "Graduate School of Informatics, Kyoto University, Japan"
+      ],
+      "name": "Divesh Lala"
+    },
+    {
+      "affiliations": [
+        "Graduate School of Informatics, Kyoto University, Japan"
+      ],
+      "name": "Tatsuya Kawahara"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.47",
+  "originalTitle": "On the Structure of Address in Multi-Party Dialogue: From Discrete Labels to Continuous Levels",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.47",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.47.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.47/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "ae893e289de0727d469c978534ced95a023113082abec0e081db82fa08bebb48",
+  "type": "conference-paper"
+}

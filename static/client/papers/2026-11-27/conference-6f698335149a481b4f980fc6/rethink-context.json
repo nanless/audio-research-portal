@@ -1,0 +1,31 @@
+{
+  "abstract": "We present CrossOracle, a production-deployed spoken dialogue system for real-time Hinglish (Hindi-English code-switched) voice interaction across eleven Expert Persona identities. The system addresses the latency bottleneck of cascaded ASR-LLM-TTS pipelines through three contributions: (1) a parallelized First-In-First-Stream TTS worker that overlaps synthesis with ongoing LLM generation, mathematically ensuring gapless audio playback; (2) a language-aware semantic boundary heuristic that flushes text chunks at Hindi danda and Latin punctuation boundaries, preserving prosodic integrity across code-switched utterances; and (3) a deterministic AbortController-based barge-in protocol that resolves user interruptions in under 1 ms. Empirical evaluation of live conversational logs demonstrates a mean TTS Real-Time Factor of 0.107 and a 100% barge-in resolution rate. The live system is deployed at crossoracle.io and supports persona switching, custom persona creation from natural language descriptions, and robust Hinglish ASR error tolerance via a Devanagari ratio mishear filter. The demonstration invites attendees to hold unscripted Hinglish conversations, stress-test the barge-in protocol, and construct novel personas on-the-fly.",
+  "abstractSha256": "ec826066e281923a6870a9bbaf96797aa5113f64bf0b12f67b2e51bfb886310c",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "后50%",
+    "score": 5.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Yash Raj Singh"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "CrossOracle 针对 Hinglish 级联语音对话的加和延迟问题，用先入先流异步合成加语义边界分块与确定性打断在 8,000 个轮次上将平均首字节从 6.5 s 降至 4.9 s 且合成因子低至 0.107 并实现 100% 打断解决，代价是首字节仍远高于 200 ms 自然间隔且无人工听测与消融支撑韵律收益。",
+  "originalTitle": "CrossOracle: An Agentic Framework for Real-Time Expert Personas with Parallelized Acoustic Synthesis",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.18",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.18.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "并行声学合成如何打破级联 Hinglish 对话的延迟墙",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.18/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "40a295352177f42f1f978301280c6127a8044a7b8c1a2e27dfbcd85f2b25c0b2"
+}

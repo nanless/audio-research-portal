@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Hippocratic AI"
+      ],
+      "name": "Tanmay Laud"
+    },
+    {
+      "affiliations": [
+        "Hippocratic AI"
+      ],
+      "name": "Herprit Mahal"
+    },
+    {
+      "affiliations": [
+        "Hippocratic AI"
+      ],
+      "name": "Subhabrata Mukherjee"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.39",
+  "originalTitle": "From Sound to Symptom: Real-Time Respiratory Signal Understanding for Conversational Healthcare Agents",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.39",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.39.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.39/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "12edc9cad98c74002f9f92c4235bddd6e98f160c8c5f288558773a62eb70e116",
+  "type": "conference-paper"
+}

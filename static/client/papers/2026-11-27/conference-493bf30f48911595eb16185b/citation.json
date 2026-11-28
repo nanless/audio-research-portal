@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Fairy Devices Inc."
+      ],
+      "name": "Kouki Miyazawa"
+    },
+    {
+      "affiliations": [
+        "Fairy Devices Inc."
+      ],
+      "name": "Yoshinao Sato"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.50",
+  "originalTitle": "Evaluation of Paralinguistic-Aware Spoken Dialogue Systems using Next-Utterance Classification",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.50",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.50.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.50/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "4d7356dfc06085a46e2919d79a8dbc8dba6ce0b91e433c8a83d996f3585f814e",
+  "type": "conference-paper"
+}

@@ -1,0 +1,57 @@
+{
+  "abstract": "Full-duplex dialogue audio, in which each speaker is recorded on a separate track, is an important resource for spoken dialogue research, but is difficult to collect at scale. Most in-the-wild two-speaker dialogue is available only as degraded monaural mixtures, making it unsuitable for systems requiring clean speaker-wise signals. We propose DialogueSidon, a model for joint restoration and separation of degraded monaural two-speaker dialogue audio. DialogueSidon combines a variational autoencoder (VAE) operates on the speech self-supervised learning (SSL) model feature, which compresses SSL model features into a compact latent space, with a diffusion-based latent predictor that recovers speaker-wise latent representations from the degraded mixture. Experiments on English, multilingual, and in-the-wild dialogue datasets show that DialogueSidon substantially improves intelligibility and separation quality over a baseline, while also achieving much faster inference.",
+  "abstractSha256": "677e9ea07619cde9f7653134a3a82125b3756222820f1c7948102cedb1624645",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "语音分离",
+    "rankBucket": "前50%",
+    "score": 7.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan",
+        "National Institute of Advanced Industrial Science and Technology (AIST), Tokyo, Japan"
+      ],
+      "name": "Wataru Nakata"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan",
+        "National Institute of Advanced Industrial Science and Technology (AIST), Tokyo, Japan"
+      ],
+      "name": "Yuki Saito"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan"
+      ],
+      "name": "Kazuki Yamauchi"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan"
+      ],
+      "name": "Emiru Tsunoo"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan"
+      ],
+      "name": "Hiroshi Saruwatari"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对野外含噪单声道双人对话难以同时完成质量修复与说话人分离的问题， DialogueSidon 以语音自监督压缩潜空间结合扩散潜变量预测实现双轨恢复，在英语与野外数据上以更低的词错误率与更高的人工评分超越统一对照方法，代价是神经代理感知分数未占优且结论仅在双人电话训练边界内成立。",
+  "originalTitle": "DialogueSidon: Recovering Full-Duplex Dialogue Tracks from In-the-Wild Dialogue Audio",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.1",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.1.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "从含噪单声道混合恢复双轨对话的联合修复与分离解读",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.1/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "4bcb8b4737ec0ef95ee711dc9ce8cb4af262fe08c4de40af003d62ce70ac66af"
+}

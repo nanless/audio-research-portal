@@ -1,0 +1,83 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Nanyang Technological University",
+        "StepFun"
+      ],
+      "name": "Donghang Wu"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University",
+        "StepFun"
+      ],
+      "name": "Haoyang Zhang"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Chen Chen"
+    },
+    {
+      "affiliations": [
+        "Mila"
+      ],
+      "name": "Tianyu Zhang"
+    },
+    {
+      "affiliations": [
+        "StepFun"
+      ],
+      "name": "Fei Tian"
+    },
+    {
+      "affiliations": [
+        "StepFun"
+      ],
+      "name": "Xuerui Yang"
+    },
+    {
+      "affiliations": [
+        "StepFun"
+      ],
+      "name": "Gang Yu"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Hexin Liu"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Nana Hou"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Yuchen Hu"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Eng Siong Chng"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.33",
+  "originalTitle": "Chronological Thinking in Full-Duplex Spoken Dialogue Language Models",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.33",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.33.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.33/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "90ee8fc3786ee3cfcff22eab3e9fb93873e6c7083ff828448b9ab09ca639b2cc",
+  "type": "conference-paper"
+}

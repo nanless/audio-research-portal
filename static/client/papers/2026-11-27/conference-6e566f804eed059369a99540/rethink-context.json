@@ -1,0 +1,49 @@
+{
+  "abstract": "Turn-taking prediction models output probabilities of turn shifts, yet they are typically evaluated by thresholding these probabilities into binary decisions and comparing them against corpus-observed labels. This practice implicitly treats corpus-observed turn shifts as definitive ground truth, even though under inherent turn-taking ambiguity they reflect one realized interactional outcome among multiple plausible outcomes, rather than a uniquely correct binary label. We argue that binary evaluation is a practical simplification rather than a theoretical necessity. Instead, predicted probabilities should be evaluated at the distributional level without being reduced to binary decisions. To this end, we propose a distribution-based evaluation framework that compares model output distributions with reference distributions and measures their divergence using the Wasserstein distance. We further show how discrepancies between model predictions and corpus-observed turn shifts can be used as a basis for training-data refinement. Experiments on Japanese conversational data, using linguistic information alone, showed that the proposed refinement reduced distributional divergence, indicating better alignment between predicted probabilities and the reference distributions. The refinement also improved balanced accuracy in a supplementary binary evaluation.",
+  "abstractSha256": "26be24c15d9433d588efb8489a785a9d9c6e19f522ab4b7c92a176dfc6aec5fe",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "轮次切换",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "SANKEN, University of Osaka"
+      ],
+      "name": "Yunosuke Kubo"
+    },
+    {
+      "affiliations": [
+        "SANKEN, University of Osaka"
+      ],
+      "name": "Kenta Yamamoto"
+    },
+    {
+      "affiliations": [
+        "SANKEN, University of Osaka"
+      ],
+      "name": "Ryu Takeda"
+    },
+    {
+      "affiliations": [
+        "SANKEN, University of Osaka"
+      ],
+      "name": "Kazunori Komatani"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对语料中是否换人被误作唯一真值的问题，论文提出分布评估与漏检精炼，在日语文本实验中把总分布距离从 0.686 降到 0.627 并把平衡准确率从 0.777 提到 0.799，代价是单人标注、手设参考与无多模态验证。",
+  "originalTitle": "Rethinking Binary Evaluation of Turn-Taking under Inherent Ambiguity",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.2",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.2.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "固有模糊下轮次评估为何应比较分布而非二分类标签",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.2/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "dabb24db384478c633bbcbd119dfc0072c664b915d45f2a66ef0dc4e5307f0d4"
+}

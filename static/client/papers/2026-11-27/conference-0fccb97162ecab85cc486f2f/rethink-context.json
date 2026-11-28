@@ -1,0 +1,67 @@
+{
+  "abstract": "Voice Activity Projection (VAP) has been actively studied to enable natural turn-taking in spoken dialogue systems, relying primarily on acoustic features. Visual cues such as head movements are also known to contribute to turn-taking prediction; however, camera-based approaches are affected by placement and lighting conditions and are not always reliably available to dialogue systems. As a camera-independent approach for directly capturing head motion, earable devices offer a promising solution. In this study, we propose Sensor-Augmented VAP, a framework that integrates in-ear inertial measurement unit (IMU) signals with a pre-trained VAP model via a lightweight residual fusion module. To validate our proposed method, we collected a dataset pairing conversational audio with in-ear IMU data, comprising 12 dyadic Japanese dialogues recorded using microphones and earbuds. Experiments in speaker-independent and speaker-dependent settings demonstrate that IMU fusion consistently improves weighted F1 score for shift detection and reduces VAP loss over the audio-only baseline. These results confirm that head-motion cues are effective for enhancing turn-taking prediction.",
+  "abstractSha256": "3282c859d425a246cf69b0ba7798fb6b8119d31f255f118d9486670888826339",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "轮次切换",
+    "rankBucket": "后50%",
+    "score": 5.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Keio University, Japan"
+      ],
+      "name": "Satoki Hamanaka"
+    },
+    {
+      "affiliations": [
+        "NTT Inc., Japan"
+      ],
+      "name": "Yasue Kishino"
+    },
+    {
+      "affiliations": [
+        "NTT Inc., Japan"
+      ],
+      "name": "Yuiko Tsunomori"
+    },
+    {
+      "affiliations": [
+        "NTT Inc., Japan"
+      ],
+      "name": "Shin Mizutani"
+    },
+    {
+      "affiliations": [
+        "NTT Inc., Japan"
+      ],
+      "name": "Yuya Chiba"
+    },
+    {
+      "affiliations": [
+        "Keio University, Japan"
+      ],
+      "name": "Tadashi Okoshi"
+    },
+    {
+      "affiliations": [
+        "Keio University, Japan"
+      ],
+      "name": "Jin Nakazawa"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对仅靠声音难以稳定预判双人对话轮次转移的问题，本文用耳内加速度计经轻量残差融合接入冻结语音活动预测模型，在 12 段日语对话上把转移检测加权 F1 分数提高约 0.1 并降低预测损失，代价是平衡准确率下降且结论仅在小规模同质数据与重叠语音排除条件下成立。",
+  "originalTitle": "Sensor-Augmented Voice Activity Projection for Enhancing Turn-Taking Prediction",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.12",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.12.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "耳内惯性信号如何帮助语音活动预测更准地预判轮次更替",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.12/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "274132c61b4b393e98aa15862d51aa194a01f5461f934bc4dd9c896c31b7a62c"
+}

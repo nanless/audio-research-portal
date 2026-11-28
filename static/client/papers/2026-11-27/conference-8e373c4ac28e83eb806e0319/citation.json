@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "NTT, Inc., Musashino R&D Center, 3-9-11 Midori-cho, Musashino-shi, Tokyo 180-8585, Japan"
+      ],
+      "name": "Akiko Masaki-Kato"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Musashino R&D Center, 3-9-11 Midori-cho, Musashino-shi, Tokyo 180-8585, Japan"
+      ],
+      "name": "Haris Gulzar"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.14",
+  "originalTitle": "Ping-Ponder: Concurrent Dual-Agent Spoken Dialogue via Shared Belief State",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.14",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.14.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.14/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "b8e60d2848a96906f397034797986cc56c892c02b5b828af4779bbc37cb091cb",
+  "type": "conference-paper"
+}

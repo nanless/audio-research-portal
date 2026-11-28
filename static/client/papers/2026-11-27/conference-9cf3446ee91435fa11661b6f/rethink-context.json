@@ -1,0 +1,49 @@
+{
+  "abstract": "In multi-party dialogues between a dialogue system and multiple users, identifying to whom an utterance is addressed is a key challenge. Prior work has typically treated addressee detection as a multi-class classification task, selecting a single label representing an individual participant or the group. This formulation assumes that address is inherently discrete and has primarily been used for predicting turn-taking. In this paper, we revisit this assumption by analyzing address as a continuous phenomenon. Using a multi-party human dialogue corpus annotated by multiple annotators, we construct both binary address labels derived from majority-vote addressee labels and continuous address levels inferred from annotator judgments using a latent-variable model. We then examine how these representations relate to turn-taking as well as listener behaviors, including gaze and backchannels. Our results show that, in addition to turn-taking, both gaze and backchannels are associated with address. Furthermore, models using continuous address levels achieve better predictive fit than those using discrete labels, suggesting that address may exhibit graded structure. Finally, we discuss the future directions of addressee detection research based on the findings of this study.",
+  "abstractSha256": "5661aef598063f7c096ac8c3bf7cbc6fb0ac8cf9415a6fbc80dc295759fa2083",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Graduate School of Informatics, Kyoto University, Japan"
+      ],
+      "name": "Taiga Mori"
+    },
+    {
+      "affiliations": [
+        "Graduate School of Informatics, Kyoto University, Japan"
+      ],
+      "name": "Koji Inoue"
+    },
+    {
+      "affiliations": [
+        "Graduate School of Informatics, Kyoto University, Japan"
+      ],
+      "name": "Divesh Lala"
+    },
+    {
+      "affiliations": [
+        "Graduate School of Informatics, Kyoto University, Japan"
+      ],
+      "name": "Tatsuya Kawahara"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文针对多人对话中话语指向难以用单一离散标签概括的问题，构建多数表决二元标签与潜变量连续称呼程度并比较其对接话注视与附和反馈的关联，发现在 5,820 与 5,744 与 4,920 条观测上连续表示的留一预测拟合更优，但附和反馈增益较小且结论仅限日语三人讨论条件。",
+  "originalTitle": "On the Structure of Address in Multi-Party Dialogue: From Discrete Labels to Continuous Levels",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.47",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.47.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "多人对话称呼从离散标签到连续程度的结构重估",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.47/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "ae893e289de0727d469c978534ced95a023113082abec0e081db82fa08bebb48"
+}

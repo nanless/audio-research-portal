@@ -1,0 +1,73 @@
+{
+  "abstract": "Patient history-taking is a critical yet time-intensive component of clinical diagnosis, frequently hindered by time-constrained clinical visits. We present an LLM-based voice-interactive conversational system for conducting semi-structured diagnostic interviews with older adults suspected of Alzheimer’s disease and related dementias (ADRD). The system features conditional conversation branching over specialist-developed interview scripts and interaction adaptations tailored for older adults. In a within-subjects study with 30 participants from a cognitive neurology clinic, we compare two LLM prompting strategies through dialogue analysis, assess user experience, and evaluate symptom elicitation against routine specialist interviews. Our findings reveal that prompting strategy distinctly shapes both conversational dynamics and symptom coverage. Together with high sensitivity scores and positive user experience ratings, these results demonstrate the feasibility and clinical potential of LLM-based conversational agents for scalable, patient-centered history-taking in ADRD care.",
+  "abstractSha256": "152d595652b7fb8963f45af15ba18ffb715829de4e1ebd4130aadc56d1a85c9a",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "人类参与评测",
+    "primaryTask": "语音交互",
+    "rankBucket": "后50%",
+    "score": 5.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Neurology, Emory University"
+      ],
+      "name": "Andrew G. Breithaupt"
+    },
+    {
+      "affiliations": [
+        "Computer Science, Emory University"
+      ],
+      "name": "Nayoung Choi"
+    },
+    {
+      "affiliations": [
+        "Computer Science, Emory University"
+      ],
+      "name": "James D. Finch"
+    },
+    {
+      "affiliations": [
+        "Neurology, Emory University"
+      ],
+      "name": "Jeanne M. Powell"
+    },
+    {
+      "affiliations": [
+        "Neurology, Emory University"
+      ],
+      "name": "Arin L. Nelson"
+    },
+    {
+      "affiliations": [
+        "Arts and Sciences, Emory University"
+      ],
+      "name": "Oz A. Alon"
+    },
+    {
+      "affiliations": [
+        "Neurology, University of California, San Francisco"
+      ],
+      "name": "Howard J. Rosen"
+    },
+    {
+      "affiliations": [
+        "Computer Science, Emory University"
+      ],
+      "name": "Jinho D. Choi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对专科时间受限下痴呆病史采集不全的问题，该研究用约 30 套专科脚本驱动的语音交互智能体对比一次给全与逐题给两种提示策略，发现智能体总体灵敏度达 83.5% 且特异度为 100%、遗漏中位 13.0% 低于医生的 30.4%，代价是顺序提示互动更深但后段遗漏增多而完整脚本覆盖更广但多问压缩一轮，且结论仅在 30 位单中心英语样本与固定顺序设盲对照下成立。",
+  "originalTitle": "Towards Conversational Patient History-Taking: Voice-Interactive AI Agents for Pre-visit Dementia Diagnostic Interviews",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.5",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.5.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "就诊前痴呆语音访谈智能体：提示投放节奏如何塑造对话动态与症状覆盖",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.5/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "f6c562e85b604fde31a259f5e32bb127d0f189ee18492c9f6c9d48804632505a"
+}

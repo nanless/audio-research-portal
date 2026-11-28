@@ -1,0 +1,47 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan",
+        "National Institute of Advanced Industrial Science and Technology (AIST), Tokyo, Japan"
+      ],
+      "name": "Wataru Nakata"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan",
+        "National Institute of Advanced Industrial Science and Technology (AIST), Tokyo, Japan"
+      ],
+      "name": "Yuki Saito"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan"
+      ],
+      "name": "Kazuki Yamauchi"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan"
+      ],
+      "name": "Emiru Tsunoo"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Tokyo, Japan"
+      ],
+      "name": "Hiroshi Saruwatari"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.1",
+  "originalTitle": "DialogueSidon: Recovering Full-Duplex Dialogue Tracks from In-the-Wild Dialogue Audio",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.1",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.1.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.1/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "4bcb8b4737ec0ef95ee711dc9ce8cb4af262fe08c4de40af003d62ce70ac66af",
+  "type": "conference-paper"
+}

@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science, Emory University, Atlanta, GA, USA"
+      ],
+      "name": "Hyunbae Jeon"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, Emory University, Atlanta, GA, USA"
+      ],
+      "name": "Jinho D. Choi"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.42",
+  "originalTitle": "PersonaKit (PK): A Plug-and-Play Platform for User Testing Diverse Roles in Simulated Full-Duplex Dialogue",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.42",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.42.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.42/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "6b60ce456c30be3c36fc23dd95feda31c54412e50a01729694c3b2eba2ff005c",
+  "type": "conference-paper"
+}

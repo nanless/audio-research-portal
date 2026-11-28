@@ -1,0 +1,37 @@
+{
+  "abstract": "As spoken dialogue systems take on diverse personas—authoritative instructors, uncooperative merchants, distracted workers—they need distinct, human-like turn-taking to stay immersive. Yet current full-duplex systems default to a rigid “always-yield” policy during overlap, undermining character consistency for non-submissive roles, and evaluating persona-specific alternatives through user studies demands substantial real-time engineering. We present PersonaKit (PK), an open-source, low-latency web platform that simulates full-duplex turn-taking pragmatics—via a cascade pipeline and prompt-level control rather than a jointly trained speak-while-listening model. Through intuitive JSON configurations, researchers define personas, specify probabilistic interruption handling (yield, hold, bridge, override), and auto-deploy comparative A/B surveys. An in-the-wild evaluation with 8 personas shows that PK is an extensible, end-to-end framework for studying complex sociolinguistic behaviors in next-generation spoken agents.",
+  "abstractSha256": "7e75697bf40a94d58f0f18a56b43e215216f69b058708b73f6e19c45e4040c8c",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "后50%",
+    "score": 5.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science, Emory University, Atlanta, GA, USA"
+      ],
+      "name": "Hyunbae Jeon"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science, Emory University, Atlanta, GA, USA"
+      ],
+      "name": "Jinho D. Choi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对总是让话策略破坏高支配角色沉浸感且对照试验工程负担重的问题，PersonaKit 以级联识别加提示词控制模拟全双工轮替语用并用 JSON 配置驱动对照，在 5 人 120 会话中呈现高支配角色偏好非让话而温顺角色偏好让话的描述性倾向，代价是小样本粗量表无显著性且 1 s – 2 s 级联延迟与四动作词汇放弃了声学保真度。",
+  "originalTitle": "PersonaKit (PK): A Plug-and-Play Platform for User Testing Diverse Roles in Simulated Full-Duplex Dialogue",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.42",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.42.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "用可配置轮替策略模拟全双工对话的人设试验平台",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.42/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "6b60ce456c30be3c36fc23dd95feda31c54412e50a01729694c3b2eba2ff005c"
+}

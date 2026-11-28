@@ -1,0 +1,33 @@
+{
+  "abstract": "Conversations in collaborative settings involve evolving social and cognitive dynamics such as coordination, cognitive load, and participation asymmetry, which are not directly observable but manifest through interactional behavior over time. Prior work has largely relied on static summaries or post-hoc labels, limiting our ability to capture how these dynamics unfold during interaction. We model dyadic conversation as a partially observable temporal process and propose a weakly supervised framework for tracking latent conversational state from interaction and acoustic behavioral signals. Using a dataset of remote dyadic conversations (53 dyads) over 9 collaborative tasks with task-level annotations, we segment interactions into fixed temporal windows of 30 seconds and extract 34 features capturing interactional features (turn-taking, floor control) and speaker-relative acoustic measures. We compare static models (Ridge, Random Forest), sequential neural models (GRU with pooling and attention), and two strategies for temporal trajectory modeling of latent states. Static interaction features remain the strongest predictor for both temporal demand (correlation = 0.254) and mental demand (correlation = 0.217); but we do not claim temporal modeling improves prediction accuracy over static baselines. More importantly, temporal modeling reveals interpretable latent trajectory structures – escalation, convergence, and participation imbalance, which are not observable in aggregated summary features alone and can vary systematically by task type and cognitive demand level. These findings provide a step toward dynamic, interpretable representations of conversational state in human conversations.",
+  "abstractSha256": "7c4a6a26c7f2c651c2cfc8772d52ae67ea841853ccb5139e7823ae42525ddbb1",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "弱监督学习",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science & Davis Institute for AI",
+        "Colby College",
+        "Waterville, Maine, USA"
+      ],
+      "name": "Tahiya Chowdhury"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文把只有任务级标签的双人协作会话当作多示例包来追踪隐状态，用 30 秒窗口的 34 维交互与相对声学特征对比静态与时序模型，发现随机森林平均特征在时间需求上以 0.254 最强而时序建模未提升精度，代价是注意力汇聚折间大幅摆动与短任务仅 3.6 窗的低分辨率，换来的是升级与趋同等可解释轨迹形状。",
+  "originalTitle": "Weakly Supervised Temporal Modeling of Latent Dynamics in Dyadic Conversations",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.31",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.31.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "弱监督下双人会话隐状态轨迹如何建模与解释",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.31/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "78fb9f3962c0be2021d9f1e152745ebe7f61bdda4b50f9bfee698b5b4e5e412f"
+}

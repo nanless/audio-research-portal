@@ -1,0 +1,23 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science & Davis Institute for AI",
+        "Colby College",
+        "Waterville, Maine, USA"
+      ],
+      "name": "Tahiya Chowdhury"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.31",
+  "originalTitle": "Weakly Supervised Temporal Modeling of Latent Dynamics in Dyadic Conversations",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.31",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.31.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.31/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "78fb9f3962c0be2021d9f1e152745ebe7f61bdda4b50f9bfee698b5b4e5e412f",
+  "type": "conference-paper"
+}

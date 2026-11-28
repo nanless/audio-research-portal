@@ -1,0 +1,43 @@
+{
+  "abstract": "Clarification requests are a promising way for spoken dialogue systems to acquire unknown words from users, but asking too often can burden users. Because unknown words are not in the system’s vocabulary, utterances must first be represented as syllable sequences, which are then segmented into words. In this setting, syllable-based automatic speech recognition (S-ASR) errors can cause utterances containing only known words to appear to contain unknown words, leading to unnecessary clarification requests. To address this issue within a stream-based active learning framework, we extend the reinforcement learning policy state with recognition reliability features. Specifically, we incorporate two confidence measures derived from S-ASR to make clarification request selection sensitive to S-ASR errors. We further incorporate segmentation confidence over N-best hypotheses to reduce the impact of minor S-ASR errors. Experiments using pre-recorded speech data showed that the number of clarification requests on utterances affected by S-ASR errors was reduced by 1.34. The area under the learning curve for word segmentation also numerically increased by 0.07.",
+  "abstractSha256": "7f4c093855f031ba5bc8bf5466c643b40525a3109546494018a08b61f57ec875",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "SANKEN, The University of Osaka"
+      ],
+      "name": "Takumi Furuta"
+    },
+    {
+      "affiliations": [
+        "SANKEN, The University of Osaka"
+      ],
+      "name": "Ryu Takeda"
+    },
+    {
+      "affiliations": [
+        "SANKEN, The University of Osaka"
+      ],
+      "name": "Kazunori Komatani"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对语音输入下音节识别错误引发的多余澄清请求，本文在流式主动学习策略状态中加入双分支识别可信度与备选切分置信，使受错误影响的请求显著减少 1.34 次而曲线下面积数值微升 0.07 但未达显著，代价是对不可靠词汇趋于保守且结论仅在短流模拟与强监督假设下成立。",
+  "originalTitle": "Suppressing Unnecessary Clarification Requests for Unknown Word Acquisition in Spoken Dialogue Using Syllable-Based ASR Confidence",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.4",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.4.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "用音节识别可信度抑制未知词获取中的多余澄清请求",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.4/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "e07e25f28042b124dc209971a4502905aa3699319afafb4f499e5bcb57f0bb07"
+}

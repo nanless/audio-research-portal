@@ -1,0 +1,93 @@
+{
+  "abstract": "Recent advances in spoken dialogue language models (SDLMs) reflect growing interest in shifting from turn-based to full-duplex systems, where the models continuously perceive user speech streams while generating responses. This simultaneous listening and speaking design enables real-time interaction and the agent can handle dynamic conversational behaviors like user barge-in. However, during the listening phase, existing systems keep the agent idle by repeatedly predicting the silence token, which departs from human behavior: we usually engage in lightweight thinking during conversation rather than remaining absent-minded. Inspired by this, we propose Chronological Thinking, an on-the-fly conversational thinking mechanism that aims to improve response quality in full-duplex SDLMs. Specifically, chronological thinking presents a paradigm shift from conventional LLM thinking approaches, such as Chain-of-Thought, purpose-built for streaming acoustic input. (1) Strictly causal: the agent reasons incrementally while listening, updating internal hypotheses only from past audio with no lookahead. (2) No additional latency: reasoning is amortized during the listening window; once the user stops speaking, the agent halts thinking and begins speaking without further delay. Experiments demonstrate the effectiveness of chronological thinking through both objective metrics and human evaluations show consistent improvements in response quality. Furthermore, chronological thinking robustly handles conversational dynamics and attains competitive performance on full-duplex interaction metrics.",
+  "abstractSha256": "2479954a04f53988da2caa276674140f7156b0533ee5bf4b0a3cb5366111dd22",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自回归模型",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "前50%",
+    "score": 6.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Nanyang Technological University",
+        "StepFun"
+      ],
+      "name": "Donghang Wu"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University",
+        "StepFun"
+      ],
+      "name": "Haoyang Zhang"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Chen Chen"
+    },
+    {
+      "affiliations": [
+        "Mila"
+      ],
+      "name": "Tianyu Zhang"
+    },
+    {
+      "affiliations": [
+        "StepFun"
+      ],
+      "name": "Fei Tian"
+    },
+    {
+      "affiliations": [
+        "StepFun"
+      ],
+      "name": "Xuerui Yang"
+    },
+    {
+      "affiliations": [
+        "StepFun"
+      ],
+      "name": "Gang Yu"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Hexin Liu"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Nana Hou"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Yuchen Hu"
+    },
+    {
+      "affiliations": [
+        "Nanyang Technological University"
+      ],
+      "name": "Eng Siong Chng"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对全双工语音对话模型在倾听期重复预测静音标记导致的分布偏置与窗口浪费，本文提出在倾听窗口内按语义片段增量生成五类结构化思维链的 CT-Duplex ，在 SpokenWOZ 推理对话上取得 GPT 分数 2.61 的可运行全双工最优并保持打断处理能力，代价是轮次承接延迟由 0.45 s 增至 0.68 s 且知识问答增益微弱。",
+  "originalTitle": "Chronological Thinking in Full-Duplex Spoken Dialogue Language Models",
+  "paperId": "conference:sigdial:2026:conference-paper-id:2026.sigdial-1.33",
+  "pdfUrl": "https://aclanthology.org/2026.sigdial-1.33.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "边听边想的全双工语音对话：时序思维替代静音等待",
+  "recordUrl": "https://aclanthology.org/2026.sigdial-1.33/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "90ee8fc3786ee3cfcff22eab3e9fb93873e6c7083ff828448b9ab09ca639b2cc"
+}
