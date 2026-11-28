@@ -2,8 +2,8 @@
   "contract": "conference-directory-metadata-v1",
   "checkedAt": "2026-11-28",
   "inventory": {
-    "blogMain": "bdf8b5a0f655c9ed817eda77b6514b27cfaa5bc8",
-    "conferenceEditionCount": 31,
+    "blogMain": "648060418617d0718d62291c01995127429d3095",
+    "conferenceEditionCount": 33,
     "allYears": [
       2026
     ],
@@ -937,6 +937,61 @@
       }
     },
     {
+      "id": "impactspeech-2026",
+      "venueId": "impactspeech",
+      "name": "ImpactSpeech",
+      "fullName": "Workshop on Identifying, Measuring, Preventing, and Assessing Consequences of Bias in Speech LLMs",
+      "year": 2026,
+      "editionNumber": 1,
+      "aliases": [
+        "ImpactSpeech",
+        "ImpactSpeech 2026",
+        "Workshop on Identifying, Measuring, Preventing, and Assessing Consequences of Bias in Speech LLMs"
+      ],
+      "summaryPath": "/posts/conference-impactspeech-2026/",
+      "categoryPath": "/categories/impactspeech-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-impactspeech-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/impactspeech-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "语音大模型偏见识别、公平性评测、去偏与社会影响专题研讨会；本届与 EMNLP 2026 同地举办。",
+      "domainPosition": "语音大模型偏见识别、公平性评测、去偏与社会影响专题研讨会；本届与 EMNLP 2026 同地举办。",
+      "domainSourceUrl": "https://impactspeech.github.io/",
+      "event": {
+        "startDate": "2026-10-29",
+        "endDate": "2026-10-29",
+        "status": "confirmed",
+        "location": "匈牙利·布达佩斯",
+        "sourceUrl": "https://impactspeech.github.io/",
+        "checkedAt": "2026-11-28",
+        "scope": "official-event-range"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "edition": "第七版（2026年，4月9日更新）",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-11-28",
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy",
+        "grade": "unlisted",
+        "field": "",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "pageNumber": null
+      }
+    },
+    {
       "id": "interspeech-2026",
       "venueId": "interspeech",
       "name": "Interspeech",
@@ -1155,6 +1210,69 @@
         "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
         "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
         "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "mlcslm-2026",
+      "venueId": "mlcslm",
+      "name": "MLC-SLM",
+      "fullName": "Workshop on Multilingual Conversational Speech Language Model",
+      "year": 2026,
+      "editionNumber": 2,
+      "aliases": [
+        "MLC-SLM",
+        "MLC-SLM 2026",
+        "MLCSLM",
+        "Workshop on Multilingual Conversational Speech Language Model"
+      ],
+      "summaryPath": "/posts/conference-mlcslm-2026/",
+      "categoryPath": "/categories/mlcslm-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-mlcslm-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/mlcslm-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "多语种对话语音大语言模型挑战赛与专题研讨会；本届为 Interspeech 2026 卫星研讨会。",
+      "domainPosition": "多语种对话语音大语言模型挑战赛与专题研讨会；本届为 Interspeech 2026 卫星研讨会。",
+      "domainSourceUrl": "https://www.isca-speech.org/archive/MLCSLM_2026/index.html",
+      "event": {
+        "startDate": "2026-10-02",
+        "endDate": "2026-10-02",
+        "status": "confirmed",
+        "location": "澳大利亚·悉尼",
+        "sourceUrl": "https://www.isca-speech.org/archive/MLCSLM_2026/index.html",
+        "checkedAt": "2026-11-28",
+        "scope": "official-event-range"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "edition": "第七版（2026年，4月9日更新）",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-11-28",
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy",
+        "grade": "unlisted",
+        "field": "",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "pageNumber": null
+      },
+      "relationship": {
+        "kind": "workshop",
+        "parentConferenceId": "interspeech-2026",
+        "sourceUrl": "https://www.isca-speech.org/archive/MLCSLM_2026/index.html",
+        "checkedAt": "2026-11-28",
+        "sourceQuote": "2nd Workshop on Multilingual Conversational Speech Language Model (MLC-SLM 2026), satellite workshop of Interspeech 2026."
       }
     },
     {
