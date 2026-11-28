@@ -2,8 +2,8 @@
   "contract": "conference-directory-metadata-v1",
   "checkedAt": "2026-11-28",
   "inventory": {
-    "blogMain": "a27071c4f06018e2db0d21b75825fa51225bbd2f",
-    "conferenceEditionCount": 29,
+    "blogMain": "0a11d55c9a55e132a1232f24897d2ca90af0dde9",
+    "conferenceEditionCount": 30,
     "allYears": [
       2026
     ],
@@ -484,6 +484,69 @@
         "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
         "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
         "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "dc-2026",
+      "venueId": "dc",
+      "name": "DC",
+      "fullName": "ISCA-SAC Doctoral Consortium",
+      "year": 2026,
+      "editionNumber": 12,
+      "aliases": [
+        "DC",
+        "DC 2026",
+        "ISCA-SAC Doctoral Consortium",
+        "Interspeech Doctoral Consortium"
+      ],
+      "summaryPath": "/posts/conference-dc-2026/",
+      "categoryPath": "/categories/dc-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-dc-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/dc-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "ISCA 学生顾问委员会博士生论坛，聚焦语音科学、语音技术与跨学科博士研究（Interspeech 同期卫星活动）。",
+      "domainPosition": "ISCA 学生顾问委员会博士生论坛，聚焦语音科学、语音技术与跨学科博士研究（Interspeech 同期卫星活动）。",
+      "domainSourceUrl": "https://www.isca-archive.org/dc_2026/index.html",
+      "event": {
+        "startDate": "2026-09-26",
+        "endDate": "2026-09-26",
+        "status": "confirmed",
+        "location": "澳大利亚·悉尼",
+        "sourceUrl": "https://www.isca-archive.org/dc_2026/index.html",
+        "checkedAt": "2026-11-28",
+        "scope": "official-event-range"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "edition": "第七版（2026年，4月9日更新）",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-11-28",
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy",
+        "grade": "unlisted",
+        "field": "",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "pageNumber": null
+      },
+      "relationship": {
+        "kind": "workshop",
+        "parentConferenceId": "interspeech-2026",
+        "sourceUrl": "https://www.isca-archive.org/dc_2026/index.html",
+        "checkedAt": "2026-11-28",
+        "sourceQuote": "The 12th ISCA-SAC Doctoral Consortium, Sydney, Australia, 26 September 2026."
       }
     },
     {

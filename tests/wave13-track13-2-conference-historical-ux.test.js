@@ -570,7 +570,7 @@ test('Canonical pageType powers conference Roundup 2.0 cards, task CTAs, histori
     }
   }
 
-  // Full canonical 58-key venue map parity across single.html, paper-library.js, and research-corpus.js
+  // Full canonical 78-key venue map parity across single.html, paper-library.js, and research-corpus.js
   const corpusApi = require('../scripts/lib/research-corpus');
   const libraryApi = require('../assets/js/paper-library');
   const singleSrc = fs.readFileSync(path.join(ROOT, 'layouts/_default/single.html'), 'utf8');
@@ -580,19 +580,24 @@ test('Canonical pageType powers conference Roundup 2.0 cards, task CTAs, histori
     waspaa: 'WASPAA', asru: 'ASRU', slt: 'SLT', ismir: 'ISMIR', dcase: 'DCASE',
     taslp: 'TASLP', ieee_acm_taslp: 'TASLP', 'ieee-acm-taslp': 'TASLP', ieeeacmtaslp: 'TASLP',
     neurips: 'NeurIPS', nips: 'NeurIPS', icml: 'ICML', iclr: 'ICLR',
-    acl: 'ACL', emnlp: 'EMNLP', naacl: 'NAACL', eacl: 'EACL',
-    lrec: 'LREC', coling: 'COLING', tacl: 'TACL',
+    acl: 'ACL', emnlp: 'EMNLP', naacl: 'NAACL', eacl: 'EACL', aacl: 'AACL',
+    lrec: 'LREC', coling: 'COLING', conll: 'CoNLL', starsem: '*SEM', tacl: 'TACL',
     aaai: 'AAAI', ijcai: 'IJCAI', aistats: 'AISTATS', uai: 'UAI',
-    cvpr: 'CVPR', iccv: 'ICCV', eccv: 'ECCV',
+    cvpr: 'CVPR', iccv: 'ICCV', eccv: 'ECCV', wacv: 'WACV',
     acmmm: 'ACM MM', acm_mm: 'ACM MM', 'acm-mm': 'ACM MM', mm: 'ACM MM',
     siggraph: 'SIGGRAPH', chi: 'CHI', ubicomp: 'UbiComp',
     mobicom: 'MobiCom', mobisys: 'MobiSys', sensys: 'SenSys',
     eusipco: 'EUSIPCO', chime: 'CHiME', dafx: 'DAFx', icmc: 'ICMC',
     nime: 'NIME', jep: 'JEP', odyssey: 'Odyssey', iwslt: 'IWSLT',
+    smc: 'SMC', iwsds: 'IWSDS', speakable: 'Speakable', dc: 'DC',
+    sigdial: 'SIGDIAL', salma: 'SALMA', mlcslm: 'MLCSLM', avsp: 'AVSP',
+    impactspeech: 'ImpactSpeech',
+    audio_aaai: 'Audio-AAAI', 'audio-aaai': 'Audio-AAAI', audioaaai: 'Audio-AAAI',
+    sigul: 'SIGUL', nlp4musa: 'NLP4MusA', trustaudio: 'TrustAudio', wochat: 'WOCHAT',
     kdd: 'KDD', www: 'WWW', icra: 'ICRA', iros: 'IROS', corl: 'CoRL',
     jmlr: 'JMLR', tmlr: 'TMLR', spl: 'SPL'
   };
-  assert.equal(Object.keys(expectedVenues).length, 58, 'expectedVenues must contain all 58 canonical keys');
+  assert.equal(Object.keys(expectedVenues).length, 78, 'expectedVenues must contain all 78 canonical keys');
 
   const vMapMatch = singleSrc.match(/\$vMap\s*:=\s*dict\s+([\s\S]*?)\s*\}\}/);
   assert.ok(vMapMatch, 'single.html must declare $vMap dict');
@@ -604,9 +609,9 @@ test('Canonical pageType powers conference Roundup 2.0 cards, task CTAs, histori
     assert.ok(!Object.prototype.hasOwnProperty.call(parsedSingleVMap, vMapTokens[i]), `single.html $vMap duplicate key: ${vMapTokens[i]}`);
     parsedSingleVMap[vMapTokens[i]] = vMapTokens[i + 1];
   }
-  assert.deepEqual(parsedSingleVMap, expectedVenues, 'single.html $vMap must deep-equal canonical 58-key venue map');
-  assert.deepEqual(corpusApi.VENUE_NORMALIZE, expectedVenues, 'research-corpus VENUE_NORMALIZE must match canonical 58-key venue map');
-  assert.deepEqual(libraryApi.VENUE_DISPLAY_NAMES, expectedVenues, 'paper-library VENUE_DISPLAY_NAMES must match canonical 58-key venue map');
+  assert.deepEqual(parsedSingleVMap, expectedVenues, 'single.html $vMap must deep-equal canonical 78-key venue map');
+  assert.deepEqual(corpusApi.VENUE_NORMALIZE, expectedVenues, 'research-corpus VENUE_NORMALIZE must match canonical 78-key venue map');
+  assert.deepEqual(libraryApi.VENUE_DISPLAY_NAMES, expectedVenues, 'paper-library VENUE_DISPLAY_NAMES must match canonical 78-key venue map');
   assert.ok(Object.isFrozen(corpusApi.VENUE_NORMALIZE), 'research-corpus VENUE_NORMALIZE must be frozen');
   assert.ok(Object.isFrozen(libraryApi.VENUE_DISPLAY_NAMES), 'paper-library VENUE_DISPLAY_NAMES must be frozen');
 
