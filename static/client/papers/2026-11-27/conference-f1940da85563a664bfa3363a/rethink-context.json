@@ -1,0 +1,49 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前25%",
+    "score": 7.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Théodor Lemerle"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Téo Guichoux"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Axel Roebel"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Nicolas Obin"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对前缀续写占用上下文与自注意力平方开销问题，Lina-Speech 以门控线性注意力常数记忆与冻结主参数的初态调谐实现任意多样本条件，在 311M 参数下取得合成模型中最好的人工自然度与相似度，代价是客观可懂度与神经相似度仍落后于更大规模模型且依赖有声书类训练数据。",
+  "originalTitle": "Lina-Speech: Gated Linear Attention and Initial-State Tuning for Multi-Sample Prompting Text-To-Speech Synthesis",
+  "paperId": "conference:audio-aaai:2026:conference-paper-id:lemerle26a",
+  "pdfUrl": "https://raw.githubusercontent.com/mlresearch/v312/main/assets/lemerle26a/lemerle26a.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "门控线性注意力与初态调谐如何实现多样本提示语音合成",
+  "recordUrl": "https://proceedings.mlr.press/v312/lemerle26a.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "b6b9cf0d494dcb5b3530fbdecf3735948b2ddc388d7bc830190493d680c320f2"
+}

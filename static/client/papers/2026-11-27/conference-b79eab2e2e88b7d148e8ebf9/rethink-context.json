@@ -1,0 +1,91 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Jeremy Wong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Muhammad Huzaifah"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Hardik Sailor"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Shuo Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Kye Min Tan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Bin Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Qiongqiong Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Wenyu Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Xunlong Zou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Nancy F. Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Ai Ti Aw"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对指令微调需人工编写多任务模板而覆盖信息窄的问题，本文用同一冻结大模型读 JSON 元信息生成描述作为教师、以音频嵌入替换 JSON 训练只更新适配器的学生，在相同数据与结构下证明蒸馏与指令微调互补，Dynamic-SUPERB 先蒸馏后微调达 46.8% 与 AudioBench 混合达 57.2 分最高，但仅用蒸馏平均无法超越指令微调并伴随覆盖不全与泛化抱怨的代价。",
+  "originalTitle": "Train multi-modal LLM to understand diverse speech paralinguistics by distilling from teacher with meta-information prompt",
+  "paperId": "conference:audio-aaai:2026:conference-paper-id:wong26a",
+  "pdfUrl": "https://raw.githubusercontent.com/mlresearch/v312/main/assets/wong26a/wong26a.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "用元信息蒸馏让多模态大模型理解多样副语言信息",
+  "recordUrl": "https://proceedings.mlr.press/v312/wong26a.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "f6d55883c9f442e71d074bdb7d0228af2da0fd6acf1b5b4cd5faf6e9d0049cb0"
+}

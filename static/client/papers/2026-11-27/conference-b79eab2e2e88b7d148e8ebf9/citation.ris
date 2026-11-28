@@ -1,0 +1,17 @@
+TY  - CONF
+TI  - Train multi-modal LLM to understand diverse speech paralinguistics by distilling from teacher with meta-information prompt
+AU  - Jeremy Wong
+AU  - Muhammad Huzaifah
+AU  - Hardik Sailor
+AU  - Shuo Sun
+AU  - Kye Min Tan
+AU  - Bin Wang
+AU  - Qiongqiong Wang
+AU  - Wenyu Zhang
+AU  - Xunlong Zou
+AU  - Nancy F. Chen
+AU  - Ai Ti Aw
+ID  - conference:audio-aaai:2026:conference-paper-id:wong26a
+UR  - https://proceedings.mlr.press/v312/wong26a.html
+L1  - https://raw.githubusercontent.com/mlresearch/v312/main/assets/wong26a/wong26a.pdf
+ER  - 

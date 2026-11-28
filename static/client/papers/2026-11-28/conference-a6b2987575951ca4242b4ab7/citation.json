@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Minoru Kishi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Ryosuke Sakai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Shinnosuke Takamichi"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Yusuke Kanamori"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Yuki Okamoto"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:audio-aaai:2026:conference-paper-id:kishi26a",
+  "originalTitle": "AudioBERTScore: Objective Evaluation of Environmental Sound Synthesis Based on Similarity of Audio Embedding Sequences",
+  "paperId": "conference:audio-aaai:2026:conference-paper-id:kishi26a",
+  "pdfUrl": "https://raw.githubusercontent.com/mlresearch/v312/main/assets/kishi26a/kishi26a.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://proceedings.mlr.press/v312/kishi26a.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "bc948f520e5c2c9e6bf059731b37e17e69bc41bfe3c352cd85120431ebe4732d",
+  "type": "conference-paper"
+}

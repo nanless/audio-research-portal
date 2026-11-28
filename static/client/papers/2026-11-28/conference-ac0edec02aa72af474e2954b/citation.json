@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Jingru Lin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Chen Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Tianrui Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Haizhou Li"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:audio-aaai:2026:conference-paper-id:lin26a",
+  "originalTitle": "AudioRAG: A Challenging Benchmark for Audio Reasoning and Information Retrieval",
+  "paperId": "conference:audio-aaai:2026:conference-paper-id:lin26a",
+  "pdfUrl": "https://raw.githubusercontent.com/mlresearch/v312/main/assets/lin26a/lin26a.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://proceedings.mlr.press/v312/lin26a.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "76eceb63cbe9e03d52b89416d4b7694d30cdfb0343490bfdba3fb62cf4c311d1",
+  "type": "conference-paper"
+}

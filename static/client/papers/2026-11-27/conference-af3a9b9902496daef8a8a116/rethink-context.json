@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Muhammad Huzaifah"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Hardik Sailor"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Jeremy Wong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Nancy F. Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Ai Ti Aw"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 BEST-RQ 直接量化低层梅尔谱导致收敛慢的问题，Latent-RQ 改用冻结目标编码器中间层隐特征驱动固定随机量化并分阶段刷新，在 500,000 步内将说话人识别从 65.57% 提升至 74.75% 且自动语音识别词错误率从 10.71% 降至 9.46%，代价是单步耗时从 0.445 s 升至 0.570 s 且情感识别与外部最强模型仍落后。",
+  "originalTitle": "Latent-RQ: Enhancing Speech Pre-training with Latent Representations and Random Quantization",
+  "paperId": "conference:audio-aaai:2026:conference-paper-id:huzaifah26a",
+  "pdfUrl": "https://raw.githubusercontent.com/mlresearch/v312/main/assets/huzaifah26a/huzaifah26a.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "隐层特征如何改进随机量化语音预训练",
+  "recordUrl": "https://proceedings.mlr.press/v312/huzaifah26a.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "1b93ce50959797729ae0d9b57e002411448d2487d16ef4fd860797741c53bd9d"
+}
