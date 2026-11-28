@@ -93,6 +93,7 @@
     {{- $healed = replaceRE `\^\\\{([^}]*)\\\}` "^{${1}}" $healed -}}
   {{- end -}}
   {{- $healed = replaceRE `(\d)%` `${1}\%` $healed -}}
+  {{- $healed = replaceRE `([\p{Han}]+)` `\text{${1}}` $healed -}}
   {{- $healed = replaceRE `\^(?:\s*$|(\s*[}\])(\[,;_=]))` "^{*}${1}" $healed -}}
   {{- if ne $healed $inner -}}
     {{- $res = try (transform.ToMath $healed $opts) -}}

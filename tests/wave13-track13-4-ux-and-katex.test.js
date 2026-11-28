@@ -1371,3 +1371,37 @@ test('Round 1 Regression (P0-3, P0-4, P1-5, P1-6, P1-7, P1-10, P2-12, P2-13, P2-
     fs.rmSync(tmpPub2, { recursive: true, force: true });
   }
 });
+
+test('KaTeX SSR display-time healing wraps bare CJK characters inside math delimiters without math-fallback', (t) => {
+  const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'katex-cjk-healing-'));
+  t.after(() => fs.rmSync(workspace, { recursive: true, force: true }));
+  fs.mkdirSync(path.join(workspace, 'content/posts'), { recursive: true });
+  fs.mkdirSync(path.join(workspace, 'layouts/_default/_markup'), { recursive: true });
+  fs.mkdirSync(path.join(workspace, 'layouts/partials'), { recursive: true });
+  fs.writeFileSync(path.join(workspace, 'hugo.yaml'), [
+    'baseURL: https://example.com/',
+    'markup:',
+    '  goldmark:',
+    '    extensions:',
+    '      passthrough:',
+    '        enable: true',
+    '        delimiters:',
+    '          block: [["\\\\[", "\\\\]"]]',
+    '          inline: [["\\\\(", "\\\\)"]]'
+  ].join('\n') + '\n');
+  fs.cpSync(path.join(BLOG_ROOT, 'layouts/_default/_markup/render-passthrough.html'), path.join(workspace, 'layouts/_default/_markup/render-passthrough.html'));
+  fs.cpSync(path.join(BLOG_ROOT, 'layouts/partials/render_katex_formula.html'), path.join(workspace, 'layouts/partials/render_katex_formula.html'));
+  fs.writeFileSync(path.join(workspace, 'layouts/_default/single.html'), '{{ .Content }}');
+  fs.writeFileSync(path.join(workspace, 'content/posts/cjk.md'), [
+    '---',
+    'title: CJK Math Healing',
+    '---',
+    '视觉增强 \\(AV 一致 - AO\\)，视觉干扰 \\(AO - AV 不一致\\)，标准 \\(\\text{音频} + x\\)，非法宏 \\(\\nonexistentcmd{z}\\)。'
+  ].join('\n') + '\n');
+  execFileSync('hugo', ['--source', workspace, '--destination', path.join(workspace, 'public')], { stdio: 'pipe' });
+  const html = fs.readFileSync(path.join(workspace, 'public/posts/cjk/index.html'), 'utf8');
+  assert.equal((html.match(/class="math-fallback"/g) || []).length, 1, 'only genuinely invalid macro should fall back');
+  assert.equal((html.match(/class="katex"/g) || []).length, 3, 'bare CJK math expressions should render via KaTeX');
+  assert.match(html, /一致/);
+  assert.match(html, /不一致/);
+});
