@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "University of Wisconsin - Madison"
+      ],
+      "name": "Le Thien Phuc Nguyen"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin - Madison"
+      ],
+      "name": "Zhuoran Yu"
+    },
+    {
+      "affiliations": [
+        "University of Wisconsin - Madison"
+      ],
+      "name": "Yong Jae Lee"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:wacv:2026:conference-paper-id:Nguyen_LASER_Lip_Landmark_Assisted_Speaker_Detection_for_Robustness_WACV_2026_paper",
+  "originalTitle": "LASER: Lip Landmark Assisted Speaker Detection for Robustness",
+  "paperId": "conference:wacv:2026:conference-paper-id:Nguyen_LASER_Lip_Landmark_Assisted_Speaker_Detection_for_Robustness_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Nguyen_LASER_Lip_Landmark_Assisted_Speaker_Detection_for_Robustness_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Nguyen_LASER_Lip_Landmark_Assisted_Speaker_Detection_for_Robustness_WACV_2026_paper.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "c78f59e4b6a72e5340ef90f345f7c6dfc9b491853465846b0e0fbe2223dbc2f1",
+  "type": "conference-paper"
+}

@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "CyberAgent"
+      ],
+      "name": "Ryo Miyoshi"
+    },
+    {
+      "affiliations": [
+        "CyberAgent"
+      ],
+      "name": "Mayu Otani"
+    },
+    {
+      "affiliations": [
+        "CyberAgent"
+      ],
+      "name": "Yuki Okafuji"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:wacv:2026:conference-paper-id:Miyoshi_Robust_Multimodal_Emotion_Recognition_from_Incomplete_Modalities_via_Query-Based_Unimodal_WACV_2026_paper",
+  "originalTitle": "Robust Multimodal Emotion Recognition from Incomplete Modalities via Query-Based Unimodal and Cross-Modal Learning",
+  "paperId": "conference:wacv:2026:conference-paper-id:Miyoshi_Robust_Multimodal_Emotion_Recognition_from_Incomplete_Modalities_via_Query-Based_Unimodal_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Miyoshi_Robust_Multimodal_Emotion_Recognition_from_Incomplete_Modalities_via_Query-Based_Unimodal_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Miyoshi_Robust_Multimodal_Emotion_Recognition_from_Incomplete_Modalities_via_Query-Based_Unimodal_WACV_2026_paper.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "957b8df17e92e746e4a5b2b50c98afc0e5387acb7d3c7dcd47cdfd14147b808e",
+  "type": "conference-paper"
+}

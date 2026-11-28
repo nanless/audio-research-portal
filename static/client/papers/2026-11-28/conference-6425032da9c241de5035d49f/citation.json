@@ -1,0 +1,69 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "UNC Chapel Hill"
+      ],
+      "name": "Yan-Bo Lin"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Kevin Lin"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Zhengyuan Yang"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Linjie Li"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Jianfeng Wang"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Chung-Ching Lin"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Xiaofei Wang"
+    },
+    {
+      "affiliations": [
+        "UNC Chapel Hill"
+      ],
+      "name": "Gedas Bertasius"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Lijuan Wang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:wacv:2026:conference-paper-id:Lin_Zero-Shot_Audio-Visual_Editing_via_Cross-Modal_Delta_Denoising_WACV_2026_paper",
+  "originalTitle": "Zero-Shot Audio-Visual Editing via Cross-Modal Delta Denoising",
+  "paperId": "conference:wacv:2026:conference-paper-id:Lin_Zero-Shot_Audio-Visual_Editing_via_Cross-Modal_Delta_Denoising_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Lin_Zero-Shot_Audio-Visual_Editing_via_Cross-Modal_Delta_Denoising_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Lin_Zero-Shot_Audio-Visual_Editing_via_Cross-Modal_Delta_Denoising_WACV_2026_paper.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "fb2b6ec03bf08bf7b4fa28e5cc43577972b00ceaa3199619a383e3ab6f0d3866",
+  "type": "conference-paper"
+}

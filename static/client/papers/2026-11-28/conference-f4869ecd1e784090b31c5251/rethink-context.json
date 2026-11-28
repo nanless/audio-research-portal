@@ -1,0 +1,49 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "视频动作识别",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Zitian Tang"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Rohan Myer Krishnan"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Zhiqiu Yu"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Chen Sun"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文以 18 段 96 小时太空行走录像构建步骤识别与问答双任务基准，证明人类以 67.0% 远超最强模型的 36.15% 与 46.54%，而冻结模型加任务摘要可将问答从 32.45% 提升至 81.12%，代价是摘要属特权信息且交并比长期处于个位数。",
+  "originalTitle": "Spacewalk-18: A Benchmark for Multimodal and Long-form Procedural Video Understanding in Novel Domains",
+  "paperId": "conference:wacv:2026:conference-paper-id:Tang_Spacewalk-18_A_Benchmark_for_Multimodal_and_Long-form_Procedural_Video_Understanding_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Tang_Spacewalk-18_A_Benchmark_for_Multimodal_and_Long-form_Procedural_Video_Understanding_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "太空行走长视频如何考验模型的域外泛化与长时推理",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Tang_Spacewalk-18_A_Benchmark_for_Multimodal_and_Long-form_Procedural_Video_Understanding_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "32e4aff535b2582b9bba4b38d21cd4a56f795b60888645673226a8e3d30f0354"
+}

@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "University of Saskatchewan, Canada"
+      ],
+      "name": "Zahidul Islam"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Sujoy Paul"
+    },
+    {
+      "affiliations": [
+        "University of Saskatchewan, Canada"
+      ],
+      "name": "Mrigank Rochan"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:wacv:2026:conference-paper-id:Islam_Test-Time_Adaptation_for_Video_Highlight_Detection_Using_Meta-Auxiliary_Learning_and_WACV_2026_paper",
+  "originalTitle": "Test-Time Adaptation for Video Highlight Detection Using Meta-Auxiliary Learning and Cross-Modality Hallucinations",
+  "paperId": "conference:wacv:2026:conference-paper-id:Islam_Test-Time_Adaptation_for_Video_Highlight_Detection_Using_Meta-Auxiliary_Learning_and_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Islam_Test-Time_Adaptation_for_Video_Highlight_Detection_Using_Meta-Auxiliary_Learning_and_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Islam_Test-Time_Adaptation_for_Video_Highlight_Detection_Using_Meta-Auxiliary_Learning_and_WACV_2026_paper.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "b700d9414e8df4a8c88fc68297e8084da614b531e05676ee7a44dc5f7e8d4115",
+  "type": "conference-paper"
+}

@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Indiana University, Bloomington, Indiana, USA"
+      ],
+      "name": "Yu Wang"
+    },
+    {
+      "affiliations": [
+        "Indiana University, Bloomington, Indiana, USA"
+      ],
+      "name": "Juhyung Ha"
+    },
+    {
+      "affiliations": [
+        "Indiana University, Bloomington, Indiana, USA"
+      ],
+      "name": "Frangil M. Ramirez"
+    },
+    {
+      "affiliations": [
+        "Indiana University, Bloomington, Indiana, USA"
+      ],
+      "name": "Yuchen Wang"
+    },
+    {
+      "affiliations": [
+        "Indiana University, Bloomington, Indiana, USA"
+      ],
+      "name": "David J. Crandall"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:wacv:2026:conference-paper-id:Wang_GateFusion_Hierarchical_Gated_Cross-Modal_Fusion_for_Active_Speaker_Detection_WACV_2026_paper",
+  "originalTitle": "GateFusion: Hierarchical Gated Cross-Modal Fusion for Active Speaker Detection",
+  "paperId": "conference:wacv:2026:conference-paper-id:Wang_GateFusion_Hierarchical_Gated_Cross-Modal_Fusion_for_Active_Speaker_Detection_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Wang_GateFusion_Hierarchical_Gated_Cross-Modal_Fusion_for_Active_Speaker_Detection_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Wang_GateFusion_Hierarchical_Gated_Cross-Modal_Fusion_for_Active_Speaker_Detection_WACV_2026_paper.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "2a0baf35785f9754f42a6af31d638e5f1c87f5de9cde45add645c260afb598ab",
+  "type": "conference-paper"
+}

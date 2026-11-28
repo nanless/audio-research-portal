@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology, South Korea"
+      ],
+      "name": "Sangjune Park"
+    },
+    {
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology, South Korea"
+      ],
+      "name": "Inhyeok Choi"
+    },
+    {
+      "affiliations": [
+        "Daegu Gyeongbuk Institute of Science and Technology, South Korea"
+      ],
+      "name": "Donghyeon Soon"
+    },
+    {
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology, South Korea"
+      ],
+      "name": "Youngwoo Jeon"
+    },
+    {
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology, South Korea"
+      ],
+      "name": "Kyungdon Joo"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:wacv:2026:conference-paper-id:Park_Not_Like_Transformers_Drop_the_Beat_Representation_for_Dance_Generation_WACV_2026_paper",
+  "originalTitle": "Not Like Transformers: Drop the Beat Representation for Dance Generation with Mamba-Based Diffusion Model",
+  "paperId": "conference:wacv:2026:conference-paper-id:Park_Not_Like_Transformers_Drop_the_Beat_Representation_for_Dance_Generation_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Park_Not_Like_Transformers_Drop_the_Beat_Representation_for_Dance_Generation_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Park_Not_Like_Transformers_Drop_the_Beat_Representation_for_Dance_Generation_WACV_2026_paper.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "defb9106ea7038efdfb965fbb0336137295f48a425dc01e4a37e463db03845c9",
+  "type": "conference-paper"
+}

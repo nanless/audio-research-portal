@@ -1,0 +1,56 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "空间音频生成",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Australian National University"
+      ],
+      "name": "Huiyu Gao"
+    },
+    {
+      "affiliations": [
+        "Australian National University",
+        "CSIRO Data61"
+      ],
+      "name": "Jiahao Ma"
+    },
+    {
+      "affiliations": [
+        "CSIRO Data61"
+      ],
+      "name": "David Ahmedt-Aristizabal"
+    },
+    {
+      "affiliations": [
+        "CSIRO Data61"
+      ],
+      "name": "Chuong Nguyen"
+    },
+    {
+      "affiliations": [
+        "Australian National University"
+      ],
+      "name": "Miaomiao Liu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多房间中新视角双耳合成因忽略墙体遮挡而高估穿墙能量的问题，SOAF 以距离平方反比加统一透射的全局先验与斐波那契局部场加方向注意力预测掩码，在真实集上相对幅度距离降低 7.2% 并在多房间透射取 0.25 时最优，代价为逐场景训练、静态声源与简化材质假设且无人工听测验证。",
+  "originalTitle": "SOAF: Scene Occlusion-aware Neural Acoustic Field",
+  "paperId": "conference:wacv:2026:conference-paper-id:Gao_SOAF_Scene_Occlusion-aware_Neural_Acoustic_Field_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Gao_SOAF_Scene_Occlusion-aware_Neural_Acoustic_Field_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "遮挡感知神经声场如何改善多房间新视角双耳合成",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Gao_SOAF_Scene_Occlusion-aware_Neural_Acoustic_Field_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "4e0ca73a43eb001ad4e144daeba4c7be6b37db38b1315ec70404ebb51b7f95cd"
+}

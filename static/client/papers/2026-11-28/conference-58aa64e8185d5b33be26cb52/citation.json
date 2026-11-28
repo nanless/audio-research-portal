@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "College of Computing and Data Science, Nanyang Technological University, Singapore"
+      ],
+      "name": "Ashutosh Anshul"
+    },
+    {
+      "affiliations": [
+        "College of Computing and Data Science, Nanyang Technological University, Singapore"
+      ],
+      "name": "Eng Siong Chng"
+    },
+    {
+      "affiliations": [
+        "College of Computing and Data Science, Nanyang Technological University, Singapore"
+      ],
+      "name": "Deepu Rajan"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:wacv:2026:conference-paper-id:Anshul_A-V_Representation_Learning_via_Audio_Shift_Prediction_for_Multimodal_Deepfake_WACV_2026_paper",
+  "originalTitle": "A-V Representation Learning via Audio Shift Prediction for Multimodal Deepfake Detection and Temporal Localization",
+  "paperId": "conference:wacv:2026:conference-paper-id:Anshul_A-V_Representation_Learning_via_Audio_Shift_Prediction_for_Multimodal_Deepfake_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Anshul_A-V_Representation_Learning_via_Audio_Shift_Prediction_for_Multimodal_Deepfake_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Anshul_A-V_Representation_Learning_via_Audio_Shift_Prediction_for_Multimodal_Deepfake_WACV_2026_paper.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "1606ff87f06a7877b34ef31f9e63c4c9fb492682bf5e412a0ffec86839db0f6d",
+  "type": "conference-paper"
+}

@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 7.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "College of Computing and Data Science, Nanyang Technological University, Singapore"
+      ],
+      "name": "Ashutosh Anshul"
+    },
+    {
+      "affiliations": [
+        "College of Computing and Data Science, Nanyang Technological University, Singapore"
+      ],
+      "name": "Eng Siong Chng"
+    },
+    {
+      "affiliations": [
+        "College of Computing and Data Science, Nanyang Technological University, Singapore"
+      ],
+      "name": "Deepu Rajan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对单阶段多模态伪造检测易过拟合已见手法且忽视短片段篡改的问题，本文提出先以分段音频偏移预测自监督学习真视频音画时间对齐再冻结特征支撑检测与定位的两阶段框架，在韩语 KoDF 上以 99.8 的平均精度与 99.8 的曲线下面积达到最优并在 0.95 交并比下定位高出 17.71 个百分点，代价是预训练仍聚焦跨模态对齐而对保持时间一致的篡改建模不足且需全视频离线处理。",
+  "originalTitle": "A-V Representation Learning via Audio Shift Prediction for Multimodal Deepfake Detection and Temporal Localization",
+  "paperId": "conference:wacv:2026:conference-paper-id:Anshul_A-V_Representation_Learning_via_Audio_Shift_Prediction_for_Multimodal_Deepfake_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Anshul_A-V_Representation_Learning_via_Audio_Shift_Prediction_for_Multimodal_Deepfake_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "以音频偏移预测学习音画对齐支撑伪造检测与时序定位",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Anshul_A-V_Representation_Learning_via_Audio_Shift_Prediction_for_Multimodal_Deepfake_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "1606ff87f06a7877b34ef31f9e63c4c9fb492682bf5e412a0ffec86839db0f6d"
+}

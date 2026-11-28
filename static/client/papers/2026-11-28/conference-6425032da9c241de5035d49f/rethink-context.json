@@ -1,0 +1,79 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "UNC Chapel Hill"
+      ],
+      "name": "Yan-Bo Lin"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Kevin Lin"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Zhengyuan Yang"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Linjie Li"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Jianfeng Wang"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Chung-Ching Lin"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Xiaofei Wang"
+    },
+    {
+      "affiliations": [
+        "UNC Chapel Hill"
+      ],
+      "name": "Gedas Bertasius"
+    },
+    {
+      "affiliations": [
+        "Microsoft"
+      ],
+      "name": "Lijuan Wang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对单侧编辑导致的声画错位，AVED 以冻结扩散模型的增量去噪加跨模态对比约束实现零样本联合编辑，在 AVED-Bench 上 DINO 达 0.956 且 AV-Align 达 0.42 优于单模态拼接，代价是依赖交叉注意力质量与阈值选择且未报告延迟与显存开销。",
+  "originalTitle": "Zero-Shot Audio-Visual Editing via Cross-Modal Delta Denoising",
+  "paperId": "conference:wacv:2026:conference-paper-id:Lin_Zero-Shot_Audio-Visual_Editing_via_Cross-Modal_Delta_Denoising_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Lin_Zero-Shot_Audio-Visual_Editing_via_Cross-Modal_Delta_Denoising_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "零样本声画联合编辑：跨模态增量去噪如何实现同步",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Lin_Zero-Shot_Audio-Visual_Editing_via_Cross-Modal_Delta_Denoising_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "fb2b6ec03bf08bf7b4fa28e5cc43577972b00ceaa3199619a383e3ab6f0d3866"
+}

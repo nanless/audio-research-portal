@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Zitian Tang"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Rohan Myer Krishnan"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Zhiqiu Yu"
+    },
+    {
+      "affiliations": [
+        "Brown University"
+      ],
+      "name": "Chen Sun"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:wacv:2026:conference-paper-id:Tang_Spacewalk-18_A_Benchmark_for_Multimodal_and_Long-form_Procedural_Video_Understanding_WACV_2026_paper",
+  "originalTitle": "Spacewalk-18: A Benchmark for Multimodal and Long-form Procedural Video Understanding in Novel Domains",
+  "paperId": "conference:wacv:2026:conference-paper-id:Tang_Spacewalk-18_A_Benchmark_for_Multimodal_and_Long-form_Procedural_Video_Understanding_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Tang_Spacewalk-18_A_Benchmark_for_Multimodal_and_Long-form_Procedural_Video_Understanding_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Tang_Spacewalk-18_A_Benchmark_for_Multimodal_and_Long-form_Procedural_Video_Understanding_WACV_2026_paper.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "32e4aff535b2582b9bba4b38d21cd4a56f795b60888645673226a8e3d30f0354",
+  "type": "conference-paper"
+}

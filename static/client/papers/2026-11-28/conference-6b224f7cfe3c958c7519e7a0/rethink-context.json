@@ -1,0 +1,37 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "伪造片段定位",
+    "rankBucket": "前50%",
+    "score": 7.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Christos Koutlis"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Symeon Papadopoulos"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对音视频局部伪造难以精确定位的问题， AuViRe 以冻结语音表征为基础做跨模态与单模态重建并编码重建差异，在 LAV-DF 上以 99.94 AUC 与 AP@0.95 提升 8.9 个点取得最优，代价是野外分数回落到 75.5 且对音频高斯噪声更敏感。",
+  "originalTitle": "AuViRe: Audio-visual Speech Representation Reconstruction for Deepfake Temporal Localization",
+  "paperId": "conference:wacv:2026:conference-paper-id:Koutlis_AuViRe_Audio-visual_Speech_Representation_Reconstruction_for_Deepfake_Temporal_Localization_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Koutlis_AuViRe_Audio-visual_Speech_Representation_Reconstruction_for_Deepfake_Temporal_Localization_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "跨模态语音重建差异如何实现深度伪造时间定位",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Koutlis_AuViRe_Audio-visual_Speech_Representation_Reconstruction_for_Deepfake_Temporal_Localization_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "4754a8dd1b4856ab7fd1e91d83ff8ef32e428e7eb5d03bd8e2c489c764585535"
+}

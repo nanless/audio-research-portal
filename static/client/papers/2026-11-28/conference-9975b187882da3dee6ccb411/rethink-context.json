@@ -1,0 +1,44 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音视频生成",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Machine Intelligence Group, Department of CS&IS, BITS Pilani, Hyderabad Campus, India"
+      ],
+      "name": "Aashish Chandra K"
+    },
+    {
+      "affiliations": [
+        "Machine Intelligence Group, Department of CS&IS, BITS Pilani, Hyderabad Campus, India",
+        "Georgia Institute of Technology, USA"
+      ],
+      "name": "Aashutosh A V"
+    },
+    {
+      "affiliations": [
+        "Machine Intelligence Group, Department of CS&IS, BITS Pilani, Hyderabad Campus, India"
+      ],
+      "name": "Abhijit Das"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对仅给单张照片、2 秒参考音频与目标文本即需同步生成个性化说话人音视频的问题，论文提出双路纠缠隐空间并行框架，在三个数据集的视频分布保真与三个数据集的音频分布失真上领先基线，代价是在部分运动距离与可懂度指标上让步且依赖英文数据与较大显存。",
+  "originalTitle": "Narrating For You: Prompt-guided Audio-visual Narrating Face Generation Employing Multi-entangled Latent Space",
+  "paperId": "conference:wacv:2026:conference-paper-id:K_Narrating_For_You_Prompt-guided_Audio-visual_Narrating_Face_Generation_Employing_Multi-entangled_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/K_Narrating_For_You_Prompt-guided_Audio-visual_Narrating_Face_Generation_Employing_Multi-entangled_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "一张照片加 2 秒声音：文本驱动的音画同步说话人脸生成解读",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/K_Narrating_For_You_Prompt-guided_Audio-visual_Narrating_Face_Generation_Employing_Multi-entangled_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "bec666acd67409927c4be8fc3a198b90ccfebadd7309dc89b6832c006f03c923"
+}

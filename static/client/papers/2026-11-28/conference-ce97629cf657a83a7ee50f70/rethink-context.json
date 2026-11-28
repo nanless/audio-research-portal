@@ -1,0 +1,49 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "文本查询视频检索",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Johns Hopkins University"
+      ],
+      "name": "Ketul Shah"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Pankaj Nathani"
+    },
+    {
+      "affiliations": [
+        "Johns Hopkins University"
+      ],
+      "name": "Rama Chellappa"
+    },
+    {
+      "affiliations": [
+        "Adobe Research"
+      ],
+      "name": "Fabian Caba Heilbron"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对复杂查询需同时推理画面与对话而单次检索与简单集成失效的问题，VRAgent 用中心大语言模型把查询分解为视觉与对话工具指令并多轮自精炼改写，在 MM-MSRVTT 上平均召回绝对提升 8.3 个百分点并在 TVR-1200 与单模态任务上保持增益，代价是每查询数十次检索与重排的测试时计算。",
+  "originalTitle": "VRAgent: Self-Refining Agent for Zero-Shot Multimodal Video Retrieval",
+  "paperId": "conference:wacv:2026:conference-paper-id:Shah_VRAgent_Self-Refining_Agent_for_Zero-Shot_Multimodal_Video_Retrieval_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Shah_VRAgent_Self-Refining_Agent_for_Zero-Shot_Multimodal_Video_Retrieval_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "自精炼智能体如何实现零样本多模态视频检索",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Shah_VRAgent_Self-Refining_Agent_for_Zero-Shot_Multimodal_Video_Retrieval_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "b58630cb0748d7e5254a1c337cdaec03ee0fd25b853e8592ca160f6a29abdc77"
+}

@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Phyo Thet Yee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Dimitrios Kollias"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Sudeepta Mishra"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Abhinav Dhall"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:wacv:2026:conference-paper-id:Yee_SynchroRaMa__Lip-Synchronized_and_Emotion-Aware_Talking_Face_Generation_via_Multi-Modal_WACV_2026_paper",
+  "originalTitle": "SynchroRaMa : Lip-Synchronized and Emotion-Aware Talking Face Generation via Multi-Modal Emotion Embedding",
+  "paperId": "conference:wacv:2026:conference-paper-id:Yee_SynchroRaMa__Lip-Synchronized_and_Emotion-Aware_Talking_Face_Generation_via_Multi-Modal_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Yee_SynchroRaMa__Lip-Synchronized_and_Emotion-Aware_Talking_Face_Generation_via_Multi-Modal_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Yee_SynchroRaMa__Lip-Synchronized_and_Emotion-Aware_Talking_Face_Generation_via_Multi-Modal_WACV_2026_paper.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "17a9e77a575597011f79ee98a41e771a73af265907959015546f6c5a1da008bd",
+  "type": "conference-paper"
+}

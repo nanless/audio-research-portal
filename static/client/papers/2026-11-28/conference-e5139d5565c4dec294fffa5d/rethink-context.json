@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前50%",
+    "score": 6.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "CyberAgent"
+      ],
+      "name": "Ryo Miyoshi"
+    },
+    {
+      "affiliations": [
+        "CyberAgent"
+      ],
+      "name": "Mayu Otani"
+    },
+    {
+      "affiliations": [
+        "CyberAgent"
+      ],
+      "name": "Yuki Okafuji"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对完整模态训练假设在现实缺失下失效的问题，本文提出仅用缺失输入训练的双查询融合框架，以单模态查询去噪与跨模态查询均衡实现多粒度预测，在两项基准的完整与缺失评测中取得最好成绩，但结论仍限于模拟缺失与监督分类范围。",
+  "originalTitle": "Robust Multimodal Emotion Recognition from Incomplete Modalities via Query-Based Unimodal and Cross-Modal Learning",
+  "paperId": "conference:wacv:2026:conference-paper-id:Miyoshi_Robust_Multimodal_Emotion_Recognition_from_Incomplete_Modalities_via_Query-Based_Unimodal_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Miyoshi_Robust_Multimodal_Emotion_Recognition_from_Incomplete_Modalities_via_Query-Based_Unimodal_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "仅用缺失输入实现稳健多模态情感识别的双查询融合",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Miyoshi_Robust_Multimodal_Emotion_Recognition_from_Incomplete_Modalities_via_Query-Based_Unimodal_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "957b8df17e92e746e4a5b2b50c98afc0e5387acb7d3c7dcd47cdfd14147b808e"
+}

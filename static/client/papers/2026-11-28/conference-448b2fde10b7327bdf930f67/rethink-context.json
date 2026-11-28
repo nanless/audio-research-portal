@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "音乐驱动演奏动作生成",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology, South Korea"
+      ],
+      "name": "Sangjune Park"
+    },
+    {
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology, South Korea"
+      ],
+      "name": "Inhyeok Choi"
+    },
+    {
+      "affiliations": [
+        "Daegu Gyeongbuk Institute of Science and Technology, South Korea"
+      ],
+      "name": "Donghyeon Soon"
+    },
+    {
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology, South Korea"
+      ],
+      "name": "Youngwoo Jeon"
+    },
+    {
+      "affiliations": [
+        "Ulsan National Institute of Science and Technology, South Korea"
+      ],
+      "name": "Kyungdon Joo"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对长舞蹈自回归连贯不足与节拍条件粗糙的问题，MambaDance 以全状态空间双阶段扩散替代 Transformer 并引入高斯节拍先验，在 AIST++ 与 FineDance 上同时提升保真度与节拍对齐，代价是多样性偏保守且渲染与实时部署未经验证。",
+  "originalTitle": "Not Like Transformers: Drop the Beat Representation for Dance Generation with Mamba-Based Diffusion Model",
+  "paperId": "conference:wacv:2026:conference-paper-id:Park_Not_Like_Transformers_Drop_the_Beat_Representation_for_Dance_Generation_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Park_Not_Like_Transformers_Drop_the_Beat_Representation_for_Dance_Generation_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "全状态空间扩散与高斯节拍先验如何生成长短一致的音乐舞蹈",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Park_Not_Like_Transformers_Drop_the_Beat_Representation_for_Dance_Generation_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "defb9106ea7038efdfb965fbb0336137295f48a425dc01e4a37e463db03845c9"
+}

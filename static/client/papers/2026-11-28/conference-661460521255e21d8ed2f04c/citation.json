@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "University of Edinburgh"
+      ],
+      "name": "Madhav Agarwal"
+    },
+    {
+      "affiliations": [
+        "University College London"
+      ],
+      "name": "Mingtian Zhang"
+    },
+    {
+      "affiliations": [
+        "University of Edinburgh"
+      ],
+      "name": "Laura Sevilla-Lara"
+    },
+    {
+      "affiliations": [
+        "University of Edinburgh"
+      ],
+      "name": "Steven McDonagh"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:wacv:2026:conference-paper-id:Agarwal_GaussianHeadTalk_Wobble-Free_3D_Talking_Heads_with_Audio_Driven_Gaussian_Splatting_WACV_2026_paper",
+  "originalTitle": "GaussianHeadTalk: Wobble-Free 3D Talking Heads with Audio Driven Gaussian Splatting",
+  "paperId": "conference:wacv:2026:conference-paper-id:Agarwal_GaussianHeadTalk_Wobble-Free_3D_Talking_Heads_with_Audio_Driven_Gaussian_Splatting_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Agarwal_GaussianHeadTalk_Wobble-Free_3D_Talking_Heads_with_Audio_Driven_Gaussian_Splatting_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Agarwal_GaussianHeadTalk_Wobble-Free_3D_Talking_Heads_with_Audio_Driven_Gaussian_Splatting_WACV_2026_paper.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "ab89ff0467e4405adaf0236c9dd1ce7b615505845e414bba9e8a3054a84b45c7",
+  "type": "conference-paper"
+}

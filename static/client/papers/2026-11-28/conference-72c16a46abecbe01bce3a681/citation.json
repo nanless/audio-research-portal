@@ -1,0 +1,57 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Donglin Huang"
+    },
+    {
+      "affiliations": [
+        "Image Derivative Inc"
+      ],
+      "name": "Yongyuan Li"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Tianhang Liu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Junming Huang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Xiaoda Yang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Chi Wang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Weiwei Xu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:wacv:2026:conference-paper-id:Huang_VividAnimator_An_End-to-End_Audio_and_Pose-driven_Half-Body_Human_Animation_Framework_WACV_2026_paper",
+  "originalTitle": "VividAnimator: An End-to-End Audio and Pose-driven Half-Body Human Animation Framework",
+  "paperId": "conference:wacv:2026:conference-paper-id:Huang_VividAnimator_An_End-to-End_Audio_and_Pose-driven_Half-Body_Human_Animation_Framework_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Huang_VividAnimator_An_End-to-End_Audio_and_Pose-driven_Half-Body_Human_Animation_Framework_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Huang_VividAnimator_An_End-to-End_Audio_and_Pose-driven_Half-Body_Human_Animation_Framework_WACV_2026_paper.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "ceaed235e816520480e6bc06fae20ce9b33f417de4bbe0600c3901bbfae57c1e",
+  "type": "conference-paper"
+}

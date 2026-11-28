@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "语音驱动手势生成",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Sreehari Rajan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Kunal Bhosikar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Charu Sharma"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对共语音手势与人体物体交互长期割裂而简单拼接会产生穿透的问题，提出以冻结动作扩散主干为中心、交互与共语音分支逐层注入并在采样时自适应加权的统一框架，在 64 位用户研究中以 3.77 分与 70.3% 至 79.7% 偏好领先且以 1.017 的手势距离最优为据，但以多样性偏低与高度误差和穿透比例次优及仅限单人为代价。",
+  "originalTitle": "InteracTalker: Prompt-Based Human-Object Interaction with Co-Speech Gesture Generation",
+  "paperId": "conference:wacv:2026:conference-paper-id:Rajan_InteracTalker_Prompt-Based_Human-Object_Interaction_with_Co-Speech_Gesture_Generation_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Rajan_InteracTalker_Prompt-Based_Human-Object_Interaction_with_Co-Speech_Gesture_Generation_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "提示词与语音共同驱动的人物交互动作生成",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Rajan_InteracTalker_Prompt-Based_Human-Object_Interaction_with_Co-Speech_Gesture_Generation_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "c33886234ac31e6d20fc77712b1224aed76c7f6741a9f8ef0fbfe6518832f16e"
+}

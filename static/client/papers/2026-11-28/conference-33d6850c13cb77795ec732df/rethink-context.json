@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时自适应",
+    "primaryTask": "视频摘要与片段选择",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Saskatchewan, Canada"
+      ],
+      "name": "Zahidul Islam"
+    },
+    {
+      "affiliations": [
+        "Google DeepMind"
+      ],
+      "name": "Sujoy Paul"
+    },
+    {
+      "affiliations": [
+        "University of Saskatchewan, Canada"
+      ],
+      "name": "Mrigank Rochan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对固定集锦模型在单条测试视频上失配的问题，论文提出 Highlight-TTA，以跨模态幻觉为自监督辅助任务并用元辅助训练保证测试时更新能提升主任务，在三套骨干与三个数据集上验证了增益与每条视频微调的代价。",
+  "originalTitle": "Test-Time Adaptation for Video Highlight Detection Using Meta-Auxiliary Learning and Cross-Modality Hallucinations",
+  "paperId": "conference:wacv:2026:conference-paper-id:Islam_Test-Time_Adaptation_for_Video_Highlight_Detection_Using_Meta-Auxiliary_Learning_and_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Islam_Test-Time_Adaptation_for_Video_Highlight_Detection_Using_Meta-Auxiliary_Learning_and_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "单条视频自适应集锦检测：跨模态幻觉与元辅助学习",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Islam_Test-Time_Adaptation_for_Video_Highlight_Detection_Using_Meta-Auxiliary_Learning_and_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "b700d9414e8df4a8c88fc68297e8084da614b531e05676ee7a44dc5f7e8d4115"
+}

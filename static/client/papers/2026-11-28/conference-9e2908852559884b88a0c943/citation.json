@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Sreehari Rajan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Kunal Bhosikar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Charu Sharma"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:wacv:2026:conference-paper-id:Rajan_InteracTalker_Prompt-Based_Human-Object_Interaction_with_Co-Speech_Gesture_Generation_WACV_2026_paper",
+  "originalTitle": "InteracTalker: Prompt-Based Human-Object Interaction with Co-Speech Gesture Generation",
+  "paperId": "conference:wacv:2026:conference-paper-id:Rajan_InteracTalker_Prompt-Based_Human-Object_Interaction_with_Co-Speech_Gesture_Generation_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Rajan_InteracTalker_Prompt-Based_Human-Object_Interaction_with_Co-Speech_Gesture_Generation_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Rajan_InteracTalker_Prompt-Based_Human-Object_Interaction_with_Co-Speech_Gesture_Generation_WACV_2026_paper.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "c33886234ac31e6d20fc77712b1224aed76c7f6741a9f8ef0fbfe6518832f16e",
+  "type": "conference-paper"
+}

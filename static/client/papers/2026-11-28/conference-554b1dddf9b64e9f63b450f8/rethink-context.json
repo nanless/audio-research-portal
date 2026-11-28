@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "可见活跃说话人检测",
+    "rankBucket": "前50%",
+    "score": 7.1
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Indiana University, Bloomington, Indiana, USA"
+      ],
+      "name": "Yu Wang"
+    },
+    {
+      "affiliations": [
+        "Indiana University, Bloomington, Indiana, USA"
+      ],
+      "name": "Juhyung Ha"
+    },
+    {
+      "affiliations": [
+        "Indiana University, Bloomington, Indiana, USA"
+      ],
+      "name": "Frangil M. Ramirez"
+    },
+    {
+      "affiliations": [
+        "Indiana University, Bloomington, Indiana, USA"
+      ],
+      "name": "Yuchen Wang"
+    },
+    {
+      "affiliations": [
+        "Indiana University, Bloomington, Indiana, USA"
+      ],
+      "name": "David J. Crandall"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "GateFusion 针对晚期融合丢失层级细节与视觉过度自信的问题，以分层门控在多个编码器层级双向注入上下文并辅以正帧对齐与静默帧压制，在 Ego4D-ASD 上达到 77.8% mAP 等多项最优，代价是在多候选场景仍略逊且未验证延迟与稳定性。",
+  "originalTitle": "GateFusion: Hierarchical Gated Cross-Modal Fusion for Active Speaker Detection",
+  "paperId": "conference:wacv:2026:conference-paper-id:Wang_GateFusion_Hierarchical_Gated_Cross-Modal_Fusion_for_Active_Speaker_Detection_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Wang_GateFusion_Hierarchical_Gated_Cross-Modal_Fusion_for_Active_Speaker_Detection_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "分层门控如何实现鲁棒的有声说话人检测",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Wang_GateFusion_Hierarchical_Gated_Cross-Modal_Fusion_for_Active_Speaker_Detection_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "2a0baf35785f9754f42a6af31d638e5f1c87f5de9cde45add645c260afb598ab"
+}

@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音频驱动视频生成",
+    "rankBucket": "前50%",
+    "score": 6.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Stony Brook University"
+      ],
+      "name": "Zhikang Dong"
+    },
+    {
+      "affiliations": [
+        "Bytedance"
+      ],
+      "name": "Weituo Hao"
+    },
+    {
+      "affiliations": [
+        "Bytedance"
+      ],
+      "name": "Ju-Chiang Wang"
+    },
+    {
+      "affiliations": [
+        "Apple"
+      ],
+      "name": "Peng Zhang"
+    },
+    {
+      "affiliations": [
+        "Stony Brook University"
+      ],
+      "name": "Pawel Polak"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对无姿态引导下由音乐与文本驱动图像跳舞的问题，MuseDance 以两阶段扩散与音乐节拍运动三模块实现端到端生成，并在 3,122 条配乐舞蹈新数据集上以图像质量与音乐对齐指标超越两阶段与单阶段基线，代价是长时一致性与复杂泛化仍受限。",
+  "originalTitle": "MuseDance: A Diffusion-based Music-Driven Image Animation System",
+  "paperId": "conference:wacv:2026:conference-paper-id:Dong_MuseDance_A_Diffusion-based_Music-Driven_Image_Animation_System_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Dong_MuseDance_A_Diffusion-based_Music-Driven_Image_Animation_System_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "不用姿态序列也能让一张图跟着音乐跳舞",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Dong_MuseDance_A_Diffusion-based_Music-Driven_Image_Animation_System_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "ab414c9c52a90e7829a038893b7b0f83ec0e2f59ed68135498ac5334672e7df1"
+}

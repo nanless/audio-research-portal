@@ -1,0 +1,49 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "语音驱动人像视频生成",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Phyo Thet Yee"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Dimitrios Kollias"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Sudeepta Mishra"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Abhinav Dhall"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对单模态情绪与单帧参考导致的表情平淡与时序不一致，框架 SynchroRaMa 以多模态情绪嵌入加 A2M 运动分支加文本场景描述组织两阶段扩散生成，在 HDTF 与 MEAD 上取得图像与情绪指标领先，代价是同步置信度未居首且仅验证英语肖像。",
+  "originalTitle": "SynchroRaMa : Lip-Synchronized and Emotion-Aware Talking Face Generation via Multi-Modal Emotion Embedding",
+  "paperId": "conference:wacv:2026:conference-paper-id:Yee_SynchroRaMa__Lip-Synchronized_and_Emotion-Aware_Talking_Face_Generation_via_Multi-Modal_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Yee_SynchroRaMa__Lip-Synchronized_and_Emotion-Aware_Talking_Face_Generation_via_Multi-Modal_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "多模态情绪嵌入如何让单图说话人像更生动且嘴型同步",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Yee_SynchroRaMa__Lip-Synchronized_and_Emotion-Aware_Talking_Face_Generation_via_Multi-Modal_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "17a9e77a575597011f79ee98a41e771a73af265907959015546f6c5a1da008bd"
+}

@@ -1,0 +1,67 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "音频驱动视频生成",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Donglin Huang"
+    },
+    {
+      "affiliations": [
+        "Image Derivative Inc"
+      ],
+      "name": "Yongyuan Li"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Tianhang Liu"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Junming Huang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Xiaoda Yang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Chi Wang"
+    },
+    {
+      "affiliations": [
+        "Zhejiang University"
+      ],
+      "name": "Weiwei Xu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对半身动画中头部僵硬与手部模糊问题，VividAnimator 以离线手部清晰码本、双流音频感知与免训练姿态校准实现端到端生成，在 FID 为 54.43、HyperIQA 为 71.04 与 HKC 为 0.942 上取得感知与运动最优，代价是仍需稀疏手部姿态输入且像素级 SSIM 与 PSNR 未居首。",
+  "originalTitle": "VividAnimator: An End-to-End Audio and Pose-driven Half-Body Human Animation Framework",
+  "paperId": "conference:wacv:2026:conference-paper-id:Huang_VividAnimator_An_End-to-End_Audio_and_Pose-driven_Half-Body_Human_Animation_Framework_WACV_2026_paper",
+  "pdfUrl": "https://openaccess.thecvf.com/content/WACV2026/papers/Huang_VividAnimator_An_End-to-End_Audio_and_Pose-driven_Half-Body_Human_Animation_Framework_WACV_2026_paper.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "离线手部先验与双流音频如何实现富有表现力的半身动画",
+  "recordUrl": "https://openaccess.thecvf.com/content/WACV2026/html/Huang_VividAnimator_An_End-to-End_Audio_and_Pose-driven_Half-Body_Human_Animation_Framework_WACV_2026_paper.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "ceaed235e816520480e6bc06fae20ce9b33f417de4bbe0600c3901bbfae57c1e"
+}
