@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "文本到语音",
+    "rankBucket": "后50%",
+    "score": 5.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Aniket Deroy"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对真实庭审录音难获取的问题，论文以监督者加审核者加 11 个角色的多智能体流程生成终稿文本并用两种语音合成引擎产出 600 分钟音频，人工与客观评测显示 GPT-4o 胜在法律逻辑与情感韵律而 Gemini-3.1 胜在打断处理与语音质量，但约 5% 的程序与事实幻觉与缺失的信号规格使结论仅在抽样与代理指标范围内成立。",
+  "originalTitle": "Deepcounsel: A Multi-Agent Framework for Simulating Complex Courtroom Audio Environments",
+  "paperId": "conference:wochat:2026:conference-paper-id:deroy26_wochat",
+  "pdfUrl": "https://www.isca-archive.org/wochat_2026/deroy26_wochat.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "多智能体如何编排庭审对话并合成 600 分钟法庭音频",
+  "recordUrl": "https://www.isca-archive.org/wochat_2026/deroy26_wochat.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "37542d3fd1276481661b7b52f62bf136c2acbbec1f7381730cf8deb7ce424c81"
+}

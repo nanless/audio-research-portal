@@ -1,0 +1,21 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Aniket Deroy"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:wochat:2026:conference-paper-id:deroy26_wochat",
+  "originalTitle": "Deepcounsel: A Multi-Agent Framework for Simulating Complex Courtroom Audio Environments",
+  "paperId": "conference:wochat:2026:conference-paper-id:deroy26_wochat",
+  "pdfUrl": "https://www.isca-archive.org/wochat_2026/deroy26_wochat.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/wochat_2026/deroy26_wochat.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "37542d3fd1276481661b7b52f62bf136c2acbbec1f7381730cf8deb7ce424c81",
+  "type": "conference-paper"
+}
