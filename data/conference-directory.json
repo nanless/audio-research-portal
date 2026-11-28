@@ -1,9 +1,9 @@
 {
   "contract": "conference-directory-metadata-v1",
-  "checkedAt": "2026-11-28",
+  "checkedAt": "2026-11-29",
   "inventory": {
-    "blogMain": "5f80f7cbb151cdd6f768eb3846ee27ef51b8c662",
-    "conferenceEditionCount": 35,
+    "blogMain": "0cdbbf5fe548e18abb98af48dac18174f60dc37f",
+    "conferenceEditionCount": 37,
     "allYears": [
       2026
     ],
@@ -1000,6 +1000,64 @@
       }
     },
     {
+      "id": "ijcai-2026",
+      "venueId": "ijcai",
+      "name": "IJCAI",
+      "fullName": "International Joint Conference on Artificial Intelligence",
+      "year": 2026,
+      "editionNumber": 35,
+      "aliases": [
+        "IJCAI",
+        "IJCAI 2026",
+        "IJCAI-ECAI 2026",
+        "International Joint Conference on Artificial Intelligence"
+      ],
+      "summaryPath": "/posts/conference-ijcai-2026/",
+      "categoryPath": "/categories/ijcai-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-ijcai-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/ijcai-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "国际人工智能联合会议，涵盖推理、学习、多模态智能体与语音/音频理解等方向（本站收录其中语音、音频与音视频相关论文）。",
+      "domainPosition": "国际人工智能联合会议，涵盖推理、学习、多模态智能体与语音/音频理解等方向（本站收录其中语音、音频与音视频相关论文）。",
+      "domainSourceUrl": "https://2026.ijcai.org/",
+      "event": {
+        "startDate": "2026-08-15",
+        "endDate": "2026-08-21",
+        "status": "confirmed",
+        "location": "德国·不来梅",
+        "sourceUrl": "https://2026.ijcai.org/",
+        "checkedAt": "2026-11-29",
+        "scope": "official-event-range",
+        "mainConferenceStartDate": "2026-08-18",
+        "mainConferenceEndDate": "2026-08-21"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "edition": "第七版（2026年，4月9日更新）",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-11-29",
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy",
+        "grade": "B",
+        "field": "人工智能",
+        "scope": "main-conference-full-regular-paper",
+        "note": "依据CCF署名第七版正式目录公开副本核对（第七版调整为人工智能 B 类）；会议信息与单篇论文是否适用该档次分开判断。",
+        "pageNumber": 58
+      }
+    },
+    {
       "id": "impactspeech-2026",
       "venueId": "impactspeech",
       "name": "ImpactSpeech",
@@ -1952,6 +2010,63 @@
         "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
         "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
         "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "wacv-2026",
+      "venueId": "wacv",
+      "name": "WACV",
+      "fullName": "IEEE/CVF Winter Conference on Applications of Computer Vision",
+      "year": 2026,
+      "editionNumber": null,
+      "aliases": [
+        "WACV",
+        "WACV 2026",
+        "IEEE/CVF Winter Conference on Applications of Computer Vision"
+      ],
+      "summaryPath": "/posts/conference-wacv-2026/",
+      "categoryPath": "/categories/wacv-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-wacv-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/wacv-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "IEEE/CVF 计算机视觉应用冬季会议（本站收录其中音视频理解、说话人像、语音驱动动画与音频相关论文）。",
+      "domainPosition": "IEEE/CVF 计算机视觉应用冬季会议（本站收录其中音视频理解、说话人像、语音驱动动画与音频相关论文）。",
+      "domainSourceUrl": "https://wacv.thecvf.com/",
+      "event": {
+        "startDate": "2026-03-06",
+        "endDate": "2026-03-10",
+        "status": "confirmed",
+        "location": "美国·图森",
+        "sourceUrl": "https://wacv.thecvf.com/",
+        "checkedAt": "2026-11-29",
+        "scope": "official-event-range",
+        "mainConferenceStartDate": "2026-03-08",
+        "mainConferenceEndDate": "2026-03-10"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "edition": "第七版（2026年，4月9日更新）",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-11-29",
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy",
+        "grade": "unlisted",
+        "field": "",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "pageNumber": null
       }
     },
     {

@@ -247,7 +247,7 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 保留语言特异损失时，前 1 准确率在 Fisher 英语为 97.62%，西班牙语为 95.66%，NTUML2021 英语高达 99.99%，中文为 85.21%，前 7 时分别为 96.72%、95.76%、99.98% 与 81.03%。去掉该损失后四者跌至 54.42%、51.16%、45.72% 与 69.28% 附近，前 7 去掉后为 51.06%、55.00%、45.66% 与 69.80%，说明该损失是跨组正确分流的关键。中文明显低于英语与西班牙语，原文归因于数据不均衡，这也是一个未完全解决的短板。组内排序均值与方差同样显示定制均衡损失降低了方差，Fisher 为 4.25 与 0.69，去掉后为 4.14 与 1.05，NTUML2021 为 4.77 与 0.88，去掉后为 4.67 与 1.21。
 
-为了进一步看组内专家是互补还是冗余，可以看下面这张固定单专家与路由器组合的识别误差对比图。它包含上下两个子图，分别对应 Fisher 与 NTUML2021 个模型，横轴为组内专家序号，纵轴为 WER（词错误率）或 CER（字符错误率），虚线与柱子分别代表路由器与固定专家，颜色区分语种。
+为了进一步看组内专家是互补还是冗余，可以看下面这张固定单专家与路由器组合的识别误差对比图。它包含上下两个子图，分别对应 Fisher 与 NTUML2021 两个模型，横轴为组内专家序号，纵轴为 WER（词错误率）或 CER（字符错误率），虚线与柱子分别代表路由器与固定专家，颜色区分语种。
 
 [![原论文 Figure 3：Comparison of WER↓(En, Es) and CER↓(zh-CN) scores for the router and fixed-index variants.](https://raw.githubusercontent.com/nanless/audio-paper-digest-images/main/ijcai-2026/15233093fcca/figure-3.png)](https://raw.githubusercontent.com/nanless/audio-paper-digest-images/main/ijcai-2026/15233093fcca/figure-3.png)
 
