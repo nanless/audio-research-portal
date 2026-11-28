@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "CAKE by VPBank, Vietnam"
+      ],
+      "name": "Huy Hoang Le"
+    },
+    {
+      "affiliations": [
+        "CAKE by VPBank, Vietnam"
+      ],
+      "name": "Long-Bao Nguyen"
+    },
+    {
+      "affiliations": [
+        "CAKE by VPBank, Vietnam"
+      ],
+      "name": "Minh Tri Dao"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:mlcslm:2026:conference-paper-id:le26_mlcslm",
+  "originalTitle": "SEAR: Segment-Evidence-Aware Routing for Weak-to-Strong Multilingual Speech MCQ",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:le26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/le26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/le26_mlcslm.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "1b5f7eef397b7c39585321a67c21cd18911ccf2bf45e70b3ac2c9386104f4e09",
+  "type": "conference-paper"
+}

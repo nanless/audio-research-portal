@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "强化学习",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.1
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "CAKE by VPBank, Vietnam"
+      ],
+      "name": "Huy Hoang Le"
+    },
+    {
+      "affiliations": [
+        "CAKE by VPBank, Vietnam"
+      ],
+      "name": "Long-Bao Nguyen"
+    },
+    {
+      "affiliations": [
+        "CAKE by VPBank, Vietnam"
+      ],
+      "name": "Minh Tri Dao"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多语言双人会话选择题中文本先验掩盖真实听觉理解的问题， SEAR 以时间戳事件切分加语义声学双分支合成与无音频探测分流，配合弱项监督微调与强项分组序列策略优化，在最终评测集上达到 90.92% 准确率并获得第二名，代价是评估阶段混合与合成验证依赖大模型判断。",
+  "originalTitle": "SEAR: Segment-Evidence-Aware Routing for Weak-to-Strong Multilingual Speech MCQ",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:le26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/le26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "分段证据感知路由如何让弱到强训练真正听见声音",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/le26_mlcslm.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "1b5f7eef397b7c39585321a67c21cd18911ccf2bf45e70b3ac2c9386104f4e09"
+}

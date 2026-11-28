@@ -1,0 +1,68 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "数据增强",
+    "primaryTask": "音频问答",
+    "rankBucket": "后50%",
+    "score": 5.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Ant Group",
+        "UESTC"
+      ],
+      "name": "Kexin Shi"
+    },
+    {
+      "affiliations": [
+        "Ant Group"
+      ],
+      "name": "Renhe Sun"
+    },
+    {
+      "affiliations": [
+        "Ant Group"
+      ],
+      "name": "Yuge Huang"
+    },
+    {
+      "affiliations": [
+        "UESTC"
+      ],
+      "name": "Ximeng Wang"
+    },
+    {
+      "affiliations": [
+        "Ant Group"
+      ],
+      "name": "Jiayi Zhou"
+    },
+    {
+      "affiliations": [
+        "Ant Group"
+      ],
+      "name": "Jian Liu"
+    },
+    {
+      "affiliations": [
+        "UESTC"
+      ],
+      "name": "Malu Zhang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文解读第二届多语对话挑战的双任务方案，任务 1 用前导静音裁剪加指数移动平均把 tcpMER 从 18.30% 降到 16.73%，任务 2 用合成问答加静音过滤与分布匹配把准确率从 78.0% 提升到 86.0%，但结论均以累积消融与评测集分布为前提且未报告方差与部署开销。",
+  "originalTitle": "Leading-Silence Augmentation and Multi-Stage Synthetic Supervision for the Second MLC-SLM Challenge",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:shi26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/shi26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "前导静音裁剪与多阶段合成监督如何改进长对话转录与理解",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/shi26_mlcslm.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "809371cc9ae8bcfc64e082fde62a51c04ced0357d4a22359da8e3fdcb95b977c"
+}

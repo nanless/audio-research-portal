@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "SFT",
+    "primaryTask": "多说话人语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Takanori Ashihara"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Kohei Matsuura"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Masato Mimura"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "面对无边界多语双人会话的谁何时说了什么问题，工作以微调日志加分段识别加选择优先纠错的级联为提交方案并以分块微调的一体模型为对照，在静音掩蔽开发集上以 15.28% 的平均错率优于一体对照的 18.50% ，代价是依赖双人固定与分块近似且未实现整会话联合优化。",
+  "originalTitle": "HINTT Submission to the 2nd MLC-SLM Challenge: Comparing Cascaded and Unified Approaches to Diarization and ASR",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:ashihara26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/ashihara26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "级联切分转写与一体直接生成谁更可靠：多语双人会话归属识别对比",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/ashihara26_mlcslm.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "99141eed585d8268f6deab783666f2ebf503af5cd6db1f8a19d8ab0296c90bbf"
+}

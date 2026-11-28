@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Cake By VPBank, Vietnam"
+      ],
+      "name": "Thuc Tran Huu"
+    },
+    {
+      "affiliations": [
+        "Cake By VPBank, Vietnam"
+      ],
+      "name": "Nhat-Minh Nguyen"
+    },
+    {
+      "affiliations": [
+        "Cake By VPBank, Vietnam"
+      ],
+      "name": "Huan Ho Kha Viet"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:mlcslm:2026:conference-paper-id:huu26_mlcslm",
+  "originalTitle": "A Data-Centric LoRA Recipe for Multilingual Conversational Speech Recognition",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:huu26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/huu26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/huu26_mlcslm.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "39f7e217e1b0b1fbe65fefd8e47d650964d3d850925193ec895aac9ab2eff767",
+  "type": "conference-paper"
+}

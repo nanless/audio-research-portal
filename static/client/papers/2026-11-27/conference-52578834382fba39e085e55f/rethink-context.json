@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "LoRA",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Telefónica Innovación Digital, Scientific Group"
+      ],
+      "name": "Jordi Luque"
+    },
+    {
+      "affiliations": [
+        "Fondazione Bruno Kessler"
+      ],
+      "name": "Lorenzo Concina"
+    },
+    {
+      "affiliations": [
+        "Fondazione Bruno Kessler"
+      ],
+      "name": "Marco Matassoni"
+    },
+    {
+      "affiliations": [
+        "Fondazione Bruno Kessler"
+      ],
+      "name": "Alessio Brutti"
+    },
+    {
+      "affiliations": [
+        "Consiglio Nazionale delle Ricerche"
+      ],
+      "name": "Filippo Vella"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 21 种语言整段多人对话的盲评选择题，Eloquence 并行比较了 LoRA 微调、冻结 24B 上下文示例学习与三层语音锚定检索记忆，其中冻结 24B 加 6 个多模态示例在第二阶段以 0.81 准确率最优，而微调与检索虽远超 0.35 的官方基线却分别回落至 0.72 与 0.68，代价是过拟合失配、长提示开销与前端误差累积。",
+  "originalTitle": "The Eloquence submission for Task 2 of the Interspeech 2026 MLC-SLM challenge",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:luque26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/luque26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "多语长对话理解的三条路线：微调、上下文示例与语音锚定检索",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/luque26_mlcslm.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "96a41f3dc4c9c527bfbcc8a5eaf0e173d8342315d852bf34573871169095aefa"
+}

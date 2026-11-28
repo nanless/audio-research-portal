@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "SFT",
+    "primaryTask": "多说话人语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Qi Zhi Institute, Shanghai, China"
+      ],
+      "name": "Hao Wu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Qi Zhi Institute, Shanghai, China"
+      ],
+      "name": "RongQi Han"
+    },
+    {
+      "affiliations": [
+        "Shanghai Qi Zhi Institute, Shanghai, China"
+      ],
+      "name": "Zhen Wang"
+    },
+    {
+      "affiliations": [
+        "Megatronix (Beijing) Technology Co., Ltd"
+      ],
+      "name": "Wei Liang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Qi Zhi Institute, Shanghai, China"
+      ],
+      "name": "Wei Xu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对双人多语对话需同时回答谁在何时说话与各语种说什么的难题，该系统以固定双人谱聚类前端切分音频并用全参数微调加合成语音低秩适配加组相对策略优化三阶段适配 Qwen3-ASR-1.7B，在开发集上将平均 tcpMER 从 30.53 降至 23.70，代价是强化学习增益微弱且土耳其语等难点仍未突破。",
+  "originalTitle": "Diarization-Guided Qwen-ASR Adaptation for Multilingual Two-Speaker Conversational Speech",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:wu26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/wu26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "双人多语对话识别的分段与适配：说话人分离引导的 Qwen 语音模型",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/wu26_mlcslm.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "2b27b36d656724ccbfc49ac81adc90fb161edfe6e1d3d7e1aac7815a3cf7b692"
+}

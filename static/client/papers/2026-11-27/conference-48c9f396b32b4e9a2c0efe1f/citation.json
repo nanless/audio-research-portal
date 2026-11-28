@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "UGREEN AI Lab, Shenzhen, China"
+      ],
+      "name": "Shuming Fang"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science (National Pilot Software Engineering School)"
+      ],
+      "name": "Shuifei Zeng"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:mlcslm:2026:conference-paper-id:fang26_mlcslm",
+  "originalTitle": "An Omnilingual-ASR-Based Speech-LLM System for the 2nd MLC-SLM Challenge",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:fang26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/fang26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/fang26_mlcslm.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "ed7ca347d437e343791b9724f2d2f95668de8b4d0f13c7c10cdf940b384aa95a",
+  "type": "conference-paper"
+}

@@ -1,0 +1,43 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "School of Artifcial Intelligence, Wuhan University, China",
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Li Li"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, Wuhan University, China",
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Ze Li"
+    },
+    {
+      "affiliations": [
+        "School of Artifcial Intelligence, Wuhan University, China",
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Jincheng Wang"
+    },
+    {
+      "affiliations": [
+        "School of Artifcial Intelligence, Wuhan University, China",
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Ming Li"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:mlcslm:2026:conference-paper-id:li26_mlcslm",
+  "originalTitle": "The SMIIP System for Multi-Speaker Automatic Speech Recognition in the 2nd MLC-SLM Challenge",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:li26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/li26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/li26_mlcslm.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "18700be9e25473ac0316acf2f90952a3495a9b2df65260aedb36fb4c4198a6a4",
+  "type": "conference-paper"
+}

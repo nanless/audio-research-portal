@@ -1,0 +1,53 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "LoRA",
+    "primaryTask": "多说话人语音识别",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Artifcial Intelligence, Wuhan University, China",
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Li Li"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, Wuhan University, China",
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Ze Li"
+    },
+    {
+      "affiliations": [
+        "School of Artifcial Intelligence, Wuhan University, China",
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Jincheng Wang"
+    },
+    {
+      "affiliations": [
+        "School of Artifcial Intelligence, Wuhan University, China",
+        "School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen, China"
+      ],
+      "name": "Ming Li"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对无预先说话人标签与时间边界的多语言会话转写，该工作用 w2v-S2SND 切分前端提供离散说话人与时间词元引导基于 Qwen3 的 DM-ASR 逐轮转写，在开发集与评测集上达到 24.50% 与 19.97% 的 tcpMER 大幅优于 79.15% 的官方基线，代价是两阶段训练与切分误差传导且难语言仍高于 40% 。",
+  "originalTitle": "The SMIIP System for Multi-Speaker Automatic Speech Recognition in the 2nd MLC-SLM Challenge",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:li26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/li26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "先切分后逐轮转写的多说话人语音识别系统",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/li26_mlcslm.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "18700be9e25473ac0316acf2f90952a3495a9b2df65260aedb36fb4c4198a6a4"
+}

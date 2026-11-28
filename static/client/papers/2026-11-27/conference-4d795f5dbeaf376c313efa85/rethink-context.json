@@ -1,0 +1,73 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "检索增强",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.1
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Shangkun Huang"
+    },
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Junchao Hu"
+    },
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Huan Shen"
+    },
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Guoji Wang"
+    },
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Yingao Wang"
+    },
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Shaosai Li"
+    },
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Wei Zou"
+    },
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Yunzhang Chen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对长双人多语言对话中不同题目依赖不同语义声学与说话人证据的问题，该系统以带说话人标签转写为主干并按题动态选择局部或全局音频文本证据，在开发集上取得超越全文转写与纯音频方案的准确率，代价是依赖分离时间戳与额外的大语言模型路由及多音频片段输入。",
+  "originalTitle": "The Bairong System for MLC-SLM 2026: Dynamic Question-Aware Evidence Routing for Multilingual Conversational Speech Understanding",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:huang26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/huang26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "按题选证据的多语言对话问答：转写主干动态路由系统解读",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/huang26_mlcslm.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "83f12ce4e97fbc8ffad75363803aba213fa8c9f4671a854eb6deabadf785fa92"
+}

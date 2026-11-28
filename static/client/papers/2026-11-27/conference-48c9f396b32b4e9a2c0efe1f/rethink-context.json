@@ -1,0 +1,37 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "LoRA",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.1
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "UGREEN AI Lab, Shenzhen, China"
+      ],
+      "name": "Shuming Fang"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science (National Pilot Software Engineering School)"
+      ],
+      "name": "Shuifei Zeng"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对无预先切分的多语双人电话对话联合区分与识别问题，论文以区分前端加嵌入聚类与低秩适配识别器的四阶段级联在开发集上达到宏平均 29.27% 的时间约束错误率并大幅领先官方基线，但评测集回落至 50.23% 且以牺牲重叠召回与多人通用性为代价。",
+  "originalTitle": "An Omnilingual-ASR-Based Speech-LLM System for the 2nd MLC-SLM Challenge",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:fang26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/fang26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "先区分后识别如何降低多语电话对话的时间约束错误率",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/fang26_mlcslm.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "ed7ca347d437e343791b9724f2d2f95668de8b4d0f13c7c10cdf940b384aa95a"
+}

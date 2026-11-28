@@ -1,0 +1,58 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Ant Group",
+        "UESTC"
+      ],
+      "name": "Kexin Shi"
+    },
+    {
+      "affiliations": [
+        "Ant Group"
+      ],
+      "name": "Renhe Sun"
+    },
+    {
+      "affiliations": [
+        "Ant Group"
+      ],
+      "name": "Yuge Huang"
+    },
+    {
+      "affiliations": [
+        "UESTC"
+      ],
+      "name": "Ximeng Wang"
+    },
+    {
+      "affiliations": [
+        "Ant Group"
+      ],
+      "name": "Jiayi Zhou"
+    },
+    {
+      "affiliations": [
+        "Ant Group"
+      ],
+      "name": "Jian Liu"
+    },
+    {
+      "affiliations": [
+        "UESTC"
+      ],
+      "name": "Malu Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:mlcslm:2026:conference-paper-id:shi26_mlcslm",
+  "originalTitle": "Leading-Silence Augmentation and Multi-Stage Synthetic Supervision for the Second MLC-SLM Challenge",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:shi26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/shi26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/shi26_mlcslm.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "809371cc9ae8bcfc64e082fde62a51c04ced0357d4a22359da8e3fdcb95b977c",
+  "type": "conference-paper"
+}

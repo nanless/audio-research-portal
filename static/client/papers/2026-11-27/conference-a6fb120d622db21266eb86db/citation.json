@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Shanghai Qi Zhi Institute, Shanghai, China"
+      ],
+      "name": "Hao Wu"
+    },
+    {
+      "affiliations": [
+        "Shanghai Qi Zhi Institute, Shanghai, China"
+      ],
+      "name": "RongQi Han"
+    },
+    {
+      "affiliations": [
+        "Shanghai Qi Zhi Institute, Shanghai, China"
+      ],
+      "name": "Zhen Wang"
+    },
+    {
+      "affiliations": [
+        "Megatronix (Beijing) Technology Co., Ltd"
+      ],
+      "name": "Wei Liang"
+    },
+    {
+      "affiliations": [
+        "Shanghai Qi Zhi Institute, Shanghai, China"
+      ],
+      "name": "Wei Xu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:mlcslm:2026:conference-paper-id:wu26_mlcslm",
+  "originalTitle": "Diarization-Guided Qwen-ASR Adaptation for Multilingual Two-Speaker Conversational Speech",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:wu26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/wu26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/wu26_mlcslm.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "2b27b36d656724ccbfc49ac81adc90fb161edfe6e1d3d7e1aac7815a3cf7b692",
+  "type": "conference-paper"
+}

@@ -1,0 +1,54 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音识别",
+    "rankBucket": "后50%",
+    "score": 5.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "MOSI Intelligence, Shanghai, China",
+        "Fudan University, Shanghai, China"
+      ],
+      "name": "Hanfu Chen"
+    },
+    {
+      "affiliations": [
+        "MOSI Intelligence, Shanghai, China",
+        "Fudan University, Shanghai, China",
+        "Shanghai Innovation Institute, Shanghai, China"
+      ],
+      "name": "Chen Yang"
+    },
+    {
+      "affiliations": [
+        "MOSI Intelligence, Shanghai, China",
+        "Fudan University, Shanghai, China"
+      ],
+      "name": "Zhengyuan Lin"
+    },
+    {
+      "affiliations": [
+        "MOSI Intelligence, Shanghai, China",
+        "Fudan University, Shanghai, China"
+      ],
+      "name": "Donghua Yu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对无预切分多语长对话同时需要识别、说话人归属与时间定位的难题，论文以 MTD 端到端生成带时间戳说话人转写并以 MOSS-Audio-8B-Thinking 直接从音频推理选择题，在评测集取得 14.93 tcpMER 与两阶段 0.94 准确率，代价是十万小时量级多阶段预训练与 128k 长上下文适配。",
+  "originalTitle": "The MOSS Systems for the MLC-SLM Challenge 2026",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:chen26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/chen26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "多语长对话的端到端转写归属与音频直接理解",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/chen26_mlcslm.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "22ac88ccc65e9dcc119a2049c029851a9243106324a65c4fb420012210835b55"
+}

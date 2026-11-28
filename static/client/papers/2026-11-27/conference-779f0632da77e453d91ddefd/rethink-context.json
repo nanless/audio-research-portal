@@ -1,0 +1,73 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "LoRA",
+    "primaryTask": "多说话人语音识别",
+    "rankBucket": "前50%",
+    "score": 6.1
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shenzhen Transsion Holdings Co., Ltd, China"
+      ],
+      "name": "Zhecheng Ren"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Transsion Holdings Co., Ltd, China"
+      ],
+      "name": "Xuanji He"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Transsion Holdings Co., Ltd, China"
+      ],
+      "name": "Xiaoxiao Li"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Transsion Holdings Co., Ltd, China"
+      ],
+      "name": "Zhichen Han"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Transsion Holdings Co., Ltd, China"
+      ],
+      "name": "Gaoyang Dong"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Transsion Holdings Co., Ltd, China"
+      ],
+      "name": "Gaosheng Zhang"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Transsion Holdings Co., Ltd, China"
+      ],
+      "name": "Minchuan Chen"
+    },
+    {
+      "affiliations": [
+        "Shenzhen Transsion Holdings Co., Ltd, China"
+      ],
+      "name": "Fengjie Zhu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对无预先切分的多语对话说话人归属转写，本文以说话人区分、Qwen3-Omni 长语音识别加 CTC 对齐与重叠优先融合的三段级联在官方评测集上取得 15.41% 的 tcpMER 位列第二，代价是多模型串联的复杂度与对区分精度的强依赖。",
+  "originalTitle": "Transsion’s Speaker-Attributed Multilingual ASR System for the MLC-SLM 2026 Challenge",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:ren26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/ren26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "带说话人归属的多语对话识别三段级联系统解读",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/ren26_mlcslm.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "dfeba21ffeb71cdcbe2dec0df47a515e10522df4cc1cfdef256b03a9bfcc4b4f"
+}

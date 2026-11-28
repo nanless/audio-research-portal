@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "LoRA",
+    "primaryTask": "多说话人语音识别",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Cake By VPBank, Vietnam"
+      ],
+      "name": "Thuc Tran Huu"
+    },
+    {
+      "affiliations": [
+        "Cake By VPBank, Vietnam"
+      ],
+      "name": "Nhat-Minh Nguyen"
+    },
+    {
+      "affiliations": [
+        "Cake By VPBank, Vietnam"
+      ],
+      "name": "Huan Ho Kha Viet"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 14 种语言双人对话需联合完成转写与归属的问题，论文以冻结 VibeVoice-ASR 加三阶段数据配方在 21 个变体盲测上达到 15.84% tcpWER 获得第三名，代价是依赖人工核验标签修复、静音门控匹配与榜单反馈选点。",
+  "originalTitle": "A Data-Centric LoRA Recipe for Multilingual Conversational Speech Recognition",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:huu26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/huu26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "数据为先的低秩适配：多语对话识别的三阶段配方解读",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/huu26_mlcslm.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "39f7e217e1b0b1fbe65fefd8e47d650964d3d850925193ec895aac9ab2eff767"
+}

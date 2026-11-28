@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Telefónica Innovación Digital, Scientific Group"
+      ],
+      "name": "Jordi Luque"
+    },
+    {
+      "affiliations": [
+        "Fondazione Bruno Kessler"
+      ],
+      "name": "Lorenzo Concina"
+    },
+    {
+      "affiliations": [
+        "Fondazione Bruno Kessler"
+      ],
+      "name": "Marco Matassoni"
+    },
+    {
+      "affiliations": [
+        "Fondazione Bruno Kessler"
+      ],
+      "name": "Alessio Brutti"
+    },
+    {
+      "affiliations": [
+        "Consiglio Nazionale delle Ricerche"
+      ],
+      "name": "Filippo Vella"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:mlcslm:2026:conference-paper-id:luque26_mlcslm",
+  "originalTitle": "The Eloquence submission for Task 2 of the Interspeech 2026 MLC-SLM challenge",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:luque26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/luque26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/luque26_mlcslm.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "96a41f3dc4c9c527bfbcc8a5eaf0e173d8342315d852bf34573871169095aefa",
+  "type": "conference-paper"
+}

@@ -1,0 +1,44 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "MOSI Intelligence, Shanghai, China",
+        "Fudan University, Shanghai, China"
+      ],
+      "name": "Hanfu Chen"
+    },
+    {
+      "affiliations": [
+        "MOSI Intelligence, Shanghai, China",
+        "Fudan University, Shanghai, China",
+        "Shanghai Innovation Institute, Shanghai, China"
+      ],
+      "name": "Chen Yang"
+    },
+    {
+      "affiliations": [
+        "MOSI Intelligence, Shanghai, China",
+        "Fudan University, Shanghai, China"
+      ],
+      "name": "Zhengyuan Lin"
+    },
+    {
+      "affiliations": [
+        "MOSI Intelligence, Shanghai, China",
+        "Fudan University, Shanghai, China"
+      ],
+      "name": "Donghua Yu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:mlcslm:2026:conference-paper-id:chen26_mlcslm",
+  "originalTitle": "The MOSS Systems for the MLC-SLM Challenge 2026",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:chen26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/chen26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/chen26_mlcslm.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "22ac88ccc65e9dcc119a2049c029851a9243106324a65c4fb420012210835b55",
+  "type": "conference-paper"
+}

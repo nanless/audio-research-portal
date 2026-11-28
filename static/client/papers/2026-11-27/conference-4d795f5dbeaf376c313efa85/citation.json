@@ -1,0 +1,63 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Shangkun Huang"
+    },
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Junchao Hu"
+    },
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Huan Shen"
+    },
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Guoji Wang"
+    },
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Yingao Wang"
+    },
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Shaosai Li"
+    },
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Wei Zou"
+    },
+    {
+      "affiliations": [
+        "BRVoice Team, Bairong, Inc., China"
+      ],
+      "name": "Yunzhang Chen"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:mlcslm:2026:conference-paper-id:huang26_mlcslm",
+  "originalTitle": "The Bairong System for MLC-SLM 2026: Dynamic Question-Aware Evidence Routing for Multilingual Conversational Speech Understanding",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:huang26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/huang26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/huang26_mlcslm.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "83f12ce4e97fbc8ffad75363803aba213fa8c9f4671a854eb6deabadf785fa92",
+  "type": "conference-paper"
+}

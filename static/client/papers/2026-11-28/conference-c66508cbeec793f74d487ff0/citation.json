@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Takanori Ashihara"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Kohei Matsuura"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Masato Mimura"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:mlcslm:2026:conference-paper-id:ashihara26_mlcslm",
+  "originalTitle": "HINTT Submission to the 2nd MLC-SLM Challenge: Comparing Cascaded and Unified Approaches to Diarization and ASR",
+  "paperId": "conference:mlcslm:2026:conference-paper-id:ashihara26_mlcslm",
+  "pdfUrl": "https://www.isca-archive.org/mlcslm_2026/ashihara26_mlcslm.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/mlcslm_2026/ashihara26_mlcslm.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "99141eed585d8268f6deab783666f2ebf503af5cd6db1f8a19d8ab0296c90bbf",
+  "type": "conference-paper"
+}
