@@ -1,0 +1,43 @@
+{
+  "abstract": "Audio-video question answering (AVQA) systems for music show signs of multimodal “understanding”, but it is unclear which inputs they rely on or whether their behavior reflects genuine audio-video reasoning. Existing evaluations focus on overall accuracy and rarely examine modality dependence. We address this gap by suggesting a method of using counterfactual evaluations to analyse the audio-video understanding of the models, illustrated with a case study on the audio-video spatial-temporal (AVST) architecture. This includes interventions that zero out or swap audio, video, or both, where results are benchmarked against a baseline based on linguistic patterns alone. Results show stronger reliance on audio than video, yet performance persists when either modality is removed, indicating learned cross-modal representations. The AVQA system studied thus exhibits non-trivial multimodal integration, though its “understanding” remains uneven.",
+  "abstractSha256": "967ef47b72f81fd3dac58cadfa8ce55b6a6768dd65745323102e51316167b637",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "音视频问答",
+    "rankBucket": "前50%",
+    "score": 6.1
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Philosophy, Classics, History of Art and Ideas, University of Oslo"
+      ],
+      "name": "Sara Pernille Jensen"
+    },
+    {
+      "affiliations": [
+        "Department of Informatics, University of Oslo"
+      ],
+      "name": "Hallvard Innset Hurum"
+    },
+    {
+      "affiliations": [
+        "RITMO, Department of Musicology, University of Oslo"
+      ],
+      "name": "Anna-Maria Christodoulou"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对音乐音视频问答高分是否反映真正多模态推理，本文以置零消融与跨样本冲突对照语言基线，发现完整输入 70.58% 高于频繁猜测 47.84% 且去音频跌至 56.13% 而去视频仅至 66.27%，代价是结论限于单个模型并残留答案偏置与冲突下过度自信。",
+  "originalTitle": "Stochastic Parrots or True Virtuosos? Digging Deeper Into the Audio-Video Understanding of AVQA Models",
+  "paperId": "conference:nlp4musa:2026:conference-paper-id:2026.nlp4musa-1.3",
+  "pdfUrl": "https://aclanthology.org/2026.nlp4musa-1.3.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "随机鹦鹉还是真正大师：音乐音视频问答的反事实检验",
+  "recordUrl": "https://aclanthology.org/2026.nlp4musa-1.3/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "16caa1a8096bea23647e1600d3f18d419db3f2e1e86d86fe5cb9a4a9e414049b"
+}

@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Deepak Kumar"
+    },
+    {
+      "affiliations": [
+        "Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Emmanouil Karystinaios"
+    },
+    {
+      "affiliations": [
+        "Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Gerhard Widmer"
+    },
+    {
+      "affiliations": [
+        "Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Markus Schedl"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:nlp4musa:2026:conference-paper-id:2026.nlp4musa-1.5",
+  "originalTitle": "How Far Can Pretrained LLMs Go in Symbolic Music? Controlled Comparisons of Supervised and Preference-based Adaptation",
+  "paperId": "conference:nlp4musa:2026:conference-paper-id:2026.nlp4musa-1.5",
+  "pdfUrl": "https://aclanthology.org/2026.nlp4musa-1.5.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.nlp4musa-1.5/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "a5451168928af0424932a82691edd427b4e9363b623136700f195cfbaf1bcf39",
+  "type": "conference-paper"
+}

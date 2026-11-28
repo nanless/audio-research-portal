@@ -1,0 +1,21 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Steven Au"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:nlp4musa:2026:conference-paper-id:2026.nlp4musa-1.6",
+  "originalTitle": "MIDI-PHOR: Multi-View Distillation for Music Understanding and Captioning",
+  "paperId": "conference:nlp4musa:2026:conference-paper-id:2026.nlp4musa-1.6",
+  "pdfUrl": "https://aclanthology.org/2026.nlp4musa-1.6.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.nlp4musa-1.6/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "e0fa15fe61b8c1db0fb1dbbf1a91ac31f7f1f91a7a9b6ff2bc1814c393c0391b",
+  "type": "conference-paper"
+}

@@ -1,0 +1,57 @@
+{
+  "abstract": "The advancement of Machine learning (ML), Large Audio Language Models (LALMs), and autonomous AI agents in Music Information Retrieval (MIR) necessitates a shift from static tagging to rich, human-aligned representation learning. However, the scarcity of open-source infrastructure capable of capturing the subjective nuances of audio annotation remains a critical bottleneck. This paper introduces LabelBuddy, an open-source collaborative auto-tagging audio annotation tool designed to bridge the gap between human intent and machine understanding. Unlike static tools, it decouples the interface from inference via containerized backends, allowing users to plug in custom models for AI-assisted pre-annotation. We describe the system architecture, which supports multi-user consensus, containerized model isolation, and a roadmap for extending agents and LALMs. Code available at https://github.com/GiannisProkopiou/gsoc2022-Label-buddy.",
+  "abstractSha256": "9a27db30941aa1583dee471f0917508516e80782e38ee710277446658b1e0e59",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "数据标注",
+    "primaryTask": "音频分类",
+    "rankBucket": "后50%",
+    "score": 5.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Athens University of Economics and Business",
+        "Orfium"
+      ],
+      "name": "Ioannis Prokopiou"
+    },
+    {
+      "affiliations": [
+        "University of Patras"
+      ],
+      "name": "Ioannis Sina"
+    },
+    {
+      "affiliations": [
+        "University of Patras"
+      ],
+      "name": "Agisilaos Kounelis"
+    },
+    {
+      "affiliations": [
+        "Orfium"
+      ],
+      "name": "Pantelis Vikatos"
+    },
+    {
+      "affiliations": [
+        "Athens University of Economics and Business",
+        "Archimedes/Athena R.C."
+      ],
+      "name": "Themos Stafylakis"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对音乐音频标注中主观细节难捕捉与流程割裂的问题，LabelBuddy 以 Django 交互层加 Docker 推理层的解耦架构与多角色共识流程把创建转为核验，功能矩阵显示其为唯一兼具音频专用与解耦辅助与开源与协作共识的工具，代价是尚无受控实验量化时间收益与模型增益。",
+  "originalTitle": "LabelBuddy: An Open Source Music and Audio Language Annotation Tagging Tool Using AI Assistance",
+  "paperId": "conference:nlp4musa:2026:conference-paper-id:2026.nlp4musa-1.2",
+  "pdfUrl": "https://aclanthology.org/2026.nlp4musa-1.2.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "LabelBuddy 解耦式协作音频标注工具解读",
+  "recordUrl": "https://aclanthology.org/2026.nlp4musa-1.2/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "632e4e121b8f7a25dd5fd2510591748d09d16eaabc516547cb1ce9a47f3a2975"
+}

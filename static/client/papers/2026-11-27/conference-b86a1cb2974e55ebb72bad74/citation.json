@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Benno Weck"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Pablo Puentes"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Andrea Poltronieri"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Satyajeet Prabhu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Dmitry Bogdanov"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:nlp4musa:2026:conference-paper-id:2026.nlp4musa-1.9",
+  "originalTitle": "HumMusQA: A Human-written Music Understanding QA Benchmark Dataset",
+  "paperId": "conference:nlp4musa:2026:conference-paper-id:2026.nlp4musa-1.9",
+  "pdfUrl": "https://aclanthology.org/2026.nlp4musa-1.9.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.nlp4musa-1.9/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "5c96317769534493ac01b4d6c50834068261d8b5f59be1f45ce711fe32b24ef0",
+  "type": "conference-paper"
+}

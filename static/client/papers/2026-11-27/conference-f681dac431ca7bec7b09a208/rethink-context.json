@@ -1,0 +1,31 @@
+{
+  "abstract": "A central limitation of current music understanding frameworks is the reliance on audio embeddings, which frequently yields interpretations lacking traceable ties to explicit musical elements such as notes, dynamics, and instrumentation. We address this gap with MIDIPHOR, a MIDI-first framework that converts symbolic data into structured, queryable representations for reasoning. MIDI-PHOR distills each piece into three complementary views: a symbolic view capturing pitch, meter, and key; a time-series (TS) view that tracks rhythmic salience, texture, and role activity; and an instrument-role graph encoding ensemble interactions. With evidence-linked claims, experiments demonstrate reduced hallucinations compared to raw-MIDI baselines and offer a robust, auditable bridge between symbolic data and semantic music understanding.",
+  "abstractSha256": "4e4a8d79671076128e16578f620c69e259c6886d1b57567d2407954381e98fdc",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "音频字幕生成",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Steven Au"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对音频嵌入难以追溯音符与配器依据的问题，MIDI-PHOR 以符号、时序与配器图三重视角构建按小节对齐的关系库并约束语言模型只输出带证据的声明，在 97 首检验中验证通过率达 0.804 且幻觉率低至 0.186，代价是声明覆盖率偏低且依赖符号质量与启发式阈值。",
+  "originalTitle": "MIDI-PHOR: Multi-View Distillation for Music Understanding and Captioning",
+  "paperId": "conference:nlp4musa:2026:conference-paper-id:2026.nlp4musa-1.6",
+  "pdfUrl": "https://aclanthology.org/2026.nlp4musa-1.6.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "以符号三重视角让音乐标题可回查到小节与声部",
+  "recordUrl": "https://aclanthology.org/2026.nlp4musa-1.6/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "e0fa15fe61b8c1db0fb1dbbf1a91ac31f7f1f91a7a9b6ff2bc1814c393c0391b"
+}

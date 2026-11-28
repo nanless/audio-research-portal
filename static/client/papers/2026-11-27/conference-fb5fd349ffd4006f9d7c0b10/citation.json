@@ -1,0 +1,47 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Athens University of Economics and Business",
+        "Orfium"
+      ],
+      "name": "Ioannis Prokopiou"
+    },
+    {
+      "affiliations": [
+        "University of Patras"
+      ],
+      "name": "Ioannis Sina"
+    },
+    {
+      "affiliations": [
+        "University of Patras"
+      ],
+      "name": "Agisilaos Kounelis"
+    },
+    {
+      "affiliations": [
+        "Orfium"
+      ],
+      "name": "Pantelis Vikatos"
+    },
+    {
+      "affiliations": [
+        "Athens University of Economics and Business",
+        "Archimedes/Athena R.C."
+      ],
+      "name": "Themos Stafylakis"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:nlp4musa:2026:conference-paper-id:2026.nlp4musa-1.2",
+  "originalTitle": "LabelBuddy: An Open Source Music and Audio Language Annotation Tagging Tool Using AI Assistance",
+  "paperId": "conference:nlp4musa:2026:conference-paper-id:2026.nlp4musa-1.2",
+  "pdfUrl": "https://aclanthology.org/2026.nlp4musa-1.2.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.nlp4musa-1.2/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "632e4e121b8f7a25dd5fd2510591748d09d16eaabc516547cb1ce9a47f3a2975",
+  "type": "conference-paper"
+}
