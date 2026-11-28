@@ -1,0 +1,61 @@
+{
+  "abstract": "This work presents a virtual reality (VR) training tool designed to raise awareness of social discrimination (ethnic and gender-based) and to train individuals to respond effectively when witnessing such situations. Inspired by Augusto Boal’s forum theatre, the system recreates interactive scenarios of discrimination using autonomous virtual agents. The user first observes a discriminatory scene, then analyzes it through an interaction with a virtual conversational agent, and finally replays the scene by embodying the discriminated character to explore alternative reactions. From a dialogue system perspective, the project introduces a hybrid dialogue management architecture combining state-based control with Large Language Model (LLM)-driven open dialogue. This mixed-initiative approach allows the system to manage structured training sequences while supporting flexible, context-aware interactions on sensitive topics. The demonstrator illustrates this approach through a case of ordinary sexism in a professional setting, highlighting the potential of spoken dialogue systems in VR for experiential learning and social behavior training.",
+  "abstractSha256": "27f6ca29b4a900dba9240d84a2e1e9708d4d3e472b10dc4cfdc8c83143e4f4f5",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "后50%",
+    "score": 4.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "LIS - Aix Marseille University - CNRS - France"
+      ],
+      "name": "Samuel Otofa"
+    },
+    {
+      "affiliations": [
+        "CRVM - Aix Marseille University - CNRS - France"
+      ],
+      "name": "Yacine Zerenini"
+    },
+    {
+      "affiliations": [
+        "LIS - Aix Marseille University - CNRS - France"
+      ],
+      "name": "Frederic Bechet"
+    },
+    {
+      "affiliations": [
+        "LIS - Aix Marseille University - CNRS - France"
+      ],
+      "name": "Benoit Favre"
+    },
+    {
+      "affiliations": [
+        "CRVM - Aix Marseille University - CNRS - France"
+      ],
+      "name": "Jean-Marie Pergandi"
+    },
+    {
+      "affiliations": [
+        "LIS - Aix Marseille University - CNRS - France"
+      ],
+      "name": "Magalie Ochs"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对目击歧视时缺乏可练习的应对训练问题，论文提出以状态控制约束大语言模型开放对话的三阶段虚拟现实论坛剧场系统，并以职场日常性别偏见演示验证了流程可行性，但未提供任何量化学习效果评估。",
+  "originalTitle": "Mixed-Initiative Dialogue Management for Human-Virtual Agents Interaction in Forum Theatre Inspired Training",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.11",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.11.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "混合主导对话如何让虚拟人在论坛剧场训练中守住流程又能开放交谈",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.11/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "1839fd9dbde87e619fe3cbe18387eb36c56ddccb7d384af0f30c5c6a3f724e7b"
+}

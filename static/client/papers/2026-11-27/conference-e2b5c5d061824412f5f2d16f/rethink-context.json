@@ -1,0 +1,43 @@
+{
+  "abstract": "Turn-taking is a hallmark of human conversation, yet its developmental trajectory remains poorly understood. Adults typically respond within a few hundred milliseconds, suggesting reliance on predictive cues rather than simply waiting for silence. In contrast, children’s longer gaps raise the question of whether they depend on simpler, reactive strategies. This study provides the first large-scale test of competing hypotheses about children’s turn-taking, using corpora of child–adult and adult–adult dialogues. In Study 1, we compared a simple silence-based threshold model with the Voice Activity Projection (VAP) model, which predicts upcoming speech activity from acoustic features. Results showed that silence alone could not account for children’s behavior, whereas predictive acoustic models performed well, indicating that even early turn-taking relies on anticipatory mechanisms. In Study 2, we asked what cues support these predictions by comparing models based on acoustic features alone with models combining acoustic and lexical information. For adult conversations, lexical cues improved prediction, but for child–adult dialogues, acoustic information was sufficient to solve the task. Together, these findings suggest that children’s turn-taking is predictive but primarily grounded in acoustic patterns, revealing both continuity with adult mechanisms and developmental differences in how linguistic cues are integrated.",
+  "abstractSha256": "0a5c6c8b9273b9209f40803df37afc30605f765488b8c8f1b467b664e5924901",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "轮次切换",
+    "rankBucket": "后50%",
+    "score": 5.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Aix Marseille Univ, CNRS, LIS, Marseille, France"
+      ],
+      "name": "Youcef Brahimi"
+    },
+    {
+      "affiliations": [
+        "Aix Marseille Univ, CNRS, LIS, Marseille, France"
+      ],
+      "name": "César Blanc"
+    },
+    {
+      "affiliations": [
+        "Aix Marseille Univ, CNRS, LIS, Marseille, France"
+      ],
+      "name": "Abdellah Fourtassi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对儿童依靠静音等待还是提前预测实现轮替以及依赖何种线索的问题，研究用统一的轮替保持任务对比静音阈值与语音活动投影模型，发现阈值 AUC 仅 0.62 至 0.63 而预测模型在儿童语料达 F1 分数 90.28 且仅声学已近上限，词汇增益仅见于成人电话对话，代价是场景混杂与缺少视觉验证。",
+  "originalTitle": "Predicting Turn-Taking in Child–Adult Conversations Using Voice Activity Projection",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.34",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.34.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "儿童轮替是预测而非等待静音：语音活动投影的两项检验",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.34/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "d27d15aa15fa0cf7c3782ae0fffcb4b150f35fd1f00a7e85e12a1921fc91e998"
+}

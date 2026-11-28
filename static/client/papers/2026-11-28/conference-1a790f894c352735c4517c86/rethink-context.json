@@ -1,0 +1,55 @@
+{
+  "abstract": "Current in-vehicle conversational agents lack awareness of the driving situation, treating all dialogue alike regardless of cognitive demands. This paper presents a modular experimental platform that integrates the CARLA driving simulator with a real-time spatial-reasoning engine to support research on situation-aware dialogue. The system enables Wizard-of-Oz studies in which human operators control conversational agents informed by live spatial-semantic analysis of the traffic environment. As initial validation, a controlled study (n = 10) tested the platform’s sensitivity to conversational load effects, examining whether increasing conversational complexity produces a vanishing point of attention, a threshold where combined conversational and driving demands lead to a non-linear collapse in performance. Results revealed a sharp rise in collisions and missed hazard detections under high cognitive load, confirming the platform’s sensitivity to conversational strain. The platform provides a reproducible testbed for investigating how dialogue timing, content, and environmental demands interact, offering a foundation for designing adaptive, cognitively safe in-vehicle conversational systems.",
+  "abstractSha256": "9a53bf58be9a85734e9f81fd68cc7090abef6a1a2b84c634f4c2febe69041a04",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "后50%",
+    "score": 5.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Nagoon AB, Stockholm, Sweden"
+      ],
+      "name": "Morgan Fredriksson"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology, Stockholm, Sweden"
+      ],
+      "name": "Yanis Yaici"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology, Stockholm, Sweden"
+      ],
+      "name": "Kevin Lam"
+    },
+    {
+      "affiliations": [
+        "Nagoon AB, Stockholm, Sweden"
+      ],
+      "name": "Jurgen Konigsmann"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology, Stockholm, Sweden"
+      ],
+      "name": "Jens Edlund"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对车载对话无视驾驶负荷的安全隐患，论文搭建 CARLA 仿真与实时空间推理联动的绿野仙踪实验平台，以 10 人被试验证高复杂度对话使碰撞升至平均每次 2.3 次、探测命中率跌至 59.8%，代价是样本同质且限于仿真，未验证自适应策略与真实道路推广。",
+  "originalTitle": "Vanishing point of attention: A platform for adaptive driver dialogue experiments",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.24",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.24.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "注意力消失点：面向自适应驾驶员对话实验的仿真平台解读",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.24/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "68f9208c6b97a54b4d7e364887b8233cb27dd26ffb88e5bc9ed0be3ebcee60a3"
+}

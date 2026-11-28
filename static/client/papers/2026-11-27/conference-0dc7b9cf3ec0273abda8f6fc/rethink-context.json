@@ -1,0 +1,49 @@
+{
+  "abstract": "Summarizing domain-specific and multi-speaker conversations, such as political debates, remains challenging under noisy ASR conditions. In industrial contexts, large language models (LLMs) are often impractical due to resource and confidentiality constraints. This work evaluates whether smaller LLMs (up to 8B parameters) can produce reliable summaries in such settings. Experiments on French debates show that noise significantly degrades accuracy and readability, while fine-tuning on clean, domain-related data improves robustness and reduces hallucinations. We also analyze person-name mentions as indicators of speaker faithfulness, finding that fine-tuning can help identify all speakers in far more debates than chain-of-thought prompting. However, evaluations on limited industrial data show that fine-tuning still struggles to generalize to unseen speakers and topics.",
+  "abstractSha256": "094a55f9529181113818ea70aff9d9e19f2e1efef829b1ef404e1e2b7a0745ce",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "语音摘要",
+    "rankBucket": "后50%",
+    "score": 5.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Rim Abrougui"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Guillaume Lechien"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Elisabeth Savatier"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Benoît Laurent"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文检验 8B 参数以内小模型在模拟含噪法语辩论摘要中能否兼顾内容与说话人忠实，对比直接提示、思维链与干净及含噪微调，发现噪声使 ROUGE-L 与可读性大跌，干净微调仅使 DeepSeek 类模型回升并降低人物虚构而思维链更通用，但仅 5 个工业辩论显示未见说话人与主题仍难泛化。",
+  "originalTitle": "Can Small-Scale LLMs Balance Content Accuracy and Speaker Faithfulness in Noisy French Dialogue Summarization?",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.17",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.17.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "小模型在含噪法语辩论摘要中能否兼顾内容与说话人忠实",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.17/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "1addd16c9fda5bbdb865e810a5d2f34a530842b17049026c6ff923d33a8771d2"
+}

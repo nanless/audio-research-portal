@@ -1,0 +1,58 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Information Engineering and Computer Science, University of Trento, Italy"
+      ],
+      "name": "Lorenzo Fumi"
+    },
+    {
+      "affiliations": [
+        "Department of Information Engineering and Computer Science, University of Trento, Italy"
+      ],
+      "name": "Marco Bombieri"
+    },
+    {
+      "affiliations": [
+        "Azienda Provinciale per i Servizi Sanitari, Trento, Italy"
+      ],
+      "name": "Sara Allievi"
+    },
+    {
+      "affiliations": [
+        "Azienda Provinciale per i Servizi Sanitari, Trento, Italy"
+      ],
+      "name": "Stefano Bonvini"
+    },
+    {
+      "affiliations": [
+        "Institute of Cognitive Science and Department of Computer Science, University of Colorado, Boulder, USA"
+      ],
+      "name": "Theodora Chaspari"
+    },
+    {
+      "affiliations": [
+        "Medical Robotics and Computer Assisted Surgery (MRCAS) Laboratory, Division of Cardiac Surgery, Veterans Affairs Boston Healthcare System, Boston, MA, USA",
+        "Division of Cardiac Surgery, Brigham and Women’s Hospital, Mass General Brigham, Harvard Medical School, Boston, MA, USA"
+      ],
+      "name": "Marco A. Zenati"
+    },
+    {
+      "affiliations": [
+        "Department of Information Engineering and Computer Science, University of Trento, Italy"
+      ],
+      "name": "Paolo Giorgini"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.40",
+  "originalTitle": "ReflectOR: an LLM-based Agent for Post-Operative Surgical Debriefing",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.40",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.40.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.40/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "2d937e42030e93b3ca983f68fb31d2294046b7e3cd43934ae88ccd6d3bf64f34",
+  "type": "conference-paper"
+}

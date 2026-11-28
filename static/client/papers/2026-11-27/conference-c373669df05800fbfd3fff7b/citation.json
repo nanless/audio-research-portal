@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "National Taiwan University, Taipei, Taiwan"
+      ],
+      "name": "Zhi Rui Tam"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University, Taipei, Taiwan"
+      ],
+      "name": "Wen Yu Chang"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University, Taipei, Taiwan"
+      ],
+      "name": "Yun-Nung Chen"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.7",
+  "originalTitle": "The Context Trap: Why End-to-End Audio Language Models Fail Multi-turn Dialogues",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.7",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.7.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.7/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "172e8b1d3e984284bc4e08acf6f1b6ac55b36d8f7b1f96857fe9dbae2b933a3e",
+  "type": "conference-paper"
+}

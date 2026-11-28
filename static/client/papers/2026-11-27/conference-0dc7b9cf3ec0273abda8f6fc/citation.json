@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Rim Abrougui"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Guillaume Lechien"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Elisabeth Savatier"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Benoît Laurent"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.17",
+  "originalTitle": "Can Small-Scale LLMs Balance Content Accuracy and Speaker Faithfulness in Noisy French Dialogue Summarization?",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.17",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.17.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.17/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "1addd16c9fda5bbdb865e810a5d2f34a530842b17049026c6ff923d33a8771d2",
+  "type": "conference-paper"
+}

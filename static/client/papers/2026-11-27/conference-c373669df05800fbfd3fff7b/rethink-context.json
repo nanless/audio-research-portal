@@ -1,0 +1,43 @@
+{
+  "abstract": "This study systematically compares end-to-end (E2E) audio language models (AudioLMs) against modular (ASR, LLM, TTS) systems for multi-phase task-oriented dialogues. We evaluate open-source models on key metrics: conversational naturalness and dialogue consistency. Our findings show that E2E configurations consistently underperform their modular counterparts, exhibiting severe degradation in dialogue quality across turns. Investigating this failure, our analysis reveals that the core issue lies in the E2E models’ dialogue modeling capabilities, specifically in context maintenance and topic tracking. This work highlights a critical gap between the purported low-latency benefit of AudioLMs and their practical ability to maintain coherence in complex, multi-turn dialogues, suggesting a need for focused architectural improvements.",
+  "abstractSha256": "ef9337280efb73ea91b49d1909693de6dbb6370d959ee8549241f864bfcbf304",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "后50%",
+    "score": 5.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "National Taiwan University, Taipei, Taiwan"
+      ],
+      "name": "Zhi Rui Tam"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University, Taipei, Taiwan"
+      ],
+      "name": "Wen Yu Chang"
+    },
+    {
+      "affiliations": [
+        "National Taiwan University, Taipei, Taiwan"
+      ],
+      "name": "Yun-Nung Chen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文以多阶段销售对话为场景，对比端到端音频模型与语音识别加文本推理加语音合成的组合系统，发现端到端在自然度与一致性上随轮次大幅下滑且与音频质量无关，最强证据是 Qwen-Omni-3B 音频直答自然度在七轮内从 51.4 分跌至 23.9 分，而代价是 200-300 ms 低延迟优势无法换来上下文维持能力。",
+  "originalTitle": "The Context Trap: Why End-to-End Audio Language Models Fail Multi-turn Dialogues",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.7",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.7.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "语境陷阱：端到端音频大模型为何在多轮对话中掉线",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.7/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "172e8b1d3e984284bc4e08acf6f1b6ac55b36d8f7b1f96857fe9dbae2b933a3e"
+}

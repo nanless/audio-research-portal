@@ -1,0 +1,87 @@
+{
+  "abstract": "As Automatic Speech Recognition (ASR) is increasingly deployed in clinical dialogue, standard evaluations still rely heavily on Word Error Rate (WER). This paper challenges that standard, investigating whether WER or other common metrics correlate with the clinical impact of transcription errors. We establish a gold-standard benchmark by having expert clinicians compare ground-truth utterances to their ASR-generated counterparts, labeling the clinical impact of any discrepancies found in two distinct doctor-patient dialogue datasets. Our analysis reveals that WER and a comprehensive suite of existing metrics correlate poorly with the clinician-assigned risk labels (No, Minimal, or Significant Impact). To bridge this evaluation gap, we introduce an LLM-as-a-Judge, programmatically optimized using GEPA to replicate expert clinical assessment. The optimized judge (Gemini-2.5-Pro) achieves human-comparable performance, obtaining 90% accuracy and a strong Cohen’s kappa of 0.816. This work provides a validated, automated framework for moving ASR evaluation beyond simple textual fidelity to a necessary, scalable assessment of safety in clinical dialogue.",
+  "abstractSha256": "77a023cc0aaa2cf1f561a0665ffe2a747fffd8296f890b2906645fd4177ce485",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Ufonia Limited"
+      ],
+      "name": "Zachary Ellis"
+    },
+    {
+      "affiliations": [
+        "Ufonia Limited"
+      ],
+      "name": "Jared Joselowitz"
+    },
+    {
+      "affiliations": [
+        "University of York"
+      ],
+      "name": "Yash Deo"
+    },
+    {
+      "affiliations": [
+        "Ufonia Limited"
+      ],
+      "name": "Yajie He"
+    },
+    {
+      "affiliations": [
+        "Ufonia Limited"
+      ],
+      "name": "Anna Kalygina"
+    },
+    {
+      "affiliations": [
+        "Ufonia Limited",
+        "Oxford University Hospitals"
+      ],
+      "name": "Aisling Higham"
+    },
+    {
+      "affiliations": [
+        "Moorfields Eye Hospital"
+      ],
+      "name": "Mana Rahimzadeh"
+    },
+    {
+      "affiliations": [
+        "University of York"
+      ],
+      "name": "Yan Jia"
+    },
+    {
+      "affiliations": [
+        "University of York"
+      ],
+      "name": "Ibrahim Habli"
+    },
+    {
+      "affiliations": [
+        "Ufonia Limited",
+        "University of York"
+      ],
+      "name": "Ernest Lim"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对字错率等旧指标与临床风险脱节的问题，论文构建 298 例专家标注基准并用代价敏感演化训练大模型评审器，在 50 例测试上达到 90% 准确率与 0.816 κ 接近专家水平，代价是样本小领域窄且依赖大参数模型与人工对齐保障。",
+  "originalTitle": "WER is Unaware: Assessing How ASR Errors Distort Clinical Understanding in Patient Facing Dialogue",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.39",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.39.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "字错率为何看不见临床风险：转写误差的临床影响评估与自动评审",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.39/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "4b7d40505128b12e838d2e12ea33196ab6c7b5c5a903a9e29baad9daf33ba217"
+}

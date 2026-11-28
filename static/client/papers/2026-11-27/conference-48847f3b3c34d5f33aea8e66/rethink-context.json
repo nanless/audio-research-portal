@@ -1,0 +1,37 @@
+{
+  "abstract": "In spoken dialogue systems, even when the utterance text is the same, speaking style or tone differences can change its nuance. To respond appropriately in such cases, systems must accurately interpret paralinguistic information. Our study evaluates such a system’s ability using the “paraling-dial” dataset, which pairs a fixed utterance text with five distinct emotional expressions and their corresponding responses. We define a task using this dataset that detects mismatches—referred to as emotional dialogue breakdowns—between the expressed emotion of an utterance and the content of its response. We propose a breakdown detection system based on the Feature-wise Linear Modulation (FiLM) model, under the hypothesis that emotion dynamically controls text interpretation. Our experimental results show that the proposed model achieves 93.8% accuracy with gold emotion labels and 91.2% with predicted labels, demonstrating both its effectiveness and practicality. We also compare different types of control signals to identify the level of information required for such a breakdown detection task: emotion labels, emotion embeddings, and acoustic features. The results suggest that the appropriate level of abstraction, rather than simply richer information, is crucial for designing effective control signals.",
+  "abstractSha256": "b0375c7fd0d34b8ee3f739cc098bd20aef4966de35a45f8495e588e5b374a87f",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "后50%",
+    "score": 5.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Nara Institute of Science and Technology, RIKEN"
+      ],
+      "name": "Hyuga Nakaguro"
+    },
+    {
+      "affiliations": [
+        "Institute of Science Tokyo, RIKEN, Nara Institute of Science and Technology"
+      ],
+      "name": "Koichiro Yoshino"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对相同文本不同情感语气导致回应失配难以被现有语音模型识别的问题，论文构建固定文本配五种情感表演录音的 paraling-dial 数据集并提出以情感标签调制文本表征的 FiLM 检测器，以金标签下 93.8% 与预测标签下 91.2% 的准确率为最强证据，代价是依赖表演式录音与离散标签且缺乏自然对话与主观评价验证。",
+  "originalTitle": "Exploring Emotional Nuances in Spoken Dialogue: Dataset Construction and Prediction of Emotional Dialogue Breakdown",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.9",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.9.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "相同文字不同语气为何导致对话破裂：情感对话破裂数据集与调制检测",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.9/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "e4769ad231258d06369067896fad61651568e69d50e800ea0de07cb1db1f9207"
+}

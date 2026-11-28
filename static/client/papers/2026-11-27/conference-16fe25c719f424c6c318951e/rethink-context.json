@@ -1,0 +1,49 @@
+{
+  "abstract": "In empathic dialogue systems, it is crucial to continuously monitor and adapt to the user’s emotional state. To capture user-specific mappings between multimodal behaviors and emotional states, directly asking users about their emotions during dialogue is the most straightforward and effective approach. However, frequent questioning can cause inconvenience to users and diminish the user experience, so the number of queries should be minimized. In this study, we formulate personalized multimodal sentiment analysis (MSA) as a stream-based active learning problem, where user behaviors are observed sequentially, and we assume that the system has an ability to decide at each step whether to request an emotion label from the user. Simulation experiments using a human–agent dialogue corpus demonstrate that the proposed method efficiently improves performance even under few-shot conditions. These results indicate that our approach is effective for developing dialogue systems that achieve cost-efficient personalized MSA.",
+  "abstractSha256": "8540035dbf9f55713de05936d2a11467236a09d93a325c7ba336847b7cf0119e",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "强化学习",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Japan Advanced Institute of Science and Technology, Ishikawa, Japan"
+      ],
+      "name": "Atsuto Ajichi"
+    },
+    {
+      "affiliations": [
+        "Japan Advanced Institute of Science and Technology, Ishikawa, Japan"
+      ],
+      "name": "Takato Hayashi"
+    },
+    {
+      "affiliations": [
+        "University of Osaka, Osaka, Japan"
+      ],
+      "name": "Kazunori Komatani"
+    },
+    {
+      "affiliations": [
+        "Japan Advanced Institute of Science and Technology, Ishikawa, Japan"
+      ],
+      "name": "Shogo Okada"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对个体情感表达差异导致通用模型精度受限的问题，论文提出 RAL-MSA 流式强化询问框架，仅用每人约 5 次至 10 次询问在两套对话语料上小幅超越随机采样并有个别超 0.2 的改善，代价是平均增益微弱且权重适应短期几乎无效并依赖仿真验证。",
+  "originalTitle": "Adaptive Multimodal Sentiment Analysis with Stream-Based Active Learning for Spoken Dialogue Systems",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.33",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.33.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "流式主动学习实现低打扰的个性化多模态情感分析",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.33/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "a876cb651044d183af678618b5bef199ee3920f2168abf8e3292901f947009d3"
+}

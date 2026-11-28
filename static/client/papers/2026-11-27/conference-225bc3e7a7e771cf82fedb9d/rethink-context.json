@@ -1,0 +1,57 @@
+{
+  "abstract": "Real-time, human-centered conversational AI requires systems that handle spoken dialogue with overlap and rapid turn-taking. Although full-duplex models promise these capabilities, empirical work applying them to conversational AI is still nascent. To fill this gap, this study investigates whether the full-duplex model can reproduce the human dialogue features. We adapt a full-duplex spoken dialogue model to a large corpus of second-language (L2) learner interviews and train proficiency-conditioned models. We then conduct real-time interview sessions between these models and a spoken dialogue system designed to elicit spontaneous learner speech, and analyze reaction time, response frequency, and fluency metrics across aggregated CEFR levels (A/B/C). Our results show that proficiency-conditioned models partially reproduce levelwise trends and distributions observed in human interviews across multiple metrics. These findings suggest that full-duplex models can reproduce dialogue features of human dialogues and offer a promising foundation for conversational AI systems.",
+  "abstractSha256": "2846f711acf1b5d2351f907154472e45f54078f244bfbc441a15a5116f0b2595",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "SFT",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "后50%",
+    "score": 5.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Equmenopolis, Inc.",
+        "Institute of Science Tokyo"
+      ],
+      "name": "Takao Obi"
+    },
+    {
+      "affiliations": [
+        "Equmenopolis, Inc."
+      ],
+      "name": "Sadahiro Yoshikawa"
+    },
+    {
+      "affiliations": [
+        "Equmenopolis, Inc."
+      ],
+      "name": "Mao Saeki"
+    },
+    {
+      "affiliations": [
+        "Equmenopolis, Inc.",
+        "Waseda University"
+      ],
+      "name": "Masaki Eguchi"
+    },
+    {
+      "affiliations": [
+        "Equmenopolis, Inc."
+      ],
+      "name": "Yoichi Matsuyama"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文检验全双工模型 Moshi 能否复现人类访谈行为，通过按 CEFR A 级、B 级、C 级分层微调并与 InteLLA 进行各 400 场实时访谈，发现发音速率等三项指标三对趋势全同向且多指标均值偏差部分落入人类波动带，但分布形状距离均未对齐且反应系统性偏慢。",
+  "originalTitle": "Reproducing Proficiency-Conditioned Dialogue Features with Full-duplex Spoken Dialogue Models",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.4",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.4.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "全双工语音对话能否复现按熟练度分层的访谈行为",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.4/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "eb8ea2317332d40c7d96ecfd8bce6dd76132197a9c36f0d3fbb0e52f36d39a0e"
+}

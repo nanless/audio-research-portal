@@ -1,0 +1,51 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "National Board of Medical Examiners, Philadelphia, USA"
+      ],
+      "name": "Andrew Emerson"
+    },
+    {
+      "affiliations": [
+        "National Board of Medical Examiners, Philadelphia, USA"
+      ],
+      "name": "Keelan Evanini"
+    },
+    {
+      "affiliations": [
+        "National Board of Medical Examiners, Philadelphia, USA"
+      ],
+      "name": "Su Somay"
+    },
+    {
+      "affiliations": [
+        "National Board of Medical Examiners, Philadelphia, USA"
+      ],
+      "name": "Kevin Frome"
+    },
+    {
+      "affiliations": [
+        "Ho Chi Minh City University of Foreign Languages, Vietnam"
+      ],
+      "name": "Le An Ha"
+    },
+    {
+      "affiliations": [
+        "National Board of Medical Examiners, Philadelphia, USA"
+      ],
+      "name": "Polina Harik"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.16",
+  "originalTitle": "Conversational AI for Virtual Standardized Patients using a Speech-to-Speech LLM",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.16",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.16.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.16/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "5599816cbbb8bb401f56d8ddca9e3633c98ac501ca286be5012aed7a5deaab16",
+  "type": "conference-paper"
+}

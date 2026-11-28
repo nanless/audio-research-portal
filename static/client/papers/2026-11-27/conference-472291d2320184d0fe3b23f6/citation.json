@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Katarina Esteve"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Morgan Fredriksson"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology, Sweden"
+      ],
+      "name": "Joakim Gustafson"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology, Sweden"
+      ],
+      "name": "Dimosthenis Kontogiorgos"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Timo Mashiyi-Veikkola"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.15",
+  "originalTitle": "Towards a proactive cooking companion for the elderly",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.15",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.15.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.15/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "904ef2fdf1354cc89cc6d36b47ad693fc78a905b0420fd5755e4c8517cdd339d",
+  "type": "conference-paper"
+}

@@ -1,0 +1,76 @@
+{
+  "abstract": "This study investigates how interactional characteristics of spoken dialogue corpora influence the learning process and resulting behavior of speech language models for full-duplex dialogue systems. While previous research has mainly focused on improving acoustic and linguistic quality, an effective dialogue system must also capture and reproduce task-dependent interactional dynamics such as conversational tempo and turn-taking patterns. To analyze these properties, we evaluated multiple dialogue corpora using NISQA for speech quality, LLM-as-a-Judge for linguistic and semantic appropriateness, and four timing-based indicators: inter-pausal units, pause, gap, and overlap. A curriculum learning strategy was applied to fine-tune a Moshi-based full-duplex dialogue model by incrementally combining corpora with different interactional characteristics. Experimental results on a dialogue continuation task showed that corpus-specific interactional patterns effectively shape model behavior. Chat-style corpora facilitated natural rhythms with moderate overlaps and gaps, whereas consultation-style corpora promoted more stable and deliberate timing. Fine-tuning with high-quality audio improved speech quality, while using task-mismatched data degraded linguistic coherence.",
+  "abstractSha256": "8a4a8d876b9ef68e34d43803d8ad19b29956cd6763b0a30238f67824b967f36a",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "课程学习",
+    "primaryTask": "全双工语音交互",
+    "rankBucket": "后50%",
+    "score": 5.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Waseda University",
+        "NII LLMC"
+      ],
+      "name": "Yuto Abe"
+    },
+    {
+      "affiliations": [
+        "Waseda University",
+        "Equmenopolis, Inc."
+      ],
+      "name": "Mao Saeki"
+    },
+    {
+      "affiliations": [
+        "Nagoya University"
+      ],
+      "name": "Atsumoto Ohashi"
+    },
+    {
+      "affiliations": [
+        "Keio University"
+      ],
+      "name": "Shinnosuke Takamichi"
+    },
+    {
+      "affiliations": [
+        "Chiba Institute of Technology"
+      ],
+      "name": "Shiyna Fujie"
+    },
+    {
+      "affiliations": [
+        "Waseda University"
+      ],
+      "name": "Tetsunori Kobayashi"
+    },
+    {
+      "affiliations": [
+        "Waseda University"
+      ],
+      "name": "Tetsuji Ogawa"
+    },
+    {
+      "affiliations": [
+        "Nagoya University",
+        "NII LLMC"
+      ],
+      "name": "Ryuichiro Higashinaka"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文研究对话语料的轮替节奏如何影响全双工模型，采用 Moshi 架构的三阶段课程组合四种日语语料，以 10 秒提示续写 20 秒的评测显示干净闲聊延长间隙并抑制重叠而正式语音提升连贯性，代价是混入风格不匹配数据会拉低声学自然度与总体分且全程缺少人工听测校准。",
+  "originalTitle": "Effects of Dialogue Corpora Properties on Fine-Tuning a Moshi-Based Spoken Dialogue Model",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.10",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.10.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "语料轮替节奏如何塑造全双工对话模型的行为",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.10/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "8b5b466ac2b01a5ba30fbe5baea1a665d9a7ba7c4c24f7dfb019d43c9c9d72c6"
+}

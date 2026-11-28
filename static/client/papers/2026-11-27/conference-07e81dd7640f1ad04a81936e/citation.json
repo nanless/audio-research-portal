@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Columbia University, USA"
+      ],
+      "name": "Run Chen"
+    },
+    {
+      "affiliations": [
+        "Columbia University, USA"
+      ],
+      "name": "Wen Liang"
+    },
+    {
+      "affiliations": [
+        "Columbia University, USA"
+      ],
+      "name": "Ziwei Gong"
+    },
+    {
+      "affiliations": [
+        "Columbia University, USA"
+      ],
+      "name": "Lin Ai"
+    },
+    {
+      "affiliations": [
+        "Columbia University, USA"
+      ],
+      "name": "Julia Hirschberg"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.41",
+  "originalTitle": "Detecting Mental Manipulation in Speech via Synthetic Multi-Speaker Dialogue",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.41",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.41.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.41/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "7ccf40ed9cbe21069a7b397305fb91a9878004e1669f528fdddbba18d94ecb5f",
+  "type": "conference-paper"
+}

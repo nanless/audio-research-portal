@@ -1,0 +1,37 @@
+{
+  "abstract": "Audio and video tokenizers are autoencoders trained to represent the content of recordings as a sequence of vectors. They are prevalently used to interface large language models with non-textual modalities. While they allow advanced applications such as video generation, the envelope of their limitations is not known in the context of multimodal conversation. This work focuses on backchannels, which listeners use to signal to the speaker that they are listening. This feedback is essential to maintain the conversation flow. We evaluate whether a representative set of audio and video tokenizers encode backchannels using linear probing. Results show that although audio tokenizers capture the phenomenon relatively well, backchannels are not linearly separated by video tokenizers. However, joint representations resulting from concatenating representations in both modalities improve accuracy significantly over audio-only representations, suggesting to train multimodal tokenizers.",
+  "abstractSha256": "064530c01ad8d6b152acc212dce29cfcb51f2c11dda5a692d98c451bf9093fc2",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "表示探测",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Aix Marseille Univ, CNRS, LIS, Université Grenoble Alpes, CNRS, LIG"
+      ],
+      "name": "Benoit Favre"
+    },
+    {
+      "affiliations": [
+        "Aix Marseille Université, CNRS, LPL, Marseille, France"
+      ],
+      "name": "Auriane Boudin"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文用冻结分词器加线性探测检验听者反馈是否线性可分，发现音频 HuBERT 达 0.734 显著优于视频 VidTok 的 0.626 ，而 SpeechTokenizer 拼接 VidTok 达 0.818 ，代价是维度翻倍且仍为离线评测并缺乏说话人分离与人工听测。",
+  "originalTitle": "Do audio and visual tokenizers capture backchannels?",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.6",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.6.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "音频与视频分词器能否线性读出倾听者的即时反馈",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.6/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "d43da2f7c892e843ae6d06cea94c8cfdbe32462faccf92fede6208d4e20cc7d3"
+}

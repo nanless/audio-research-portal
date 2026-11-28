@@ -1,0 +1,37 @@
+{
+  "abstract": "Spoken dialogue systems would benefit from the ability of self-correction, namely, –revising earlier recognition results once later utterances are available, as humans often do in dialogue. However, conventional automatic speech recognition (ASR) frameworks mainly process user utterances sequentially and rely only on the preceding context. To address this limitation, we propose Retrospective Speech Recognition (RSR), which refines past recognition results by exploiting its subsequent utterances. We formulate and implement an RSR model for a dialogue system situation where system utterances can also be utilized. Each past user utterance is processed with an interpretable syllabogram representation, which integrates preceding and subsequent utterances within a shared domain between the signal and text levels. This intermediate representation also helps reduce orthographic inconsistencies. Experimental results using real Japanese dialogue speech showed that utilizing the subsequent utterances improved the character error rate by 0.10 points, which demonstrates the utility of RSR. We also investigated the impact of other factors, such as utilization of system utterances.",
+  "abstractSha256": "c2349959095372c42dbd3bb7fb78eeb96a4a14c34e3fe9baf3bafebd2e6e9920",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "SANKEN, University of Osaka"
+      ],
+      "name": "Ryu Takeda"
+    },
+    {
+      "affiliations": [
+        "SANKEN, University of Osaka"
+      ],
+      "name": "Kazunori Komatani"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对对话识别只用上文无法事后修正的问题，本文提出同时利用前后文与系统话语的回顾式两阶段识别，在 Hazumi 真实对话上将字符错误率降至 11.03% ，代价是长序列转换带来的额外计算与调度设计负担。",
+  "originalTitle": "Retrospective Speech Recognition for Spoken Dialogue Systems: Exploiting Subsequent Utterances to Enhance ASR Performance",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.20",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.20.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "用后文修正前文：面向对话系统的回顾式语音识别",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.20/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "ff09c15bf36663977767a1c60b8cfbcd7e286dd0f7ffb2eabfc0078ddede33ed"
+}

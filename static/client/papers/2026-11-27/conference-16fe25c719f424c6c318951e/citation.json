@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Japan Advanced Institute of Science and Technology, Ishikawa, Japan"
+      ],
+      "name": "Atsuto Ajichi"
+    },
+    {
+      "affiliations": [
+        "Japan Advanced Institute of Science and Technology, Ishikawa, Japan"
+      ],
+      "name": "Takato Hayashi"
+    },
+    {
+      "affiliations": [
+        "University of Osaka, Osaka, Japan"
+      ],
+      "name": "Kazunori Komatani"
+    },
+    {
+      "affiliations": [
+        "Japan Advanced Institute of Science and Technology, Ishikawa, Japan"
+      ],
+      "name": "Shogo Okada"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.33",
+  "originalTitle": "Adaptive Multimodal Sentiment Analysis with Stream-Based Active Learning for Spoken Dialogue Systems",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.33",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.33.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.33/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "a876cb651044d183af678618b5bef199ee3920f2168abf8e3292901f947009d3",
+  "type": "conference-paper"
+}

@@ -1,0 +1,51 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Nagoya University, Japan"
+      ],
+      "name": "Sanae Yamashita"
+    },
+    {
+      "affiliations": [
+        "Nagoya University, Japan"
+      ],
+      "name": "Shota Mochizuki"
+    },
+    {
+      "affiliations": [
+        "Mamoru Co., Ltd., Japan"
+      ],
+      "name": "Yuko Kuma"
+    },
+    {
+      "affiliations": [
+        "Logical Fabrics, Inc., Japan"
+      ],
+      "name": "Ray Sakai"
+    },
+    {
+      "affiliations": [
+        "RainbowWanderlust Co., Ltd., Japan"
+      ],
+      "name": "Ayaka Sasaki"
+    },
+    {
+      "affiliations": [
+        "Nagoya University, Japan"
+      ],
+      "name": "Ryuichiro Higashinaka"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.36",
+  "originalTitle": "Analysis of Child-Caregiver Interactions for Developing a Caregiver Spoken Dialogue System",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.36",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.36.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.36/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "c4ed16154432c1ef335d656e612fdc3474fb614c177766bacc5b2f66a8c5e08b",
+  "type": "conference-paper"
+}

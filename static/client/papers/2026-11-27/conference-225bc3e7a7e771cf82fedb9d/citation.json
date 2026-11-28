@@ -1,0 +1,47 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Equmenopolis, Inc.",
+        "Institute of Science Tokyo"
+      ],
+      "name": "Takao Obi"
+    },
+    {
+      "affiliations": [
+        "Equmenopolis, Inc."
+      ],
+      "name": "Sadahiro Yoshikawa"
+    },
+    {
+      "affiliations": [
+        "Equmenopolis, Inc."
+      ],
+      "name": "Mao Saeki"
+    },
+    {
+      "affiliations": [
+        "Equmenopolis, Inc.",
+        "Waseda University"
+      ],
+      "name": "Masaki Eguchi"
+    },
+    {
+      "affiliations": [
+        "Equmenopolis, Inc."
+      ],
+      "name": "Yoichi Matsuyama"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.4",
+  "originalTitle": "Reproducing Proficiency-Conditioned Dialogue Features with Full-duplex Spoken Dialogue Models",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.4",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.4.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.4/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "eb8ea2317332d40c7d96ecfd8bce6dd76132197a9c36f0d3fbb0e52f36d39a0e",
+  "type": "conference-paper"
+}

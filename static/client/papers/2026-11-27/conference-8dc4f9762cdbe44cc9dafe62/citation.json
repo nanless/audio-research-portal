@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "DFKI"
+      ],
+      "name": "Yassine El Kheir"
+    },
+    {
+      "affiliations": [
+        "QCRI"
+      ],
+      "name": "Shammur Absar Chowdhury"
+    },
+    {
+      "affiliations": [
+        "HUMAIN"
+      ],
+      "name": "Ahmed Ali"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.30",
+  "originalTitle": "The Complementary Role of Para-linguistic cues for Robust Pronunciation Assessment",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.30",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.30.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.30/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "baaf72e14237d858c653babc69e2cf3e2e1fee4b11be70af2ba6e09bfe33a41e",
+  "type": "conference-paper"
+}

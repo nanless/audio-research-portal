@@ -1,0 +1,77 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Ufonia Limited"
+      ],
+      "name": "Zachary Ellis"
+    },
+    {
+      "affiliations": [
+        "Ufonia Limited"
+      ],
+      "name": "Jared Joselowitz"
+    },
+    {
+      "affiliations": [
+        "University of York"
+      ],
+      "name": "Yash Deo"
+    },
+    {
+      "affiliations": [
+        "Ufonia Limited"
+      ],
+      "name": "Yajie He"
+    },
+    {
+      "affiliations": [
+        "Ufonia Limited"
+      ],
+      "name": "Anna Kalygina"
+    },
+    {
+      "affiliations": [
+        "Ufonia Limited",
+        "Oxford University Hospitals"
+      ],
+      "name": "Aisling Higham"
+    },
+    {
+      "affiliations": [
+        "Moorfields Eye Hospital"
+      ],
+      "name": "Mana Rahimzadeh"
+    },
+    {
+      "affiliations": [
+        "University of York"
+      ],
+      "name": "Yan Jia"
+    },
+    {
+      "affiliations": [
+        "University of York"
+      ],
+      "name": "Ibrahim Habli"
+    },
+    {
+      "affiliations": [
+        "Ufonia Limited",
+        "University of York"
+      ],
+      "name": "Ernest Lim"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.39",
+  "originalTitle": "WER is Unaware: Assessing How ASR Errors Distort Clinical Understanding in Patient Facing Dialogue",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.39",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.39.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.39/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "4b7d40505128b12e838d2e12ea33196ab6c7b5c5a903a9e29baad9daf33ba217",
+  "type": "conference-paper"
+}

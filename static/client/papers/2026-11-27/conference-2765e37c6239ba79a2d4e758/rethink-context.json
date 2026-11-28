@@ -1,0 +1,55 @@
+{
+  "abstract": "This study analyses how state-of-the-art multimodal large language models (MLLMs) can predict the next speaker in multi-party conversations. Through experimental and qualitative analyses, we found that MLLMs are able to infer a plausible next speaker based solely on linguistic context and their internalized knowledge. However, even in cases where the next speaker is not uniquely determined, MLLMs exhibit a bias toward overpredicting a single participant as the next speaker. We further showed that this bias can be mitigated by explicitly providing knowledge of turn-taking rules. In addition, we observed that visual input can sometimes contribute to more accurate predictions, while in other cases it leads to erroneous judgments. Overall, however, no clear effect of visual input was observed.",
+  "abstractSha256": "9e1a91876008a01b3270a2fdb258c7140ca5ebb0d4be9d3581845b07a59b3a43",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "轮次切换",
+    "rankBucket": "后50%",
+    "score": 5.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Graduate School of Informatics, Kyoto University, Japan"
+      ],
+      "name": "Taiga Mori"
+    },
+    {
+      "affiliations": [
+        "Graduate School of Informatics, Kyoto University, Japan"
+      ],
+      "name": "Koji Inoue"
+    },
+    {
+      "affiliations": [
+        "Graduate School of Informatics, Kyoto University, Japan"
+      ],
+      "name": "Divesh Lala"
+    },
+    {
+      "affiliations": [
+        "Graduate School of Informatics, Kyoto University, Japan"
+      ],
+      "name": "Keiko Ochi"
+    },
+    {
+      "affiliations": [
+        "Graduate School of Informatics, Kyoto University, Japan"
+      ],
+      "name": "Tatsuya Kawahara"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文以三人日语自由讨论中随机抽取的 1,000 个轮次为对象，用 GPT-5 系列在模型尺寸、是否给轮次转换规则与是否给单帧图像共 12 种条件下预测下一位说话人，发现大模型区分具体人选更准而显式规则以打断避免率下降为代价换来发言机会检出率提升，单帧图像总体无明确增益。",
+  "originalTitle": "Analysing Next Speaker Prediction in Multi-Party Conversation Using Multimodal Large Language Models",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.8",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.8.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "三人讨论中谁来接话：多模态大语言模型的过度指名偏置与规则提示的纠偏代价",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.8/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "fd5370cca3cc739ff268ee22f0eb9b7059e91e1121c6e2be355386b2e83959ef"
+}

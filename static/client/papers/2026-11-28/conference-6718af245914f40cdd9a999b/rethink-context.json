@@ -1,0 +1,37 @@
+{
+  "abstract": "This paper investigates whether a multilingual spoken dialogue system can be used to help collect and preserve endangered language data. In this work, we extend DAPEL (Dialogue APp for Endangered Languages), which is designed to help preserve any language. Our focus, for testing purposes, is on the American Indigenous language Choctaw. The system uses English as a common language, and we test whether incorporating code-switching—the act of alternating between languages—enhances the user experience and/or increases the amount of recorded language data. Our results indicate that users have a positive response to interacting in both languages with the system, that the system plays a meaningful role in language documentation, and, notably, that participants who speak Choctaw as their first language are more receptive to a code-switching system than to a monolingual English-based system.",
+  "abstractSha256": "a33a97fbf2c10b7d2d7f3829a4394174a78fa25c8dc7f08ca598e7209a9c6759",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "主观评测",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "后50%",
+    "score": 5.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Wisconsin-Madison"
+      ],
+      "name": "Jacqueline Brixey"
+    },
+    {
+      "affiliations": [
+        "USC Institute for Creative Technologies"
+      ],
+      "name": "David Traum"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本研究用手工双语访谈应用 DAPEL 在 28 位 Choctaw 语双语者中对比单语与代码切换版本，发现第一语言者更认同切换版本并录得 1,500 余个独特词与约 500 个新词，但录音时长与词汇量差异均无统计显著且结论受小样本与极端值主导。",
+  "originalTitle": "Can code-switching improve the user experience with a dialogue system app for recording endangered languages?",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.37",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.37.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "代码切换能否改善濒危语言记录应用的体验",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.37/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "6064c68210df2bb3a3f48f9bfdfd3d690c638a15f0d1f17708bec91309aa59ae"
+}

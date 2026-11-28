@@ -1,0 +1,55 @@
+{
+  "abstract": "Mental manipulation, the strategic use of language to covertly influence or exploit others, is a newly emerging task in computational social reasoning. Prior work has focused exclusively on textual conversations, overlooking how manipulative tactics manifest in speech. We present the first study of mental manipulation detection in spoken dialogues, introducing a synthetic multi-speaker benchmark SPEECHMENTALMANIP that augments a text-based dataset with high-quality, voice-consistent Text-to-Speech rendered audio. Using few-shot large audio-language models and human annotation, we evaluate how modality affects detection accuracy and perception. Our results reveal that models exhibit high specificity but markedly lower recall on speech compared to text, suggesting sensitivity to missing acoustic or prosodic cues in training. Human raters show similar uncertainty in the audio setting, underscoring the inherent ambiguity of manipulative speech. Together, these findings highlight the need for modality-aware evaluation and safety alignment in multimodal dialogue systems.",
+  "abstractSha256": "340495da578cfb376eddcb88db9b05f6e01690e71333d50ccca453c40b8f5695",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.1
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Columbia University, USA"
+      ],
+      "name": "Run Chen"
+    },
+    {
+      "affiliations": [
+        "Columbia University, USA"
+      ],
+      "name": "Wen Liang"
+    },
+    {
+      "affiliations": [
+        "Columbia University, USA"
+      ],
+      "name": "Ziwei Gong"
+    },
+    {
+      "affiliations": [
+        "Columbia University, USA"
+      ],
+      "name": "Lin Ai"
+    },
+    {
+      "affiliations": [
+        "Columbia University, USA"
+      ],
+      "name": "Julia Hirschberg"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对文字操纵检测忽视韵律与语气的不足，研究以两阶段语音合成构建转写对齐的多说话人基准并用冻结大音频语言模型做少样本评测，发现音频在非操纵集达 82.2% 准确率而在操纵集仅 34.8% 准确率且策略坍缩到少数类别，人类在音频条件下一致性也明显更低，代价是合成语音缺失重叠与自然韵律且仅验证单模型。",
+  "originalTitle": "Detecting Mental Manipulation in Speech via Synthetic Multi-Speaker Dialogue",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.41",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.41.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "语音中的精神操纵为何更难检出",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.41/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "7ccf40ed9cbe21069a7b397305fb91a9878004e1669f528fdddbba18d94ecb5f"
+}

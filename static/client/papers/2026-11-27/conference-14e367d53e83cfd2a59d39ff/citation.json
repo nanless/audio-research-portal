@@ -1,0 +1,66 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Waseda University",
+        "NII LLMC"
+      ],
+      "name": "Yuto Abe"
+    },
+    {
+      "affiliations": [
+        "Waseda University",
+        "Equmenopolis, Inc."
+      ],
+      "name": "Mao Saeki"
+    },
+    {
+      "affiliations": [
+        "Nagoya University"
+      ],
+      "name": "Atsumoto Ohashi"
+    },
+    {
+      "affiliations": [
+        "Keio University"
+      ],
+      "name": "Shinnosuke Takamichi"
+    },
+    {
+      "affiliations": [
+        "Chiba Institute of Technology"
+      ],
+      "name": "Shiyna Fujie"
+    },
+    {
+      "affiliations": [
+        "Waseda University"
+      ],
+      "name": "Tetsunori Kobayashi"
+    },
+    {
+      "affiliations": [
+        "Waseda University"
+      ],
+      "name": "Tetsuji Ogawa"
+    },
+    {
+      "affiliations": [
+        "Nagoya University",
+        "NII LLMC"
+      ],
+      "name": "Ryuichiro Higashinaka"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.10",
+  "originalTitle": "Effects of Dialogue Corpora Properties on Fine-Tuning a Moshi-Based Spoken Dialogue Model",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.10",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.10.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.10/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "8b5b466ac2b01a5ba30fbe5baea1a665d9a7ba7c4c24f7dfb019d43c9c9d72c6",
+  "type": "conference-paper"
+}

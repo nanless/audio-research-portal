@@ -1,0 +1,61 @@
+{
+  "abstract": "To develop clinical reasoning skills, medical students are often tasked with interacting with trained standardized patients (SPs). Human SPs enable real conversations that can resemble authentic clinical scenarios. However, human SPs require extensive training and are often limited in their accessibility and continual availability to medical students or residents. Virtual SPs offer the ability for medical students to practice clinical interviews in a lower-stakes setting across a broader set of clinical cases. This paper introduces a virtual SP (VSP) that leverages Amazon’s Nova Sonic, a speech-to-speech foundation model designed for human-like conversation. We investigated the ability of Nova Sonic to portray four distinct clinical cases in virtual doctor-patient encounters with 20 third-year medical students. The system’s realism, its perceived learning value, and user experience were all assessed via a survey administered to the students. Students were also asked to compare this experience to interactions with a human SP. Survey results and conversations were analyzed to derive insights for improving the Nova Sonic-based VSP system.",
+  "abstractSha256": "4846823394068bbdeb7a3bd2b913004ac435970f02fa48a37bb2468476896dd5",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "主观评测",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "后50%",
+    "score": 4.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "National Board of Medical Examiners, Philadelphia, USA"
+      ],
+      "name": "Andrew Emerson"
+    },
+    {
+      "affiliations": [
+        "National Board of Medical Examiners, Philadelphia, USA"
+      ],
+      "name": "Keelan Evanini"
+    },
+    {
+      "affiliations": [
+        "National Board of Medical Examiners, Philadelphia, USA"
+      ],
+      "name": "Su Somay"
+    },
+    {
+      "affiliations": [
+        "National Board of Medical Examiners, Philadelphia, USA"
+      ],
+      "name": "Kevin Frome"
+    },
+    {
+      "affiliations": [
+        "Ho Chi Minh City University of Foreign Languages, Vietnam"
+      ],
+      "name": "Le An Ha"
+    },
+    {
+      "affiliations": [
+        "National Board of Medical Examiners, Philadelphia, USA"
+      ],
+      "name": "Polina Harik"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对人力标准化病人难规模化的问题，本研究用冻结调用的 Nova Sonic 直接语音到语音模型经零样本病人角色提示完成 4 例 75 次访谈，学生在有效性与参与度上给出约 4.95 分的 7 点评分并报告沉浸瞬间，代价是样本仅 20 人且无学习结局测量并存在角色错位信息过量与音频延迟等失效。",
+  "originalTitle": "Conversational AI for Virtual Standardized Patients using a Speech-to-Speech LLM",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.16",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.16.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "语音到语音大模型扮演虚拟标准化病人的初次课堂检验",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.16/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "5599816cbbb8bb401f56d8ddca9e3633c98ac501ca286be5012aed7a5deaab16"
+}

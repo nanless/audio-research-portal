@@ -1,0 +1,55 @@
+{
+  "abstract": "Aging-in-place policies leave elderly populations vulnerable to declining nutrition and social isolation. This paper presents a voice-based cooking assistant designed as a companion, addressing both nutritional and social needs through intelligent kitchen interaction. Through WoZ experiments, we validated: social dialogue serves functional purposes, where “chatty” assistants transform cooking pauses into engaging interactions while instructional-only versions create frustrating dead air, despite identical timing.",
+  "abstractSha256": "f77f0ded2ee6b70b862015c537a90adcf826a0faf6b486a96b824bbba0703076",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "用户研究",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "后50%",
+    "score": 4.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Katarina Esteve"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Morgan Fredriksson"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology, Sweden"
+      ],
+      "name": "Joakim Gustafson"
+    },
+    {
+      "affiliations": [
+        "KTH Royal Institute of Technology, Sweden"
+      ],
+      "name": "Dimosthenis Kontogiorgos"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Timo Mashiyi-Veikkola"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对独居老人营养退化与社交隔离问题，以人工模拟理想感知的巫师法对比指令版与健谈版蘑菇蛋卷助手，发现相同等待下社交话语将迟滞感转化为陪伴感，但结论仅成立于 6 名瑞典熟练厨师的实验室单任务质性观察且自动化感知尚未可用。",
+  "originalTitle": "Towards a proactive cooking companion for the elderly",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.15",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.15.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "语音与等待的陪伴术：健谈烹饪助手如何填补厨房空白",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.15/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "904ef2fdf1354cc89cc6d36b47ad693fc78a905b0420fd5755e4c8517cdd339d"
+}

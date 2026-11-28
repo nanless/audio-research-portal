@@ -1,0 +1,68 @@
+{
+  "abstract": "Ineffective teamwork and communication can generate medical errors in the high-pressure environment of surgery, making post-operative debriefings essential for enhancing team performance and patient safety. However, these sessions are frequently rushed or incomplete due to clinicians’ limited time. This paper introduces ReflectOR, an Agentic-AI architecture designed to support surgical debriefings by processing audio recordings from the operating room. The system employs specialized sub-agents that perform tasks such as generating summaries, constructing timelines of intraoperative events, identifying potential errors and counting the materials used. A qualitative evaluation indicates that the system effectively contextualizes transcripts, demonstrating its potential as a valuable tool for surgical debriefing. The paper also outlines key considerations for applying such an architecture in real-world clinical environments.",
+  "abstractSha256": "04e19b70f16464eed9e944a5126176ea99152c7ddce889edfd660302dd16db62",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "工具增强与约束解码",
+    "primaryTask": "语音摘要",
+    "rankBucket": "后50%",
+    "score": 5.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Information Engineering and Computer Science, University of Trento, Italy"
+      ],
+      "name": "Lorenzo Fumi"
+    },
+    {
+      "affiliations": [
+        "Department of Information Engineering and Computer Science, University of Trento, Italy"
+      ],
+      "name": "Marco Bombieri"
+    },
+    {
+      "affiliations": [
+        "Azienda Provinciale per i Servizi Sanitari, Trento, Italy"
+      ],
+      "name": "Sara Allievi"
+    },
+    {
+      "affiliations": [
+        "Azienda Provinciale per i Servizi Sanitari, Trento, Italy"
+      ],
+      "name": "Stefano Bonvini"
+    },
+    {
+      "affiliations": [
+        "Institute of Cognitive Science and Department of Computer Science, University of Colorado, Boulder, USA"
+      ],
+      "name": "Theodora Chaspari"
+    },
+    {
+      "affiliations": [
+        "Medical Robotics and Computer Assisted Surgery (MRCAS) Laboratory, Division of Cardiac Surgery, Veterans Affairs Boston Healthcare System, Boston, MA, USA",
+        "Division of Cardiac Surgery, Brigham and Women’s Hospital, Mass General Brigham, Harvard Medical School, Boston, MA, USA"
+      ],
+      "name": "Marco A. Zenati"
+    },
+    {
+      "affiliations": [
+        "Department of Information Engineering and Computer Science, University of Trento, Italy"
+      ],
+      "name": "Paolo Giorgini"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对术后复盘常被压缩且依赖记忆易漏信息的问题，ReflectOR 采用音频增强转写加协调器调度六个专科子智能体的两段设计，在 5 分钟意大利语模拟手术音频上以零样本取得转写 10.72% 与分离 10.89% 的最低误差，而代价是结论高度依赖音频质量且仅经单中心受控小样本定性验证。",
+  "originalTitle": "ReflectOR: an LLM-based Agent for Post-Operative Surgical Debriefing",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.40",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.40.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "手术室术后复盘智能体：从噪声对话到结构化总结",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.40/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "2d937e42030e93b3ca983f68fb31d2294046b7e3cd43934ae88ccd6d3bf64f34"
+}

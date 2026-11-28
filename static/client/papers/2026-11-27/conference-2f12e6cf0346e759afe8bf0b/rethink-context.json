@@ -1,0 +1,61 @@
+{
+  "abstract": "We aim to develop a caregiver spoken dialogue system for remote childcare services. As a first step toward this goal, this study investigates how interactions occur between children and caregivers. We collected Japanese child–caregiver dialogue data through a remote childcare service in which participants engaged in activities such as introductions, quizzes, and free conversations. The collected data were analyzed and compared with existing child–caregiver dialogue data from both acoustic and linguistic perspectives. The results showed that, acoustically, child–caregiver dialogues contained fewer overlapping utterances than adult dialogues. Linguistically, the distribution and transitions of utterance intentions differed across dialogue parts, reflecting the diverse structures of each activity. These findings provide useful insights for building future caregiver spoken dialogue systems, suggesting that a turn-based interaction structure may be sufficient and that dialogue control should be adapted to each part of the dialogue.",
+  "abstractSha256": "0129106da009e85ec02be551832e7ddb0c6ada50e8daf336d49b78311fb7d295",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "语音对话系统",
+    "rankBucket": "后50%",
+    "score": 5.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Nagoya University, Japan"
+      ],
+      "name": "Sanae Yamashita"
+    },
+    {
+      "affiliations": [
+        "Nagoya University, Japan"
+      ],
+      "name": "Shota Mochizuki"
+    },
+    {
+      "affiliations": [
+        "Mamoru Co., Ltd., Japan"
+      ],
+      "name": "Yuko Kuma"
+    },
+    {
+      "affiliations": [
+        "Logical Fabrics, Inc., Japan"
+      ],
+      "name": "Ray Sakai"
+    },
+    {
+      "affiliations": [
+        "RainbowWanderlust Co., Ltd., Japan"
+      ],
+      "name": "Ayaka Sasaki"
+    },
+    {
+      "affiliations": [
+        "Nagoya University, Japan"
+      ],
+      "name": "Ryuichiro Higashinaka"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "为降低远程托育人力成本，论文采集 50 个日语儿童与职业照护者视频对话并对照亲子语料比较轮替、应答词与意图，发现重叠极少且意图流随环节分化，支撑按环节控制的轮流式系统方向，代价是年龄与场景不完全对齐且意图标注仅经小样本核查。",
+  "originalTitle": "Analysis of Child-Caregiver Interactions for Developing a Caregiver Spoken Dialogue System",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.36",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.36.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "儿童与照护者对话如何分环节组织轮替与意图",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.36/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "c4ed16154432c1ef335d656e612fdc3474fb614c177766bacc5b2f66a8c5e08b"
+}

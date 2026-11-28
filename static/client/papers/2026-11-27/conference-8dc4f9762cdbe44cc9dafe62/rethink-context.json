@@ -1,0 +1,43 @@
+{
+  "abstract": "Research on pronunciation assessment systems focuses on utilizing phonetic and phonological aspects of non-native (L2) speech, often neglecting the rich layer of information hidden within the para-linguistic cues. In this study, we proposed a novel pronunciation assessment framework, IntraVerbalPA.[The source code will be available to the public upon acceptance.] The framework innovatively incorporates both fine-grained frame- and abstract utterance-level para-linguistic cues, alongside the raw speech and phoneme representations. Additionally, we introduce the “Goodness of phonemic-duration” metric to model phoneme duration distribution within the framework effectively. Our results validate the effectiveness of the proposed IntraVerbalPA framework and its individual components, yielding performance that matches or outperforms existing research works.",
+  "abstractSha256": "7148b1c2e017c2d6476daa48df0616413c84864727c954089c8cff3d2ce7da72",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "发音评估",
+    "rankBucket": "后50%",
+    "score": 5.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "DFKI"
+      ],
+      "name": "Yassine El Kheir"
+    },
+    {
+      "affiliations": [
+        "QCRI"
+      ],
+      "name": "Shammur Absar Chowdhury"
+    },
+    {
+      "affiliations": [
+        "HUMAIN"
+      ],
+      "name": "Ahmed Ali"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对仅靠音素后验与整体微调难以显式刻画韵律节奏的问题，IntraVerbalPA 融合帧级与话语级副语言线索及 GoPD 时长表示，在 Speechocean762 上以精选话语组合达到韵律 0.7835 与流利度 0.7851 的 PCC，但仍低于 3M 与 HierarchicalPA 且未验证实时性。",
+  "originalTitle": "The Complementary Role of Para-linguistic cues for Robust Pronunciation Assessment",
+  "paperId": "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.30",
+  "pdfUrl": "https://aclanthology.org/2026.iwsds-1.30.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "副语言线索如何补足流利度与韵律评估",
+  "recordUrl": "https://aclanthology.org/2026.iwsds-1.30/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "baaf72e14237d858c653babc69e2cf3e2e1fee4b11be70af2ba6e09bfe33a41e"
+}
