@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science and Information Systems, Birla Institute of Technology and Science Pilani, Hyderabad Campus, Hyderabad, India"
+      ],
+      "name": "Shubham Sharma"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science and Information Systems, Birla Institute of Technology and Science Pilani, Hyderabad Campus, Hyderabad, India"
+      ],
+      "name": "Manik Gupta"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.4",
+  "originalTitle": "Early Warning for Target-Speaker Extraction: Reliability under Distribution and Failure-Definition Shift",
+  "paperId": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.4",
+  "pdfUrl": "https://aclanthology.org/2026.impactspeech-1.4.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.impactspeech-1.4/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "edf0fe7291173e2b13b1a59c057dceeb9532ff3885d14a0772bec0aa974ca2fe",
+  "type": "conference-paper"
+}

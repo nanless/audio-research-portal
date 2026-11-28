@@ -1,0 +1,31 @@
+{
+  "abstract": "Robust selective auditory attention under multilingual interference is critical for reliable LALM deployment. We introduce MUSI, a cocktail party-inspired controlled diagnostic evaluation of source-grounded spokenlanguage understanding and reasoning. Each item pairs an English target dialogue with a plausible distractor in English, Spanish, Korean, or Chinese, and evaluates models under (1) single-stream, (2) separation-based, and (3) end-to-end cocktail party settings across controlled SNRs. Across four open-weight and two closed-source LALMs, we find model dependent language-conditioned variation and heightened vulnerability at adverse SNRs. Errors are dominated by distractor-grounded source confusion, while separation reduces acoustic overlap but often leaves source attribution unresolved. These findings highlight selective auditory attention as a primary capability for reliable LALM deployment.",
+  "abstractSha256": "077e5d3726ec230dc596278823f500e13e934d8572ab412d8bf6f06c312ec835",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "口语理解",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Heejoon Koo"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文提出 MUSI 受控诊断，以英语目标对话叠加四种语言的合理干扰检验 6 个大音频语言模型，发现单流优异不能保证鸡尾酒会稳健，错误以干扰跟随为主且分离只能缓解声学重叠而留下归因缺口。",
+  "originalTitle": "Can Large Audio-Language Models Ignore Multilingual Distractors? An Evaluation of Their Selective Auditory Attention Capabilities",
+  "paperId": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.3",
+  "pdfUrl": "https://aclanthology.org/2026.impactspeech-1.3.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "多语干扰下大音频语言模型能否只听目标",
+  "recordUrl": "https://aclanthology.org/2026.impactspeech-1.3/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "148f0c4a43434109c5bbbb9ad8693976f5bbcd94670ca07b4e7e9b8fb72b92ec"
+}

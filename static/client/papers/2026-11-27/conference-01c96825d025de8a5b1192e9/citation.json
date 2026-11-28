@@ -1,0 +1,21 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Angad Ripudaman Singh Bajwa"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.6",
+  "originalTitle": "Lost in Compression: Calibration Bias and the Accent-WER Gap in Speech LLMs",
+  "paperId": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.6",
+  "pdfUrl": "https://aclanthology.org/2026.impactspeech-1.6.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.impactspeech-1.6/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "547211819eabbd2167abe64dd056eb0994e3abc5ed8c885041d939f57a9ccb54",
+  "type": "conference-paper"
+}

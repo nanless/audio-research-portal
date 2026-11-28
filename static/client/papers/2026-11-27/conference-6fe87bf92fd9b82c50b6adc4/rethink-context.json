@@ -1,0 +1,67 @@
+{
+  "abstract": "Speech Large Language Models (Speech LLMs) are increasingly deployed in real-world acoustic environments, yet it remains unclear which measurable properties of background sounds best explain performance degradation. We present AIP-Speech, an inference-only benchmark that evaluates Speech LLM robustness under controlled mixtures of realworld background recordings. Rather than comparing robustness across background categories alone, we characterize each recording using interpretable acoustic descriptors and examine their associations with degradation. Across five open Speech LLMs, we find that simple acoustic descriptors—including Zero Crossing Rate, Spectral Centroid, and Spectral Rolloff—consistently exhibit strong associations with degradation. We further quantify robustness disparities across accents and evaluate whether inference-time prompting improves resilience under adverse acoustic conditions. AIP-Speech provides a reproducible benchmark and descriptor-annotated background corpus for analyzing Speech LLM robustness.",
+  "abstractSha256": "b245296a9db6f1f32e8d2ba4a33432875d98d93d0541ed1cfc57f784284967ea",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "IvLabs, Visvesvaraya National Institute of Technology (VNIT), India"
+      ],
+      "name": "Aiden Dsouza"
+    },
+    {
+      "affiliations": [
+        "IvLabs, Visvesvaraya National Institute of Technology (VNIT), India"
+      ],
+      "name": "Shreyansh Mishra"
+    },
+    {
+      "affiliations": [
+        "IvLabs, Visvesvaraya National Institute of Technology (VNIT), India"
+      ],
+      "name": "Yashraj Suneja"
+    },
+    {
+      "affiliations": [
+        "IvLabs, Visvesvaraya National Institute of Technology (VNIT), India"
+      ],
+      "name": "Rohan Swain"
+    },
+    {
+      "affiliations": [
+        "IvLabs, Visvesvaraya National Institute of Technology (VNIT), India"
+      ],
+      "name": "Samyak Borkar"
+    },
+    {
+      "affiliations": [
+        "IvLabs, Visvesvaraya National Institute of Technology (VNIT), India"
+      ],
+      "name": "Arjun Jaishankar"
+    },
+    {
+      "affiliations": [
+        "IvLabs, Visvesvaraya National Institute of Technology (VNIT), India"
+      ],
+      "name": "Tanmay Urade"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对语音大模型在真实背景干扰下退化归因不清的问题，AIP-Speech 以固定说话内容与多信噪比可控混合做配对审计，发现过零率等高频描述子与退化呈较强秩相关，而口音差异显著且提示词转向总体改善有限。",
+  "originalTitle": "AIP-Speech: Auditing Speech LLM Robustness to Background Interference",
+  "paperId": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.2",
+  "pdfUrl": "https://aclanthology.org/2026.impactspeech-1.2.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "背景声音的可测属性如何解释语音大模型的性能下降",
+  "recordUrl": "https://aclanthology.org/2026.impactspeech-1.2/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "26afaae52cc7aee5778b05ac97c477ae290d629cc427b23ffec2b0b2ef60abfa"
+}

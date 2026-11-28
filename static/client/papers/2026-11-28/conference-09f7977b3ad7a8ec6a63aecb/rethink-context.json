@@ -1,0 +1,43 @@
+{
+  "abstract": "In this study, TurkSV-Bench is introduced as a novel benchmark dataset to evaluate the zero-shot cross-lingual performance and demographic biases of Turkish speaker verification (SV) systems. Created via an automated pipeline from YouTube data, this dataset comprises 1,844 audio recordings from 461 speakers representing diverse age groups, genders, and regional dialects. Evaluation of existing models identifies ResNet34-LM as the most successful baseline architecture. Subgroup analyses demonstrate the models’ generalization capabilities across different gender and age demographics, while revealing distinct performance variations among regional dialects. Comprehensive evaluations of various preprocessing techniques highlight the baseline architecture’s structural robustness, identifying specific configurations that maintain or refine verification performance without requiring aggressive signal filtering.",
+  "abstractSha256": "efa60fdeeb8e589c6d4119cb56b310d4159090f6fb6c1c4cedf8f9a79a044c77",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "说话人验证",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Ahmet Berkay Kantarcı"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Abdulkadir Parlak"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Ahmet Karazor"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对土耳其语缺少人口多样基准导致的跨语言评测与偏差盲区，该研究用全自动 YouTube 流程构建 461 位说话人 1,844 条录音的 TurkSV-Bench 并对比 9 个冻结模型，发现约 6.63 百万参数的 ResNet34-LM 以 0.0055% 阈值优化半总误差率整体最强，而温和预加重与倒谱均值归一化仅带来微小增益且激进降噪一致恶化，结论受伊斯坦布尔占 83% 的不均衡与同视频同源评测偏乐观的限制。",
+  "originalTitle": "TurkSV-Bench: Assessing Demographic Bias and Preprocessing Effects in Speaker Verification",
+  "paperId": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.9",
+  "pdfUrl": "https://aclanthology.org/2026.impactspeech-1.9.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "土耳其语说话人确认的基准、人口偏差与预处理效应",
+  "recordUrl": "https://aclanthology.org/2026.impactspeech-1.9/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "7ef8abf05def7d462040c241cbe763ca7877f66b975659810c86047fc2778e23"
+}

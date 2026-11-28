@@ -1,0 +1,43 @@
+{
+  "abstract": "As automatic speech recognition (ASR) systems shift toward multilingual support and lowresource language modeling, phoneme-based layers serve as a critical language-agnostic foundation. However, most evaluations of ASR’s demographic biases related to race, age, gender, and accent focus on standard grapheme-based ASR systems with comparatively little emphasis on phoneme-based systems. In this study, we evaluate the performance of WhisperIPA and ZIPA, two state-ofthe-art open-source systems that generate International Phonetic Alphabet (IPA) transcriptions. Our evaluation includes existing multilingual speech corpora and demographically annotated English-language corpora, comparing modelgenerated IPA transcriptions against graphemeto-phoneme (G2P) systems using both standard phoneme error rate (PER) and a proposed Soft PER metric that tolerates linguistically similar phoneme substitutions. Our analysis examines how performance varies across language, gender, accent, ethnicity, and age, revealing persistent disparities even after accounting for acceptable phonemic variation. These findings, while limited, provide insight into potential sources of bias and inform the development of more inclusive and linguistically robust phonemebased ASR systems. Our code and data are publicly available.",
+  "abstractSha256": "cee77cc2bc737f0c2ddf92ca1b6f6cc0f89205c08ce84a88c02517ab712b2fef",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Utah"
+      ],
+      "name": "Maneesha Rani Saha"
+    },
+    {
+      "affiliations": [
+        "University of Utah"
+      ],
+      "name": "Catherine Bao"
+    },
+    {
+      "affiliations": [
+        "University of Utah"
+      ],
+      "name": "Neal Patwari"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文评估 ZIPA 与 WhisperIPA 在 11 种语言及性别年龄族裔口音维度的音素转写差异，引入容忍相似替换的软音素错率，发现 ZIPA 全面更优但高低资源与口音族裔差距在软度量下依然存在，代价是自动参考与有限覆盖限定结论适用范围。",
+  "originalTitle": "Evaluating Bias in Phoneme-Based Automatic Speech Recognition Systems: An Analysis of IPA Transcription Models",
+  "paperId": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.5",
+  "pdfUrl": "https://aclanthology.org/2026.impactspeech-1.5.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "音素转写偏见在软度量下依然存在",
+  "recordUrl": "https://aclanthology.org/2026.impactspeech-1.5/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "0134a07607c52a32768c28faf1b688356555c738a2b2ad676679c80b0679983d"
+}

@@ -1,0 +1,21 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "name": "Heejoon Koo"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.3",
+  "originalTitle": "Can Large Audio-Language Models Ignore Multilingual Distractors? An Evaluation of Their Selective Auditory Attention Capabilities",
+  "paperId": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.3",
+  "pdfUrl": "https://aclanthology.org/2026.impactspeech-1.3.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.impactspeech-1.3/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "148f0c4a43434109c5bbbb9ad8693976f5bbcd94670ca07b4e7e9b8fb72b92ec",
+  "type": "conference-paper"
+}

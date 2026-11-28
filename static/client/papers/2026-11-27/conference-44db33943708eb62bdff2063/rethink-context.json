@@ -1,0 +1,43 @@
+{
+  "abstract": "Automatic speech recognition (ASR) systems exhibit unequal error rates across speaker groups, motivating interventions on their internal representations. We ask whether speakerlinked attributes that are linearly readable from pretrained ASR encoders yield useful directions for reducing group word-error-rate (WER) gaps. Across Whisper-medium, HuBERT-large, and Wav2Vec2-large on Common Voice and the Speech Accent Archive, we probe every encoder layer for metadata-derived sex/gender, age, and native/accent labels; construct centroid and probe-derived directions; inject them at selected layers; and compare downstream probe trajectories with matched WER changes. Sex labels are highly decodable (best macroF1 0.924–0.941), native/accent labels are also above chance (0.544–0.696), and age is weaker (0.354–0.397). Of 22 post-selected reruns, nine have 95% paired-bootstrap intervals entirely below zero, yet every absolute source-group WER reduction is below 0.7 percentage points. Conversely, a local target-class probe rate can rise from 8.09% to 99.87% while WER worsens. Linear readability is therefore neither evidence of causal use nor a reliable mitigation method. Our results motivate evaluating speech-bias interventions jointly at representation, propagation, and task levels.",
+  "abstractSha256": "a486294c2a495c100b36d634aa49c2ec9263f59048bc093dac3bae212289a05b",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "激活因果干预",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Advanced Computing Sciences, Maastricht University"
+      ],
+      "name": "Nicolas Bourrel"
+    },
+    {
+      "affiliations": [
+        "Department of Advanced Computing Sciences, Maastricht University"
+      ],
+      "name": "Abderrahmane Issam"
+    },
+    {
+      "affiliations": [
+        "Department of Advanced Computing Sciences, Maastricht University"
+      ],
+      "name": "Gerasimos Spanakis"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文追问线性可读的说话人属性能否作为推移方向缩小组间词错误率差距，经三个冻结编码器的分层探测与 22 组单层向量重测发现最大降幅不足 1 个百分点，而探针目标判别率可从 8.09% 跃至 99.87% 却伴随识别恶化，代价是需真标签推送、经挑选的描述性区间与未验证的部署条件。",
+  "originalTitle": "A Probe Shift Is Not a Fairness Fix: The Limits of Representation Steering in Speech Models",
+  "paperId": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.1",
+  "pdfUrl": "https://aclanthology.org/2026.impactspeech-1.1.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "探针翻转不是公平修复：语音模型表示推移的限度",
+  "recordUrl": "https://aclanthology.org/2026.impactspeech-1.1/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "9b7f47a48fe05f0c9b82dfa0205af3e97ccf8e009120d7cf95be01ecccceb34e"
+}

@@ -1,0 +1,37 @@
+{
+  "abstract": "Target-speaker extraction (TSE) systems are typically evaluated only after the complete output has been produced, limiting the ability to identify potentially unreliable outputs during generation. We investigate whether failure risk can instead be estimated causally from only the first three seconds of the emitted TSE waveform. We develop an early-warning monitor using 11,946 outputs spanning five conversational corpora and six TSE systems. Because independent failure labels are unavailable for this discovery cohort, we define a proxy adverse outcome from seven complete-output indicators of degraded or atypical TSE behaviour. After excluding monitoring features that overlap with the proxy construction, the monitor predicts this eventual outcome from the early waveform with an AUROC of 0.8062 and an AUPRC of 0.6606. At a 15% review budget, it identifies 54.47% of proxy-adverse outputs with 66.29% precision. To test whether this early-warning signal transfers beyond the discovery setting, we freeze the monitor and evaluate it unchanged on 2,000 unseen outputs with independently computed SI-SDRi. When failure is defined as SI-SDRi ≤ 0 dB, performance falls to near chance (AUROC 0.5354; AUPRC 0.0700). Yet, on the same external outputs, the frozen predictions remain strongly associated with the original proxy outcome (AUROC 0.8092; AUPRC 0.8481). The proxy and SI-SDRi failure definitions agree only weakly ( κ = 0 .028, MCC= 0 .064), while substantial featuredistribution shift is observed between the discovery and external cohorts (45 of 63 features have PSI ≥ 0.25). These results show that short-prefix monitoring can provide useful early risk prioritization within the setting in which the monitor is developed, but that such signals do not automatically transfer to independently defined failure outcomes. Reliable deployment therefore requires explicit attention to both distribution shift and the definition of failure.",
+  "abstractSha256": "fa85c2043ac1ba39cc2c44d49b038202c4a08befac5e5951c23fcd8e1345a240",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "目标说话人提取",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computer Science and Information Systems, Birla Institute of Technology and Science Pilani, Hyderabad Campus, Hyderabad, India"
+      ],
+      "name": "Shubham Sharma"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science and Information Systems, Birla Institute of Technology and Science Pilani, Hyderabad Campus, Hyderabad, India"
+      ],
+      "name": "Manik Gupta"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文用只看前 3 秒已放出波形的单流因果监测器预警目标说话人提取的代理不良输出，在内部 11,946 个输出上达到 AUROC 0.8062 并在 15% 复核预算下实现约 3.63 倍提升，但冻结模型在外部 SI-SDRi 定义下接近随机，表明分布偏移与失效定义共同制约搬运。",
+  "originalTitle": "Early Warning for Target-Speaker Extraction: Reliability under Distribution and Failure-Definition Shift",
+  "paperId": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.4",
+  "pdfUrl": "https://aclanthology.org/2026.impactspeech-1.4.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "仅用前 3 秒波形预警目标说话人提取失效：内部有效与外部失效的可靠性检验",
+  "recordUrl": "https://aclanthology.org/2026.impactspeech-1.4/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "edf0fe7291173e2b13b1a59c057dceeb9532ff3885d14a0772bec0aa974ca2fe"
+}

@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "University of Utah"
+      ],
+      "name": "Maneesha Rani Saha"
+    },
+    {
+      "affiliations": [
+        "University of Utah"
+      ],
+      "name": "Catherine Bao"
+    },
+    {
+      "affiliations": [
+        "University of Utah"
+      ],
+      "name": "Neal Patwari"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.5",
+  "originalTitle": "Evaluating Bias in Phoneme-Based Automatic Speech Recognition Systems: An Analysis of IPA Transcription Models",
+  "paperId": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.5",
+  "pdfUrl": "https://aclanthology.org/2026.impactspeech-1.5.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.impactspeech-1.5/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "0134a07607c52a32768c28faf1b688356555c738a2b2ad676679c80b0679983d",
+  "type": "conference-paper"
+}

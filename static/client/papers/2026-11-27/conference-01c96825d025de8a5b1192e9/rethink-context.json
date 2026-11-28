@@ -1,0 +1,31 @@
+{
+  "abstract": "GPTQ and similar calibration-based quantization methods tune their rounding to a small calibration sample, in practice usually convenient, native-accented read speech. Edge devices disproportionately run quantized models, so the speakers most likely to depend on the compressed model are often the ones calibration represented least. Compression is known to amplify bias in text LLMs and across languages in multilingual speech models, but whether it does so within a single language, between native and non-native accents, in a modern speech LLM, remains untested. We quantize the LLM backbone of Qwen2-Audio-7B-Instruct with GPTQ, hold the recipe fixed and vary only which EdAcc speakers fill the calibration set (native-only, balanced, L2-only), measuring the native-vs-L2 word error rate (WER) gap at matched overall WER. We expected nativeonly calibration to widen the gap and balanced calibration to close it. Instead, homogeneous calibration, native-only or L2-only, narrows the gap while balanced calibration does almost nothing. It recurs when we quantize the audio encoder, weakens at 3-bit and collapses at 2-bit.",
+  "abstractSha256": "bc0f215e368e9a73300e1aca9d40747290e3c18ca80564d8991ae83d4b0f2c73",
+  "abstractStatus": "available",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "模型量化",
+    "primaryTask": "语音识别",
+    "rankBucket": "前50%",
+    "score": 6.1
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher"
+      ],
+      "name": "Angad Ripudaman Singh Bajwa"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文固定 GPTQ 流程只更换校准说话人构成，发现在 4 比特下同质校准反而缩小母语与第二语言口音词错误率差距而均衡校准几乎无效，但效应仅约一个百分点且随位宽降低与重抽抖动而不稳健。",
+  "originalTitle": "Lost in Compression: Calibration Bias and the Accent-WER Gap in Speech LLMs",
+  "paperId": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.6",
+  "pdfUrl": "https://aclanthology.org/2026.impactspeech-1.6.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "校准构成如何意外改变口音识别差距",
+  "recordUrl": "https://aclanthology.org/2026.impactspeech-1.6/",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "547211819eabbd2167abe64dd056eb0994e3abc5ed8c885041d939f57a9ccb54"
+}

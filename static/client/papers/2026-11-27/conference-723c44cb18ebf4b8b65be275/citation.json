@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "The Ohio State University, Columbus, OH, USA"
+      ],
+      "name": "Srishti Ginjala"
+    },
+    {
+      "affiliations": [
+        "The Ohio State University, Columbus, OH, USA"
+      ],
+      "name": "Eric Fosler-Lussier"
+    },
+    {
+      "affiliations": [
+        "Air Force Research Laboratory, USA"
+      ],
+      "name": "Christopher W. Myers"
+    },
+    {
+      "affiliations": [
+        "The Ohio State University, Columbus, OH, USA"
+      ],
+      "name": "Srinivasan Parthasarathy"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.8",
+  "originalTitle": "Temporal Taxation Compounds Under Post-Training Compression of Whisper Models",
+  "paperId": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.8",
+  "pdfUrl": "https://aclanthology.org/2026.impactspeech-1.8.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.impactspeech-1.8/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "c44382781fe6efe8941ce8a593869cece691de5a8a609280c7b1979993521939",
+  "type": "conference-paper"
+}

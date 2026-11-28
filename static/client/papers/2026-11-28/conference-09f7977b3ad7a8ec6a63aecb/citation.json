@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Ahmet Berkay Kantarcı"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Abdulkadir Parlak"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Ahmet Karazor"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.9",
+  "originalTitle": "TurkSV-Bench: Assessing Demographic Bias and Preprocessing Effects in Speaker Verification",
+  "paperId": "conference:impactspeech:2026:conference-paper-id:2026.impactspeech-1.9",
+  "pdfUrl": "https://aclanthology.org/2026.impactspeech-1.9.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://aclanthology.org/2026.impactspeech-1.9/",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "7ef8abf05def7d462040c241cbe763ca7877f66b975659810c86047fc2778e23",
+  "type": "conference-paper"
+}
