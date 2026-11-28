@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Trinity College Dublin, Ireland"
+      ],
+      "name": "Zhaofeng Lin"
+    },
+    {
+      "affiliations": [
+        "Trinity College Dublin, Ireland"
+      ],
+      "name": "Naomi Harte"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:avsp:2026:conference-paper-id:lin26_avsp",
+  "originalTitle": "Natural Asynchrony in Audio-Visual Speech Recognition: A Feature, Not a Flaw",
+  "paperId": "conference:avsp:2026:conference-paper-id:lin26_avsp",
+  "pdfUrl": "https://www.isca-archive.org/avsp_2026/lin26_avsp.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/avsp_2026/lin26_avsp.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "399f67e6f2886aeab1536be0e99dc792eb62b3a927a2ad8d1988518070549148",
+  "type": "conference-paper"
+}

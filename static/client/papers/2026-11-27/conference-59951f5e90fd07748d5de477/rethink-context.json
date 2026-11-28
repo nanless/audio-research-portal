@@ -1,0 +1,68 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "后50%",
+    "score": 5.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Modality.AI, Inc., San Francisco, CA, USA"
+      ],
+      "name": "Cathy Zhang"
+    },
+    {
+      "affiliations": [
+        "Modality.AI, Inc., San Francisco, CA, USA"
+      ],
+      "name": "Hardik Kothare"
+    },
+    {
+      "affiliations": [
+        "Modality.AI, Inc., San Francisco, CA, USA"
+      ],
+      "name": "Michael Neumann"
+    },
+    {
+      "affiliations": [
+        "Nathan Kline Institute for Psychiatric Research, Orangeburg, NY, USA"
+      ],
+      "name": "Beverly Insel"
+    },
+    {
+      "affiliations": [
+        "Nathan Kline Institute for Psychiatric Research, Orangeburg, NY, USA"
+      ],
+      "name": "Anzalee Khan"
+    },
+    {
+      "affiliations": [
+        "Nathan Kline Institute for Psychiatric Research, Orangeburg, NY, USA"
+      ],
+      "name": "Jean-Pierre Lindenmayer"
+    },
+    {
+      "affiliations": [
+        "Modality.AI, Inc., San Francisco, CA, USA",
+        "University of California, San Francisco, CA, USA"
+      ],
+      "name": "Vikram Ramanarayanan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文以统一看图说话任务检验会话延迟这一认知时间指标，用 Whisper 自动流程逼近毫秒级人工标注，发现在精神分裂症表达性维度稳定显著而抑郁与轻度认知障碍基本无效，且自动误差约 1 秒会淹没细微效应。",
+  "originalTitle": "Investigating Conversational Speech Latency as a Marker of Cognitive and Temporal Processing During Picture Description Tasks in Schizophrenia, Depression and Mild Cognitive Impairment",
+  "paperId": "conference:avsp:2026:conference-paper-id:zhang26_avsp",
+  "pdfUrl": "https://www.isca-archive.org/avsp_2026/zhang26_avsp.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "会话延迟能否跨疾病反映认知时间加工：精神分裂症、抑郁与轻度认知障碍的统一验证",
+  "recordUrl": "https://www.isca-archive.org/avsp_2026/zhang26_avsp.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "b610568b3e38cddc7eca77ff85479ba7205a74eca942eebe531ff66b6ae3f252"
+}

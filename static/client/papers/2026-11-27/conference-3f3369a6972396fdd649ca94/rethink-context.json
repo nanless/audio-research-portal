@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "后50%",
+    "score": 4.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "João V. P. de Menezes"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Denis Burnham"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Hani Camille Yehia"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Adriano Vilela Barbosa"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Eric Vatikiotis-Bateson"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本文针对不同方法难以比较声调视觉信息来源的问题，用同一套线性判别分析加消融对 7 位发音人的 F0 与 35 个动捕标记建模，发现 F0 高于完整视觉不低于面部高于头部高于随机的稳定层级且眉毛与喉部最重要，但结论仅来自实验室生产端分类且泰语仅 1 人、缺少感知验证与公开复现细节。",
+  "originalTitle": "Distinctive Face and Head Movements in the Production of Lexical Tones in Cantonese, Mandarin, and Thai",
+  "paperId": "conference:avsp:2026:conference-paper-id:menezes26_avsp",
+  "pdfUrl": "https://www.isca-archive.org/avsp_2026/menezes26_avsp.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "只看脸和头能分清声调吗：粤语、普通话与泰语的生产端分类证据",
+  "recordUrl": "https://www.isca-archive.org/avsp_2026/menezes26_avsp.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "c9e38d38ef94ce619fd3b82bbadc4dae8f89220f348d50fecdcc325adfa85ebd"
+}

@@ -1,0 +1,44 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "心理声学实验",
+    "primaryTask": "音视频理解",
+    "rankBucket": "后50%",
+    "score": 4.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "MARCS Institute for Brain, Behaviour and Development, Sydney, Australia"
+      ],
+      "name": "Denis Burnham"
+    },
+    {
+      "affiliations": [
+        "Basque Center on Cognition, Brain and Language, San Sebastian, Spain",
+        "Ikerbasque, Basque Foundation for Science, Bilbao, Spain"
+      ],
+      "name": "Marina Kalashnikova"
+    },
+    {
+      "affiliations": [
+        "Centre for Neuroscience in Education, University of Cambridge, UK"
+      ],
+      "name": "Usha Goswami"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本研究针对 4.5 岁阅读前家族风险儿童的视听言语感知问题，采用听觉单通道、视觉单通道与视听一致和不一致的麦格克任务，发现风险组听觉单通道较弱但视觉增强更大从而在视听条件下追平非风险组，且视觉干扰而非视觉增强与符号快速命名和句子复述相关，代价是全样本仅 46 名且为单次横断观察。",
+  "originalTitle": "Is Auditory-visual speech perception in pre-reading children at-risk for dyslexia enhanced or impaired?",
+  "paperId": "conference:avsp:2026:conference-paper-id:burnham26_avsp",
+  "pdfUrl": "https://www.isca-archive.org/avsp_2026/burnham26_avsp.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "识字前家族风险儿童的视听言语感知是受损还是补偿",
+  "recordUrl": "https://www.isca-archive.org/avsp_2026/burnham26_avsp.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "a4bc132b68941d9bb12e360b7891422214371b0f1aa33639ecac92f1264cf33c"
+}

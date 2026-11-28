@@ -1,0 +1,61 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音属性识别",
+    "rankBucket": "后50%",
+    "score": 5.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The MARCS Institute, Western Sydney University"
+      ],
+      "name": "Chris Davis"
+    },
+    {
+      "affiliations": [
+        "Macquarie University"
+      ],
+      "name": "Kelly Miles"
+    },
+    {
+      "affiliations": [
+        "Macquarie University"
+      ],
+      "name": "Jorg Buchholz"
+    },
+    {
+      "affiliations": [
+        "Macquarie University"
+      ],
+      "name": "Ronny Ibrahim"
+    },
+    {
+      "affiliations": [
+        "Macquarie University"
+      ],
+      "name": "Brooke Luthy"
+    },
+    {
+      "affiliations": [
+        "The MARCS Institute, Western Sydney University"
+      ],
+      "name": "Jeesun Kim"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "本研究让 10 对参与者在 56.7 dB SPL 至 92.0 dB SPL 的四种真实噪声中对坐交谈，用视觉门控响度、前倾角与手臂参与度三路自动追踪检验适应策略，发现音量随噪声分级显著上升而前倾只在派对条件显著、手臂整体位移无显著差异，代价是说话人归属与手势自动追踪仍存在系统误差，需人工复核。",
+  "originalTitle": "Conversation in Noise: Measuring auditory and visual signals",
+  "paperId": "conference:avsp:2026:conference-paper-id:davis26_avsp",
+  "pdfUrl": "https://www.isca-archive.org/avsp_2026/davis26_avsp.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "噪声中对话：声音响度、躯干前倾与手臂动作如何随声压级变化",
+  "recordUrl": "https://www.isca-archive.org/avsp_2026/davis26_avsp.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "d3b7a110b2bbcb67df311e8fb40ce8fc4fae612addfa5a75788fb498f35a32cd"
+}

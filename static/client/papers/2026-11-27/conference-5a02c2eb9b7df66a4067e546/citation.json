@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Sigmedia Group, School of Engineering, Trinity College Dublin, Ireland"
+      ],
+      "name": "Rishabh Jain"
+    },
+    {
+      "affiliations": [
+        "Sigmedia Group, School of Engineering, Trinity College Dublin, Ireland"
+      ],
+      "name": "Naomi Harte"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:avsp:2026:conference-paper-id:jain26_avsp",
+  "originalTitle": "A Shared Data Processing Workflow for Benchmarking Audio-Visual Speech Recognition Beyond LRS Datasets",
+  "paperId": "conference:avsp:2026:conference-paper-id:jain26_avsp",
+  "pdfUrl": "https://www.isca-archive.org/avsp_2026/jain26_avsp.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/avsp_2026/jain26_avsp.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "4c56c1863208e96e68503644fbb57fe047ebfc94096fd2475d5d4e324e5dac39",
+  "type": "conference-paper"
+}

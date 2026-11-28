@@ -1,0 +1,34 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "MARCS Institute for Brain, Behaviour and Development, Sydney, Australia"
+      ],
+      "name": "Denis Burnham"
+    },
+    {
+      "affiliations": [
+        "Basque Center on Cognition, Brain and Language, San Sebastian, Spain",
+        "Ikerbasque, Basque Foundation for Science, Bilbao, Spain"
+      ],
+      "name": "Marina Kalashnikova"
+    },
+    {
+      "affiliations": [
+        "Centre for Neuroscience in Education, University of Cambridge, UK"
+      ],
+      "name": "Usha Goswami"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:avsp:2026:conference-paper-id:burnham26_avsp",
+  "originalTitle": "Is Auditory-visual speech perception in pre-reading children at-risk for dyslexia enhanced or impaired?",
+  "paperId": "conference:avsp:2026:conference-paper-id:burnham26_avsp",
+  "pdfUrl": "https://www.isca-archive.org/avsp_2026/burnham26_avsp.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/avsp_2026/burnham26_avsp.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "a4bc132b68941d9bb12e360b7891422214371b0f1aa33639ecac92f1264cf33c",
+  "type": "conference-paper"
+}

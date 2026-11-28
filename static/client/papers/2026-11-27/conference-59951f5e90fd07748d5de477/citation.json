@@ -1,0 +1,58 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Modality.AI, Inc., San Francisco, CA, USA"
+      ],
+      "name": "Cathy Zhang"
+    },
+    {
+      "affiliations": [
+        "Modality.AI, Inc., San Francisco, CA, USA"
+      ],
+      "name": "Hardik Kothare"
+    },
+    {
+      "affiliations": [
+        "Modality.AI, Inc., San Francisco, CA, USA"
+      ],
+      "name": "Michael Neumann"
+    },
+    {
+      "affiliations": [
+        "Nathan Kline Institute for Psychiatric Research, Orangeburg, NY, USA"
+      ],
+      "name": "Beverly Insel"
+    },
+    {
+      "affiliations": [
+        "Nathan Kline Institute for Psychiatric Research, Orangeburg, NY, USA"
+      ],
+      "name": "Anzalee Khan"
+    },
+    {
+      "affiliations": [
+        "Nathan Kline Institute for Psychiatric Research, Orangeburg, NY, USA"
+      ],
+      "name": "Jean-Pierre Lindenmayer"
+    },
+    {
+      "affiliations": [
+        "Modality.AI, Inc., San Francisco, CA, USA",
+        "University of California, San Francisco, CA, USA"
+      ],
+      "name": "Vikram Ramanarayanan"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:avsp:2026:conference-paper-id:zhang26_avsp",
+  "originalTitle": "Investigating Conversational Speech Latency as a Marker of Cognitive and Temporal Processing During Picture Description Tasks in Schizophrenia, Depression and Mild Cognitive Impairment",
+  "paperId": "conference:avsp:2026:conference-paper-id:zhang26_avsp",
+  "pdfUrl": "https://www.isca-archive.org/avsp_2026/zhang26_avsp.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/avsp_2026/zhang26_avsp.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "b610568b3e38cddc7eca77ff85479ba7205a74eca942eebe531ff66b6ae3f252",
+  "type": "conference-paper"
+}

@@ -1,0 +1,52 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "集成学习",
+    "primaryTask": "病理语音评估",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computing, Imperial College London, UK",
+        "Department of Electrical and Electronic Engineering, Imperial College London, UK",
+        "Department of Brain Sciences, Imperial College London, UK"
+      ],
+      "name": "Giulia Sanguedolce"
+    },
+    {
+      "affiliations": [
+        "Department of Brain Sciences, Imperial College London, UK"
+      ],
+      "name": "Niahm V. Parkinson"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Electronic Engineering, Imperial College London, UK"
+      ],
+      "name": "Patrick A. Naylor"
+    },
+    {
+      "affiliations": [
+        "Department of Brain Sciences, Imperial College London, UK",
+        "Imperial College Healthcare NHS Trust, London, UK"
+      ],
+      "name": "Fatemeh Geranmayeh"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对言语到脑病灶多对多映射难求逆与配对数据稀缺问题，Speech2Lesion 以五类言语特征聚合与堆叠集成多头同步推断检出偏侧化分区与体积，在 742 例上实现卒中检出 AUROC 0.989 与顶叶 0.954 及体积方差解释约 26%，代价是偏侧化与体积精度中等、三分类仅约 0.48 且缺实时与开源复现支撑。",
+  "originalTitle": "Speech2Lesion: Multi-Head Inference of Brain Lesion Characteristics from Overt Speech",
+  "paperId": "conference:avsp:2026:conference-paper-id:sanguedolce26_avsp",
+  "pdfUrl": "https://www.isca-archive.org/avsp_2026/sanguedolce26_avsp.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "从公开言语推断脑病灶属性：多头堆叠集成的可行性与边界",
+  "recordUrl": "https://www.isca-archive.org/avsp_2026/sanguedolce26_avsp.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "61c953047a409bf990ae3feec5733cdd6905e9799a75f11c829dde1daa13d5be"
+}

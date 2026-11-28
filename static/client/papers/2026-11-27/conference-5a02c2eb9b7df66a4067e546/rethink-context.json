@@ -1,0 +1,37 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音视频语音识别",
+    "rankBucket": "后50%",
+    "score": 5.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Sigmedia Group, School of Engineering, Trinity College Dublin, Ireland"
+      ],
+      "name": "Rishabh Jain"
+    },
+    {
+      "affiliations": [
+        "Sigmedia Group, School of Engineering, Trinity College Dublin, Ireland"
+      ],
+      "name": "Naomi Harte"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对只在 LRS2 或 LRS3 上评测难以公平比较与检验跨条件鲁棒性的问题，论文提出共享数据准备工作流把十余种语料统一成兼容 AV-HuBERT 与 Auto-AVSR 的表示以支持一码多语料训练评测，其最强证据是覆盖实验室到鸡尾酒会的多场景配方与双接口清单，主要代价是重型预处理开销且未报告任何识别性能提升。",
+  "originalTitle": "A Shared Data Processing Workflow for Benchmarking Audio-Visual Speech Recognition Beyond LRS Datasets",
+  "paperId": "conference:avsp:2026:conference-paper-id:jain26_avsp",
+  "pdfUrl": "https://www.isca-archive.org/avsp_2026/jain26_avsp.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "超越 LRS 的音频视觉语音识别基准：共享数据处理工作流解读",
+  "recordUrl": "https://www.isca-archive.org/avsp_2026/jain26_avsp.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "4c56c1863208e96e68503644fbb57fe047ebfc94096fd2475d5d4e324e5dac39"
+}

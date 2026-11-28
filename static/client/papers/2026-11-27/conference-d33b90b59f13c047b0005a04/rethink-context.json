@@ -1,0 +1,37 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "音视频语音识别",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Trinity College Dublin, Ireland"
+      ],
+      "name": "Zhaofeng Lin"
+    },
+    {
+      "affiliations": [
+        "Trinity College Dublin, Ireland"
+      ],
+      "name": "Naomi Harte"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对同步融合忽视视觉超前听觉的自然异步问题，论文提出时移注意力双流门控融合与嘴部超前词辅助分类，在 LRS3 上把巴布尔噪声有效信噪比增益做到 17.0 dB，代价是干净语音词错误率为 5.9% 且参数量为 540M。",
+  "originalTitle": "Natural Asynchrony in Audio-Visual Speech Recognition: A Feature, Not a Flaw",
+  "paperId": "conference:avsp:2026:conference-paper-id:lin26_avsp",
+  "pdfUrl": "https://www.isca-archive.org/avsp_2026/lin26_avsp.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "自然异步是特征而非缺陷：时序感知融合提升视听语音识别噪声鲁棒性",
+  "recordUrl": "https://www.isca-archive.org/avsp_2026/lin26_avsp.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "399f67e6f2886aeab1536be0e99dc792eb62b3a927a2ad8d1988518070549148"
+}

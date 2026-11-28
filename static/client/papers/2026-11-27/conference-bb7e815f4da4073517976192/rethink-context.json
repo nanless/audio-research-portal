@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "生成模型",
+    "primaryTask": "文本到语音",
+    "rankBucket": "后50%",
+    "score": 5.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "College of Information Science and Engineering, Ritsumeikan University, Osaka, Japan"
+      ],
+      "name": "Ryotaro Nagase"
+    },
+    {
+      "affiliations": [
+        "College of Information Science and Engineering, Ritsumeikan University, Osaka, Japan"
+      ],
+      "name": "Ryoichi Takashima"
+    },
+    {
+      "affiliations": [
+        "College of Information Science and Engineering, Ritsumeikan University, Osaka, Japan"
+      ],
+      "name": "Yoichi Yamashita"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对类别与维度标注难以直观控制混合情感与强度的问题，本文在 VITS 中新增色相、饱和度与明度嵌入并与类别嵌入联合使用，在基频相关与情感相似度上优于仅用类别，但以频谱失真与可懂度小幅下降为代价。",
+  "originalTitle": "Speech Synthesis with Color-based Emotion Representation",
+  "paperId": "conference:avsp:2026:conference-paper-id:nagase26_avsp",
+  "pdfUrl": "https://www.isca-archive.org/avsp_2026/nagase26_avsp.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "用颜色控制语音情感：色相与饱和度如何辅助类别标签合成更贴切的情感语音",
+  "recordUrl": "https://www.isca-archive.org/avsp_2026/nagase26_avsp.html",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "5b5d9acad96caccef90ec7e384547a0a3c3404b2dc94de6434fe6667e4642ab6"
+}

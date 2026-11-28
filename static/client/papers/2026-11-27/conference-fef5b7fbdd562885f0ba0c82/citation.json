@@ -1,0 +1,42 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computing, Imperial College London, UK",
+        "Department of Electrical and Electronic Engineering, Imperial College London, UK",
+        "Department of Brain Sciences, Imperial College London, UK"
+      ],
+      "name": "Giulia Sanguedolce"
+    },
+    {
+      "affiliations": [
+        "Department of Brain Sciences, Imperial College London, UK"
+      ],
+      "name": "Niahm V. Parkinson"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical and Electronic Engineering, Imperial College London, UK"
+      ],
+      "name": "Patrick A. Naylor"
+    },
+    {
+      "affiliations": [
+        "Department of Brain Sciences, Imperial College London, UK",
+        "Imperial College Healthcare NHS Trust, London, UK"
+      ],
+      "name": "Fatemeh Geranmayeh"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:avsp:2026:conference-paper-id:sanguedolce26_avsp",
+  "originalTitle": "Speech2Lesion: Multi-Head Inference of Brain Lesion Characteristics from Overt Speech",
+  "paperId": "conference:avsp:2026:conference-paper-id:sanguedolce26_avsp",
+  "pdfUrl": "https://www.isca-archive.org/avsp_2026/sanguedolce26_avsp.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/avsp_2026/sanguedolce26_avsp.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "61c953047a409bf990ae3feec5733cdd6905e9799a75f11c829dde1daa13d5be",
+  "type": "conference-paper"
+}

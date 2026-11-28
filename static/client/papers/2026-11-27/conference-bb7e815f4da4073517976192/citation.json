@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "College of Information Science and Engineering, Ritsumeikan University, Osaka, Japan"
+      ],
+      "name": "Ryotaro Nagase"
+    },
+    {
+      "affiliations": [
+        "College of Information Science and Engineering, Ritsumeikan University, Osaka, Japan"
+      ],
+      "name": "Ryoichi Takashima"
+    },
+    {
+      "affiliations": [
+        "College of Information Science and Engineering, Ritsumeikan University, Osaka, Japan"
+      ],
+      "name": "Yoichi Yamashita"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:avsp:2026:conference-paper-id:nagase26_avsp",
+  "originalTitle": "Speech Synthesis with Color-based Emotion Representation",
+  "paperId": "conference:avsp:2026:conference-paper-id:nagase26_avsp",
+  "pdfUrl": "https://www.isca-archive.org/avsp_2026/nagase26_avsp.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://www.isca-archive.org/avsp_2026/nagase26_avsp.html",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "5b5d9acad96caccef90ec7e384547a0a3c3404b2dc94de6434fe6667e4642ab6",
+  "type": "conference-paper"
+}
