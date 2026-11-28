@@ -2,7 +2,7 @@
 title: "Auditory Contrast Network for Text-Free Prominence Detection"
 date: 2026-09-28
 draft: false
-description: "针对朗读英语词级感知重音评分任务，听觉对比网络用三个声学线索的相邻词非线性对比加轻量聚合，在跨语料迁移上以 202 参数达到 r=0.412 追平冻结 wav2vec2 个基线，加文本后到 r=0.451，代价是依赖外部词边界且仅在单语料对上验证。"
+description: "针对朗读英语词级感知重音评分任务，听觉对比网络用三个声学线索的相邻词非线性对比加轻量聚合，在跨语料迁移上以 202 参数达到 r=0.412 追平冻结 wav2vec2 基线，加文本后到 r=0.451，代价是依赖外部词边界且仅在单语料对上验证。"
 tags: ["注意力机制", "高效推理", "可解释性", "韵律", "语音属性识别"]
 categories: ["interspeech-2026 论文"]
 paper_digest_pipeline_owned: true

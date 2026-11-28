@@ -2,7 +2,7 @@
 title: "CraftTTS: Fine-Grained Prosody Control for Text-to-Speech"
 date: 2026-09-28
 draft: false
-description: "针对词级重音与语速控制易破坏全局自然度的问题，CraftTTS 用外部教师构造偏好数据再经 SFT 加 DPO 加 GRPO 渐进对齐，最强证据是完整模型在 NMOS 达 3.87 和 SPMOS 达 3.35 的同时 CER 为 7.01%，代价是 CER 与说话人相似度略低于原始 CosyVoice 2 个基线。"
+description: "针对词级重音与语速控制易破坏全局自然度的问题，CraftTTS 用外部教师构造偏好数据再经 SFT 加 DPO 加 GRPO 渐进对齐，最强证据是完整模型在 NMOS 达 3.87 和 SPMOS 达 3.35 的同时 CER 为 7.01%，代价是 CER 与说话人相似度略低于原始 CosyVoice 2 基线。"
 tags: ["强化学习", "韵律", "零样本", "文本到语音"]
 categories: ["interspeech-2026 论文"]
 paper_digest_pipeline_owned: true

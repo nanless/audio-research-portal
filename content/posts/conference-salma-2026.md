@@ -709,10 +709,10 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 👥 **作者与机构**
 
-- Nikunj Gupta：机构信息未能从会议 PDF 纯文本可靠映射
-- Shreshth Rai：机构信息未能从会议 PDF 纯文本可靠映射
-- Kartik Sharma：机构信息未能从会议 PDF 纯文本可靠映射
-- Dinesh K Vishwakarma：机构信息未能从会议 PDF 纯文本可靠映射
+- Nikunj Gupta：Artificial Intelligence and Machine Learning Society
+- Shreshth Rai：Artificial Intelligence and Machine Learning Society
+- Kartik Sharma：Artificial Intelligence and Machine Learning Society
+- Dinesh K Vishwakarma：Artificial Intelligence and Machine Learning Society
 
 📌 **核心摘要**
 
@@ -845,9 +845,9 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 👥 **作者与机构**
 
-- Yingzhi Wang：机构信息未能从会议 PDF 纯文本可靠映射
-- Reem Alhazzani：机构信息未能从会议 PDF 纯文本可靠映射
-- Muhammad AL\-Qurishi：机构信息未能从会议 PDF 纯文本可靠映射
+- Yingzhi Wang：Elm Company, KSA
+- Reem Alhazzani：Elm Company, KSA
+- Muhammad AL\-Qurishi：Elm Company, KSA
 
 📌 **核心摘要**
 

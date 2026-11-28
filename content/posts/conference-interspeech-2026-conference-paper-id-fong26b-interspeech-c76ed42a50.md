@@ -223,7 +223,7 @@ paper_digest_conference_structure: pdf-visual-quote-evidence-v1
 
 *论文图 1。原论文 Figure 1：“Conceptual summary of results. Multilingual ASR pretraining enables effective adaptation of SpeechLLMs in low-resource multitask settings (3–5h per task/language).”。*
 
-图中左侧从每语言 100 小时以上的高资源识别数据出发，先得到识别预训练的投影层，再用每语言每任务 3 到 5 小时的低资源多任务数据做微调。中间分出两条路径。有限多语预训练对应 5 个语言 500 小时，论文建议此时用单语多任务微调更稳。高度多语预训练对应 28 个语言 7622 小时，此时单语或多语微调均可，总体相当。右侧结论框点出核心反差。
+图中左侧从每语言 100 小时以上的高资源识别数据出发，先得到识别预训练的投影层，再用每语言每任务 3 到 5 小时的低资源多任务数据做微调。中间分出两条路径。有限多语预训练对应 5 语言 500 小时，论文建议此时用单语多任务微调更稳。高度多语预训练对应 28 语言 7622 小时，此时单语或多语微调均可，总体相当。右侧结论框点出核心反差。
 
 跨语言迁移成立但依赖语言相近性，跨任务迁移不成立，未见任务不会零样本涌现。记住这个分支，就记住了何时该单语、何时可多语，以及不能对未见任务抱有零样本幻想。
 

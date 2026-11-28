@@ -25,9 +25,9 @@ paper_digest_rank_bucket: "后50%"
 paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "针对标准意大利语识别系统在那不勒斯语上系统性失效的问题，本文构建了 141 个片段的单说话人朗读语料并以意大利语配置的冻结 Whisper 为外部评测工具，得到词错误率 86.94 % 与 BLEU 0.0436 等极低分数，代价是结论仅适用于该说话人与朗读场景而无法推广到人群层面。"
 paper_digest_reader_sections: [{"heading":"那不勒斯语与标准意大利语的系统性差异为何导致识别失效","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"三阶段语料构建与外部评测流程如何实现可复制","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"单说话人录音规范与方言特征保留的具体做法","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"141 个片段上的四项指标揭示了怎样的失效程度","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"四类典型错误如何暴露意大利语先验的系统性偏置","index":5,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"单说话人与朗读场景限制下的复现边界与选型建议","index":6,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Michael Cacioli"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Liam Eggleston"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Jatin Sarabu"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Kevin Zhu"}]
+paper_digest_authors: [{"affiliations":["Gilmour Academy","Algoverse AI Research"],"name":"Michael Cacioli"},{"affiliations":["Algoverse AI Research"],"name":"Liam Eggleston"},{"affiliations":["Algoverse AI Research"],"name":"Jatin Sarabu"},{"affiliations":["Algoverse AI Research"],"name":"Kevin Zhu"}]
 paper_digest_abstract_sha256: null
-paper_digest_sidecars: {"citation.bib":{"sha256":"37477b6ae3bd0d795a7e16d6aa18f4b55247d77c9b6a83687ec052a13264760a","url":"/audio-research-portal/client/papers/2026-11-27/conference-f9557cfc9d08e0d477cd54e8/citation.bib"},"citation.json":{"sha256":"642c6846cb1ffce86bc5320370c6f33ac6cf612a7e95a12577cfbac029c4de89","url":"/audio-research-portal/client/papers/2026-11-27/conference-f9557cfc9d08e0d477cd54e8/citation.json"},"citation.ris":{"sha256":"4c640ae265a84223329b20309e4552c1f035661bcb1e5d36822edefefa04ea5e","url":"/audio-research-portal/client/papers/2026-11-27/conference-f9557cfc9d08e0d477cd54e8/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"8d9b096ae49759c6b2852d44c4a4bdaef0df5b1f96513abfac5ec863114a54e5","url":"/audio-research-portal/client/papers/2026-11-27/conference-f9557cfc9d08e0d477cd54e8/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"37477b6ae3bd0d795a7e16d6aa18f4b55247d77c9b6a83687ec052a13264760a","url":"/audio-research-portal/client/papers/2026-11-27/conference-f9557cfc9d08e0d477cd54e8/citation.bib"},"citation.json":{"sha256":"aa905b4b9cd829937769f1c52e41d52e8ad52e90df6413794fb88eb4929d8f64","url":"/audio-research-portal/client/papers/2026-11-27/conference-f9557cfc9d08e0d477cd54e8/citation.json"},"citation.ris":{"sha256":"4c640ae265a84223329b20309e4552c1f035661bcb1e5d36822edefefa04ea5e","url":"/audio-research-portal/client/papers/2026-11-27/conference-f9557cfc9d08e0d477cd54e8/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"79c8565fd27363f0be61ce0442120247a4ad83d1d9c24e73a56542b9a0477729","url":"/audio-research-portal/client/papers/2026-11-27/conference-f9557cfc9d08e0d477cd54e8/rethink-context.json"}}
 paper_digest_paper_id: "conference:audio-aaai:2026:conference-paper-id:cacioli26a"
 paper_digest_source_kind: conference
 paper_digest_conference_id: "audio-aaai-2026"
@@ -99,10 +99,10 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 ## 👥 作者与机构
 
-- Michael Cacioli：机构信息未能从会议 PDF 纯文本可靠映射
-- Liam Eggleston：机构信息未能从会议 PDF 纯文本可靠映射
-- Jatin Sarabu：机构信息未能从会议 PDF 纯文本可靠映射
-- Kevin Zhu：机构信息未能从会议 PDF 纯文本可靠映射
+- Michael Cacioli：Gilmour Academy；Algoverse AI Research
+- Liam Eggleston：Algoverse AI Research
+- Jatin Sarabu：Algoverse AI Research
+- Kevin Zhu：Algoverse AI Research
 
 ## 📌 核心摘要
 

@@ -2,7 +2,7 @@
 title: "Hardware-Aware Representation-Asymmetric Distillation with a Teacher Pool for Tiny Bioacoustic Recognition"
 date: 2026-11-27
 draft: false
-description: "针对微控制器鸟鸣识别中稀疏鸣叫易被平均池化稀释且低分辨率前端限制判别力的问题，本文用高分辨率多架构 19 模型教师池向低分辨率 MobileNetV2-MP 学生做两阶段非对称蒸馏，在 BioDCASE-Tiny 2026 个任务 3 的 ESP32-S3 赛道上获得第一，验证集准确率从 0.563 提升到 0.744 且体积与内存同步下降，代价是离线训练成本高、验证集仅 550 个样本且相似物种召回仍低。"
+description: "针对微控制器鸟鸣识别中稀疏鸣叫易被平均池化稀释且低分辨率前端限制判别力的问题，本文用高分辨率多架构 19 模型教师池向低分辨率 MobileNetV2-MP 学生做两阶段非对称蒸馏，在 BioDCASE-Tiny 2026 任务 3 的 ESP32-S3 赛道上获得第一，验证集准确率从 0.563 提升到 0.744 且体积与内存同步下降，代价是离线训练成本高、验证集仅 550 个样本且相似物种召回仍低。"
 tags: ["生物声学监测", "课程学习", "知识蒸馏", "音频分类"]
 categories: ["dcase-2026 论文"]
 hiddenInHomeList: true
@@ -23,7 +23,7 @@ paper_digest_primary_task: "音频分类"
 paper_digest_score: 6.8
 paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "方法研究"
-paper_digest_one_sentence: "针对微控制器鸟鸣识别中稀疏鸣叫易被平均池化稀释且低分辨率前端限制判别力的问题，本文用高分辨率多架构 19 模型教师池向低分辨率 MobileNetV2-MP 学生做两阶段非对称蒸馏，在 BioDCASE-Tiny 2026 个任务 3 的 ESP32-S3 赛道上获得第一，验证集准确率从 0.563 提升到 0.744 且体积与内存同步下降，代价是离线训练成本高、验证集仅 550 个样本且相似物种召回仍低。"
+paper_digest_one_sentence: "针对微控制器鸟鸣识别中稀疏鸣叫易被平均池化稀释且低分辨率前端限制判别力的问题，本文用高分辨率多架构 19 模型教师池向低分辨率 MobileNetV2-MP 学生做两阶段非对称蒸馏，在 BioDCASE-Tiny 2026 任务 3 的 ESP32-S3 赛道上获得第一，验证集准确率从 0.563 提升到 0.744 且体积与内存同步下降，代价是离线训练成本高、验证集仅 550 个样本且相似物种召回仍低。"
 paper_digest_reader_sections: [{"heading":"微控制器鸟鸣识别为何要在精度与资源之间艰难取舍","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"非对称前端与教师池如何组织训练与部署","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"学生双池化与多样化教师池如何分工","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"官方评测与验证集上的精度与开销表现","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"教师池蒸馏与两阶段课程各自贡献多少","index":5,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"结论成立的前提、失效边界与复现核对","index":6,"kind":"limitation","roleLabel":"适用边界"}]
 paper_digest_authors: [{"affiliations":["Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"],"name":"Jinzhe Wang"},{"affiliations":["Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"],"name":"Xingyue Li"},{"affiliations":["Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"],"name":"Yongyi Deng"},{"affiliations":["Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"],"name":"Xin Hai"},{"affiliations":["Signal Processing Research Center, Tampere University, Tampere, Finland"],"name":"Yuzhu Wang"},{"affiliations":["Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"],"name":"Gongping Huang"}]
 paper_digest_abstract_sha256: null

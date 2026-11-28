@@ -128,7 +128,7 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 #### 刺激来源与合成设置
 
-二元刺激取自 CommonVoice 数据集与阿拉伯语朗读语料，共 9 条真实录音，每 3 条分配给 1 种专有文本转语音系统，分别为 ElevenLabs 系统、 MiniMax 系统与 ResembleAI 系统，真实时长为 3 s 至 7 s ，合成对应物由相同文本生成。一元刺激取自公开演讲中的 3 条真实片段，每条对应 1 位公众人物，4 种克隆系统各生成 1 个变体，共 12 条，系统包括 Hume 系统、 MiniMax 系统与 FishAudio 系统、 XTTS-V2 个系统。所有合成均采用默认配置且未经后期编辑，同一人物的真实与克隆文本完全相同，内容中性可信。
+二元刺激取自 CommonVoice 数据集与阿拉伯语朗读语料，共 9 条真实录音，每 3 条分配给 1 种专有文本转语音系统，分别为 ElevenLabs 系统、 MiniMax 系统与 ResembleAI 系统，真实时长为 3 s 至 7 s ，合成对应物由相同文本生成。一元刺激取自公开演讲中的 3 条真实片段，每条对应 1 位公众人物，4 种克隆系统各生成 1 个变体，共 12 条，系统包括 Hume 系统、 MiniMax 系统与 FishAudio 系统、 XTTS-V2 系统。所有合成均采用默认配置且未经后期编辑，同一人物的真实与克隆文本完全相同，内容中性可信。
 
 #### 任务流程与统计口径
 
@@ -158,13 +158,8 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 | Condition | Genuine | Synthetic | Models |
 | --- | --- | --- | --- |
-| TTS | 9 clips | 9 fake | ELEVENLABS, |
-|  |  | counter- | MINIMAX, |
-|  |  | parts | RESEMBLEAI |
-| VC | 3 clips | 12 cloned | FISHAUDIO, |
-|  |  | variants | HUME, |
-|  |  |  | MINIMAX, |
-|  |  |  | XTTS-V2 |
+| TTS | 9 clips | 9 fake counterparts | ELEVENLABS, MINIMAX, RESEMBLEAI |
+| VC | 3 clips | 12 cloned variants | FISHAUDIO, HUME, MINIMAX, XTTS-V2 |
 
 从表格可见，二元条件为 9 条真实对 9 条伪造，对应 3 种专有系统，一元条件为 3 条真实对 12 条克隆变体，对应 2 种专有与 2 种开源系统。文本内容在真伪之间完全相同，政治人物所说均为其真实讲话中的中性可信语句，知识内容本身无法提示真伪，熟悉度的可能作用被限制在音色记忆层面。这种数量与系统配置直接决定后文基线计算与统计精度，需要与时长和照片提示一并理解。
 

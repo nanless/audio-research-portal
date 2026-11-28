@@ -25,9 +25,9 @@ paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "模型报告"
 paper_digest_one_sentence: "针对阿拉伯语语音指令数据稀缺与评测缺失，作者拼装 1,501,000 个样本的多任务语料并以两阶段 LoRA 微调 Qwen-Omni 系列，在方言与年龄等副语言任务上由接近随机猜测升至 70% 以上，而 30B 模型字符错误率微升且全程缺乏人工听测。"
 paper_digest_reader_sections: [{"heading":"阿拉伯语语音大模型为何缺乏通用指令能力","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"统一三元组格式下 1,501,000 个样本的全景与端到端流程","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"八组任务语料的来源拼装与合成控制","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"冻结编码器与两阶段课程的微调实现","index":4,"kind":"training","roleLabel":"训练与优化"},{"heading":"多任务基准显示副语言跃升与语义稳步改善","index":5,"kind":"result","roleLabel":"主实验验证"},{"heading":"资源受限下的边界条件与工程选型","index":6,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Yingzhi Wang"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Reem Alhazzani"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Muhammad AL-Qurishi"}]
+paper_digest_authors: [{"affiliations":["Elm Company, KSA"],"name":"Yingzhi Wang"},{"affiliations":["Elm Company, KSA"],"name":"Reem Alhazzani"},{"affiliations":["Elm Company, KSA"],"name":"Muhammad AL-Qurishi"}]
 paper_digest_abstract_sha256: "5d49796002c08885b78cee5775100669d5d61c21ffdc8a7e4dd38ef31f7be99c"
-paper_digest_sidecars: {"citation.bib":{"sha256":"7d53923e6d826b7f8aefa09a0ef06d93f2541adc418130c3429069a5cdba1fb3","url":"/audio-research-portal/client/papers/2026-11-27/conference-0898f27dc726968a515c9d6e/citation.bib"},"citation.json":{"sha256":"4d3ad150b4f5aac1a19da27a1f73fb0409413c2db99ebd41a544f4f769f4117a","url":"/audio-research-portal/client/papers/2026-11-27/conference-0898f27dc726968a515c9d6e/citation.json"},"citation.ris":{"sha256":"0c78a48ae2de60a5ff61a7f11422f7015ef7cf05c88ba3e8299765f249162163","url":"/audio-research-portal/client/papers/2026-11-27/conference-0898f27dc726968a515c9d6e/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"d6353428ad025e2fddc18f86085325f3a6f0e068648f633cf5700c24c0086ea0","url":"/audio-research-portal/client/papers/2026-11-27/conference-0898f27dc726968a515c9d6e/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"7d53923e6d826b7f8aefa09a0ef06d93f2541adc418130c3429069a5cdba1fb3","url":"/audio-research-portal/client/papers/2026-11-27/conference-0898f27dc726968a515c9d6e/citation.bib"},"citation.json":{"sha256":"4f9105f4a3f521d003e6111fb43900836e4a5eaad647e61ff265004b21afe995","url":"/audio-research-portal/client/papers/2026-11-27/conference-0898f27dc726968a515c9d6e/citation.json"},"citation.ris":{"sha256":"0c78a48ae2de60a5ff61a7f11422f7015ef7cf05c88ba3e8299765f249162163","url":"/audio-research-portal/client/papers/2026-11-27/conference-0898f27dc726968a515c9d6e/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"6deca252b0cb7fcfe49660ab30a98b2c93c17afc33889196926322f5c9b236a7","url":"/audio-research-portal/client/papers/2026-11-27/conference-0898f27dc726968a515c9d6e/rethink-context.json"}}
 paper_digest_paper_id: "conference:salma:2026:conference-paper-id:2026.salma-1.2"
 paper_digest_source_kind: conference
 paper_digest_conference_id: "salma-2026"
@@ -99,9 +99,9 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 ## 👥 作者与机构
 
-- Yingzhi Wang：机构信息未能从会议 PDF 纯文本可靠映射
-- Reem Alhazzani：机构信息未能从会议 PDF 纯文本可靠映射
-- Muhammad AL-Qurishi：机构信息未能从会议 PDF 纯文本可靠映射
+- Yingzhi Wang：Elm Company, KSA
+- Reem Alhazzani：Elm Company, KSA
+- Muhammad AL-Qurishi：Elm Company, KSA
 
 ## 📌 核心摘要
 

@@ -25,9 +25,9 @@ paper_digest_rank_bucket: "后50%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对野外音乐混合缺少多轨训练且需要实时分离的问题，本文把在线辅助函数型独立向量分析与在线板仓斋藤非负矩阵分解耦合为单遍在线独立低秩矩阵分析，在 100 首 4 声部仿真中对在线同类方法全声部提升且鼓提升约 3.2 dB 并保持实时系数低于 1，代价是仍低于批量上限并偶发数值不稳定。"
 paper_digest_reader_sections: [{"heading":"野生音乐混合在监督缺失与实时约束下的分离难题","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"在线独立低秩矩阵分析的单遍流程与信号规格","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"解混矩阵与低秩源模型逐帧协同的计算细节","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"四声部仿真中精度提升与实时系数的实测权衡","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"收敛速度与数值稳定性的时变诊断","index":5,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"适用边界、复现前提与工程选型建议","index":6,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Taishi Nakashima"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Nobutaka Ono"}]
+paper_digest_authors: [{"affiliations":["Tokyo Metropolitan University, Tokyo, Japan"],"name":"Taishi Nakashima"},{"affiliations":["Tokyo Metropolitan University, Tokyo, Japan"],"name":"Nobutaka Ono"}]
 paper_digest_abstract_sha256: null
-paper_digest_sidecars: {"citation.bib":{"sha256":"6d744f364ab8b64736674a10789a767cf6d70efaf4b1b1252c0d5c68e85e14e4","url":"/audio-research-portal/client/papers/2026-11-27/conference-eef058393571973a18ab5748/citation.bib"},"citation.json":{"sha256":"4d5e8c2990817f1f9fc2909fca25b234d537ff58571613f2b3673fc6d2b5d52a","url":"/audio-research-portal/client/papers/2026-11-27/conference-eef058393571973a18ab5748/citation.json"},"citation.ris":{"sha256":"05c90837b2e29186acb46d3427b6fdba47c41a286d813656a91813b597aa1042","url":"/audio-research-portal/client/papers/2026-11-27/conference-eef058393571973a18ab5748/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"89e0f0a8fab262c41a6ae6146880b8d33df9d9b905a4094c24cafab52d816cb1","url":"/audio-research-portal/client/papers/2026-11-27/conference-eef058393571973a18ab5748/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"6d744f364ab8b64736674a10789a767cf6d70efaf4b1b1252c0d5c68e85e14e4","url":"/audio-research-portal/client/papers/2026-11-27/conference-eef058393571973a18ab5748/citation.bib"},"citation.json":{"sha256":"2af8cd1e1fb7dc36066e2051daa9d6d1df528067881a4133a21f42c7270a9263","url":"/audio-research-portal/client/papers/2026-11-27/conference-eef058393571973a18ab5748/citation.json"},"citation.ris":{"sha256":"05c90837b2e29186acb46d3427b6fdba47c41a286d813656a91813b597aa1042","url":"/audio-research-portal/client/papers/2026-11-27/conference-eef058393571973a18ab5748/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"6bc114c485c01efda54a9b2315ff1be1b6d2e282c4e5f4acccb12a06158d855f","url":"/audio-research-portal/client/papers/2026-11-27/conference-eef058393571973a18ab5748/rethink-context.json"}}
 paper_digest_paper_id: "conference:audio-aaai:2026:conference-paper-id:nakashima26a"
 paper_digest_source_kind: conference
 paper_digest_conference_id: "audio-aaai-2026"
@@ -97,8 +97,8 @@ paper_digest_conference_structure: pdf-visual-quote-evidence-v1
 
 ## 👥 作者与机构
 
-- Taishi Nakashima：机构信息未能从会议 PDF 纯文本可靠映射
-- Nobutaka Ono：机构信息未能从会议 PDF 纯文本可靠映射
+- Taishi Nakashima：Tokyo Metropolitan University, Tokyo, Japan
+- Nobutaka Ono：Tokyo Metropolitan University, Tokyo, Japan
 
 ## 📌 核心摘要
 

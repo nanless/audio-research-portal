@@ -205,21 +205,13 @@ XLS-R 属自监督编码器路线，微调时以联结时序分类目标逐帧�
 
 为考察字面之外的语义保持，下表为原文 Table 4 的兼容呈现，保留提取矩阵的全部行列、数值与原始英文备注，展示单人与多人条件下的翻译得分。BLEU 与 ChrF 及人工分越高越好，阅读时先看单人三行的排序，再看多人两行的崩塌幅度，以判断增益是否延续到域偏移场景。
 
-| Scenario | Model |  | BLEU | ChrF | Human | Notes |
-| --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  | Score |  |
-| Single speaker, quiet en- | XLS-R |  | 43.01 | 74.27 | 8/10 | Very close to reference. |
-| vironment. |  |  |  |  |  |  |
-| Single speaker, quiet en- | Whisper |  | 14.21 | 35.06 | 7/10 | Slight token error, meaning still intact. |
-| vironment. |  |  |  |  |  |  |
-| Single speaker, quiet en- | XLS-R | + | 59.54 | 80.40 | 9.2/10 | Very close to reference with minimal |
-| vironment. | KenLM |  |  |  |  | token errors |
-| Multi-speaker, noisy envi- | XLS-R |  | 4.07 | 13.59 | 2.8/10 | Errors due to unseen speakers and |
-| ronment. |  |  |  |  |  | noisy background. Severe degradation |
-| in semantic coherence is observed. |  |  |  |  |  |  |
-| Multi-speaker, noisy envi- | Whisper |  | 4.52 | 28.82 | 3.6/10 | Slight errors in unseen speakers and |
-| ronment. |  |  |  |  |  | noisy background, slight semantic |
-| preservation and meaning. |  |  |  |  |  |  |
+| Scenario | Model | BLEU | ChrF | Human Score | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Single speaker, quiet environment. | XLS-R | 43.01 | 74.27 | 8/10 | Very close to reference. |
+| Single speaker, quiet environment. | Whisper | 14.21 | 35.06 | 7/10 | Slight token error, meaning still intact. |
+| Single speaker, quiet environment. | XLS-R + KenLM | 59.54 | 80.40 | 9.2/10 | Very close to reference with minimal token errors |
+| Multi-speaker, noisy environment. | XLS-R | 4.07 | 13.59 | 2.8/10 | Errors due to unseen speakers and noisy background. Severe degradation in semantic coherence is observed. |
+| Multi-speaker, noisy environment. | Whisper | 4.52 | 28.82 | 3.6/10 | Slight errors in unseen speakers and noisy background, slight semantic preservation and meaning. |
 
 兼容表显示单人安静条件下 XLS-R 为 43.01 与 74.27，人工 8/10，Whisper 为 14.21 与 35.06，人工 7/10，外挂模型为 59.54 与 80.40，人工 9.2/10，三者中最高。多人噪声条件下 XLS-R 跌至 4.07 与 13.59，人工 2.8/10，Whisper 为 4.52 与 28.82，人工 3.6/10，在 ChrF 上反超，显示内部自回归语言建模的稳健性。原文完整 Table 4（本精简表未列出）还包含多人噪声下外挂模型的 6.88、29.95 与 3.9/10，同样高于同条件另两行，但绝对值仍处低位。
 

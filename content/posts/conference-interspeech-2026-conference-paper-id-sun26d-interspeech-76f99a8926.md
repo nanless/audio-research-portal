@@ -144,7 +144,7 @@ paper_digest_conference_structure: pdf-visual-quote-evidence-v1
 
 *论文图 2。原论文 Figure 2：“Gradient Bottleneck Analysis. (A) Relative Purity comparison: Layer 11 shows a decline in task isolation across all languages (avg.”。*
 
-从像素看，面板 A 4 个语言对的红色第 11 层柱都低于蓝色第 10 层柱，爱沙尼亚语落差最大；面板 B 4 条虚线都指向右下方，奔巴语终点最靠右；面板 C 彩色各语言投影曲线快速爬升到 0.6 以上而黑色联合曲线爬升缓慢，说明联合空间秩高而各语言投影能量集中。这种对照支持只特化第 11 层 FFN2，而把第 10 层 FFN2 与第 11 层 FFN1 留作消融中的低冲突对照，后文消融证实改错位置收益消失。
+从像素看，面板 A 4 语言对的红色第 11 层柱都低于蓝色第 10 层柱，爱沙尼亚语落差最大；面板 B 4 条虚线都指向右下方，奔巴语终点最靠右；面板 C 彩色各语言投影曲线快速爬升到 0.6 以上而黑色联合曲线爬升缓慢，说明联合空间秩高而各语言投影能量集中。这种对照支持只特化第 11 层 FFN2，而把第 10 层 FFN2 与第 11 层 FFN1 留作消融中的低冲突对照，后文消融证实改错位置收益消失。
 
 ### 动态配置如何切分维度并初始化，微调时什么更新？
 

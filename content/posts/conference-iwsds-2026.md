@@ -1641,11 +1641,11 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 👥 **作者与机构**
 
-- Jaime Bellver：机构信息未能从会议 PDF 纯文本可靠映射
-- Samuel Ramos\-Varela：机构信息未能从会议 PDF 纯文本可靠映射
-- Anmol Guragain：机构信息未能从会议 PDF 纯文本可靠映射
-- Ricardo Córdoba：机构信息未能从会议 PDF 纯文本可靠映射
-- Luis Fernando D’Haro：机构信息未能从会议 PDF 纯文本可靠映射
+- Jaime Bellver：Speech Technology and Machine Learning Group \- ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain
+- Samuel Ramos\-Varela：Speech Technology and Machine Learning Group \- ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain
+- Anmol Guragain：Speech Technology and Machine Learning Group \- ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain
+- Ricardo Córdoba：Speech Technology and Machine Learning Group \- ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain
+- Luis Fernando D’Haro：Speech Technology and Machine Learning Group \- ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain
 
 📌 **核心摘要**
 

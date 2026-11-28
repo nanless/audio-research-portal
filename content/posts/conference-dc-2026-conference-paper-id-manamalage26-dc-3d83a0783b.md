@@ -25,9 +25,9 @@ paper_digest_rank_bucket: "后50%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对语音抑郁筛查中数据稀缺、隐私敏感与可解释不足的问题，作者以 ALiDeR 集中式多模态基线、FedMPA 联邦原型学习加隐私-性能得分与层级表征解释三阶段推进，在 E-DAIC 与 MODMA 上报告集中式准确率 0.92 与 0.89、联邦准确率 0.88 与 0.83 及 PPS 0.92 与 0.87，代价是联邦隐私保护伴随性能回落且表征可信评估尚未完成。"
 paper_digest_reader_sections: [{"heading":"抑郁语音筛查为何需要同时解决数据稀缺、隐私与可解释性","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"三阶段研究路径如何从集中式建模走向可信联邦学习","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"ALiDeR 怎样用质量感知流程融合声学与语言表征","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"FedMPA 与隐私-性能得分如何在分散数据上兼顾效用与隐私","index":4,"kind":"training","roleLabel":"训练与优化"},{"heading":"在英语与中文语料上的增益成立需要哪些前提与代价","index":5,"kind":"result","roleLabel":"主实验验证"},{"heading":"表征可解释性尚未验证什么与复现核对清单","index":6,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Dushanthi Manamalage"}]
+paper_digest_authors: [{"affiliations":["DeepNet Discovery Network, The University of Auckland, New Zealand"],"name":"Dushanthi Manamalage"}]
 paper_digest_abstract_sha256: null
-paper_digest_sidecars: {"citation.bib":{"sha256":"e4fa3d0c3991022c95f89fd3233a044fe8aff1fd4afb904199ff191cbe351045","url":"/audio-research-portal/client/papers/2026-11-27/conference-3d83a0783b08d0dc23dbe1db/citation.bib"},"citation.json":{"sha256":"a1bbe327254c0baa64e2f4026ce97ca9b0ca1f9371c8f5c5a1d83f90bde03416","url":"/audio-research-portal/client/papers/2026-11-27/conference-3d83a0783b08d0dc23dbe1db/citation.json"},"citation.ris":{"sha256":"192c11ee7ec662e0b7e62034d3469c65f3ed52a7e721594c3033759c04b09a09","url":"/audio-research-portal/client/papers/2026-11-27/conference-3d83a0783b08d0dc23dbe1db/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"db8b6352e8f36f345e4fce7c241e6bacd0c02ecfd9ae29cc9bac3c047f77ffab","url":"/audio-research-portal/client/papers/2026-11-27/conference-3d83a0783b08d0dc23dbe1db/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"e4fa3d0c3991022c95f89fd3233a044fe8aff1fd4afb904199ff191cbe351045","url":"/audio-research-portal/client/papers/2026-11-27/conference-3d83a0783b08d0dc23dbe1db/citation.bib"},"citation.json":{"sha256":"7ffd5690d2e4af11dfb97a080f41f13f6edb9564e92497a0dfa963d00ded130d","url":"/audio-research-portal/client/papers/2026-11-27/conference-3d83a0783b08d0dc23dbe1db/citation.json"},"citation.ris":{"sha256":"192c11ee7ec662e0b7e62034d3469c65f3ed52a7e721594c3033759c04b09a09","url":"/audio-research-portal/client/papers/2026-11-27/conference-3d83a0783b08d0dc23dbe1db/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"20991c8dbf3970abf8ab1cd5c658366854d45ebf95ba715ca3a6171e5851dda5","url":"/audio-research-portal/client/papers/2026-11-27/conference-3d83a0783b08d0dc23dbe1db/rethink-context.json"}}
 paper_digest_paper_id: "conference:dc:2026:conference-paper-id:manamalage26_dc"
 paper_digest_source_kind: conference
 paper_digest_conference_id: "dc-2026"
@@ -97,7 +97,7 @@ paper_digest_conference_structure: pdf-visual-quote-evidence-v1
 
 ## 👥 作者与机构
 
-- Dushanthi Manamalage：机构信息未能从会议 PDF 纯文本可靠映射
+- Dushanthi Manamalage：DeepNet Discovery Network, The University of Auckland, New Zealand
 
 ## 📌 核心摘要
 

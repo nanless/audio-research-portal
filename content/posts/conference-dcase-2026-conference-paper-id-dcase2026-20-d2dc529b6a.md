@@ -2,7 +2,7 @@
 title: "Description and Discussion on DCASE 2026 Challenge Task 2: Noise-Aware Unsupervised Anomalous Sound Detection for Machine Condition Monitoring"
 date: 2026-11-27
 draft: false
-description: "针对强噪声下只能用正常声检测未知机器故障的难题，DCASE 2026 个任务 2 引入近远双通道录音并以曲线下面积与部分面积的调和平均为官方分数，挑战赛显示 52 支队伍的 173 份提交中有 28 支队伍超越基线且其中 24 支利用第二通道，第一名直接估计干净目标声表征而保持跨类型稳定，代价是依赖仿真真实性与特定麦克风摆位且开发集高分不能保证评价集高分。"
+description: "针对强噪声下只能用正常声检测未知机器故障的难题，DCASE 2026 任务 2 引入近远双通道录音并以曲线下面积与部分面积的调和平均为官方分数，挑战赛显示 52 支队伍的 173 份提交中有 28 支队伍超越基线且其中 24 支利用第二通道，第一名直接估计干净目标声表征而保持跨类型稳定，代价是依赖仿真真实性与特定麦克风摆位且开发集高分不能保证评价集高分。"
 tags: ["数据集", "基准设计", "多通道", "异常声音检测"]
 categories: ["dcase-2026 论文"]
 hiddenInHomeList: true
@@ -23,7 +23,7 @@ paper_digest_primary_task: "异常声音检测"
 paper_digest_score: 6.8
 paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "数据集与基准"
-paper_digest_one_sentence: "针对强噪声下只能用正常声检测未知机器故障的难题，DCASE 2026 个任务 2 引入近远双通道录音并以曲线下面积与部分面积的调和平均为官方分数，挑战赛显示 52 支队伍的 173 份提交中有 28 支队伍超越基线且其中 24 支利用第二通道，第一名直接估计干净目标声表征而保持跨类型稳定，代价是依赖仿真真实性与特定麦克风摆位且开发集高分不能保证评价集高分。"
+paper_digest_one_sentence: "针对强噪声下只能用正常声检测未知机器故障的难题，DCASE 2026 任务 2 引入近远双通道录音并以曲线下面积与部分面积的调和平均为官方分数，挑战赛显示 52 支队伍的 173 份提交中有 28 支队伍超越基线且其中 24 支利用第二通道，第一名直接估计干净目标声表征而保持跨类型稳定，代价是依赖仿真真实性与特定麦克风摆位且开发集高分不能保证评价集高分。"
 paper_digest_reader_sections: [{"heading":"噪声下机器异常声音检测为何需要双通道与单阈值泛化","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"双通道数据集划分与从录制到官方分数的完整流程","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"仅用第一通道的自编码器基线如何计算异常分数","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"基线分数接近随机猜测而前列队伍拉开差距","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"双通道三种利用方式的增益来源与潜在代价","index":5,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"假设边界、未验证条件与复现核对","index":6,"kind":"limitation","roleLabel":"适用边界"}]
 paper_digest_authors: [{"affiliations":["Hitachi, Ltd., Japan"],"name":"Tomoya Nishida"},{"affiliations":["NTT, Inc., Japan"],"name":"Noboru Harada"},{"affiliations":["NTT, Inc., Japan"],"name":"Daiki Takeuchi"},{"affiliations":["Tokyo Metropolitan University, Japan"],"name":"Daisuke Niizumi"},{"affiliations":["Kyoto University, Japan"],"name":"Keisuke Imoto"},{"affiliations":["Hitachi, Ltd., Japan"],"name":"Kota Dohi"},{"affiliations":["Hitachi, Ltd., Japan"],"name":"Harsh Purohit"},{"affiliations":["Hitachi, Ltd., Japan"],"name":"Takashi Endo"},{"affiliations":["Hitachi Australia Pty Ltd., Australia"],"name":"Yohei Kawaguchi"}]
 paper_digest_abstract_sha256: null

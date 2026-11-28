@@ -2,7 +2,7 @@
 title: "Parameter Isolation with Domain-Specific Experts for Incremental Audio Classification"
 date: 2026-11-27
 draft: false
-description: "针对旧域音频不可用时增量分类容易遗忘旧知识的问题，论文提出每域追加冻结专家的全阶循环更新并以无数据回放与跨域生成补齐输入，在 DCASE 2026 个任务 7 上以 78.38% 的微观准确率与 78.92% 的宏观准确率超越基线约 33 与 25 个百分点，代价是参数与拼接维度随域数增长且集成开销更大。"
+description: "针对旧域音频不可用时增量分类容易遗忘旧知识的问题，论文提出每域追加冻结专家的全阶循环更新并以无数据回放与跨域生成补齐输入，在 DCASE 2026 任务 7 上以 78.38% 的微观准确率与 78.92% 的宏观准确率超越基线约 33 与 25 个百分点，代价是参数与拼接维度随域数增长且集成开销更大。"
 tags: ["持续学习", "生成模型", "模型融合", "音频分类"]
 categories: ["dcase-2026 论文"]
 hiddenInHomeList: true
@@ -23,7 +23,7 @@ paper_digest_primary_task: "音频分类"
 paper_digest_score: 6.5
 paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "方法研究"
-paper_digest_one_sentence: "针对旧域音频不可用时增量分类容易遗忘旧知识的问题，论文提出每域追加冻结专家的全阶循环更新并以无数据回放与跨域生成补齐输入，在 DCASE 2026 个任务 7 上以 78.38% 的微观准确率与 78.92% 的宏观准确率超越基线约 33 与 25 个百分点，代价是参数与拼接维度随域数增长且集成开销更大。"
+paper_digest_one_sentence: "针对旧域音频不可用时增量分类容易遗忘旧知识的问题，论文提出每域追加冻结专家的全阶循环更新并以无数据回放与跨域生成补齐输入，在 DCASE 2026 任务 7 上以 78.38% 的微观准确率与 78.92% 的宏观准确率超越基线约 33 与 25 个百分点，代价是参数与拼接维度随域数增长且集成开销更大。"
 paper_digest_reader_sections: [{"heading":"时变声学条件下增量分类为何遗忘旧域","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"全阶循环更新如何保留全部历史模型","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"三专家拼接与原型分类的域无关推理流程","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"无数据回放与跨域生成如何补齐训练输入","index":4,"kind":"training","roleLabel":"训练与优化"},{"heading":"在 D2 与 D3 上相对基线提升 33 与 25 个百分点的证据","index":5,"kind":"result","roleLabel":"主实验验证"},{"heading":"回放与多层感知生成各自带来多少宏观增益","index":6,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"参数增长与三域验证边界下的选型建议","index":7,"kind":"limitation","roleLabel":"适用边界"}]
 paper_digest_authors: [{"affiliations":["Dept. of AI Convergence"],"name":"Jongyeon Park"},{"affiliations":["Dept. of AI Convergence"],"name":"Do-Hyeon Lim"},{"affiliations":["Dept. of EECS"],"name":"Sang-won Park"},{"affiliations":["Dept. of AI Convergence","Dept. of EECS","AunionAI Co., Ltd., Gwangju, Korea"],"name":"Hong Kook Kim"},{"affiliations":["AI Lab., R&D Center, Hanwha Vision"],"name":"Kyungdeuk Ko"},{"affiliations":["AI Lab., R&D Center, Hanwha Vision"],"name":"Hyeongcheol Geum"},{"affiliations":["AI Lab., R&D Center, Hanwha Vision"],"name":"Jeong Eun Lim"}]
 paper_digest_abstract_sha256: null

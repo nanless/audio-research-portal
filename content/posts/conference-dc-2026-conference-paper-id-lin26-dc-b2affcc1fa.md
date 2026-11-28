@@ -25,9 +25,9 @@ paper_digest_rank_bucket: "后50%"
 paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "本文诊断了在 LRS3 上已低于 1% 词错误率的音视识别系统，通过 0 dB 参照的有效信噪比增益与分布对齐的 MV2LRS3 新集揭示了仅 2 dB 至 6 dB 的有限视觉增益、斜率 10.4 的十倍放大退化与加视觉反变差现象，代价是结论仅基于 WER 且未覆盖真实噪声与部署开销。"
 paper_digest_reader_sections: [{"heading":"不足 1% 词错误率是否意味着真正学会了看唇听声","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"以 0 dB 为锚点的有效信噪比增益如何量化视觉帮助","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"与 LRS3 同分布的 MV2LRS3 是如何抽样构造的","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"十倍放大的跨集退化与加视觉反而有害","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"在做自适应融合之前需先承认的边界与代价","index":5,"kind":"synthesis","roleLabel":"实践与复现"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Zhaofeng Lin"}]
+paper_digest_authors: [{"affiliations":["Trinity College Dublin, Ireland"],"name":"Zhaofeng Lin"}]
 paper_digest_abstract_sha256: null
-paper_digest_sidecars: {"citation.bib":{"sha256":"2734437f34af8f733ccdd6e0e381793758571f7a08d9115b8daf33e0ebc60803","url":"/audio-research-portal/client/papers/2026-11-27/conference-b2affcc1fa4c60568a749b18/citation.bib"},"citation.json":{"sha256":"7c854b70337db3de19e5774648ca9982b3a58aba2df0174fd80de0cf4ffb351e","url":"/audio-research-portal/client/papers/2026-11-27/conference-b2affcc1fa4c60568a749b18/citation.json"},"citation.ris":{"sha256":"44a482a5faedcdead16c602e9e4762862684d9afac84ba2d0146aee3eea4d765","url":"/audio-research-portal/client/papers/2026-11-27/conference-b2affcc1fa4c60568a749b18/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"d10bd7af3d592ac8f920efa6b82b10cb5f417ee507a842a9ca097d7448abf2ae","url":"/audio-research-portal/client/papers/2026-11-27/conference-b2affcc1fa4c60568a749b18/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"2734437f34af8f733ccdd6e0e381793758571f7a08d9115b8daf33e0ebc60803","url":"/audio-research-portal/client/papers/2026-11-27/conference-b2affcc1fa4c60568a749b18/citation.bib"},"citation.json":{"sha256":"c6a7803b62828a2a067b543584031d210fa31aefbced6c77be585da139664ef0","url":"/audio-research-portal/client/papers/2026-11-27/conference-b2affcc1fa4c60568a749b18/citation.json"},"citation.ris":{"sha256":"44a482a5faedcdead16c602e9e4762862684d9afac84ba2d0146aee3eea4d765","url":"/audio-research-portal/client/papers/2026-11-27/conference-b2affcc1fa4c60568a749b18/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"b31d242142f0bf2290f04086530271d93d77dbf4fbb57529f2813dffc7ec1112","url":"/audio-research-portal/client/papers/2026-11-27/conference-b2affcc1fa4c60568a749b18/rethink-context.json"}}
 paper_digest_paper_id: "conference:dc:2026:conference-paper-id:lin26_dc"
 paper_digest_source_kind: conference
 paper_digest_conference_id: "dc-2026"
@@ -97,7 +97,7 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 ## 👥 作者与机构
 
-- Zhaofeng Lin：机构信息未能从会议 PDF 纯文本可靠映射
+- Zhaofeng Lin：Trinity College Dublin, Ireland
 
 ## 📌 核心摘要
 

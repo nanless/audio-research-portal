@@ -25,9 +25,9 @@ paper_digest_rank_bucket: "前25%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对前缀续写占用上下文与自注意力平方开销问题，Lina-Speech 以门控线性注意力常数记忆与冻结主参数的初态调谐实现任意多样本条件，在 311M 参数下取得合成模型中最好的人工自然度与相似度，代价是客观可懂度与神经相似度仍落后于更大规模模型且依赖有声书类训练数据。"
 paper_digest_reader_sections: [{"heading":"短提示续写为何难以同时留住音色细节与长文本生成","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"Lina-Speech 如何用双编码加解码与可调初态组织合成流程","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"门控线性注意力记忆与初态调谐低秩参数为何能支持多样本条件","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"零样本克隆与推理吞吐实测在何种条件下成立","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"初态调谐收敛有多快以及秩与学习率如何影响损失","index":5,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"结论的适用边界、复现前提与选型代价","index":6,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Théodor Lemerle"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Téo Guichoux"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Axel Roebel"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Nicolas Obin"}]
+paper_digest_authors: [{"affiliations":["Science and Technology of Music and Sound (STMS), IRCAM – CNRS – Sorbonne Université – Ministère de la Culture, Paris, France"],"name":"Théodor Lemerle"},{"affiliations":["Institut des Systèmes Intelligents et de Robotique (ISIR), CNRS – Sorbonne Université, Paris, France","Science and Technology of Music and Sound (STMS), IRCAM – CNRS – Sorbonne Université – Ministère de la Culture, Paris, France"],"name":"Téo Guichoux"},{"affiliations":["Science and Technology of Music and Sound (STMS), IRCAM – CNRS – Sorbonne Université – Ministère de la Culture, Paris, France"],"name":"Axel Roebel"},{"affiliations":["Science and Technology of Music and Sound (STMS), IRCAM – CNRS – Sorbonne Université – Ministère de la Culture, Paris, France"],"name":"Nicolas Obin"}]
 paper_digest_abstract_sha256: null
-paper_digest_sidecars: {"citation.bib":{"sha256":"49e901cb27f3fe67eb772402590b6c3a08c797622276a6e0a04017bb6f7754d5","url":"/audio-research-portal/client/papers/2026-11-27/conference-f1940da85563a664bfa3363a/citation.bib"},"citation.json":{"sha256":"d0a49b459c52151d9637575923e1abd53c3610e64b1bc0136806158f91189db9","url":"/audio-research-portal/client/papers/2026-11-27/conference-f1940da85563a664bfa3363a/citation.json"},"citation.ris":{"sha256":"78704dd01e127cc4eb00ef2cb0906c3b55dd1e057991277c9c403a6b2445c48e","url":"/audio-research-portal/client/papers/2026-11-27/conference-f1940da85563a664bfa3363a/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"a3661ea3d441eee986fdd82cc84371477458dc39ebefe4830a428c1641eb8a5a","url":"/audio-research-portal/client/papers/2026-11-27/conference-f1940da85563a664bfa3363a/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"49e901cb27f3fe67eb772402590b6c3a08c797622276a6e0a04017bb6f7754d5","url":"/audio-research-portal/client/papers/2026-11-27/conference-f1940da85563a664bfa3363a/citation.bib"},"citation.json":{"sha256":"9b0b1b49360844b28bba7e7750b31f8bee3da4debb7364edb87f0ebc671881bf","url":"/audio-research-portal/client/papers/2026-11-27/conference-f1940da85563a664bfa3363a/citation.json"},"citation.ris":{"sha256":"78704dd01e127cc4eb00ef2cb0906c3b55dd1e057991277c9c403a6b2445c48e","url":"/audio-research-portal/client/papers/2026-11-27/conference-f1940da85563a664bfa3363a/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"c1e53418af9e65e3d6d806b4fb680515abb5f8293e774832e794747e2108bb5f","url":"/audio-research-portal/client/papers/2026-11-27/conference-f1940da85563a664bfa3363a/rethink-context.json"}}
 paper_digest_paper_id: "conference:audio-aaai:2026:conference-paper-id:lemerle26a"
 paper_digest_source_kind: conference
 paper_digest_conference_id: "audio-aaai-2026"
@@ -96,10 +96,10 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 ## 👥 作者与机构
 
-- Théodor Lemerle：机构信息未能从会议 PDF 纯文本可靠映射
-- Téo Guichoux：机构信息未能从会议 PDF 纯文本可靠映射
-- Axel Roebel：机构信息未能从会议 PDF 纯文本可靠映射
-- Nicolas Obin：机构信息未能从会议 PDF 纯文本可靠映射
+- Théodor Lemerle：Science and Technology of Music and Sound (STMS), IRCAM – CNRS – Sorbonne Université – Ministère de la Culture, Paris, France
+- Téo Guichoux：Institut des Systèmes Intelligents et de Robotique (ISIR), CNRS – Sorbonne Université, Paris, France；Science and Technology of Music and Sound (STMS), IRCAM – CNRS – Sorbonne Université – Ministère de la Culture, Paris, France
+- Axel Roebel：Science and Technology of Music and Sound (STMS), IRCAM – CNRS – Sorbonne Université – Ministère de la Culture, Paris, France
+- Nicolas Obin：Science and Technology of Music and Sound (STMS), IRCAM – CNRS – Sorbonne Université – Ministère de la Culture, Paris, France
 
 ## 📌 核心摘要
 

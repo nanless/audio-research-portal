@@ -2,7 +2,7 @@
 title: "Description and discussion on DCASE 2026 Task 1: Heterogeneous Audio Classification"
 date: 2026-11-27
 draft: false
-description: "DCASE 2026 个任务 1 以 5 个顶层和 23 个二级的 BST 为目标评估异构音频分类，基线在冻结 LAION-CLAP 上加轻量注意力融合，冠军以大语言模型先验加多主干集成达到 hF 为 0.836，超过基线 0.700，但增益依赖众包重标与上传者重叠等数据条件。"
+description: "DCASE 2026 任务 1 以 5 个顶层和 23 个二级的 BST 为目标评估异构音频分类，基线在冻结 LAION-CLAP 上加轻量注意力融合，冠军以大语言模型先验加多主干集成达到 hF 为 0.836，超过基线 0.700，但增益依赖众包重标与上传者重叠等数据条件。"
 tags: ["数据集", "基准设计", "多模态学习", "音频分类"]
 categories: ["dcase-2026 论文"]
 hiddenInHomeList: true
@@ -23,7 +23,7 @@ paper_digest_primary_task: "音频分类"
 paper_digest_score: 6.6
 paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "数据集与基准"
-paper_digest_one_sentence: "DCASE 2026 个任务 1 以 5 个顶层和 23 个二级的 BST 为目标评估异构音频分类，基线在冻结 LAION-CLAP 上加轻量注意力融合，冠军以大语言模型先验加多主干集成达到 hF 为 0.836，超过基线 0.700，但增益依赖众包重标与上传者重叠等数据条件。"
+paper_digest_one_sentence: "DCASE 2026 任务 1 以 5 个顶层和 23 个二级的 BST 为目标评估异构音频分类，基线在冻结 LAION-CLAP 上加轻量注意力融合，冠军以大语言模型先验加多主干集成达到 hF 为 0.836，超过基线 0.700，但增益依赖众包重标与上传者重叠等数据条件。"
 paper_digest_reader_sections: [{"heading":"异构声音分类要同时应对时长跨度与层级语义差异","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"两套开发集与评测集如何构成统一的分类任务设定","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"冻结表征上的小分类器与层级加权评分如何定义对错","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"冻结与更新的边界以及众包标签的多种用法如何影响训练","index":4,"kind":"training","roleLabel":"训练与优化"},{"heading":"排行榜分化显示多模态处理与数据筛选决定上限","index":5,"kind":"result","roleLabel":"主实验验证"},{"heading":"引用冠军分数前需要确认的适用边界与复现前提","index":6,"kind":"limitation","roleLabel":"适用边界"}]
 paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Panagiota Anastasopoulou"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Frederic Font"}]
 paper_digest_abstract_sha256: null

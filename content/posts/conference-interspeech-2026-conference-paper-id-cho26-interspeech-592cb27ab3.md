@@ -2,7 +2,7 @@
 title: "Acoustic Prompting via Stage-wise Modulation for Few-Shot Learning in Audio Language Models"
 date: 2026-09-25
 draft: false
-description: "针对对比式音频语言模型少样本分类中只调文本侧而音频表示冻结的问题，该文提出在音频编码器早期三处做共享仿射调制的即插即用模块 ASPL，在 11 个数据集 16 样本平均上相对 CoOp、CoCoOp、PALM 带来约 1 个百分点以上增益，而新增参数仅 320 与 704 量级。"
+description: "针对对比式音频语言模型少样本分类中只调文本侧而音频表示冻结的问题，该文提出在音频编码器早期三处做共享仿射调制的即插即用模块 ASPL，在 11 数据集 16 样本平均上相对 CoOp、CoCoOp、PALM 带来约 1 个百分点以上增益，而新增参数仅 320 与 704 量级。"
 tags: ["提示学习", "音频大模型", "少样本", "音频分类"]
 categories: ["interspeech-2026 论文"]
 paper_digest_pipeline_owned: true

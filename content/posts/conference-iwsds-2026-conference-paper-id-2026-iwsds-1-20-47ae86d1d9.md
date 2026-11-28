@@ -193,21 +193,16 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 与公开模型的对比可验证基线强度，原文在相同话语切分下比较了多套系统。下表完整保留原表的全部行列与数值，表头与数据原样呈现。重点观察自研两阶段模型在 3 种窗口设置下的字符错误率，以及公开模型在含噪与专有名词较多条件下的表现差距。
 
-|  | Condition | CER |
+| Group | Condition | CER |
 | --- | --- | --- |
-|  | Reazon v2 | 13.06 |
-| Open |  |  |
-|  | Whisper large-v3 | 16.41 |
-| ASR |  |  |
-|  | Nue | 22.29 |
-| model |  |  |
-|  | ESPnet (CSJ recipe) | 22.46 |
-|  | Character-ASR (Utt.-wise) | 12.20 |
-| S-ASR + SCT |  |  |
-| Ours | Utt.-wise: (a, b) = (0, 0) | 11.57 |
-|  | Sequential: (a, b) = (9, 0) | 11.12 |
-|  | RSR: (a, b) = (9, 9) | 11.03 |
-|  | No. of characters 228,242 |  |
+| Open ASR model | Reazon v2 | 13.06 |
+| Open ASR model | Whisper large-v3 | 16.41 |
+| Open ASR model | Nue | 22.29 |
+| Open ASR model | ESPnet (CSJ recipe) | 22.46 |
+| S-ASR + SCT | Character-ASR (Utt.-wise) | 12.20 |
+| Ours (S-ASR + SCT) | Utt.-wise: (a, b) = (0, 0) | 11.57 |
+| Ours (S-ASR + SCT) | Sequential: (a, b) = (9, 0) | 11.12 |
+| Ours (S-ASR + SCT) | RSR: (a, b) = (9, 9) | 11.03 |
 
 该表显示自研两阶段模型在话语级已达 11.57% ，序列利用前文降至 11.12% ，回顾同时利用前后文进一步降至 11.03% 。公开模型中表现最好为 13.06% ，其余为 16.41% 至 22.46% ，差距主要来自噪声、混响与专有名词删除。分母共 228,242 个字符，改进对应数百字符修正。原文还报告回顾在同时利用系统与用户条件下比仅用用户条件好 0.10 点，仅用用户时仍比序列好 0.17 点，前向比后向在同时利用条件下好 0.04 点，改进概率达 100% 。
 

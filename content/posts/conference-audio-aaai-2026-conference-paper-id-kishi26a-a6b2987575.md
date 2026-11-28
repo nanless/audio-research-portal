@@ -25,9 +25,9 @@ paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对文本生成环境声音主观评价昂贵且已有客观分相关性弱的问题， AudioBERTScore 以冻结音频基础模型的嵌入序列余弦相似度并融合最大值与 p 范数评分，在 Clotho 验证集文本相关性上超过 MCD 、 WARP-Q 与 CLAPScore ，代价是必须依赖高质量参考音频且整体质量维度有所回落。"
 paper_digest_reader_sections: [{"heading":"文本生成环境声音的主观评价贵在哪里，客观分数又错在哪里","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"双路嵌入序列比对的总体评分流程","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"余弦矩阵上最大值与 p 范数如何分别捕捉局部与弥散相似","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"深层语义特征为何更懂环境声：三类提取器的逐层对比","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"从最大值到 p 范数与负插值：超参数扫描与最终对照","index":5,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"方法成立的前提、失效类别与复现核对清单","index":6,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Minoru Kishi"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Ryosuke Sakai"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Shinnosuke Takamichi"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Yusuke Kanamori"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Yuki Okamoto"}]
+paper_digest_authors: [{"affiliations":["Keio University, Japan"],"name":"Minoru Kishi"},{"affiliations":["Keio University, Japan"],"name":"Ryosuke Sakai"},{"affiliations":["Keio University, Japan","The University of Tokyo, Japan"],"name":"Shinnosuke Takamichi"},{"affiliations":["The University of Tokyo, Japan"],"name":"Yusuke Kanamori"},{"affiliations":["The University of Tokyo, Japan"],"name":"Yuki Okamoto"}]
 paper_digest_abstract_sha256: null
-paper_digest_sidecars: {"citation.bib":{"sha256":"2e2830231e590b9d463ef129be205f1db7adba5e374fde24c423cc3607172dc0","url":"/audio-research-portal/client/papers/2026-11-28/conference-a6b2987575951ca4242b4ab7/citation.bib"},"citation.json":{"sha256":"a642975fa02f633711062391d0e1459bd03c93dc988a1f8965931644901b42e7","url":"/audio-research-portal/client/papers/2026-11-28/conference-a6b2987575951ca4242b4ab7/citation.json"},"citation.ris":{"sha256":"b651fa7bfa039d2b9919611ff9ee7ed1e681b178a81ce29278b0180f6f9b4cc5","url":"/audio-research-portal/client/papers/2026-11-28/conference-a6b2987575951ca4242b4ab7/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"358a84fe5313c7c308c3bf4545325966da8308fe3711fb6949b24b3567d1aa2f","url":"/audio-research-portal/client/papers/2026-11-28/conference-a6b2987575951ca4242b4ab7/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"2e2830231e590b9d463ef129be205f1db7adba5e374fde24c423cc3607172dc0","url":"/audio-research-portal/client/papers/2026-11-28/conference-a6b2987575951ca4242b4ab7/citation.bib"},"citation.json":{"sha256":"b1eaebaa55a0e854ca0666264de1c41c34b39e12eed78a212d146c787454a8fe","url":"/audio-research-portal/client/papers/2026-11-28/conference-a6b2987575951ca4242b4ab7/citation.json"},"citation.ris":{"sha256":"b651fa7bfa039d2b9919611ff9ee7ed1e681b178a81ce29278b0180f6f9b4cc5","url":"/audio-research-portal/client/papers/2026-11-28/conference-a6b2987575951ca4242b4ab7/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"ffc5414f5145348549138cd80ce19c9784a3adb169d443fa19e312b4ea5e87dd","url":"/audio-research-portal/client/papers/2026-11-28/conference-a6b2987575951ca4242b4ab7/rethink-context.json"}}
 paper_digest_paper_id: "conference:audio-aaai:2026:conference-paper-id:kishi26a"
 paper_digest_source_kind: conference
 paper_digest_conference_id: "audio-aaai-2026"
@@ -96,11 +96,11 @@ paper_digest_conference_structure: pdf-visual-quote-evidence-v1
 
 ## 👥 作者与机构
 
-- Minoru Kishi：机构信息未能从会议 PDF 纯文本可靠映射
-- Ryosuke Sakai：机构信息未能从会议 PDF 纯文本可靠映射
-- Shinnosuke Takamichi：机构信息未能从会议 PDF 纯文本可靠映射
-- Yusuke Kanamori：机构信息未能从会议 PDF 纯文本可靠映射
-- Yuki Okamoto：机构信息未能从会议 PDF 纯文本可靠映射
+- Minoru Kishi：Keio University, Japan
+- Ryosuke Sakai：Keio University, Japan
+- Shinnosuke Takamichi：Keio University, Japan；The University of Tokyo, Japan
+- Yusuke Kanamori：The University of Tokyo, Japan
+- Yuki Okamoto：The University of Tokyo, Japan
 
 ## 📌 核心摘要
 

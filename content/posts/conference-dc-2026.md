@@ -513,7 +513,7 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 👥 **作者与机构**
 
-- Zhaofeng Lin：机构信息未能从会议 PDF 纯文本可靠映射
+- Zhaofeng Lin：Trinity College Dublin, Ireland
 
 📌 **核心摘要**
 
@@ -709,7 +709,7 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 👥 **作者与机构**
 
-- Dushanthi Manamalage：机构信息未能从会议 PDF 纯文本可靠映射
+- Dushanthi Manamalage：DeepNet Discovery Network, The University of Auckland, New Zealand
 
 📌 **核心摘要**
 

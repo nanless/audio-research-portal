@@ -155,7 +155,9 @@ paper_digest_conference_structure: replayable-pdf-layout-v1
 
 以下导读针对户外剧场舞台图：它显示了表演者、音箱与调音位置如何被摆进非典型演出地，适合理解借用空间的物理约束。请先看半圆形座位与开阔端的朝向，再看音箱与人的相对位置。
 
-[[FIGURE_1]]
+[![原论文 Figure 1：Stage plot of an outdoor concert in an amphitheater.](https://raw.githubusercontent.com/nanless/audio-paper-digest-images/main/nime-2026/a422613f8e6a/figure-1.png)](https://raw.githubusercontent.com/nanless/audio-paper-digest-images/main/nime-2026/a422613f8e6a/figure-1.png)
+
+*论文图 1。原论文 Figure 1：“Stage plot of an outdoor concert in an amphitheater.”。*
 
 从像素可见，示意图底层是剧场的弧形台阶与两侧植被纹理，上方中央红色人形代表表演者，两侧青色支架音箱朝向座位，右下深蓝色图标为调音与处理位置，另有吉他音箱与话筒点缀。这种把直达声压向台阶、把控制点放在侧面的摆法，决定了测量话筒放在观众区中央时采到的是直达加早期反射的混合。对复现的启示是：户外无顶棚时反射主要来自地面、后墙与雕塑曲面，音箱指向与话筒高度必须记录，否则换个摆法 RIR 就变了。
 

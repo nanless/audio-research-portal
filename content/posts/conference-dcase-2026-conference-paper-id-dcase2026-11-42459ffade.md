@@ -2,7 +2,7 @@
 title: "Summary of DCASE 2026 Task 5: Audio-Dependent Question Answering"
 date: 2026-11-28
 draft: false
-description: "DCASE 2026 个任务 5 以四阶段音频依赖过滤筛除可凭文字答对的题目形成含 3,000 道题的 ADQA-Bench，36 个提交中以 MOSS 与 Qwen3-Omni 集成的 58.33% 为最高，而可比提交平均比开发集低 11.91 个百分点且 233 道题被全部错过，揭示轻量编排可接近大规模集成的同时仍需承担跨分布落差与增益未分离的代价。"
+description: "DCASE 2026 任务 5 以四阶段音频依赖过滤筛除可凭文字答对的题目形成含 3,000 道题的 ADQA-Bench，36 个提交中以 MOSS 与 Qwen3-Omni 集成的 58.33% 为最高，而可比提交平均比开发集低 11.91 个百分点且 233 道题被全部错过，揭示轻量编排可接近大规模集成的同时仍需承担跨分布落差与增益未分离的代价。"
 tags: ["数据集", "基准设计", "音频大模型", "音频问答"]
 categories: ["dcase-2026 论文"]
 hiddenInHomeList: true
@@ -23,7 +23,7 @@ paper_digest_primary_task: "音频问答"
 paper_digest_score: 6.9
 paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "数据集与基准"
-paper_digest_one_sentence: "DCASE 2026 个任务 5 以四阶段音频依赖过滤筛除可凭文字答对的题目形成含 3,000 道题的 ADQA-Bench，36 个提交中以 MOSS 与 Qwen3-Omni 集成的 58.33% 为最高，而可比提交平均比开发集低 11.91 个百分点且 233 道题被全部错过，揭示轻量编排可接近大规模集成的同时仍需承担跨分布落差与增益未分离的代价。"
+paper_digest_one_sentence: "DCASE 2026 任务 5 以四阶段音频依赖过滤筛除可凭文字答对的题目形成含 3,000 道题的 ADQA-Bench，36 个提交中以 MOSS 与 Qwen3-Omni 集成的 58.33% 为最高，而可比提交平均比开发集低 11.91 个百分点且 233 道题被全部错过，揭示轻量编排可接近大规模集成的同时仍需承担跨分布落差与增益未分离的代价。"
 paper_digest_reader_sections: [{"heading":"静音也能答对：音频问答的文字捷径与评测失真","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"四阶段音频依赖过滤如何筛出必须听的题目","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"冠军系统如何组织难度分箱、声学标注与多视图集成","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"开发集基线、骨干分组与各队最佳成绩","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"题目难度为何两极分化与开发到评测落差","index":5,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"在什么前提下结论成立与轻量部署如何选型","index":6,"kind":"limitation","roleLabel":"适用边界"}]
 paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Haolin He"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Renhe Sun"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Zheqi Dai"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Xingjian Du"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Chunyat Wu"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Zining Liang"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Zhengxi Liu"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Jiahe Lei"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Runbang Wang"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Jiayi Zhou"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Mingru Yang"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Xiquan Li"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Yun Chen"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Xie Chen"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Zhiyao Duan"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Weiqiang Wang"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Mark Plumbley"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Jian Liu"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Qiuqiang Kong"}]
 paper_digest_abstract_sha256: null
@@ -140,7 +140,7 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 大型音频语言模型在多项选择音频评测中常利用文字捷径抬高分数。原文指出，把音频替换为静音后，先进模型仍能答对不少题目，依靠的是语言先验与数据集编造痕迹，而非真实听觉证据。这种虚高让已有分数无法回答模型是否真的在听，亟需只能靠声音才能做对的题目来重新校准进步方向。
 
-DCASE 2026 个任务 5 把这一需求定义为音频依赖问答。每道题目配一段录音、一道问题与通常 4 个选项，仅有一个正确选项，且仅凭文字不足以锁定答案。题库覆盖音乐、语音与环境声音 3 类，要求模型区分韵律停顿、事件先后与场景细节，而非复述常识。
+DCASE 2026 任务 5 把这一需求定义为音频依赖问答。每道题目配一段录音、一道问题与通常 4 个选项，仅有一个正确选项，且仅凭文字不足以锁定答案。题库覆盖音乐、语音与环境声音 3 类，要求模型区分韵律停顿、事件先后与场景细节，而非复述常识。
 
 已有大规模音频理解评测包含可从文字解出的题目，直接沿用会奖励走捷径的系统。组织方因此不再沿用 MMAU、MMAR 与 MMSU 的原始混合题，而是对其中的候选题与新增人工撰写题目施加统一过滤，只保留听觉贡献充分的条目，从而把评测焦点从语言能力转回声音证据。
 

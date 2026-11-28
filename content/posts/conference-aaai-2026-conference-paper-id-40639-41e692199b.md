@@ -195,7 +195,7 @@ paper_digest_conference_structure: replayable-pdf-layout-v1
 
 下图直接画出同分布与泛化提示的分数差，阅读时注意正负方向与两种颜色的分工。
 
-> **看图路径：** 1. 先确认纵轴为 Difference、横轴为按字母序排列的 10 个系统；2. 再对比每个编号下蓝色 Quality Diff 与红色 Alignment Diff 的正负与高度；3. 重点观察第 8 个系统双柱大幅为负与其他系统多为正的反差
+> **看图路径：** 1. 先确认纵轴为 Difference、横轴为按字母序排列的 10 个系统；2. 再对比每个编号下蓝色 Quality Diff 与红色 Alignment Diff 的正负与高度；3. 重点观察第 8 系统双柱大幅为负与其他系统多为正的反差
 
 [![原论文 Figure 3：Performance differences between the accuracy- prompt (source = dataset) and generalization-prompt…](https://raw.githubusercontent.com/nanless/audio-paper-digest-images/main/aaai-2026/09617affc994/figure-3.png)](https://raw.githubusercontent.com/nanless/audio-paper-digest-images/main/aaai-2026/09617affc994/figure-3.png)
 

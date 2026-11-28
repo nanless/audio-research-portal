@@ -25,9 +25,9 @@ paper_digest_rank_bucket: "后50%"
 paper_digest_document_type: "系统技术报告"
 paper_digest_one_sentence: "论文针对生产场景既要智能体灵活又要固定流程可审计的矛盾，提出以确定性管理器统摄多模态微服务并仅在局部保留智能体自适应的 ORCHESTRA 架构，以博物馆讲解落地与定性对照说明全程安全覆盖与可观测的收益，代价是单点瓶颈与顺序累积延迟且缺乏定量评测支撑。"
 paper_digest_reader_sections: [{"heading":"企业为何既要智能体灵活性又要固定流程的可审计性","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"以确定性总控为中心的可移植微服务编排总览","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"从接入到语音合成的八步基线流程与分支汇合","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"双重安全检查与降级容错如何保证不断线","index":4,"kind":"component","roleLabel":"核心机制"},{"heading":"博物馆讲解实例与无定量指标下的定性结论边界","index":5,"kind":"result","roleLabel":"主实验验证"},{"heading":"单总控瓶颈与复现核对清单下的选型建议","index":6,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Jaime Bellver"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Samuel Ramos-Varela"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Anmol Guragain"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Ricardo Córdoba"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Luis Fernando D’Haro"}]
+paper_digest_authors: [{"affiliations":["Speech Technology and Machine Learning Group - ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain"],"name":"Jaime Bellver"},{"affiliations":["Speech Technology and Machine Learning Group - ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain"],"name":"Samuel Ramos-Varela"},{"affiliations":["Speech Technology and Machine Learning Group - ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain"],"name":"Anmol Guragain"},{"affiliations":["Speech Technology and Machine Learning Group - ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain"],"name":"Ricardo Córdoba"},{"affiliations":["Speech Technology and Machine Learning Group - ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain"],"name":"Luis Fernando D’Haro"}]
 paper_digest_abstract_sha256: "e7569cfaf711a2b14f24abb47d02f66e06cfbd0af31b0227a6d9c74d325fc0c8"
-paper_digest_sidecars: {"citation.bib":{"sha256":"131f23af94d0e8a9925eef1c70b67074ccb91ea85a3ca35a047929b4c007f3f2","url":"/audio-research-portal/client/papers/2026-11-28/conference-e6708ae464cc3373b83d84e3/citation.bib"},"citation.json":{"sha256":"49f39eee926d198ad76f8ceb0de58bbcbe05e1f1f90a4d901916f5514f47d418","url":"/audio-research-portal/client/papers/2026-11-28/conference-e6708ae464cc3373b83d84e3/citation.json"},"citation.ris":{"sha256":"b2ae1863d42655d28fc6699932d93ff6433c65e58b904ca5f9b8f39205a9d870","url":"/audio-research-portal/client/papers/2026-11-28/conference-e6708ae464cc3373b83d84e3/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"046e254468b0240806a7196e5ed5699456eb55392fac0c56262e9edad10624dd","url":"/audio-research-portal/client/papers/2026-11-28/conference-e6708ae464cc3373b83d84e3/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"131f23af94d0e8a9925eef1c70b67074ccb91ea85a3ca35a047929b4c007f3f2","url":"/audio-research-portal/client/papers/2026-11-28/conference-e6708ae464cc3373b83d84e3/citation.bib"},"citation.json":{"sha256":"9eff30b94dda4c62e70a2967ef9db2d3da3858be5ae0ea15a2ba4f9c540dfc8c","url":"/audio-research-portal/client/papers/2026-11-28/conference-e6708ae464cc3373b83d84e3/citation.json"},"citation.ris":{"sha256":"b2ae1863d42655d28fc6699932d93ff6433c65e58b904ca5f9b8f39205a9d870","url":"/audio-research-portal/client/papers/2026-11-28/conference-e6708ae464cc3373b83d84e3/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"8a9549922c1be85a539fe7b752bfd39fa600b727dfa0774d98419c4e6f26d8a2","url":"/audio-research-portal/client/papers/2026-11-28/conference-e6708ae464cc3373b83d84e3/rethink-context.json"}}
 paper_digest_paper_id: "conference:iwsds:2026:conference-paper-id:2026.iwsds-1.18"
 paper_digest_source_kind: conference
 paper_digest_conference_id: "iwsds-2026"
@@ -100,11 +100,11 @@ paper_digest_conference_structure: pdf-visual-quote-evidence-v1
 
 ## 👥 作者与机构
 
-- Jaime Bellver：机构信息未能从会议 PDF 纯文本可靠映射
-- Samuel Ramos-Varela：机构信息未能从会议 PDF 纯文本可靠映射
-- Anmol Guragain：机构信息未能从会议 PDF 纯文本可靠映射
-- Ricardo Córdoba：机构信息未能从会议 PDF 纯文本可靠映射
-- Luis Fernando D’Haro：机构信息未能从会议 PDF 纯文本可靠映射
+- Jaime Bellver：Speech Technology and Machine Learning Group - ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain
+- Samuel Ramos-Varela：Speech Technology and Machine Learning Group - ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain
+- Anmol Guragain：Speech Technology and Machine Learning Group - ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain
+- Ricardo Córdoba：Speech Technology and Machine Learning Group - ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain
+- Luis Fernando D’Haro：Speech Technology and Machine Learning Group - ETSI de Telecomunicación Universidad Politécnica de Madrid, Spain
 
 ## 📌 核心摘要
 

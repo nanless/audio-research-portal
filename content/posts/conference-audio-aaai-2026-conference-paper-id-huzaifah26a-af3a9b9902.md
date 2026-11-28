@@ -25,9 +25,9 @@ paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对 BEST-RQ 直接量化低层梅尔谱导致收敛慢的问题，Latent-RQ 改用冻结目标编码器中间层隐特征驱动固定随机量化并分阶段刷新，在 500,000 步内将说话人识别从 65.57% 提升至 74.75% 且自动语音识别词错误率从 10.71% 降至 9.46%，代价是单步耗时从 0.445 s 升至 0.570 s 且情感识别与外部最强模型仍落后。"
 paper_digest_reader_sections: [{"heading":"低层梅尔谱目标为何限制随机量化的收敛与表达","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"从直接量化到隐层量化的总体流程变化","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"多码本随机量化与中间层特征的结合方式","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"分阶段刷新目标编码器的训练安排","index":4,"kind":"training","roleLabel":"训练与优化"},{"heading":"SUPERB 四任务主结果与更快收敛的实际代价","index":5,"kind":"result","roleLabel":"主实验验证"},{"heading":"目标层位置与信息分布如何影响任务增益","index":6,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"结论成立的前提、失效范围与工程选型","index":7,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Muhammad Huzaifah"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Hardik Sailor"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Jeremy Wong"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Nancy F. Chen"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Ai Ti Aw"}]
+paper_digest_authors: [{"affiliations":["Institute for Infocomm Research (I2R), Agency for Science, Technology and Research (A*STAR), Singapore"],"name":"Muhammad Huzaifah"},{"affiliations":["Institute for Infocomm Research (I2R), Agency for Science, Technology and Research (A*STAR), Singapore"],"name":"Hardik Sailor"},{"affiliations":["Institute for Infocomm Research (I2R), Agency for Science, Technology and Research (A*STAR), Singapore"],"name":"Jeremy Wong"},{"affiliations":["Institute for Infocomm Research (I2R), Agency for Science, Technology and Research (A*STAR), Singapore"],"name":"Nancy F. Chen"},{"affiliations":["Institute for Infocomm Research (I2R), Agency for Science, Technology and Research (A*STAR), Singapore"],"name":"Ai Ti Aw"}]
 paper_digest_abstract_sha256: null
-paper_digest_sidecars: {"citation.bib":{"sha256":"a45a872c55b2f1b8f302ea17d420dec62b7b04f08e7586eb3b9dcc89f47d4889","url":"/audio-research-portal/client/papers/2026-11-27/conference-af3a9b9902496daef8a8a116/citation.bib"},"citation.json":{"sha256":"ec92559ad8254202ae1b728acbf81b00602c4b0195650c0f62a550eae3f77df2","url":"/audio-research-portal/client/papers/2026-11-27/conference-af3a9b9902496daef8a8a116/citation.json"},"citation.ris":{"sha256":"c12e1ebfc5b0578f7d9c21b35ae690640f13316c14e315bd3b6236e33c09bdfd","url":"/audio-research-portal/client/papers/2026-11-27/conference-af3a9b9902496daef8a8a116/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"dc2aa434bfd8dcdbbd81c892dde0924538af73cd3d7393d2554a1138cbe924d5","url":"/audio-research-portal/client/papers/2026-11-27/conference-af3a9b9902496daef8a8a116/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"a45a872c55b2f1b8f302ea17d420dec62b7b04f08e7586eb3b9dcc89f47d4889","url":"/audio-research-portal/client/papers/2026-11-27/conference-af3a9b9902496daef8a8a116/citation.bib"},"citation.json":{"sha256":"9bf270de6ba8d7c3a1654938d64874d98f1b73bfec9a8d2655a2932943daefee","url":"/audio-research-portal/client/papers/2026-11-27/conference-af3a9b9902496daef8a8a116/citation.json"},"citation.ris":{"sha256":"c12e1ebfc5b0578f7d9c21b35ae690640f13316c14e315bd3b6236e33c09bdfd","url":"/audio-research-portal/client/papers/2026-11-27/conference-af3a9b9902496daef8a8a116/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"c731cd1143ae2c8a6fe34d2be7927fbc164fcc30956a840bac4a9fa4e62ed8d4","url":"/audio-research-portal/client/papers/2026-11-27/conference-af3a9b9902496daef8a8a116/rethink-context.json"}}
 paper_digest_paper_id: "conference:audio-aaai:2026:conference-paper-id:huzaifah26a"
 paper_digest_source_kind: conference
 paper_digest_conference_id: "audio-aaai-2026"
@@ -96,11 +96,11 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 ## 👥 作者与机构
 
-- Muhammad Huzaifah：机构信息未能从会议 PDF 纯文本可靠映射
-- Hardik Sailor：机构信息未能从会议 PDF 纯文本可靠映射
-- Jeremy Wong：机构信息未能从会议 PDF 纯文本可靠映射
-- Nancy F. Chen：机构信息未能从会议 PDF 纯文本可靠映射
-- Ai Ti Aw：机构信息未能从会议 PDF 纯文本可靠映射
+- Muhammad Huzaifah：Institute for Infocomm Research (I2R), Agency for Science, Technology and Research (A*STAR), Singapore
+- Hardik Sailor：Institute for Infocomm Research (I2R), Agency for Science, Technology and Research (A*STAR), Singapore
+- Jeremy Wong：Institute for Infocomm Research (I2R), Agency for Science, Technology and Research (A*STAR), Singapore
+- Nancy F. Chen：Institute for Infocomm Research (I2R), Agency for Science, Technology and Research (A*STAR), Singapore
+- Ai Ti Aw：Institute for Infocomm Research (I2R), Agency for Science, Technology and Research (A*STAR), Singapore
 
 ## 📌 核心摘要
 

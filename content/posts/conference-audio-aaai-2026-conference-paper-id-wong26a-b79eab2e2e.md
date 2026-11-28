@@ -25,9 +25,9 @@ paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对指令微调需人工编写多任务模板而覆盖信息窄的问题，本文用同一冻结大模型读 JSON 元信息生成描述作为教师、以音频嵌入替换 JSON 训练只更新适配器的学生，在相同数据与结构下证明蒸馏与指令微调互补，Dynamic-SUPERB 先蒸馏后微调达 46.8% 与 AudioBench 混合达 57.2 分最高，但仅用蒸馏平均无法超越指令微调并伴随覆盖不全与泛化抱怨的代价。"
 paper_digest_reader_sections: [{"heading":"多模态大模型为何难以低成本理解副语言与非语音信息","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"教师文本提示与学生音频提示共用同一描述流程","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"单一描述提示如何容纳 29 种元信息并控制幻觉与覆盖","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"只训练适配器与层加权的冻结边界与 240K 步公平训练","index":4,"kind":"training","roleLabel":"训练与优化"},{"heading":"互补成立但仅用蒸馏不超越指令微调的分类与开放评测","index":5,"kind":"result","roleLabel":"主实验验证"},{"heading":"假设边界、复现前提与何时选用混合训练","index":6,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Jeremy Wong"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Muhammad Huzaifah"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Hardik Sailor"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Shuo Sun"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Kye Min Tan"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Bin Wang"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Qiongqiong Wang"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Wenyu Zhang"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Xunlong Zou"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Nancy F. Chen"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Ai Ti Aw"}]
+paper_digest_authors: [{"affiliations":["Institute for Infocomm Research (I2R), A⋆STAR, Singapore"],"name":"Jeremy Wong"},{"affiliations":["Institute for Infocomm Research (I2R), A⋆STAR, Singapore"],"name":"Muhammad Huzaifah"},{"affiliations":["Institute for Infocomm Research (I2R), A⋆STAR, Singapore"],"name":"Hardik Sailor"},{"affiliations":["Institute for Infocomm Research (I2R), A⋆STAR, Singapore"],"name":"Shuo Sun"},{"affiliations":["Institute for Infocomm Research (I2R), A⋆STAR, Singapore"],"name":"Kye Min Tan"},{"affiliations":["MiroMind"],"name":"Bin Wang"},{"affiliations":["Institute for Infocomm Research (I2R), A⋆STAR, Singapore"],"name":"Qiongqiong Wang"},{"affiliations":["Institute for Infocomm Research (I2R), A⋆STAR, Singapore"],"name":"Wenyu Zhang"},{"affiliations":["Institute for Infocomm Research (I2R), A⋆STAR, Singapore"],"name":"Xunlong Zou"},{"affiliations":["Institute for Infocomm Research (I2R), A⋆STAR, Singapore"],"name":"Nancy F. Chen"},{"affiliations":["Institute for Infocomm Research (I2R), A⋆STAR, Singapore"],"name":"Ai Ti Aw"}]
 paper_digest_abstract_sha256: null
-paper_digest_sidecars: {"citation.bib":{"sha256":"6e171617e8523924c86240acb8d7011ad7c31aea461f7069c34aff4e2f5b4248","url":"/audio-research-portal/client/papers/2026-11-27/conference-b79eab2e2e88b7d148e8ebf9/citation.bib"},"citation.json":{"sha256":"8b5b56776c6c2aa1b94f1c7aa28cf6f40b34eda412344c37ae53a9f137e44caa","url":"/audio-research-portal/client/papers/2026-11-27/conference-b79eab2e2e88b7d148e8ebf9/citation.json"},"citation.ris":{"sha256":"df13ea48af9920d234cb2ecbf63a42ab9f949f84581a6f4975dbfa6b93838b16","url":"/audio-research-portal/client/papers/2026-11-27/conference-b79eab2e2e88b7d148e8ebf9/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"7fad64925234ffa91d57fb548c25c32c7288340e89bf12769901a0cf03d273c6","url":"/audio-research-portal/client/papers/2026-11-27/conference-b79eab2e2e88b7d148e8ebf9/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"6e171617e8523924c86240acb8d7011ad7c31aea461f7069c34aff4e2f5b4248","url":"/audio-research-portal/client/papers/2026-11-27/conference-b79eab2e2e88b7d148e8ebf9/citation.bib"},"citation.json":{"sha256":"c0140a994e92d03855c96294e45b3ffa379a7444a279a2a786e4966fe35fef97","url":"/audio-research-portal/client/papers/2026-11-27/conference-b79eab2e2e88b7d148e8ebf9/citation.json"},"citation.ris":{"sha256":"df13ea48af9920d234cb2ecbf63a42ab9f949f84581a6f4975dbfa6b93838b16","url":"/audio-research-portal/client/papers/2026-11-27/conference-b79eab2e2e88b7d148e8ebf9/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"5657f398d56ce09c75786985fdf86373fb887f3d0270c24f16c3ce9d1db19b75","url":"/audio-research-portal/client/papers/2026-11-27/conference-b79eab2e2e88b7d148e8ebf9/rethink-context.json"}}
 paper_digest_paper_id: "conference:audio-aaai:2026:conference-paper-id:wong26a"
 paper_digest_source_kind: conference
 paper_digest_conference_id: "audio-aaai-2026"
@@ -96,23 +96,23 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 ## 👥 作者与机构
 
-- Jeremy Wong：机构信息未能从会议 PDF 纯文本可靠映射
-- Muhammad Huzaifah：机构信息未能从会议 PDF 纯文本可靠映射
-- Hardik Sailor：机构信息未能从会议 PDF 纯文本可靠映射
-- Shuo Sun：机构信息未能从会议 PDF 纯文本可靠映射
-- Kye Min Tan：机构信息未能从会议 PDF 纯文本可靠映射
-- Bin Wang：机构信息未能从会议 PDF 纯文本可靠映射
-- Qiongqiong Wang：机构信息未能从会议 PDF 纯文本可靠映射
-- Wenyu Zhang：机构信息未能从会议 PDF 纯文本可靠映射
-- Xunlong Zou：机构信息未能从会议 PDF 纯文本可靠映射
-- Nancy F. Chen：机构信息未能从会议 PDF 纯文本可靠映射
-- Ai Ti Aw：机构信息未能从会议 PDF 纯文本可靠映射
+- Jeremy Wong：Institute for Infocomm Research (I2R), A⋆STAR, Singapore
+- Muhammad Huzaifah：Institute for Infocomm Research (I2R), A⋆STAR, Singapore
+- Hardik Sailor：Institute for Infocomm Research (I2R), A⋆STAR, Singapore
+- Shuo Sun：Institute for Infocomm Research (I2R), A⋆STAR, Singapore
+- Kye Min Tan：Institute for Infocomm Research (I2R), A⋆STAR, Singapore
+- Bin Wang：MiroMind
+- Qiongqiong Wang：Institute for Infocomm Research (I2R), A⋆STAR, Singapore
+- Wenyu Zhang：Institute for Infocomm Research (I2R), A⋆STAR, Singapore
+- Xunlong Zou：Institute for Infocomm Research (I2R), A⋆STAR, Singapore
+- Nancy F. Chen：Institute for Infocomm Research (I2R), A⋆STAR, Singapore
+- Ai Ti Aw：Institute for Infocomm Research (I2R), A⋆STAR, Singapore
 
 ## 📌 核心摘要
 
 **问题与瓶颈：** 大语言模型 (Large Language Model, LLM) 要理解语音与音频，需把音频嵌入转换为与文本提示可互读的音频提示嵌入，常由适配器完成这一对齐。指令微调 (Instruction Fine-Tuning, IFT) 依赖人工把转写、性别、情感、噪声等元信息改写为问答与描述，覆盖多种信息类型时人力成本高。仅在自动语音识别与翻译上微调会使嵌入偏重词汇内容，对口音、年龄、情感、混响等副语言与非语音信息表达不足。已有知识蒸馏 (Knowledge Distillation, KD) 只用少数数据集，且与 IFT 的对比使用了不同数据、架构与基座模型，无法判断收益来源。
 
-**核心思路与方法架构：** 本文与最接近基线的实质差异是将描述式蒸馏从 6 个数据集 12 种元信息扩大到 13 个数据集 29 种元信息，并对每个数据集使用全部可用元信息，同时固定教师、学生、数据与架构以保证公平。教师选用与学生种子相同的 Gemma2-9b-it，提示中以 JSON 文本形式填入转写、语言、性别、情感、说话人数、时长等全部元信息，并要求详细描述音频并在有语音时给出转写。学生使用除元信息片段被音频提示嵌入替换外完全相同的提示，音频由 Whisper-large-v3 编码器提取，经任务无关的层加权求和与单隐层适配器降采样变换，每 30 秒音频得到 100 个提示嵌入，再与文本提示拼接输入冻结的 LLM。训练仅更新适配器与加权系数，编码器与 LLM 保持冻结，以保留音频信息提取能力与原有指令跟随行为。
+**核心思路与方法架构：** 本文与最接近基线的实质差异是将描述式蒸馏从 6 数据集 12 种元信息扩大到 13 数据集 29 种元信息，并对每个数据集使用全部可用元信息，同时固定教师、学生、数据与架构以保证公平。教师选用与学生种子相同的 Gemma2-9b-it，提示中以 JSON 文本形式填入转写、语言、性别、情感、说话人数、时长等全部元信息，并要求详细描述音频并在有语音时给出转写。学生使用除元信息片段被音频提示嵌入替换外完全相同的提示，音频由 Whisper-large-v3 编码器提取，经任务无关的层加权求和与单隐层适配器降采样变换，每 30 秒音频得到 100 个提示嵌入，再与文本提示拼接输入冻结的 LLM。训练仅更新适配器与加权系数，编码器与 LLM 保持冻结，以保留音频信息提取能力与原有指令跟随行为。
 
 **关键实验与核心代价：** 在 Dynamic-SUPERB 分类准确率 (准确率越高越好 ↑) 上，240K 步时 IFT 平均为 46.2%，KD 平均为 41.1%，低于 IFT，而 KD 在内容类 55.7% 与语义类 74.2% 上高于 IFT 同类结果，提示转写元信息带来词汇相关增益。正文称先 KD 120K 步再 IFT 120K 步平均为 46.8%，高于 IFT 与 KD 单独训练，但该行表格平均列显示为 45.9%，原文如此报告，存在字面出入，原文未解释。在 AudioBench 上以词错率 (Word Error Rate, WER, 越低越好 ↓) 评估语音识别，以外部 LLM 打分评估长文本回答，混合 IFT 与 KD 在 240K 步平均分为 57.2，高于 IFT 的 51.2 与 KD 的 31.7。代价方面，KD 在 Earnings 长语音上因保留格式化转写使 WER 恶化到 45.3% 与 47.9%，在未见语音指令任务上从 42.6 波动到 21.8，且更频繁抱怨输入缺少音频。
 

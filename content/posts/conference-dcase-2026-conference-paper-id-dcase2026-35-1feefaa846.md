@@ -2,7 +2,7 @@
 title: "QAM-DETR: Quality-Aware Mamba DETR for Audio Moment Retrieval from Long Audio"
 date: 2026-11-27
 draft: false
-description: "针对长音频中自然语言查询的语义匹配与精确边界难以兼顾的问题，QAM-DETR 以冻结多特征门控融合、三路交叉注意、双向 Mamba 编码与交并比质量分支构建渐进定位流程，在 DCASE 2026 个任务 6 官方评测集上以 R1@0.5 为 63.84% 与 R1@0.7 为 48.59% 取得并列第一，代价是依赖多配置集成与冻结大模型对前 10 候选的重排且不修正边界。"
+description: "针对长音频中自然语言查询的语义匹配与精确边界难以兼顾的问题，QAM-DETR 以冻结多特征门控融合、三路交叉注意、双向 Mamba 编码与交并比质量分支构建渐进定位流程，在 DCASE 2026 任务 6 官方评测集上以 R1@0.5 为 63.84% 与 R1@0.7 为 48.59% 取得并列第一，代价是依赖多配置集成与冻结大模型对前 10 候选的重排且不修正边界。"
 tags: ["模型集成", "多模态学习", "状态空间模型", "音频时间定位"]
 categories: ["dcase-2026 论文"]
 hiddenInHomeList: true
@@ -23,7 +23,7 @@ paper_digest_primary_task: "音频时间定位"
 paper_digest_score: 6.3
 paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "系统技术报告"
-paper_digest_one_sentence: "针对长音频中自然语言查询的语义匹配与精确边界难以兼顾的问题，QAM-DETR 以冻结多特征门控融合、三路交叉注意、双向 Mamba 编码与交并比质量分支构建渐进定位流程，在 DCASE 2026 个任务 6 官方评测集上以 R1@0.5 为 63.84% 与 R1@0.7 为 48.59% 取得并列第一，代价是依赖多配置集成与冻结大模型对前 10 候选的重排且不修正边界。"
+paper_digest_one_sentence: "针对长音频中自然语言查询的语义匹配与精确边界难以兼顾的问题，QAM-DETR 以冻结多特征门控融合、三路交叉注意、双向 Mamba 编码与交并比质量分支构建渐进定位流程，在 DCASE 2026 任务 6 官方评测集上以 R1@0.5 为 63.84% 与 R1@0.7 为 48.59% 取得并列第一，代价是依赖多配置集成与冻结大模型对前 10 候选的重排且不修正边界。"
 paper_digest_reader_sections: [{"heading":"长音频时刻检索为何需要同时解决语义匹配与边界精度","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"QAM-DETR 渐进定位流程总览与门控融合起点","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"三路交叉注意、双向状态空间编码与质量分支的分工","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"两阶段冻结训练、损失梯度与推理执行路径","index":4,"kind":"training","roleLabel":"训练与优化"},{"heading":"特征多样集成与大模型重排的官方评测表现","index":5,"kind":"result","roleLabel":"主实验验证"},{"heading":"累积消融中双向建模与质量排序的增益归因","index":6,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"假设边界、复现核对与工程选型建议","index":7,"kind":"limitation","roleLabel":"适用边界"}]
 paper_digest_authors: [{"affiliations":["Chung-Ang University, Seoul, Republic of Korea"],"name":"JeongRae Kim"},{"affiliations":["Chung-Ang University, Seoul, Republic of Korea"],"name":"Ho jun Jung"},{"affiliations":["Chung-Ang University, Seoul, Republic of Korea"],"name":"Yewon Park"},{"affiliations":["Chung-Ang University, Seoul, Republic of Korea"],"name":"Changwon Lim"}]
 paper_digest_abstract_sha256: null
@@ -171,7 +171,7 @@ DCASE 2026 挑战赛任务 6 将上述困难形式化为公开评测。开发阶
 
 这一增益的前提与代价同样具体。重排仅针对前 10 个候选，每个候选裁剪时向两侧各扩展自身时长 50% 以引入上下文，再送入冻结大模型计算肯定与否定对数几率的归一化概率，最终分按 1 减 β 乘解码器分加 β 乘大模型分融合，3 个重排变体的 β 分别取 0.35、0.45 与 0.30，均按开发集 R1@0.7 事后选优，存在对开发集的依赖。代价是每个查询需额外运行大模型验证 10 个音频片段，且边界精度不因此提升，若解码器未产生准确候选，重排无法创造新边界。此外，最终集成合并 3 组特征配置的多模型候选，训练与存储成本高于单模型，原文未披露具体推理延迟与显存，无法评估实时部署可行性。
 
-未胜出项与未评测范围限定了结论边界。Dual-CLAP 集成加大模型重排在评测 R1@0.7 上低于另两个重排变体，表明语义验证最依赖准确候选已在池中的情形。开发集上多尺度融合与 3 路注意力并未改善每一项验证指标，存在个别验证列轻微回落，说明中等增益具有配置依赖。原文未报告最终集成的方差与置信区间，未做噪声、远场、跨域或流式因果评测，也未与人工听测对照。因此，并列第一仅在 DCASE 2026 个任务 6 官方隐藏集与 R1 与平均精度口径下成立，换用其他数据分布或延迟约束时需重新验证。
+未胜出项与未评测范围限定了结论边界。Dual-CLAP 集成加大模型重排在评测 R1@0.7 上低于另两个重排变体，表明语义验证最依赖准确候选已在池中的情形。开发集上多尺度融合与 3 路注意力并未改善每一项验证指标，存在个别验证列轻微回落，说明中等增益具有配置依赖。原文未报告最终集成的方差与置信区间，未做噪声、远场、跨域或流式因果评测，也未与人工听测对照。因此，并列第一仅在 DCASE 2026 任务 6 官方隐藏集与 R1 与平均精度口径下成立，换用其他数据分布或延迟约束时需重新验证。
 
 ### 累积消融中双向建模与质量排序的增益归因
 

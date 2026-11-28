@@ -179,7 +179,7 @@ paper_digest_conference_structure: pdf-visual-quote-evidence-v1
 | --- | --- | --- | --- | --- |
 | HeySnips，误报每小时 0.5 下准确率 | 模型大小压缩 | 未剪枝基线 | 9.63× model-size compression | 等任务性能 |
 | HeySnips，误报每小时 0.5 下准确率 | 模型压缩 | ResNet15 与 DS-CNN-L 基线 | 3.33× and 9.63× model compression | 等任务性能，域内剪枝优于直接微调离线小网络 |
-| HeySnapdragon，误报每小时 0.5 下准确率 | 模型压缩 | ResNet15 个基线 | 1.7× | 等任务性能 |
+| HeySnapdragon，误报每小时 0.5 下准确率 | 模型压缩 | ResNet15 基线 | 1.7× | 等任务性能 |
 
 表后解释需要同时讲收益与代价。收益是小尺寸区域前沿明显外推，尤其 HeySnips 上用 ResNet 起点 2 次剪枝可同时更小更准，支持域内数据决定架构的判断。代价与限制是 HeySnapdragon 的压缩幅度小得多，说明关键词与声学条件改变了可剪空间；且前沿点依赖伪标签微调恢复精度，样本少加标签噪使大压缩比下误差条变宽。不能把末步最优点推广为全程任意压缩比都赢，也不能把准确率提升解读为误报率已单独改善，因为工作点已固定。
 

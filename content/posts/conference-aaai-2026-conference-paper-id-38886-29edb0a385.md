@@ -2,7 +2,7 @@
 title: "NaVLA^2: A Vision-Language-Audio-Action Model for Multimodal Instruction Navigation"
 date: 2026-09-11
 draft: false
-description: "针对单模态指令在相似物体环境中易歧义的问题，论文提出 MINav 任务与 NaVLA2 个模型，用空间语义双分支音频编码与边想边做解码实现多模态接地，最强证据是在 MINav 上达到 27.2% 成功率与 19.6% 路径加权成功率，代价是仍需三阶段训练与连续仿真渲染。"
+description: "针对单模态指令在相似物体环境中易歧义的问题，论文提出 MINav 任务与 NaVLA2 模型，用空间语义双分支音频编码与边想边做解码实现多模态接地，最强证据是在 MINav 上达到 27.2% 成功率与 19.6% 路径加权成功率，代价是仍需三阶段训练与连续仿真渲染。"
 tags: ["基准测试", "多模态学习", "空间音频信号", "声源定位"]
 categories: ["aaai-2026 论文"]
 paper_digest_pipeline_owned: true
@@ -235,7 +235,7 @@ NaVLA2 采用 3 阶段训练。第一阶段做音频文本对齐，目标是把�
 | 第一阶段 | 语义音频文本对 | 271K semantic-audio-text pairs | 合并清洗已有描述集 | 音频适配器对齐 |
 | 第一阶段 | 空间音频文本对 | 813K spatial–audio–text pairs | 卷积混响房间脉冲响应并追加方向 | 空间语义对齐 |
 | 第二阶段 | 多模态问答 | 1M samples | 采样已有图像视频音频集 | 大模型指令微调 |
-| 第 3 个阶段 | 导航样本 | 379K training samples | 交错多模态指令与观测 | 低秩微调与双头训练 |
+| 第 3 阶段 | 导航样本 | 379K training samples | 交错多模态指令与观测 | 低秩微调与双头训练 |
 
 表后解释如下：按先跑仿真器验证观测渲染，再跑第一阶段音频对齐检查双耳合成是否正常，再跑第二阶段多模态理解，最后在导航数据上微调并在精简测试上用成功率、路径加权与导航误差验收。
 

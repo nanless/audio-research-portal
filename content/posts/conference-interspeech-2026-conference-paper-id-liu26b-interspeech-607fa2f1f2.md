@@ -193,7 +193,7 @@ paper_digest_conference_structure: pdf-visual-quote-evidence-v1
 
 下表整理挑战赛盲测集上的关键数字，列数满足宽表要求，数值保留原文写法。阅读时先看双讲的回声与退化，再看远端单讲，最后看计算量是否更小。表中短横表示原文未报告，不是零。
 
-| 条件 | 指标 | DeepVQE 端到端 | Align-ULCNet 混合 | LMPAN 2 个阶段 |
+| 条件 | 指标 | DeepVQE 端到端 | Align-ULCNet 混合 | LMPAN 2 阶段 |
 | --- | --- | --- | --- | --- |
 | 双讲 | 回声分 | 4.62 | 4.60 | 4.63 |
 | 双讲 | 退化分 | 4.02 | 3.80 | 4.17 |

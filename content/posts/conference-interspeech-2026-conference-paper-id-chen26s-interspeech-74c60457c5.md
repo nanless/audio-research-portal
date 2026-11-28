@@ -2,7 +2,7 @@
 title: "LLM-Guided Reinforcement Learning for Audio-Visual Speech Enhancement"
 date: 2026-09-28
 draft: false
-description: "针对视听语音增强中 SI-SNR 与人耳感知不一致的问题，该工作用冻结的 SALMONN 生成自然语言质量描述再经 BERT 转为 1-5 分作为相对奖励，用 PPO 微调 AVSEC-4 个基线，在测试集上 PESQ 达 1.25 且 21 人听测中以 96.7% 和 67.6% 胜出，代价是奖励文本模式较固定且需额外大模型推理开销。"
+description: "针对视听语音增强中 SI-SNR 与人耳感知不一致的问题，该工作用冻结的 SALMONN 生成自然语言质量描述再经 BERT 转为 1-5 分作为相对奖励，用 PPO 微调 AVSEC-4 基线，在测试集上 PESQ 达 1.25 且 21 人听测中以 96.7% 和 67.6% 胜出，代价是奖励文本模式较固定且需额外大模型推理开销。"
 tags: ["强化学习", "音频大模型", "可解释性", "音视频", "语音增强"]
 categories: ["interspeech-2026 论文"]
 paper_digest_pipeline_owned: true

@@ -155,10 +155,10 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 👥 **作者与机构**
 
-- Théodor Lemerle：机构信息未能从会议 PDF 纯文本可靠映射
-- Téo Guichoux：机构信息未能从会议 PDF 纯文本可靠映射
-- Axel Roebel：机构信息未能从会议 PDF 纯文本可靠映射
-- Nicolas Obin：机构信息未能从会议 PDF 纯文本可靠映射
+- Théodor Lemerle：Science and Technology of Music and Sound &#40;STMS&#41;, IRCAM – CNRS – Sorbonne Université – Ministère de la Culture, Paris, France
+- Téo Guichoux：Institut des Systèmes Intelligents et de Robotique &#40;ISIR&#41;, CNRS – Sorbonne Université, Paris, France；Science and Technology of Music and Sound &#40;STMS&#41;, IRCAM – CNRS – Sorbonne Université – Ministère de la Culture, Paris, France
+- Axel Roebel：Science and Technology of Music and Sound &#40;STMS&#41;, IRCAM – CNRS – Sorbonne Université – Ministère de la Culture, Paris, France
+- Nicolas Obin：Science and Technology of Music and Sound &#40;STMS&#41;, IRCAM – CNRS – Sorbonne Université – Ministère de la Culture, Paris, France
 
 📌 **核心摘要**
 
@@ -228,11 +228,11 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 👥 **作者与机构**
 
-- Muhammad Huzaifah：机构信息未能从会议 PDF 纯文本可靠映射
-- Hardik Sailor：机构信息未能从会议 PDF 纯文本可靠映射
-- Jeremy Wong：机构信息未能从会议 PDF 纯文本可靠映射
-- Nancy F\. Chen：机构信息未能从会议 PDF 纯文本可靠映射
-- Ai Ti Aw：机构信息未能从会议 PDF 纯文本可靠映射
+- Muhammad Huzaifah：Institute for Infocomm Research &#40;I2R&#41;, Agency for Science, Technology and Research &#40;A\*STAR&#41;, Singapore
+- Hardik Sailor：Institute for Infocomm Research &#40;I2R&#41;, Agency for Science, Technology and Research &#40;A\*STAR&#41;, Singapore
+- Jeremy Wong：Institute for Infocomm Research &#40;I2R&#41;, Agency for Science, Technology and Research &#40;A\*STAR&#41;, Singapore
+- Nancy F\. Chen：Institute for Infocomm Research &#40;I2R&#41;, Agency for Science, Technology and Research &#40;A\*STAR&#41;, Singapore
+- Ai Ti Aw：Institute for Infocomm Research &#40;I2R&#41;, Agency for Science, Technology and Research &#40;A\*STAR&#41;, Singapore
 
 📌 **核心摘要**
 
@@ -296,11 +296,11 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 👥 **作者与机构**
 
-- Minoru Kishi：机构信息未能从会议 PDF 纯文本可靠映射
-- Ryosuke Sakai：机构信息未能从会议 PDF 纯文本可靠映射
-- Shinnosuke Takamichi：机构信息未能从会议 PDF 纯文本可靠映射
-- Yusuke Kanamori：机构信息未能从会议 PDF 纯文本可靠映射
-- Yuki Okamoto：机构信息未能从会议 PDF 纯文本可靠映射
+- Minoru Kishi：Keio University, Japan
+- Ryosuke Sakai：Keio University, Japan
+- Shinnosuke Takamichi：Keio University, Japan；The University of Tokyo, Japan
+- Yusuke Kanamori：The University of Tokyo, Japan
+- Yuki Okamoto：The University of Tokyo, Japan
 
 📌 **核心摘要**
 
@@ -375,10 +375,10 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 👥 **作者与机构**
 
-- Jingru Lin：机构信息未能从会议 PDF 纯文本可靠映射
-- Chen Zhang：机构信息未能从会议 PDF 纯文本可靠映射
-- Tianrui Wang：机构信息未能从会议 PDF 纯文本可靠映射
-- Haizhou Li：机构信息未能从会议 PDF 纯文本可靠映射
+- Jingru Lin：Department of Electrical and Computer Engineering, National University of Singapore, Singapore
+- Chen Zhang：Department of Electrical and Computer Engineering, National University of Singapore, Singapore
+- Tianrui Wang：College of Intelligence and Computing, Tianjin University, China
+- Haizhou Li：Department of Electrical and Computer Engineering, National University of Singapore, Singapore；SRIBD, School of Data Science, The Chinese University of Hong Kong, Shenzhen, Guangdong
 
 📌 **核心摘要**
 
@@ -442,23 +442,23 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 👥 **作者与机构**
 
-- Jeremy Wong：机构信息未能从会议 PDF 纯文本可靠映射
-- Muhammad Huzaifah：机构信息未能从会议 PDF 纯文本可靠映射
-- Hardik Sailor：机构信息未能从会议 PDF 纯文本可靠映射
-- Shuo Sun：机构信息未能从会议 PDF 纯文本可靠映射
-- Kye Min Tan：机构信息未能从会议 PDF 纯文本可靠映射
-- Bin Wang：机构信息未能从会议 PDF 纯文本可靠映射
-- Qiongqiong Wang：机构信息未能从会议 PDF 纯文本可靠映射
-- Wenyu Zhang：机构信息未能从会议 PDF 纯文本可靠映射
-- Xunlong Zou：机构信息未能从会议 PDF 纯文本可靠映射
-- Nancy F\. Chen：机构信息未能从会议 PDF 纯文本可靠映射
-- Ai Ti Aw：机构信息未能从会议 PDF 纯文本可靠映射
+- Jeremy Wong：Institute for Infocomm Research &#40;I2R&#41;, A⋆STAR, Singapore
+- Muhammad Huzaifah：Institute for Infocomm Research &#40;I2R&#41;, A⋆STAR, Singapore
+- Hardik Sailor：Institute for Infocomm Research &#40;I2R&#41;, A⋆STAR, Singapore
+- Shuo Sun：Institute for Infocomm Research &#40;I2R&#41;, A⋆STAR, Singapore
+- Kye Min Tan：Institute for Infocomm Research &#40;I2R&#41;, A⋆STAR, Singapore
+- Bin Wang：MiroMind
+- Qiongqiong Wang：Institute for Infocomm Research &#40;I2R&#41;, A⋆STAR, Singapore
+- Wenyu Zhang：Institute for Infocomm Research &#40;I2R&#41;, A⋆STAR, Singapore
+- Xunlong Zou：Institute for Infocomm Research &#40;I2R&#41;, A⋆STAR, Singapore
+- Nancy F\. Chen：Institute for Infocomm Research &#40;I2R&#41;, A⋆STAR, Singapore
+- Ai Ti Aw：Institute for Infocomm Research &#40;I2R&#41;, A⋆STAR, Singapore
 
 📌 **核心摘要**
 
 **问题与瓶颈：** 大语言模型 (Large Language Model, LLM) 要理解语音与音频，需把音频嵌入转换为与文本提示可互读的音频提示嵌入，常由适配器完成这一对齐。指令微调 (Instruction Fine-Tuning, IFT) 依赖人工把转写、性别、情感、噪声等元信息改写为问答与描述，覆盖多种信息类型时人力成本高。仅在自动语音识别与翻译上微调会使嵌入偏重词汇内容，对口音、年龄、情感、混响等副语言与非语音信息表达不足。已有知识蒸馏 (Knowledge Distillation, KD) 只用少数数据集，且与 IFT 的对比使用了不同数据、架构与基座模型，无法判断收益来源。
 
-**核心思路与方法架构：** 本文与最接近基线的实质差异是将描述式蒸馏从 6 个数据集 12 种元信息扩大到 13 个数据集 29 种元信息，并对每个数据集使用全部可用元信息，同时固定教师、学生、数据与架构以保证公平。教师选用与学生种子相同的 Gemma2-9b-it，提示中以 JSON 文本形式填入转写、语言、性别、情感、说话人数、时长等全部元信息，并要求详细描述音频并在有语音时给出转写。学生使用除元信息片段被音频提示嵌入替换外完全相同的提示，音频由 Whisper-large-v3 编码器提取，经任务无关的层加权求和与单隐层适配器降采样变换，每 30 秒音频得到 100 个提示嵌入，再与文本提示拼接输入冻结的 LLM。训练仅更新适配器与加权系数，编码器与 LLM 保持冻结，以保留音频信息提取能力与原有指令跟随行为。
+**核心思路与方法架构：** 本文与最接近基线的实质差异是将描述式蒸馏从 6 数据集 12 种元信息扩大到 13 数据集 29 种元信息，并对每个数据集使用全部可用元信息，同时固定教师、学生、数据与架构以保证公平。教师选用与学生种子相同的 Gemma2-9b-it，提示中以 JSON 文本形式填入转写、语言、性别、情感、说话人数、时长等全部元信息，并要求详细描述音频并在有语音时给出转写。学生使用除元信息片段被音频提示嵌入替换外完全相同的提示，音频由 Whisper-large-v3 编码器提取，经任务无关的层加权求和与单隐层适配器降采样变换，每 30 秒音频得到 100 个提示嵌入，再与文本提示拼接输入冻结的 LLM。训练仅更新适配器与加权系数，编码器与 LLM 保持冻结，以保留音频信息提取能力与原有指令跟随行为。
 
 **关键实验与核心代价：** 在 Dynamic-SUPERB 分类准确率 (准确率越高越好 ↑) 上，240K 步时 IFT 平均为 46.2%，KD 平均为 41.1%，低于 IFT，而 KD 在内容类 55.7% 与语义类 74.2% 上高于 IFT 同类结果，提示转写元信息带来词汇相关增益。正文称先 KD 120K 步再 IFT 120K 步平均为 46.8%，高于 IFT 与 KD 单独训练，但该行表格平均列显示为 45.9%，原文如此报告，存在字面出入，原文未解释。在 AudioBench 上以词错率 (Word Error Rate, WER, 越低越好 ↓) 评估语音识别，以外部 LLM 打分评估长文本回答，混合 IFT 与 KD 在 240K 步平均分为 57.2，高于 IFT 的 51.2 与 KD 的 31.7。代价方面，KD 在 Earnings 长语音上因保留格式化转写使 WER 恶化到 45.3% 与 47.9%，在未见语音指令任务上从 42.6 波动到 21.8，且更频繁抱怨输入缺少音频。
 
@@ -518,12 +518,12 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 👥 **作者与机构**
 
-- Haowen Li：机构信息未能从会议 PDF 纯文本可靠映射
-- Mou Wang：机构信息未能从会议 PDF 纯文本可靠映射
-- Zhengding Luo：机构信息未能从会议 PDF 纯文本可靠映射
-- Ee\-Leng Tan：机构信息未能从会议 PDF 纯文本可靠映射
-- Ziyi Yang：机构信息未能从会议 PDF 纯文本可靠映射
-- Woon\-Seng Gan：机构信息未能从会议 PDF 纯文本可靠映射
+- Haowen Li：Smart Nation TRANS Lab, Nanyang Technological University, Singapore
+- Mou Wang：Institute of Acoustics, Chinese Academy of Sciences, China
+- Zhengding Luo：Smart Nation TRANS Lab, Nanyang Technological University, Singapore
+- Ee\-Leng Tan：Smart Nation TRANS Lab, Nanyang Technological University, Singapore
+- Ziyi Yang：Smart Nation TRANS Lab, Nanyang Technological University, Singapore
+- Woon\-Seng Gan：Smart Nation TRANS Lab, Nanyang Technological University, Singapore
 
 📌 **核心摘要**
 
@@ -590,8 +590,8 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 👥 **作者与机构**
 
-- Taishi Nakashima：机构信息未能从会议 PDF 纯文本可靠映射
-- Nobutaka Ono：机构信息未能从会议 PDF 纯文本可靠映射
+- Taishi Nakashima：Tokyo Metropolitan University, Tokyo, Japan
+- Nobutaka Ono：Tokyo Metropolitan University, Tokyo, Japan
 
 📌 **核心摘要**
 
@@ -660,10 +660,10 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 👥 **作者与机构**
 
-- Michael Cacioli：机构信息未能从会议 PDF 纯文本可靠映射
-- Liam Eggleston：机构信息未能从会议 PDF 纯文本可靠映射
-- Jatin Sarabu：机构信息未能从会议 PDF 纯文本可靠映射
-- Kevin Zhu：机构信息未能从会议 PDF 纯文本可靠映射
+- Michael Cacioli：Gilmour Academy；Algoverse AI Research
+- Liam Eggleston：Algoverse AI Research
+- Jatin Sarabu：Algoverse AI Research
+- Kevin Zhu：Algoverse AI Research
 
 📌 **核心摘要**
 

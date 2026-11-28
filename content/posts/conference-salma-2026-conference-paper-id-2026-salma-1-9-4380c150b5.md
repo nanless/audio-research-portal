@@ -25,9 +25,9 @@ paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "本文以输出侧逐码本消融追问韵律在神经音频编码器中的因果归属，发现少数重建关键码本之外存在跨噪声稳定的音高贡献层级并在三编码器复现，代价是干预偏离训练流形且仅以 STOI 划分混杂而无人工听测。"
 paper_digest_reader_sections: [{"heading":"可解码不等于必需：韵律在残差码本中的因果归属为何悬而未决","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"从波形到三路重建：输出侧消融如何隔离单个码本的因果贡献","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"冻结三编码器与三通道度量：消融方式、阈值与统计门限","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"Mimi 的双层结构：单个重建关键码本与必要性特异性分离","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"受限集音高层级在加性噪声下的稳定性与剂量响应","index":5,"kind":"result","roleLabel":"主实验验证"},{"heading":"弥散式混杂的对照：SpeechTokenizer 的四码本关键集与小受限集稳定","index":6,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"无语义蒸馏仍现单点混杂：EnCodec 的泛化与最干净分离","index":7,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"假设边界、复现前提与工程选型：何时可以借用受限集层级","index":8,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Nikunj Gupta"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Shreshth Rai"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Kartik Sharma"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Dinesh K Vishwakarma"}]
+paper_digest_authors: [{"affiliations":["Artificial Intelligence and Machine Learning Society"],"name":"Nikunj Gupta"},{"affiliations":["Artificial Intelligence and Machine Learning Society"],"name":"Shreshth Rai"},{"affiliations":["Artificial Intelligence and Machine Learning Society"],"name":"Kartik Sharma"},{"affiliations":["Artificial Intelligence and Machine Learning Society"],"name":"Dinesh K Vishwakarma"}]
 paper_digest_abstract_sha256: "4846b375a672749dd6e1b4b1d6448b3714ec4be80ded0bad7dc4aa89ed7b5858"
-paper_digest_sidecars: {"citation.bib":{"sha256":"ee7823c9bc3a3fefecc9b86753df1d8b9de92b5a225cbac13f2d0559ef55d5cc","url":"/audio-research-portal/client/papers/2026-11-27/conference-4380c150b52b747f758fce96/citation.bib"},"citation.json":{"sha256":"6aae73a3c78b1a6ad9ba04400b081eef464b9861ac1a73b85acdf2dac496a1db","url":"/audio-research-portal/client/papers/2026-11-27/conference-4380c150b52b747f758fce96/citation.json"},"citation.ris":{"sha256":"1888279d8de72b4af98b4109873951a55395b41f35493adc65ff6e074d0f97aa","url":"/audio-research-portal/client/papers/2026-11-27/conference-4380c150b52b747f758fce96/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"048dac475731b66cd29fed4317cdac74c600ddf5d412c1f3f63c37c9458a42fb","url":"/audio-research-portal/client/papers/2026-11-27/conference-4380c150b52b747f758fce96/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"ee7823c9bc3a3fefecc9b86753df1d8b9de92b5a225cbac13f2d0559ef55d5cc","url":"/audio-research-portal/client/papers/2026-11-27/conference-4380c150b52b747f758fce96/citation.bib"},"citation.json":{"sha256":"c54efaea7441e7d0ebc12d7181e1e93c49cd8ed50665e7286a1331407f2e8268","url":"/audio-research-portal/client/papers/2026-11-27/conference-4380c150b52b747f758fce96/citation.json"},"citation.ris":{"sha256":"1888279d8de72b4af98b4109873951a55395b41f35493adc65ff6e074d0f97aa","url":"/audio-research-portal/client/papers/2026-11-27/conference-4380c150b52b747f758fce96/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"debff84da11c2b81e1ae1dc7a1295169158b86398cadce57140cd59c3a8c4564","url":"/audio-research-portal/client/papers/2026-11-27/conference-4380c150b52b747f758fce96/rethink-context.json"}}
 paper_digest_paper_id: "conference:salma:2026:conference-paper-id:2026.salma-1.9"
 paper_digest_source_kind: conference
 paper_digest_conference_id: "salma-2026"
@@ -101,10 +101,10 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 ## 👥 作者与机构
 
-- Nikunj Gupta：机构信息未能从会议 PDF 纯文本可靠映射
-- Shreshth Rai：机构信息未能从会议 PDF 纯文本可靠映射
-- Kartik Sharma：机构信息未能从会议 PDF 纯文本可靠映射
-- Dinesh K Vishwakarma：机构信息未能从会议 PDF 纯文本可靠映射
+- Nikunj Gupta：Artificial Intelligence and Machine Learning Society
+- Shreshth Rai：Artificial Intelligence and Machine Learning Society
+- Kartik Sharma：Artificial Intelligence and Machine Learning Society
+- Dinesh K Vishwakarma：Artificial Intelligence and Machine Learning Society
 
 ## 📌 核心摘要
 

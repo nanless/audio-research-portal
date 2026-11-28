@@ -25,9 +25,9 @@ paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "方法研究"
 paper_digest_one_sentence: "针对半监督下跨城市跨时间的声场景分类，本文以轻量残差深度可分离卷积加门控循环单元与城市时间门控融合构建 MobileASCNet，在开发集上以 0.37 M 参数达到 97.5% 准确率，但结论仅限开发集单点报告且预训练与混合增强未带来增益。"
 paper_digest_reader_sections: [{"heading":"标注稀缺与城市时间变化下的声场景分类为何困难","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"MobileASCNet 如何组织声学分支与上下文分支","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"残差深度可分离卷积与门控融合怎样处理时空信息","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"三阶段半监督流程如何使用有标签与伪标签数据","index":4,"kind":"training","roleLabel":"训练与优化"},{"heading":"开发集上准确率与参数量的比较揭示了什么权衡","index":5,"kind":"result","roleLabel":"主实验验证"},{"heading":"结论成立的边界与复现选型建议","index":6,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Haowen Li"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Mou Wang"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Zhengding Luo"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Ee-Leng Tan"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Ziyi Yang"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Woon-Seng Gan"}]
+paper_digest_authors: [{"affiliations":["Smart Nation TRANS Lab, Nanyang Technological University, Singapore"],"name":"Haowen Li"},{"affiliations":["Institute of Acoustics, Chinese Academy of Sciences, China"],"name":"Mou Wang"},{"affiliations":["Smart Nation TRANS Lab, Nanyang Technological University, Singapore"],"name":"Zhengding Luo"},{"affiliations":["Smart Nation TRANS Lab, Nanyang Technological University, Singapore"],"name":"Ee-Leng Tan"},{"affiliations":["Smart Nation TRANS Lab, Nanyang Technological University, Singapore"],"name":"Ziyi Yang"},{"affiliations":["Smart Nation TRANS Lab, Nanyang Technological University, Singapore"],"name":"Woon-Seng Gan"}]
 paper_digest_abstract_sha256: null
-paper_digest_sidecars: {"citation.bib":{"sha256":"d306ad6df103b566fab6b5af2f1820969741f12f61ccad886c11906315c812c1","url":"/audio-research-portal/client/papers/2026-11-28/conference-9cac257d73e761b04bd45c42/citation.bib"},"citation.json":{"sha256":"2ef882dcb9cc378af2d710291922b430097d890e334f07e55cb605bac40c3748","url":"/audio-research-portal/client/papers/2026-11-28/conference-9cac257d73e761b04bd45c42/citation.json"},"citation.ris":{"sha256":"a586b26a0bc17a850287a45498b60d44b7eef38f8726e5680884c46f765d05a4","url":"/audio-research-portal/client/papers/2026-11-28/conference-9cac257d73e761b04bd45c42/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"c13cd09523dbaca1e1f503a3b8629cab7cec2c47c96672cfcfca6bb920cc9f50","url":"/audio-research-portal/client/papers/2026-11-28/conference-9cac257d73e761b04bd45c42/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"d306ad6df103b566fab6b5af2f1820969741f12f61ccad886c11906315c812c1","url":"/audio-research-portal/client/papers/2026-11-28/conference-9cac257d73e761b04bd45c42/citation.bib"},"citation.json":{"sha256":"8da1d04b3a2b720f7cb9a99a9140a5b8646a3556bd02906e16bb1acc7df9db39","url":"/audio-research-portal/client/papers/2026-11-28/conference-9cac257d73e761b04bd45c42/citation.json"},"citation.ris":{"sha256":"a586b26a0bc17a850287a45498b60d44b7eef38f8726e5680884c46f765d05a4","url":"/audio-research-portal/client/papers/2026-11-28/conference-9cac257d73e761b04bd45c42/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"5d105a8ec41c0f9104d7690aa067fc4808c39acea08e25599580c10c93a63744","url":"/audio-research-portal/client/papers/2026-11-28/conference-9cac257d73e761b04bd45c42/rethink-context.json"}}
 paper_digest_paper_id: "conference:audio-aaai:2026:conference-paper-id:li26a"
 paper_digest_source_kind: conference
 paper_digest_conference_id: "audio-aaai-2026"
@@ -96,12 +96,12 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 ## 👥 作者与机构
 
-- Haowen Li：机构信息未能从会议 PDF 纯文本可靠映射
-- Mou Wang：机构信息未能从会议 PDF 纯文本可靠映射
-- Zhengding Luo：机构信息未能从会议 PDF 纯文本可靠映射
-- Ee-Leng Tan：机构信息未能从会议 PDF 纯文本可靠映射
-- Ziyi Yang：机构信息未能从会议 PDF 纯文本可靠映射
-- Woon-Seng Gan：机构信息未能从会议 PDF 纯文本可靠映射
+- Haowen Li：Smart Nation TRANS Lab, Nanyang Technological University, Singapore
+- Mou Wang：Institute of Acoustics, Chinese Academy of Sciences, China
+- Zhengding Luo：Smart Nation TRANS Lab, Nanyang Technological University, Singapore
+- Ee-Leng Tan：Smart Nation TRANS Lab, Nanyang Technological University, Singapore
+- Ziyi Yang：Smart Nation TRANS Lab, Nanyang Technological University, Singapore
+- Woon-Seng Gan：Smart Nation TRANS Lab, Nanyang Technological University, Singapore
 
 ## 📌 核心摘要
 
@@ -127,7 +127,7 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 已有深度方法的准确率主要靠大型卷积神经网络拉动，但其计算与存储开销难以放入手机、可穿戴设备与嵌入式声音传感器。更棘手的是域偏移，当录音来自未见过的城市、时间段或采集设备时，性能常明显下滑。轻量化与跨域稳健因此构成一对现实矛盾，单纯压缩参数容易损失对新环境的适应能力，而一味增大模型又无法部署。
 
-本文面向的 APSIPA ASC 2025 挑战把这一矛盾推向更贴近现实的设定。官方采用中国声场景 (CAS) 2023 个数据集，每段音频长 10 秒，均附带城市级位置与时间戳，覆盖中国 22 个城市与多个时段，共定义 10 个场景类别。训练采用半监督协议，开发数据中仅约 4.8 小时带标签，另有约 19.3 小时无标签，总计约 24.1 小时，模型须同时应对标签稀缺、空间时间变化与域偏移。
+本文面向的 APSIPA ASC 2025 挑战把这一矛盾推向更贴近现实的设定。官方采用中国声场景 (CAS) 2023 数据集，每段音频长 10 秒，均附带城市级位置与时间戳，覆盖中国 22 个城市与多个时段，共定义 10 个场景类别。训练采用半监督协议，开发数据中仅约 4.8 小时带标签，另有约 19.3 小时无标签，总计约 24.1 小时，模型须同时应对标签稀缺、空间时间变化与域偏移。
 
 此前主流路线包括设计紧凑结构、知识蒸馏与模型集成。紧凑模型如 CP-Mobile 及其变体以更少参数保持可比性能，蒸馏路线用 PaSST 与 CP-ResNet 等集成教师模型在输出层与中间特征层指导学生模型，也有不依赖蒸馏的卷积神经网络与门控循环单元组合在 DCASE 2025 任务一中满足复杂度约束。本文切入点是结构与训练策略本身，重点检验在不依赖蒸馏时，声学主干与城市时间嵌入如何组合才能在严格参数预算下保持跨城市跨时间的泛化。
 

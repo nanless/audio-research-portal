@@ -168,7 +168,7 @@ paper_digest_conference_structure: pdf-visual-quote-evidence-v1
 
 | 系统 | AMI 混淆误差 | VoxConverse 混淆误差 | DIHARD III 混淆误差 | 语音条件 | 相对改善 |
 | --- | --- | --- | --- | --- | --- |
-| ECAPA2 个基线 | 1.3 | 2.2 | 4.7 | oracle VAD | 参考 |
+| ECAPA2 基线 | 1.3 | 2.2 | 4.7 | oracle VAD | 参考 |
 | ECAPA2 加多说话人微调 | 1.2 | 1.9 | 4.0 | oracle VAD | 13.7% |
 
 上表显示新策略在 3 个基准的混淆误差上都低于基线，DIHARD III 从 4.7 降到 4.0，VoxConverse 从 2.2 降到 1.9，AMI 从 1.3 降到 1.2。论文报告平均相对改善 13.7%，这是对混淆误差而言，不是总日志误差。代价有三处，一是语音活动误差在表中未变，因为语音模块冻结且沿用前作，二是不建模重叠语音，在重叠多的基准上天然吃亏，三是人数上限为 2，密集多人场景仍依赖聚类纠错。

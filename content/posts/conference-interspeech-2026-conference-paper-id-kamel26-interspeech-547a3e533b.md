@@ -152,7 +152,7 @@ paper_digest_conference_structure: pdf-visual-quote-evidence-v1
 
 ### 用什么数据、打哪些系统、按什么条件比？
 
-数据与协议按原文交代。评测用 ASVspoof 2019 LA 与 LibriSpeech 2 个数据集，LibriSpeech 侧用 Fish Speech 合成 40 个说话人的语音；反欺骗侧打 RawNet2、RawGAT-ST 与 RawPC-Darts3 个对策；验证侧打 X-Vectors、DeepSpeaker 与微软 Azure 说话人验证接口；实验机为 NVIDIA T4。
+数据与协议按原文交代。评测用 ASVspoof 2019 LA 与 LibriSpeech 2 数据集，LibriSpeech 侧用 Fish Speech 合成 40 个说话人的语音；反欺骗侧打 RawNet2、RawGAT-ST 与 RawPC-Darts3 个对策；验证侧打 X-Vectors、DeepSpeaker 与微软 Azure 说话人验证接口；实验机为 NVIDIA T4。
 
 评测分四块：端到端联合管线在 ASVspoof 上做 150 轮、在 LibriSpeech 上做 40 说话人合成；独立组件基准在 13 种攻击类型共 650 条上测检测器，并在说话人验证、开集辨认与闭集辨认任务上测验证器；鲁棒性做空中播放与经 VoIP 线路传输的信道仿真；消融对比掩蔽、插值与混合 3 种扰动。指标以攻击成功率为主，方向是越高表示攻击越强，同时报告召回、F1 与等误率作为系统侧行为参考，但比较攻击强弱时应以成功率与原文可运行基线为准。
 

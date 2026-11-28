@@ -207,16 +207,11 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 | # | Feature name | Definition (A−B) | References |
 | --- | --- | --- | --- |
-| 30 | pitch_mean_diff | Mean fundamental frequency dif- | Vukovic et al. (2021); Schuller et al. (2013) |
-|  |  | ference (Hz): ¯f0A −¯f0B |  |
-| 31 | pitch_std_diff | F0 standard deviation difference | Yang et al. (2023) |
-| (Hz) |  |  |  |
-| 32 | pitch_range_diff | F0 range (max−min) difference | Schuller et al. (2013) |
-| (Hz) |  |  |  |
-| 33 | voiced_segments_per_min_diff | Voiced segment rate difference | Vinciarelli et al. (2009) |
-| (segments/min) |  |  |  |
-| 34 | voiced_duration_diff | Total voiced duration difference | Vukovic et al. (2021) |
-| (s) |  |  |  |
+| 30 | pitch_mean_diff | Mean fundamental frequency difference (Hz): ¯f0A − ¯f0B | Vukovic et al. (2021); Schuller et al. (2013) |
+| 31 | pitch_std_diff | F0 standard deviation difference (Hz) | Yang et al. (2023) |
+| 32 | pitch_range_diff | F0 range (max−min) difference (Hz) | Schuller et al. (2013) |
+| 33 | voiced_segments_per_min_diff | Voiced segment rate difference (segments/min) | Vinciarelli et al. (2009) |
+| 34 | voiced_duration_diff | Total voiced duration difference (s) | Vukovic et al. (2021) |
 
 原表显示 30 号为基频均值差，31 号为基频标准差，32 号为基频极差，单位均为赫兹，33 号为每分钟浊音段数差，34 号为浊音总时长差，基频经 pYIN 在语音活动检测标出的浊音帧上提取。绝对能量与频谱质心及带宽因自动增益与压缩不可靠被舍去，这解释了声学信号为何微弱。缺失的消融包括未对比语言与视觉信号、未试非线性动力学、未预测个人级负荷，斜率单变量的负结果也提醒轨迹形状不能简化为单一趋势数。
 

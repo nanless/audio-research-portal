@@ -163,7 +163,7 @@ P2PSynCodec 由编码器、普通到伪协同向量量化器与解码器三部�
 
 ### 数据、基线与指标在什么条件下可比？
 
-实验在 LibriTTS 与 VCTK 2 个数据集上进行。LibriTTS 为 16 kHz，训练用 train-clean-100 与 train-clean-360 子集，验证与评估分别用 dev-clean 与 test-clean 子集。VCTK 为 48 kHz，训练集 40936 条，测试集 2937 条。P2PSynCodec 采用 3 个伪量化，所有码本大小均为一千零二十四，码向量维度 32，每个伪量化中 Conformer 块为 256 通道八注意力头，双向长短期记忆层 256 通道，下采样率 320，因此码率为 16 kHz 兹 0.51000 比特与 48 kHz 兹 1.51000 比特。
+实验在 LibriTTS 与 VCTK 2 数据集上进行。LibriTTS 为 16 kHz，训练用 train-clean-100 与 train-clean-360 子集，验证与评估分别用 dev-clean 与 test-clean 子集。VCTK 为 48 kHz，训练集 40936 条，测试集 2937 条。P2PSynCodec 采用 3 个伪量化，所有码本大小均为一千零二十四，码向量维度 32，每个伪量化中 Conformer 块为 256 通道八注意力头，双向长短期记忆层 256 通道，下采样率 320，因此码率为 16 kHz 兹 0.51000 比特与 48 kHz 兹 1.51000 比特。
 
 基线包括基于残差的 MDCTCodec 与 DAC、基于单向量量化的 BigCodec 与 WavTokenizer、基于有限标量量化的 SQCodec。等超低码率对照时所有基线匹配相同目标码率，总体下采样因子三百二十，步幅因子为二、四、五、八，单码本大小一千零二十四，16 kHz 每秒五十令牌对应 0.51000 比特，48 kHz 每秒一百五十令牌对应 1.51000 比特，SQCodec 因官方发布不支持该设置而被排除。
 

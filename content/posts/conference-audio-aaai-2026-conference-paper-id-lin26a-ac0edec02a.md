@@ -25,9 +25,9 @@ paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "AudioRAG 针对大音频语言模型难以结合音频线索与外部时效知识完成多跳问答的问题，构建 500 题基准并提出文本推理加双工具调用的智能体流程，在精简表显示范围内以 46.2% 准确率领先，但以无效回答增多与更大参数及联网权限为代价。"
 paper_digest_reader_sections: [{"heading":"已有音频评测为何难以检验外部知识检索能力","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"数据构建与智能体流程的全景结构","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"思考调用回答循环如何拆解多跳问题","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"准确率评测协议与主结果对比","index":4,"kind":"result","roleLabel":"主实验验证"},{"heading":"四类错误分布揭示的收益与新增代价","index":5,"kind":"ablation","roleLabel":"消融与诊断"},{"heading":"假设边界复现前提与工程选型建议","index":6,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Jingru Lin"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Chen Zhang"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Tianrui Wang"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Haizhou Li"}]
+paper_digest_authors: [{"affiliations":["Department of Electrical and Computer Engineering, National University of Singapore, Singapore"],"name":"Jingru Lin"},{"affiliations":["Department of Electrical and Computer Engineering, National University of Singapore, Singapore"],"name":"Chen Zhang"},{"affiliations":["College of Intelligence and Computing, Tianjin University, China"],"name":"Tianrui Wang"},{"affiliations":["Department of Electrical and Computer Engineering, National University of Singapore, Singapore","SRIBD, School of Data Science, The Chinese University of Hong Kong, Shenzhen, Guangdong"],"name":"Haizhou Li"}]
 paper_digest_abstract_sha256: null
-paper_digest_sidecars: {"citation.bib":{"sha256":"d2538010f806d75d9ce4db58d6458e7307f268f25b460d0abaf6dce5b3106df0","url":"/audio-research-portal/client/papers/2026-11-28/conference-ac0edec02aa72af474e2954b/citation.bib"},"citation.json":{"sha256":"365c3aab26c2216f0b0fe4f8124bcafabbc5ede566bb6745cc0d4d881ff2b201","url":"/audio-research-portal/client/papers/2026-11-28/conference-ac0edec02aa72af474e2954b/citation.json"},"citation.ris":{"sha256":"dda45c1da6ff744046aeb114c3043d4c09419545cb708f3c61cf436113dcfcd3","url":"/audio-research-portal/client/papers/2026-11-28/conference-ac0edec02aa72af474e2954b/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"28d00b6189f3f37fb1da26fe85ab580d29b7ba2c4112b3cd3295fe1ef0b99089","url":"/audio-research-portal/client/papers/2026-11-28/conference-ac0edec02aa72af474e2954b/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"d2538010f806d75d9ce4db58d6458e7307f268f25b460d0abaf6dce5b3106df0","url":"/audio-research-portal/client/papers/2026-11-28/conference-ac0edec02aa72af474e2954b/citation.bib"},"citation.json":{"sha256":"884999993318169f14e490f9c6f14c5e9e5179e149f516bac1ae7d5e40bd520c","url":"/audio-research-portal/client/papers/2026-11-28/conference-ac0edec02aa72af474e2954b/citation.json"},"citation.ris":{"sha256":"dda45c1da6ff744046aeb114c3043d4c09419545cb708f3c61cf436113dcfcd3","url":"/audio-research-portal/client/papers/2026-11-28/conference-ac0edec02aa72af474e2954b/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"dd6fe90e450e4a76eb26088a6999b7e23dc2d6731bf923043518fc1742ddb103","url":"/audio-research-portal/client/papers/2026-11-28/conference-ac0edec02aa72af474e2954b/rethink-context.json"}}
 paper_digest_paper_id: "conference:audio-aaai:2026:conference-paper-id:lin26a"
 paper_digest_source_kind: conference
 paper_digest_conference_id: "audio-aaai-2026"
@@ -102,10 +102,10 @@ paper_digest_publication_view_article_sha256: "6d9c3113139d32b9fa3e8b3b42767f2f3
 
 ## 👥 作者与机构
 
-- Jingru Lin：机构信息未能从会议 PDF 纯文本可靠映射
-- Chen Zhang：机构信息未能从会议 PDF 纯文本可靠映射
-- Tianrui Wang：机构信息未能从会议 PDF 纯文本可靠映射
-- Haizhou Li：机构信息未能从会议 PDF 纯文本可靠映射
+- Jingru Lin：Department of Electrical and Computer Engineering, National University of Singapore, Singapore
+- Chen Zhang：Department of Electrical and Computer Engineering, National University of Singapore, Singapore
+- Tianrui Wang：College of Intelligence and Computing, Tianjin University, China
+- Haizhou Li：Department of Electrical and Computer Engineering, National University of Singapore, Singapore；SRIBD, School of Data Science, The Chinese University of Hong Kong, Shenzhen, Guangdong
 
 ## 📌 核心摘要
 

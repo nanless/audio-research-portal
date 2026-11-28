@@ -42,7 +42,7 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 - **⚡ 速览参考（7.0 分以下）**（续）：[真实家庭录音如何支撑声音事件检测基准](/posts/conference-dcase-2026-conference-paper-id-dcase2026-40-a1011fecec/)（6.8 分）、[从 4 通道音频到带标签声学图：SAID 如何同时预测声源区域、能量与类…](/posts/conference-dcase-2026-conference-paper-id-dcase2026-46-c4a80ddcc1/)（6.8 分）、[跨时间尺度与多粒度对齐的音频时刻检索及免训练显著性复用](/posts/conference-dcase-2026-conference-paper-id-dcase2026-58-2672c4ffa9/)（6.8 分）
 - **⚡ 速览参考（7.0 分以下）**（续）：[双通道近端与远端观测如何支撑噪声感知首发异常声音检测](/posts/conference-dcase-2026-conference-paper-id-dcase2026-63-0ef019767e/)（6.8 分）、[面向微控制器的非对称教师池蒸馏鸟鸣识别](/posts/conference-dcase-2026-conference-paper-id-dcase2026-93-87d03cd521/)（6.8 分）、[淹没在噪声中：海洋声学自监督学习里的信号显著性](/posts/conference-dcase-2026-conference-paper-id-dcase2026-15-a052d7eaa8/)（6.7 分）
 - **⚡ 速览参考（7.0 分以下）**（续）：[合成验证掩盖真实崩溃的半监督声音事件检测静默失效诊断](/posts/conference-dcase-2026-conference-paper-id-dcase2026-34-920b351662/)（6.7 分）、[先覆盖再柔和分歧：低预算帧级音频分类主动学习重审](/posts/conference-dcase-2026-conference-paper-id-dcase2026-43-0c842056d1/)（6.7 分）、[听而非读：为音频依赖问答修复思维链数据](/posts/conference-dcase-2026-conference-paper-id-dcase2026-57-c1db848cc7/)（6.7 分）
-- **⚡ 速览参考（7.0 分以下）**（续）：[运动声源的方向变化如何被听见并被语言描述](/posts/conference-dcase-2026-conference-paper-id-dcase2026-6-9067618b1d/)（6.7 分）、[合唱饱和下的鸟群计数：BioDCASE 2026 鸟舍声学数量估计解读](/posts/conference-dcase-2026-conference-paper-id-dcase2026-62-f7de0440d8/)（6.7 分）、[长音频时刻检索：DCASE 2026 个任务 6 综述与基线分析](/posts/conference-dcase-2026-conference-paper-id-dcase2026-72-a5f9d41060/)（6.7 分）
+- **⚡ 速览参考（7.0 分以下）**（续）：[运动声源的方向变化如何被听见并被语言描述](/posts/conference-dcase-2026-conference-paper-id-dcase2026-6-9067618b1d/)（6.7 分）、[合唱饱和下的鸟群计数：BioDCASE 2026 鸟舍声学数量估计解读](/posts/conference-dcase-2026-conference-paper-id-dcase2026-62-f7de0440d8/)（6.7 分）、[长音频时刻检索：DCASE 2026 任务 6 综述与基线分析](/posts/conference-dcase-2026-conference-paper-id-dcase2026-72-a5f9d41060/)（6.7 分）
 - **⚡ 速览参考（7.0 分以下）**（续）：[推理监督与推理时低秩缩放如何影响音频相关问答](/posts/conference-dcase-2026-conference-paper-id-dcase2026-92-05d7943b57/)（6.7 分 💻）、[异构音频分类在宽泛体系下如何平衡数据噪声与模态增益](/posts/conference-dcase-2026-conference-paper-id-dcase2026-10-53654d1c9a/)（6.6 分）、[空间场景语义分割如何同时检出类别并分离同类重叠声](/posts/conference-dcase-2026-conference-paper-id-dcase2026-18-2fe653cba4/)（6.6 分）
 - **⚡ 速览参考（7.0 分以下）**（续）：[无域标签下连续学会三域同类声音：DCASE 2026 增量分类任务解读](/posts/conference-dcase-2026-conference-paper-id-dcase2026-44-1bcc33cf3b/)（6.6 分）、[多阶段分离计数分类与精修实现空间语义分割](/posts/conference-dcase-2026-conference-paper-id-dcase2026-7-903a7f3e3e/)（6.6 分）、[按难度分配容量的域增量音频分类：非对称残差适配器解读](/posts/conference-dcase-2026-conference-paper-id-dcase2026-77-c9dcabbc31/)（6.6 分）
 - **⚡ 速览参考（7.0 分以下）**（续）：[峰值感知代价体如何估计双通道生物声学的时变延迟轨迹](/posts/conference-dcase-2026-conference-paper-id-dcase2026-87-804e4a1af2/)（6.6 分）、[文本元数据与软伪标签如何改进宽类别声音分类](/posts/conference-dcase-2026-conference-paper-id-dcase2026-33-8752aa1cfc/)（6.5 分）、[重叠鸣叫密度回归如何从严重重叠录音中估计鸟类种群数量](/posts/conference-dcase-2026-conference-paper-id-dcase2026-64-dbb99084b7/)（6.5 分）
@@ -202,7 +202,7 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 | 16 | [Listen, Don’t Read: Repairing Chain\-of\-Thought Data for the DCASE 2026 Audio\-Dependent QA Task](/posts/conference-dcase-2026-conference-paper-id-dcase2026-57-c1db848cc7/) | [听而非读：为音频依赖问答修复思维链数据](/posts/conference-dcase-2026-conference-paper-id-dcase2026-57-c1db848cc7/) | 6.7 | 前50% | 方法研究 | [#音频问答](/audio-research-portal/papers/?concept=task.audio-question-answering) | - |
 | 17 | [Moving\-CLAP: Spatially Aware Audio–Language Embeddings for Moving Sound Sources](/posts/conference-dcase-2026-conference-paper-id-dcase2026-6-9067618b1d/) | [运动声源的方向变化如何被听见并被语言描述](/posts/conference-dcase-2026-conference-paper-id-dcase2026-6-9067618b1d/) | 6.7 | 前50% | 方法研究 | [#音频检索](/audio-research-portal/papers/?concept=task.audio-retrieval) | - |
 | 18 | [Overview of the BioDCASE 2026 Challenge on Bird Population Counting from Passive Acoustic Recordings](/posts/conference-dcase-2026-conference-paper-id-dcase2026-62-f7de0440d8/) | [合唱饱和下的鸟群计数：BioDCASE 2026 鸟舍声学数量估计解读](/posts/conference-dcase-2026-conference-paper-id-dcase2026-62-f7de0440d8/) | 6.7 | 前50% | 数据集与基准 | [#生态物种识别与分布预测](/audio-research-portal/papers/?concept=task.ecological-species-prediction) | - |
-| 19 | [Overview and Meta\-Analysis of DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio](/posts/conference-dcase-2026-conference-paper-id-dcase2026-72-a5f9d41060/) | [长音频时刻检索：DCASE 2026 个任务 6 综述与基线分析](/posts/conference-dcase-2026-conference-paper-id-dcase2026-72-a5f9d41060/) | 6.7 | 前50% | 数据集与基准 | [#音频时间定位](/audio-research-portal/papers/?concept=task.temporal-grounding) | - |
+| 19 | [Overview and Meta\-Analysis of DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio](/posts/conference-dcase-2026-conference-paper-id-dcase2026-72-a5f9d41060/) | [长音频时刻检索：DCASE 2026 任务 6 综述与基线分析](/posts/conference-dcase-2026-conference-paper-id-dcase2026-72-a5f9d41060/) | 6.7 | 前50% | 数据集与基准 | [#音频时间定位](/audio-research-portal/papers/?concept=task.temporal-grounding) | - |
 | 20 | [Reasoning\-Oriented Post\-Training and Inference\-Time LoRA Rescaling for Audio\-Dependent Question Answering](/posts/conference-dcase-2026-conference-paper-id-dcase2026-92-05d7943b57/) | [推理监督与推理时低秩缩放如何影响音频相关问答](/posts/conference-dcase-2026-conference-paper-id-dcase2026-92-05d7943b57/) | 6.7 | 前50% | 方法研究 | [#音频问答](/audio-research-portal/papers/?concept=task.audio-question-answering) | 💻 |
 | 21 | [Description and discussion on DCASE 2026 Task 1: Heterogeneous Audio Classification](/posts/conference-dcase-2026-conference-paper-id-dcase2026-10-53654d1c9a/) | [异构音频分类在宽泛体系下如何平衡数据噪声与模态增益](/posts/conference-dcase-2026-conference-paper-id-dcase2026-10-53654d1c9a/) | 6.6 | 前50% | 数据集与基准 | [#音频分类](/audio-research-portal/papers/?concept=task.audio-classification) | - |
 | 22 | [Description and Discussion on DCASE 2026 Challenge Task 4: Spatial Semantic Segmentation of Sound Scenes](/posts/conference-dcase-2026-conference-paper-id-dcase2026-18-2fe653cba4/) | [空间场景语义分割如何同时检出类别并分离同类重叠声](/posts/conference-dcase-2026-conference-paper-id-dcase2026-18-2fe653cba4/) | 6.6 | 前50% | 数据集与基准 | [#音频分离](/audio-research-portal/papers/?concept=task.audio-separation) | - |
@@ -633,8 +633,8 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 👥 **作者与机构**
 
-- Govinda Madhava：机构信息未能从会议 PDF 纯文本可靠映射
-- Alexander Lerch：机构信息未能从会议 PDF 纯文本可靠映射
+- Govinda Madhava：Music Informatics Group, Georgia Institute of Technology
+- Alexander Lerch：Music Informatics Group, Georgia Institute of Technology
 
 📌 **核心摘要**
 
@@ -1511,7 +1511,7 @@ paper_digest_tags_scope: "aggregate-primary-task-counts"
 
 ---
 
-### 19. [长音频时刻检索：DCASE 2026 个任务 6 综述与基线分析](/posts/conference-dcase-2026-conference-paper-id-dcase2026-72-a5f9d41060/)
+### 19. [长音频时刻检索：DCASE 2026 任务 6 综述与基线分析](/posts/conference-dcase-2026-conference-paper-id-dcase2026-72-a5f9d41060/)
 
 > 英文题目：*[Overview and Meta\-Analysis of DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio](/posts/conference-dcase-2026-conference-paper-id-dcase2026-72-a5f9d41060/)*
 

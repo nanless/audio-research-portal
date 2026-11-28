@@ -122,7 +122,7 @@ Dual-LoRA 的设计可以概括为两条原则。第一是冻结预训练主干�
 
 下图是全文的方法总览，左侧是每层的双路低秩注入细节，中间是冻结主干的多层堆叠，右侧是共享判别器与说话人分类器的损失出口。阅读时先看主路径，再看两条并行支路在哪里分叉、在哪里汇合，有助于理解因子化适配与锚定对抗的配合位置，图中各模块的箭头方向与损失归属是核对实现的关键依据。
 
-> **看图路径：** 1. 先从顶部波形进入冻结主干的 Layer 1 到 Layer N 再到统计池化的纵向主路径走一遍；2. 再对比左侧细节框中 Pass 1 个语言 LoRA 与 Pass 2 说话人 LoRA 经任务开关如何与冻结 W0 相加；3. 最后沿右侧 e_lang 直达共享判别器与 e_spk 经梯度反转层再进同一判别器的两条虚线确认锚定关系
+> **看图路径：** 1. 先从顶部波形进入冻结主干的 Layer 1 到 Layer N 再到统计池化的纵向主路径走一遍；2. 再对比左侧细节框中 Pass 1 语言 LoRA 与 Pass 2 说话人 LoRA 经任务开关如何与冻结 W0 相加；3. 最后沿右侧 e_lang 直达共享判别器与 e_spk 经梯度反转层再进同一判别器的两条虚线确认锚定关系
 
 [![原论文 Figure 1：The overall architecture of Dual-LoRA.](https://raw.githubusercontent.com/nanless/audio-paper-digest-images/main/interspeech-2026/d6c7fc6b7cc7/figure-1.png)](https://raw.githubusercontent.com/nanless/audio-paper-digest-images/main/interspeech-2026/d6c7fc6b7cc7/figure-1.png)
 

@@ -17,13 +17,13 @@ paper_digest_taxonomy_scope: "aggregate-primary-task-counts"
 
 # eacl-2026 论文深度解读
 
-本汇总收录 authenticated plan 选择集内全部 36 篇已完成分析、重标和单篇 staging 的论文。
+本汇总收录已核验计划中全部 36 篇已完成分析、标签分配和单篇页面生成的论文。
 
 🏷️ 标签说明：本期使用新版受控 taxonomy；热门方向只统计主任务。
 
 ## ⚡ 今日概览
 
-✅ authenticated plan 入选 36 篇 → 🔬 深度分析、Reader 与页面投影完成
+计划入选的 36 篇论文已完成深度分析、读者文章和单篇页面生成。
 
 ### 🏷️ 热门方向
 

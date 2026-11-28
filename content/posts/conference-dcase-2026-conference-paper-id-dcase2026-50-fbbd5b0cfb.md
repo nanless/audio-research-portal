@@ -25,9 +25,9 @@ paper_digest_rank_bucket: "前50%"
 paper_digest_document_type: "数据集与基准"
 paper_digest_one_sentence: "F1Audio 把分开发布的车载引擎音频与车辆遥测对齐到 50 ms 网格并发布约 266 小时的 PaSST 特征，用线性探针与多层感知机证明声音可以恢复转速与车速，而挡位与油门仍困难且 5 秒以上上下文收益趋平。"
 paper_digest_reader_sections: [{"heading":"赛车引擎声为何难以直接换算成车速与挡位","index":1,"kind":"problem","roleLabel":"问题与瓶颈"},{"heading":"从转播流到特征库的总体流程","index":2,"kind":"method_overview","roleLabel":"方法全景"},{"heading":"50 毫秒网格与 1,295 维嵌入的生成细节","index":3,"kind":"component","roleLabel":"核心机制"},{"heading":"探针与感知机如何吃进特征并被评价","index":4,"kind":"training","roleLabel":"训练与优化"},{"heading":"拉长上下文后哪些目标真正变好","index":5,"kind":"result","roleLabel":"主实验验证"},{"heading":"只发特征与按赛道留出的结论边界","index":6,"kind":"limitation","roleLabel":"适用边界"}]
-paper_digest_authors: [{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Govinda Madhava"},{"affiliations":["机构信息未能从会议 PDF 纯文本可靠映射"],"name":"Alexander Lerch"}]
+paper_digest_authors: [{"affiliations":["Music Informatics Group, Georgia Institute of Technology"],"name":"Govinda Madhava"},{"affiliations":["Music Informatics Group, Georgia Institute of Technology"],"name":"Alexander Lerch"}]
 paper_digest_abstract_sha256: null
-paper_digest_sidecars: {"citation.bib":{"sha256":"8083d208c73f001ab9a81501303df71b257287f46c54f1b84a24390521f0bdd5","url":"/audio-research-portal/client/papers/2026-11-27/conference-fbbd5b0cfbde29485d1ed355/citation.bib"},"citation.json":{"sha256":"071695d65f2a7373a8a312f71264141a53d42f6a6bbfe858176b646986cfd844","url":"/audio-research-portal/client/papers/2026-11-27/conference-fbbd5b0cfbde29485d1ed355/citation.json"},"citation.ris":{"sha256":"fa521a84d079bb4d866967132c848148157e61b5100a3ecf012c69fabd0e2930","url":"/audio-research-portal/client/papers/2026-11-27/conference-fbbd5b0cfbde29485d1ed355/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"9c486e135b0681c0b46193ab12ca23e568fad004864201920ba455261e829a60","url":"/audio-research-portal/client/papers/2026-11-27/conference-fbbd5b0cfbde29485d1ed355/rethink-context.json"}}
+paper_digest_sidecars: {"citation.bib":{"sha256":"8083d208c73f001ab9a81501303df71b257287f46c54f1b84a24390521f0bdd5","url":"/audio-research-portal/client/papers/2026-11-27/conference-fbbd5b0cfbde29485d1ed355/citation.bib"},"citation.json":{"sha256":"f6736f0505910ee9f51f2b2f30841f152a2708bdeacb186259d3d37b9fce65a4","url":"/audio-research-portal/client/papers/2026-11-27/conference-fbbd5b0cfbde29485d1ed355/citation.json"},"citation.ris":{"sha256":"fa521a84d079bb4d866967132c848148157e61b5100a3ecf012c69fabd0e2930","url":"/audio-research-portal/client/papers/2026-11-27/conference-fbbd5b0cfbde29485d1ed355/citation.ris"},"rethink-context.json":{"contract":"paper-research-context","schemaFingerprint":"5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383","sha256":"d39d09fd780d3afb0d50fe351901c7d7a336d32c0a2f74f845bd1c14a70cb817","url":"/audio-research-portal/client/papers/2026-11-27/conference-fbbd5b0cfbde29485d1ed355/rethink-context.json"}}
 paper_digest_paper_id: "conference:dcase:2026:conference-paper-id:dcase2026-50"
 paper_digest_source_kind: conference
 paper_digest_conference_id: "dcase-2026"
@@ -97,8 +97,8 @@ paper_digest_conference_structure: pdf-visual-tables-v2
 
 ## 👥 作者与机构
 
-- Govinda Madhava：机构信息未能从会议 PDF 纯文本可靠映射
-- Alexander Lerch：机构信息未能从会议 PDF 纯文本可靠映射
+- Govinda Madhava：Music Informatics Group, Georgia Institute of Technology
+- Alexander Lerch：Music Informatics Group, Georgia Institute of Technology
 
 ## 📌 核心摘要
 

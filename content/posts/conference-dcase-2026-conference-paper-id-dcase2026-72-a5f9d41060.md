@@ -10,7 +10,7 @@ paper_digest_pipeline_owned: true
 paper_digest_page_type: paper
 paper_digest_workbench_contract: "researcher-workbench"
 paper_digest_workbench_schema_fingerprint: "1f09b594c317cc38e934de27a5b0e8ceb4baa50ef79bd4f8683dd9adea720fe7"
-paper_digest_reader_title: "长音频时刻检索：DCASE 2026 个任务 6 综述与基线分析"
+paper_digest_reader_title: "长音频时刻检索：DCASE 2026 任务 6 综述与基线分析"
 paper_digest_original_title: "Overview and Meta-Analysis of DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio"
 paper_digest_workbench_source_kind: conference
 paper_digest_workbench_paper_id: "conference:dcase:2026:conference-paper-id:dcase2026-72"
@@ -66,7 +66,7 @@ paper_digest_primary_method: "基准设计"
 paper_digest_conference_structure: pdf-visual-quote-evidence-v1
 ---
 
-# 📄 长音频时刻检索：DCASE 2026 个任务 6 综述与基线分析
+# 📄 长音频时刻检索：DCASE 2026 任务 6 综述与基线分析
 
 > 英文题目：*Overview and Meta-Analysis of DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio*
 
@@ -148,7 +148,7 @@ paper_digest_conference_structure: pdf-visual-quote-evidence-v1
 
 ### MS-CLAP 特征与 DETR 检测网络如何分工
 
-基线特征提取基于预训练 MS-CLAP 2023 个模型，将声音与语言映射至共享跨模态嵌入空间。文本查询由文本编码器输出 768 维序列嵌入，音频录音以 1 秒窗长与 1 秒步长的滑动窗口切分，每帧由音频编码器输出 768 维音频嵌入。由于两种模态已在同一空间对齐，所得嵌入起点即具备声学内容与语言描述的相似性，无需从波形重新学习语义。主办方同时分发全部 3 组数据的预提取音频文本特征，使参赛者无需下载原始音频即可训练与评测，后续检测网络只需在轻量嵌入序列上运行。
+基线特征提取基于预训练 MS-CLAP 2023 模型，将声音与语言映射至共享跨模态嵌入空间。文本查询由文本编码器输出 768 维序列嵌入，音频录音以 1 秒窗长与 1 秒步长的滑动窗口切分，每帧由音频编码器输出 768 维音频嵌入。由于两种模态已在同一空间对齐，所得嵌入起点即具备声学内容与语言描述的相似性，无需从波形重新学习语义。主办方同时分发全部 3 组数据的预提取音频文本特征，使参赛者无需下载原始音频即可训练与评测，后续检测网络只需在轻量嵌入序列上运行。
 
 时刻检测网络改编自视频领域的 QD-DETR ，包含两层变换器编码器与两层解码器，隐层尺寸为 256 ，注意力头为 8 个，前馈尺寸为 1,024 。编码器在查询嵌入条件下对音频嵌入序列建模上下文依赖，解码器以 10 个可学习时刻查询并行预测候选时刻，每个候选由中心、宽度与置信度分数参数化。训练采用预测与参考时刻之间的二分匹配，将无序集合的监督转化为一对一配对问题。推理时全部候选按分数降序排列，首位用于主指标 Recall1@0.7 ，其余仅参与平均精度计算。
 

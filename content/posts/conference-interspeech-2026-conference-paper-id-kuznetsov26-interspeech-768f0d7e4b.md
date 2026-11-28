@@ -175,7 +175,7 @@ FastWave 建立在 NU-Wave 2 之上，原文明确给出 3 个递进变体：NU-
 | --- | --- | --- | --- | --- |
 | FastWave | 1.3 M | 50 GFLOPs | 30 hours 单 V100 有限设置 | learning rate 2e-4 批量 2 |
 | NU-Wave | 3 M | 未在正文连续句报告 | 649 epochs 双 A100 充分训练 | learning rate 2e-4 批量 2 |
-| NU-Wave 2 个基线 | 未在连续句报告具体值 | 未在连续句报告 | 30 hours 单 V100 中间比较 | learning rate 2e-4 批量 2 |
+| NU-Wave 2 基线 | 未在连续句报告具体值 | 未在连续句报告 | 30 hours 单 V100 中间比较 | learning rate 2e-4 批量 2 |
 | FastWave 最终 | 1.3 M | 50 GFLOPs | 推到 140 轮单 V100 | learning rate 2e-4 批量 2 |
 | 对比参考 | 3 M | 未报告 | 649 epochs 双 A100 | learning rate 2e-4 批量 2 |
 
