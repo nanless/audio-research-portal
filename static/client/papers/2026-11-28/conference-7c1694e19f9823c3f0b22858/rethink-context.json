@@ -1,0 +1,50 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Applied Artificial Intelligence, Sungkyunkwan University, Korea"
+      ],
+      "name": "Seungjin Han"
+    },
+    {
+      "affiliations": [
+        "Department of Applied Artificial Intelligence, Sungkyunkwan University, Korea"
+      ],
+      "name": "Juyeob Lee"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science and Engineering, Korea University, Korea"
+      ],
+      "name": "Sangmin Lee"
+    },
+    {
+      "affiliations": [
+        "Department of Applied Artificial Intelligence, Sungkyunkwan University, Korea",
+        "Department of Computer Science and Engineering, Jaume I University, Spain"
+      ],
+      "name": "Eunil Park"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文针对多模态联邦知识蒸馏中容易模态主导本地优化并经聚合污染全局教师的问题，提出客户端选择性模态调节与服务端按分量模态蒸馏两阶段干预的 FedAMB 方法，在 CREMA-D 数据集、AVE 数据集与 UR-FUNNY 数据集上同时提升多模态准确率与缺失模态稳健性，代价是依赖共享代理数据集并额外交换类别原型统计。",
+  "originalTitle": "FedAMB: Adaptive Modality Balancing for Dominance-Robust Multimodal Federated Distillation",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0482",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0482.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "模态主导污染全局教师时联邦蒸馏如何实现自适应平衡",
+  "recordUrl": "https://ijcai.org/proceedings/2026/482",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "5822943f14d142ff754b2a6c93b2257b6166e5fd2dbd6844095ed3815c7e9879"
+}

@@ -1,0 +1,50 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "时频分析",
+    "primaryTask": "音频分类",
+    "rankBucket": "后50%",
+    "score": 5.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "MIRIAI"
+      ],
+      "name": "Vladislav Naumov"
+    },
+    {
+      "affiliations": [
+        "MIRIAI"
+      ],
+      "name": "Iaroslav Sheipak"
+    },
+    {
+      "affiliations": [
+        "HSE University"
+      ],
+      "name": "Yuriy Ivanov"
+    },
+    {
+      "affiliations": [
+        "AXXX",
+        "Trusted AI Research Center, RAS"
+      ],
+      "name": "Ilya Makarov"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对通用框架在虎鲸叫声细分类中时间分辨率不足与类别不均的问题，本文以跳长 172 与 1,200 ms 窗的信号前端优化结合 0.1 标签平滑与平方根逆频过采样，在阿瓦查湾 12 类数据上以 ResNet-18 达到 97.1% 片段准确率，较 96.2% 基线实现 23.7% 相对误差下降，代价是结论仅在单一海域离线划分成立且更深主干未带来增益。",
+  "originalTitle": "Optimizing Spectrogram Resolution and Training Strategies for Real-Time Killer Whale Call Type Classification",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0982",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0982.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "跳长与窗长优先于主干加深的虎鲸叫声分类",
+  "recordUrl": "https://ijcai.org/proceedings/2026/982",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "6219f410325cb84d3f19150e9e4c685ae7c360fcd49518b685db9f551098f71c"
+}

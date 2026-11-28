@@ -1,0 +1,51 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Mathematics, Zhejiang Sci-Tech University, Hangzhou, China"
+      ],
+      "name": "Mingjie Wang"
+    },
+    {
+      "affiliations": [
+        "Department of Mathematics, Zhejiang Sci-Tech University, Hangzhou, China"
+      ],
+      "name": "Zhuohang Li"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science and Software Engineering, Shenzhen University, Shenzhen, China"
+      ],
+      "name": "Qi Zhang"
+    },
+    {
+      "affiliations": [
+        "School of Information Science and Technology, Dalian Maritime University, Dalian, China"
+      ],
+      "name": "Jun Zhou"
+    },
+    {
+      "affiliations": [
+        "School of Intelligence Science and Technology, Nanjing University, Nanjing, China"
+      ],
+      "name": "Zili Yi"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, University of Guelph, Guelph, Canada"
+      ],
+      "name": "Minglun Gong"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0194",
+  "originalTitle": "Listen and Count: Expanding the Frontier of Zero-shot Object Counting to Sound-centric Counting",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0194",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0194.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/194",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "247181edf2a1844702b6305d1c0110375b2bb6d418ae851d6f72a19955a0f0e5",
+  "type": "conference-paper"
+}

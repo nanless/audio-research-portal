@@ -1,0 +1,76 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "主观评测",
+    "primaryTask": "视频到声音生成",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Tokyo, Japan",
+        "National Institute of Advanced Industrial Science and Technology, Japan"
+      ],
+      "name": "Ryota Kawamatsu"
+    },
+    {
+      "affiliations": [
+        "National Institute of Advanced Industrial Science and Technology, Japan",
+        "Technical University of Munich, Germany"
+      ],
+      "name": "Anum Afzal"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Yuki Saito"
+    },
+    {
+      "affiliations": [
+        "Keio University, Japan",
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Shinnosuke Takamichi"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University, U.S.A."
+      ],
+      "name": "Graham Neubig"
+    },
+    {
+      "affiliations": [
+        "Nara Women’s University, Japan"
+      ],
+      "name": "Katsuhito Sudoh"
+    },
+    {
+      "affiliations": [
+        "National Institute of Advanced Industrial Science and Technology, Japan"
+      ],
+      "name": "Hiroya Takamura"
+    },
+    {
+      "affiliations": [
+        "National Institute of Advanced Industrial Science and Technology, Japan"
+      ],
+      "name": "Tatsuya Ishigaki"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对原始游戏视频接入大语言模型时串行等待造成数秒级静音的问题，本文用边播边写的多候选缓冲加轻量视频延迟把平均句间静音压到 0.3 秒量级并显著改善主观节奏，但结论只在 8 个格斗游戏短片段与在线大模型服务条件下成立且多路并发成本未量化。",
+  "originalTitle": "Low-Latency Real-Time Audio Game Commentary System via LLM-Based Parallel Text Generation",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0972",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0972.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "并行文本生成如何消除实时游戏解说的长静音",
+  "recordUrl": "https://ijcai.org/proceedings/2026/972",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "625917a67711bad8ae513885af81d7aace461675f39eb84c8fbf3b06282dd68f"
+}

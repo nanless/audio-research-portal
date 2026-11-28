@@ -1,0 +1,57 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "College of Computer and Cyber Security, Fujian Normal University, Fuzhou 350117, China"
+      ],
+      "name": "Liang Chen"
+    },
+    {
+      "affiliations": [
+        "School of Computing and Data Science, Fujian University of Technology, Fuzhou 350118, China"
+      ],
+      "name": "Yanze Huang"
+    },
+    {
+      "affiliations": [
+        "College of Computer and Cyber Security, Fujian Normal University, Fuzhou 350117, China"
+      ],
+      "name": "Limei Lin"
+    },
+    {
+      "affiliations": [
+        "College of Computer and Cyber Security, Fujian Normal University, Fuzhou 350117, China"
+      ],
+      "name": "Xiaoding Wang"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong Polytechnic University, Hong Kong, China"
+      ],
+      "name": "Wei Lou"
+    },
+    {
+      "affiliations": [
+        "China Telecom Cloud Computing Research Institute, Beijing 100088, China"
+      ],
+      "name": "Jie Wu"
+    },
+    {
+      "affiliations": [
+        "Department of Computer Science and Information Engineering, National Cheng Kung University, Tainan 701, Taiwan"
+      ],
+      "name": "Sun-Yuan Hsieh"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0465",
+  "originalTitle": "Bridge: A Cross-Modal Learning Framework for Unified Semantic Representation in Noisy Communication",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0465",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0465.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/465",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "ed75220a97f891810a39192f4f29f3a07db55daa51a6b4d857517d0bb92e745f",
+  "type": "conference-paper"
+}

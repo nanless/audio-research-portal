@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "Zhichen Yuan"
+    },
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "C. L. Philip Chen"
+    },
+    {
+      "affiliations": [
+        "Lund University"
+      ],
+      "name": "Shuzhen Li"
+    },
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "Tong Zhang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0414",
+  "originalTitle": "An Emotion-Preserving Conditional Information Bottleneck for Domain-Generalizable Speech Emotion Recognition",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0414",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0414.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/414",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "d3f1f805e074995363c7ac618cca4b3a785023d37e0905856868273118641997",
+  "type": "conference-paper"
+}

@@ -1,0 +1,49 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Orchid Chetia Phukan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Girish"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Mohd Mujtaba Akhtar"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Arun Balaji Buduru"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对英语中心检测器在东南亚编解码伪造上大幅失效的问题，工作构建多语言多编解码器基准 SEA-CF 并提出不足 1B 的双编码器问答小模型 GARUDA，以未见条件下平均 97.59% 准确率超越大模型基线，代价是仍需域内联合训练与固定单提示模板。",
+  "originalTitle": "Bridging the SEA Gap: An Initial Benchmark for Neural Audio Codec-Synthesized Speech Deepfakes in South-East Asian Languages",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0791",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0791.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "编解码伪造在东南亚语言中的检测空白与轻量小模型方案",
+  "recordUrl": "https://ijcai.org/proceedings/2026/791",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "23e82d074d7e4186a2a6342e7125697fc86f39062499104bd5e59d9da9f136f9"
+}

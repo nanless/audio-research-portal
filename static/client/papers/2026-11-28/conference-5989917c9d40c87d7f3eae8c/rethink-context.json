@@ -1,0 +1,57 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对抗训练",
+    "primaryTask": "视频生成",
+    "rankBucket": "后50%",
+    "score": 5.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Information and Communication Engineering, Communication University of China, China"
+      ],
+      "name": "Xiaoying Huang"
+    },
+    {
+      "affiliations": [
+        "School of Data Science and Media Intelligence, Communication University of China, China",
+        "Key Laboratory of Media Audio & Video (Communication University of China)"
+      ],
+      "name": "Sanyi Zhang"
+    },
+    {
+      "affiliations": [
+        "Hainan International College of Communication University of China, China"
+      ],
+      "name": "Xirui Wang"
+    },
+    {
+      "affiliations": [
+        "Key Laboratory of Media Audio & Video (Communication University of China)"
+      ],
+      "name": "Qin Zhang"
+    },
+    {
+      "affiliations": [
+        "School of Data Science and Media Intelligence, Communication University of China, China",
+        "State Key Laboratory of Media Convergence and Communication, Communication University of China"
+      ],
+      "name": "Long Ye"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对已有舞蹈运镜合成只以音乐舞蹈为条件而忽略运镜风格的问题，DanceStyleCam 以显式风格嵌入加两阶段关键帧合成与风格一致对抗训练实现单一模型多风格合成，在 DCM 上以关键帧距离 2.751 与风格 Top-1 48.84% 超过已有可运行方法，代价是依赖 8 类人工风格标注与 104 M 参数规模的对抗训练。",
+  "originalTitle": "DanceStyleCam: Style-Based 3D Multi-Style Dance Camera Movement Synthesis",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0136",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0136.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "风格一致的多风格舞蹈运镜合成解读",
+  "recordUrl": "https://ijcai.org/proceedings/2026/136",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "8e2d496b035613d2dad46d28d1a7d3f838df081c62ff73f8786f861e4892e423"
+}

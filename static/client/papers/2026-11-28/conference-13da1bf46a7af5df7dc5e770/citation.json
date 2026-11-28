@@ -1,0 +1,67 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "School of Intelligence Science and Technology, Nanjing University, Suzhou, China",
+        "X-LANCE Lab, MoE Key Lab of Artificial Intelligence, School of Computer Science, Shanghai Jiao Tong University, Shanghai, China"
+      ],
+      "name": "Haoyu Li"
+    },
+    {
+      "affiliations": [
+        "X-LANCE Lab, MoE Key Lab of Artificial Intelligence, School of Computer Science, Shanghai Jiao Tong University, Shanghai, China",
+        "ALTA Institute, Machine Intelligence Lab, Department of Engineering, University of Cambridge, UK"
+      ],
+      "name": "Yu Xi"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore, Singapore"
+      ],
+      "name": "Yidi Jiang"
+    },
+    {
+      "affiliations": [
+        "School of Intelligence Science and Technology, Nanjing University, Suzhou, China",
+        "Shenzhen Loop Area Institute, Shenzhen, China"
+      ],
+      "name": "Shuai Wang"
+    },
+    {
+      "affiliations": [
+        "ALTA Institute, Machine Intelligence Lab, Department of Engineering, University of Cambridge, UK"
+      ],
+      "name": "Kate Knill"
+    },
+    {
+      "affiliations": [
+        "ALTA Institute, Machine Intelligence Lab, Department of Engineering, University of Cambridge, UK"
+      ],
+      "name": "Mark Gales"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen, China",
+        "Shenzhen Loop Area Institute, Shenzhen, China"
+      ],
+      "name": "Haizhou Li"
+    },
+    {
+      "affiliations": [
+        "X-LANCE Lab, MoE Key Lab of Artificial Intelligence, School of Computer Science, Shanghai Jiao Tong University, Shanghai, China"
+      ],
+      "name": "Kai Yu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0644",
+  "originalTitle": "Detect, Attend and Extract: Keyword Guided Target Speaker Extraction",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0644",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0644.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/644",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "de944a690b227a2551a5ddac83a9ba8ffbec2a04e0a10ff02b4f0914986ef76b",
+  "type": "conference-paper"
+}

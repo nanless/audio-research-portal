@@ -1,0 +1,49 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "域泛化",
+    "primaryTask": "语音情感识别",
+    "rankBucket": "前50%",
+    "score": 6.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "Zhichen Yuan"
+    },
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "C. L. Philip Chen"
+    },
+    {
+      "affiliations": [
+        "Lund University"
+      ],
+      "name": "Shuzhen Li"
+    },
+    {
+      "affiliations": [
+        "South China University of Technology"
+      ],
+      "name": "Tong Zhang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对无域标注下干扰与情感纠缠导致的跨语料失效，EP-CIB 以情绪抑制干扰代理加标签条件瓶颈实现类内解耦，在六向跨语料平均 WAR 61.70% 与 UAR 57.05% 取得最优，代价是双流对抗训练开销与对清晰表演式局部线索的相对弱化。",
+  "originalTitle": "An Emotion-Preserving Conditional Information Bottleneck for Domain-Generalizable Speech Emotion Recognition",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0414",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0414.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "情绪保留的条件瓶颈如何实现无域标注的语音情感泛化",
+  "recordUrl": "https://ijcai.org/proceedings/2026/414",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "d3f1f805e074995363c7ac618cca4b3a785023d37e0905856868273118641997"
+}

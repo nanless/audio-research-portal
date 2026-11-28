@@ -1,0 +1,55 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Oldenburg, Germany",
+        "Carl von Ossietzky University of Oldenburg, Oldenburg, Germany"
+      ],
+      "name": "Novruz Mammadli"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Oldenburg, Germany",
+        "Carl von Ossietzky University of Oldenburg, Oldenburg, Germany"
+      ],
+      "name": "Rida Saghir"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Oldenburg, Germany"
+      ],
+      "name": "Kanwar Ammar Ali"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Oldenburg, Germany"
+      ],
+      "name": "Prathmesh Doddanawar"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Oldenburg, Germany",
+        "Carl von Ossietzky University of Oldenburg, Oldenburg, Germany"
+      ],
+      "name": "Thiago S. Gouvêa"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Oldenburg, Germany",
+        "Carl von Ossietzky University of Oldenburg, Oldenburg, Germany"
+      ],
+      "name": "Daniel Sonntag"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0979",
+  "originalTitle": "Making Weak Supervision Interactive: Exploring Transfer from Sound Libraries to Passive Acoustic Monitoring Data",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0979",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0979.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/979",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "83927758b6ef781f421e512081fd1c3dc89901fe7cd1a2d6fa105213c099b3ca",
+  "type": "conference-paper"
+}

@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音配音",
+    "rankBucket": "前50%",
+    "score": 6.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "National Engineering Research Center of Speech and Language Information Processing"
+      ],
+      "name": "Jiaxuan Liu"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, Beijing, China"
+      ],
+      "name": "Yang Xiang"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, Beijing, China"
+      ],
+      "name": "Han Zhao"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, Beijing, China"
+      ],
+      "name": "Xiangang Li"
+    },
+    {
+      "affiliations": [
+        "National Engineering Research Center of Speech and Language Information Processing"
+      ],
+      "name": "Zhenhua Ling"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对复杂影视配音中唇区不可靠与多说话人时间错乱问题，FunCineForge 以四阶段自动流程构建超 9,000 小时的 CineDub 数据集并引入时间戳说话人标记与切换拼接的合成模型，在独白与多说话人评测中优于已有对照方法，代价是依赖显式时间监督与较大训练开销且长复杂片段鲁棒性下降。",
+  "originalTitle": "FunCineForge: A Unified Dataset Pipeline and Model for Zero-Shot Movie Dubbing in Diverse Cinematic Scenes",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0654",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0654.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "复杂影视场景的零样本配音：数据流程与多模态模型如何协同",
+  "recordUrl": "https://ijcai.org/proceedings/2026/654",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "4b0d8cfd91a265cb9622842c3c4a6929784b8a794d1c8fa90ba2995aeda40a3e"
+}

@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "综述",
+    "primaryMethod": "扩散模型",
+    "primaryTask": "静默语音接口",
+    "rankBucket": "后50%",
+    "score": 5.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Cognitive Systems Lab, University of Bremen, Germany"
+      ],
+      "name": "Zhao Ren"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对深度医疗模型因黑盒与安全隐私问题难获临床信任的问题，论文提出感知、理解与能力增强三支柱愿景，以心脏声音基准、扩散语音合成与在 GPU 上处理 10 ms 肌电片段时低至 7.72 ms 的实时延迟等自述进展为依据，代价是缺少统一对照、听测规模与部署验证。",
+  "originalTitle": "Human-Centred Trustworthy AI for Digital Health: Sensing, Understanding, and Empowerment",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0910",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0910.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "面向数字健康的可信以人为中心人工智能：感知、理解与能力增强",
+  "recordUrl": "https://ijcai.org/proceedings/2026/910",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "a3b7563ee17dacee4d3bb6d97562241e7f93b2e90f72ab3e9fea18cdfc955b0f"
+}

@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "流匹配",
+    "primaryTask": "空间音频生成",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Shandong University"
+      ],
+      "name": "Yanan Wang"
+    },
+    {
+      "affiliations": [
+        "Shandong University"
+      ],
+      "name": "Linjie Ren"
+    },
+    {
+      "affiliations": [
+        "Shandong University"
+      ],
+      "name": "Zihao Li"
+    },
+    {
+      "affiliations": [
+        "Shandong University"
+      ],
+      "name": "Junyi Wang"
+    },
+    {
+      "affiliations": [
+        "Shandong University"
+      ],
+      "name": "Tian Gan"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对单声道视频生成音频缺失方向感的问题，本文批量合成 187,000 对伪双耳数据并提出双分支条件流匹配框架，在 3,000 个视频评测中以 MOS-AQ 4.21 与 MOS-S 3.90 取得主观最优，代价是依赖合成监督与额外空间条件计算。",
+  "originalTitle": "SpatialV2A: Visual-Guided High-fidelity Spatial Audio Generation",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0198",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0198.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "视觉引导的高保真双耳音频生成与大规模伪双耳数据",
+  "recordUrl": "https://ijcai.org/proceedings/2026/198",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "adacc4a56b03bf493330c128b5cbe5097d1c644a3c2618227d2222c98537d319"
+}

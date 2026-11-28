@@ -1,0 +1,21 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Cognitive Systems Lab, University of Bremen, Germany"
+      ],
+      "name": "Zhao Ren"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0910",
+  "originalTitle": "Human-Centred Trustworthy AI for Digital Health: Sensing, Understanding, and Empowerment",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0910",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0910.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/910",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "a3b7563ee17dacee4d3bb6d97562241e7f93b2e90f72ab3e9fea18cdfc955b0f",
+  "type": "conference-paper"
+}

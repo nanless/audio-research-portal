@@ -1,0 +1,73 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "混合专家模型",
+    "primaryTask": "语音翻译",
+    "rankBucket": "前50%",
+    "score": 6.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Yan Gao"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Yazheng Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Zhibin Lan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Yidong Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Min Zhang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Daimeng Wei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Derek F. Wong"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Jinsong Su"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对语码切换语音翻译中语言交替导致语义建模困难与高质量语码切换数据稀缺的问题，本文提出按语言分组的混合专家语音投影器与从单语识别经单语翻译平滑过渡到语码切换翻译的四个阶段训练范式，在 Fisher 与 NTUML2021 四个测试条件下平均超过 SeamlessM4T 约 0.86 BLEU 与 0.93 COMET 并在 NTUML2021 语码切换上达到 1.49 BLEU 的最大增量，代价是每种语言需维持 7 个专家并在推理时激活前 7 个带来的计算开销以及对单语帧级语言标签监督的依赖。",
+  "originalTitle": "Towards Fine-Grained Code-Switch Speech Translation with Semantic Space Alignment",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0636",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0636.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "语义空间对齐支撑的细粒度语码切换语音翻译",
+  "recordUrl": "https://ijcai.org/proceedings/2026/636",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "a289ac6ba2c3e06140408d97b70632565b4af7f9ff07c214bba3fde631482430"
+}

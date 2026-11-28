@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "National Engineering Research Center of Speech and Language Information Processing"
+      ],
+      "name": "Jiaxuan Liu"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, Beijing, China"
+      ],
+      "name": "Yang Xiang"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, Beijing, China"
+      ],
+      "name": "Han Zhao"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, Beijing, China"
+      ],
+      "name": "Xiangang Li"
+    },
+    {
+      "affiliations": [
+        "National Engineering Research Center of Speech and Language Information Processing"
+      ],
+      "name": "Zhenhua Ling"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0654",
+  "originalTitle": "FunCineForge: A Unified Dataset Pipeline and Model for Zero-Shot Movie Dubbing in Diverse Cinematic Scenes",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0654",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0654.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/654",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "4b0d8cfd91a265cb9622842c3c4a6929784b8a794d1c8fa90ba2995aeda40a3e",
+  "type": "conference-paper"
+}

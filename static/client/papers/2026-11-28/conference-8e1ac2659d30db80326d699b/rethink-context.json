@@ -1,0 +1,49 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "言语神经解码",
+    "rankBucket": "前50%",
+    "score": 6.1
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "School of Computer Science, Hangzhou Dianzi University, Hangzhou, 310018, China"
+      ],
+      "name": "Chi Huang"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, Hangzhou Dianzi University, Hangzhou, 310018, China"
+      ],
+      "name": "Zhaohu Liu"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, Hangzhou Dianzi University, Hangzhou, 310018, China"
+      ],
+      "name": "Yong Peng"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, Hangzhou Dianzi University, Hangzhou, 310018, China"
+      ],
+      "name": "Wanzeng Kong"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对非侵入式脑电重建梅尔频谱中个体差异大与跨模态语义鸿沟问题，HFFN-ID 以双阶段被试标识调制与条件引导分层融合结合双向 Mamba 全局建模与包络预训练，在 SparrKULee 上达到 0.0723 的皮尔逊相关系数并减少 38.7% 参数，但绝对相关仍低且依赖已知被试标识。",
+  "originalTitle": "HFFN-ID: A Hierarchical Feature Fusion Network with Bi-Phase Subject ID Modulation for EEG Mel-Spectrogram Reconstruction",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0402",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0402.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "从脑电重建梅尔频谱：被试调制与分层融合如何同时应对个体差异与跨模态鸿沟",
+  "recordUrl": "https://ijcai.org/proceedings/2026/402",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "967a8487596d8232deb13fb70f816ef77e778cca0327d64d83ce6c5aedf38b41"
+}

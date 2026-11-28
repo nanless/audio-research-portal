@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Shandong University"
+      ],
+      "name": "Yanan Wang"
+    },
+    {
+      "affiliations": [
+        "Shandong University"
+      ],
+      "name": "Linjie Ren"
+    },
+    {
+      "affiliations": [
+        "Shandong University"
+      ],
+      "name": "Zihao Li"
+    },
+    {
+      "affiliations": [
+        "Shandong University"
+      ],
+      "name": "Junyi Wang"
+    },
+    {
+      "affiliations": [
+        "Shandong University"
+      ],
+      "name": "Tian Gan"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0198",
+  "originalTitle": "SpatialV2A: Visual-Guided High-fidelity Spatial Audio Generation",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0198",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0198.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/198",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "adacc4a56b03bf493330c128b5cbe5097d1c644a3c2618227d2222c98537d319",
+  "type": "conference-paper"
+}

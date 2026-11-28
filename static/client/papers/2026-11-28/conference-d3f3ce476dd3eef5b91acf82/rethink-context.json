@@ -1,0 +1,74 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "语音伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education",
+        "School of Cyber Science and Engineering, Wuhan University"
+      ],
+      "name": "Jun Xue"
+    },
+    {
+      "affiliations": [
+        "Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education",
+        "School of Cyber Science and Engineering, Wuhan University"
+      ],
+      "name": "Tong Zhang"
+    },
+    {
+      "affiliations": [
+        "Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education",
+        "School of Cyber Science and Engineering, Wuhan University"
+      ],
+      "name": "Zhuolin Yi"
+    },
+    {
+      "affiliations": [
+        "Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education",
+        "School of Cyber Science and Engineering, Wuhan University"
+      ],
+      "name": "Yihuan Huang"
+    },
+    {
+      "affiliations": [
+        "Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education",
+        "School of Cyber Science and Engineering, Wuhan University"
+      ],
+      "name": "Yi Chai"
+    },
+    {
+      "affiliations": [
+        "Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education",
+        "School of Cyber Science and Engineering, Wuhan University"
+      ],
+      "name": "Yiyang Zhang"
+    },
+    {
+      "affiliations": [
+        "Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education",
+        "School of Cyber Science and Engineering, Wuhan University"
+      ],
+      "name": "Yanzhen Ren"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对面向特定人物的高仿真克隆难被通用检测器发现的问题，个性化音素画像仅用少量真实参考为每人构建音素级混合模型指纹并融合全局身份分数，在中英文人物基准上将等错误率降至 11.37% 与 7.24%，代价是依赖准确的音素对齐与人物级注册且未验证噪声与实时条件。",
+  "originalTitle": "Profiling the Voice: Speaker-Specific Phoneme Fingerprinting for Speech Deepfake Detection",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0667",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0667.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "用音素指纹守护特定人物的声音",
+  "recordUrl": "https://ijcai.org/proceedings/2026/667",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "eea3b61b595459517149dcb9bca1b0aa02f32a71ae98d449540198beea464149"
+}

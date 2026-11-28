@@ -1,0 +1,79 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "案例研究与实践报告",
+    "primaryTask": "语音到语音翻译",
+    "rankBucket": "后50%",
+    "score": 5.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Johannes Ernesti"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Peter Kaiser"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Jonas Heinze"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Elnaz Shafaei-Bajestan"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Kristina Geißler"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Weiyue Wang"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Johannes Beck"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Sascha Brinker"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Thorben Finke"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "DeepL Voice 针对实时语音翻译中质量延迟与输出稳定难以兼顾的矛盾，采用语音识别加机器翻译加语音合成的级联与稳定文本流方案，以 2024 年 11 月上线并支持 18 种输入语言与 30 余种目标语言的生产部署为证，代价是缺乏量化评测且韵律保持与难语对低延迟仍未解决。",
+  "originalTitle": "DeepL Voice: Real-Time Speech-to-Speech Translation",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0962",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0962.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "DeepL Voice 面向商务沟通的实时语音翻译系统解读",
+  "recordUrl": "https://ijcai.org/proceedings/2026/962",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "f5d41ef8138a960734145c00a149cdb74227a499ffcaa177800f2ba0c262dbc1"
+}

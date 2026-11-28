@@ -1,0 +1,71 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "偏好优化",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Yihang Lin"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Li Zhou"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen",
+        "Shenzhen Loop Area Institute"
+      ],
+      "name": "Congwei Cao"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Dongchu Xie"
+    },
+    {
+      "affiliations": [
+        "Agency for Science, Technology and Research"
+      ],
+      "name": "Xiaoxue Gao"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Chen Zhang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen",
+        "National University of Singapore",
+        "Shenzhen Research Institute of Big Data",
+        "Shenzhen Loop Area Institute"
+      ],
+      "name": "Haizhou Li"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文把提示条件情感强度控制建模为固定文本下的学习排序问题，提出 Emo-LiPO 以规则排序列表与强度感知加权优化全局强度顺序，在 ESD-plus 上以情感准确率与强度可控性超越有监督与成对偏好基线，代价是依赖合成数据与规则排序假设且未验证延迟与跨域泛化。",
+  "originalTitle": "Emo-LiPO: Listwise Preference Optimization for Fine-Grained Emotion Intensity Control in LLM-based Text-to-Speech",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0652",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0652.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "用列表排序学习让文本提示真正控制语音情感强度",
+  "recordUrl": "https://ijcai.org/proceedings/2026/652",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "0fc5cc826033f890704a9195757ce12d15a743750e5d2ff9b163de7aa780d461"
+}

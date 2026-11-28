@@ -1,0 +1,65 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "弱监督学习",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "后50%",
+    "score": 5.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Oldenburg, Germany",
+        "Carl von Ossietzky University of Oldenburg, Oldenburg, Germany"
+      ],
+      "name": "Novruz Mammadli"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Oldenburg, Germany",
+        "Carl von Ossietzky University of Oldenburg, Oldenburg, Germany"
+      ],
+      "name": "Rida Saghir"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Oldenburg, Germany"
+      ],
+      "name": "Kanwar Ammar Ali"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Oldenburg, Germany"
+      ],
+      "name": "Prathmesh Doddanawar"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Oldenburg, Germany",
+        "Carl von Ossietzky University of Oldenburg, Oldenburg, Germany"
+      ],
+      "name": "Thiago S. Gouvêa"
+    },
+    {
+      "affiliations": [
+        "German Research Center for Artificial Intelligence (DFKI), Oldenburg, Germany",
+        "Carl von Ossietzky University of Oldenburg, Oldenburg, Germany"
+      ],
+      "name": "Daniel Sonntag"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对档案弱标签缺乏时间定位而野外监测又缺示例级标注的矛盾，本文演示用二值多示例学习加冻结 BirdNET 表征与不确定性主动精炼把 FNJV 档案转化为 AnuraSet 野外检测器，初步迁移证实档案可提供非平凡训练信号且 BirdNET 精确率较高，代价是召回具有物种敏感性并在稀少鸣声物种上完全失效且精炼增益尚未量化。",
+  "originalTitle": "Making Weak Supervision Interactive: Exploring Transfer from Sound Libraries to Passive Acoustic Monitoring Data",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0979",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0979.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "档案弱标签如何经交互精炼迁移为野外声学监测检测器",
+  "recordUrl": "https://ijcai.org/proceedings/2026/979",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "83927758b6ef781f421e512081fd1c3dc89901fe7cd1a2d6fa105213c099b3ca"
+}

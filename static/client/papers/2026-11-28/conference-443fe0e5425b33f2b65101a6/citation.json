@@ -1,0 +1,69 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Johannes Ernesti"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Peter Kaiser"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Jonas Heinze"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Elnaz Shafaei-Bajestan"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Kristina Geißler"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Weiyue Wang"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Johannes Beck"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Sascha Brinker"
+    },
+    {
+      "affiliations": [
+        "DeepL Research"
+      ],
+      "name": "Thorben Finke"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0962",
+  "originalTitle": "DeepL Voice: Real-Time Speech-to-Speech Translation",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0962",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0962.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/962",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "f5d41ef8138a960734145c00a149cdb74227a499ffcaa177800f2ba0c262dbc1",
+  "type": "conference-paper"
+}

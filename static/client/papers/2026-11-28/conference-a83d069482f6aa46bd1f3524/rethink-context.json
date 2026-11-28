@@ -1,0 +1,73 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "语音交互",
+    "rankBucket": "后50%",
+    "score": 4.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Mazen Salous"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Daniel Westphal"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Wilko Heuen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Ayoub Ben Dhiab"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Charles Hudin"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Sabrina Paneels"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Susanne Boll"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Larbi Abdenebaoui"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对盲人与低视力用户难以获取图像细节的问题，论文用触摸触发的实时分割、开放词汇识别、语音对话与 16 通道振动触觉组成可追问的音频触觉交互，并在图书与网店两个现场演示中跑通流程，代价是无定量指标、受控对比与复现材料，结论仅限演示级可行性。",
+  "originalTitle": "AI-Powered Interactive Multimodal Digital Book & Online Shop For Blind and Visually Impaired Users",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0991",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0991.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "触摸与对话结合：面向盲人的多模态图书与网店演示",
+  "recordUrl": "https://ijcai.org/proceedings/2026/991",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "4dfb0d82cf4abc8061b6c6779c38cb2502dff72db127ee7e7976d2107baf9068"
+}

@@ -1,0 +1,61 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "音视频理解",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Mathematics, Zhejiang Sci-Tech University, Hangzhou, China"
+      ],
+      "name": "Mingjie Wang"
+    },
+    {
+      "affiliations": [
+        "Department of Mathematics, Zhejiang Sci-Tech University, Hangzhou, China"
+      ],
+      "name": "Zhuohang Li"
+    },
+    {
+      "affiliations": [
+        "College of Computer Science and Software Engineering, Shenzhen University, Shenzhen, China"
+      ],
+      "name": "Qi Zhang"
+    },
+    {
+      "affiliations": [
+        "School of Information Science and Technology, Dalian Maritime University, Dalian, China"
+      ],
+      "name": "Jun Zhou"
+    },
+    {
+      "affiliations": [
+        "School of Intelligence Science and Technology, Nanjing University, Nanjing, China"
+      ],
+      "name": "Zili Yi"
+    },
+    {
+      "affiliations": [
+        "School of Computer Science, University of Guelph, Guelph, Canada"
+      ],
+      "name": "Minglun Gong"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对文本提示多义且在纯音频场景缺失的问题，S2ICount 以冻结 CLAP 经 SoundMamba 投影为 768 维条件，结合稳定扩散多尺度特征的环形扫描校准与三层混合优化，在 SoundCount 上以验证集 6.80 与测试集 7.87 的平均绝对误差优于展示的最强文本与声音基线，代价是依赖 10 秒清晰声音、阈值化伪监督与单数据集验证且未报告部署成本。",
+  "originalTitle": "Listen and Count: Expanding the Frontier of Zero-shot Object Counting to Sound-centric Counting",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0194",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0194.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "听声计数：以声音为提示的零样本目标计数",
+  "recordUrl": "https://ijcai.org/proceedings/2026/194",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "247181edf2a1844702b6305d1c0110375b2bb6d418ae851d6f72a19955a0f0e5"
+}

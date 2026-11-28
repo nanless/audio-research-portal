@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Guangdong Institute of Smart Education, Jinan University"
+      ],
+      "name": "Xueyi Li"
+    },
+    {
+      "affiliations": [
+        "TAL Education Group"
+      ],
+      "name": "Tianqiao Liu"
+    },
+    {
+      "affiliations": [
+        "Guangdong Institute of Smart Education, Jinan University"
+      ],
+      "name": "Zitao Liu"
+    },
+    {
+      "affiliations": [
+        "Guangdong Institute of Smart Education, Jinan University"
+      ],
+      "name": "Teng Guo"
+    },
+    {
+      "affiliations": [
+        "Guangdong Institute of Smart Education, Jinan University"
+      ],
+      "name": "Yongdong Wu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0812",
+  "originalTitle": "Improving Scientific Formula Verbalization in Large Speech Language Models for Accessible Learning",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0812",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0812.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/812",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "b274c8c858820504e54b877c852965d31c9378479aed4b1936d2ac5fbda45cd6",
+  "type": "conference-paper"
+}

@@ -1,0 +1,66 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Tokyo, Japan",
+        "National Institute of Advanced Industrial Science and Technology, Japan"
+      ],
+      "name": "Ryota Kawamatsu"
+    },
+    {
+      "affiliations": [
+        "National Institute of Advanced Industrial Science and Technology, Japan",
+        "Technical University of Munich, Germany"
+      ],
+      "name": "Anum Afzal"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Yuki Saito"
+    },
+    {
+      "affiliations": [
+        "Keio University, Japan",
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Shinnosuke Takamichi"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University, U.S.A."
+      ],
+      "name": "Graham Neubig"
+    },
+    {
+      "affiliations": [
+        "Nara Women’s University, Japan"
+      ],
+      "name": "Katsuhito Sudoh"
+    },
+    {
+      "affiliations": [
+        "National Institute of Advanced Industrial Science and Technology, Japan"
+      ],
+      "name": "Hiroya Takamura"
+    },
+    {
+      "affiliations": [
+        "National Institute of Advanced Industrial Science and Technology, Japan"
+      ],
+      "name": "Tatsuya Ishigaki"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0972",
+  "originalTitle": "Low-Latency Real-Time Audio Game Commentary System via LLM-Based Parallel Text Generation",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0972",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0972.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/972",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "625917a67711bad8ae513885af81d7aace461675f39eb84c8fbf3b06282dd68f",
+  "type": "conference-paper"
+}

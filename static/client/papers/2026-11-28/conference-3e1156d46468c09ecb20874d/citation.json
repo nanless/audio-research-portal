@@ -1,0 +1,56 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Qingdao Institute of Software, College of Computer Science and Technology",
+        "Shandong Key Laboratory of Intelligent Oil & Gas Industrial Software"
+      ],
+      "name": "Chenglizhao Chen"
+    },
+    {
+      "affiliations": [
+        "Qingdao Institute of Software, College of Computer Science and Technology",
+        "Shandong Key Laboratory of Intelligent Oil & Gas Industrial Software"
+      ],
+      "name": "Yuchen Cao"
+    },
+    {
+      "affiliations": [
+        "Qingdao Institute of Software, College of Computer Science and Technology",
+        "Shandong Key Laboratory of Intelligent Oil & Gas Industrial Software"
+      ],
+      "name": "Xinyu Liu"
+    },
+    {
+      "affiliations": [
+        "Qingdao Institute of Software, College of Computer Science and Technology",
+        "Shandong Key Laboratory of Intelligent Oil & Gas Industrial Software"
+      ],
+      "name": "Mengke Song"
+    },
+    {
+      "affiliations": [
+        "Qingdao Institute of Software, College of Computer Science and Technology",
+        "Shandong Key Laboratory of Intelligent Oil & Gas Industrial Software"
+      ],
+      "name": "Guisheng Zhang"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Xiaomin Yu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0108",
+  "originalTitle": "Controlling Decision Drift in Multimodal Sentiment Analysis with Missing Modalities",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0108",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0108.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/108",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "2345a30e13ce4b72c806c9b80fded33b6abea566f5caff1798197b6fd08f5740",
+  "type": "conference-paper"
+}

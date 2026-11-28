@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "文本到语音",
+    "rankBucket": "前50%",
+    "score": 6.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Guangdong Institute of Smart Education, Jinan University"
+      ],
+      "name": "Xueyi Li"
+    },
+    {
+      "affiliations": [
+        "TAL Education Group"
+      ],
+      "name": "Tianqiao Liu"
+    },
+    {
+      "affiliations": [
+        "Guangdong Institute of Smart Education, Jinan University"
+      ],
+      "name": "Zitao Liu"
+    },
+    {
+      "affiliations": [
+        "Guangdong Institute of Smart Education, Jinan University"
+      ],
+      "name": "Teng Guo"
+    },
+    {
+      "affiliations": [
+        "Guangdong Institute of Smart Education, Jinan University"
+      ],
+      "name": "Yongdong Wu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对端到端大语音语言模型误读科学公式的问题，论文以 GLM-4-Voice 9B 为主干构建 Formula-Speech，用 3,417 段对话与 8,678 条公式语音配对数据完成两阶段低秩微调与强化学习，在数学、物理、化学三学科上提升朗读准确性，但语音自然度未同步占优且依赖合成数据与转写评价。",
+  "originalTitle": "Improving Scientific Formula Verbalization in Large Speech Language Models for Accessible Learning",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0812",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0812.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "公式朗读如何让盲生听懂科学符号",
+  "recordUrl": "https://ijcai.org/proceedings/2026/812",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "b274c8c858820504e54b877c852965d31c9378479aed4b1936d2ac5fbda45cd6"
+}

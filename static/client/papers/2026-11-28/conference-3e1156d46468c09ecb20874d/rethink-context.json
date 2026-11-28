@@ -1,0 +1,66 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "多模态情感极性分析",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Qingdao Institute of Software, College of Computer Science and Technology",
+        "Shandong Key Laboratory of Intelligent Oil & Gas Industrial Software"
+      ],
+      "name": "Chenglizhao Chen"
+    },
+    {
+      "affiliations": [
+        "Qingdao Institute of Software, College of Computer Science and Technology",
+        "Shandong Key Laboratory of Intelligent Oil & Gas Industrial Software"
+      ],
+      "name": "Yuchen Cao"
+    },
+    {
+      "affiliations": [
+        "Qingdao Institute of Software, College of Computer Science and Technology",
+        "Shandong Key Laboratory of Intelligent Oil & Gas Industrial Software"
+      ],
+      "name": "Xinyu Liu"
+    },
+    {
+      "affiliations": [
+        "Qingdao Institute of Software, College of Computer Science and Technology",
+        "Shandong Key Laboratory of Intelligent Oil & Gas Industrial Software"
+      ],
+      "name": "Mengke Song"
+    },
+    {
+      "affiliations": [
+        "Qingdao Institute of Software, College of Computer Science and Technology",
+        "Shandong Key Laboratory of Intelligent Oil & Gas Industrial Software"
+      ],
+      "name": "Guisheng Zhang"
+    },
+    {
+      "affiliations": [
+        "The Hong Kong University of Science and Technology (Guangzhou)"
+      ],
+      "name": "Xiaomin Yu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对缺失补全带来的生成偏置与不可靠模态主导融合带来的融合偏置，本文提出两级参照对齐流程，在表示级与决策级分别引入完整模态与原型参照，并在 CMU-MOSI 与 CMU-MOSEI 的完整模态评测中取得 86.28% 与 85.88% 的准确率，代价是增加模板检索与原型匹配开销且细粒度缺失组合的可核验数字有限。",
+  "originalTitle": "Controlling Decision Drift in Multimodal Sentiment Analysis with Missing Modalities",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0108",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0108.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "以两级参照约束控制缺失模态下的判定漂移",
+  "recordUrl": "https://ijcai.org/proceedings/2026/108",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "2345a30e13ce4b72c806c9b80fded33b6abea566f5caff1798197b6fd08f5740"
+}

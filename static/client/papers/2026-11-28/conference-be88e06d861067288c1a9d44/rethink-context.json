@@ -1,0 +1,86 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "图神经网络",
+    "primaryTask": "音频深度伪造检测",
+    "rankBucket": "前50%",
+    "score": 6.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Mathematics, Korea University, South Korea"
+      ],
+      "name": "Sanghyeok ‍Chung"
+    },
+    {
+      "affiliations": [
+        "Department of Mathematics, Korea University, South Korea"
+      ],
+      "name": "Seungsang Oh"
+    },
+    {
+      "affiliations": [
+        "Department of Mathematics, Korea University, South Korea"
+      ],
+      "name": "Donggun Kim"
+    },
+    {
+      "affiliations": [
+        "Department of Mathematics, Korea University, South Korea"
+      ],
+      "name": "Jeongbin You"
+    },
+    {
+      "affiliations": [
+        "Department of Statistics and Data Science, Chung-Ang University, South Korea",
+        "Department of Smart Cities, Chung-Ang University, South Korea"
+      ],
+      "name": "Il-Youp Kwak"
+    },
+    {
+      "affiliations": [
+        "Department of Statistics and Data Science, Chung-Ang University, South Korea"
+      ],
+      "name": "Gaeun Heo"
+    },
+    {
+      "affiliations": [
+        "Department of Statistics and Data Science, Chung-Ang University, South Korea"
+      ],
+      "name": "Eujin Kim"
+    },
+    {
+      "affiliations": [
+        "Department of Smart Cities, Chung-Ang University, South Korea"
+      ],
+      "name": "Nahyun Lee"
+    },
+    {
+      "affiliations": [
+        "Center for Applied Mathematics, Cornell University, USA"
+      ],
+      "name": "Sunmook Choi"
+    },
+    {
+      "affiliations": [
+        "Department of Big Data Application, Hannam University, South Korea"
+      ],
+      "name": "Soyul Han"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对环境声音伪造泛化难的问题，BEAT2AASIST 以双分支切分与多层融合与多声码器增强改进基线，在 EnvSDD 上以更少集成取得赛道 1 测试 EER 为 1.60% 与赛道 2 测试 EER 为 0.35% 的成绩，代价是双分支计算量与集成调参开销增加。",
+  "originalTitle": "BEAT2AASIST: BEATs Feature Splitting with Dual-Branch AASIST for Environmental Sound Deepfake Detection",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0471",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0471.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "切分频率与通道子空间的环境声音伪造检测",
+  "recordUrl": "https://ijcai.org/proceedings/2026/471",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "e295dd9c195de026dbcc784e22d919342eee0f9bf8e58ca8265c1ac8482b1794"
+}

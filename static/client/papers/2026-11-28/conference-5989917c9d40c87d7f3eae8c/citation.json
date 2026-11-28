@@ -1,0 +1,47 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "School of Information and Communication Engineering, Communication University of China, China"
+      ],
+      "name": "Xiaoying Huang"
+    },
+    {
+      "affiliations": [
+        "School of Data Science and Media Intelligence, Communication University of China, China",
+        "Key Laboratory of Media Audio & Video (Communication University of China)"
+      ],
+      "name": "Sanyi Zhang"
+    },
+    {
+      "affiliations": [
+        "Hainan International College of Communication University of China, China"
+      ],
+      "name": "Xirui Wang"
+    },
+    {
+      "affiliations": [
+        "Key Laboratory of Media Audio & Video (Communication University of China)"
+      ],
+      "name": "Qin Zhang"
+    },
+    {
+      "affiliations": [
+        "School of Data Science and Media Intelligence, Communication University of China, China",
+        "State Key Laboratory of Media Convergence and Communication, Communication University of China"
+      ],
+      "name": "Long Ye"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0136",
+  "originalTitle": "DanceStyleCam: Style-Based 3D Multi-Style Dance Camera Movement Synthesis",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0136",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0136.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/136",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "8e2d496b035613d2dad46d28d1a7d3f838df081c62ff73f8786f861e4892e423",
+  "type": "conference-paper"
+}

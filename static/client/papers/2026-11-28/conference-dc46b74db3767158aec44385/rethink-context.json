@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "评测协议",
+    "primaryTask": "符号音乐生成",
+    "rankBucket": "前50%",
+    "score": 7.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computing, The Hong Kong Polytechnic University"
+      ],
+      "name": "Zhejing Hu"
+    },
+    {
+      "affiliations": [
+        "Department of Computing, The Hong Kong Polytechnic University"
+      ],
+      "name": "Yan Liu"
+    },
+    {
+      "affiliations": [
+        "Department of Computing, The Hong Kong Polytechnic University"
+      ],
+      "name": "Zhi Zhang"
+    },
+    {
+      "affiliations": [
+        "Clozzz Lab"
+      ],
+      "name": "Sean Fontaine"
+    },
+    {
+      "affiliations": [
+        "Clozzz Lab"
+      ],
+      "name": "Gong Chen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对大语言模型能言说乐理却难落实为作品的问题，Music Atelier 以思维图与双维度判定追踪意图到成品的实现过程，专家一致性验证显著优于两类对照，而跨 15 个模型的诊断显示实现率普遍偏低且深层与抽象想法最易丢失，代价是依赖强模型理解与多次模型调用。",
+  "originalTitle": "Music Atelier: Exploring the Knowing–Doing Gap in LLM Creativity via Symbolic Music Composition",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0614",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0614.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "从说到做：符号音乐创作中知行鸿沟的可观察分析",
+  "recordUrl": "https://ijcai.org/proceedings/2026/614",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "06242a3073bd3453202794fa4e571d40a6598100d643b8ca492abb979a388475"
+}

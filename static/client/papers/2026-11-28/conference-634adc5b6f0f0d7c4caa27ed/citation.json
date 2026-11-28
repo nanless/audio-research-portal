@@ -1,0 +1,40 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "MIRIAI"
+      ],
+      "name": "Vladislav Naumov"
+    },
+    {
+      "affiliations": [
+        "MIRIAI"
+      ],
+      "name": "Iaroslav Sheipak"
+    },
+    {
+      "affiliations": [
+        "HSE University"
+      ],
+      "name": "Yuriy Ivanov"
+    },
+    {
+      "affiliations": [
+        "AXXX",
+        "Trusted AI Research Center, RAS"
+      ],
+      "name": "Ilya Makarov"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0982",
+  "originalTitle": "Optimizing Spectrogram Resolution and Training Strategies for Real-Time Killer Whale Call Type Classification",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0982",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0982.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/982",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "6219f410325cb84d3f19150e9e4c685ae7c360fcd49518b685db9f551098f71c",
+  "type": "conference-paper"
+}

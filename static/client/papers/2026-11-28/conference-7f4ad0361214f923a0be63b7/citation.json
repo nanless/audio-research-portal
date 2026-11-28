@@ -1,0 +1,61 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Yihang Lin"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Li Zhou"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen",
+        "Shenzhen Loop Area Institute"
+      ],
+      "name": "Congwei Cao"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen"
+      ],
+      "name": "Dongchu Xie"
+    },
+    {
+      "affiliations": [
+        "Agency for Science, Technology and Research"
+      ],
+      "name": "Xiaoxue Gao"
+    },
+    {
+      "affiliations": [
+        "National University of Singapore"
+      ],
+      "name": "Chen Zhang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Shenzhen",
+        "National University of Singapore",
+        "Shenzhen Research Institute of Big Data",
+        "Shenzhen Loop Area Institute"
+      ],
+      "name": "Haizhou Li"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0652",
+  "originalTitle": "Emo-LiPO: Listwise Preference Optimization for Fine-Grained Emotion Intensity Control in LLM-based Text-to-Speech",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0652",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0652.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/652",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "0fc5cc826033f890704a9195757ce12d15a743750e5d2ff9b163de7aa780d461",
+  "type": "conference-paper"
+}

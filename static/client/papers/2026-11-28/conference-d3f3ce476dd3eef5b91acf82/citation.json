@@ -1,0 +1,64 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education",
+        "School of Cyber Science and Engineering, Wuhan University"
+      ],
+      "name": "Jun Xue"
+    },
+    {
+      "affiliations": [
+        "Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education",
+        "School of Cyber Science and Engineering, Wuhan University"
+      ],
+      "name": "Tong Zhang"
+    },
+    {
+      "affiliations": [
+        "Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education",
+        "School of Cyber Science and Engineering, Wuhan University"
+      ],
+      "name": "Zhuolin Yi"
+    },
+    {
+      "affiliations": [
+        "Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education",
+        "School of Cyber Science and Engineering, Wuhan University"
+      ],
+      "name": "Yihuan Huang"
+    },
+    {
+      "affiliations": [
+        "Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education",
+        "School of Cyber Science and Engineering, Wuhan University"
+      ],
+      "name": "Yi Chai"
+    },
+    {
+      "affiliations": [
+        "Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education",
+        "School of Cyber Science and Engineering, Wuhan University"
+      ],
+      "name": "Yiyang Zhang"
+    },
+    {
+      "affiliations": [
+        "Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education",
+        "School of Cyber Science and Engineering, Wuhan University"
+      ],
+      "name": "Yanzhen Ren"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0667",
+  "originalTitle": "Profiling the Voice: Speaker-Specific Phoneme Fingerprinting for Speech Deepfake Detection",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0667",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0667.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/667",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "eea3b61b595459517149dcb9bca1b0aa02f32a71ae98d449540198beea464149",
+  "type": "conference-paper"
+}

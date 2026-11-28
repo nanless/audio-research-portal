@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Computing, The Hong Kong Polytechnic University"
+      ],
+      "name": "Zhejing Hu"
+    },
+    {
+      "affiliations": [
+        "Department of Computing, The Hong Kong Polytechnic University"
+      ],
+      "name": "Yan Liu"
+    },
+    {
+      "affiliations": [
+        "Department of Computing, The Hong Kong Polytechnic University"
+      ],
+      "name": "Zhi Zhang"
+    },
+    {
+      "affiliations": [
+        "Clozzz Lab"
+      ],
+      "name": "Sean Fontaine"
+    },
+    {
+      "affiliations": [
+        "Clozzz Lab"
+      ],
+      "name": "Gong Chen"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:ijcai:2026:conference-paper-id:ijcai2026-0614",
+  "originalTitle": "Music Atelier: Exploring the Knowing–Doing Gap in LLM Creativity via Symbolic Music Composition",
+  "paperId": "conference:ijcai:2026:conference-paper-id:ijcai2026-0614",
+  "pdfUrl": "https://ijcai.org/proceedings/2026/0614.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://ijcai.org/proceedings/2026/614",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "06242a3073bd3453202794fa4e571d40a6598100d643b8ca492abb979a388475",
+  "type": "conference-paper"
+}
