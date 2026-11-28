@@ -2,8 +2,8 @@
   "contract": "conference-directory-metadata-v1",
   "checkedAt": "2026-11-28",
   "inventory": {
-    "blogMain": "648060418617d0718d62291c01995127429d3095",
-    "conferenceEditionCount": 33,
+    "blogMain": "5f80f7cbb151cdd6f768eb3846ee27ef51b8c662",
+    "conferenceEditionCount": 35,
     "allYears": [
       2026
     ],
@@ -188,6 +188,69 @@
         "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
         "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
         "sourceType": "ccf-authored-formal-document-public-copy"
+      }
+    },
+    {
+      "id": "audio-aaai-2026",
+      "venueId": "audio-aaai",
+      "name": "Audio-AAAI",
+      "fullName": "Audio-Centric AI: Towards Real-World Multimodal Reasoning and Application Use Cases",
+      "year": 2026,
+      "editionNumber": 1,
+      "aliases": [
+        "Audio-AAAI",
+        "Audio-AAAI 2026",
+        "PMLR Vol. 312",
+        "Audio-Centric AI: Towards Real-World Multimodal Reasoning and Application Use Cases"
+      ],
+      "summaryPath": "/posts/conference-audio-aaai-2026/",
+      "categoryPath": "/categories/audio-aaai-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-audio-aaai-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/audio-aaai-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "以音频为中心的多模态推理、检索增强、客观评测与真实应用专题研讨会（PMLR 第 312 卷）；本届与 AAAI 2026 同地举办。",
+      "domainPosition": "以音频为中心的多模态推理、检索增强、客观评测与真实应用专题研讨会（PMLR 第 312 卷）；本届与 AAAI 2026 同地举办。",
+      "domainSourceUrl": "https://proceedings.mlr.press/v312/",
+      "event": {
+        "startDate": "2026-01-26",
+        "endDate": "2026-01-26",
+        "status": "confirmed",
+        "location": "新加坡",
+        "sourceUrl": "https://proceedings.mlr.press/v312/",
+        "checkedAt": "2026-11-28",
+        "scope": "official-event-range"
+      },
+      "relationship": {
+        "kind": "workshop",
+        "parentConferenceId": "aaai-2026",
+        "sourceUrl": "https://proceedings.mlr.press/v312/",
+        "checkedAt": "2026-11-28",
+        "sourceQuote": "Audio-Centric AI: Towards Real-World Multimodal Reasoning and Application Use Cases (Audio-AAAI 2026), held in conjunction with AAAI 2026 in Singapore."
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "edition": "第七版（2026年，4月9日更新）",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-11-28",
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy",
+        "grade": "unlisted",
+        "field": "",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "pageNumber": null
       }
     },
     {
@@ -1502,6 +1565,64 @@
       }
     },
     {
+      "id": "sigdial-2026",
+      "venueId": "sigdial",
+      "name": "SIGDIAL",
+      "fullName": "Annual Meeting of the Special Interest Group on Discourse and Dialogue",
+      "year": 2026,
+      "editionNumber": 27,
+      "aliases": [
+        "SIGDIAL",
+        "SIGDIAL 2026",
+        "Annual Meeting of the Special Interest Group on Discourse and Dialogue",
+        "篇章与对话会议"
+      ],
+      "summaryPath": "/posts/conference-sigdial-2026/",
+      "categoryPath": "/categories/sigdial-2026-论文/",
+      "links": [
+        {
+          "label": "会议总览",
+          "path": "/posts/conference-sigdial-2026/",
+          "scope": "blog-summary"
+        },
+        {
+          "label": "论文导读",
+          "path": "/categories/sigdial-2026-论文/",
+          "scope": "blog-guides"
+        }
+      ],
+      "description": "ACL/ISCA 联合支持的篇章与对话系统国际会议，覆盖口语对话、全双工语音交互、轮次切换与语音对话大模型。",
+      "domainPosition": "ACL/ISCA 联合支持的篇章与对话系统国际会议，覆盖口语对话、全双工语音交互、轮次切换与语音对话大模型。",
+      "domainSourceUrl": "https://2026.sigdial.org/",
+      "event": {
+        "startDate": "2026-08-02",
+        "endDate": "2026-08-05",
+        "status": "confirmed",
+        "location": "美国·亚特兰大",
+        "sourceUrl": "https://2026.sigdial.org/",
+        "checkedAt": "2026-11-28",
+        "scope": "official-event-range",
+        "mainConferenceStartDate": "2026-08-03",
+        "mainConferenceEndDate": "2026-08-05"
+      },
+      "ranking": {
+        "scheme": "CCF",
+        "edition": "第七版（2026年，4月9日更新）",
+        "sourceUrl": "https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml",
+        "catalogSourceUrl": "https://raw.githubusercontent.com/LovenSar/CCF_RANK/main/%E7%AC%AC%E4%B8%83%E7%89%88%E4%B8%AD%E5%9B%BD%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%BC%9A%E6%8E%A8%E8%8D%90%E5%9B%BD%E9%99%85%E5%AD%A6%E6%9C%AF%E4%BC%9A%E8%AE%AE%E5%92%8C%E6%9C%9F%E5%88%8A%E7%9B%AE%E5%BD%95%EF%BC%88%E6%AD%A3%E5%BC%8F%E7%89%88%EF%BC%89-CCF-ABC.pdf",
+        "verificationStatus": "document-read",
+        "checkedAt": "2026-11-28",
+        "sourceSha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+        "officialAttachmentUrl": "https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=112CF3BF7E1140ACEB271ADAED12A67ADFABB8FF099E40C2759502A85C8A281F",
+        "sourceType": "ccf-authored-formal-document-public-copy",
+        "grade": "unlisted",
+        "field": "",
+        "scope": "not-listed",
+        "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
+        "pageNumber": null
+      }
+    },
+    {
       "id": "sigul-2026",
       "venueId": "sigul",
       "name": "SIGUL",
@@ -1886,6 +2007,13 @@
         "scope": "not-listed",
         "note": "本次核对的第七版正式目录未列此会议；未收录不表示低档次，不从同地举办或主办会议继承档次。",
         "pageNumber": null
+      },
+      "relationship": {
+        "kind": "workshop",
+        "parentConferenceId": "sigdial-2026",
+        "sourceUrl": "https://sites.google.com/view/wochat2026/call-for-papers",
+        "checkedAt": "2026-11-28",
+        "sourceQuote": "WOCHAT 2026 is co-located with SIGDIAL 2026 in Atlanta, Georgia, USA."
       }
     }
   ]
