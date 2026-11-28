@@ -1,0 +1,49 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "CNN",
+    "primaryTask": "生态物种识别与分布预测",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Jing Yang"
+    },
+    {
+      "affiliations": [
+        "Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Siyi Li"
+    },
+    {
+      "affiliations": [
+        "Signal Processing Research Center, Tampere University, Tampere, Finland"
+      ],
+      "name": "Yuzhu Wang"
+    },
+    {
+      "affiliations": [
+        "Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Gongping Huang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对大群体同步鸣叫重叠导致传统计数系统性低估的问题，论文提出两阶段重叠鸣叫密度回归，经平方根域损失与线性映射恢复绝对数量，在开发集留一验证中把平均绝对误差从 23.0 降至 1.5 并在官方评测中排名第一，代价是依赖少量站点真值校准与计数范围选择。",
+  "originalTitle": "Overlapping Call Density Regression for Acoustic Population Size Estimation",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-64",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Yang_64.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "重叠鸣叫密度回归如何从严重重叠录音中估计鸟类种群数量",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "402c9c7f894dead914770e78751b1177cb15c7a716f2a7dec2184b1ebfb8617a"
+}

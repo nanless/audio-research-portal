@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "测试时计算扩展",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "LTCI, Télécom Paris, Institut Polytechnique de Paris, France"
+      ],
+      "name": "Michel Olvera"
+    },
+    {
+      "affiliations": [
+        "LTCI, Télécom Paris, Institut Polytechnique de Paris, France"
+      ],
+      "name": "Paraskevas Stamatiadis"
+    },
+    {
+      "affiliations": [
+        "LTCI, Télécom Paris, Institut Polytechnique de Paris, France"
+      ],
+      "name": "Gaël Richard"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对大型音频语言模型单次预测不稳定且等权投票难以利用分歧的问题，本文提出无需训练的对数概率置信度加权汇合，在 MMAR 上以 Borda 等累加方法在 N = 16 时平均超越多数投票并改善校准，而代价是多倍解码开销与超过 8 后收益饱和。",
+  "originalTitle": "Confidence-Aware Aggregation for Multimodal Audio Reasoning",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-67",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Olvera_67.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "把输出波动变为可靠性：面向音频问答的置信度加权汇合",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "0dcb6746cb4ff8cfefde7d40c56b0f1807b4668ecfbd50a541002bda4079234b"
+}

@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "规则与词典方法",
+    "primaryTask": "音频问答",
+    "rankBucket": "后50%",
+    "score": 5.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Hyun Jun Kim"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多选题模型依赖文本捷径而非音频作答的问题，本文以统一答案字母接口串联规则路由声学标注器与音频对照适配及重排融合，在官方评测集上以免训练分支 57.30% 居轻量组第一、混合集成 58.33% 居总体第一，但适配分支未能单独超越免训练分支且小幅差异不可归因于单一部件。",
+  "originalTitle": "Acoustic Tagger-Assisted Inference and Audio-Contrastive Adaptation for Audio-Dependent Question Answering",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-36",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Jun_36.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "靠听觉证据而非文本捷径作答：声学标注辅助与音频对照适配的问答系统",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "d8fdf4a9c791889c40b252ebd04b84d5a91b4be77f6173d72944715749c3c3b9"
+}

@@ -1,0 +1,44 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Conformer",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 7.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Matthias Nagl"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Paul Primus"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria",
+        "LIT Artificial Intelligence Lab, Linz, Austria"
+      ],
+      "name": "Gerhard Widmer"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "南极鲸叫检测需在长时低信噪比录音中跨站点定位稀疏叫声，NAVE 以每频点去均值加 PCEN 双通道、频率动态前端与 153 帧宽核 Conformer 在留一站点验证中以 0.518 宏观 F1 超过 0.475 的强基线，代价是 BMABZ 略降且 D 类仍最弱。",
+  "originalTitle": "NAVE: A Normalized, Adaptive Conformer for Antarctic Whale Vocalization Detection",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-3",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Nagl_3.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "归一化自适应 Conformer 如何检测南极鲸叫声",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "42a766d99716873f004abf7ed8f22c6103aeeb1d8a8aebdc18e4faa436d1d765"
+}

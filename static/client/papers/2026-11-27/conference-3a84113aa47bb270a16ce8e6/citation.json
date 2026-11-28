@@ -1,0 +1,76 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Southwestern University of Finance and Economics, China",
+        "MiLM Plus, Xiaomi Inc., China"
+      ],
+      "name": "Haoyu Wang"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, China"
+      ],
+      "name": "Han Dou"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, China"
+      ],
+      "name": "Hui Chen"
+    },
+    {
+      "affiliations": [
+        "Southwestern University of Finance and Economics, China"
+      ],
+      "name": "Yushan Du"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, China"
+      ],
+      "name": "Liushi Tu"
+    },
+    {
+      "affiliations": [
+        "Southwestern University of Finance and Economics, China"
+      ],
+      "name": "Ningning Pan"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, China"
+      ],
+      "name": "Hao Zhang"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology, USA"
+      ],
+      "name": "Jingyao Wu"
+    },
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc., China"
+      ],
+      "name": "Gang Li"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, China"
+      ],
+      "name": "Gongping Huang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-85",
+  "originalTitle": "PB-MFS: Multi-Funnel Selection with Pareto-Balanced Uncertainty and Diversity for Bioacoustic Active Learning",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-85",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Wang_85.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "fc53573eab3e82b51893f8546fbdafab55950c20004842919e67da57323eb99a",
+  "type": "conference-paper"
+}

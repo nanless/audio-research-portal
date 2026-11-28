@@ -1,0 +1,62 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 6.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Florian Schmid"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Paul Primus"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Alexander Fichtinger"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Tara Jadidi"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Tobias Morocutti"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria",
+        "LIT Artificial Intelligence Lab, Linz, Austria"
+      ],
+      "name": "Gerhard Widmer"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对合成与网络爬取基准与真实家庭部署脱节的问题， RealDESED 以 5,710 个真实家庭录音加多标注者评审标签与丰富元数据构建基准， ATST-F 基线经加权软标签与 cSEBBs 后处理在测试集达到宏平均 PSDS1 为 0.731 ，代价是类别与设备分布不均及长时推理与人工评审开销。",
+  "originalTitle": "RealDESED: A Real-World Domestic Sound Event Detection Benchmark",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-40",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Schmid_40.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "真实家庭录音如何支撑声音事件检测基准",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "c179cc1f0a0839e573ad82177ee621c09a1105649cda32076e94683e591d5044"
+}

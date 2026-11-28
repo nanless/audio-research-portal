@@ -1,0 +1,52 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "约束数值优化",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Audio Research Group, Tampere University, Tampere, Finland",
+        "Department for the Ecology of Animal Societies, Max Planck Institute of Animal Behavior"
+      ],
+      "name": "Shiqi Zhang"
+    },
+    {
+      "affiliations": [
+        "Department for the Ecology of Animal Societies, Max Planck Institute of Animal Behavior",
+        "International Max Planck Research School for Quantitative Behavior, Ecology and Evolution",
+        "Department of Biology, University of Konstanz"
+      ],
+      "name": "Marius Faiß"
+    },
+    {
+      "affiliations": [
+        "Department for the Ecology of Animal Societies, Max Planck Institute of Animal Behavior"
+      ],
+      "name": "Ariana Strandburg-Peshkin"
+    },
+    {
+      "affiliations": [
+        "Audio Research Group, Tampere University, Tampere, Finland"
+      ],
+      "name": "Tuomas Virtanen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对稀疏长尾帧级生物声学标注中整段打分易被大量自信无叫声帧淹没的问题，本文提出按预测残差加权的帧级 BADGE 伪梯度聚合与贪心对数体积最大化批量选择，在鬣狗 10 种叫声任务 10 次重复中以 56.7% ± 0.9% 的预算平均测试宏 mAP 与 47.4% ± 1.7% 的稀有类预算平均值领先包含 MFFT 在内的全部对照策略，并以 2,040 ± 126 个片段实现 100% 到达同流程全监督均值。",
+  "originalTitle": "Greedy Volume Maximization of Gradient Embeddings for Long-Tailed Frame-Level Bioacoustic Active Learning",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-42",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Zhang_42.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "贪心体积最大化如何改善长尾帧级生物声学主动学习",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "eade0155f9b68c66e32850ae9f644f940aa0e5a153911b252c0f5182e018c5e4"
+}

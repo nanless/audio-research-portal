@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "模型融合",
+    "primaryTask": "音频时间定位",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Electrical Engineering, National Tsing Hua University, Taiwan"
+      ],
+      "name": "Snehit Chunarkar"
+    },
+    {
+      "affiliations": [
+        "Electronics and Communication Engineering, SRM University, Chennai, India"
+      ],
+      "name": "Krishnagiri Hamza"
+    },
+    {
+      "affiliations": [
+        "Department of Electrical Engineering, National Tsing Hua University, Taiwan"
+      ],
+      "name": "Chi-Chun Lee"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对长录音中按文字描述预测起止时间的问题，本文在冻结 AM-DETR 定位头下系统比较多种预训练编码器与拼接集成，并以双 CLAP 集成加两阶段训练在 CASTELLA 测试集上取得 R1@0.7 为 26.43 ，接近两阶段参考 13.59 的两倍，代价是多编码器拼接与合成预训练带来的存储与计算开销。",
+  "originalTitle": "Exploring Pretrained Audio-Text Encoders for Audio Moment Retrieval: DCASE 2026 Task 6",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-79",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Chunarkar_79.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "换编码器能否让长音频时刻检索定位更准",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "bdc0c8a2c8a92be6ccdafb386e9e0b6dab416612bb9b484dab5d25fb85e2851f"
+}

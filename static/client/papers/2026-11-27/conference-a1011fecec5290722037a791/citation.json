@@ -1,0 +1,52 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Florian Schmid"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Paul Primus"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Alexander Fichtinger"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Tara Jadidi"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Tobias Morocutti"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria",
+        "LIT Artificial Intelligence Lab, Linz, Austria"
+      ],
+      "name": "Gerhard Widmer"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-40",
+  "originalTitle": "RealDESED: A Real-World Domestic Sound Event Detection Benchmark",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-40",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Schmid_40.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "c179cc1f0a0839e573ad82177ee621c09a1105649cda32076e94683e591d5044",
+  "type": "conference-paper"
+}

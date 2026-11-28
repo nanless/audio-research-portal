@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Tufts University, Medford, MA, USA"
+      ],
+      "name": "João Quintanilha"
+    },
+    {
+      "affiliations": [
+        "Tufts University, Medford, MA, USA"
+      ],
+      "name": "Emma Virnelli"
+    },
+    {
+      "affiliations": [
+        "Tufts University, Medford, MA, USA"
+      ],
+      "name": "Shuo Zhang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对喀哒声个体信息依附类型与候选池而难以辨识的问题，双通道对比编码器把标注节律与全段频谱分开编码再融合，在 1,383 段上随机个体均值达 0.597 但仍低于简单拼接对照与强时序对照，且按日期分组与按年留出暴露明显的泛化落差。",
+  "originalTitle": "Dual-Channel Contrastive Encoding of Sperm Whale Coda",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-70",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Quintanilha_70.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "节律与频谱分开编码能否更好地读懂抹香鲸喀哒声",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "593514c63d29355eeb83143e94c7aa1c7fc63adf03bdac34ff10d6afd928eaf4"
+}

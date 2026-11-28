@@ -1,0 +1,37 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频时间定位",
+    "rankBucket": "前50%",
+    "score": 6.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "KAIST, Daejeon, Republic of Korea"
+      ],
+      "name": "Seungdeok Choi"
+    },
+    {
+      "affiliations": [
+        "KAIST, Daejeon, Republic of Korea"
+      ],
+      "name": "Yong-Hwa Park"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对长录音中自由文本查询的起止定位在严格交并比下对短而多的时刻格外困难的问题，本文以冻结 M2D-CLAP 加 QD-DETR 为底座叠加粗监督含噪恢复双向状态空间有界级联与三级对齐并在推理时把帧显著性复用为并行提案流，在 1,347 个查询开发集上把 R1@0.7 从 25.76 推到 33.70 且盲测单模型达 41.24 并列第 6，代价是双检查点汇合与显著性提案的额外推理开销及开发集优选设置向盲测迁移有限。",
+  "originalTitle": "Temporal-Scale Modeling and Audio-Text Alignment for Audio Moment Retrieval with Zero-Training Saliency Reuse",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-58",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Choi_58.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "跨时间尺度与多粒度对齐的音频时刻检索及免训练显著性复用",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "42c3a331f066ef1f934a819ad5c167ed0448951b8343575f988760bf1491380b"
+}

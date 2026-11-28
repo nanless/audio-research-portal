@@ -1,0 +1,59 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Dept. of AI Convergence"
+      ],
+      "name": "Jongyeon Park"
+    },
+    {
+      "affiliations": [
+        "Dept. of AI Convergence"
+      ],
+      "name": "Do-Hyeon Lim"
+    },
+    {
+      "affiliations": [
+        "Dept. of EECS"
+      ],
+      "name": "Sang-won Park"
+    },
+    {
+      "affiliations": [
+        "Dept. of AI Convergence",
+        "Dept. of EECS",
+        "AunionAI Co., Ltd., Gwangju, Korea"
+      ],
+      "name": "Hong Kook Kim"
+    },
+    {
+      "affiliations": [
+        "AI Lab., R&D Center, Hanwha Vision"
+      ],
+      "name": "Kyungdeuk Ko"
+    },
+    {
+      "affiliations": [
+        "AI Lab., R&D Center, Hanwha Vision"
+      ],
+      "name": "Hyeongcheol Geum"
+    },
+    {
+      "affiliations": [
+        "AI Lab., R&D Center, Hanwha Vision"
+      ],
+      "name": "Jeong Eun Lim"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-81",
+  "originalTitle": "Parameter Isolation with Domain-Specific Experts for Incremental Audio Classification",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-81",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Park_81.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "354d774ff889f962d2fd789cba50c415a0faca61016783d732265bcd563d9804",
+  "type": "conference-paper"
+}

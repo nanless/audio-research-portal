@@ -1,0 +1,53 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "联合声音事件检测定位",
+    "rankBucket": "前50%",
+    "score": 6.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Nanjing University, China",
+        "The Chinese University of Hong Kong, Hong Kong SAR, China",
+        "Shun Hing Institute of Advanced Engineering (SHIAE), Hong Kong SAR, China"
+      ],
+      "name": "Runbang Wang"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China",
+        "Shun Hing Institute of Advanced Engineering (SHIAE), Hong Kong SAR, China"
+      ],
+      "name": "Qiuqiang Kong"
+    },
+    {
+      "affiliations": [
+        "The Chinese University of Hong Kong, Hong Kong SAR, China",
+        "Shun Hing Institute of Advanced Engineering (SHIAE), Hong Kong SAR, China"
+      ],
+      "name": "Zining Liang"
+    },
+    {
+      "affiliations": [
+        "Institute of Acoustics, Chinese Academy of Sciences, China"
+      ],
+      "name": "Yin Cao"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对只预测点方向而缺失声源区域与能量的不足，SAID 以按方向排布的全景特征加 16 个槽位查询逐源预测带标签声学图，在 DCASE2026 官方评价集上以 0.1080 的 Macro mAP 与 0.3962 的 Macro Pearson r 位列第一，代价是依赖大规模仿真预训练与外部语义编码器且绝对精度仍低、实时性未验证。",
+  "originalTitle": "SAID: Semantic Acoustic Imaging Detector for Sound Event Localization and Detection",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-46",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Wang_46.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "从 4 通道音频到带标签声学图：SAID 如何同时预测声源区域、能量与类别",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "8f8fa031de440ffaac95a4e65a89ea97a81fd84faf9697ccb4d73e36c6fd5a14"
+}

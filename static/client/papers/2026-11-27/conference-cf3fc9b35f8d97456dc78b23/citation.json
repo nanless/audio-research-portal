@@ -1,0 +1,46 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "New Jersey Institute of Technology, Newark NJ, USA",
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Sripathi Sridhar"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Gordon Wichern"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Yoshiki Masuyama"
+    },
+    {
+      "affiliations": [
+        "New Jersey Institute of Technology, Newark NJ, USA"
+      ],
+      "name": "Mark Cartwright"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Jonathan Le Roux"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-49",
+  "originalTitle": "Evaluating Inference-time Algorithms for Semantic Sound Scene Segmentation",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-49",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Sridhar_49.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "b036d006c9f5739643f0eb72766a427333077feb0441b8d409adeff1fc2c58b4",
+  "type": "conference-paper"
+}

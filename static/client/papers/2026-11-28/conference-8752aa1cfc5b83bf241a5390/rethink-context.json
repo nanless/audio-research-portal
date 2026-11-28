@@ -1,0 +1,44 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Paul Primus"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Pao Lin"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception, Johannes Kepler University Linz, Austria",
+        "LIT Artificial Intelligence Lab, Linz, Austria"
+      ],
+      "name": "Gerhard Widmer"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 Freesound 录音 23 类异构分类，本文用大模型类别预测与音频文本嵌入融合叠加干净教师生成的软伪标签三阶段训练，在 BSD10k 上以 82.04% 的分层 F1 取得 41 个提交中的第一，但相对教师集成的增量仅 0.41 个百分点且随伪标签数据迅速饱和，剩余误差集中于定义本就模糊的室内外声景等重叠类别。",
+  "originalTitle": "Broad Sound Taxonomy Classification with Textual Metadata and Crowdsourced Annotations",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-33",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Primus_33.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "文本元数据与软伪标签如何改进宽类别声音分类",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "afbfe24fdffd12920fec5cbf7dd5b8c025648182e928b5124b0f9eda92db3025"
+}

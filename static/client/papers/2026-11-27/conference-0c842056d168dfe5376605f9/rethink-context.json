@@ -1,0 +1,37 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 6.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Audio Research Group, Tampere University, Tampere, Finland"
+      ],
+      "name": "Shiqi Zhang"
+    },
+    {
+      "affiliations": [
+        "Audio Research Group, Tampere University, Tampere, Finland"
+      ],
+      "name": "Tuomas Virtanen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对低预算帧级音频分类中不一致优先整组准入与最远遍历偏向离群的冗余盲区，论文提出不一致加权设施选址以整笔预算优化加权覆盖，在 DESED 与 DataSED 上以 0.735 ± 0.003 与 0.660 ± 0.002 的曲线下面积居首，代价是相对普通覆盖仅提升 0.004 且结论限于 500 个标注内的冻结编码器设置。",
+  "originalTitle": "Cover First, Disagree Softly: Rethinking Mismatch-First Active Learning for Frame-Level Audio Classification",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-43",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Zhang_43.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "先覆盖再柔和分歧：低预算帧级音频分类主动学习重审",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "88efb9bd9e2201c306f52e0c50fc0491b5ac680dfe65ca6986d49b7d4928aedc"
+}

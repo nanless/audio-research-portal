@@ -1,0 +1,21 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Jiayi Yu"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-76",
+  "originalTitle": "Enhanced CLAP Representations with Neighborhood Refinement for Heterogeneous Audio Classification",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-76",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Yu_76.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "21bce12380a46814d6d168d566431d4ea2e21d2585dedb521fe5bcf91a468815",
+  "type": "conference-paper"
+}

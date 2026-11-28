@@ -1,0 +1,49 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Shikhar Bharadwaj"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Samuele Cornell"
+    },
+    {
+      "affiliations": [
+        "Carnegie Mellon University, USA"
+      ],
+      "name": "Shinji Watanabe"
+    },
+    {
+      "affiliations": [
+        "Stanford, USA"
+      ],
+      "name": "Malcolm Slaney"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "论文固定语料来源追问事件时间密度如何塑造表示，证明 30 小时人工精选发声在 BEATs 线性探测下比 1,240 小时原始录音高约 29 个百分点，而自动过滤与更好分词器都难以弥合差距，代价是精选依赖人工且现有检测器在水下宽带噪声中召回不足。",
+  "originalTitle": "Drowning in Noise: On Signal Saliency in Self-Supervised Learning for Ocean Acoustics",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-15",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Bharadwaj_15.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "淹没在噪声中：海洋声学自监督学习里的信号显著性",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "eca03edd9887bac28903b9ef90e00a8f6be0ef4b2ed21ac0127818235416ac55"
+}

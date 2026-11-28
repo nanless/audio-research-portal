@@ -1,0 +1,61 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "知识蒸馏",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.8
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Jinzhe Wang"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Xingyue Li"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Yongyi Deng"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Xin Hai"
+    },
+    {
+      "affiliations": [
+        "Signal Processing Research Center, Tampere University, Tampere, Finland"
+      ],
+      "name": "Yuzhu Wang"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Gongping Huang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对微控制器鸟鸣识别中稀疏鸣叫易被平均池化稀释且低分辨率前端限制判别力的问题，本文用高分辨率多架构 19 模型教师池向低分辨率 MobileNetV2-MP 学生做两阶段非对称蒸馏，在 BioDCASE-Tiny 2026 个任务 3 的 ESP32-S3 赛道上获得第一，验证集准确率从 0.563 提升到 0.744 且体积与内存同步下降，代价是离线训练成本高、验证集仅 550 个样本且相似物种召回仍低。",
+  "originalTitle": "Hardware-Aware Representation-Asymmetric Distillation with a Teacher Pool for Tiny Bioacoustic Recognition",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-93",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Wang_93.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "面向微控制器的非对称教师池蒸馏鸟鸣识别",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "cb68624ed3d9ab7f656095c58fad9bebb9442ebb24149a4739aa5c8a6eca7f26"
+}

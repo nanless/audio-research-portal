@@ -1,0 +1,69 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "持续学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Dept. of AI Convergence"
+      ],
+      "name": "Jongyeon Park"
+    },
+    {
+      "affiliations": [
+        "Dept. of AI Convergence"
+      ],
+      "name": "Do-Hyeon Lim"
+    },
+    {
+      "affiliations": [
+        "Dept. of EECS"
+      ],
+      "name": "Sang-won Park"
+    },
+    {
+      "affiliations": [
+        "Dept. of AI Convergence",
+        "Dept. of EECS",
+        "AunionAI Co., Ltd., Gwangju, Korea"
+      ],
+      "name": "Hong Kook Kim"
+    },
+    {
+      "affiliations": [
+        "AI Lab., R&D Center, Hanwha Vision"
+      ],
+      "name": "Kyungdeuk Ko"
+    },
+    {
+      "affiliations": [
+        "AI Lab., R&D Center, Hanwha Vision"
+      ],
+      "name": "Hyeongcheol Geum"
+    },
+    {
+      "affiliations": [
+        "AI Lab., R&D Center, Hanwha Vision"
+      ],
+      "name": "Jeong Eun Lim"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对旧域音频不可用时增量分类容易遗忘旧知识的问题，论文提出每域追加冻结专家的全阶循环更新并以无数据回放与跨域生成补齐输入，在 DCASE 2026 个任务 7 上以 78.38% 的微观准确率与 78.92% 的宏观准确率超越基线约 33 与 25 个百分点，代价是参数与拼接维度随域数增长且集成开销更大。",
+  "originalTitle": "Parameter Isolation with Domain-Specific Experts for Incremental Audio Classification",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-81",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Park_81.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "领域专用专家隔离参数实现增量音频分类",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "354d774ff889f962d2fd789cba50c415a0faca61016783d732265bcd563d9804"
+}

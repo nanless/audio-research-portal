@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Jiayi Yu"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对宽声音分类中对比预训练语义对齐强但声学细节不足的问题，本文以对数谱分支与逐维门控文本适配增强表示并辅以邻域修正与数据扩展，在官方隐藏集上单模型达 80.0% 层级 F1、集成达 81.1% 获第二名，代价是依赖检索库与多模型推理开销。",
+  "originalTitle": "Enhanced CLAP Representations with Neighborhood Refinement for Heterogeneous Audio Classification",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-76",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Yu_76.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "邻域修正增强 CLAP 表示的异构音频分类方法解读",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "21bce12380a46814d6d168d566431d4ea2e21d2585dedb521fe5bcf91a468815"
+}

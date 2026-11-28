@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "New York University, USA"
+      ],
+      "name": "Julia Wilkins"
+    },
+    {
+      "affiliations": [
+        "Bosch Research, USA"
+      ],
+      "name": "Wei-Ching Lin"
+    },
+    {
+      "affiliations": [
+        "Bosch Research, USA"
+      ],
+      "name": "Abinaya Kumar"
+    },
+    {
+      "affiliations": [
+        "Bosch Research, USA"
+      ],
+      "name": "Shabnam Ghaffarzadegan"
+    },
+    {
+      "affiliations": [
+        "New York University, USA"
+      ],
+      "name": "Juan Pablo Bello"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "预训练音频频谱 Transformer 因绑定固定短时傅里叶变换分辨率而在偏离原始窗跳时分类性能大幅下降，本文以冻结主干加轻量对数窗跳条件调制实现多分辨率适配，在 1,600 窗长将中位平均精度均值从 0.166 恢复至 0.313 并以 1,000 至 5,000 个样本接近全量效果，同时将原始配置保持在仅低 0.013 的水平，但结论仅限同域分类与窗跳两轴且极端配置仍偏低。",
+  "originalTitle": "STFT Frontend Mismatch in Pretrained Audio Spectrogram Transformers: Analysis and Adaptation",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-31",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Wilkins_31.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "预训练音频频谱 Transformer 的短时傅里叶变换前端失配：分析与适配",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "49423b3b1afa39fd725582e6d9e151e166294e91e94d3153b6dfcae98368ffaf"
+}

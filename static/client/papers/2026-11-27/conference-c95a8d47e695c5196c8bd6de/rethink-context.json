@@ -1,0 +1,67 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "联合声音事件检测定位",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Yishuo Yang"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Zheng Wen"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Huayang Wang"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Xinwei Wu"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Chunrui Zhao"
+    },
+    {
+      "affiliations": [
+        "Institute of Sound and Vibration Research, University of Southampton, Southampton, SO17 1BJ, UK"
+      ],
+      "name": "Jilu Jin"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Gongping Huang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 4 通道观测重建高分辨率语义声学掩膜的超分辨率难题，本文以 UpLAM 声学图加 Mask R-CNN 实例检测统一两条赛道，视听第一系统以宏观平均精度 0.0131 夺冠，代价是紧致检测与能量相关的校准难以兼得且精细阈值精度仍极低。",
+  "originalTitle": "Unified Acoustic Map-Based Instance Modeling for Semantic Acoustic Imaging and Sound Event Localization",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-88",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Yang_88.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "从低分辨声学图到紧致语义能量区：统一实例建模如何支撑纯音频与视听定位",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "4d01f968ab87c7321e9f1e455707fce642b78407c474bac4d5db086f341810c3"
+}

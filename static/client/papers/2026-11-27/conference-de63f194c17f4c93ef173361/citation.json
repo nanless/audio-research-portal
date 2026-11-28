@@ -1,0 +1,48 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "National Institute of Advanced Industrial Science and Technology (AIST), Japan",
+        "University of Tsukuba, Japan"
+      ],
+      "name": "Shun Sakurai"
+    },
+    {
+      "affiliations": [
+        "National Institute of Advanced Industrial Science and Technology (AIST), Japan",
+        "Waseda University, Japan"
+      ],
+      "name": "Yudai Kandori"
+    },
+    {
+      "affiliations": [
+        "National Institute of Advanced Industrial Science and Technology (AIST), Japan"
+      ],
+      "name": "Yoshiaki Bando"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Japan",
+        "National Institute of Advanced Industrial Science and Technology (AIST), Japan"
+      ],
+      "name": "Keisuke Imoto"
+    },
+    {
+      "affiliations": [
+        "National Institute of Advanced Industrial Science and Technology (AIST), Japan"
+      ],
+      "name": "Masaki Onishi"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-75",
+  "originalTitle": "DOOM-SED: Downstream-Oriented Open-Vocabulary Model for Sound Event Detection",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-75",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Sakurai_75.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "c3a7516d16721e779c081683d6581b8c6572fdc9ac3e796477bf8018d62e34ba",
+  "type": "conference-paper"
+}

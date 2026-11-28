@@ -1,0 +1,49 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "状态空间模型",
+    "primaryTask": "音频时间定位",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Chung-Ang University, Seoul, Republic of Korea"
+      ],
+      "name": "JeongRae Kim"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University, Seoul, Republic of Korea"
+      ],
+      "name": "Ho jun Jung"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University, Seoul, Republic of Korea"
+      ],
+      "name": "Yewon Park"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University, Seoul, Republic of Korea"
+      ],
+      "name": "Changwon Lim"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对长音频中自然语言查询的语义匹配与精确边界难以兼顾的问题，QAM-DETR 以冻结多特征门控融合、三路交叉注意、双向 Mamba 编码与交并比质量分支构建渐进定位流程，在 DCASE 2026 个任务 6 官方评测集上以 R1@0.5 为 63.84% 与 R1@0.7 为 48.59% 取得并列第一，代价是依赖多配置集成与冻结大模型对前 10 候选的重排且不修正边界。",
+  "originalTitle": "QAM-DETR: Quality-Aware Mamba DETR for Audio Moment Retrieval from Long Audio",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-35",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Kim_35.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "质量感知长音频时刻检索：门控融合与双向时序建模",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "fb039ff4ad1f4f312d9c61a75ee9d017436ad0a6fbb3962932ba01db8493fe04"
+}

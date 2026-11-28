@@ -1,0 +1,139 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Haolin He"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Renhe Sun"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Zheqi Dai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Xingjian Du"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Chunyat Wu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Zining Liang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Zhengxi Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Jiahe Lei"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Runbang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Jiayi Zhou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Mingru Yang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Xiquan Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Yun Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Xie Chen"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Zhiyao Duan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Weiqiang Wang"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Mark Plumbley"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Jian Liu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Qiuqiang Kong"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "DCASE 2026 个任务 5 以四阶段音频依赖过滤筛除可凭文字答对的题目形成含 3,000 道题的 ADQA-Bench，36 个提交中以 MOSS 与 Qwen3-Omni 集成的 58.33% 为最高，而可比提交平均比开发集低 11.91 个百分点且 233 道题被全部错过，揭示轻量编排可接近大规模集成的同时仍需承担跨分布落差与增益未分离的代价。",
+  "originalTitle": "Summary of DCASE 2026 Task 5: Audio-Dependent Question Answering",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-11",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_He_11.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "靠听才能答对：DCASE 2026 音频依赖问答的过滤、参赛与落差",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "6be58480b2a917f2326746c0ec9c4320a677ad8934bf1a7fa4a3d38651c19a16"
+}

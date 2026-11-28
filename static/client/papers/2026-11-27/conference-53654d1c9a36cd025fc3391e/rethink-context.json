@@ -1,0 +1,37 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Panagiota Anastasopoulou"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Frederic Font"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "DCASE 2026 个任务 1 以 5 个顶层和 23 个二级的 BST 为目标评估异构音频分类，基线在冻结 LAION-CLAP 上加轻量注意力融合，冠军以大语言模型先验加多主干集成达到 hF 为 0.836，超过基线 0.700，但增益依赖众包重标与上传者重叠等数据条件。",
+  "originalTitle": "Description and discussion on DCASE 2026 Task 1: Heterogeneous Audio Classification",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-10",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Anastasopoulou_10.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "异构音频分类在宽泛体系下如何平衡数据噪声与模态增益",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "51fe6bcf2beca3fe50a0e291564651502ad6d7b6404066f5776bb1acc3214e03"
+}

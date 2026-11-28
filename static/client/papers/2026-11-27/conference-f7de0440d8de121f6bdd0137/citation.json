@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Advanced Computing Sciences, Maastricht University, Maastricht, The Netherlands"
+      ],
+      "name": "Emre Argın"
+    },
+    {
+      "affiliations": [
+        "Department of Advanced Computing Sciences, Maastricht University, Maastricht, The Netherlands"
+      ],
+      "name": "Aysenur Arslan-Dogan"
+    },
+    {
+      "affiliations": [
+        "Department of Advanced Computing Sciences, Maastricht University, Maastricht, The Netherlands"
+      ],
+      "name": "Aki Härmä"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-62",
+  "originalTitle": "Overview of the BioDCASE 2026 Challenge on Bird Population Counting from Passive Acoustic Recordings",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-62",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Arg%C4%B1n_62.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "a369166df2581555faa68d28160a98ebf7358e0141b9bbfcdd0af4f3f0baf411",
+  "type": "conference-paper"
+}

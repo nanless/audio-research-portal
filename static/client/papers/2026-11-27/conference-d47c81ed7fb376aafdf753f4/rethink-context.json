@@ -1,0 +1,50 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "Transformer",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "后50%",
+    "score": 5.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Semantic Media Technologies, Fraunhofer IDMT, Ilmenau, Germany"
+      ],
+      "name": "Maaz Saeed"
+    },
+    {
+      "affiliations": [
+        "Semantic Media Technologies, Fraunhofer IDMT, Ilmenau, Germany"
+      ],
+      "name": "Amir Latifi Bidarouni"
+    },
+    {
+      "affiliations": [
+        "Computational Humanities, University of Bamberg, Bamberg, Germany",
+        "Semantic Media Technologies, Fraunhofer IDMT, Ilmenau, Germany"
+      ],
+      "name": "Jakob Abeßer"
+    },
+    {
+      "affiliations": [
+        "Semantic Media Technologies, Fraunhofer IDMT, Ilmenau, Germany"
+      ],
+      "name": "Hanna Lukashevich"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对南极低采样被动声学监测中鲸类叫声的时域定位与分类问题，论文并排比较在对数梅尔谱图上微调的 YOLOv11 与 RT-DETR 及在上采样波形上微调的 BEATs，发现开发集测试子集上带非极大值抑制的 RT-DETR 以 F1 为 0.679 略超 BEATs 的 0.655，而评估集上三者分别降至 0.376、0.276 与 0.166，代价是视觉预训练迁移有限且跨分布泛化落差明显。",
+  "originalTitle": "Comparison of Vision-based Object Detectors and an Audio Transformer for Whale Sound Event Detection",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-66",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Saeed_66.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "鲸类叫声事件检测中视觉目标检测器与音频 Transformer 的比较",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "d179d159d3ebd999cc381d3608d4cdb7ceb88ed608c266660de956afec0ef445"
+}

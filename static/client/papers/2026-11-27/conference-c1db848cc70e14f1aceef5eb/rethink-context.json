@@ -1,0 +1,31 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "数据清洗",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign, Urbana, IL, USA"
+      ],
+      "name": "Aniket Tathe"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对官方思维链忽视选项与虚构文本的问题，本文以盲听拒绝采样再生可验证推理并结合监督微调与分组相对策略优化，在仅用官方数据与 100 亿参数以下模型下取得开发集 58.43% 与盲测集 50.60% 的首选项准确率，代价是推理裁判未提升准确率且训练慢约 2.4 倍、过长训练反而回落。",
+  "originalTitle": "Listen, Don’t Read: Repairing Chain-of-Thought Data for the DCASE 2026 Audio-Dependent QA Task",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-57",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Tathe_57.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "听而非读：为音频依赖问答修复思维链数据",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "9b2affb96037034b57a426ba9c1b6dfc2b678126544be1303f4442f470faf250"
+}

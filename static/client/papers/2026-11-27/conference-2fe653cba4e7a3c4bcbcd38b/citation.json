@@ -1,0 +1,81 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Binh Thien Nguyen"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Masahiro Yasuda"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Noboru Harada"
+    },
+    {
+      "affiliations": [
+        "University de Lorraine, CNRS, Inria, Loria, France"
+      ],
+      "name": "Romain Serizel"
+    },
+    {
+      "affiliations": [
+        "University de Lorraine, CNRS, Inria, Loria, France"
+      ],
+      "name": "Mayank Mishra"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Marc Delcroix"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Carlos Hernandez-Olivan"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Shoko Araki"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Daiki Takeuchi"
+    },
+    {
+      "affiliations": [
+        "NTT, Inc., Japan"
+      ],
+      "name": "Tomohiro Nakatani"
+    },
+    {
+      "affiliations": [
+        "Tokyo Metropolitan University, Japan"
+      ],
+      "name": "Nobutaka Ono"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-18",
+  "originalTitle": "Description and Discussion on DCASE 2026 Challenge Task 4: Spatial Semantic Segmentation of Sound Scenes",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-18",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Thien_18.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "5a5c2464123da4ccfbc1a9f092bf831f1637feb6d5e545302e9872fa149b2d4b",
+  "type": "conference-paper"
+}

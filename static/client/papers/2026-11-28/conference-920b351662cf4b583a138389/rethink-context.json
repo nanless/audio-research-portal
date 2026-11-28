@@ -1,0 +1,44 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "半监督学习",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 6.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Computational Perception (CP-JKU)"
+      ],
+      "name": "Jonathan Greif"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception (CP-JKU)"
+      ],
+      "name": "Florian Schmid"
+    },
+    {
+      "affiliations": [
+        "Institute of Computational Perception (CP-JKU)",
+        "LIT Artificial Intelligence Lab, Johannes Kepler University Linz, Austria"
+      ],
+      "name": "Gerhard Widmer"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "经典合成验证加弱标记选择会静默掩盖真实域崩溃，论文以九组架构证明训练时可见的合成指标与弱标记信号均无法区分失效，唯一事后可分的真实合成损失比揭示时间定位损坏，而扁平匹配可避开两种几何失效但在循环结构上不占优。",
+  "originalTitle": "Silent Failure in Semi-Supervised Sound Event Detection: Synthetic Validation Can Hide Real-World Collapse",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-34",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Greif_34.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "合成验证掩盖真实崩溃的半监督声音事件检测静默失效诊断",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "7acc5ce9cdfad70c1c378c270700d56718ab04970409dba7c96649473ab1f9ff"
+}

@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Xuanting Fan"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Huan Yu"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Yanjin Li"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Zhongxin Bai"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Gongping Huang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "首试无监督异常声音检测需在仅用正常数据且面对未见机器与域偏移时判定异常，本文用冻结预训练编码器加低秩适配提取多层嵌入并经白化后融合局部密度近邻与相对马氏距离打分，在 DCASE 2026 开发集达到 66.65% 并在官方评测集达到 65.45%，代价是层选择与融合权重在开发集上调优可能带来域内偏差且集成规模与适配收益高度依赖具体构成与评测条件。",
+  "originalTitle": "What Really Matters in First-Shot Anomalous Sound Detection? An Empirical Study of Encoders, Adaptation, and Anomaly Scoring",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-89",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Fan_89.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "首试异常声音检测中真正重要的是什么：编码器、适配与打分的实证研究",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "8551b3d765a2212c51ebcc0d26ce67c8c91dafe5e73cefa0023a6539ef8d3b3f"
+}

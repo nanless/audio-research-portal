@@ -1,0 +1,37 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频时间定位",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Oscar Calvet"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Doroteo Torre Toledano"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对长录音开放词汇时刻检索，原文用全局粗定位加局部高分辨率精修加候选重排的三阶段流程，在 CASTELLA 上把严格阈值精度推高到单系统 R1@0.7 为 40.01 与集成 42.09，代价是粗阶段漏召回无法挽回以及秒级后处理与未验证的部署开销。",
+  "originalTitle": "Audio Moment Retrieval from Long Audio based on Multi-Stage Boundary Refinement and Candidate Re-Ranking",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-32",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Calvet_32.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "长录音音频时刻检索的三阶段边界精修与候选重排解读",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "3db01d79593ba1f98478a56c1565e9c95c11ed7c0958cca50d86ef71eaf925bf"
+}

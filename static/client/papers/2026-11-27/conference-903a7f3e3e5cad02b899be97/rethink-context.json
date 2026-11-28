@@ -1,0 +1,67 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "系统技术报告",
+    "primaryMethod": "Transformer",
+    "primaryTask": "音频分离",
+    "rankBucket": "前50%",
+    "score": 6.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Information Technology R&D Center, Mitsubishi Electric Corporation, Kanagawa, Japan"
+      ],
+      "name": "Kohei Saijo"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Yoshiki Masuyama"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Christoph Boeddeker"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Gordon Wichern"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Julius Richter"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Takahiro Edo"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Jonathan Le Roux"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多通道混合中目标与干扰数量可变且同类多源难以兼顾计数分离与分类的问题， 本文采用联合分离计数加集成分类加类别提示精修的三阶段级联， 在最终评测集获得 CA-PI-SDRi 为 12.94 dB 与标签准确率为 76.92% 的分类最佳， 代价是集成 10 个计数模型与 5 个分类模型的高推理成本与精修增益有限。",
+  "originalTitle": "An S5 System based on Multi-stage Separation and Classification",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-7",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Saijo_7.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "多阶段分离计数分类与精修实现空间语义分割",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "63ed8ec44d660534a014b822c111064f5042c488ecf90fcc77da324e7415bfe5"
+}

@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "生态物种识别与分布预测",
+    "rankBucket": "前50%",
+    "score": 6.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Advanced Computing Sciences, Maastricht University, Maastricht, The Netherlands"
+      ],
+      "name": "Emre Argın"
+    },
+    {
+      "affiliations": [
+        "Department of Advanced Computing Sciences, Maastricht University, Maastricht, The Netherlands"
+      ],
+      "name": "Aysenur Arslan-Dogan"
+    },
+    {
+      "affiliations": [
+        "Department of Advanced Computing Sciences, Maastricht University, Maastricht, The Netherlands"
+      ],
+      "name": "Aki Härmä"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "BioDCASE 2026 要求从 48 kHz 鸟舍录音估计每物种饲养个体数，官方基线以探测率回归在火烈鸟合唱饱和处失效，而最优合成密度回归系统取得 MAE 9.17 只，代价是依赖未量化的合成分布匹配与仅 2 个至 4 个校准鸟舍带来的脆弱外推。",
+  "originalTitle": "Overview of the BioDCASE 2026 Challenge on Bird Population Counting from Passive Acoustic Recordings",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-62",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Arg%C4%B1n_62.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "合唱饱和下的鸟群计数：BioDCASE 2026 鸟舍声学数量估计解读",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "a369166df2581555faa68d28160a98ebf7358e0141b9bbfcdd0af4f3f0baf411"
+}

@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, China"
+      ],
+      "name": "Xusen Yu"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, China"
+      ],
+      "name": "Xin Guo"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, China"
+      ],
+      "name": "Chunrui Zhao"
+    },
+    {
+      "affiliations": [
+        "Yichang Testing Technique R&D Institute, Yichang, China"
+      ],
+      "name": "Shanzheng Guan"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, China"
+      ],
+      "name": "Gongping Huang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-87",
+  "originalTitle": "Peak-Aware Cost-Volume Learning for Multichannel Bioacoustic Alignment",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-87",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Yu_87.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "3d69ade5e04c3d1159cc234a772a34e9059b0caea16d43c72847e7a232dc2b77",
+  "type": "conference-paper"
+}

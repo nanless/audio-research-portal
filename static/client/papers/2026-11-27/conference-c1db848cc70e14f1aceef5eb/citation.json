@@ -1,0 +1,21 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "University of Illinois Urbana-Champaign, Urbana, IL, USA"
+      ],
+      "name": "Aniket Tathe"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-57",
+  "originalTitle": "Listen, Don’t Read: Repairing Chain-of-Thought Data for the DCASE 2026 Audio-Dependent QA Task",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-57",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Tathe_57.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "9b2affb96037034b57a426ba9c1b6dfc2b678126544be1303f4442f470faf250",
+  "type": "conference-paper"
+}

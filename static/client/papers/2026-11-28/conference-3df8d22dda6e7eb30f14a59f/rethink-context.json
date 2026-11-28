@@ -1,0 +1,67 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 6.5
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Systems and Control Engineering, School of Engineering,Institute of Science Tokyo, Tokyo, Japan"
+      ],
+      "name": "Toshiki Nojima"
+    },
+    {
+      "affiliations": [
+        "Department of Systems and Control Engineering, School of Engineering,Institute of Science Tokyo, Tokyo, Japan"
+      ],
+      "name": "Benjamin Yen"
+    },
+    {
+      "affiliations": [
+        "Department of Systems and Control Engineering, School of Engineering,Institute of Science Tokyo, Tokyo, Japan"
+      ],
+      "name": "Takeshi Ashizawa"
+    },
+    {
+      "affiliations": [
+        "SCSK Corporation, Japan"
+      ],
+      "name": "Mikihisa Nakano"
+    },
+    {
+      "affiliations": [
+        "SCSK Corporation, Japan"
+      ],
+      "name": "Masahiro Naito"
+    },
+    {
+      "affiliations": [
+        "SCSK Corporation, Japan"
+      ],
+      "name": "Norio Yashima"
+    },
+    {
+      "affiliations": [
+        "Department of Systems and Control Engineering, School of Engineering,Institute of Science Tokyo, Tokyo, Japan"
+      ],
+      "name": "Kazuhiro Nakadai"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对强噪声下环境声检测分类崩溃与分离幻觉误报及 SNR 缺乏可解释参考的问题，原文以 AudioSep 加冻结 CLAP 双文本锚点与两套独立 LoRA 联合训练，条件 B 未知目标 7 分类在负 20 dB 取得 62.9% 而干净保持 92.8%，代价是每段需两次前向且 7 路查询计算随类别增长。",
+  "originalTitle": "Noise-Robust Environmental Sound Understanding Using an Audio Foundation Model with Text Anchors",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-73",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Nojima_73.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "噪声下环境声理解：文本锚点如何同时约束分类与信噪比估计",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "4cf8d6673255b75e00495b03f17051d24591cac2e94f6c505e9dfd234c13873c"
+}

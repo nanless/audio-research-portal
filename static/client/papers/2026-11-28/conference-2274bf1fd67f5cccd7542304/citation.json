@@ -1,0 +1,64 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA",
+        "Nagoya University, Nagoya, Japan"
+      ],
+      "name": "Takuya Fujimura"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA"
+      ],
+      "name": "Gordon Wichern"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA"
+      ],
+      "name": "Yoshiki Masuyama"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA"
+      ],
+      "name": "Christoph Boeddeker"
+    },
+    {
+      "affiliations": [
+        "Information Technology R&D Center, Mitsubishi Electric Corporation, Kanagawa, Japan"
+      ],
+      "name": "Kohei Saijo"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA"
+      ],
+      "name": "Julius Richter"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA"
+      ],
+      "name": "Takahiro Edo"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA"
+      ],
+      "name": "Jonathan Le Roux"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-17",
+  "originalTitle": "Anomalous Sound Detection Meets Noise-Aware Self-Supervised Learning",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-17",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Fujimura_17.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "ccac658d6fe9e8e64e042ec642af73f3de0938457a2c4d7eb0ba2eb93a836009",
+  "type": "conference-paper"
+}

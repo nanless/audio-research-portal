@@ -1,0 +1,49 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "统计分析",
+    "primaryTask": "声学场景分类",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Instituto Tecnologico de Informatica (ITI), Valencia, Spain"
+      ],
+      "name": "Javier Naranjo-Alcazar"
+    },
+    {
+      "affiliations": [
+        "Tampere University, Tampere, Finland"
+      ],
+      "name": "Annamaria Mesaros"
+    },
+    {
+      "affiliations": [
+        "Tampere University, Tampere, Finland"
+      ],
+      "name": "Tuomas Virtanen"
+    },
+    {
+      "affiliations": [
+        "Instituto Tecnologico de Informatica (ITI), Valencia, Spain"
+      ],
+      "name": "Pedro Zuccarello"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对部署中只能标注有偏小子集导致准确率失真的问题，论文在冻结声场景分类器嵌入上比较核密度、逻辑回归与最近邻三种密度比加权，发现在最远遍历类采样低预算区逻辑回归最接近全量真值而在 K 中值下核密度与最近邻更稳，但不确定性采样下所有加权均失效且需额外依赖未标注池",
+  "originalTitle": "Sampling Bias Compensation for Robust Evaluation of Audio Classification Systems with Partially Labeled Evaluation Datasets",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-19",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Naranjo-Alcazar_19.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "有偏标注子集下的音频分类评估偏差校正",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "bdc3b63b0975b5f292c69d57cf124df6f77d682895ab95170ac4d11f46282aed"
+}

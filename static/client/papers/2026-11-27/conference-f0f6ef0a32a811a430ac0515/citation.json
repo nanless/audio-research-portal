@@ -1,0 +1,33 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Intelligent Semiconductors, Soongsil University, Dongjak-gu, Seoul, Republic of Korea"
+      ],
+      "name": "Jungyu Choi"
+    },
+    {
+      "affiliations": [
+        "Department of IT Engineering, Soongsil University, Dongjak-gu, Seoul, Republic of Korea"
+      ],
+      "name": "Seowoo Kim"
+    },
+    {
+      "affiliations": [
+        "School of Electronic Engineering, Soongsil University, Dongjak-gu, Seoul, Republic of Korea"
+      ],
+      "name": "Sungbin Im"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-21",
+  "originalTitle": "DIRNET-OOD: Domain-agnostic Incremental Routing Network with Out-of-distribution Residual Prior",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-21",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Choi_21.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "92ccab7439731f2e19b47786f4a5b431e552416085a7db63521e4b92d5d35f9b",
+  "type": "conference-paper"
+}

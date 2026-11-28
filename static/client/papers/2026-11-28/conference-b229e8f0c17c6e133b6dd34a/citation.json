@@ -1,0 +1,45 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "LTCI, Télécom Paris, Institut Polytechnique de Paris, France"
+      ],
+      "name": "Michel Olvera"
+    },
+    {
+      "affiliations": [
+        "LTCI, Télécom Paris, Institut Polytechnique de Paris, France"
+      ],
+      "name": "Paraskevas Stamatiadis"
+    },
+    {
+      "affiliations": [
+        "Université de Lorraine, CNRS, Inria, Loria, France"
+      ],
+      "name": "Romain Serizel"
+    },
+    {
+      "affiliations": [
+        "NVIDIA"
+      ],
+      "name": "Slim Essid"
+    },
+    {
+      "affiliations": [
+        "LTCI, Télécom Paris, Institut Polytechnique de Paris, France"
+      ],
+      "name": "Gaël Richard"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-86",
+  "originalTitle": "SAS: Scene-Annotated AudioSet Strong for Joint Scene-Event Analysis",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-86",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Olvera_86.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "0105197efcbc5f3f15aba5aff70ed56731cc037d60fa90757c5cca2a116c952a",
+  "type": "conference-paper"
+}

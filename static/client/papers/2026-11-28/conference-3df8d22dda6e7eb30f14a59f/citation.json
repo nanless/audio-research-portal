@@ -1,0 +1,57 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Systems and Control Engineering, School of Engineering,Institute of Science Tokyo, Tokyo, Japan"
+      ],
+      "name": "Toshiki Nojima"
+    },
+    {
+      "affiliations": [
+        "Department of Systems and Control Engineering, School of Engineering,Institute of Science Tokyo, Tokyo, Japan"
+      ],
+      "name": "Benjamin Yen"
+    },
+    {
+      "affiliations": [
+        "Department of Systems and Control Engineering, School of Engineering,Institute of Science Tokyo, Tokyo, Japan"
+      ],
+      "name": "Takeshi Ashizawa"
+    },
+    {
+      "affiliations": [
+        "SCSK Corporation, Japan"
+      ],
+      "name": "Mikihisa Nakano"
+    },
+    {
+      "affiliations": [
+        "SCSK Corporation, Japan"
+      ],
+      "name": "Masahiro Naito"
+    },
+    {
+      "affiliations": [
+        "SCSK Corporation, Japan"
+      ],
+      "name": "Norio Yashima"
+    },
+    {
+      "affiliations": [
+        "Department of Systems and Control Engineering, School of Engineering,Institute of Science Tokyo, Tokyo, Japan"
+      ],
+      "name": "Kazuhiro Nakadai"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-73",
+  "originalTitle": "Noise-Robust Environmental Sound Understanding Using an Audio Foundation Model with Text Anchors",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-73",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Nojima_73.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "4cf8d6673255b75e00495b03f17051d24591cac2e94f6c505e9dfd234c13873c",
+  "type": "conference-paper"
+}

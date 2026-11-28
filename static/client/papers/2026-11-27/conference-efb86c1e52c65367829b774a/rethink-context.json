@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "模型剪枝",
+    "primaryTask": "文本到音频生成",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "King’s College London (KCL)"
+      ],
+      "name": "Arshdeep Singh"
+    },
+    {
+      "affiliations": [
+        "University of Surrey, UK"
+      ],
+      "name": "Yi Yuan"
+    },
+    {
+      "affiliations": [
+        "King’s College London (KCL)"
+      ],
+      "name": "Yun Chen"
+    },
+    {
+      "affiliations": [
+        "University of Surrey, UK"
+      ],
+      "name": "Wenwu Wang"
+    },
+    {
+      "affiliations": [
+        "King’s College London (KCL)"
+      ],
+      "name": "Mark D. Plumbley"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对 AudioLDM 去噪主干重复调用导致部署开销过大的问题，本文用无数据 l1 滤波器剪枝聚焦深块并做轻量微调，在 AudioCaps 上以 (1, 2, 1, 1) 配置减少约 83% 参数与约 39% MACs 并将 FAD 从 3.95 降到 1.57 ，代价是仅剪枝会重创安全关键与机械类语义且恢复依赖 1,000,000 步微调与特定评测条件。",
+  "originalTitle": "Efficient Text-to-Audio Generation via Pruning",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-28",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Singh_28.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "无数据剪枝如何压缩文本生成音频的扩散主干",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "52e3fa3a77386767e322fbb49e6fe46ad45414b14f750e2b1b0dabfa3c743bff"
+}

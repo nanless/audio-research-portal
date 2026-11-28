@@ -1,0 +1,61 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "基准设计",
+    "primaryTask": "音频时间定位",
+    "rankBucket": "前50%",
+    "score": 6.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "LY Corporation, Japan"
+      ],
+      "name": "Hokuto Munakata"
+    },
+    {
+      "affiliations": [
+        "LY Corporation, Japan"
+      ],
+      "name": "Tatsuya Komatsu"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Japan"
+      ],
+      "name": "Keisuke Imoto"
+    },
+    {
+      "affiliations": [
+        "Sony Interactive Entertainment, Japan"
+      ],
+      "name": "Taichi Nishimura"
+    },
+    {
+      "affiliations": [
+        "University of Helsinki, Finland"
+      ],
+      "name": "Huang Xie"
+    },
+    {
+      "affiliations": [
+        "Tampere University, Finland"
+      ],
+      "name": "Tuomas Virtanen"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "面对数分钟长录音中按自由文本定位起止时刻的难题，综述以 MS-CLAP 加 DETR 检测网络为基线，在 100 条评测录音上基线 Recall1@0.7 为 13.56% 而前三系统达 48.59% ，代价是依赖更强编码器与检测网络并辅以分数校准与多分辨率融合。",
+  "originalTitle": "Overview and Meta-Analysis of DCASE 2026 Challenge Task 6: Audio Moment Retrieval from Long Audio",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-72",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Munakata_72.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "长音频时刻检索：DCASE 2026 个任务 6 综述与基线分析",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "fa38e828c565e4a0ffa7b66758d5aaebaae24c0f40e9327f84d0ab832643bccf"
+}

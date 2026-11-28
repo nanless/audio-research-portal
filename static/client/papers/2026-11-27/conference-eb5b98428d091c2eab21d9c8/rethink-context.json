@@ -1,0 +1,37 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "迁移学习",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 6.0
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Fairy Devices Inc., Japan"
+      ],
+      "name": "Zhi Zhu"
+    },
+    {
+      "affiliations": [
+        "Fairy Devices Inc., Japan"
+      ],
+      "name": "Yoshinao Sato"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对风机叶片损伤哨声时频框标注稀缺问题，论文以图像到鸟鸣再到风机的三步迁移与先解冻对象查询的渐进策略训练频谱检测器，在目标域达到 AP50 0.504，代价是依赖两级大规模预训练与目标域全量微调。",
+  "originalTitle": "Multi-Stage Transfer Learning for Time-Frequency Sound Event Detection: From Images to Bioacoustics to Industrial Audio",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-23",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Zhu_23.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "从图像到鸟鸣再到风机：时频声音事件检测的三阶段迁移学习",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "1a04b309fd19634f664e4a8c74f375026a370e7331d25230f24d4e14403e4415"
+}

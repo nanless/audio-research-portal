@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Oscar Calvet"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Doroteo Torre Toledano"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-32",
+  "originalTitle": "Audio Moment Retrieval from Long Audio based on Multi-Stage Boundary Refinement and Candidate Re-Ranking",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-32",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Calvet_32.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "3db01d79593ba1f98478a56c1565e9c95c11ed7c0958cca50d86ef71eaf925bf",
+  "type": "conference-paper"
+}

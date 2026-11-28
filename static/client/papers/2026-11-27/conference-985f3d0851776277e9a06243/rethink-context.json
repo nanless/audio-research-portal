@@ -1,0 +1,73 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多任务学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Meiting Lyu"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Ruicheng Liu"
+    },
+    {
+      "affiliations": [
+        "Waseda University, Japan"
+      ],
+      "name": "Xu Shen"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Zongye Chen"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Jiatong Wu"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Ziyu Wang"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Wei Liu"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Gongping Huang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对跨设备蚊鸣识别中稀有种类稀缺与未见采集地失效，论文以多样增强、混合风格扰动、域对抗与四损失联合训练加置信度级联集成，在开发集将未见域平衡准确率由 0.1751 提升至 0.4016，代价是多分支训练与多模型推理开销，以及官方评测集回落至 0.205。",
+  "originalTitle": "Addressing Class Imbalance in Cross-Domain Mosquito Bioacoustic Species Classification via Multi-Task Learning",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-41",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Lyu_41.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "跨域蚊鸣种类识别中的类别不平衡与域偏移联合治理",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "2398b3edb038301c35ad59b1b4ced3bd5e6c5752b6d29b544bc7859634f0cdf2"
+}

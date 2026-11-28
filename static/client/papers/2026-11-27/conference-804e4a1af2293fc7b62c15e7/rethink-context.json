@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "RNN",
+    "primaryTask": "音频时间定位",
+    "rankBucket": "前50%",
+    "score": 6.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, China"
+      ],
+      "name": "Xusen Yu"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, China"
+      ],
+      "name": "Xin Guo"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, China"
+      ],
+      "name": "Chunrui Zhao"
+    },
+    {
+      "affiliations": [
+        "Yichang Testing Technique R&D Institute, Yichang, China"
+      ],
+      "name": "Shanzheng Guan"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, China"
+      ],
+      "name": "Gongping Huang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对独立设备双通道生物声学记录的时变延迟估计，论文以共享编码加滞后时间代价体与峰值感知池化结合双向时序回归估计帧级轨迹并按 0.04 置信度路由融合传统分支，在斑胸草雀上把平均绝对误差从 757.1 ms 降至 422.9 ms 并获正式评测第一，代价是离线双向建模与固定阈值限制了流式与跨域适用性。",
+  "originalTitle": "Peak-Aware Cost-Volume Learning for Multichannel Bioacoustic Alignment",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-87",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Yu_87.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "峰值感知代价体如何估计双通道生物声学的时变延迟轨迹",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "3d69ade5e04c3d1159cc234a772a34e9059b0caea16d43c72847e7a232dc2b77"
+}

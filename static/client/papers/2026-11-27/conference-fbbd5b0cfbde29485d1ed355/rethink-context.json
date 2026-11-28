@@ -1,0 +1,37 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "数据集构建",
+    "primaryTask": "声学系统参数估计",
+    "rankBucket": "前50%",
+    "score": 6.9
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Govinda Madhava"
+    },
+    {
+      "affiliations": [
+        "机构信息未能从会议 PDF 纯文本可靠映射"
+      ],
+      "name": "Alexander Lerch"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "F1Audio 把分开发布的车载引擎音频与车辆遥测对齐到 50 ms 网格并发布约 266 小时的 PaSST 特征，用线性探针与多层感知机证明声音可以恢复转速与车速，而挡位与油门仍困难且 5 秒以上上下文收益趋平。",
+  "originalTitle": "F1AUDIO: A Formula-1 Engine Audio Dataset",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-50",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Madhava_50.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "从引擎轰鸣还原车速与挡位：F1Audio 数据集解读",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "3a19c33a6ff43b94bc0990205e45a985927446761995aafe9fbdb7a271ae01e8"
+}

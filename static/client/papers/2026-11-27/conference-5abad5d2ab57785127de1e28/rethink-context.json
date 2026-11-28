@@ -1,0 +1,50 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "稀疏自编码器",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前50%",
+    "score": 6.3
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA",
+        "Universit´e Laval, Qu´ebec City, Canada"
+      ],
+      "name": "Francesco Paissan"
+    },
+    {
+      "affiliations": [
+        "Universit´e Laval, Qu´ebec City, Canada"
+      ],
+      "name": "Gordon Wichern"
+    },
+    {
+      "affiliations": [
+        "Universit´e Laval, Qu´ebec City, Canada"
+      ],
+      "name": "Yoshiki Masuyama"
+    },
+    {
+      "affiliations": [
+        "Universit´e Laval, Qu´ebec City, Canada"
+      ],
+      "name": "Jonathan Le Roux"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对只有正常声音可训练时异常分数不可解释的问题，该文用分组稀疏自编码器把 BEATs 距离拆到单个特征并以线性探针与反事实验证语义，在 DCASE 2025 Task 2 上保持与密集表示相当的检测精度，代价是在 75% 至 95% 稀疏区仍有语义损失且超 95% 后分解迅速失效。",
+  "originalTitle": "Explainable Unsupervised Sound Anomaly Detection via Sparse Feature Decomposition",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-16",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Paissan_16.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "稀疏特征分解如何让机器异常分数可解释",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "15f38e856e701ea8305f0be8bb4f8fc3f223a3af930ec018578cceba52810672"
+}

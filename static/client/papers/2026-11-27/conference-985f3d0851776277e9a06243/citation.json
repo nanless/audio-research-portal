@@ -1,0 +1,63 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Meiting Lyu"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Ruicheng Liu"
+    },
+    {
+      "affiliations": [
+        "Waseda University, Japan"
+      ],
+      "name": "Xu Shen"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Zongye Chen"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Jiatong Wu"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Ziyu Wang"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Wei Liu"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, Wuhan, Hubei 430072, China"
+      ],
+      "name": "Gongping Huang"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-41",
+  "originalTitle": "Addressing Class Imbalance in Cross-Domain Mosquito Bioacoustic Species Classification via Multi-Task Learning",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-41",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Lyu_41.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "2398b3edb038301c35ad59b1b4ced3bd5e6c5752b6d29b544bc7859634f0cdf2",
+  "type": "conference-paper"
+}

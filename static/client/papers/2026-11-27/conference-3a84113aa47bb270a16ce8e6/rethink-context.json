@@ -1,0 +1,86 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "聚类与类别匹配",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Southwestern University of Finance and Economics, China",
+        "MiLM Plus, Xiaomi Inc., China"
+      ],
+      "name": "Haoyu Wang"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, China"
+      ],
+      "name": "Han Dou"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, China"
+      ],
+      "name": "Hui Chen"
+    },
+    {
+      "affiliations": [
+        "Southwestern University of Finance and Economics, China"
+      ],
+      "name": "Yushan Du"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, China"
+      ],
+      "name": "Liushi Tu"
+    },
+    {
+      "affiliations": [
+        "Southwestern University of Finance and Economics, China"
+      ],
+      "name": "Ningning Pan"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, China"
+      ],
+      "name": "Hao Zhang"
+    },
+    {
+      "affiliations": [
+        "Massachusetts Institute of Technology, USA"
+      ],
+      "name": "Jingyao Wu"
+    },
+    {
+      "affiliations": [
+        "MiLM Plus, Xiaomi Inc., China"
+      ],
+      "name": "Gang Li"
+    },
+    {
+      "affiliations": [
+        "Electronic Information School, Wuhan University, China"
+      ],
+      "name": "Gongping Huang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对多标签生物声学分类中批量主动学习难以兼顾信息量与互补性的问题， PB-MFS 以多漏斗投票筛选幸存集合再做帕累托权衡组批，在 4 个子集上取得 0.510 的平均 AULC 并以 0.050 的绝对优势超过最强基线，代价是高于随机与间隔采样的计算耗时与标注代价。",
+  "originalTitle": "PB-MFS: Multi-Funnel Selection with Pareto-Balanced Uncertainty and Diversity for Bioacoustic Active Learning",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-85",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Wang_85.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "帕累托平衡的多漏斗选择如何降低生物声学标注成本",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "fc53573eab3e82b51893f8546fbdafab55950c20004842919e67da57323eb99a"
+}

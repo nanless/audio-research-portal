@@ -1,0 +1,61 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "对比学习",
+    "primaryTask": "音频检索",
+    "rankBucket": "前50%",
+    "score": 6.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Yuki Hayasaki"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Kentaro Seki"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Yuki Okamoto"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Kouei Yamaoka"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Yuki Saito"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Hiroshi Saruwatari"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对静态空间嵌入无法刻画运动声源起止方向的问题，Moving-CLAP 以帧级空间编码器与方向偏置文本编码器结合交换与空间对比损失实现内容与时变方向的统一表征，在单声源空间检索中达到接近 99% 的 R@1，代价是过强空间正则会削弱单声道语义对齐。",
+  "originalTitle": "Moving-CLAP: Spatially Aware Audio–Language Embeddings for Moving Sound Sources",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-6",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Hayasaki_6.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "运动声源的方向变化如何被听见并被语言描述",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "51c3544c48d4f23484a93873218255b8dd30e07ffc189763a8edb8d40880afed"
+}

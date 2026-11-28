@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Chung-Ang University, Seoul, Republic of Korea"
+      ],
+      "name": "JeongRae Kim"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University, Seoul, Republic of Korea"
+      ],
+      "name": "Ho jun Jung"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University, Seoul, Republic of Korea"
+      ],
+      "name": "Yewon Park"
+    },
+    {
+      "affiliations": [
+        "Chung-Ang University, Seoul, Republic of Korea"
+      ],
+      "name": "Changwon Lim"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-35",
+  "originalTitle": "QAM-DETR: Quality-Aware Mamba DETR for Audio Moment Retrieval from Long Audio",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-35",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Kim_35.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "fb039ff4ad1f4f312d9c61a75ee9d017436ad0a6fbb3962932ba01db8493fe04",
+  "type": "conference-paper"
+}

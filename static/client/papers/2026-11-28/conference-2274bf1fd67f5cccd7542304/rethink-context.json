@@ -1,0 +1,74 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "自监督学习",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前50%",
+    "score": 7.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA",
+        "Nagoya University, Nagoya, Japan"
+      ],
+      "name": "Takuya Fujimura"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA"
+      ],
+      "name": "Gordon Wichern"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA"
+      ],
+      "name": "Yoshiki Masuyama"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA"
+      ],
+      "name": "Christoph Boeddeker"
+    },
+    {
+      "affiliations": [
+        "Information Technology R&D Center, Mitsubishi Electric Corporation, Kanagawa, Japan"
+      ],
+      "name": "Kohei Saijo"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA"
+      ],
+      "name": "Julius Richter"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA"
+      ],
+      "name": "Takahiro Edo"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, USA"
+      ],
+      "name": "Jonathan Le Roux"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对工厂强噪声下自监督表示易混入噪声而难以聚焦机器声的问题，本文以远端麦克风为条件做双通道蒸馏去噪，在三款基座与多种后端上提升开发集分数并以 70.24% 获得挑战赛第一，代价是依赖仿真双通道覆盖与多次集成来稳定较大方差。",
+  "originalTitle": "Anomalous Sound Detection Meets Noise-Aware Self-Supervised Learning",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-17",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Fujimura_17.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "噪声感知自监督学习如何借远端麦克风提升异常声音检测",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "ccac658d6fe9e8e64e042ec642af73f3de0938457a2c4d7eb0ba2eb93a836009"
+}

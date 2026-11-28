@@ -1,0 +1,55 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "数据集与基准",
+    "primaryMethod": "持续学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Signal Processing Research Centre, Tampere University, Finland"
+      ],
+      "name": "Riccardo Casciotti"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Systems, Aalborg University, Denmark"
+      ],
+      "name": "Manjunath Mulimani"
+    },
+    {
+      "affiliations": [
+        "Signal Processing Research Centre, Tampere University, Finland"
+      ],
+      "name": "Manu Harju"
+    },
+    {
+      "affiliations": [
+        "Department of Electronic Systems, Aalborg University, Denmark"
+      ],
+      "name": "Jesper Rindom Jensen"
+    },
+    {
+      "affiliations": [
+        "Signal Processing Research Centre, Tampere University, Finland"
+      ],
+      "name": "Annamaria Mesaros"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "DCASE 2026 首次把 10 个类别在 D1、D2 和 D3 共 3 个域上按序学习且推理时不给域标签作为竞赛任务，要求在不看旧域数据下兼顾保持与可塑，基线用域专用批量归一化加熵选路由实现三域平均 60.3%，而头部专家冻结加原型路由做到 79.6%，代价是 D3 仍显著偏低且路由精度成为主要瓶颈。",
+  "originalTitle": "Domain-Agnostic Incremental Learning for Sound Classification. A DCASE 2026 Challenge task",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-44",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Casciotti_44.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "无域标签下连续学会三域同类声音：DCASE 2026 增量分类任务解读",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "cc453a2693660a0cf3c764f8bf18974c47546b10a37b6cf7966b8e8c5bdcb6cb"
+}

@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "Adapter",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.6
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Independent Researcher, Austin, USA"
+      ],
+      "name": "Aakash Divakar"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, Austin, USA"
+      ],
+      "name": "Angad Ripudaman Singh Bajwa"
+    },
+    {
+      "affiliations": [
+        "Independent Researcher, Austin, USA"
+      ],
+      "name": "Atharva Joshi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对固定类别下录音条件漂移带来的遗忘与容量不足，本文在冻结 CNN14 主干上为每域叠加零初始化残差瓶颈并按难度分配深度，以 68.5% 的域无关平均准确率较复现基线提升 18.5 个百分点并逐比特保留首域，代价是三路前向开销与基于置信度的熵路由在真未见音频上高置信误路由。",
+  "originalTitle": "Asymmetric Residual Adapters for Domain-Incremental Audio Classification",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-77",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Divakar_77.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "按难度分配容量的域增量音频分类：非对称残差适配器解读",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "0f7e09b35f8f72287e5656c1497fd1266201693957e1a7504c31453bb3e28964"
+}

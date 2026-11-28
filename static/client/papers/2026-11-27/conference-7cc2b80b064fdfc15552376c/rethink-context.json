@@ -1,0 +1,75 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "应用研究",
+    "primaryMethod": "信号处理",
+    "primaryTask": "异常声音检测",
+    "rankBucket": "前50%",
+    "score": 6.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA",
+        "Mitsubishi Electric Corporation, Japan"
+      ],
+      "name": "Takahiro Edo"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Gordon Wichern"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA",
+        "Nagoya University, Nagoya, Japan"
+      ],
+      "name": "Takuya Fujimura"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Christoph Boeddeker"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Yoshiki Masuyama"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Julius Richter"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Corporation, Japan"
+      ],
+      "name": "Kohei Saijo"
+    },
+    {
+      "affiliations": [
+        "Mitsubishi Electric Research Laboratories (MERL), Cambridge, MA, USA"
+      ],
+      "name": "Jonathan Le Roux"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "工厂偶发人声会整体推高异常分数并引发大量误报，论文以受控混合量化语音与非言语发声的退化，对比污染训练与统一分离前端，分离在推理时部分回调分布但仍残留误报，而混合训练对 BEATs 更有效却需重训与标签代价。",
+  "originalTitle": "When Speech is Noise: Speech Removal for Machine Anomaly Detection",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-9",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Edo_9.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "人声作噪声时的机器异常检测与语音去除",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "df9739db2a73feef9bd644f353322f1e980f23a4d73e7d6330960e694d1ceee3"
+}

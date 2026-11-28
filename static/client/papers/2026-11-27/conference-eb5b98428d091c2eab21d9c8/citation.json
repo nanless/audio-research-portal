@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Fairy Devices Inc., Japan"
+      ],
+      "name": "Zhi Zhu"
+    },
+    {
+      "affiliations": [
+        "Fairy Devices Inc., Japan"
+      ],
+      "name": "Yoshinao Sato"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-23",
+  "originalTitle": "Multi-Stage Transfer Learning for Time-Frequency Sound Event Detection: From Images to Bioacoustics to Industrial Audio",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-23",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Zhu_23.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "1a04b309fd19634f664e4a8c74f375026a370e7331d25230f24d4e14403e4415",
+  "type": "conference-paper"
+}

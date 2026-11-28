@@ -1,0 +1,46 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "LoRA",
+    "primaryTask": "音频问答",
+    "rankBucket": "前50%",
+    "score": 6.7
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Institute of Acoustics, Chinese Academy of Sciences, Beijing, China",
+        "University of Chinese Academy of Sciences, Beijing, China"
+      ],
+      "name": "Weiteng Hu"
+    },
+    {
+      "affiliations": [
+        "Institute of Acoustics, Chinese Academy of Sciences, Beijing, China"
+      ],
+      "name": "Yin Cao"
+    },
+    {
+      "affiliations": [
+        "Institute of Acoustics, Chinese Academy of Sciences, Beijing, China",
+        "University of Chinese Academy of Sciences, Beijing, China",
+        "State Key Laboratory of Acoustics and Marine Information, Institute of Acoustics"
+      ],
+      "name": "Jun Yang"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对音频相关问答中模型依赖文字先验作答的问题，本文在 Qwen2.5-Omni 与 MOSS-Audio-8B-Thinking 上对比答案监督与结构化推理训练后优化及推理时低秩缩放，开发集上 Qwen-CoT 经适度缩放达到 61.05% 而 MOSS 零样本达到 67.70%，代价是强化学习采样与五次投票的额外计算及任务微调对强零样本骨干的损伤风险。",
+  "originalTitle": "Reasoning-Oriented Post-Training and Inference-Time LoRA Rescaling for Audio-Dependent Question Answering",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-92",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Hu_92.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "推理监督与推理时低秩缩放如何影响音频相关问答",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "f3f2943a1e58f1caaa1b272a59dcd54d7caee11dfbab5a67c39eb674e97d9798"
+}

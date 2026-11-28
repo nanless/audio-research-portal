@@ -1,0 +1,27 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "KAIST, Daejeon, Republic of Korea"
+      ],
+      "name": "Seungdeok Choi"
+    },
+    {
+      "affiliations": [
+        "KAIST, Daejeon, Republic of Korea"
+      ],
+      "name": "Yong-Hwa Park"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-58",
+  "originalTitle": "Temporal-Scale Modeling and Audio-Text Alignment for Audio Moment Retrieval with Zero-Training Saliency Reuse",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-58",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Choi_58.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "42c3a331f066ef1f934a819ad5c167ed0448951b8343575f988760bf1491380b",
+  "type": "conference-paper"
+}

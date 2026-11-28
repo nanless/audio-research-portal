@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "持续学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Department of Intelligent Semiconductors, Soongsil University, Dongjak-gu, Seoul, Republic of Korea"
+      ],
+      "name": "Jungyu Choi"
+    },
+    {
+      "affiliations": [
+        "Department of IT Engineering, Soongsil University, Dongjak-gu, Seoul, Republic of Korea"
+      ],
+      "name": "Seowoo Kim"
+    },
+    {
+      "affiliations": [
+        "School of Electronic Engineering, Soongsil University, Dongjak-gu, Seoul, Republic of Korea"
+      ],
+      "name": "Sungbin Im"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对测试时无域标签且只能用当前域数据依次学习 D1 到 D3 的增量声音分类难题，DIRNET-OOD 以三路 CNN14 分支加类别级原型路由、D1 分布外残差先验与 D2 和 D3 自适应成对校准做软概率融合，在本地开发划分上把 D2 与 D3 宏平均准确率从 52.6% 提升到 74.89%，代价是三分支并行与原型存储的额外开销以及调参完全依赖 D2 与 D3 而无法用 D1 校准。",
+  "originalTitle": "DIRNET-OOD: Domain-agnostic Incremental Routing Network with Out-of-distribution Residual Prior",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-21",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Choi_21.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "无域标签增量学习中原型路由与残差先验如何分工",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "92ccab7439731f2e19b47786f4a5b431e552416085a7db63521e4b92d5d35f9b"
+}

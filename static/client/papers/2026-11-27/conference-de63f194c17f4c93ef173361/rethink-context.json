@@ -1,0 +1,58 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "注意力机制",
+    "primaryTask": "音频事件检测",
+    "rankBucket": "前50%",
+    "score": 7.2
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "National Institute of Advanced Industrial Science and Technology (AIST), Japan",
+        "University of Tsukuba, Japan"
+      ],
+      "name": "Shun Sakurai"
+    },
+    {
+      "affiliations": [
+        "National Institute of Advanced Industrial Science and Technology (AIST), Japan",
+        "Waseda University, Japan"
+      ],
+      "name": "Yudai Kandori"
+    },
+    {
+      "affiliations": [
+        "National Institute of Advanced Industrial Science and Technology (AIST), Japan"
+      ],
+      "name": "Yoshiaki Bando"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Japan",
+        "National Institute of Advanced Industrial Science and Technology (AIST), Japan"
+      ],
+      "name": "Keisuke Imoto"
+    },
+    {
+      "affiliations": [
+        "National Institute of Advanced Industrial Science and Technology (AIST), Japan"
+      ],
+      "name": "Masaki Onishi"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对开放词汇声音事件检测忽略目标标签间关系导致的串扰，DOOM-SED 以本体感知的下游片段模仿训练与双向交叉加标签自注意力建模集合内竞争，在 DESED 上以 PSDS1 0.524 与 AUROC 0.984 等多数指标超过未见下游数据的基线，代价是 4 块融合注意力带来额外计算且在部分指标与合成场景上仍需仿真数据或任务特定训练补充。",
+  "originalTitle": "DOOM-SED: Downstream-Oriented Open-Vocabulary Model for Sound Event Detection",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-75",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Sakurai_75.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "下游标签关系建模如何减少开放词汇声音事件检测的串扰",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "c3a7516d16721e779c081683d6581b8c6572fdc9ac3e796477bf8018d62e34ba"
+}

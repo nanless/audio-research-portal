@@ -1,0 +1,43 @@
+{
+  "abstract": null,
+  "abstractSha256": null,
+  "abstractStatus": "unavailable",
+  "assessment": {
+    "documentType": "方法研究",
+    "primaryMethod": "多模态学习",
+    "primaryTask": "音频分类",
+    "rankBucket": "前50%",
+    "score": 6.4
+  },
+  "authors": [
+    {
+      "affiliations": [
+        "Kyoto University, Japan"
+      ],
+      "name": "Naoya Tomida"
+    },
+    {
+      "affiliations": [
+        "The University of Tokyo, Japan"
+      ],
+      "name": "Yuki Okamoto"
+    },
+    {
+      "affiliations": [
+        "Kyoto University, Japan"
+      ],
+      "name": "Keisuke Imoto"
+    }
+  ],
+  "contract": "paper-research-context",
+  "oneSentenceThesis": "针对类别不确定时确定标签易误导的问题，该工作把输出扩展为类别加置信度加拟声描述并用冻结编码器加可训练投影与分类实现，在 31 个类别子集上保持约 98% 可比精度的同时，拟声模板在偏好对比中以 94.4% 与 73.7% 胜出，代价是模板刻板与不贴切拟声会损害自然度且效果依赖检索准确率。",
+  "originalTitle": "Misrecognition or Abstraction? Rethinking Outputs of Sound Event Recognition",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-82",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Tomida_82.pdf",
+  "publicUrlAvailability": "available",
+  "readerTitle": "误识别还是抽象化：用置信度与拟声词重塑声音事件识别输出",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "5d4e79f7d3ee65b39ccb38281548bf20a1b2041ab7a27625eaf97ab9909a8383",
+  "sourceKind": "conference",
+  "sourceSha256": "2a07640e4d8f2257d465b732440ea73aa596afae04875b23e8e53bc59e062804"
+}

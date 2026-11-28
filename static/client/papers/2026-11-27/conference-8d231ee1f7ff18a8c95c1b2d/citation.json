@@ -1,0 +1,42 @@
+{
+  "authors": [
+    {
+      "affiliations": [
+        "Audio Research Group, Tampere University, Tampere, Finland",
+        "Department for the Ecology of Animal Societies, Max Planck Institute of Animal Behavior"
+      ],
+      "name": "Shiqi Zhang"
+    },
+    {
+      "affiliations": [
+        "Department for the Ecology of Animal Societies, Max Planck Institute of Animal Behavior",
+        "International Max Planck Research School for Quantitative Behavior, Ecology and Evolution",
+        "Department of Biology, University of Konstanz"
+      ],
+      "name": "Marius Faiß"
+    },
+    {
+      "affiliations": [
+        "Department for the Ecology of Animal Societies, Max Planck Institute of Animal Behavior"
+      ],
+      "name": "Ariana Strandburg-Peshkin"
+    },
+    {
+      "affiliations": [
+        "Audio Research Group, Tampere University, Tampere, Finland"
+      ],
+      "name": "Tuomas Virtanen"
+    }
+  ],
+  "contract": "researcher-sidecars",
+  "id": "conference:dcase:2026:conference-paper-id:dcase2026-42",
+  "originalTitle": "Greedy Volume Maximization of Gradient Embeddings for Long-Tailed Frame-Level Bioacoustic Active Learning",
+  "paperId": "conference:dcase:2026:conference-paper-id:dcase2026-42",
+  "pdfUrl": "https://dcase.community/documents/workshop2026/proceedings/DCASE2026Workshop_Zhang_42.pdf",
+  "publicUrlAvailability": "available",
+  "recordUrl": "https://dcase.community/workshop2026/proceedings",
+  "schemaFingerprint": "73d86bb329ba0a94eda0af322907ab1ed5b220f08e8868aa13a5c496be115a0e",
+  "sourceKind": "conference",
+  "sourceSha256": "eade0155f9b68c66e32850ae9f644f940aa0e5a153911b252c0f5182e018c5e4",
+  "type": "conference-paper"
+}
